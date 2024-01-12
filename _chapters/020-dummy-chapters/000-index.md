@@ -1,4 +1,0 @@
----
-slug: dummies
-layout: part
----
