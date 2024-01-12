@@ -6,14 +6,25 @@ permalink: /
 
 ---
 
+<div style="text-align: center;">
+    <img src="/static/social.jpg" alt="Social" style="width: 50%; margin: 0 auto;">
+</div>
+
 ### About this website
 
 <p>This platform offers a comprehensive and free course designed to provide a structured study guide for individuals keen on delving into the realm of international relations. Designed with a focus on international relations, Asia, and Indonesia, this website aims to provide a structured learning path for those interested in this field. Whether you're a student or a curious mind, our courses are intended for study purposes, offering a wealth of knowledge without the need for external references.</p>
 
 ### About me
 
-<p>Hi, I'm Cantika, a graduate from Bina Nusantara University in International Relations major. My fascination lies in parliamentary diplomacy and the broader spectrum of international affairs. When I first started my degree, I was overwhelmed by the amount of information I had to absorb. I was also confused about where to start. I hope this website can help you to get a better understanding of international relations and its related fields. If you have any questions, feel free to contact me through my website. Happy learning!</p>
+<div style="display: flex;">
+    <div style="flex: 1;">
+        <p>Hi, I'm Cantika, a graduate from Bina Nusantara University in International Relations major. My fascination lies in parliamentary diplomacy and the broader spectrum of international affairs. When I first started my degree, I was overwhelmed by the amount of information I had to absorb. I was also confused about where to start. I hope this website can help you to get a better understanding of international relations and its related fields. If you have any questions, feel free to contact me through my website. Happy learning!</p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="/static/me.png" alt="Social" style="width:70%; margin: 0 auto;">
+    </div>
 
+</div>
 ---
 
 ### License
