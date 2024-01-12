@@ -63,7 +63,7 @@ bottom_nav:
   url: https://github.com/cantikapf/IR-chapterbook
 - label: Contact me
   url: https://cantikaportfolio.site/contact.html
-  - label: Website
+- label: Website
   url: https://cantikaportfolio.site
 - label: Privacy
   url: /privacy.html
