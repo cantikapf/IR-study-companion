@@ -22,7 +22,7 @@ copyright:
   url: /disclaimer.html
 
 # Customize the link favicon in header. Will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path: static/social.jpg
+favicon_path: static/icon.png
 
 #
 # Navigation menus
