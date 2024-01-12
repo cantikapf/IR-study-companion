@@ -1,5 +1,5 @@
 ---
-title: Draft outline
+title: Outline
 permalink: /outline
 layout: page
 ---

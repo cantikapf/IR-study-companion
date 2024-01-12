@@ -1,16 +1,16 @@
 remote_theme: jasongrimes/jekyll-chapterbook
 
-title: Jekyll Chapterbook
-longtitle: Jekyll Chapterbook Theme
-author: Jason Grimes
-email: jason@grimesit.com
+title: IR Study Guide
+longtitle: International Relations Study Guide
+author: Cantikaputri Febrianti
+email: cantikapf.7@gmail.com
 description: >
-  A Jekyll theme based on GitBook with support for chapters and parts.
+  Free structured study material for international relations enthusiasts.
 
 # If baseurl_canonical is set, 
 # a <link rel="canonical"> tag will be added to the head of each page,
 # to disambiguate links for search engines.
-baseurl_canonical: https://jasongrimes.github.io/jekyll-chapterbook
+baseurl_canonical: https://cantikapf.github.io/IR-chapterbook/
 
 # A copyright notice will be shown at the bottom of each page,
 # with the current year and the author name.
@@ -18,8 +18,8 @@ baseurl_canonical: https://jasongrimes.github.io/jekyll-chapterbook
 # Set a start_year to have the copyright render as "start_year - current_year" (if the years are different)
 # Set copyright: false to disable.
 copyright:
-  start_year: 2023
-  url: /book.html
+  start_year: 2024
+  url: /disclaimer.html
 
 # Customize the link favicon in header. Will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path: assets/gitbook/images/favicon.ico
@@ -32,22 +32,22 @@ favicon_path: assets/gitbook/images/favicon.ico
 # The book and contents pages need to be made manually.
 # All "url" variables should have a leading slash.
 bookcrumbs:
-  book_url: /book.html
+  book_url: /disclaimer.html
   contents_url: /contents.html
   book_icon: assets/gitbook/images/apple-touch-icon-precomposed-152.png
 
 # Links shown above the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_top:
-- label: Jekyll Chapterbook Theme
+- label: IR Study Guide
   url: /index.html
 
 # Links shown below the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_bottom:
-- label: Draft outline
+- label: Material's Outline
   url: /outline.html
-- label: Fork at GitHub
+- label: Fork theme at GitHub
   url: https://github.com/jasongrimes/jekyll-chapterbook/fork
 
 # Navigation shown at the bottom of the page
@@ -55,10 +55,10 @@ sidebar_nav_bottom:
 bottom_nav:
 - label: Home
   url: /index.html
-- label: Book
-  url: /book.html
+- label: Contents
+  url: /contents.html
 - label: GitHub
-  url: https://github.com/jasongrimes/jekyll-chapterbook
+  url: https://github.com/cantikapf/IR-chapterbook
 - label: Privacy
   url: /privacy.html
 
@@ -84,7 +84,7 @@ sidebar_toc:
 # Show a link to edit each page on GitHub
 github_edit:
   enabled: true
-  base_url: https://github.com/jasongrimes/jekyll-chapterbook/edit/master/
+  base_url: https://github.com/cantikapf/IR-chapterbook/edit/master/
 
 # Custom CSS
 extra_css:

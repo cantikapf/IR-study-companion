@@ -1,7 +1,7 @@
 ---
-slug: book
-title: Demo Book
-abstract: An example book for showcasing the Jekyll Chapterbook theme.
+slug: disclaimer
+title: Disclaimer
+abstract: The disclaimer of this study guide
 ---
 
 By Jason Grimes
