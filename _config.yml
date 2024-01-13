@@ -1,7 +1,7 @@
 remote_theme: jasongrimes/jekyll-chapterbook
 
-title: IR Study Guide
-longtitle: International Relations Study Guide
+title: IR Study Companion
+longtitle: International Relations Study Companion
 author: Cantikaputri Febrianti
 email: cantikapf.7@gmail.com
 description: >
@@ -39,14 +39,14 @@ bookcrumbs:
 # Links shown above the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_top:
-- label: IR Study Companion
+- label: International Relations Study Companion
   url: /index.html
 
 # Links shown below the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_bottom:
 - label: Material's Outline
-  url: /outline.html
+  url: /contents.html
 - label: Fork theme at GitHub
   url: https://github.com/jasongrimes/jekyll-chapterbook/fork
 
