@@ -1,5 +1,5 @@
 ---
-title: 'Currencies in Chaos: The Turbulent History of the International Monetary System'y
+title: International Monetary System
 slug: monetary-system
 abstract: The history of International Monetary System
 ---

@@ -16,14 +16,13 @@
 	// 	"description": "Log output to console"
 	// }
 
-		"table": {
-			"scope": "markdown",
-			"prefix": "table",
+		"Insert HTML Picture": {
+			"scope": "markdown,html",
+			"prefix": "pic",
 			"body": [
-				"<div class=\"table-wrapper\" markdown=\"block\">",
-				"\t$TM_SELECTED_TEXT",
-				"</div>"
+				"<center> <img src=\"static\\modules\\ \" alt=\"\" width=\"70%\" /> </center>"
 			],
-			"description": "wide table"
-		},
+			"description": "Insert HTML picture from static/modules folder"
+		}
+		}
 }

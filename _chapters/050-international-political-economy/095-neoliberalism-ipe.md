@@ -1,5 +1,5 @@
 ---
-title: Neoliberalism 101: Understanding the Ideology That Dominates Global Trade
+title: 'Neoliberalism 101: Understanding the Ideology That Dominates Global Trade'
 slug: neoliberalism-ipe
 abstract: The introduction of Neoliberalism in International Political Economy context
 ---
