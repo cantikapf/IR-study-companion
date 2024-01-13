@@ -17,11 +17,13 @@
 	// }
 
 		"table": {
-		"scope": "markdown",
-		"prefix": "table",
-		"body": [
-			<div class="table-wrapper" markdown="block"> </div>
-		],
-		"description": "wide table"
-	},
+			"scope": "markdown",
+			"prefix": "table",
+			"body": [
+				"<div class=\"table-wrapper\" markdown=\"block\">",
+				"\t$TM_SELECTED_TEXT",
+				"</div>"
+			],
+			"description": "wide table"
+		},
 }
