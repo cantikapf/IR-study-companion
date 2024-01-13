@@ -102,9 +102,10 @@ extra_css:
 # set show_drafts_in_dev to true.
 show_drafts_in_dev: false
 
+## google analytics
 
-
-
+tracker:
+  google_analytics: "G-LNJZPVE1WV"
 
 exclude:
   - _drafts
