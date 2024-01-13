@@ -1,5 +1,5 @@
 ---
 slug: introduction-to-social-science
 layout: part
-abstract: This chapter will cover the introduction for the study of Social Science
+abstract: Understand the historical development of social science and its pivotal role in shaping our understanding of society and human behavior.
 ---
