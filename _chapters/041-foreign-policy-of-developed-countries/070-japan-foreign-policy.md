@@ -1,7 +1,7 @@
 ---
 title: Japan Foreign Policy
 slug: japan-foreign-policy
-abstract: xplores the power struggles between key actors, the impact of central government reforms, and the influence of external pressures in Japan's foreign policy making.
+abstract: Explores the power struggles between key actors, the impact of central government reforms, and the influence of external pressures in Japan's foreign policy making.
 ---
 
 ## Introduction
