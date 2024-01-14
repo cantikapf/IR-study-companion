@@ -1,10 +1,16 @@
 # About this website
 
-<p>This platform offers a comprehensive and free course designed to provide a structured study guide for individuals keen on delving into the realm of international relations. Designed with a focus on international relations, Asia, and Indonesia, this website aims to provide a structured learning path for those interested in this field. Whether you're a student or a curious mind, our courses are intended for study purposes, offering a wealth of knowledge without the need for external references.</p>
+<p>IR Study Companion is a platform that offers a comprehensive and free course designed to provide a structured self-study guide for individuals keen on delving into the realm of international relations. Designed with a focus on international relations, Asia, and Indonesia, this website aims to provide a structured learning path for those interested in this field. Whether you're a student or a curious mind, our courses are intended for study purposes, offering a wealth of knowledge without the need for external references.</p>
 
-The theme template is based on [jekyll-chapterbook](https://github.com/jasongrimes/jekyll-chapterbook) by [jasongrimes](https://github.com/jasongrimes) and [jekyll-gitbook](https://github.com/sighingnow/jekyll-gitbook) by [sighingnow](https://github.com/sighingnow). Deployed with [Netlify](https://www.netlify.com/) and Github Pages.
+Read the [disclaimer page](https://learnintlrelations.online/disclaimer) to understand what you can do with the materials.
+
+---
+
+The theme template is based on [jekyll-chapterbook](https://github.com/jasongrimes/jekyll-chapterbook) by [jasongrimes](https://github.com/jasongrimes) and [jekyll-gitbook](https://github.com/sighingnow/jekyll-gitbook) by [sighingnow](https://github.com/sighingnow). Deployed with [Netlify](https://www.netlify.com/) and GitHub Pages.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cantikapf/IR-chapterbook)
+
+---
 
 ## Google Analytics
 
