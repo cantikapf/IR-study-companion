@@ -117,6 +117,11 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 
 **International Law Issues And International Dispute Settlement**
 
+- Cali, B. (Ed.). (2010). International law for international relations. Oxford University Press.
 - Shaw, M. N. (2008). International law (6th ed). Cambridge University Press.
+
+**International Political Economy of Development**
+
+- Currie-Alder, B. (Ed.). (2014). International development: Ideas, experience, and prospects (First edition). Oxford University Press.
 
 ---
