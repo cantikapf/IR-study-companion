@@ -124,4 +124,6 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 
 - Currie-Alder, B. (Ed.). (2014). International development: Ideas, experience, and prospects (First edition). Oxford University Press.
 
+**Regionalism in Southeast Asia: ASEAN Community**
+
 ---
