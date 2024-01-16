@@ -16,7 +16,7 @@ The theme template is based on [jekyll-chapterbook](https://github.com/jasongrim
 
 ## Google Analytics
 
-This version of the theme includes support for Google Analytics. To enable it, add the following to your `_config.yml` file:
+My version of the theme includes support for Google Analytics. To enable it, add the following to your `_config.yml` file:
 
 ```yaml
 tracker:
