@@ -90,7 +90,7 @@ sidebar_toc:
 # Show a link to edit each page on GitHub
 github_edit:
   enabled: true
-  base_url: https://github.com/cantikapf/IR-chapterbook/edit/master/
+  base_url: https://github.com/cantikapf/IR-study-companion/edit/master/
 
 # Custom CSS
 extra_css:
