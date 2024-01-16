@@ -125,5 +125,9 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 - Currie-Alder, B. (Ed.). (2014). International development: Ideas, experience, and prospects (First edition). Oxford University Press.
 
 **Regionalism in Southeast Asia: ASEAN Community**
+- Hurrell, A. (1995). Explaining the Resurgence of Regionalism in World Politics. Review of International Studies, 21(4), 331–358.
+- Lyon, P. (2003). POST-WAR REGIONAL CO-OPERATION. In 3. POST-WAR REGIONAL CO-OPERATION (pp. 16–17). ISEAS Publishing. https://doi.org/10.1355/9789812305299-007
+
+**International Organization in International Relations**
 
 ---
