@@ -18,7 +18,7 @@ baseurl_canonical: https://cantikapf.github.io/IR-chapterbook/
 # Set a start_year to have the copyright render as "start_year - current_year" (if the years are different)
 # Set copyright: false to disable.
 copyright:
-  start_year: 2024
+  start_year: 2023
   url: /disclaimer.html
 
 # Customize the link favicon in header. Will be {{site.baseurl}}/{{site.favicon_path}}
@@ -60,7 +60,7 @@ bottom_nav:
 - label: Disclaimer
   url: /disclaimer.html
 - label: GitHub
-  url: https://github.com/cantikapf/IR-chapterbook
+  url: https://github.com/cantikapf/IR-study-companion
 - label: Contact me
   url: https://cantikaportfolio.site/contact.html
 - label: Website
