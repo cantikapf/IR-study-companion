@@ -8,7 +8,7 @@ Read the [disclaimer page](https://learnintlrelations.online/disclaimer) to unde
 
 The theme template is based on [jekyll-chapterbook](https://github.com/jasongrimes/jekyll-chapterbook) by [jasongrimes](https://github.com/jasongrimes) and [jekyll-gitbook](https://github.com/sighingnow/jekyll-gitbook) by [sighingnow](https://github.com/sighingnow). Deployed with [Netlify](https://www.netlify.com/) and GitHub Pages.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cantikapf/IR-chapterbook)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cantikapf/IR-chapterbook) [![Netlify Status](https://api.netlify.com/api/v1/badges/39455247-3694-45c8-b54f-be619ce4fbb4/deploy-status)](https://app.netlify.com/sites/ir-guide/deploys)
 
 ---
 
