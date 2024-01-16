@@ -10,7 +10,7 @@ The theme template is based on [jekyll-chapterbook](https://github.com/jasongrim
 
 **Deployed with [Netlify](https://learnintlrelations.online/) and [GitHub Pages](https://cantikaportfolio.site/IR-study-companion/).**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cantikapf/IR-chapterbook) [![Netlify Status](https://api.netlify.com/api/v1/badges/39455247-3694-45c8-b54f-be619ce4fbb4/deploy-status)](https://app.netlify.com/sites/ir-guide/deploys)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cantikapf/IR-study-companion) [![Netlify Status](https://api.netlify.com/api/v1/badges/39455247-3694-45c8-b54f-be619ce4fbb4/deploy-status)](https://app.netlify.com/sites/ir-guide/deploys)
 
 ---
 
