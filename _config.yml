@@ -47,8 +47,8 @@ sidebar_nav_top:
 sidebar_nav_bottom:
 - label: Material's Outline
   url: /contents.html
-- label: Fork theme at GitHub
-  url: https://github.com/jasongrimes/jekyll-chapterbook/fork
+- label: Github Repository
+  url: https://github.com/cantikapf/IR-study-companion
 
 # Navigation shown at the bottom of the page
 # All "url" variables should have a leading slash.
@@ -59,8 +59,8 @@ bottom_nav:
   url: /contents.html
 - label: Disclaimer
   url: /disclaimer.html
-- label: GitHub
-  url: https://github.com/cantikapf/IR-study-companion
+- label: About Me
+  url: /about-me.html
 - label: Contact me
   url: https://cantikaportfolio.site/contact.html
 - label: Website
