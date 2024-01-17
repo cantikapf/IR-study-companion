@@ -68,6 +68,9 @@ bottom_nav:
 - label: Privacy
   url: /privacy.html
 
+url: "https://learnintlrelations.online/" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
 
 # Whether to show chapter headings as a table of contents at the top of each chapter page.
 # Override in page front matter with disable_toc: true
