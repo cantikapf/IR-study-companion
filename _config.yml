@@ -67,6 +67,8 @@ bottom_nav:
   url: https://cantikaportfolio.site
 - label: Privacy
   url: /privacy.html
+- label: Sitemap
+  url: https://learnintlrelations.online/sitemap.xml
 
 # Whether to show chapter headings as a table of contents at the top of each chapter page.
 # Override in page front matter with disable_toc: true
