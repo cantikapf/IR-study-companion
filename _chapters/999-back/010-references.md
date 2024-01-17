@@ -141,5 +141,12 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 
 **Global Economic Architecture**
 
+- Cohn, T. H. (2012). Global political economy (6th ed). Pearson Longman.
+- Gilpin, R., & Gilpin, J. M. (2001). Global political economy: Understanding the international economic order. Princeton University Press.
+- Ikenberry, G. J. (2014). From hegemony to the balance of power: The rise of China and American grand strategy in East Asia. International Journal of Korean Unification Studies, 23(2), 41–63.
+- Luckhurst, J. (2018). The shifting global economic architecture: Decentralizing authority in contemporary global governance (1st edition 2018). Springer International Publishing - Palgrave Macmillan. https://doi.org/10.1007/978-3-319-63157-8
+- Mucha-Leszko, B., & Twarowska, K. (2016). The European Union as a global economic power. Comparative Economic Research. Central and Eastern Europe, 19(3), 27–44.
+- Yazid, N. M. (2015). The theory of hegemonic stability, hegemonic power and international political economic stability. Global Journal of Political Science and Administration, 3(6), 67–79.
 
 ---
+
