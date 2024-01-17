@@ -1,7 +1,7 @@
 ---
 title: Political Populism
 slug: political-populism
-abstract: Explanaition of political populism.
+abstract: Explaination of political populism.
 ---
 
 ## Introduction to Populism
