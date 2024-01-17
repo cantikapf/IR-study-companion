@@ -125,9 +125,21 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 - Currie-Alder, B. (Ed.). (2014). International development: Ideas, experience, and prospects (First edition). Oxford University Press.
 
 **Regionalism in Southeast Asia: ASEAN Community**
+
 - Hurrell, A. (1995). Explaining the Resurgence of Regionalism in World Politics. Review of International Studies, 21(4), 331–358.
 - Lyon, P. (2003). POST-WAR REGIONAL CO-OPERATION. In 3. POST-WAR REGIONAL CO-OPERATION (pp. 16–17). ISEAS Publishing. https://doi.org/10.1355/9789812305299-007
 
 **International Organization in International Relations**
+
+- Gutner, T. L. (2017). International organizations in world politics. SAGE/ CQ Press.
+- Hurd, I. (2014). International organizations: Politics, law, pratice (2nd edition). Cambridge university press.
+- IMF. (n.d.-a). Europe’s COVID-19 Crisis and the Fund’s Response. Retrieved 17 January 2024, from https://www.imf.org/en/Blogs/Articles/2020/03/30/blog-europe-covid-19-crisis-and-the-fund-response
+- IMF. (n.d.-b). IMF Executive Board Approves a US$120.9 Million Disbursement to the Kyrgyz Republic to Address the COVID-19 Pandemic. IMF. Retrieved 17 January 2024, from https://www.imf.org/en/News/Articles/2020/03/26/pr20115-kyrgyz-republic-imf-executive-board-approves-disbursement-to-address-covid-19-pandemic
+- IMF. (n.d.-c). Joint Statement by the Chair of International Monetary and Financial Committee and the Managing Director of the International Monetary Fund. Retrieved 17 January 2024, from https://www.imf.org/en/News/Articles/2020/03/27/pr20114-joint-statement-by-the-chair-of-imfc-and-the-managing-director-of-the-imf
+- IMF. (n.d.-d). What is the IMF? Retrieved 17 January 2024, from https://www.imf.org/en/About/Factsheets/IMF-at-a-Glance
+- Vines, D., & Gilbert, C. L. (Eds.). (2004). The IMF and its Critics: Reform of Global Financial Architecture (1st ed.). Cambridge University Press. https://doi.org/10.1017/CBO9780511493362
+
+**Global Economic Architecture**
+
 
 ---
