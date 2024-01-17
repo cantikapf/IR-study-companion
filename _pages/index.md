@@ -3,7 +3,6 @@ layout: home
 title: IR Study Companion as Your Study Guide to Learn International Relations
 permalink: /
 ---
----
 
 ### About this website
 

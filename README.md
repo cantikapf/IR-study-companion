@@ -22,11 +22,3 @@ My version of the theme includes support for Google Analytics. To enable it, add
 tracker:
   google_analytics: "<YOUR GOOGLE ANALYTICS KEY, e.g, UA-xxxxxx-x>"
 ```
----
-
-## Visual Code Snippets available in this repo
-
-- [wide tables](https://github.com/cantikapf/IR-study-companion/blob/master/.vscode/wide%20table.code-snippets)
-- [chapter's header](https://github.com/cantikapf/IR-study-companion/blob/master/.vscode/pages%20chapter%20header.code-snippets)
-- [add picture with html](https://github.com/cantikapf/IR-study-companion/blob/master/.vscode/picture.code-snippets)
-- [000-index template](https://github.com/cantikapf/IR-study-companion/blob/master/.vscode/index.code-snippets)
