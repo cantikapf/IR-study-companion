@@ -148,5 +148,10 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 - Mucha-Leszko, B., & Twarowska, K. (2016). The European Union as a global economic power. Comparative Economic Research. Central and Eastern Europe, 19(3), 27–44.
 - Yazid, N. M. (2015). The theory of hegemonic stability, hegemonic power and international political economic stability. Global Journal of Political Science and Administration, 3(6), 67–79.
 
+**WTO And Trade Diplomacy**
+
+- Pigman, G. A. (2016). Trade diplomacy transformed: Why trade matters for global prosperity. Lulu. com.
+- VanGrasstek, C., & Pascal, L. (2013). The history and future of the World Trade Organization. World Trade Organization Geneva.
+
 ---
 
