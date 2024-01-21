@@ -1,7 +1,7 @@
 ---
 title: Study Of International Relations
 slug: study-of-international-relations
-abstract: This chapter will cover the introduction for the study of International Relations
+abstract:  Understand the foundational principles and key theories shaping the field of international relations, including realism, liberalism, Marxism, and constructivism, as well as their applications in analyzing global politics, economics, and security issues.
 ---
 
 ## Introduction 
