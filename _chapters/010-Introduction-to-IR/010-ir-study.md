@@ -4,6 +4,14 @@ slug: study-of-international-relations
 abstract:  Understand the foundational principles and key theories shaping the field of international relations, including realism, liberalism, Marxism, and constructivism, as well as their applications in analyzing global politics, economics, and security issues.
 ---
 
+## Video Summary
+
+<br>
+
+<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/Sa0PnnZLn0w?si=WMduPYThz5YN5GCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+
+<br>
+
 ## Introduction 
 
 International Relations, as an academic field of study, is fundamentally distinct from the superficial treatment of international affairs frequently seen in news media and current events coverage. While journalism may portray the latest geopolitical happenings or foreign policy issues, International Relations as a discipline encompasses a much broader and deeper analysis.
