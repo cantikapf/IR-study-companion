@@ -1,7 +1,7 @@
 ---
 title: Globalization And Global Politics
 slug: globalization-and-global-politics
-abstract: The explanation of globalization and global politics in International Relations context
+abstract: The explanation of globalization and global politics in the International Relations context
 ---
 
 ## Summary Video
@@ -10,13 +10,17 @@ abstract: The explanation of globalization and global politics in International 
 
 <br>
 
+## Material's recommendation before reading the study guide
+
 <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/wLNp3kgBuuQ?si=SjPwSULlXcfajHgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 
 <br>
 
+## Introduction
+
 Globalization is fundamentally defined by increased worldwide interconnectedness and interdependence. This is evident in the operations of more than 45,000 international NGOs, the ability to connect like-minded individuals across the planet, and a growing recognition of global problems demanding global solutions.
 
-Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of world output and two-thirds of world trade, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation states find themselves increasingly embedded within a thickening web of international relationships and decision-making.
+Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of world output and two-thirds of world trade, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation-states find themselves increasingly embedded within a thickening web of international relationships and decision-making.
 
 Under conditions of political globalization, states are increasingly embedded in thickening and overlapping worldwide web
 
@@ -40,7 +44,7 @@ Apple's strategic decision to manufacture in various global locations underscore
 
 Globalization can be conceptualized as a shift from discrete national states to a shared social space, where central aspects of human affairs are organized on a transnational or global scale. This process is characterized by "time-space compression" and "deterritorialization" according to some theorists.
 
-Time-space compression refers to the ways in which advancements in technology, transportation, and communication have effectively shrunk distances and accelerated the pace of interaction between places and events across the globe. Developments like the Internet and air travel have enabled rapid flows of information, people, goods, and services in ways that collapse geographical limitations.
+Time-space compression refers to how advancements in technology, transportation, and communication have effectively shrunk distances and accelerated the pace of interaction between places and events across the globe. Developments like the Internet and air travel have enabled rapid flows of information, people, goods, and services in ways that collapse geographical limitations.
 
 Deterritorialization involves the weakening of ties between culture, identity, and place. Globalization detaches social and economic activities from specific locations, so they are organized transnationally rather than confined within state borders and territories. Deterritorialization erodes traditionally fixed national affiliations and activities.
 
@@ -54,7 +58,7 @@ Linked to this is the notion that globalization rides on the coattails of Americ
 
 In addition, some skeptics point out that globalization relies on a stable economic environment and could potentially be derailed by major economic shocks or crises. The global financial crisis of 2008 revealed the fragility of global economic integration, as credit dried up and international trade declined sharply. Sudden economic contractions could lead nations to turn inward, undermining the globalization project.
 
-This perspective also argues that globalization is an uneven process that has produced winners and losers. While supporters highlight absolute increases in global living standards, critics maintain that relative gaps between rich and poor countries have persisted or worsened in many cases. They argue that globalization's rewards are spread unevenly, concentrated among wealthy nations and individuals.
+This perspective also argues that globalization is an uneven process that has produced winners and losers. While supporters highlight absolute increases in global living standards, critics maintain that relative gaps between rich and poor countries have persisted or worsened in many cases. They argue that globalization's rewards are spread unevenly, and concentrated among wealthy nations and individuals.
 
 ## Inequalities
 
@@ -64,11 +68,11 @@ Specifically, globalization has created winners and losers. While some groups, c
 
 Economically, globalization has enabled companies to access wider markets and consumers. But the gains have not been evenly distributed, with advanced economies often reaping greater rewards. Developing countries seeking foreign investment and exports can be vulnerable to global economic shocks and terms of trade that favor the West.
 
-Furthermore, economic integration has often favored mobility of capital over labor. Corporations can move factories and jobs overseas to access cheaper labor markets, leaving displaced and marginalized workers in their home countries.
+Furthermore, economic integration has often favored the mobility of capital over labor. Corporations can move factories and jobs overseas to access cheaper labor markets, leaving displaced and marginalized workers in their home countries.
 
-The new infrastructure of economic globalization - free trade rules, intellectual property rights, transnational corporations - reflects power structures that favor dominant states and commercial interests. Institutions like the World Trade Organization promote a neoliberal economic model that developing countries struggle to adjust to.
+The new infrastructure of economic globalization - free trade rules, intellectual property rights, and transnational corporations - reflects power structures that favor dominant states and commercial interests. Institutions like the World Trade Organization promote a neoliberal economic model that developing countries struggle to adjust to.
 
-Culturally, globalization enables worldwide exposure and exchange of ideas, art, and media. But critics argue it can lead to cultural imperialism, homogenization, and loss of local identity. Powerful Western cultural industries and brands can overwhelm indigenous culture. English has become the global lingua franca online, marginalizing other languages.
+Culturally, globalization enables worldwide exposure and exchange of ideas, art, and media. However critics argue it can lead to cultural imperialism, homogenization, and loss of local identity. Powerful Western cultural industries and brands can overwhelm indigenous culture. English has become the global lingua franca online, marginalizing other languages.
 
 While globalization connects the world, the benefits have accrued asymmetrically. Addressing inequalities remains an ongoing challenge. More equitable global integration requires inclusive policies and new forms of global cooperation and governance.
 
@@ -84,7 +88,7 @@ Notable examples include the United Nations, the World Trade Organization, the I
 
 The diversity of voices in global governance creates opportunities for an emerging transnational civil society. However, the absence of electoral accountability requires caution to ensure all affected voices are equitably represented.
 
-Overall, globalization compels states to become more embedded participants in a dense, overlapping and multidimensional system of global governance. This steady shift challenges conventional notions of sovereignty, autonomy and territoriality.
+Overall, globalization compels states to become more embedded participants in a dense, overlapping, and multidimensional system of global governance. This steady shift challenges conventional notions of sovereignty, autonomy and territoriality.
 
 ## Global Governance
 
@@ -92,7 +96,7 @@ The emergence of globalization has led to the rise of a global governance comple
 
 This system aims to foster cooperation between countries to tackle global challenges like climate change, pandemics, financial crises, terrorism, and more. It brings together not just states but also non-state actors like NGOs, companies, and civil society groups, contributing to a diverse transnational civil society. Advocates argue that global issues require global solutions and coordination.
 
-However, Critics contend that global governance lacks formal accountability and transparency. There are vast inequalities between participants in terms of resources and influence. Powerful countries and corporations hold greater sway in shaping rules and norms. Poorer nations have limited ability to advocate their interests. With no world government, enforcement of agreements depends on voluntary compliance of sovereign states.
+However, Critics contend that global governance lacks formal accountability and transparency. There are vast inequalities between participants in terms of resources and influence. Powerful countries and corporations hold greater sway in shaping rules and norms. Poorer nations have limited ability to advocate their interests. With no world government, the enforcement of agreements depends on the voluntary compliance of sovereign states.
 
 Overall, while global governance holds promise in coordinating collective action, its decentralized and voluntary nature poses challenges. Striking an equitable balance of interests and ensuring all stakeholders have a voice remains an ongoing task. Democratizing global governance to make it more inclusive and accountable remains vital.
 
