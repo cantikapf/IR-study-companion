@@ -6,7 +6,7 @@ abstract: The explanation of globalization and global politics in International 
 
 ## Summary Video
 
-https://youtu.be/7K4preE-EBY?si=1Eif1yBjCz82JMWj
+<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/7K4preE-EBY?si=FqMXKz3epygik4ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 
 <br>
 
