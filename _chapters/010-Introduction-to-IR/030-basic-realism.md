@@ -9,7 +9,7 @@ abstract: The introduction of Realism in International Relations
 
 <br>
 
-<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/UnKEFSVAiNQ?si=Lt5c1x72WdWwBBOZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center/>
+<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/UnKEFSVAiNQ?si=Lt5c1x72WdWwBBOZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 
 <br>
 <br>
@@ -18,7 +18,7 @@ Realism is an influential tradition in the study of world politics deeply rooted
 
 Realism posits that sovereign states are the main actors in global affairs who operate in a self-help world where power is crucial for survival. International anarchy prevails beyond a state's borders, meaning there is no central authority to regulate interactions. This forces states to pursue power independently as a means of safeguarding their security and interests.
 
-The realist framework views states as unitary rational actors seeking to maximize self-interests defined in terms of power. Relations between states take the form of a struggle for power within a balance of power system, as they compete to prevent the rise of hegemony. Ethics and morality are secondary concerns, and leaders may disregard universal ethics in pursuit of state interests and security.
+The realist framework views states as unitary rational actors seeking to maximize self-interests defined in terms of power. Relations between states take the form of a struggle for power within a balance-of-power system, as they compete to prevent the rise of hegemony. Ethics and morality are secondary concerns, and leaders may disregard universal ethics in pursuit of state interests and security.
 
 ## Historical Roots
 
@@ -76,7 +76,7 @@ Realism makes several key assumptions about international relations:
 
 ## Criticisms
 
-Despite its prominence, realism has faced criticism over the years for its inability to fully explain complex international phenomena. One key criticism is realism's failure to anticipate the largely peaceful end of the Cold War. Realist theory predicted an eventual clash between the two superpowers, the United States and Soviet Union, as they competed for power and influence. However, the Cold War ended not through military confrontation but through internal reforms in the Soviet Union and a resetting of relations between the two powers. Realism does not account for how mutual cooperation, trust-building, and diplomacy helped avoid direct conflict and pave the way for a peaceful resolution.
+Despite its prominence, realism has faced criticism over the years for its inability to fully explain complex international phenomena. One key criticism is realism's failure to anticipate the largely peaceful end of the Cold War. Realist theory predicted an eventual clash between the two superpowers, the United States and the Soviet Union, as they competed for power and influence. However, the Cold War ended not through military confrontation but through internal reforms in the Soviet Union and a resetting of relations between the two powers. Realism does not account for how cooperation, trust-building, and diplomacy helped avoid direct conflict and pave the way for a peaceful resolution.
 
 Additionally, realism struggles to explain conflicts within states rather than between states. Realist theory focuses on states as the key actors in an anarchic international system. However, in the post-World War II era, the majority of conflicts have been civil wars, insurgencies, and intra-state violence. Realism does not provide analytic tools to understand the complex ethnic, religious, and ideological factors fueling these internal conflicts. Power dynamics between states cannot fully capture the grievances, motivations, and goals of non-state actors fighting internally over resources, representation, and rights. Realism is state-centric and often discounts sub-state and transnational forces shaping world politics.
 
@@ -90,7 +90,7 @@ In contrast, neo-liberal institutionalists like Robert Keohane posited that inst
 
 This academic debate paralleled policy disagreements about engaging with the Soviet Union and China. The neo-neo divide framed analyses of major world events like the end of the Cold War, which neo-liberals viewed as showing the triumph of institutions over structure while neo-realists saw power dynamics as decisive.
 
-The neo-neo debate profoundly impacted international relations theory, forcing engagement between structural theories and models acknowledging ideational factors. Later approaches incorporated insights from both neo-realism and neo-liberalism in explaining state actions. However, divisions remain between rationalist paradigms prioritizing material structure and constructivist frameworks emphasizing identities, norms and ideas.
+The neo-neo debate profoundly impacted international relations theory, forcing engagement between structural theories and models acknowledging ideational factors. Later approaches incorporated insights from both neo-realism and neo-liberalism in explaining state actions. However, divisions remain between rationalist paradigms prioritizing material structure and constructivist frameworks emphasizing identities, norms, and ideas.
 
 ## Structural Realism
 
@@ -100,7 +100,7 @@ Since there is no central authority above sovereign states, the international sy
 
 In addition, the distribution of capabilities (such as military and economic power) is critical. States are especially concerned with balances and imbalances of power. A balanced distribution makes war less likely, while an imbalance increases competition as weaker states ally to counter the dominant state.
 
-Structural realists diverge on whether states should pursue relative gains over competitors or focus on absolute gains. Those focused on relative gains see cooperation as difficult, since states worry about losing ground to others. But others argue that states can cooperate for absolute gains as long as it does not produce relative losses. This debate continues to divide structural realists.
+Structural realists diverge on whether states should pursue relative gains over competitors or focus on absolute gains. Those focused on relative gains see cooperation as difficult since states worry about losing ground to others. However others argue that states can cooperate for absolute gains as long as it does not produce relative losses. This debate continues to divide structural realists.
 
 Overall, structural realists provide a systemic level of analysis to explain state actions. The configuration of the international system sets limits and incentives for foreign policy, even as leaders retain ultimate decision-making power informed by their perceptions. As such, structural realism remains an influential theory in international relations.
 
