@@ -122,3 +122,11 @@ Despite critiques, the core ideas of the Peace of Westphalia still shape the mod
 The interstate system's origins and principles provide context for current geopolitics. Ongoing discourse on state sovereignty, power balances, territorial authority, and governance structures continues to reference the Thirty Years War settlement. The Peace of Westphalia endures as a pivotal moment in international relations, but its principles require continual reassessment as the political world evolves.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Westphalian System" def1="Global system of sovereign states controlling domestic affairs and territory." term2="Sovereignty" def2="States have full legal authority and autonomy over their citizens and territory." term3="Territoriality" def3="States have defined borders and jurisdiction; external actors cannot intervene domestically." term4="Peace of Westphalia" def4="1648 treaties ending the Thirty Years War, establishing principles of state sovereignty." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_westphalia" question="Which pivotal historical event is largely credited with establishing the core principles of the modern interstate system?" opt1="The Congress of Vienna in 1815" opt2="The Peace of Westphalia in 1648" opt3="The Treaty of Versailles in 1919" opt4="The formation of the United Nations in 1945" correct="2" %}

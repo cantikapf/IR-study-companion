@@ -89,3 +89,11 @@ As findings emerge, students encounter additional choices in analyzing and inter
 In essence, research is a series of decisions at every juncture. The ability to scrutinize options and articulate justifications is paramount for crafting a coherent, robust, and relevant research essay. Beginning with a well-defined and focused research question lays a sturdy foundation, empowering students to navigate the complexities of research through thoughtful and strategic decision-making.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Empiricism" def1="Research approach using scientific methods and evidence-based analysis" term2="Interpretivism" def2="Research approach focusing on understanding meanings and subjective experiences" term3="Epistemology" def3="Study of the nature, sources, and limits of knowledge" term4="Positivism" def4="Philosophy emphasizing scientific method and objective reality" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_research_method_ir_study" question="What is the core difference between empiricism and interpretivism in International Relations?" opt1="Empiricism focuses on understanding meanings, while interpretivism focuses on objective reality" opt2="Empiricism emphasizes scientific methods, while interpretivism emphasizes understanding subjective experiences" opt3="Empiricism is concerned with theory, while interpretivism is concerned with practice" opt4="Empiricism and interpretivism are interchangeable terms" correct="2" %}

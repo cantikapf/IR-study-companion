@@ -152,3 +152,11 @@ External validity considers whether results can be generalized beyond the specif
 Statistical validity examines the appropriateness of statistical tests used, accuracy of analysis, and statistical power of the study. It looks at whether enough data is collected to support statistically valid conclusions. High statistical validity means appropriate tests are used and there is enough statistical power to avoid errors.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Quantitative Research" def1="Empirical research using numbers and statistics to express findings" term2="Operationalization" def2="Defining how a variable will be measured or observed" term3="Variable" def3="A concept that can be measured, with different values" term4="Validity" def4="How well a test measures what it claims to measure" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_quantitative" question="What is the primary characteristic that distinguishes quantitative research from other types of empirical research?" opt1="Use of qualitative data" opt2="Use of numbers and statistical analyses" opt3="Use of case studies" opt4="Use of experimental designs" correct="2" %}

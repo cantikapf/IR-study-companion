@@ -114,3 +114,11 @@ Looking ahead, the future of effective decentralization depends on strengthening
 If thoughtfully implemented, decentralization can support democratization, equitable development, and unity amidst diversity in Indonesia. But continued reform is needed to fully realize its potential benefits. The interplay between local and national governance will shape the next chapter of Indonesia's political evolution.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Decentralization" def1="Transfer of authority and responsibility from central government to local entities" term2="Political Decentralization" def2="Transfer of political power and authority to subnational levels" term3="Fiscal Decentralization" def3="Decentralization of financial resources and authority to local governments" term4="Clientelism" def4="Reciprocal, hierarchical relationship between patrons and clients for political support" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_democracy_indonesia" question="What was the primary goal of Indonesia's decentralization reforms post-Suharto?" opt1="To concentrate power in the central government" opt2="To address regional autonomy and curb secessionist movements" opt3="To strengthen Java-centric policies" opt4="To eliminate local democracy and accountability" correct="2" %}

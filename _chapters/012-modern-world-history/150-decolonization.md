@@ -100,3 +100,11 @@ Pan-Africanism, an influential force across much of Africa, encountered obstacle
 So while most of Africa rapidly gained independence in the 1950s-60s post-WWII wave of decolonization, exceptions like apartheid South Africa and war-torn Algeria faced a more arduous road. But the spirit of pan-Africanism succeeded in helping dismantle formal empires across the continent.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Decolonization" def1="The process of colonies gaining independence from imperial powers, especially post-World War II." term2="Self-determination" def2="The principle that people have the right to govern themselves, famously advocated post-World War I." term3="Anti-colonial Nationalism" def3="Movements asserting self-rule and independence against imperial control, fueled by global events." term4="Pan-Africanism" def4="Ideology promoting unity, solidarity, and self-governance among all people of African descent." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_150_decolonization" question="Which set of factors most profoundly shaped the trajectory of decolonization in the 20th century?" opt1="The establishment of a global free trade system and unified currency." opt2="Consistent, voluntary grants of independence by imperial powers." opt3="Global conflicts (World Wars, Cold War), financial strain on empires, and growing nationalist movements." opt4="The widespread adoption of a single, universal political ideology across all colonies." correct="3" %}

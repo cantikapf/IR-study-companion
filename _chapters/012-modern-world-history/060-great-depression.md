@@ -104,3 +104,11 @@ While the New Deal did not cure the Great Depression, which persisted until the 
 The Great Depression's global impact stretched from 1929 to 1939, causing protectionism and the breakdown of international trade. It hit nations deeply indebted to the U.S., like Germany and Great Britain, contributing to the rise of militarist governments in Germany and Japan and welfare systems in the U.S. and Britain. The era redefined the role of government and the economy, leaving lasting changes.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Great Depression" def1="Severe global economic downturn (1929-1939) characterized by mass unemployment, poverty, and corporate failures." term2="Stock Market Crash of 1929" def2="Pivotal event; sudden collapse of U.S. stock prices, triggering panic selling and economic instability." term3="New Deal" def3="FDR's series of federal programs and reforms providing relief, recovery, and reform during the Depression." term4="Federal Deposit Insurance Corporation (FDIC)" def4="New Deal agency insuring bank deposits, restoring public trust in the U.S. banking system." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_great_depression" question="Which of the following best characterizes the Great Depression?" opt1="A period of rapid industrial growth and increasing global trade." opt2="A severe global economic downturn marked by high unemployment, poverty, and business failures." opt3="A short-term recession primarily affecting the United States." opt4="A time when governments universally adopted laissez-faire policies." correct="2" %}

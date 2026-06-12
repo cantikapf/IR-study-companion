@@ -143,3 +143,11 @@ UNCLOS makes dispute resolution mechanisms compulsory through Article 286, which
 The compulsory dispute settlement mechanisms under UNCLOS have strengthened the international rule of law and helped resolve maritime disputes between states. UNCLOS dispute settlement has played an important role in clarifying the law of the sea and preventing and resolving conflicts.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="UNCLOS" def1="UN Convention on the Law of the Sea, governing ocean use" term2="Territorial Sea" def2="Sovereign waters extending 12 nautical miles from coastline" term3="Exclusive Economic Zone (EEZ)" def3="200 nautical mile zone for resource exploitation and management" term4="High Seas" def4="Open ocean areas beyond national jurisdiction" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_law_of_the_sea" question="What is the primary purpose of the United Nations Convention on the Law of the Sea (UNCLOS)?" opt1="To establish territorial sea boundaries" opt2="To provide a comprehensive legal framework for ocean use and management" opt3="To promote freedom of navigation on the high seas" opt4="To settle disputes between coastal states" correct="2" %}

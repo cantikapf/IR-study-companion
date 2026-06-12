@@ -80,3 +80,11 @@ In conclusion, neorealists disagree on whether China can rise peacefully. Their 
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Anarchic System" def1="International system with no central authority" term2="Neorealism" def2="Theory emphasizing competitive nature of international system" term3="Power Politics" def3="States' pursuit of material capabilities for security" term4="Self-Help Environment" def4="States' reliance on own capabilities for survival" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_neorealism_ir" question="What is the core driver of state behavior according to structural realists?" opt1="Human nature" opt2="Anarchic structure of international system" opt3="Economic interdependence" opt4="International institutions" correct="2" %}

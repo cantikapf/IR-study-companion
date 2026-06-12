@@ -115,3 +115,11 @@ Special considerations around boundary rivers and outer space were also covered.
 In summary, territory remains a crucial foundation of the international legal order. The inviolability of borders and state sovereignty over land, airspace and maritime zones are critical to peaceful relations. As technology progresses, applying existing legal principles to new frontiers like outer space continues to be an evolving challenge. But at its core, international law still firmly upholds territorial integrity while balancing shared interests.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Territorial Sovereignty" def1="Supreme authority and jurisdiction over a defined territory and population" term2="Territorial Integrity" def2="Protection of a state's territory against forceful and non-forceful interventions" term3="Cession" def3="Transfer of sovereignty over territory from one state to another" term4="Res Communis" def4="Outer space considered common property, free for all nations to use" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_territory_law" question="What is the primary principle that prohibits the threat or use of force against a state's territorial integrity?" opt1="Right of Self-Defense" opt2="Article 2(4) of the UN Charter" opt3="Territorial Sovereignty" opt4="Non-Intervention" correct="2" %}

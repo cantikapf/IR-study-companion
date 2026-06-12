@@ -142,3 +142,11 @@ This "Bretton Woods system" remained in place for over 25 years. However, the co
 In the 2000s, some called for a "Bretton Woods II" system to restore stability to currency markets in the wake of the global financial crisis. While this did not come to pass, the original Bretton Woods institutions continue to play important roles today. The conference was a defining moment that shaped global economics and governance for decades to come.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Bretton Woods Conference" def1="Post-WWII meeting (1944) establishing a new international monetary system, IMF, and World Bank." term2="Bretton Woods Institutions" def2="The IMF and World Bank, created to foster global financial stability and post-war reconstruction." term3="Adjustable Peg System" def3="Fixed exchange rates pegged to the US dollar, allowing limited fluctuations, with IMF approval for parity changes." term4="Dollar Hegemony" def4="The US dollar's dominance as the global reserve currency post-WWII, backed by US economic power." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_110_bretton_woods" question="What was the primary goal of the Bretton Woods Conference held in 1944?" opt1="To establish a unified global currency managed by the United Nations." opt2="To create a new international monetary system promoting stability and economic cooperation post-WWII." opt3="To dismantle existing trade barriers and promote protectionist economic policies worldwide." opt4="To re-establish the strict gold standard as the sole basis for international currency valuation." correct="2" %}

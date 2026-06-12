@@ -120,3 +120,12 @@ The stalled Doha talks and tensions between the developed and developing world h
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Hegemonic Stability Theory" def1="Explains shifts in open and closed trade periods based on power distribution" term2="Market Liberalism" def2="Open, liberal trade leads to greater prosperity and improved living standards" term3="Non-Discrimination" def3="Provides equal trading opportunities for WTO members" term4="Intergovernmental Bargaining" def4="Primary decision-making process through negotiations between member governments" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_GATT" question="What is the primary decision-making process in the WTO system?" opt1="Consensus-based voting" opt2="Intergovernmental bargaining" opt3="Hegemonic imposition" opt4="Unilateral decision-making" correct="2" %}

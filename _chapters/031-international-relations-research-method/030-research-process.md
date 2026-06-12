@@ -103,3 +103,11 @@ After collecting the data, it needs to be prepared for analysis. This can involv
 Finally, the researcher has to communicate the results and conclusions in a research report or paper. This includes summarizing the methodology, reporting statistical analysis, interpreting the findings, stating conclusions, and making recommendations. The results should be presented logically and coherently. Tables and figures can help convey main findings. Limitations of the research methods and potential biases need to be disclosed. The conclusions should tie directly back to the research problem and purpose. Suggestions for practical applications of the research and future studies can be made. The report should have an academic tone and conform to disciplinary writing conventions. Sharing the research findings advances scientific knowledge.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Research Problem" def1="Identifies the topic or issue to be studied in research" term2="Research Design" def2="Framework for collecting and analyzing data to answer research questions" term3="Sampling Technique" def3="Method used to select units from a population for study participation" term4="Data Collection" def4="Gathering data through methods like surveys, interviews, and observations" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_research_process" question="What is the primary purpose of formulating a research problem?" opt1="To select a sample for the study" opt2="To identify the topic or issue to be studied" opt3="To develop a research design" opt4="To collect data" correct="2" %}

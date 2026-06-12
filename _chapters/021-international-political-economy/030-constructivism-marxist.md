@@ -117,3 +117,12 @@ Source: Oatley, T. H. (2012). _International political economy_ (5th ed). Longma
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Constructivism" def1="Theory emphasizing ideas, values, norms in shaping international relations" term2="Marxism" def2="Theory critiquing capitalism, highlighting class conflict and exploitation" term3="Social Construct" def3="Concept or reality created through social interaction and interpretation" term4="Surplus Value" def4="Value created by workers beyond their subsistence wages, kept by capitalists as profit" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_constructivism_marxist" question="What is the core focus of Constructivism in International Political Economy?" opt1="The role of corporations in resource allocation" opt2="The impact of ideas, values, and norms on international relations" opt3="The inevitability of capitalist collapse" opt4="The importance of state power in international trade" correct="2" %}

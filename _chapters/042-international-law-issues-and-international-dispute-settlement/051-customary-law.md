@@ -115,3 +115,11 @@ CIL's sources are more material than formal - what states actually do, along wit
 Going forward, CIL will likely continue to adapt to new challenges and technologies. CIL provides means to regulate emerging domains like cybersecurity and outer space. Though CIL has weaknesses, its flexibility and grounding in state practice give it an important role in the international legal order. Clarifying norms and their basis in consistent state conduct and beliefs will strengthen CIL's legitimacy and utility. Overall, CIL represents an evolving product of state behavior and shared understandings that shapes global order.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Customary International Law (CIL)" def1="Binding legal obligations and rights from state practice and opinio juris." term2="Opinio Juris" def2="Belief that state conduct is carried out because it is legally required." term3="State Practice" def3="General and consistent conduct by states that develops over time." term4="Moral Theory" def4="Theory that CIL norms must be based on fundamental moral truths." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_051_customary_law" question="What are the two key elements required for a norm to become Customary International Law (CIL)?" opt1="Treaty ratification and state power" opt2="State practice and opinio juris" opt3="UN resolutions and domestic laws" opt4="International court decisions and state protests" correct="2" %}

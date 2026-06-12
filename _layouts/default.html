@@ -32,6 +32,7 @@
             <a
               href="{{ site.github_edit.base_url }}{{ page.path }}"
               target="_blank"
+              rel="noopener noreferrer"
               title="Edit on GitHub"
               class="github-edit-link">
               <i class="fa fa-github"></i>
@@ -51,6 +52,11 @@
             <div class="page-inner {% if page.class %}{{ page.class }}{% endif %}">
 
               {% include above-content.html %}
+
+              <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 20px; padding-top: 10px;">
+                {% include dark_mode.html %}
+                {% include progress.html %}
+              </div>
 
               {{ content }}
 
@@ -117,5 +123,7 @@
         gitbook.page.hasChanged({%- include gitbook-metadata.json.tpl -%});
       });
     </script>
+    
+    {% include chapter_progress_menu.html %}
   </body>
 </html>

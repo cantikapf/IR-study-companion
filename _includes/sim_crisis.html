@@ -1,0 +1,64 @@
+<style>
+.sim-crisis-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
+.sim-crisis-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
+.sim-crisis-header h3 { margin: 0; color: #ef4444 !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+.crisis-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; }
+.crisis-scene { font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; color: #d1d5db; }
+.crisis-options { display: flex; flex-direction: column; gap: 10px; }
+.crisis-btn { padding: 12px 15px; background: #374151; color: white; border: 1px solid #4b5563; border-radius: 6px; font-size: 1rem; cursor: pointer; text-align: left; transition: all 0.2s; display: flex; align-items: center; gap: 10px; outline: none; }
+.crisis-btn:hover { background: #4b5563; border-color: #9ca3af; transform: translateX(5px); }
+.crisis-btn.military:hover { background: #7f1d1d; border-color: #ef4444; }
+.crisis-btn.diplomat:hover { background: #1e3a8a; border-color: #3b82f6; }
+.crisis-result { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: normal; display: none; animation: fadeIn 0.5s ease-in-out; line-height: 1.5; }
+.crisis-result.bad { background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #fca5a5; }
+.crisis-result.good { background: rgba(16,185,129,0.1); border: 1px solid #10b981; color: #6ee7b7; }
+</style>
+
+<div class="sim-crisis-container">
+    <div class="sim-crisis-header">
+        <h3><i class="fa fa-warning"></i> Simulation: The Cuban Missile Crisis</h3>
+        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are US President JFK. Soviet nuclear missiles have been spotted in Cuba. Your advisors are sharply divided (Bureaucratic Politics Model). How do you respond?</p>
+    </div>
+    <div class="crisis-panel">
+        <div id="crisis-scene" class="crisis-scene">
+            <strong>Day 1:</strong> The CIA shows you spy plane photos of Soviet nuclear missile sites under construction in Cuba. The Joint Chiefs of Staff (Military) urge an immediate airstrike. The State Department (Diplomats) suggests secret negotiations. What is your first move?
+        </div>
+        <div id="crisis-options" class="crisis-options">
+            <button class="crisis-btn military" onclick="playCrisis(1)">🚀 1. Launch a preemptive airstrike on the missile sites.</button>
+            <button class="crisis-btn diplomat" onclick="playCrisis(2)">🤫 2. Open secret diplomatic backchannels with the Soviets.</button>
+            <button class="crisis-btn" onclick="playCrisis(3)" style="background:#047857; border-color:#10b981;">🚢 3. Impose a naval "quarantine" (blockade) around Cuba.</button>
+        </div>
+        <div id="crisis-result" class="crisis-result"></div>
+        <button id="crisis-restart" class="wto-btn" style="display:none; margin-top:20px; width:auto; padding:8px 20px; background:#374151; border:1px solid #4b5563;" onclick="resetCrisis()">🔄 Restart Simulation</button>
+    </div>
+</div>
+
+<script>
+function playCrisis(choice) {
+    const scene = document.getElementById('crisis-scene');
+    const options = document.getElementById('crisis-options');
+    const result = document.getElementById('crisis-result');
+    const restartBtn = document.getElementById('crisis-restart');
+    
+    options.style.display = 'none';
+    result.style.display = 'block';
+    restartBtn.style.display = 'inline-block';
+    
+    if (choice === 1) {
+        result.className = 'crisis-result bad';
+        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">💥 Nuclear Escalation!</span><br><br>The airstrike killed Soviet personnel. The USSR retaliates by launching a tactical nuclear strike on US forces, triggering full-scale World War III. <br><br><span style="color:#f87171;"><em>Analysis: This represents a failure of the Rational Actor Model due to incomplete information about Soviet trigger-happiness.</em></span>';
+    } else if (choice === 2) {
+        result.className = 'crisis-result bad';
+        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">🕒 Too Slow!</span><br><br>Secret negotiations drag on for weeks. The Soviets use the time to make the missiles operational. The US loses its strategic advantage and must concede to Soviet demands in Europe.<br><br><span style="color:#f87171;"><em>Analysis: Diplomacy without leverage failed in this high-stakes Chicken Game.</em></span>';
+    } else if (choice === 3) {
+        result.className = 'crisis-result good';
+        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">✅ Brinkmanship Success!</span><br><br>The naval quarantine prevents more missiles from arriving while giving Soviet Premier Khrushchev time to back down gracefully. A secret deal is struck to remove US missiles in Turkey in exchange for Soviet withdrawal in Cuba.<br><br><span style="color:#34d399;"><em>Analysis: A perfect example of calibrated brinkmanship and rational decision-making!</em></span>';
+    }
+}
+
+function resetCrisis() {
+    document.getElementById('crisis-options').style.display = 'flex';
+    document.getElementById('crisis-result').style.display = 'none';
+    document.getElementById('crisis-restart').style.display = 'none';
+}
+</script>

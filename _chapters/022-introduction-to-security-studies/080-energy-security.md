@@ -53,3 +53,12 @@ Reducing energy consumption is another strategy, given inelastic supply. This co
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Energy Security" def1="Access to reliable, affordable, and sustainable energy resources" term2="Renewable Energy" def2="Energy from sources like solar, wind, hydro, and geothermal" term3="Energy Insecurity" def3="Vulnerability to disruptions in energy supply and access" term4="Global Energy Supply System" def4="Complex network of energy production, transportation, and distribution" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_energy_security" question="What is the primary goal of ensuring energy security?" opt1="To reduce energy consumption" opt2="To have access to reliable, affordable, and sustainable energy resources" opt3="To increase dependence on foreign energy sources" opt4="To promote the use of fossil fuels" correct="2" %}

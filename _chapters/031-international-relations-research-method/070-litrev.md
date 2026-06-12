@@ -173,3 +173,12 @@ When conducting a literature review, there are some key best practices to keep i
 
 
 
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Scholarly Literature" def1="Research published by experts in academic journals and books." term2="Peer Review" def2="Process verifying validity and importance of research before publication." term3="Literature Review" def3="Review of prior scholarly work to refine research questions and context." term4="Theoretical Framework" def4="Key theories and concepts informing research in a topic area." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_litrev" question="What is the primary purpose of scholarly literature?" opt1="To provide general information for a broad audience." opt2="To present new research, theories, and methodologies to advance knowledge." opt3="To target the general public with simplified information." opt4="To solely cite existing sources without new insights." correct="2" %}

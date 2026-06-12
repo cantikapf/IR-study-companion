@@ -120,3 +120,12 @@ With time running short, innovation offers hope. Rapid technology advances can a
 Yet greater commitment remains vital. Ambition must increase, or coming generations will pay the price. Visionary leadership can reframe climate action as an opportunity to reinvent economies, unite humanity, and secure our common future. The task is monumental, but the stakes are even greater. Our legacy depends on the road ahead.
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Stockholm Conference (1972)" def1="First major international gathering putting environmental issues on the global agenda, leading to UNEP." term2="Sustainable Development" def2="Development meeting present needs without compromising future generations' ability to meet their own." term3="UNEP" def3="First UN agency solely focused on the environment, coordinating global environmental activities and programs." term4="Paris Agreement (2015)" def4="Global accord requiring all countries to submit national climate pledges (NDCs) to limit global warming." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_global_environment" question="Which concept best encapsulates the approach adopted by the international community to balance economic growth with environmental protection as environmental issues became global agendas?" opt1="Regime Theory" opt2="Epistemic Communities" opt3="Sustainable Development" opt4="Common but Differentiated Responsibilities" correct="3" %}

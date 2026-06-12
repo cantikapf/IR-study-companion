@@ -1,0 +1,184 @@
+<style>
+.geomap-container {
+    background: #111827;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.geomap-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.geomap-subtitle {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+.geomap-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.geomap-tooltip {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    min-width: 200px;
+    z-index: 10;
+}
+.geomap-tooltip.visible {
+    opacity: 1;
+}
+svg path.country {
+    fill: #374151;
+    stroke: #1f2937;
+    stroke-width: 0.5;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+svg path.country:hover {
+    fill: #4facfe;
+    filter: drop-shadow(0 0 5px rgba(79,172,254,0.6));
+}
+</style>
+
+<div class="geomap-container">
+    <div class="geomap-title">Interactive Geopolitical Map</div>
+    <div class="geomap-subtitle">Hover over a country to view its IR historical profile.</div>
+    <div class="geomap-wrapper">
+        <svg id="world-map-svg" viewBox="0 0 1000 500" width="100%" height="auto"></svg>
+        <div id="geomap-tooltip" class="geomap-tooltip">Hover over a country</div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Fun facts dictionary
+    const funFacts = {
+        "United States of America": "Founding member of NATO and the UN. Key player in the Cold War.",
+        "Russia": "Successor state to the Soviet Union. Permanent member of the UN Security Council.",
+        "China": "A rising global power, central to the 'Belt and Road Initiative'.",
+        "United Kingdom": "Former global empire, key architect of the post-WWII international order.",
+        "France": "A nuclear power and a leading force within the European Union.",
+        "Germany": "Reunified in 1990, now the economic powerhouse of Europe.",
+        "India": "A founding member of the Non-Aligned Movement during the Cold War.",
+        "Brazil": "A major player in the Global South and BRICS.",
+        "South Africa": "Overcame apartheid to become a leading diplomatic voice in Africa.",
+        "Japan": "Adopted a pacifist constitution post-WWII, focuses on economic diplomacy.",
+        "Indonesia": "Hosted the historic 1955 Bandung Conference, pivotal for the Non-Aligned Movement."
+    };
+
+    const svg = document.getElementById('world-map-svg');
+    const tooltip = document.getElementById('geomap-tooltip');
+
+    // Load GeoJSON data from CDN and draw via d3.js
+    // Since we don't want to rely on heavy D3 bundle if possible, we can just fetch a pre-built SVG map or use D3 lightweight.
+    // We will dynamically load D3 if not present.
+    if (!window.d3) {
+        const script = document.createElement('script');
+        script.src = "https://d3js.org/d3.v7.min.js";
+        script.onload = renderMap;
+        document.head.appendChild(script);
+    } else {
+        renderMap();
+    }
+
+    function renderMap() {
+        const projection = d3.geoNaturalEarth1().scale(160).translate([500, 250]);
+        const path = d3.geoPath().projection(projection);
+
+        d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
+            // Need topojson
+            if (!window.topojson) {
+                const tjScript = document.createElement('script');
+                tjScript.src = "https://unpkg.com/topojson-client@3";
+                tjScript.onload = () => draw(world, path);
+                document.head.appendChild(tjScript);
+            } else {
+                draw(world, path);
+            }
+        });
+    }
+
+    function draw(world, path) {
+        const countries = topojson.feature(world, world.objects.countries).features;
+        
+        d3.select("#world-map-svg")
+          .selectAll("path")
+          .data(countries)
+          .enter()
+          .append("path")
+          .attr("class", "country")
+          .attr("d", path)
+          .attr("data-name", d => d.properties.name)
+          .on("mouseover", function(event, d) {
+              const name = d.properties.name;
+              if (funFacts[name]) {
+                  let sourceTxt = funFacts[name].length > 100 ? `<br><em style="font-size:0.7em; color:#9ca3af;">Source: Wikipedia</em>` : ``;
+                  tooltip.innerHTML = `<strong>${name}</strong><br><span style="font-size:0.85em; color:#4b5563;">${funFacts[name]}</span>${sourceTxt}`;
+                  tooltip.classList.add("visible");
+              } else {
+                  tooltip.innerHTML = `<strong>${name}</strong><br><span style="font-size:0.85em; color:#4b5563;">Fetching accredited data from Wikipedia... ⏳</span>`;
+                  tooltip.classList.add("visible");
+                  
+                  fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/Foreign_relations_of_${encodeURIComponent(name)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        let factText = data.extract;
+                        if (!factText) {
+                            return fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`)
+                                .then(res2 => res2.json())
+                                .then(data2 => {
+                                    if(data2.extract) {
+                                        return data2.extract.split('. ')[0] + '.'; // just take first sentence for general summary
+                                    }
+                                    return "Geopolitical facts are not yet available.";
+                                });
+                        }
+                        return factText.split('. ')[0] + '.'; // Keep it short for tooltip
+                    })
+                    .then(fact => {
+                        funFacts[name] = fact;
+                        if(tooltip.classList.contains("visible") && tooltip.innerHTML.includes(name)) {
+                            tooltip.innerHTML = `<strong>${name}</strong><br><span style="font-size:0.85em; color:#4b5563;">${fact}</span><br><em style="font-size:0.7em; color:#9ca3af;">Source: Wikipedia</em>`;
+                        }
+                    })
+                    .catch(() => {
+                        funFacts[name] = "Geopolitical facts are not yet available.";
+                        if(tooltip.classList.contains("visible") && tooltip.innerHTML.includes(name)) {
+                            tooltip.innerHTML = `<strong>${name}</strong><br><span style="font-size:0.85em; color:#4b5563;">Geopolitical facts are not yet available.</span>`;
+                        }
+                    });
+              }
+          })
+          .on("mouseout", function() {
+              tooltip.classList.remove("visible");
+          })
+          .on("click", function(event, d) {
+              const name = d.properties.name;
+              const fact = funFacts[name] || "Fetching data...";
+              alert(`Geopolitical Profile: ${name}\n\n${fact}`);
+          });
+    }
+});
+</script>

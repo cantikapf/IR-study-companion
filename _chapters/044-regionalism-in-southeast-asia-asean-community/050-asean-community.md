@@ -156,3 +156,11 @@ Moving forward, ASEAN must continue addressing issues such as trade barriers, di
 Continued integration and cooperation will bolster ASEAN's resilience and collective identity. With decisive leadership and willingness from all members to implement key reforms, the ASEAN Community can fulfill its promise of a peaceful, stable and prosperous Southeast Asia.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="ASEAN Community" def1="Regional cooperation in politics, security, economy, and socio-culture in Southeast Asia" term2="ASEAN Economic Community" def2="Promotes economic integration and single market among ASEAN member states" term3="Political-Security Community" def3="Fosters regional peace and stability through cooperation on security issues" term4="Socio-Cultural Community" def4="Promotes social development and collective regional identity amongst ASEAN members" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_asean_community" question="What are the three pillars of the ASEAN Community?" opt1="ASEAN Political-Security Community, ASEAN Economic Community, ASEAN Cultural Community" opt2="ASEAN Political-Security Community, ASEAN Economic Community, ASEAN Socio-Cultural Community" opt3="ASEAN Economic Community, ASEAN Socio-Cultural Community, ASEAN Environmental Community" opt4="ASEAN Political-Security Community, ASEAN Social Community, ASEAN Environmental Community" correct="2" %}

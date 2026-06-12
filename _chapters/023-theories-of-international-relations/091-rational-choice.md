@@ -55,3 +55,11 @@ Rational choice theory has faced several critiques, both internal and external, 
 Despite these critiques, rational choice theory remains a powerful and flexible approach that can address the problems of change, preferences, and actor identities within the framework of rational choice.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Rational Choice" def1="Approach assuming actors make rational choices based on preferences and info" term2="Utility-Maximizer" def2="Actor making decisions based on cost-benefit analysis to maximize utility" term3="Anarchy" def3="Absence of a central authority in international relations" term4="Cooperation" def4="Interaction where actors work together to achieve common goals" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_091_rational_choice" question="What is the core assumption of rational choice theory in international relations?" opt1="Actors are irrational and make random choices" opt2="Actors are rational and make choices based on preferences and available information" opt3="Actors are only motivated by self-interest" opt4="Actors are only influenced by external factors" correct="2" %}

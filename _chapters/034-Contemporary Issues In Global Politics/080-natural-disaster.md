@@ -53,3 +53,11 @@ While global aid was vital, the Indonesian government insisted on leading the re
 Overall, the scale of devastation wrought by the tsunami gave impetus to end conflict and rebuild both physically and politically in Aceh. It opened a window of opportunity that Indonesia and GAM seized, with major assistance from global partners. The tsunami disaster became Aceh's road to peace and reconstruction.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Post-Disaster Political Spaces" def1="Moments when underlying issues and tensions are brought to the surface." term2="Disaster Politics" def2="The intersection of natural disasters and political conditions." term3="Critical Juncture" def3="A disaster as a catalyst for irreversible political change." term4="Accelerated Status Quo" def4="Disasters accelerate existing political tensions and trajectories." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_natural_disaster" question="What can natural disasters do to the political landscape of a society?" opt1="Leave it unchanged" opt2="Create opportunities for political change and reform" opt3="Only exacerbate existing inequalities" opt4="Automatically lead to conflict and violence" correct="2" %}

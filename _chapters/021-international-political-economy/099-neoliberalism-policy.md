@@ -112,3 +112,12 @@ In the 21st century, neoliberal globalization appears deeply entrenched but not 
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Neoliberalism" def1="Economic ideology emphasizing free markets and limited government intervention" term2="Free Markets" def2="Markets operating freely with minimal government regulation and oversight" term3="Property Rights" def3="Legal protections ensuring ownership and control of assets and resources" term4="Deregulation" def4="Removal of government rules and regulations to promote market freedom" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_099_neoliberalism_policy" question="What is the core idea of Neoliberalism regarding government intervention in economic affairs?" opt1="Maximum government control over economic activities" opt2="Limited government intervention to promote free markets" opt3="Government regulation of all economic sectors" opt4="State ownership of key industries" correct="2" %}

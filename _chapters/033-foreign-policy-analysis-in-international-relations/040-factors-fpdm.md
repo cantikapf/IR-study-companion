@@ -135,3 +135,11 @@ Chinese decision making emphasizes collective consensus and harmony. The cultura
 Japan's decision making style emphasizes collective responsibility, consensus, and saving face. Japanese cultural values like harmony and respect for authority figures lead to extensive group consultation and joint decision ownership. Decisions are made slowly and conservatively to avoid mistakes and maintain the group's reputation.
 
 Cultural values clearly influence how leaders in different societies approach important decisions. Understanding these differences allows for more effective cross-cultural relations and international collaboration. Flexibility to bridge the cultural divides can lead to better informed choices.
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cognitive Consistency" def1="Reliance on information consistent with pre-existing images and beliefs" term2="Evoked Set" def2="Pre-existing set of information influencing decision-makers' initial thoughts" term3="Leadership Style" def3="Leaders' approach to decision-making and interaction with constraints" term4="Belief Systems" def4="Influential frameworks shaping leaders' foreign policy preferences" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_factors_fpdm" question="What primarily shapes a leader's foreign policy decision-making?" opt1="International economic factors" opt2="Psychological factors including personal attributes and beliefs" opt3="Cultural and social norms" opt4="Domestic political pressures" correct="2" %}

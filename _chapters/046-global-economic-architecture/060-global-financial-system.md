@@ -101,3 +101,11 @@ The end of fixed exchange rates led to a new era of financial globalization and 
 Looking ahead, the challenges are complex. Technical reforms are needed to ensure smooth adjustments between currencies and sufficient global liquidity. But political challenges are equally daunting, as coordination and cooperation between nations remain difficult. The role of the dollar as a reserve currency grants the US unique privileges and responsibilities. Leadership from major economies and multilateral forums like the IMF will be critical in building a resilient monetary system for the 21 st century.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Bretton Woods System" def1="A fixed exchange rate system established in 1944" term2="Financial Globalization" def2="Increased integration of financial markets worldwide" term3="Fixed Exchange Rate" def3="Exchange rate pegged to a specific value or currency" term4="Seigniorage" def4="Economic benefits from issuing a reserve currency" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_global_financial_system" question="What was the primary outcome of the Bretton Woods Conference in 1944?" opt1="Establishment of the European Union" opt2="Creation of the International Monetary Fund (IMF) and fixed exchange rates" opt3="Introduction of the Euro as a global reserve currency" opt4="Implementation of capital controls on international transactions" correct="2" %}

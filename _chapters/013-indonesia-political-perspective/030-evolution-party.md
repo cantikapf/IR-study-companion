@@ -112,3 +112,11 @@ Across political systems, the importance of political parties stems from their m
 
 Understanding the categorization of party systems provides perspective on the varied structures that political parties operate within. While some nations lack organized party systems entirely, others feature single-party dominance or multiparty competition. Appreciating this diversity helps underscore the pivotal role played by political parties and ruling parties worldwide.
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Political Party" def1="Organized entity aiming to elect representatives to influence policies" term2="Interest Group" def2="Organization focusing on influencing policy in specific areas" term3="One-Party System" def3="Single dominant party controls government, opposition parties limited" term4="Multi-Party System" def4="Multiple significant parties, power alternates between coalitions" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_evolution_party" question="What is the primary goal of a political party?" opt1="To influence government public policy in specific areas" opt2="To elect representatives to government offices and influence policies" opt3="To provide financial support to interest groups" opt4="To organize government structures without electoral competition" correct="2" %}

@@ -144,3 +144,11 @@ The UN plays an important role in promoting international cooperation and establ
 By providing a forum for cooperation and a basic code of conduct between nations, the UN system aims to prevent armed conflict and promote peace, security, development, and human rights worldwide. Despite imperfections, the UN has arguably helped limit inter-state wars and fosters dialogue for resolving disputes. With most countries participating, the UN helps shape modern norms and laws in international relations.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="UN Charter" def1="The legal basis and constitutional framework for the United Nations" term2="Collective Security" def2="A system where states work together to prevent wars and maintain peace" term3="Sovereign Equality" def3="The principle that all states are equal and have equal rights" term4="International Law" def4="A set of rules that govern relations between states and other international actors" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_UN_administration" question="What is the primary purpose of the United Nations?" opt1="To promote economic development" opt2="To maintain international peace and security" opt3="To protect human rights only" opt4="To provide humanitarian aid" correct="2" %}

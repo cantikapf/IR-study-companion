@@ -102,3 +102,12 @@ As private security continues to expand into spheres traditionally dominated by 
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Alliance" def1="Formal or informal security cooperation between sovereign states" term2="Collective Security" def2="Responding to unspecified aggressor in support of unknown victim" term3="Regional Security Structures" def3="Institutions for security cooperation among regional actors" term4="United Nations Security Role" def4="Maintaining international peace and security through Security Council" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_institution_security" question="What is the primary goal of the United Nations Security Role?" opt1="Promoting economic development" opt2="Maintaining international peace and security" opt3="Protecting human rights" opt4="Enforcing environmental regulations" correct="2" %}

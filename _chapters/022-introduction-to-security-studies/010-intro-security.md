@@ -65,3 +65,12 @@ Overall, the post-Cold War era necessitated an evolution in thinking from nation
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="National Security" def1="Protection of a nation-state from external and internal threats" term2="Global Security" def2="Security threats that affect the entire world, beyond national borders" term3="Human Security" def3="Focus on protecting individuals from threats to their safety and dignity" term4="Realism" def4="Theoretical perspective emphasizing state power and military capabilities" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_intro_security" question="What is the primary focus of security studies in the context of International Relations?" opt1="Protecting the interests of a particular nation-state" opt2="Addressing global security threats that affect the entire world" opt3="Promoting international cooperation and collective security" opt4="Emancipating individuals from threats to their safety and dignity" correct="2" %}

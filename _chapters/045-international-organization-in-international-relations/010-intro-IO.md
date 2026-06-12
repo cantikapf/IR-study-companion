@@ -143,3 +143,11 @@ International organizations are often criticized as being dominated by the most 
 Critics argue that international organizations infringe upon the sovereignty of member states. Binding rules and decisions made by international bodies undermine the authority of national governments. Some fear international organizations will become unaccountable "world governments" that impose solutions. Supporters counter that states voluntarily join organizations and can withdraw. Pooling sovereignty is necessary to tackle global issues no state can solve alone.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Intergovernmental Organization (IGO)" def1="Formal organization of sovereign states represented by governments" term2="International Nongovernmental Organization (INGO)" def2="Organization with individual or group members, not states" term3="Multilateralism" def3="Coordinating policies among three or more states on shared principles" term4="Global Governance" def4="Rules, norms, and practices managing global issues and challenges" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_intro_IO" question="What is the primary characteristic that distinguishes intergovernmental organizations (IGOs) from international nongovernmental organizations (INGOs)?" opt1="Membership composition" opt2="Geographic scope" opt3="Budget size" opt4="Institutional design" correct="1" %}

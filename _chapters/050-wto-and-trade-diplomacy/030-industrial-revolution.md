@@ -105,3 +105,11 @@ Ultimately, the early 19 th century planted the seeds for modern international t
 The era highlights how economic transformations shape diplomacy. As methods of production evolved, international economic integration became more imperative. This compelled nations to cooperate more on trade regardless of political conflicts. The experience of early 19 th century European trade diplomacy illustrates the potential for economic interdependence to act as a stabilizing force in international relations.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Industrial Revolution" def1="Period of new manufacturing processes and mass production" term2="Mercantilism" def2="Economic system using trade to maximize national power" term3="Free Trade" def3="Trade policy allowing goods to flow freely across borders" term4="Protectionism" def4="Trade policy using tariffs and quotas to protect domestic industries" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_industrial_revolution" question="What was the primary shift in international trade diplomacy following the Industrial Revolution?" opt1="Trade was used more as a tool of war and control" opt2="Trade became an end in itself, driven by economic logic and incentives" opt3="Trade agreements were only negotiated between allies" opt4="Trade was restricted to only domestic markets" correct="2" %}

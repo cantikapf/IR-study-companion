@@ -179,3 +179,11 @@ Government is the organization that makes, enforces, and implements political de
 The functions of government directly impact the lives of citizens. By studying how governments fulfill these core responsibilities, political science develops insights into the problems and prospects of societies. Understanding the role of government provides citizens the knowledge to participate effectively in civic life and shape public policies for the common good.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Politics" def1="Activities associated with governance and decision-making of groups of people" term2="Power" def2="Ability to influence the actions of others" term3="State" def3="Fundamental element of political science with territory, population, government, and sovereignty" term4="Public Policy" def4="Exercise of power to choose goals and strategies to achieve them" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_basic_political" question="What is the core concept that politics involves the use of?" opt1="Economics" opt2="Power and authority" opt3="International relations" opt4="Sociology" correct="2" %}

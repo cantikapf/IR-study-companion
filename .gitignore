@@ -2,3 +2,16 @@ _site/
 _draft/
 .jekyll-cache/
 sitemap.xml
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Test & Automation artifacts
+node_modules/
+playwright-report/
+test-results/
+__pycache__/
+.pytest_cache/

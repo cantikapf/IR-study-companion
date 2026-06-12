@@ -1,0 +1,250 @@
+<style>
+.chapter-progress-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none; /* hidden by default */
+    align-items: center;
+    justify-content: center;
+}
+.chapter-progress-modal {
+    background: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.chapter-progress-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chapter-progress-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white !important;
+}
+.chapter-progress-header button {
+    background: none; border: none; color: white;
+    font-size: 1.8rem; cursor: pointer; line-height: 1;
+}
+.chapter-progress-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.progress-bar-fill {
+    height: 100%;
+    background-color: #10b981;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+.progress-stats {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-align: right;
+    font-weight: bold;
+}
+.unread-chapters-list {
+    list-style: none;
+    padding: 0; margin: 0;
+}
+.unread-chapter-item {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.unread-chapter-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+.unread-chapter-item a:hover {
+    text-decoration: underline;
+}
+.all-done-msg {
+    color: #10b981;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+}
+</style>
+
+<div id="chapter-progress-overlay" class="chapter-progress-overlay">
+  <div class="chapter-progress-modal">
+    <div class="chapter-progress-header">
+       <h2>Your Study Progress</h2>
+       <button id="close-progress-modal">&times;</button>
+    </div>
+    <div class="chapter-progress-body">
+       <div class="progress-bar-container">
+           <div class="progress-bar-fill" id="progress-bar-fill"></div>
+       </div>
+       <div class="progress-stats" id="progress-stats">0% Completed (0/0)</div>
+       
+       <h3 style="margin-top: 24px; font-size:1.1rem; color:#1f2937;">Unread Chapters:</h3>
+       <ul class="unread-chapters-list" id="unread-chapters-list">
+          {% for chap in site.chapters %}
+             {% if chap.title and chap.slug %}
+             <li class="unread-chapter-item" data-chapter-slug="{{ chap.slug }}">
+                <a href="{{ site.baseurl }}{{ chap.url }}">{{ chap.title }}</a>
+             </li>
+             {% endif %}
+          {% endfor %}
+       </ul>
+       <div id="all-done-msg" class="all-done-msg">
+          🎉 Awesome! You have completed all chapters.<br>
+          <button id="download-cert-btn" style="margin-top: 15px; background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; color: white; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4); transition: transform 0.2s;">
+             📜 Download Certificate
+          </button>
+       </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('chapter-progress-overlay');
+    const closeBtn = document.getElementById('close-progress-modal');
+    
+    // Attach to the existing global progress pill
+    const globalProgress = document.getElementById('global-progress');
+    if (globalProgress) {
+        // Change text in badge from "Skor Belajar" to "Progres"
+        // and show it even if 0.
+        globalProgress.style.display = 'inline-flex';
+        globalProgress.style.cursor = 'pointer';
+        globalProgress.innerHTML = `<span class="progress-icon">📈</span><span class="progress-text">Progress: <strong class="progress-score" id="progress-percent-val">0%</strong></span>`;
+        
+        globalProgress.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+            refreshProgressMenu();
+        });
+    }
+
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if(e.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
+
+    function refreshProgressMenu() {
+        const items = document.querySelectorAll('.unread-chapter-item');
+        let total = items.length;
+        let completed = 0;
+
+        items.forEach(item => {
+            const slug = item.getAttribute('data-chapter-slug');
+            const isRead = localStorage.getItem('chapter_read_' + slug) === 'true';
+            
+            if (isRead) {
+                item.style.display = 'none';
+                completed++;
+            } else {
+                item.style.display = 'block';
+            }
+        });
+
+        const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+        
+        document.getElementById('progress-bar-fill').style.width = percent + '%';
+        document.getElementById('progress-stats').textContent = `${percent}% Completed (${completed}/${total} Chapters)`;
+        
+        const pillPercent = document.getElementById('progress-percent-val');
+        if (pillPercent) {
+            pillPercent.textContent = percent + '%';
+        }
+
+        if (completed === total && total > 0) {
+            document.getElementById('unread-chapters-list').style.display = 'none';
+            document.getElementById('all-done-msg').style.display = 'block';
+        } else {
+            document.getElementById('unread-chapters-list').style.display = 'block';
+            document.getElementById('all-done-msg').style.display = 'none';
+        }
+    }
+
+    // Refresh immediately to update badge
+    refreshProgressMenu();
+
+    // Listen to changes from other scripts (e.g. mark as read button)
+    window.addEventListener('chapter_read', refreshProgressMenu);
+
+    const certBtn = document.getElementById('download-cert-btn');
+    if (certBtn) {
+        certBtn.addEventListener('click', () => {
+            const name = prompt("Enter your name to appear on the certificate:", "Student");
+            if (name) {
+                const printWindow = window.open('', '_blank');
+                printWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Certificate of Completion</title>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;700&display=swap');
+                            body { font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f3f4f6; margin: 0; }
+                            @media print { body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; } .certificate { box-shadow: none !important; border-width: 10px !important; } }
+                            .certificate { width: 800px; padding: 60px 40px 100px; text-align: center; background: white; border: 15px solid #d4af37; outline: 5px solid #fff; outline-offset: -10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative; }
+                            .cert-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1f2937; margin-bottom: 20px; }
+                            .cert-subtitle { font-size: 1.2rem; color: #4b5563; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+                            .cert-name { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #d4af37; margin-bottom: 20px; font-style: italic; border-bottom: 2px solid #e5e7eb; display: inline-block; padding: 0 40px; }
+                            .cert-desc { font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin-bottom: 40px; padding: 0 50px; }
+                            .cert-date { font-weight: bold; font-size: 1.1rem; color: #1f2937; }
+                            .cert-seal { position: absolute; bottom: 40px; left: 40px; width: 100px; height: 100px; background: #d4af37; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; color: white; font-weight: bold; font-family: 'Playfair Display', serif; font-size: 1.1rem; border: 4px dashed white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+                            .cert-signature { position: absolute; bottom: 40px; right: 40px; text-align: center; }
+                            .cert-signature span { display: block; border-top: 1px solid #1f2937; padding-top: 10px; margin-top: 40px; font-weight: bold; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="certificate">
+                            <div class="cert-title">Certificate of Completion</div>
+                            <div class="cert-subtitle">This proudly certifies that</div>
+                            <div class="cert-name">${name}</div>
+                            <div class="cert-desc">has successfully completed all chapters of the <strong>International Relations Masterclass</strong>, demonstrating a profound understanding of global systems, geopolitics, and historical international theories.</div>
+                            <div class="cert-date">Date: ${new Date().toLocaleDateString()}</div>
+                            
+                            <div class="cert-seal">Award of<br>Excellence</div>
+                            <div class="cert-signature">
+                                <em style="font-family:'Playfair Display', serif; font-size: 1.5rem;">IR Study Companion</em>
+                                <span>Course Director</span>
+                            </div>
+                        </div>
+                        <script>
+                            setTimeout(() => {
+                                window.print();
+                            }, 500);
+                        </script>
+                    </body>
+                    </html>
+                `);
+                printWindow.document.close();
+            }
+        });
+    }
+});
+</script>

@@ -85,3 +85,12 @@ Social media follows politics, not the other way around. Activism begins offline
 For example, protests emerged in the Arab Spring because of deep political and economic grievances. Social media amplified a movement already underway, rather than sparking new uprisings. It facilitated communication for existing activists.
 
 In summary, the political context shapes how social media gets used. Technology alone does not ignite activism where none previously existed. It interacts with established political divides, organizations, and protest capacities to accelerate ongoing mobilization.
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cyber-enthusiasts" def1="Supporters of social media's role in protests" term2="Cyber-skeptics" def2="Critics of social media's impact on protests" term3="Contextualism" def3="The role of social media depends on local context" term4="Twitter Revolution" def4="2009 Iranian protests using social media" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_media_politics" question="What is the main argument of cyber-skeptics regarding social media's role in protests?" opt1="Social media is the primary driver of protests" opt2="Social media plays a minor role in protests" opt3="Social media is only used by authoritarian regimes" opt4="Social media is not used for protests" correct="2" %}

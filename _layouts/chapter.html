@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% include build-chapter-nav.html %}
+{% include reading_progress.html %}
 
 {% if page_chapter_is_draft %}
   <div class="markdown-section color-callout-light with-border" style="padding: 5px; padding-left: 10px; font-size: 16px; margin-bottom: 20px;">
@@ -87,6 +88,11 @@ layout: default
       id="{{ page.slug }}"
       data-level="1.1"
       class="heading-chapter-title no_toc">{{ page.title | escape }}</h1>
+    {% assign words = content | number_of_words %}
+    {% assign read_time = words | divided_by: 200 | plus: 1 %}
+    <div class="reading-time-badge" style="display: inline-flex; align-items: center; background: rgba(79, 172, 254, 0.1); color: #008a96; padding: 4px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;">
+        ⏱ {{ read_time }} min read
+    </div>
   {% endif %}
 {% endif %}
 
@@ -114,6 +120,42 @@ layout: default
   {% endif %}
 
   {{ content }}
+
+  {% if page.slug %}
+  <div style="margin-top: 40px; text-align: center; border-top: 1px solid #e5e7eb; padding-top: 20px;">
+      <button id="mark-read-btn" class="btn" style="background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3); transition: all 0.3s;">
+         <i class="fa fa-check"></i> Mark as Read
+      </button>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mark-read-btn');
+      const chapterSlug = "{{ page.slug }}";
+      
+      if(localStorage.getItem('chapter_read_' + chapterSlug) === 'true') {
+          btn.innerHTML = `<i class="fa fa-check-circle"></i> Marked as Read`;
+          btn.style.background = '#e5e7eb';
+          btn.style.color = '#4b5563';
+          btn.style.boxShadow = 'none';
+          btn.style.cursor = 'default';
+          btn.disabled = true;
+      }
+
+      btn.addEventListener('click', () => {
+          if(btn.disabled) return;
+          localStorage.setItem('chapter_read_' + chapterSlug, 'true');
+          btn.innerHTML = `<i class="fa fa-check-circle"></i> Marked as Read`;
+          btn.style.background = '#e5e7eb';
+          btn.style.color = '#4b5563';
+          btn.style.boxShadow = 'none';
+          btn.style.cursor = 'default';
+          btn.disabled = true;
+          
+          window.dispatchEvent(new Event('chapter_read'));
+      });
+  });
+  </script>
+  {% endif %}
 
   {% comment %}{% include chapter-iterate-vars.html inspect="page" %}{% endcomment %}
 </section>

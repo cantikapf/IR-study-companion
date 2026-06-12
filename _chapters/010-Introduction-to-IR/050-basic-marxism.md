@@ -122,3 +122,12 @@ Critical theory and New Marxism build on these concepts, questioning traditional
 Overall, the Marxist dialectical method continues to yield vital insights into the underlying forces shaping politics and society globally. This tradition of thought retains strong explanatory power despite the decline of traditional Marxist politics.
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Marxism in IR" def1="Economic factors and class conflict are the primary drivers of societal development and world politics." term2="Historical Materialism" def2="Economic development (base) fundamentally shapes societal change, including politics, law, and culture (superstructure)." term3="Cultural Hegemony" def3="Ruling class imposes its worldview to gain consent from masses, normalizing its values and interests." term4="World Systems Theory" def4="Divides the global economy into exploitative core, periphery, and semi-periphery zones." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_basic_marxism" question="According to the Marxist framework presented, what is considered the primary driver of societal development and historical change in world politics?" opt1="The balance of military power among nation-states." opt2="Economic factors and class conflict stemming from unequal relationships." opt3="Cultural and religious values shaping national identities and foreign policy." opt4="The diplomatic skills and policy choices of individual political leaders." correct="2" %}

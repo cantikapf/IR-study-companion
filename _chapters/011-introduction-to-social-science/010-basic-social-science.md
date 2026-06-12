@@ -47,3 +47,12 @@ In conclusion, the realm of social science offers a multifaceted lens through wh
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Empirical Research" def1="Investigating phenomena drawn from actual experiences rather than theoretical speculation." term2="Functionalism" def2="Views society as a complex system of interacting parts with shared values and norms." term3="Conflict Theory" def3="Perceives society as a struggle for resources and power." term4="Symbolic Interactionism" def4="Studies society through individual interactions, exploring shared symbols and communications." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_basic_social_science" question="Which of the following best describes empirical research in social sciences?" opt1="Relying on theoretical speculation without real-world data" opt2="Drawing knowledge from observed and measured phenomena" opt3="Studying natural phenomena like stem cells and light waves" opt4="Reinterpreting past events without the need for observation" correct="2" %}
+

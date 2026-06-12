@@ -120,3 +120,11 @@ Some of the key ways NGOs have impacted international law include:
 After more than a century of activism, NGOs have proven their value in transforming international law from lofty ideals into meaningful protections for people and planet. As non-state actors, NGOs give civil society a voice in global affairs and serve as watchdogs that can motivate states to move from commitment to compliance. The development and enforcement of international law will continue relying heavily on the engagement and advocacy of NGOs focused on humanitarian and environmental causes worldwide.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="NGO" def1="Non-governmental organization, independent from any government" term2="International Law" def2="Set of rules and norms governing international relations" term3="Advocacy" def3="Public support or recommendation for a cause or policy" term4="Compliance" def4="Act of following or obeying rules and regulations" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_052_ngo_law" question="What role do NGOs play in international law?" opt1="They have no influence on international law" opt2="They shape and influence international law through advocacy and participation" opt3="They only provide humanitarian aid" opt4="They are only involved in domestic policy" correct="2" %}

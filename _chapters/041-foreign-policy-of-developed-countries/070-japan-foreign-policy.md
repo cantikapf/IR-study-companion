@@ -95,3 +95,11 @@ According to the provided document, the EAC initiative faced challenges during t
 During the Kan Naoto administration, the EAC initiative faced further challenges, including the global financial crisis and the Fukushima nuclear disaster, which diverted attention and resources away from the initiative. Additionally, there were concerns about the potential impact of the EAC on Japan's existing alliances and security arrangements, particularly with the United States. As a result, the Kan administration shifted its focus towards strengthening Japan's existing alliances and partnerships, rather than pursuing the EAC initiative.
 
 In summary, the EAC initiative faced challenges during the Kan Naoto administration, which ultimately led to its end. The initiative faced opposition from some members of the Japanese government, concerns about the potential impact on existing alliances and security arrangements, and the lack of a clear roadmap for implementation. Additionally, the global financial crisis and the Fukushima nuclear disaster diverted attention and resources away from the initiative, and there were concerns about its potential impact on Japan's existing alliances and partnerships.
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Kantei" def1="Japanese Prime Minister's office and closest entourage" term2="MOFA" def2="Ministry of Foreign Affairs, Japan's foreign policy department" term3="Yasukuni Shrine" def3="Shinto shrine in Japan honoring war dead, controversy surrounds visits" term4="East Asian Community" def4="Proposed regional community for Japan, China, and South Korea" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_japan_foreign_policy" question="What is a key factor influencing Japan's foreign policy making?" opt1="The strong position of the prime minister" opt2="The power struggles between the Kantei, MOFA officials, and ruling party backbenchers" opt3="The absence of external pressures" opt4="The dominance of the military in decision-making" correct="2" %}

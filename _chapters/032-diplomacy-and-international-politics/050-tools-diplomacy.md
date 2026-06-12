@@ -168,3 +168,11 @@ The convention contains 79 articles with significant provisions including:
 The purpose of consuls is therefore to promote the interests of their home country and citizens abroad while also developing positive diplomatic and economic relationships with the host nation. Their privileges and immunities facilitate this important role within diplomacy between states.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cultural Diplomacy" def1="Sharing cultural values to strengthen relationships between countries" term2="Public Diplomacy" def2="Engaging foreign publics and non-state actors in diplomacy" term3="Economic Diplomacy" def3="Using economic assets to increase security and cooperation" term4="Digital Diplomacy" def4="Using digital technology in diplomatic communications" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_tools_diplomacy" question="What is the primary goal of cultural diplomacy?" opt1="To promote trade and investment" opt2="To strengthen relationships and promote mutual understanding between nations" opt3="To engage foreign publics and non-state actors" opt4="To use economic assets to increase security and cooperation" correct="2" %}

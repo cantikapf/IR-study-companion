@@ -82,3 +82,11 @@ The order that questions are presented in a survey can influence the way respond
 Pretesting the questionnaire with a small group of respondents is important to identify any issues with format, order or clarity before administering to the full study sample. A clear, logical format and order is crucial for collecting high quality data from survey respondents.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Qualitative Research" def1="Explores attitudes, behaviors, experiences through methods like interviews, focus groups" term2="Quantitative Research" def2="Gathers numerical data, generalizes across groups, establishes statistical relationships" term3="Interview" def3="Qualitative method involving verbal questions, hearing responses from interviewee" term4="Survey" def4="Research method collecting data through standardized questions, recording responses" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_survey" question="What is the primary purpose of an interview in qualitative research?" opt1="To collect large amounts of numerical data" opt2="To deeply understand an individual's perspective and experience" opt3="To establish statistical relationships between variables" opt4="To gather data from a large sample size" correct="2" %}

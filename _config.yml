@@ -3,11 +3,11 @@ remote_theme: jasongrimes/jekyll-chapterbook
 title: IR Study Companion
 longtitle: International Relations Study Companion
 author: Cantikaputri Febrianti
-email: intrlstudycompanion@skiff.com
+email: cantikapf.7@gmail.com
 description: >
   Free structured study material or study guide for international relations enthusiasts.
 
-# If baseurl_canonical is set, 
+# If baseurl_canonical is set,
 # a <link rel="canonical"> tag will be added to the head of each page,
 # to disambiguate links for search engines.
 baseurl_canonical: https://cantikapf.github.io/IR-chapterbook/
@@ -39,36 +39,36 @@ bookcrumbs:
 # Links shown above the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_top:
-- label: International Relations Study Companion
-  url: /index.html
+  - label: International Relations Study Companion
+    url: /index.html
 
 # Links shown below the TOC in the sidebar
 # All "url" variables should have a leading slash.
 sidebar_nav_bottom:
-- label: Material's Outline
-  url: /contents.html
-- label: Github Repository
-  url: https://github.com/cantikapf/IR-study-companion
+  - label: Material's Outline
+    url: /contents.html
+  - label: Github Repository
+    url: https://github.com/cantikapf/IR-study-companion
 
 # Navigation shown at the bottom of the page
 # All "url" variables should have a leading slash.
 bottom_nav:
-- label: Home
-  url: /index.html
-- label: Contents
-  url: /contents.html
-- label: Disclaimer
-  url: /disclaimer.html
-- label: About Me
-  url: /about-me.html
-- label: Contact me
-  url: https://cantikaportfolio.site/contact.html
-- label: Website
-  url: https://cantikaportfolio.site
-- label: Privacy
-  url: /privacy.html
-- label: Sitemap
-  url: https://learnintlrelations.online/sitemap.xml
+  - label: Home
+    url: /index.html
+  - label: Contents
+    url: /contents.html
+  - label: Disclaimer
+    url: /disclaimer.html
+  - label: About Me
+    url: /about-me.html
+  - label: Contact me
+    url: https://cantikapf.github.io/contact.html
+  - label: Website
+    url: https://cantikapf.github.io/
+  - label: Privacy
+    url: /privacy.html
+  - label: Sitemap
+    url: /sitemap.xml
 
 # Whether to show chapter headings as a table of contents at the top of each chapter page.
 # Override in page front matter with disable_toc: true
@@ -84,7 +84,7 @@ sidebar_toc:
   h_min: 2
   h_max: 3
 
-# 
+#
 # End navigation menus
 #
 
@@ -119,9 +119,10 @@ incremental: false
 regenerate: true
 
 plugins:
-#  - jekyll-feed
+  #  - jekyll-feed
   - jekyll-readme-index
-#  - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   chapters:
@@ -130,10 +131,8 @@ collections:
     output: true
     permalink: /:slug:output_ext
 
-
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "chapters"
     values:
@@ -141,15 +140,15 @@ defaults:
       permalink: /:slug:output_ext
 
 # Markdown render engine.
-markdown:         kramdown
+markdown: kramdown
 kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
+  auto_ids: true
+  input: GFM
+  math_engine: mathjax
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: 1..6
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    guess_lang:           true
+    guess_lang: true
 syntax_highlighter_style: colorful
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
+markdown_ext: markdown,mkdown,mkdn,mkd,md

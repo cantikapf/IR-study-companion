@@ -136,3 +136,11 @@ Secession is a complex issue in international law. To summarize the key points:
 - Overall, secession remains a controversial and complex matter in international law, with many competing principles and perspectives involved.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Secession" def1="Separation of part of a state's territory to form a new state" term2="Self-Determination" def2="Right to internal self-determination; meaningful participation within a state" term3="State Responsibility" def3="Obligations of states and consequences for breaching international law" term4="Diplomatic Protection" def4="Link between individuals and states regarding rights and duties abroad" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_state_inter_law" question="What is the primary reason secession is generally discouraged by the international community?" opt1="Use of economic sanctions" opt2="Lack of true independence and use of force" opt3="Recognition by other states" opt4="Internal self-determination" correct="2" %}

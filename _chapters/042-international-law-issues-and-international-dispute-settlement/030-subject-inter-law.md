@@ -140,3 +140,11 @@ The principle of self-determination gained increasing prominence through the Ame
 Overall, statehood and self-determination remain complex and evolving areas of international law and relations. This examination provides a high-level overview of major principles and debates involved. Further analysis could explore specific case studies and implications for contemporary global affairs. At minimum, it is clear these foundational concepts continue to shape interactions between peoples, territories, and sovereign states in the international system.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Statehood" def1="A entity with permanent population, defined territory, effective government, and capacity to enter into relations" term2="Sovereignty" def2="Full right and power of a governing body over itself without outside interference" term3="Self-Determination" def3="Right of peoples to freely determine their political status and pursue development" term4="Montevideo Convention" def4="Treaty establishing criteria for statehood: population, territory, government, and international relations capacity" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_subject_inter_law" question="What are the four criteria for statehood according to the Montevideo Convention?" opt1="Permanent population, defined borders, effective economy, and capacity to enter into treaties" opt2="Permanent population, defined territory, effective government, and capacity to enter into relations" opt3="Temporary population, undefined territory, ineffective government, and capacity to enter into agreements" opt4="Large population, disputed territory, unstable government, and limited international relations" correct="2" %}

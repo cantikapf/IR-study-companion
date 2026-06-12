@@ -104,3 +104,11 @@ Even with these problems, dependency theory has given us new ways to look at the
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Dependency Theory" def1="Explains underdevelopment through external factors and global inequality" term2="Center-Periphery Structure" def2="Global capitalist economy division between developed and underdeveloped countries" term3="Unequal Exchange" def3="Periphery's raw materials for center's high-value manufactured goods" term4="Modernization Theory" def4="Focuses on internal factors as causes of underdevelopment" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_dependency_theory" question="What is the main focus of Dependency Theory?" opt1="Internal factors causing underdevelopment" opt2="External factors causing underdevelopment" opt3="Cultural values and development" opt4="Economic growth through industrialization" correct="2" %}

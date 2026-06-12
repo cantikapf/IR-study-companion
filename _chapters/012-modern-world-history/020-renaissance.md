@@ -119,3 +119,11 @@ The Renaissance era proved foundational for Europe's transition to the Early Mod
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Renaissance" def1="Cultural rebirth and intellectual advancement (1330-1530), bridging the Middle Ages and early modern period." term2="Renaissance Humanism" def2="Intellectual movement emphasizing classical studies, civic virtue, and individual dignity over scholasticism." term3="Merchant Capitalism" def3="Economic system driven by merchants and bankers, accumulating wealth through trade; declined feudalism." term4="Protestant Reformation" def4="Religious movement challenging Catholic Church authority, sparked by abuses like indulgences, establishing Protestantism." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_renaissance" question="According to the chapter, what overarching historical role did the Renaissance primarily fulfill in Europe?" opt1="It was solely a period of artistic expression with no significant societal impact." opt2="It served as a bridge between the Middle Ages and the early modern period through profound transformations." opt3="It was an era defined by the absolute triumph of the Roman Catholic Church's authority." opt4="It led directly to the collapse of all feudal systems and the immediate rise of democratic nations." correct="2" %}

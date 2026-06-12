@@ -176,3 +176,11 @@ The UN Charter established new institutions and procedures for peaceful dispute 
 While submission to the ICJ is voluntary, the Security Council can legally enforce ICJ decisions under Chapter VII of the UN Charter if international peace and security are threatened. Overall, the UN dispute settlement mechanisms aim to provide peaceful alternatives to the use of force. When combined with collective security, they form a core part of the UN's mission to maintain international peace.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="United Nations" def1="An intergovernmental organization for peace, security, and cooperation" term2="UN Charter" def2="The founding treaty and constitutional document of the UN" term3="General Assembly" def3="The main deliberative and representative body of the UN" term4="Security Council" def4="The UN organ responsible for maintaining international peace and security" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_io_law" question="What is the primary purpose of the United Nations?" opt1="To promote economic development among member states" opt2="To maintain international peace and security" opt3="To provide humanitarian aid to developing countries" opt4="To promote cultural exchange among nations" correct="2" %}

@@ -98,3 +98,11 @@ Feminists see economic sanctions as an expression of masculine confrontation - a
 Feminists question norms of state responsibility and borders that distance nations from the human impact of their policies. Borders construct artificial separations between "self" and "other," enabling countries to separate themselves from accountability.  Feminists encourage reflecting on global hierarchies and recalibrating responsibility for international policies that cause real individual suffering.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Liberal Feminism" def1="Seeks gender equality through legal reforms and institutional change" term2="Critical Feminism" def2="Analyzes power dynamics and seeks to change unjust gender relations" term3="Constructivist Feminism" def3="Examines how ideas about gender shape global politics and vice versa" term4="Poststructural Feminism" def4="Deconstructs power structures and challenges masculine biases in IR theory" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_feminism_ir" question="What is the primary goal of feminist theories in International Relations?" opt1="To promote state security and military power" opt2="To analyze and address gender hierarchies and inequalities" opt3="To advance economic interests and globalization" opt4="To maintain traditional notions of security and international relations" correct="2" %}

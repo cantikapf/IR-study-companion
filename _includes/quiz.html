@@ -1,0 +1,163 @@
+<style>
+.quiz-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-family: 'Inter', sans-serif;
+    color: inherit;
+}
+.quiz-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.quiz-option {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.quiz-option:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+.quiz-option.selected {
+    border-color: #4facfe;
+    background: rgba(79, 172, 254, 0.1);
+}
+.quiz-option.correct {
+    border-color: #00f2fe;
+    background: rgba(0, 242, 254, 0.2);
+    color: #008a96;
+}
+.quiz-option.wrong {
+    border-color: #ff4b2b;
+    background: rgba(255, 75, 43, 0.1);
+    color: #cc250a;
+}
+.quiz-submit {
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.quiz-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+}
+.quiz-feedback {
+    margin-top: 16px;
+    font-weight: 600;
+    display: none;
+}
+</style>
+
+<div class="quiz-container" id="quiz-{{ include.id }}">
+    <div class="quiz-question">{{ include.question }}</div>
+    <div class="quiz-options">
+        <div class="quiz-option" data-idx="1" tabindex="0" role="button">{{ include.opt1 }}</div>
+        <div class="quiz-option" data-idx="2" tabindex="0" role="button">{{ include.opt2 }}</div>
+        <div class="quiz-option" data-idx="3" tabindex="0" role="button">{{ include.opt3 }}</div>
+        <div class="quiz-option" data-idx="4" tabindex="0" role="button">{{ include.opt4 }}</div>
+    </div>
+    <button class="quiz-submit" onclick="submitQuiz('{{ include.id }}', '{{ include.correct }}')">Submit</button>
+    <div class="quiz-feedback" id="feedback-{{ include.id }}" aria-live="polite"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const quizId = '{{ include.id }}';
+    const container = document.getElementById('quiz-' + quizId);
+    if(!container) return;
+    
+    // Check local storage
+    const isCompleted = localStorage.getItem('quiz_' + quizId + '_completed');
+    if(isCompleted) {
+        const correctIdx = '{{ include.correct }}';
+        const opt = container.querySelector('.quiz-option[data-idx="'+correctIdx+'"]');
+        if(opt) {
+            opt.classList.add('correct');
+        }
+        const btn = container.querySelector('.quiz-submit');
+        if(btn) btn.style.display = 'none';
+        const feedback = document.getElementById('feedback-' + quizId);
+        if(feedback) {
+            feedback.textContent = "You have already completed this quiz! ✅";
+            feedback.style.display = 'block';
+            feedback.style.color = '#008a96';
+        }
+    }
+
+    const options = container.querySelectorAll('.quiz-option');
+    options.forEach(opt => {
+        const selectOption = () => {
+            if(localStorage.getItem('quiz_' + quizId + '_completed')) return;
+            options.forEach(o => o.classList.remove('selected'));
+            opt.classList.add('selected');
+        };
+        opt.addEventListener('click', selectOption);
+        opt.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectOption();
+            }
+        });
+    });
+});
+
+function submitQuiz(id, correctIdx) {
+    const container = document.getElementById('quiz-' + id);
+    const selected = container.querySelector('.quiz-option.selected');
+    const feedback = document.getElementById('feedback-' + id);
+    
+    if(!selected) {
+        feedback.textContent = "Please select an answer.";
+        feedback.style.display = 'block';
+        feedback.style.color = '#ff4b2b';
+        return;
+    }
+    
+    const selectedIdx = selected.getAttribute('data-idx');
+    if(selectedIdx === correctIdx) {
+        selected.classList.add('correct');
+        selected.classList.remove('selected');
+        feedback.textContent = "That's correct! 🎉";
+        feedback.style.color = '#008a96';
+        feedback.style.display = 'block';
+        
+        // Save to local storage
+        if (!localStorage.getItem('quiz_' + id + '_completed')) {
+            localStorage.setItem('quiz_' + id + '_completed', 'true');
+            // Dispatch event for progress tracker
+            window.dispatchEvent(new Event('quiz_completed'));
+        }
+        
+        container.querySelector('.quiz-submit').style.display = 'none';
+    } else {
+        selected.classList.add('wrong');
+        setTimeout(() => selected.classList.remove('wrong'), 1000);
+        feedback.textContent = "Incorrect. Try again.";
+        feedback.style.color = '#cc250a';
+        feedback.style.display = 'block';
+    }
+}
+</script>

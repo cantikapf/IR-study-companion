@@ -97,3 +97,12 @@ North Korea and Iran represent two different challenges to the non-proliferation
 **Iran** has faced accusations of failing to declare uranium enrichment and other nuclear activities, despite remaining a signatory to the NPT. Iran argues it needs enrichment capability for civilian energy and research reactors, but has faced suspicions it may be pursuing nuclear weapons. The International Atomic Energy Agency (IAEA) has identified potential military dimensions to Iran's program. Ongoing negotiations have aimed to limit enrichment and impose verification measures in exchange for sanctions relief, but a comprehensive resolution remains elusive. Iran's nuclear program is seen as a potential proliferation threat.
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Traditional National Security" def1="State-centric approach, military power, deterrence, and balance of power for state survival." term2="Liberal Institutionalism" def2="Institutions foster state cooperation, trust, and shared goals, mitigating international anarchy." term3="Constructivism" def3="International politics' structures are social, based on shared ideas, identities, and norms." term4="Critical Security Studies" def4="Broadens security beyond states, examining power, inequality, and insecurities of individuals/groups." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_global_security" question="What is the primary characteristic distinguishing contemporary security perspectives from traditional national security?" opt1="A sole focus on the military capabilities and territorial integrity of nation-states." opt2="An emphasis on the balance of power and deterrence between competing nation-states." opt3="Expansion to include political, economic, societal, and environmental aspects for individuals and humanity." opt4="The belief that international institutions are largely irrelevant in an anarchic global system." correct="3" %}

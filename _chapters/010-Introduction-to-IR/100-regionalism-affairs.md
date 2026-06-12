@@ -175,3 +175,12 @@ Looking ahead, regional cooperation and integration will likely expand and deepe
 Ultimately, the future contours of regionalism remain contingent, not inevitable. With thoughtful leadership and institution-building, regions can harness interdependence for mutual gain. But integration projects require managing diversity, sacrificing some autonomy, and investing for the long-term. The coming decades will test whether enough regions are prepared to meet these challenges.
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Regional Cooperation" def1="Limited arrangements for countries to work together in specific functional areas." term2="Regional Integration" def2="Countries voluntarily pool sovereignty, harmonize policies, often creating supranational institutions." term3="Trade Creation" def3="Regional integration replaces domestic production with lower-cost imports from member countries." term4="Trade Diversion" def4="Regional integration replaces lower-cost extra-regional imports with higher-cost imports from members." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_100_regionalism_affairs" question="According to the chapter, what is a key defining characteristic of regional integration that distinguishes it from more basic regional cooperation?" opt1="Focusing solely on shared cultural heritage and social cohesion between nations." opt2="Establishing limited, functional arrangements for collaboration in specific sectors like energy." opt3="Countries voluntarily pooling sovereignty and harmonizing policies, often with supranational institutions." opt4="Primarily forming military alliances for collective defense against external threats." correct="3" %}

@@ -118,3 +118,12 @@ In conclusion, neoliberalism has reshaped economies and politics over the past f
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Neoliberalism" def1="Economic ideology prioritizing free markets and limited government intervention" term2="Market Primacy" def2="Free market dominance over economic and social life with minimal government intervention" term3="Individualism" def3="Emphasis on personal responsibility and self-reliance over government support" term4="Globalization" def4="Integration and interconnectedness of global markets and economies" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_095_neoliberalism_ipe" question="What is the core idea of neoliberalism in International Political Economy?" opt1="Government control over markets and economies" opt2="Free markets and limited government intervention" opt3="Protectionism and trade barriers" opt4="State-led economic development" correct="2" %}

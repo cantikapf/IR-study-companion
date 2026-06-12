@@ -148,3 +148,11 @@ International courts face emerging issues and challenges that will shape their f
 To address these challenges and embrace new roles, international courts will likely need proactive reforms, strong leadership, and expanded cooperation with global governance institutions. With appropriate changes, they can increase their effectiveness and authority in the emerging multi-polar world order.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Global Courts" def1="International courts with jurisdiction across borders and continents" term2="Thematic Courts" def2="International courts with jurisdiction over specific themes or subjects" term3="Hybrid Courts" def3="International courts combining domestic and international law and staffing" term4="Dispute Settlement" def4="Resolving legal disputes between states through neutral forums" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_091_IC_tribunal" question="What is one of the primary functions of international courts?" opt1="Enforcing domestic law" opt2="Settling legal disputes between states" opt3="Making new international laws" opt4="Providing military force" correct="2" %}

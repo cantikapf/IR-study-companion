@@ -100,3 +100,12 @@ Leaders play a key role in this process by interpreting international threats an
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Egoism" def1="States act to further their own national interests." term2="Power-centrism" def2="Power is the currency of international politics." term3="Anarchic System" def3="International system with no higher authority above states." term4="Groupism" def4="States are unified rational actors with national interests." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_realism_security" question="What is the primary goal that shapes foreign policy according to realism?" opt1="Promoting international cooperation" opt2="Ensuring state survival and security" opt3="Spreading democratic values" opt4="Advancing human rights" correct="2" %}

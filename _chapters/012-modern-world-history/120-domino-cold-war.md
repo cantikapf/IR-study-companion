@@ -145,3 +145,11 @@ At the same time, the Cold War spawned bloody proxy conflicts in regions like Ko
 The Cold War ultimately reshaped the global order. The collapse of the Soviet Union left the U.S. as the sole superpower for a time. It also opened the door for a new world order with growing multi-polarity and the rise of additional global powers like China. Echoes of Cold War tensions persist between Russia and the West over issues like Ukraine. While the direct confrontation ended, the Cold War's complex influences continue to shape international relations.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Domino Theory" def1="Belief that if one country falls to communism, neighboring nations will follow suit." term2="Marshall Plan" def2="US economic aid program to rebuild post-WWII Western Europe, countering communism." term3="Truman Doctrine" def3="US policy pledging economic/military aid to countries resisting communist expansion globally." term4="NATO" def4="North Atlantic Treaty Organization; Western collective defense alliance formed against Soviet aggression." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_120_domino_cold_war" question="Which core fear primarily drove US foreign policy decisions, such as the Truman Doctrine and involvement in proxy wars, during the Cold War?" opt1="The resurgence of Nazi ideology in Germany and Europe." opt2="The spread of communism, often conceptualized by the Domino Theory." opt3="Economic competition from newly industrialized Asian nations." opt4="The disintegration of the United Nations' authority and purpose." correct="2" %}

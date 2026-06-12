@@ -1,0 +1,128 @@
+<style>
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #4b5563;
+    transition: transform 0.3s;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Theme Variables & Overrides */
+body.dark-theme {
+    background-color: #111827 !important;
+    color: #e5e7eb !important;
+}
+body.dark-theme .book-header {
+    background-color: #1f2937 !important;
+    border-bottom: 1px solid #374151 !important;
+}
+body.dark-theme .book-summary {
+    background-color: #1f2937 !important;
+    border-right: 1px solid #374151 !important;
+}
+body.dark-theme .book-summary ul.summary li a {
+    color: #9ca3af !important;
+}
+body.dark-theme .book-summary ul.summary li.active>a {
+    color: #60a5fa !important;
+}
+body.dark-theme .book-body .page-inner,
+body.dark-theme .book,
+body.dark-theme .book-body {
+    background-color: #111827 !important;
+}
+body.dark-theme .markdown-section {
+    color: #e5e7eb !important;
+}
+body.dark-theme .markdown-section h1,
+body.dark-theme .markdown-section h2,
+body.dark-theme .markdown-section h3,
+body.dark-theme .markdown-section h4,
+body.dark-theme .markdown-section h5,
+body.dark-theme .markdown-section h6,
+body.dark-theme .book-header h1 a,
+body.dark-theme .heading-chapter-title {
+    color: #f9fafb !important;
+}
+body.dark-theme .markdown-section code {
+    background-color: #374151 !important;
+    color: #60a5fa !important;
+}
+body.dark-theme .markdown-section pre {
+    background-color: #1f2937 !important;
+    border: 1px solid #374151 !important;
+}
+body.dark-theme .chapter-pager {
+    border-top: 1px solid #374151 !important;
+}
+body.dark-theme .chapter-pager a {
+    color: #d1d5db !important;
+}
+body.dark-theme .chapter-abstract {
+    background-color: rgba(96, 165, 250, 0.1) !important;
+    border-color: rgba(96, 165, 250, 0.3) !important;
+    color: #d1d5db !important;
+}
+body.dark-theme .breadcrumb, 
+body.dark-theme .breadcrumb li {
+    color: #9ca3af !important;
+}
+body.dark-theme .breadcrumb a {
+    color: #60a5fa !important;
+}
+body.dark-theme .page-toc-heading, 
+body.dark-theme .page-toc {
+    color: #9ca3af !important;
+}
+body.dark-theme .page-toc a {
+    color: #60a5fa !important;
+}
+body.dark-theme .markdown-section a {
+    color: #60a5fa !important;
+}
+body.dark-theme ul.toc-chapters-full li.chapter a .abstract {
+    color: #9ca3af !important;
+}
+</style>
+
+<button id="dark-mode-btn" class="dark-mode-toggle" aria-label="Toggle Dark Mode" aria-pressed="false" title="Toggle Dark Mode">
+    🌙
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('dark-mode-btn');
+    const storedTheme = localStorage.getItem('theme');
+    
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = storedTheme === 'dark' || (storedTheme === null && prefersDark);
+    
+    if (isDark) {
+        document.body.classList.add('dark-theme');
+        btn.textContent = '☀️';
+        btn.setAttribute('aria-pressed', 'true');
+    }
+
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isNowDark = document.body.classList.contains('dark-theme');
+        btn.setAttribute('aria-pressed', isNowDark);
+        
+        if (isNowDark) {
+            localStorage.setItem('theme', 'dark');
+            btn.textContent = '☀️';
+        } else {
+            localStorage.setItem('theme', 'light');
+            btn.textContent = '🌙';
+        }
+    });
+});
+</script>

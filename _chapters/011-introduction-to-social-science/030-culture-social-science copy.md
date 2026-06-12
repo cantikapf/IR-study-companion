@@ -39,3 +39,12 @@ Ethnocentrism, the tendency to judge other cultures by one's own standards, can 
 As societies evolve, the intricate interplay between culture, co-existence, and adaptation continues to shape the human experience. Recognizing the multifaceted nature of these interactions is fundamental for navigating the complexities of our interconnected world.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Social Contract" def1="An agreement among community members or between the community and the Sovereign." term2="Multiculturalism" def2="The tolerance of different cultures within a political unit." term3="Ethnocentrism" def3="The tendency to judge other cultures by ones own standards." term4="Cultural Relativism" def4="Asserts the equal validity of cultures and avoids judgment based on external standards." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_culture_social_science_copy" question="What is the main difference between cultural relativism and ethnocentrism?" opt1="Cultural relativism asserts equal validity of cultures, while ethnocentrism judges others by ones own standards" opt2="Ethnocentrism promotes objective analysis, while cultural relativism imposes external standards" opt3="Both terms refer to the process by which cultures become more alike" opt4="Cultural relativism only applies to popular culture, while ethnocentrism applies to subcultures" correct="1" %}
+

@@ -49,3 +49,11 @@ Overall, the focus on using concrete real world problems as the starting point f
 Analytical eclecticism allows scholars to overcome the inherent blind spots within individual theories. By using multiple perspectives and focusing on concrete issues, analysts can reveal complexities and nuances that may be obscured by the assumptions of a single theory. For example, realism's state-centric approach can miss the significance of domestic social forces, while liberalism's focus on cooperation may underestimate power politics. Eclecticism enables a more comprehensive understanding by leveraging the strengths of different theories and mitigating their weaknesses. The goal is not theoretical purity but pragmatic elucidation of multifaceted real-world problems. Shedding light on blind spots allows for deeper insight.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="National Interest" def1="A state's priorities and goals in international relations" term2="Anthropomorphism" def2="Attributing human-like qualities to non-human entities, like states" term3="Analytical Eclecticism" def3="Combining multiple theories to analyze complex issues pragmatically" term4="State Constituency" def4="The diverse groups and interests within a nation-state" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_theoritical_perspective" question="What is the main critique of realism's concept of 'national interest'?" opt1="It overemphasizes the role of international institutions" opt2="It assumes states have uniform interests and ignores domestic diversity" opt3="It underestimates the power of non-state actors" opt4="It prioritizes economic interests over security concerns" correct="2" %}

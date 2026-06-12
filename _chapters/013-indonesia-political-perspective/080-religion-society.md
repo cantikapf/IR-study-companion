@@ -58,3 +58,11 @@ This phenomenon reveals the need for nuanced examination of identity issues in d
 Moving forward, the intertwining of religion and politics in Indonesia requires thoughtful analysis that avoids polarization. Nuanced understanding of the country's diverse identities and their role in the political arena will be crucial. Medan provides one glimpse into these intricate dynamics, but much more examination is needed of the complex relationship between identity politics and democracy across Indonesia. Most importantly, the diverse voices within each identity group must be heard in order to develop holistic solutions that serve the shared interests of all communities.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Identity Switching" def1="Voting across ethnic lines based on other factors" term2="Communal Solidarity" def2="Unity among diverse groups based on shared values" term3="Strategic Identity Politics" def3="Emphasizing certain identities for electoral advantage" term4="Instrumental Identity" def4="Fluid and situational use of identity in politics" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_religion_society" question="What phenomenon was observed in Medan's mayoral election?" opt1="Ethnic coalitions dominating the election" opt2="Identity switching and communal solidarity" opt3="Rigid adherence to ethnic voting patterns" opt4="No impact of identity on voting behavior" correct="2" %}

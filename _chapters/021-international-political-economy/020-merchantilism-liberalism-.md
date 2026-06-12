@@ -124,3 +124,12 @@ Source: Oatley, T. H. (2012). _International political economy_ (5th ed). Longma
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Mercantilism" def1="School of thought linking economic activity and state power" term2="Liberalism" def2="Economic theory advocating free markets and individual welfare" term3="Comparative Advantage" def3="Theory that countries benefit from trade based on relative efficiency" term4="Zero-Sum Game" def4="Game where one side's gain equals another side's loss" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_merchantilism_liberalism_" question="What is the core idea of mercantilism in international political economy?" opt1="Countries benefit from free trade and market-based allocation" opt2="National power and wealth are linked through economic activity" opt3="Individual welfare is maximized through voluntary transactions" opt4="Trade is a harmonious and mutually beneficial activity" correct="2" %}

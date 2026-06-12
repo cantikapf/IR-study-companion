@@ -32,9 +32,11 @@ Rather than dwelling on the particular events or crises of the moment, Internati
 
 International Relations extends beyond the scope of traditional foreign policy analysis, embracing a broader range of topics, issues, and approaches. While foreign policy focuses on the specific external relations, policy positions, and diplomatic strategies of individual countries, International Relations explores bigger questions and wider dynamics. 
 
-For example, scholars of International Relations examine broad structural factors like the global balance of power between states, the role of international institutions, and the impact of non-state actors like multinational corporations. They analyze complex issues like economic interdependence, environmental sustainability, human rights norms, and the roots of conflict or cooperation. International Relations also draws upon diverse theoretical frameworks and methodological approaches ranging from realism to liberalism, constructivism to feminism.
+For example, scholars of International Relations examine broad structural factors like the global balance of power between states, international institutions, and the impact of non-state actors like multinational corporations. They analyze complex issues like economic interdependence, environmental sustainability, human rights norms, and the roots of conflict or cooperation. International Relations also draws upon diverse theoretical frameworks and methodological approaches ranging from realism to liberalism, constructivism to feminism.
 
 This expansive scope differentiates the academic discipline of International Relations from the practical formulation and implementation of foreign policy within specific countries. Foreign policy tends to have a narrower emphasis on advancing national interests through diplomacy, economic incentives, and military power. International Relations steps back to understand the global forces and systemic factors that shape the context and environment within which foreign policy decisions are made. With its detached and comprehensive view, International Relations aspires to explain broader causes, meanings, and implications in world politics.
+
+{% include timeline.html %}
 
 ## The International System
 
@@ -56,6 +58,8 @@ Functionally, the international system shapes processes like complex interdepend
 Conceptually, realist and liberal frameworks provide contrasting lenses to analyze international system dynamics. Realism sees the international system as driven by competitive self-interest in an anarchic context, while liberalism emphasizes possibilities for cooperation and international institutions to temper power politics. 
 
 Ultimately, the structure and processes of the international system provide the global stage upon which world politics unfolds. Understanding the dynamics of this decentralized, anarchical realm is crucial for explaining the behavior of states and non-state actors in international relations.
+
+{% include geomap.html %}
 
 ## State Actors   
 
@@ -91,6 +95,8 @@ At the same time, civil society actors like NGOs and social movements aim to inf
 
 Therefore, International Relations analysis requires examining complex state-nonstate interactions, recognizing how they wield hard, soft, and asymmetric power to influence one another. Their relationship shapes international outcomes, from trade and investment flows to issues like climate change policy. Neither states nor non-state entities operate in isolation. It is vital to analyze how they cooperate, compete, and come into conflict through their interactions.
 
+{% include flashcards.html term1="lude flashcards.html %" def1="ude flashcards.html %" term2="de flashcards.html %" def2="ude flashcards.html %" term3="de flashcards.html %" def3="ude flashcards.html %" term4="de flashcards.html %" def4="ude flashcards.html %" %}
+
 ## Theoretical Frameworks
 
 International Relations draws upon diverse theoretical frameworks to analyze and explain world events and structures. Key theories include:
@@ -102,6 +108,8 @@ International Relations draws upon diverse theoretical frameworks to analyze and
 **Constructivism** - Constructivism contend that key aspects of global affairs are socially constructed rather than strictly material. Identities, norms, practices, and even anarchy itself stem from shared ideas and interactions, not just material capabilities. Constructivists examine how discourse, identities, norms, and social structures shape state interests and world politics.
 
 **Critical Theories** - Critical theories challenge mainstream IR perspectives, unpacking underlying assumptions and power dynamics. Marxism focuses on economic exploitation, imperialism, and class conflict. Post-colonialism exposes colonial legacies and Western dominance in knowledge production. Feminism highlights the marginalization of gender issues and perspectives. Critical theories provide alternative lenses to traditional paradigms.
+
+{% include theory_matrix.html %}
 
 ## Origins and Growth
 
@@ -124,6 +132,9 @@ This field provides crucial insights into the forces that shape global dynamics,
 In today's increasingly interconnected world, understanding International Relations is more vital than ever. This discipline sheds light on the complex interplay of domestic pressures, transnational actors, interstate relations, and global forces. It equips scholars, policymakers, and global citizens with the knowledge needed to tackle pressing issues that transcend national borders. 
 
 By delving deep into the origins, growth, and key concepts of International Relations, we gain a richer appreciation of the dynamics that impact our global community. The future progress of humanity requires grappling with diverse international challenges through an interdisciplinary, academically rigorous approach. International Relations provides the analytical foundation and intellectual tools needed to work toward greater cooperation, stability, and justice in our global society.
+
+### Knowledge Check
+{% include quiz.html id="intro_q1" question="What is International Relations primarily concerned with?" opt1="Superficial news events" opt2="Systematic study of global interconnections" opt3="Domestic politics only" opt4="Only international organizations" correct="2" %}
 
 ---
     
