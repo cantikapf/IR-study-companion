@@ -118,7 +118,7 @@
     {%- include footer.html -%}
 
     <script>
-      // var gitbook = gitbook || [];
+      var gitbook = gitbook || [];
       gitbook.push(function() {
         gitbook.page.hasChanged({%- include gitbook-metadata.json.tpl -%});
       });
