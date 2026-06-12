@@ -80,3 +80,11 @@ Overall, Indonesia's experience highlights the importance of balancing represent
 While no system is perfect, Indonesia's efforts illustrate an electoral evolution seeking representativeness within a fragmented society and stability amidst decentralized governance. As the nation moves forward, harnessing the benefits of both plurality and proportional mechanisms can strengthen its democracy. Most importantly, elections should not be seen as an endpoint, but as part of broader participatory processes enabling citizen voice and oversight between polls.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Single Member Constituency" def1="System where one representative is elected per geographic district" term2="Multi Member Constituency" def2="System where multiple representatives are elected per district" term3="Proportional Representation" def3="System where seats are allocated based on percentage of votes received" term4="Electoral System" def4="Rules and processes governing the conduct of elections" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_electoral_indonesia" question="What is the primary goal of a proportional representation system?" opt1="To promote party integration and cooperation" opt2="To closely match the percentage of votes a party receives with the percentage of seats it gets in parliament" opt3="To ensure accountability of representatives to their constituents" opt4="To limit the number of parties in the political system" correct="2" %}

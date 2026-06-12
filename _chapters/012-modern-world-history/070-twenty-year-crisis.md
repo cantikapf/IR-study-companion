@@ -154,3 +154,11 @@ While idealists hoped the League of Nations would usher in a new era of peace, r
 In essence, Carr's concept of the 'Twenty-Year Crisis' underscores how the interplay between idealism and realism in the interwar period shaped the path to World War II. The tensions between these diverging perspectives lay at the heart of global affairs, as ambitious dreams collided with harsh realities. This volatile mix of optimism and pragmatism was a defining feature of the era preceding the Second World War.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Twenty-Year Crisis" def1="The interwar period (1919-1939) marked by geopolitical instability and the clash of ideologies." term2="League of Nations" def2="An intergovernmental organization formed post-WWI to promote collective security and world peace." term3="Idealism (IR Theory)" def3="Belief in international cooperation and institutions to achieve peace through reason and shared values." term4="Realism (IR Theory)" def4="States pursue power and self-interest; conflict is inherent in international politics." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_twenty_year_crisis" question="According to E.H. Carr's 'The Twenty Years' Crisis,' what was the fundamental reason for the failure of international relations during the interwar period?" opt1="The complete absence of any attempts at international cooperation and institution-building." opt2="The dominance of realist power politics over utopian ideals, undermining efforts like the League of Nations." opt3="The overwhelming success of aggressive fascist ideologies in deterring all forms of diplomacy." opt4="A lack of strong leadership from major global powers to enforce international law." correct="2" %}

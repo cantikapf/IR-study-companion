@@ -154,3 +154,11 @@ To enhance validity and reduce bias in qualitative research, researchers can uti
 - Use a variety of data sources to corroborate and confirm findings through triangulation. Comparing data from multiple collection methods highlights inconsistencies and minimizes the impact of biases.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Qualitative Research" def1="Method relying on verbal descriptions of a social context" term2="Inductive Analysis" def2="Approach to identify themes and patterns from data" term3="Holistic Approach" def3="Understanding the whole picture, including processes and relationships" term4="Thick Descriptions" def4="Detailed verbal descriptions of a social context" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_qualitative" question="What is the primary goal of qualitative research?" opt1="To test hypotheses and measure variables" opt2="To describe meanings and perspectives of research participants" opt3="To analyze numerical data and draw conclusions" opt4="To conduct experiments and manipulate variables" correct="2" %}

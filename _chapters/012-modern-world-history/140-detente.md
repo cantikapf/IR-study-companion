@@ -115,3 +115,11 @@ Reagan believed the Soviet Union exploited détente in order to gain strategic a
 In addition to military pressure, Reagan looked to stress the Soviet economy through sanctions and by driving down oil prices. He restricted technology exports and prevented Soviet access to Western financial markets. The administration provided aid to irregular anti-communist forces in the developing world, a policy known as the Reagan Doctrine. This multi-pronged strategy of confronting the Soviets militarily, economically, and in the Third World marked a clear departure from previous efforts at reducing tensions between the two superpowers. The aggressive posture contributed to escalating an already dangerous nuclear standoff.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Destalinization" def1="Khrushchev's policy dismantling Stalin's legacy, condemning purges, and loosening some restrictions." term2="Prague Spring" def2="1968 Czechoslovak liberalization crushed by Soviet-led Warsaw Pact invasion." term3="Brinkmanship" def3="Strategy of pushing dangerous events to the brink of war to make an opponent retreat." term4="Second Cold War" def4="Post-1979 period of heightened US-Soviet tensions and renewed arms race after Détente." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_140_detente" question="Which event is primarily identified as marking the breakdown of Détente and the beginning of the Second Cold War?" opt1="The Cuban Missile Crisis in 1962" opt2="The signing of the SALT I agreement in 1972" opt3="The Soviet invasion of Afghanistan in 1979" opt4="The Apollo-Soyuz Test Project in 1975" correct="3" %}

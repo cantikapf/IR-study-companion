@@ -24,3 +24,13 @@ In the context of politics, history emerges as an invaluable resource. Politicia
 
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="History" def1="Delves into fundamental aspects of human agency, dynamics of change, and meaning behind events." term2="Political History" def2="Explores the intricacies of political activities and facilitates effective engagement." term3="Military History" def3="Explores the causes of wars, strategies, tactics, and the evolution of weaponry." term4="Historical Perspective" def4="Viewing history as a set of social conditions and processes that shape human action." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_history_social_science" question="Which of the following is an example of why history is relevant in social science?" opt1="It consists solely of individual actions isolated from social structures" opt2="It provides insights into political activities and the complexities of international peace" opt3="It focuses entirely on biological and physical elements" opt4="It is completely separate from military strategies and tactics" correct="2" %}
+

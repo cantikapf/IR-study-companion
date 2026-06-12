@@ -113,3 +113,11 @@ Alternatively, the **Liberal theory** credits the Cold War's end to the power of
 Finally, the **Great Man theory** focuses on the pivotal leadership and cooperation between Reagan and Soviet leader Mikhail Gorbachev. This view emphasizes the role that these prominent leaders played in jointly realizing the unnecessary and futile nature of continuing the Cold War. Their willingness to negotiate arms reductions and reforms is credited with bringing a peaceful end to the conflict.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cold War" def1="Geopolitical tension (WWII-1991) between US and USSR, no direct military conflict, huge military costs." term2="Glasnost" def2="Gorbachev's policy of 'openness,' relaxing free speech restrictions and allowing criticism in USSR." term3="Perestroika" def3="Gorbachev's policy of 'restructuring,' aiming for economic reform and market principles in USSR." term4="Brezhnev Doctrine" def4="USSR's former right to militarily intervene in Warsaw Pact countries to maintain communist rule." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_170_end_cold_war" question="Which factor does the chapter primarily identify as the underlying cause for the peaceful end of the Cold War and the collapse of the Soviet Union?" opt1="The overwhelming military victory of NATO forces over the Warsaw Pact." opt2="The successful invasion of Afghanistan by Soviet forces, strengthening their global position." opt3="A combination of internal economic stagnation, widespread public discontent, and reform movements within the Soviet bloc." opt4="An agreement between world leaders to jointly dismantle all nuclear arsenals simultaneously." correct="3" %}

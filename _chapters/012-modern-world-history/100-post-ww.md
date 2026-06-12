@@ -116,3 +116,11 @@ The Soviet occupation of Eastern Europe birthed a divided continent. Western Eur
 The post-WWII order was defined by America's economic and military dominance alongside Soviet communism's ideological challenge. The US-Soviet rivalry dominated geopolitics, culminating in the Cold War. America's ascendance to superpower status,ushered in Pax Americana that has endured despite the reemergence of rival powers.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Marshall Plan" def1="US aid to rebuild Western Europe, prevent economic crisis, and counter Soviet influence post-WWII." term2="Bretton Woods Institutions" def2="Post-WWII organizations (IMF, World Bank, GATT) creating a new international monetary and trade system." term3="United Nations (UN)" def3="International organization established post-WWII to promote peace, human rights, and global cooperation." term4="Iron Curtain" def4="Symbolic ideological and physical boundary dividing Cold War Europe into capitalist West and communist East." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_100_post_ww" question="Which of the following best characterizes the global political landscape immediately following World War II, as described in the text?" opt1="A return to widespread isolationism and reduced international cooperation among major powers." opt2="The complete dismantling of all colonial empires worldwide by 1950." opt3="The emergence of the United States and the Soviet Union as dominant superpowers leading opposing ideological blocs." opt4="The establishment of a unified global government under the authority of the United Nations." correct="3" %}

@@ -1,0 +1,100 @@
+<style>
+.matrix-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    overflow-x: auto;
+}
+.matrix-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: inherit;
+    border-bottom: 2px solid #4facfe;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+.theory-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 600px;
+}
+.theory-table th {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+}
+.theory-table th:first-child {
+    border-top-left-radius: 8px;
+}
+.theory-table th:last-child {
+    border-top-right-radius: 8px;
+}
+.theory-table td {
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+    transition: background 0.3s;
+}
+.theory-table tr:last-child td {
+    border-bottom: none;
+}
+.theory-table tr:hover td {
+    background: rgba(79, 172, 254, 0.1);
+}
+.theory-table td strong {
+    color: #4facfe;
+}
+</style>
+
+<div class="matrix-container">
+    <div class="matrix-title">Comparison of International Relations Theories</div>
+    <table class="theory-table">
+        <thead>
+            <tr>
+                <th>Theory</th>
+                <th>Primary Actors</th>
+                <th>Human Nature</th>
+                <th>International System</th>
+                <th>Primary Focus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Realism</strong></td>
+                <td>States</td>
+                <td>Selfish / Flawed</td>
+                <td>Anarchic, zero-sum game</td>
+                <td>Power, Security, Survival</td>
+            </tr>
+            <tr>
+                <td><strong>Liberalism</strong></td>
+                <td>States, IOs, NGOs, Corporations</td>
+                <td>Basically good, capable of cooperation</td>
+                <td>Anarchic but mitigated by institutions</td>
+                <td>Cooperation, Interdependence, Peace</td>
+            </tr>
+            <tr>
+                <td><strong>Constructivism</strong></td>
+                <td>Individuals, NGOs, States</td>
+                <td>Socially constructed</td>
+                <td>Anarchy is what states make of it</td>
+                <td>Ideas, Identities, Norms</td>
+            </tr>
+            <tr>
+                <td><strong>Marxism</strong></td>
+                <td>Classes (Capitalist vs Proletariat)</td>
+                <td>Shaped by economic conditions</td>
+                <td>Hierarchical (Core, Periphery)</td>
+                <td>Economic inequality, Exploitation</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

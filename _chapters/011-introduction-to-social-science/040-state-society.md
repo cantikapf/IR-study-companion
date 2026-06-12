@@ -95,3 +95,12 @@ Some of the key aspects that characterize nations include:
 Unlike states, which have formal institutions, nations are bound together by informal factors like language, ethnicity, culture, and history. These contribute to intangible psychological and emotional attachments. Members of a nation have strong shared identities, values, and goals that unite them regardless of the state they live in. States may succeed or fail, but nations persist over long stretches of history. Understanding the passion and solidarity underlying nations is key to grasping much of political life.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="The State" def1="Represents the institutions and structures that enable governance over a population within a defined geographic area." term2="Sovereignty" def2="Supreme authority within borders, without answering to any higher external authority." term3="The Government" def3="The concrete, temporary organizational structures and mechanisms put in place to exercise state authority." term4="The Nation" def4="A large group of people linked by common elements like language, ethnicity, culture, religion, or history." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_state_society" question="What is the key distinction between the state and the government as described in this chapter?" opt1="The government is a permanent entity, while the state is temporary" opt2="The state is the abstract, enduring authority, while the government is the temporary institutions enacting it" opt3="The government possesses sovereignty over the state" opt4="The state only exists in democratic societies, while the government exists everywhere" correct="2" %}
+

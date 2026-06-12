@@ -75,3 +75,11 @@ Development in the Arab region has been influenced by various factors, including
 Despite these achievements, the Arab region's development process has also faced challenges, such as income inequality, environmental degradation, and the need for further improvements in healthcare, education, and social welfare provisions. As the Arab region continues to develop, it will be essential to address these challenges and find ways to balance economic growth, social development, and environmental protection to ensure a sustainable and equitable future for the region and its people
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Industrialization" def1="Process of developing industries to drive economic growth" term2="Urbanization" def2="Shift of population from rural to urban areas" term3="Poverty Reduction" def3="Efforts to decrease the number of people living in poverty" term4="Sustainable Development" def4="Balancing economic growth with environmental and social protection" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_dev_china_india_chile_african_arab" question="What is a key challenge faced by many developing countries, including China, India, and those in Africa and the Arab region?" opt1="Over-reliance on technology" opt2="Environmental degradation and climate change" opt3="Lack of international trade" opt4="Insufficient urbanization" correct="2" %}

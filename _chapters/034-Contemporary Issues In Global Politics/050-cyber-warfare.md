@@ -98,3 +98,11 @@ The predictions that states with advanced cyber capabilities will inevitably use
 Either way, the future of cyber war between rivals remains ambiguous. States must strategize and prepare for the widest range of possibilities, while hoping restraint and detente prevail. The use of cyber tactics in rivalry represents a critical test of their impact on international stability in the 21st century.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cyberwar" def1="Use of computational technologies in military or diplomatic contexts" term2="Cybersecurity" def2="Defensive and sometimes offensive capabilities in cyberspace" term3="Plausible Deniability" def3="Disguising the source of cyber attacks" term4="Cyber Deterrence" def4="Preventing large-scale cyber attacks through resilience and power projection" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_cyber_warfare" question="What is the primary difference between cyberwar and cybersecurity?" opt1="Cyberwar is defensive, while cybersecurity is offensive" opt2="Cyberwar involves direct attacks, while cybersecurity involves protection" opt3="Cyberwar is limited to non-state actors, while cybersecurity involves states" opt4="Cyberwar and cybersecurity are interchangeable terms" correct="2" %}

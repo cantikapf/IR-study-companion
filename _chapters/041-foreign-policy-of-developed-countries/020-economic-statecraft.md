@@ -124,3 +124,11 @@ Finally, advancing technologies will enable more targeted economic actions in th
 Overall, the terrain of economic statecraft faces new complexities. While states will continue developing tools to exert economic leverage, global trends create new difficulties and opportunities for the effective use of economic statecraft. States will need adaptable, nuanced approaches to stay relevant in this evolving domain.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Economic Statecraft" def1="Using economic tools to influence another state's behavior" term2="Sanctions" def2="Restrictive measures to achieve political or economic objectives" term3="Incentives" def3="Economic benefits to induce cooperation from a target state" term4="Tactical Linkage" def4="Short-term economic rewards for specific policy changes" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_economic_statecraft" question="What is the primary goal of economic statecraft?" opt1="To use military force to achieve foreign policy objectives" opt2="To influence the behavior of another state through economic means" opt3="To provide humanitarian aid to a target state" opt4="To promote cultural exchange between states" correct="2" %}

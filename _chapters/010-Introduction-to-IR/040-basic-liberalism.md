@@ -111,3 +111,12 @@ In the neo-neo debate, neo-liberalists express greater faith in international in
 
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Liberalism (IR)" def1="Emphasizes cooperation, institutions, democracy, and interdependence as paths to international peace." term2="Democratic Peace Theory" def2="States that democratic nations are less likely to engage in war with each other." term3="Collective Security" def3="A system where states jointly deter aggression, agreeing to collectively respond to attacks." term4="Neo-Neo Debate" def4="Scholarly discussion between neo-realists and neo-liberalists on international cooperation's feasibility." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_basic_liberalism" question="Which of the following best encapsulates a core tenet of Liberalism in International Relations?" opt1="States primarily seek to maximize their relative power and security through self-help in an anarchic system." opt2="International peace and cooperation are best achieved through democratic governance, institutions, and economic interdependence." opt3="The international system is fundamentally unstable due to constant competition between great powers." opt4="Military strength and strategic alliances are the most reliable means to ensure national survival." correct="2" %}

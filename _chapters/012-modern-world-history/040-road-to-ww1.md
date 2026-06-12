@@ -116,3 +116,11 @@ The assassination of Archduke Franz Ferdinand became the immediate trigger that 
 Within weeks, the major powers of Europe were drawn into a massive conflict as a result of their imperial ambitions, military escalations, nationalist movements, and complex web of alliances. The Great War had begun, fueled by this mixture of long-building and immediate factors. Its outcome and aftermath would dramatically reshape Europe and the world.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Alliances" def1="Mutual defense pacts between nations, creating rival blocs like the Triple Entente and Triple Alliance." term2="Imperialism" def2="Aggressive pursuit and acquisition of colonies by powerful nations, creating competition and rivalry." term3="Militarism" def3="Nations building strong militaries and readiness for war, fueling an an arms race and tensions." term4="Nationalism" def4="Strong pride in one's country and desire for independence, fueling ethnic self-determination." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_road_to_ww1" question="Which combination of factors is identified as the primary underlying causes contributing to the outbreak of World War I?" opt1="Global economic depression, widespread famine, and the rise of democratic movements." opt2="Alliances, imperialism, militarism, and nationalism." opt3="The immediate assassination of Archduke Franz Ferdinand and rapid technological advancements." opt4="Religious conflicts, a series of failed peace treaties, and international trade disputes." correct="2" %}

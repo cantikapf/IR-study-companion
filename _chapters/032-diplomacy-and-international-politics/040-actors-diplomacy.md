@@ -132,3 +132,11 @@ The world of diplomacy is undergoing major changes as new actors emerge and take
 The expansion of diplomatic actors is an irreversible result of globalization. By proactively addressing the challenges outlined above, policymakers can harness the opportunities of this new landscape to promote greater inclusion, innovation and understanding in global affairs. The public and future generations stand to benefit immensely from a reimagining of diplomacy fit for an interconnected world.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Whole-of-government approach" def1="Diplomacy involving various government ministries and departments" term2="Foreign Service Officers" def2="Diplomats representing their state's interests abroad" term3="Intergovernmental Organizations" def3="Formal institutions established by treaty among sovereign states" term4="Civil Society" def4="Individuals and organizations operating outside government and business" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_actors_diplomacy" question="What is the primary role of the Ministry of Foreign Affairs in modern diplomacy?" opt1="To engage in economic diplomacy" opt2="To represent the unified position of the government internationally" opt3="To handle security cooperation" opt4="To negotiate commercial deals" correct="2" %}

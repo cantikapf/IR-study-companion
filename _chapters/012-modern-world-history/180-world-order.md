@@ -110,3 +110,11 @@ Key discussions centered around the possibility of a New World Order marked by i
 In this context, defining war beyond state conflicts and examining power balances and accountability of nations proved critical. While the post-Cold War order enabled new possibilities, it also posed risks of instability amidst the realignment of powers. The complex interplay between historical transitions, cultural divides, and evolving power dynamics underscores the nuanced trajectory of 21st century global affairs.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Fukuyama's 'End of History'" def1="Thesis: liberal democracy is humanity's final ideological stage, leading to global peace." term2="Huntington's 'Clash of Civilizations'" def2="Theory predicting post-Cold War conflicts along cultural and religious fault lines between civilizations." term3="New World Order" def3="President Bush Sr.'s vision for post-Cold War international cooperation and promotion of democratic values." term4="Multipolar System" def4="International order where power is distributed among several major global powers, replacing bipolarity." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_180_world_order" question="Which of the following best describes the core characteristic of the Post-Cold War international order as discussed in the chapter?" opt1="The unquestioned dominance of a unipolar United States leading to global stability." opt2="A clear transition to a purely multipolar system with guaranteed peace." opt3="Conflicting perspectives and debates about its stability, power dynamics, and potential sources of conflict." opt4="The complete irrelevance of nuclear deterrence in international relations." correct="3" %}

@@ -121,3 +121,11 @@ However, there are still areas needing improvement when it comes to development 
 - Increasing accountability and monitoring & evaluation of gender impacts. This can help identify what works and what doesn't in advancing women economically.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Feminization of Poverty" def1="Increasing prevalence of women among the world's poor" term2="Gender Pay Gap" def2="Difference in earnings between men and women" term3="Unpaid Care Work" def3="Uncompensated domestic and care work, mainly done by women" term4="Women's Economic Empowerment" def4="Enabling women to participate fully in the economy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_women_economic_role" question="What is the term for the increasing prevalence and proportion of women among the world's poor?" opt1="Feminization of Wealth" opt2="Feminization of Poverty" opt3="Economic Empowerment" opt4="Gender Inequality" correct="2" %}

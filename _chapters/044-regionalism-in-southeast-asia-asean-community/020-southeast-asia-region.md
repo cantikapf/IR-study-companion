@@ -101,3 +101,11 @@ Early efforts at partnership focused on fostering cultural understanding, educat
 Now, over 50 years later, ASEAN has grown into a leading force for economic integration and geopolitical coordination in Asia. The colonial-era idea of Southeast Asia has blossomed into a vibrant, diverse region linked by common values and aspirations. By learning from the past while looking to the future, Southeast Asia has transformed into a promising model for regional cooperation and shared prosperity.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="ASEAN" def1="Association of Southeast Asian Nations, a regional organization" term2="Colonial History" def2="European powers' rule in Southeast Asia, shaping its landscape" term3="SEATO" def3="Southeast Asia Treaty Organization, an anti-communist military alliance" term4="South East Asia" def4="Region between Indian subcontinent and China, Korea, Japan" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_southeast_asia_region" question="What was the main purpose of ASEAN when established in 1967?" opt1="To promote communism in Southeast Asia" opt2="To accelerate economic growth and promote regional peace" opt3="To create a military alliance against external threats" opt4="To establish a single Southeast Asian country" correct="2" %}

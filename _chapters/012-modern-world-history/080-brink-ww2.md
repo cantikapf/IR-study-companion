@@ -146,3 +146,11 @@ Appeasement policies aimed at avoiding another large-scale war by acquiescing to
 In the end, World War II was the destructive culmination of multiple complex factors - unresolved postwar grievances, economic turmoil, extreme ideologies, appeasement, and unchecked aggression between nations. The scale and impact of the ensuing global conflict would permanently alter the world order and shape international relations for decades to follow.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Treaty of Versailles" def1="Post-WWI treaty imposing punitive terms on Germany, fueling resentment and instability." term2="Authoritarian Regimes" def2="Governments like Nazi Germany and Fascist Italy emphasizing extreme nationalism, militarism, and expansion." term3="Policy of Appeasement" def3="Concessions made to aggressive regimes (e.g., Hitler) to avoid war, which emboldened further aggression." term4="Blitzkrieg" def4="German 'lightning war' strategy using fast-moving tanks, ground troops, and air support for rapid invasions." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_brink_ww2" question="Which combination of factors is identified as primarily contributing to the outbreak of World War II in Europe?" opt1="The spread of communism and the establishment of the United Nations." opt2="Unresolved issues from WWI, the rise of authoritarian regimes, and the policy of appeasement." opt3="Global economic prosperity and strong collective security organizations." opt4="Decolonization movements in Africa and Asia, coupled with oil price shocks." correct="2" %}

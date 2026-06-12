@@ -116,3 +116,11 @@ Despite aspirations for rapid industrialization and agricultural collectivizatio
 The events that transpired between the 1920s and 1970s profoundly shaped China's national identity and development path. This period marked the birth of Communist China while also highlighting the human costs and unintended consequences of revolutionary policies untethered from economic realities. While prosperity remained elusive for many, the resilience of the Chinese people through years of war and turmoil provided the tenacity needed to emerge from the Mao era and embark on a bold new direction toward reform. The complexity of this transformative phase continues to shape China's global outlook and political ethos today.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Chinese Civil War" def1="Conflict (1920s-1949) between Nationalists (KMT) and Communists (CCP), resulting in Communist victory." term2="People's Republic of China (PRC)" def2="Communist state founded October 1, 1949, by Mao Zedong after their victory in the Civil War." term3="Great Leap Forward" def3="Mao's 1958-1961 economic campaign for rapid industrialization and collectivization, causing widespread famine." term4="Cultural Revolution" def4="Mao's 1966-1976 movement to renew communist ideology, leading to social chaos and violence." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_160_birth_prc" question="The period from the 1920s to the 1970s in China, culminating in the establishment of the People's Republic of China, is best characterized by:" opt1="A consistent focus on democratic reforms and alliance with Western powers." opt2="Intense internal conflict, foreign invasion, and radical socialist transformations often resulting in widespread upheaval." opt3="Prolonged stability and gradual economic liberalization initiated by the Nationalist government." opt4="A rapid and smooth transition to a developed industrial economy free from major internal disruptions." correct="2" %}

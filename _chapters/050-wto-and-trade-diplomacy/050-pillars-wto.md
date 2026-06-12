@@ -142,3 +142,11 @@ At the same time, developing countries have leveraged their collective power thr
 The distribution of power affects nearly all aspects of WTO operations, from agenda-setting to rulemaking to compliance mechanisms. Managing power dynamics is central to the efficacy and legitimacy of the multilateral trading system. The WTO's capacity to promote open and inclusive trade depends on addressing imbalances and finding compromise between competing national interests.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Comparative Advantage" def1="Countries gain from trade by specializing in goods they produce relatively efficiently." term2="National Sovereignty" def2="A state's authority to govern itself and make decisions without external influence." term3="Multilateral Trading Order" def3="A system of international trade based on agreed rules and cooperation among nations." term4="Power Dynamics" def4="The distribution and exercise of influence and authority among nations." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_pillars_wto" question="What are the three major developments required before a multilateral trading order could be created?" opt1="The emergence of the idea of national sovereignty, the notion that countries can gain from freer trade, and the establishment of the United Nations." opt2="The emergence of the idea of national sovereignty, the notion that countries can gain from freer trade, and the resolution of the paradox of power dynamics between nations." opt3="The establishment of the GATT, the creation of the ITO, and the end of the Cold War." opt4="The rise of globalization, the growth of international organizations, and the decline of protectionism." correct="2" %}

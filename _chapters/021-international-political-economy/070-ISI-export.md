@@ -110,3 +110,12 @@ In summary, ISI yielded mixed results for developing countries. While some benef
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Import Substitution Industrialization" def1="Economic policy to foster domestic industry growth and reduce foreign dependency" term2="Export Orientation" def2="Economic strategy focusing on producing goods for international trade" term3="Infant Industry Argument" def3="Theory supporting temporary trade barriers to protect new industries" term4="Structural Adjustment Programs" def4="IMF and World Bank loans for economic reforms in developing countries" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_ISI_export" question="What was the primary goal of Import Substitution Industrialization?" opt1="To increase reliance on foreign imports" opt2="To foster domestic industry growth and reduce foreign dependency" opt3="To promote export-oriented economic growth" opt4="To reduce government intervention in the economy" correct="2" %}

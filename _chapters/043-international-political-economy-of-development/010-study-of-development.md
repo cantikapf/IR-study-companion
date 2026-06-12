@@ -139,3 +139,11 @@ Some key themes in the evolution of development thought include:
 Overall, the study of development has advanced by overcoming these tensions and incorporating a wider range of perspectives and approaches. This has led to a more comprehensive and nuanced understanding of development, which is essential for addressing the complex challenges faced by the world today.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Industrial Revolution" def1="Period of rapid industrialization and mechanization in Britain" term2="Colonialism" def2="System of domination and exploitation by European powers" term3="Sustainable Development Goals" def3="17 goals for sustainable development by 2030" term4="Development Thought" def4="Knowledge and understanding of societal change and development" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_study_of_development" question="What was the primary driver of economic growth in Western nations during the Industrial Revolution?" opt1="Colonialism and imperialism" opt2="Innovations like the steam engine and mechanization" opt3="Global trade and commerce" opt4="Natural resource extraction" correct="2" %}

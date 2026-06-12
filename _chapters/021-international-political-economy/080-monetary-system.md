@@ -116,3 +116,12 @@ Joining ERM II is voluntary for non-euro EU members. Participating in the mechan
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="International Monetary System" def1="Facilitates economic transactions between countries using national currencies" term2="Exchange Rate" def2="Relative price of one currency in terms of another" term3="Balance of Payments" def3="Tracks international transactions between a country and the rest of the world" term4="Bretton Woods System" def4="Fixed exchange rate system established in 1944 for global economic stability" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_monetary_system" question="What is the primary function of the international monetary system?" opt1="To facilitate global economic growth through investment" opt2="To enable cross-border transactions using national currencies" opt3="To regulate international trade agreements" opt4="To provide humanitarian aid to developing countries" correct="2" %}

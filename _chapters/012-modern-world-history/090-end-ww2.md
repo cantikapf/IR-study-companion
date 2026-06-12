@@ -121,3 +121,11 @@ In Asia, Japan in particular faced the challenge of rebuilding its economy and i
 The postwar period represented an era of rebuilding and repairing the extensive physical and economic damages inflicted by World War II. Supported by foreign aid and recovery policies, former wartime economies transitioned back to peacetime industry and were able to achieve renewed productivity, restoring economic stability.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="VE Day" def1="May 8, 1945: Nazi Germany surrendered, marking the end of World War II in Europe." term2="VJ Day" def2="September 2, 1945: Japan formally surrendered, marking the global end of World War II." term3="Manhattan Project" def3="Secret WWII project by US, UK, Canada to develop the first atomic bombs." term4="United Nations (UN)" def4="Established Oct 24, 1945, to maintain international peace and security post-WWII." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_end_ww2" question="Which of the following describes a key transformation in the global order after World War II?" opt1="The immediate collapse of all remaining colonial empires worldwide." opt2="The shift of global power from old European empires to the United States and Soviet Union." opt3="The complete disarmament of all major world powers to prevent future conflicts." opt4="The establishment of a unified world government ensuring perpetual peace." correct="2" %}

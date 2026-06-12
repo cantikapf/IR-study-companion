@@ -105,3 +105,11 @@ UN peacekeeping missions now encompass broader goals beyond truce monitoring, li
 In summary, the UN Security Council continues to evolve to address new challenges, while pursuing its founding mission of preserving world peace through collective security. Its success relies on cooperation between member states to implement the UN Charter in a changing global landscape.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="UN Security Council" def1="Primary organ for maintaining international peace and security" term2="Peacekeeping Operations" def2="UN missions to maintain peace and security in conflict zones" term3="Preventive Diplomacy" def3="Efforts to prevent conflict through diplomacy and mediation" term4="Disarmament" def4="Elimination of illegal weapons and regulation of arms" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_UN_security" question="What is the primary responsibility of the UN Security Council?" opt1="Promoting economic development" opt2="Maintaining international peace and security" opt3="Providing humanitarian aid" opt4="Protecting human rights" correct="2" %}

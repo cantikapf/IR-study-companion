@@ -91,3 +91,11 @@ The constructivist response to these questions is as follows:
 To sum up, the constructivist view of NATO expansion as international socialization is based on the idea that countries **adopt community values and norms**, which causes them to change how they handle their own domestic and foreign policies. When compared to rationalist views, this one gives a more complete explanation for NATO's growth.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Constructivism" def1="Theory that international relations are socially constructed" term2="Socially Constructed Reality" def2="Reality shaped by social interaction and interpretation" term3="Mutual Constitution" def3="Structures and agents influence each other" term4="International Socialization" def4="Countries adopt community values and norms" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_constuctivism_ir" question="What is the core idea of constructivism in International Relations?" opt1="International relations are determined by material interests" opt2="International relations are socially constructed" opt3="International relations are fixed and unchanging" opt4="International relations are driven by individualism" correct="2" %}

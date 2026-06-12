@@ -108,3 +108,11 @@ Some key challenges that remain include:
 So while the rhetoric and intentions toward greater gender equality in foreign policy have grown, significant challenges remain in translating this into reality. Greater representation, shifting cultures and attitudes, and overcoming resistance will be key priorities going forward.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Patriarchal Values" def1="Societal norms that prioritize male dominance and superiority" term2="Feminist Foreign Policy" def2="Foreign policy approach that prioritizes gender equality and women's rights" term3="Gender Stereotypes" def3="Overly simplistic assumptions about gender roles and capabilities" term4="Masculine Values" def4="Cultural values that emphasize traits like aggression and competition" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_women_foreign_policy" question="What is the core concept of Sweden's feminist foreign policy approach?" opt1="Prioritizing economic interests in foreign policy" opt2="Applying gender equality perspectives to all foreign policy issues" opt3="Focusing on military security and defense" opt4="Promoting cultural exchange and tourism" correct="2" %}

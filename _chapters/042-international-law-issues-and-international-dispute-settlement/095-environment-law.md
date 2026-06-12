@@ -172,3 +172,11 @@ Key points:
 - Ongoing international cooperation and strengthened global governance are essential to address our shared environmental challenges. We must work together across borders to protect the planetary systems on which our collective future depends.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Precautionary Principle" def1="Taking measures to prevent harm even if cause and effect is not fully established" term2="Environmental Treaties" def2="Legally binding international agreements to address ecological problems" term3="Polluter Pays Principle" def3="Polluters are responsible for environmental damage and mitigation costs" term4="Integration Principle" def4="Incorporating environmental considerations into economic and other policies" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_095_environment_law" question="What is the primary goal of international environmental treaties?" opt1="To promote economic growth over environmental protection" opt2="To protect the environment globally and regionally" opt3="To establish binding emissions limits on developed nations only" opt4="To provide financial assistance to developing nations" correct="2" %}

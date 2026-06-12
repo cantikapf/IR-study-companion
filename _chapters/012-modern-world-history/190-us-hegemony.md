@@ -124,3 +124,11 @@ The contrasting economic rises of China and Russia present multifaceted challeng
 Navigating these different challenges requires nuance and adaptability. The US cannot rely on a one-size-fits-all approach. When it comes to China, the focus may need to be more on economic policy and trade relationships. With Russia, geopolitics and regional power balances come to the forefront. Overall, the US faces the need to reorient itself in a shifting global landscape shaped by the contrasting trajectories of these two ascendant powers. Careful recalibration of priorities, alliances, and strategies will be essential to protect US interests in this new era.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Unipolar World" def1="A world dominated by a single superpower" term2="State-Led Capitalism" def2="Economic system where state directs economic development" term3="Soft Power" def3="Influence through attraction and persuasion, not coercion" term4="Geopolitical Influence" def4="A country's ability to affect other countries' policies and decisions" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_190_us_hegemony" question="What is the main challenge posed by China's economic rise to the US?" opt1="Military threat" opt2="Unfair trade practices and disruption of global supply chains" opt3="Ideological differences" opt4="Environmental concerns" correct="2" %}

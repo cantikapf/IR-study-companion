@@ -168,3 +168,11 @@ Key aspects of NCDs as they relate to health diplomacy include:
 Overall, the growth of NCDs necessitates new forms of collaboration and diplomacy between nations and stakeholders. By acknowledging shared interests in addressing common risk factors, health diplomacy has potential to build stronger global partnerships for improving prevention and control of NCDs.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Security" def1="Protection of states and citizens from threats" term2="Arms Control" def2="International restrictions on development and proliferation of weapons" term3="Peace Building" def3="Preventing conflict recurrence and establishing long-term peace" term4="Human Rights" def4="Protection and promotion of fundamental human rights and dignity" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_inter_politics" question="What is the primary goal of security in international politics?" opt1="To promote economic cooperation" opt2="To protect states and citizens from threats" opt3="To advance human rights" opt4="To control the spread of diseases" correct="2" %}

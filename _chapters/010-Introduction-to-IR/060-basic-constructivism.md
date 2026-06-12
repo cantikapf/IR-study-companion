@@ -108,3 +108,12 @@ Finally, a norm reaches internalization when it becomes so widely accepted that 
 By breaking down norm evolution into distinct stages, constructivism provides insights into the mechanisms and tipping points through which new norms emerge and become internalized in global politics. The emphasis is on the ideational factors and legitimacy concerns that lead states to embrace norms promoted by progressive norm entrepreneurs.
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Constructivism" def1="IR theory: international politics shaped by ideas, norms, knowledge, and shared meanings." term2="Social Construction" def2="Process by which shared ideas, norms, and meanings create and define social reality in IR." term3="Agent-Structure Co-constitution" def3="Agents shape structures, which in turn shape agents, in a dynamic, mutually influential relationship." term4="Logic of Appropriateness" def4="Actors behave based on internalized identities, rules, and norms, seeking socially legitimate actions." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_basic_constructivism" question="Which of the following best describes the central claim of Constructivism in International Relations?" opt1="States are primarily motivated by material power and security interests in an anarchic system." opt2="International institutions enable states to achieve absolute gains through cooperation." opt3="International politics is fundamentally shaped by shared ideas, norms, identities, and social meanings." opt4="Economic structures and class struggle are the primary drivers of global political outcomes." correct="3" %}

@@ -52,3 +52,11 @@ The reason for this rejection makes the situation "the absence of hierarchy" a j
 Involuntary defection refers to the behavior of an agent (states) who is unable to deliver on a promise because of failed ratification.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Two-Level Game" def1="Theoretical approach to state's foreign policy negotiations" term2="Win-Set" def2="Set of Level I agreements with majority support among constituents" term3="Level I" def3="Bargaining between international negotiators" term4="Level II" def4="Domestic discussions on ratifying Level I agreements" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_domestic_politics" question="What is the main idea of the two-level game theory?" opt1="International negotiations are only between state leaders" opt2="State representatives negotiate in two stages: international and domestic" opt3="Domestic politics has no impact on international negotiations" opt4="International agreements are always ratified by domestic constituents" correct="2" %}

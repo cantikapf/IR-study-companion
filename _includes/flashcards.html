@@ -1,0 +1,113 @@
+<style>
+.flashcards-container {
+    margin: 40px 0;
+    text-align: center;
+}
+.flashcards-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: inherit;
+    border-bottom: 2px solid #4facfe;
+    display: inline-block;
+}
+.flashcards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.flashcard {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.flashcard-front {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.flashcard-back {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1f2937;
+    transform: rotateY(180deg);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+body.dark-theme .flashcard-back {
+    background: #374151;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+</style>
+
+<div class="flashcards-container">
+    <div class="flashcards-title">Key Concepts Flashcards</div>
+    <div class="flashcards-grid">
+        <div class="flashcard" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('flipped'); this.setAttribute('aria-expanded', this.classList.contains('flipped'))">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">{{ include.term1 | default: "Anarchy" }}</div>
+                <div class="flashcard-back">{{ include.def1 | default: "The absence of a central, overarching authority or world government above individual sovereign states." }}</div>
+            </div>
+        </div>
+        <div class="flashcard" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('flipped'); this.setAttribute('aria-expanded', this.classList.contains('flipped'))">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">{{ include.term2 | default: "Hegemony" }}</div>
+                <div class="flashcard-back">{{ include.def2 | default: "The political, economic, or military predominance or control of one state over others." }}</div>
+            </div>
+        </div>
+        <div class="flashcard" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('flipped'); this.setAttribute('aria-expanded', this.classList.contains('flipped'))">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">{{ include.term3 | default: "Sovereignty" }}</div>
+                <div class="flashcard-back">{{ include.def3 | default: "The supreme and absolute authority of a state within its territorial boundaries." }}</div>
+            </div>
+        </div>
+        <div class="flashcard" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('flipped'); this.setAttribute('aria-expanded', this.classList.contains('flipped'))">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">{{ include.term4 | default: "Balance of Power" }}</div>
+                <div class="flashcard-back">{{ include.def4 | default: "A strategy to maintain equilibrium among nations so that no single state becomes too dominant." }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const flashcards = document.querySelectorAll('.flashcard');
+    flashcards.forEach(card => {
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
+});
+</script>

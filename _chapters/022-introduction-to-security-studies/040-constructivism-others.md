@@ -96,3 +96,12 @@ The feminist critique has enriched understandings of security by revealing typic
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Constructivism" def1="Theoretical approach emphasizing social construction of international relations" term2="Intersubjectivity" def2="Shared understandings and meanings emerging through social interactions" term3="Securitization" def3="Process of turning an issue into a security threat requiring emergency action" term4="Critical Theory" def4="Philosophical critique of traditional international relations theory and security" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_constructivism_others" question="What is the core premise of constructivism in international relations?" opt1="Material factors primarily shape international politics" opt2="International politics is shaped by both material and socially constructed factors" opt3="International relations are determined by state power and interests" opt4="Global governance is the key to international security" correct="2" %}

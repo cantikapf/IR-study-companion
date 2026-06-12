@@ -85,3 +85,11 @@ Yet at the same time, much of the diplomacy that takes place within the institut
 The ubiquity of real-time communication channels, which make it much easier for non-state actors and the global public to be aware of and participate in trade diplomacy, also makes that diplomacy much more difficult. The public visibility of negotiating positions and debates makes compromise or flexibility more politically difficult for governments. This exacerbates the structural difficulties inherent in trade negotiations between sovereign states with asymmetric economic size or influence.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="International Trade" def1="Exchange of goods, services, capital, and labor across international borders" term2="Trade Diplomacy" def2="Diplomacy that facilitates international trade, involving state and non-state actors" term3="Comparative Advantage" def3="Specialization in industries where a country has a relative productivity advantage" term4="Non-State Actors" def4="Entities beyond governments, such as corporations and NGOs, influencing trade diplomacy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_evolution_global_trade" question="What has been the trend of international trade as a percentage of global economic output over the past two centuries?" opt1="It has decreased significantly" opt2="It has remained relatively stable" opt3="It has grown substantially from around 2% to nearly 35%" opt4="It has fluctuated wildly without a clear trend" correct="3" %}

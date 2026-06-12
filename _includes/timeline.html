@@ -1,0 +1,104 @@
+<style>
+.timeline-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.timeline-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: inherit;
+    border-bottom: 2px solid #4facfe;
+    display: inline-block;
+}
+.timeline-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+.timeline-scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.timeline-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #4facfe;
+    border-radius: 4px;
+}
+.timeline-card {
+    min-width: 280px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    border-left: 4px solid #4facfe;
+    transition: transform 0.3s;
+}
+body.dark-theme .timeline-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.2);
+}
+.timeline-year {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #4facfe;
+    margin-bottom: 8px;
+}
+.timeline-event {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.timeline-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+body.dark-theme .timeline-desc {
+    color: #d1d5db;
+}
+</style>
+
+<div class="timeline-container">
+    <div class="timeline-title">Key Historical Events in IR</div>
+    <div class="timeline-scroll-wrapper">
+        <div class="timeline-card">
+            <div class="timeline-year">1648</div>
+            <div class="timeline-event">Peace of Westphalia</div>
+            <div class="timeline-desc">Established the concept of state sovereignty, laying the foundation for the modern state system.</div>
+        </div>
+        <div class="timeline-card">
+            <div class="timeline-year">1815</div>
+            <div class="timeline-event">Congress of Vienna</div>
+            <div class="timeline-desc">Created the Concert of Europe, an early attempt to maintain balance of power and prevent major wars.</div>
+        </div>
+        <div class="timeline-card">
+            <div class="timeline-year">1914 - 1918</div>
+            <div class="timeline-event">World War I</div>
+            <div class="timeline-desc">The collapse of empires and the subsequent creation of the League of Nations, driven by Wilsonian idealism.</div>
+        </div>
+        <div class="timeline-card">
+            <div class="timeline-year">1939 - 1945</div>
+            <div class="timeline-event">World War II</div>
+            <div class="timeline-desc">Ended with the creation of the United Nations and the dawn of the nuclear age, shifting the global order.</div>
+        </div>
+        <div class="timeline-card">
+            <div class="timeline-year">1947 - 1991</div>
+            <div class="timeline-event">The Cold War</div>
+            <div class="timeline-desc">Bipolar world order dominated by the US and USSR, characterized by ideological struggle and proxy wars.</div>
+        </div>
+        <div class="timeline-card">
+            <div class="timeline-year">2001</div>
+            <div class="timeline-event">September 11 Attacks</div>
+            <div class="timeline-desc">Shifted global focus to non-state actors, terrorism, and marked the beginning of the "War on Terror".</div>
+        </div>
+    </div>
+</div>

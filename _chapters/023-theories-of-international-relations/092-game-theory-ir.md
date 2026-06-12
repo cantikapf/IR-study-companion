@@ -67,3 +67,11 @@ Example: Why states' attack each other and make World War I?
 Because all countries don't want to get attacked first, it is possible all actors will arming themselves because they want to take the advantages (if it leads to war)
 
 ---
+
+{% include sim_game_theory.html %}
+
+### Interactive Learning 
+{% include flashcards.html term1="Game Theory" def1="Analyzing interactions between individuals or groups in strategic situations" term2="Prisoner's Dilemma" def2="A situation where rational individuals may not cooperate for mutual benefit" term3="Cooperation" def3="Actors working together to achieve a common goal" term4="Defection" def4="Actors choosing not to cooperate to gain an advantage" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_092_game_theory_ir" question="What is the main idea of the Prisoner's Dilemma in game theory?" opt1="Two rational individuals always cooperate for mutual benefit" opt2="Two rational individuals may not cooperate even if it's in their best interest" opt3="One rational individual always defects to gain an advantage" opt4="Game theory only applies to non-strategic situations" correct="2" %}

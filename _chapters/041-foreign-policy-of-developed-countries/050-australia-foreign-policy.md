@@ -100,3 +100,11 @@ Climate change poses a major threat to Australia due to the country's vulnerabil
 The U.S. alliance has been the bedrock of Australia's foreign policy since World War 2. However, changes in relative U.S. power and the rise of China have led to debates about whether Australia should balance its alliance with greater engagement in Asia. Managing tensions between the U.S. and China will be a key challenge. The treatment of the U.S. alliance impacts domestic politics.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Cabinet" def1="Key decision-making body setting policy directions" term2="Foreign Minister" def2="Handles day-to-day foreign policy and diplomacy" term3="Prime Minister" def3="Sets strategic agenda and vision for foreign policy" term4="Parliament" def4="Influences policy through debates and committee work" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_australia_foreign_policy" question="What is the role of the Prime Minister in Australia's foreign policy?" opt1="Handles day-to-day foreign policy and diplomacy" opt2="Sets strategic agenda and vision for foreign policy" opt3="Key decision-making body setting policy directions" opt4="Influences policy through debates and committee work" correct="2" %}

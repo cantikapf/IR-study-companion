@@ -95,3 +95,11 @@ Specifically, the US has the world's largest economy by purchasing power parity,
 China and the EU may someday contend for hegemony, but currently lack the full spectrum dominance the US exhibits. Though facing relative decline, America preserves its superpower position and remains the closest match to a hegemon according to the theory of hegemonic stability. Barring major changes in the distribution of global power, the US is poised to maintain its leadership role for the foreseeable future.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Hegemonic Power" def1="A dominant world power that upholds international rules and provides public goods" term2="Hegemonic Stability Theory" def2="Theory that a single strong actor creates a stable international system" term3="Global Reserve Currency" def3="Currency widely used for international transactions and held in foreign exchange reserves" term4="Purchasing Power Parity (PPP)" def4="Measure of a country's economic strength based on its currency's buying power" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_economic_hegemony" question="What is the primary characteristic of a hegemonic power's currency?" opt1="It is the most widely traded currency in the world" opt2="It is the dominant global reserve currency" opt3="It is the currency with the highest exchange rate" opt4="It is the currency with the lowest inflation rate" correct="2" %}

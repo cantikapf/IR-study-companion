@@ -113,3 +113,11 @@ The tragic aftermath of the Iraq War underscores key warnings from classical rea
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Groupism" def1="Significance of human groups, especially nation-states, for survival" term2="Egoism" def2="Self-interest as driving motivator behind political behavior" term3="Power-centrism" def3="Power inequalities as fundamental feature of politics and human affairs" term4="Anarchy" def4="Lack of overarching authority in international system" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_classical_realism" question="What is the primary actor in international affairs according to Classical Realism?" opt1="International organizations" opt2="States" opt3="Non-governmental organizations" opt4="Individuals" correct="2" %}

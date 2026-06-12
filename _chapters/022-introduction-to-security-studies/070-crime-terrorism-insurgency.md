@@ -106,3 +106,12 @@ Overall, counterinsurgency is not a pre-set strategy but rather an evolving resp
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Transnational Organized Crime" def1="Illegal activities coordinated across national borders" term2="Terrorism" def2="Use of violence or fear to coerce and gain public attention" term3="Insurgency" def3="Organized movement to overthrow an established government or occupying power" term4="Illicit Political Economy" def4="Transactions and activities outside government regulation and taxation" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_crime_terrorism_insurgency" question="What is the primary goal of terrorism?" opt1="To gain economic benefits" opt2="To use violence or fear to coerce and gain public attention" opt3="To establish a new government" opt4="To promote international cooperation" correct="2" %}

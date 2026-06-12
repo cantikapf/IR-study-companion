@@ -128,3 +128,12 @@ The intricacies of human relations, organizational behavior and political struct
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Power" def1="The capacity of individuals or groups to exert their will over others, even against resistance." term2="Legitimacy" def2="The belief that an individual or institution has a valid right to wield power." term3="Governmentality" def3="Managing human conduct through dispersed yet coordinated efforts across society (Foucault)." term4="Pluralism" def4="The theory that power is dispersed among competing groups and forces in society." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_social_change" question="According to Max Weber, which type of authority derives its legitimacy from impartial, codified rules and expertise?" opt1="Traditional authority" opt2="Charismatic authority" opt3="Rational-legal authority" opt4="Elite authority" correct="3" %}
+

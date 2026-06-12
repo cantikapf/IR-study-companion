@@ -100,3 +100,12 @@ The impacts of these agreements remain to be seen. The TPP awaits ratification a
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="TPP" def1="Trans-Pacific Partnership, a regional trade agreement" term2="RCEP" def2="Regional Comprehensive Economic Partnership, a mega regional trade agreement" term3="Trade Liberalization" def3="Reducing or eliminating trade barriers to promote economic growth" term4="Free Trade Area" def4="A region with minimal or no trade barriers among member countries" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_TPP_RCEP" question="What is the main difference in membership between the TPP and RCEP agreements?" opt1="TPP includes China, while RCEP excludes it" opt2="TPP excludes China, while RCEP includes it" opt3="TPP and RCEP have the same membership" opt4="TPP and RCEP have no specific membership criteria" correct="2" %}

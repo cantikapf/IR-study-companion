@@ -162,3 +162,11 @@ The outcomes of WWI heavily influenced international relations and global alignm
 WWI created a profound shift in literature and art. Disillusioned writers responded to the destruction and loss of humanity brought by modern warfare. Trench poetry by Siegfried Sassoon and Wilfred Owen exposed the visceral realities of war in verse form. Erich Maria Remarque's influential anti-war novel All Quiet On The Western Front conveyed the despair felt by soldiers. Painters like Otto Dix employed distorted figures and dark themes to capture the psychological trauma endured. Much of the iconography and imagery of WWI has become symbolic, shaping public perception and serving as inspiration for ongoing cultural production.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Militarism" def1="European powers heavily armed, building militaries before 1914, creating distrust and tension." term2="Trench Warfare" def2="Stalemate combat from fortified ditches, characterized by high casualties and harsh battlefield conditions." term3="Unrestricted Submarine Warfare" def3="German policy of sinking merchant ships without warning, prompting US entry into WWI." term4="Treaty of Versailles" def4="Post-WWI treaty imposing harsh terms on Germany, fueling resentment and contributing to WWII." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_after_ww1" question="The Treaty of Versailles, signed after World War I, had which significant long-term consequence?" opt1="It established a strong, unified European economic alliance that prevented future conflicts." opt2="It fueled deep German resentment over harsh terms, contributing to the rise of Nazism and World War II." opt3="It immediately resolved all territorial disputes, ensuring decades of stable political borders." opt4="It prompted widespread disarmament across Europe, ushering in an era of unprecedented international trust." correct="2" %}

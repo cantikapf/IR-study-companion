@@ -1,0 +1,150 @@
+<style>
+.sim-wto-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
+.sim-wto-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
+.sim-wto-header h3 { margin: 0; color: #60a5fa !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+.sim-wto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .sim-wto-grid { grid-template-columns: 1fr; } }
+.wto-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; }
+.wto-control { margin-bottom: 15px; }
+.wto-control label { display: block; margin-bottom: 5px; color: #9ca3af; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.wto-select { width: 100%; padding: 10px; background: #1f2937; color: white; border: 1px solid #3b82f6; border-radius: 6px; font-size: 1rem; cursor: pointer; outline: none; }
+.wto-select:focus { border-color: #60a5fa; box-shadow: 0 0 0 2px rgba(59,130,246,0.3); }
+.wto-blocs { list-style: none; padding: 0; margin: 0; }
+.wto-bloc { padding: 12px; margin-bottom: 10px; border-radius: 6px; background: #1f2937; border-left: 4px solid #6b7280; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
+.wto-bloc.agree { border-left-color: #10b981; background: rgba(16,185,129,0.05); }
+.wto-bloc.veto { border-left-color: #ef4444; background: rgba(239,68,68,0.05); }
+.wto-status-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; transition: all 0.3s; }
+.wto-status-badge.waiting { background: rgba(107,114,128,0.2); color: #9ca3af; }
+.wto-status-badge.agree { background: rgba(16,185,129,0.2); color: #10b981; }
+.wto-status-badge.veto { background: rgba(239,68,68,0.2); color: #ef4444; }
+.wto-btn { width: 100%; padding: 12px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background 0.2s; }
+.wto-btn:hover { background: #2563eb; transform: translateY(-2px); }
+.wto-result { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; display: none; animation: fadeIn 0.5s ease-in-out; }
+.wto-result.success { display: block; background: rgba(16,185,129,0.1); border: 1px solid #10b981; color: #10b981; }
+.wto-result.fail { display: block; background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #ef4444; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<div class="sim-wto-container">
+    <div class="sim-wto-header">
+        <h3><i class="fa fa-globe"></i> Simulation: The Consensus Builder</h3>
+        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are the WTO Director-General trying to pass a global trade treaty. Because the WTO requires <strong>absolute consensus</strong>, a single veto will kill the deal. Find the perfect compromise!</p>
+    </div>
+    <div class="sim-wto-grid">
+        <div class="wto-panel">
+            <h4 style="margin-top:0; margin-bottom: 20px; color:#d1d5db; border-bottom: 1px solid #374151; padding-bottom: 10px;">Draft Proposal</h4>
+            <div class="wto-control">
+                <label>Agricultural Subsidies</label>
+                <select id="wto-subsidies" class="wto-select">
+                    <option value="high">Maintain High Subsidies</option>
+                    <option value="low">Reduce Subsidies (Compromise)</option>
+                    <option value="removed">Remove Entirely</option>
+                </select>
+            </div>
+            <div class="wto-control">
+                <label>Intellectual Property (IP)</label>
+                <select id="wto-ip" class="wto-select">
+                    <option value="strict">Strict Enforcement</option>
+                    <option value="relaxed">Relaxed Enforcement</option>
+                </select>
+            </div>
+            <div class="wto-control">
+                <label>LDC Trade Exemptions</label>
+                <select id="wto-exemptions" class="wto-select">
+                    <option value="denied">Denied</option>
+                    <option value="granted">Granted</option>
+                </select>
+            </div>
+            <button class="wto-btn" onclick="checkWTOConsensus()">Submit Draft for Voting</button>
+        </div>
+        <div class="wto-panel">
+            <h4 style="margin-top:0; margin-bottom: 20px; color:#d1d5db; border-bottom: 1px solid #374151; padding-bottom: 10px;">Member Blocs</h4>
+            <ul class="wto-blocs">
+                <li class="wto-bloc" id="bloc-developed">
+                    <div>
+                        <strong>Developed Nations</strong><br>
+                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Strict IP, Lower Subsidies</span>
+                    </div>
+                    <span class="wto-status-badge waiting" id="status-developed">WAITING</span>
+                </li>
+                <li class="wto-bloc" id="bloc-developing">
+                    <div>
+                        <strong>Developing Nations</strong><br>
+                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Wants Subsidies. Hates Strict IP unless Exempted.</span>
+                    </div>
+                    <span class="wto-status-badge waiting" id="status-developing">WAITING</span>
+                </li>
+                <li class="wto-bloc" id="bloc-ldc">
+                    <div>
+                        <strong>Least Developed (LDCs)</strong><br>
+                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Must have Exemptions.</span>
+                    </div>
+                    <span class="wto-status-badge waiting" id="status-ldc">WAITING</span>
+                </li>
+            </ul>
+            <div id="wto-result" class="wto-result"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function checkWTOConsensus() {
+    const subsidies = document.getElementById('wto-subsidies').value;
+    const ip = document.getElementById('wto-ip').value;
+    const exemptions = document.getElementById('wto-exemptions').value;
+    
+    let devVeto = false;
+    let devgVeto = false;
+    let ldcVeto = false;
+    
+    // Developed logic
+    if (ip === 'relaxed' || subsidies === 'high') {
+        devVeto = true;
+    }
+    
+    // Developing logic
+    if (subsidies === 'removed') {
+        devgVeto = true;
+    }
+    if (ip === 'strict' && exemptions === 'denied') {
+        devgVeto = true;
+    }
+    
+    // LDC logic
+    if (exemptions === 'denied') {
+        ldcVeto = true;
+    }
+    
+    updateBloc('developed', devVeto);
+    updateBloc('developing', devgVeto);
+    updateBloc('ldc', ldcVeto);
+    
+    const resultBox = document.getElementById('wto-result');
+    // small reset hack for animation
+    resultBox.className = 'wto-result'; 
+    void resultBox.offsetWidth; 
+    
+    if (!devVeto && !devgVeto && !ldcVeto) {
+        resultBox.className = 'wto-result success';
+        resultBox.innerHTML = '🎉 CONSENSUS REACHED!<br><span style="font-size:0.9rem; font-weight:normal; color:#d1d5db; display:block; margin-top:5px;">You successfully negotiated a complex multilateral trade agreement!</span>';
+    } else {
+        resultBox.className = 'wto-result fail';
+        resultBox.innerHTML = '❌ NEGOTIATIONS COLLAPSED!<br><span style="font-size:0.9rem; font-weight:normal; color:#d1d5db; display:block; margin-top:5px;">One or more blocs exercised their veto power. Try a different compromise.</span>';
+    }
+}
+
+function updateBloc(id, isVeto) {
+    const li = document.getElementById('bloc-' + id);
+    const badge = document.getElementById('status-' + id);
+    
+    if (isVeto) {
+        li.className = 'wto-bloc veto';
+        badge.className = 'wto-status-badge veto';
+        badge.innerText = 'VETOED';
+    } else {
+        li.className = 'wto-bloc agree';
+        badge.className = 'wto-status-badge agree';
+        badge.innerText = 'AGREES';
+    }
+}
+</script>

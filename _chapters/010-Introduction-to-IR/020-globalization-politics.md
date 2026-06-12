@@ -105,3 +105,12 @@ Overall, while global governance holds promise in coordinating collective action
 <center> <img src="static\modules\global_governance.png" alt="Global Governance" width="90%" /> </center>
 
 ---
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Globalization" def1="Increased worldwide interconnectedness and interdependence across economic, political, and cultural spheres." term2="Time-space compression" def2="Technological advancements reducing distances and accelerating global interactions, information, and flows." term3="Deterritorialization" def3="Weakening of ties between social/economic activities, culture, and specific geographical locations or states." term4="Global Governance" def4="Complex of multilateral institutions and actors addressing worldwide issues, challenging state sovereignty." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_globalization_politics" question="According to the text, what is a fundamental impact of globalization on nation-states within the realm of global politics?" opt1="It strengthens their ability to unilaterally enforce national laws globally." opt2="It increasingly embeds them in multilateral relationships, challenging traditional sovereignty and autonomy." opt3="It isolates them further by encouraging purely domestic economic policies." opt4="It has no significant impact on state sovereignty, only on economic trade." correct="2" %}

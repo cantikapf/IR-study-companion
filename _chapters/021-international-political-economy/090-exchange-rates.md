@@ -97,3 +97,12 @@ In conclusion, the society-centered approach emphasizes that exchange rate polic
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Monetary Policy" def1="Central bank actions to control interest rates and money supply" term2="Exchange Rate Policy" def2="Government management of currency value relative to other currencies" term3="Society-Centered Approach" def3="Emphasizes interplay between interest groups and political institutions" term4="Partisan Model" def4="Highlights influence of political parties and ideologies on monetary policy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_exchange_rates" question="What is the main focus of the society-centered approach to monetary and exchange rate policy?" opt1="Independent central banks pursuing price stability" opt2="Interplay between organized interest groups and political institutions" opt3="Market-determined exchange rates" opt4="Government intervention in monetary policy" correct="2" %}

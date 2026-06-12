@@ -83,3 +83,11 @@ Specifically, when a trade dispute ruling is made against a member state, that c
 Similarly, under NAFTA's dispute settlement provisions, if a NAFTA tribunal decides a member state's policies or actions violated NAFTA and nullifies expected benefits, that member must comply by amending or repealing the inconsistent domestic measures. This controversial power to trump member states' domestic laws has been critical to enforcing freer trade under WTO and NAFTA rules.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Judicialization" def1="Shift from diplomacy to rule-based adjudication in trade disputes" term2="Dispute Settlement Mechanism" def2="Process for resolving trade disputes through judicial procedures" term3="Binding Adjudication" def3="Legally binding rulings in trade disputes, compulsory for parties" term4="Rule-Based Adjudication" def4="Resolving trade disputes based on established rules and laws" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_judicial_procedure_wto" question="What is the main characteristic of judicial mechanisms in trade diplomacy?" opt1="Relying on leverage and bargaining between parties" opt2="Introducing binding legal rulings and compulsory procedures" opt3="Eliminating political negotiation entirely" opt4="Focusing on broad, general negotiations" correct="2" %}

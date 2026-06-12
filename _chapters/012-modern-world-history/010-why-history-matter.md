@@ -97,3 +97,11 @@ In today's world marked by rapid globalization, understanding these historical i
 Ultimately, history is an invaluable lens for realizing just how interconnected our human community truly is. While the present world seems infinitely complex, the study of the past helps demonstrate that many of today's challenges have roots and parallels in earlier eras. By mining history for insights, we gain perspective on how patterns of human civilization have unfolded over time and space. With this enhanced frame of reference, we can better cooperate as an international society to build a more just, peaceful and equitable world order. History is a guidebook for understanding global interconnectedness in all its forms.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="History in IR" def1="Indispensable foundation for understanding complex international relations, providing context and insights." term2="Subjectivity of History" def2="Narratives are inherently biased, reflecting perspectives of those in power or dominant cultures." term3="Eurocentrism" def3="Historical bias placing Europe at the center, viewing it as culturally superior; justifies colonialism." term4="Foreign Policy Influence" def4="History informs diplomatic strategies, threat assessments, alliance building, and avoids past mistakes." %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_why_history_matter" question="According to the text, what is the primary reason history is considered indispensable for comprehending international relations?" opt1="It exclusively focuses on European achievements, shaping modern intellectual thought." opt2="It provides crucial context, insights, and patterns for understanding modern diplomacy, conflicts, and global affairs." opt3="It ensures narratives are always objective and free from bias, presenting universal truths." opt4="It solely helps nations avoid past conflicts by revealing inevitable historical outcomes." correct="2" %}

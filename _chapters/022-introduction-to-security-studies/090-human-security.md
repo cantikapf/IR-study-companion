@@ -86,3 +86,12 @@ Balancing human security with state security regarding population flows requires
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Human Security" def1="Paradigm focusing on safety, livelihood, and dignity of individuals" term2="Globalization" def2="Process increasing interconnectedness and interdependence worldwide" term3="Poverty" def3="State of lacking basic needs, opportunity, and human development" term4="Constructivism" def4="Theory viewing security dilemmas as socially constructed and subject to change" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_090_human_security" question="What is the core concept of human security?" opt1="National security focusing on external military threats" opt2="Safety, livelihood, and dignity of individuals" opt3="Economic development and globalization" opt4="Traditional realist approaches to security" correct="2" %}

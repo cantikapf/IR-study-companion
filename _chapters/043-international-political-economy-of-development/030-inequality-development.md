@@ -111,3 +111,11 @@ The right combination of policy approaches that consider both growth and redistr
 In conclusion, inequality is a complex concept with multiple dimensions like income, consumption, and capabilities that can be measured both vertically and horizontally. While some increase in inequality may be an inevitable byproduct of economic development, extreme and persistent inequality can be detrimental, hampering economic growth, increasing poverty and unhappiness, and undermining social cohesion. Policymakers seeking to address inequality have several options, including progressive taxation, investments in education and healthcare, and strengthening social safety nets. But these policies may involve balancing tradeoffs between equality and incentives for productivity. Overall, the costs and benefits of inequality depend on a society's values and circumstances. Though some inequality may be unavoidable, societies should aim to ensure equality of opportunity and maintain inequality within reasonable limits. The ethical and pragmatic considerations around inequality and proposals to address it will likely remain topics of ongoing debate and analysis.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Vertical Inequality" def1="Inequality among individuals within a country" term2="Horizontal Inequality" def2="Disparities between groups with similar economic status" term3="Capability Approach" def3="Evaluating inequality through human capabilities and freedoms" term4="Durable Inequality" def4="Horizontal inequalities that persist over generations" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_inequality_development" question="What is the primary focus of vertical inequality?" opt1="Disparities between groups with similar economic status" opt2="Inequality among individuals within a country" opt3="Evaluating inequality through human capabilities and freedoms" opt4="Horizontal inequalities that persist over generations" correct="2" %}

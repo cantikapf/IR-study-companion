@@ -130,3 +130,11 @@ The Congress of Vienna in 1815 established an international system of diplomatic
 Diplomatic immunity also became an important ethical concept. The Vienna Convention on Diplomatic Relations in 1964 established that diplomats must have special privileges and immunities under local criminal and civil law. This immunity enables diplomats to carry out their functions and duties without interference or coercion from the host country.
 
 The rank system and immunity uphold diplomatic ethics by facilitating diplomacy between countries. By protecting the ability of diplomats to conduct their duties, these norms aim to encourage open communication and mediation of conflicts. Adhering to diplomatic ethics has been crucial in the history of diplomacy.
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Diplomacy" def1="Management of relationships and affairs between international actors" term2="Proxenos" def2="Representative of a city-state in ancient Greece with diplomatic immunity" term3="Diplomatic Immunity" def3="Protection for diplomats from local law while carrying out duties" term4="Foreign Ministry" def4="Institution devoted to managing a country's foreign affairs" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_history_diplomacy" question="What was a key development in diplomacy during the Italian city-states in the 15th century?" opt1="Establishment of permanent embassies" opt2="Introduction of diplomatic immunity" opt3="Use of messengers and merchant caravans" opt4="Creation of the first foreign ministry" correct="1" %}

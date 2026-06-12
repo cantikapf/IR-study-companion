@@ -1,0 +1,95 @@
+<style>
+.sim-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
+.sim-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
+.sim-header h3 { margin: 0; color: #60a5fa !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 600px) { .sim-grid { grid-template-columns: 1fr; } }
+.sim-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; text-align: center; }
+.sim-score { font-size: 3rem; font-weight: 800; color: #10b981; margin: 10px 0; }
+.sim-score.negative { color: #ef4444; }
+.sim-actions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+.sim-btn { flex: 1; padding: 12px; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.2s; }
+.sim-btn-coop { background: #3b82f6; color: white; }
+.sim-btn-coop:hover { background: #2563eb; transform: translateY(-2px); }
+.sim-btn-defect { background: #ef4444; color: white; }
+.sim-btn-defect:hover { background: #dc2626; transform: translateY(-2px); }
+.sim-log { margin-top: 20px; background: #111827; padding: 15px; border-radius: 8px; border: 1px solid #374151; height: 120px; overflow-y: auto; font-family: monospace; font-size: 0.9rem; color: #9ca3af; }
+.sim-log div { margin-bottom: 5px; border-bottom: 1px dashed #374151; padding-bottom: 5px; }
+.sim-log .log-highlight { color: #f3f4f6; font-weight: bold; }
+</style>
+
+<div class="sim-container">
+    <div class="sim-header">
+        <h3><i class="fa fa-gamepad"></i> Simulation: The Prisoner's Dilemma</h3>
+        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are State A. State B is an AI opponent using the famous <strong>'Tit-for-Tat'</strong> strategy. Will you disarm (Cooperate) or secretly build weapons (Defect)?</p>
+    </div>
+    <div class="sim-grid">
+        <div class="sim-panel">
+            <h4 style="margin:0; color:#d1d5db;">Your Score (State A)</h4>
+            <div class="sim-score" id="gt-score-a">0</div>
+            <div class="sim-actions">
+                <button class="sim-btn sim-btn-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate</button>
+                <button class="sim-btn sim-btn-defect" onclick="playGameTheory('defect')">⚔️ Defect</button>
+            </div>
+        </div>
+        <div class="sim-panel">
+            <h4 style="margin:0; color:#d1d5db;">Opponent (State B)</h4>
+            <div class="sim-score" id="gt-score-b" style="color: #60a5fa;">0</div>
+            <div style="margin-top:20px; color:#9ca3af; font-style: italic; background: #1f2937; padding: 10px; border-radius: 6px;" id="gt-opp-status">Waiting for your move...</div>
+        </div>
+    </div>
+    <div class="sim-log" id="gt-log" aria-live="polite">
+        <div style="border-bottom:none;">> Simulation initialized. Opponent is ready.</div>
+    </div>
+</div>
+
+<script>
+(function() {
+    let gtScoreA = 0;
+    let gtScoreB = 0;
+    let lastOpponentMove = 'cooperate'; // Tit for tat starts with cooperate
+    let roundCounter = 1;
+
+    window.playGameTheory = function(playerMove) {
+        const oppMove = lastOpponentMove; 
+        let changeA = 0;
+        let changeB = 0;
+        let resultText = "";
+
+        if (playerMove === 'cooperate' && oppMove === 'cooperate') {
+            changeA = 5; changeB = 5;
+            resultText = "Mutual Cooperation! Both states enjoy peace <span style='color:#10b981'>(+5 each)</span>.";
+        } else if (playerMove === 'defect' && oppMove === 'cooperate') {
+            changeA = 10; changeB = -10;
+            resultText = "You exploited their trust! You gain dominance <span style='color:#10b981'>(+10)</span>, they suffer <span style='color:#ef4444'>(-10)</span>.";
+        } else if (playerMove === 'cooperate' && oppMove === 'defect') {
+            changeA = -10; changeB = 10;
+            resultText = "You were betrayed! Opponent builds weapons while you disarm <span style='color:#ef4444'>(-10)</span>.";
+        } else {
+            changeA = -2; changeB = -2;
+            resultText = "Mutual Defection! An expensive arms race harms both <span style='color:#ef4444'>(-2 each)</span>.";
+        }
+
+        // Update state
+        lastOpponentMove = playerMove; // Tit for tat copies your last move
+        gtScoreA += changeA;
+        gtScoreB += changeB;
+
+        // UI Updates
+        document.getElementById('gt-score-a').innerText = gtScoreA;
+        document.getElementById('gt-score-b').innerText = gtScoreB;
+        document.getElementById('gt-score-a').className = 'sim-score ' + (gtScoreA < 0 ? 'negative' : '');
+        document.getElementById('gt-score-b').className = 'sim-score ' + (gtScoreB < 0 ? 'negative' : '');
+        
+        let oppIcon = oppMove === 'cooperate' ? '🤝' : '⚔️';
+        let oppColor = oppMove === 'cooperate' ? '#3b82f6' : '#ef4444';
+        document.getElementById('gt-opp-status').innerHTML = `State B played: <strong style="color:${oppColor}; font-size:1.1rem;">${oppIcon} ${oppMove.toUpperCase()}</strong>`;
+
+        const log = document.getElementById('gt-log');
+        const newLog = document.createElement('div');
+        newLog.innerHTML = `<span class="log-highlight">[Round ${roundCounter}]</span> ${resultText}`;
+        log.prepend(newLog);
+        roundCounter++;
+    };
+})();
+</script>

@@ -124,3 +124,11 @@ Additionally, Congress holds several foreign policy powers, including:
 In practice, Congress tends to defer to the President on routine foreign policy matters. However, Congress has asserted its authority at times, such as blocking arms sales or imposing sanctions. When the President and Congress clash over foreign policy, tensions and compromise between the two branches often emerge. As public opinion and partisan control of government shifts, the relative balance of power between the executive and legislative branches continues to evolve.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Military Power" def1="A nation's armed forces and ability to project force globally" term2="Soft Power" def2="The appeal of a nation's culture, values, policies and institutions" term3="Self-Defense" def3="A state's ability to protect its territory and sovereignty" term4="Democratic Idealism" def4="Promoting democracy worldwide as a central principle of US foreign policy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_us_foreign_policy" question="What is the primary role of power in US foreign policy?" opt1="To promote economic prosperity" opt2="To protect and advance national interests" opt3="To impose democracy on other nations" opt4="To provide humanitarian aid" correct="2" %}

@@ -90,3 +90,11 @@ The multi-step process encourages members to find a mutually agreeable solution 
 Overall, the dispute settlement mechanism has proven to be one of the WTO's most active and successful endeavors. The ability for members to bring complaints, defend their interests, and resolve conflicts through an impartial, time-bound system has bolstered confidence in the multilateral trading process. Even with the challenges it continues to face, the WTO dispute settlement system remains an indispensable pillar supporting global economic cooperation.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Consultations" def1="Direct talks to resolve disputes mutually" term2="Adjudication" def2="Panel review and decision on dispute" term3="Appellate Body" def3="Reviews panel decisions on legal issues" term4="Dispute Settlement Body" def4="WTO body overseeing dispute resolution" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_wto_dispute_settlement" question="What is the primary goal of the WTO dispute settlement system?" opt1="To punish non-compliant members" opt2="To promote compliance through consultations and adjudication" opt3="To provide a platform for trade negotiations" opt4="To impose trade sanctions" correct="2" %}

@@ -107,3 +107,11 @@ Customary international law has also recognized humanitarian intervention in ext
 While international law places limits on the recourse to force, its precise boundaries remain subject to interpretation and politics. This content has surveyed key principles, cases, and developments regarding the international legal framework on the use of force and armed conflicts between and within states. The complexities reflect an evolving attempt to restrict war and violence while maintaining state security.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Self-Defense" def1="Use of force by a state to protect itself from armed attack" term2="Collective Security" def2="UN Security Council authorized measures to maintain peace and security" term3="Humanitarian Intervention" def3="Use of force to prevent grave human rights violations" term4="Retorsion" def4="Unfriendly but lawful acts in response to perceived wrongs" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_092_force_law" question="What is the primary purpose of Article 2(4) of the UN Charter?" opt1="To authorize the use of force in self-defense" opt2="To prohibit the threat or use of force against state sovereignty" opt3="To establish collective security measures" opt4="To promote humanitarian intervention" correct="2" %}

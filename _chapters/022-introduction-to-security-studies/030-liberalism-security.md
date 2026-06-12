@@ -82,3 +82,12 @@ Waltz's analysis argues that the causes of conflict and cooperation exist at thr
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Liberalism" def1="A political ideology promoting individual freedom and peace between states" term2="Commercial Liberalism" def2="Theory that economic interdependence reduces the likelihood of war" term3="Democratic Peace Theory" def3="Democracies are less likely to initiate conflicts against other democracies" term4="Neoliberal Institutionalism" def4="International institutions promote peace through cooperation and trust-building" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_liberalism_security" question="What is the core argument of commercial liberalism?" opt1="Democracies are less likely to initiate conflicts against other democracies" opt2="Economic interdependence between countries reduces the likelihood of war" opt3="International institutions play a vital role in reducing conflicts among democratic states" opt4="Liberalism promotes individual freedom and peace between states" correct="2" %}

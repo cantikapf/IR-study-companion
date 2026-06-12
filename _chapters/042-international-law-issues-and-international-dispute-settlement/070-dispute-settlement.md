@@ -141,3 +141,11 @@ When diplomatic efforts fail, states may pursue institutional adjudication throu
 Dispute settlement protects state sovereignty while avoiding the human costs of unrestrained conflicts. Despite competing interests, shared principles of peace and justice allow states to settle differences through compromise. With creativity and good faith, the international community can develop techniques to resolve even intractable disputes.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Adjudication" def1="Binding third-party decisions based on international law" term2="Diplomatic methods" def2="Techniques using negotiation and third-party assistance to resolve disputes" term3="Conciliation" def3="Impartial investigation and proposal of solutions without binding authority" term4="Negotiation" def4="Direct discussion and bargaining between disputing parties" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_070_dispute_settlement" question="What is the primary obligation of UN member states regarding dispute settlement?" opt1="To use force to resolve disputes" opt2="To settle disputes through peaceful means" opt3="To refer disputes to the UN Security Council" opt4="To pursue adjudication through the International Court of Justice" correct="2" %}

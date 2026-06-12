@@ -132,3 +132,11 @@ Neoliberalism has had a significant influence on international aid programs and 
 In essence, neoliberal aid agendas emphasize individualistic remedies to poverty and inequality rather than empowering collective action. They aim to maintain an orderly free market system rather than addressing deeper structural causes in the global economic system.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Development" def1="Positive change or improvement in people's lives" term2="Underdevelopment" def2="State of low economic, social, and human development" term3="Vicious Circles" def3="Interlocking cause-and-effect relationships causing underdevelopment" term4="Neoliberalism" def4="Economic ideology emphasizing free markets and deregulation" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_poverty_development_aid" question="What is the core concept of development according to Todaro?" opt1="Economic growth and GDP increase" opt2="A multi-dimensional process involving reorganization and reorientation of the entire economic and social system" opt3="Improving basic needs and social justice" opt4="Modernization and cultural change" correct="2" %}

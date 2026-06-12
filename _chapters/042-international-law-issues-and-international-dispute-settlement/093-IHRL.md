@@ -126,3 +126,11 @@ Key topics covered include the complex relationship between IHRL and state sover
 Overall, IHRL has made substantial progress in establishing universal human rights norms and scrutinizing state behavior. However, significant challenges remain when it comes to consistent compliance, balancing state sovereignty with intervention, and adapting to new global actors. As IHRL continues to evolve, focus areas for the future likely include increased accountability for non-state entities, strengthened implementation and enforcement mechanisms, and addressing complex new human rights issues arising from technology, climate change, migration, and more. With persistence and ingenuity, the international community can work to make IHRL an ever more effective force for protecting human dignity worldwide.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="International Human Rights Law (IHRL)" def1="Body of international laws protecting and promoting human rights and freedoms" term2="Universal Declaration of Human Rights (UDHR)" def2="Comprehensive set of civil, political, economic, social and cultural rights" term3="State Sovereignty" def3="Principle that states have supreme authority within their territories" term4="Non-Intervention" def4="Principle that states should not interfere in other states' internal affairs" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_093_IHRL" question="What is the primary purpose of International Human Rights Law (IHRL)?" opt1="To promote economic development globally" opt2="To protect and promote the rights and freedoms of all individuals" opt3="To establish a new world order" opt4="To constrain the rise of non-state actors" correct="2" %}

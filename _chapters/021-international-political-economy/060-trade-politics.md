@@ -105,3 +105,12 @@ Through lobbying, campaign contributions, and grassroots advocacy, interest grou
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Factor Model" def1="Trade politics driven by competition between factors of production" term2="Sector Model" def2="Trade divides society along industry lines due to factor immobility" term3="Trade Liberalization" def3="Efforts to lower barriers to trade and increase market freedom" term4="Distributional Consequences" def4="Uneven economic impacts of trade policy across society" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_trade_politics" question="What is the main argument of the Factor Model in trade politics?" opt1="Trade policy preferences are driven by industry lines" opt2="Trade politics are driven by competition between factors of production" opt3="Trade liberalization benefits all groups equally" opt4="Governments intervene in trade policy independently of interest groups" correct="2" %}

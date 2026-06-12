@@ -49,3 +49,12 @@ Some key aspects of foreign policy analysis include:
 
 ---
 
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Foreign Policy Analysis (FPA)" def1="Examines processes and decision-making shaping a country's foreign policy" term2="International Relations (IR)" def2="Studies relations between states and the international system" term3="Foreign Policy" def3="Strategies and behaviors governments employ in international interactions" term4="Decision-Making Process" def4="Influences foreign policy through government institutions, interest groups, and leaders" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_intro_fpa" question="What is the primary focus of Foreign Policy Analysis (FPA)?" opt1="Studying relations between states and the international system" opt2="Examining the processes and decision-making that shape a country's foreign policy" opt3="Analyzing the distribution of power in the international system" opt4="Understanding the economic conditions that influence foreign policy" correct="2" %}

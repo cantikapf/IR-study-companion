@@ -1,0 +1,28 @@
+{
+  "name": "ir-study-companion",
+  "version": "1.0.0",
+  "description": "<p>IR Study Companion is a platform that offers a comprehensive and free course designed to provide a structured self-study guide for individuals keen on delving into the realm of international relations. Designed with a focus on international relations, Asia, and Indonesia, this website aims to provide a structured learning path for those interested in this field. Whether you're a student or a curious mind, our courses are intended for study purposes, offering a wealth of knowledge without the need for external references.</p>",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cantikapf/IR-study-companion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cantikapf/IR-study-companion/issues"
+  },
+  "homepage": "https://github.com/cantikapf/IR-study-companion#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "http-server": "^14.1.1"
+  }
+}

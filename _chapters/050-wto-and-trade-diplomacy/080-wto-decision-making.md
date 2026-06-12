@@ -115,3 +115,11 @@ The World Trade Organization serves an important role in facilitating trade and 
 - In summary, the WTO establishes a rules-based system for international trade. Its member-driven structure relies on building consensus to move forward.
 
 ---
+
+{% include sim_wto.html %}
+
+### Interactive Learning 
+{% include flashcards.html term1="Consensus-Based Decision Making" def1="WTO decisions made collectively by members with no formal objection" term2="Ministerial Conference" def2="WTO's highest decision-making body meeting every two years" term3="Progressive Liberalization" def3="Gradual opening of markets to international trade and competition" term4="Dispute Settlement Process" def4="WTO process to resolve trade conflicts between member countries" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_080_wto_decision_making" question="What is the basis for decision-making in the World Trade Organization?" opt1="Majority voting by member countries" opt2="Consensus-based approach with no formal objection" opt3="Decisions made by a single governing body" opt4="Unilateral actions by the organization's leadership" correct="2" %}

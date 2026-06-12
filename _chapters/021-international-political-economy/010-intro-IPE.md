@@ -152,3 +152,12 @@ For individuals, working for multinationals or starting international ventures p
 
 ---
     
+
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="International Political Economy (IPE)" def1="Multidisciplinary field studying interactions between politics and economics globally" term2="Globalization" def2="Increasing interconnectedness of the world's economies and societies" term3="Economic Liberalism" def3="Perspective advocating free market capitalism with minimal government intervention" term4="Multinational Corporations" def4="Companies operating business activities in multiple countries" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_intro_IPE" question="What is the primary focus of International Political Economy (IPE)?" opt1="The study of international relations and diplomacy" opt2="The examination of complex interactions between political and economic forces globally" opt3="The analysis of domestic economic policies and their impact on international trade" opt4="The investigation of environmental issues and sustainability" correct="2" %}

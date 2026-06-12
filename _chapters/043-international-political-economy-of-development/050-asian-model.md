@@ -105,3 +105,11 @@ Finally, the region's future trajectory rests on tackling lingering social and e
 Overall, maintaining dynamic growth while transitioning to new drivers of demand, steadying geopolitical frictions, and pursuing solutions for domestic issues will determine Asia's model in the years ahead. Plotting a course that balances economic, political, and social objectives will be crucial to adapting the model to emerging realities. The region's diversity and complexity will make constructing this balanced path both challenging and pivotal.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Asian Model of Development" def1="Characterized by rapid economic growth, geographical diversity, and rich cultural heritage" term2="East Asian Miracle" def2="Rapid economic growth in East Asian countries from 1960s to 1990s" term3="Sustainability Challenges" def3="Environmental and social issues threatening long-term development in Asia" term4="Inclusive and Green Development" def4="Development approach focusing on equitable growth and environmental protection" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_asian_model" question="What is the core characteristic of the Asian model of development?" opt1="Slow economic growth and cultural stagnation" opt2="Rapid economic growth, geographical diversity, and rich cultural heritage" opt3="Dependence on foreign aid and investment" opt4="Focus on environmental protection over economic growth" correct="2" %}

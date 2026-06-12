@@ -97,3 +97,11 @@ Globalization provides an important context for critical IR theory today. Critic
 Overall, critical theory furnishes international relations with imaginative and reflective tools to critique oppressive structures and work towards a more ethical global community. Its emphasis on reflexivity, discourse ethics, and emancipation ensure critical theory will continue illuminating new possibilities in world politics.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Critical Theory" def1="A perspective in IR that critiques oppression and promotes social change" term2="Frankfurt School" def2="A group of scholars who laid foundations for critical theory in the 20th century" term3="Communicative Action" def3="Habermas's concept of rational dialogue for social progress" term4="Reflexivity" def4="Critical awareness of one's assumptions and biases in theorizing" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_093_critical_theory" question="What is the primary goal of critical theory in international relations?" opt1="To describe objective reality" opt2="To critique society and promote social change" opt3="To analyze global political economy" opt4="To develop a theory of communicative ethics" correct="2" %}

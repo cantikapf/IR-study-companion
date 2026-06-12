@@ -78,3 +78,11 @@ The initial question is needed to guide preliminary, foundation-building researc
 **Example**
 
 <center> <img src="static\modules\subtopic question example.png" alt="" width="70%" /> </center>
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Research Question" def1="A clearly defined question guiding a research project" term2="Thesis Statement" def2="A concise statement answering the research question with an argument" term3="Research Design" def3="The plan and structure of a research project" term4="International Relations" def4="Study of relationships between countries and global actors" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_060_research_question" question="What is the primary function of a research question in a research project?" opt1="To provide a conclusion to the research" opt2="To guide the research methodology and data collection" opt3="To identify the target population only" opt4="To analyze the data collected" correct="2" %}

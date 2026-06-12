@@ -91,3 +91,11 @@ Meticulous analysis of specific events, agreements, institutions and relationshi
 In this manner, the hidden significance of incremental developments in trade diplomacy and their collective impact over decades may start to come into focus. Shedding light on unnoticed or misunderstood drivers of change in the international trade system via thorough examination of trade diplomacy history is a scholarly undertaking holding great potential value. Discoveries would further comprehension of the world economy's current dynamics and future directions.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="International Trade" def1="Exchange of goods, services, capital, and labor across borders" term2="Diplomacy" def2="Building relationships, facilitating communication, and resolving conflicts" term3="Trade Diplomacy" def3="Diplomatic efforts to facilitate and manage international trade relationships" term4="Non-State Actors" def4="Non-governmental organizations and firms influencing trade diplomacy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_international_trade" question="What is the primary role of diplomacy in international trade?" opt1="To impose trade restrictions and tariffs" opt2="To build relationships, facilitate communication, and resolve conflicts" opt3="To promote trade liberalization and growth" opt4="To protect domestic industries and jobs" correct="2" %}

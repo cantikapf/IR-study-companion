@@ -163,3 +163,11 @@ The tit-for-tat thinking involves:
 This sets up a reciprocal system of retaliation that aims to maximize cooperation between the two prisoners. The winner is the prisoner who can effectively cooperate while also punishing betrayals when absolutely required. By balancing cooperation and measured retaliation, the tit-for-tat strategy creates the possibility for the best outcome for both players.
 
 ---
+
+{% include sim_crisis.html %}
+
+### Interactive Learning 
+{% include flashcards.html term1="Foreign Policy Analysis (FPA)" def1="Study of decision-making process in foreign policy" term2="Cognitive Biases" def2="Inherent limitations in human cognition influencing judgments" term3="Rational Actor Model (RAM)" def3="Model assuming rational calculation of costs and benefits" term4="Game Theory Model (GTM)" def4="Model analyzing strategic choices in interactive decision making" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_030_models_fpdm" question="What is the core focus of Foreign Policy Analysis (FPA)?" opt1="Studying the outcomes of foreign policy decisions" opt2="Examining the decision-making process in foreign policy" opt3="Analyzing the role of international institutions" opt4="Understanding the impact of economic factors on foreign policy" correct="2" %}

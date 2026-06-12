@@ -114,3 +114,11 @@ While traditional regionalism emphasizes geographical proximity, new regionalism
 In conclusion, while the concept of region lacks a precise definition in IR, regions represent socially constructed entities where member states collaborate to pursue shared interests and address common challenges. Regionalism provides the framework for this cooperation and integration.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Regionalism" def1="Process of countries cooperating to achieve common goals" term2="Socially Constructed Entity" def2="Region formed through shared imagination and ideology" term3="Regional Integration" def3="Process of countries integrating through cooperation and coordination" term4="Free Trade Area" def4="Basic form of economic integration with free trade" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_010_basic_regionalism" question="What is the primary characteristic of regions in International Relations?" opt1="Geographically defined areas" opt2="Socially constructed entities with shared imagination" opt3="Economically integrated blocks" opt4="Politically unified states" correct="2" %}

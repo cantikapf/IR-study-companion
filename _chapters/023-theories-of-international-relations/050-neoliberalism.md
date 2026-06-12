@@ -83,3 +83,11 @@ The study of how institutions support cooperation - while imperfect - provides i
 
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Neoliberalism" def1="Theory focusing on international institutions facilitating cooperation between states" term2="Anarchy" def2="Decentralized nature of international system with no overarching authority" term3="Defection" def3="Failure of states to uphold their end of an agreement" term4="Free-riding" def4="States benefiting from cooperative efforts without sharing costs" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_050_neoliberalism" question="What is the primary focus of Neoliberalism in International Relations?" opt1="The role of military power in international relations" opt2="The role of international institutions in facilitating cooperation" opt3="The impact of globalization on national economies" opt4="The influence of non-state actors on international policy" correct="2" %}

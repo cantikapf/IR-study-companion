@@ -77,3 +77,11 @@ The Vietnam War presents an interesting case study for foreign policy analysis. 
 In summary, the complex foreign policy decisions during the Vietnam War can be analyzed through the three levels of FPA theory. Cognitive biases, individual beliefs, organizational factors, and the Cold War system all combined to shape the tragic decisions made by U.S. leaders.
 
 ---
+
+---
+
+### Interactive Learning 
+{% include flashcards.html term1="Individual-level analysis" def1="Examines how human decision-making influences foreign policy" term2="State-level analysis" def2="Studies factors within a state that influence foreign policy decisions" term3="System-level analysis" def3="Focuses on external constraints on foreign policy from the international system" term4="Cognitive Factors" def4="How decision makers perceive and process information in foreign policy" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_020_level_of_analysis_fpdm" question="What level of analysis focuses on the external constraints on foreign policy that arise from the structure of the international system?" opt1="Individual-level analysis" opt2="System-level analysis" opt3="State-level analysis" opt4="Cognitive Factors" correct="2" %}
