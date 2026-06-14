@@ -2,19 +2,20 @@
 title: Customary International Law
 slug: customary-international-law
 abstract: Customary international law (CIL) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris. This article explores the constituent elements of CIL, theories on its formation, examples of CIL norms, and why states comply with customary international law.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-Customary international law (CIL) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris, the belief that such practice is carried out because it is required by law. CIL is an important and authoritative source of international law that is considered universal, applying to all states, but also controversial due to its unclear origins and content. 
+Customary **international** law** (**CIL**) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris, the belief that such practice is carried out because it is required by law. CIL is an important and authoritative source of international law that is considered universal, applying to all states, but also controversial due to its unclear origins and content. 
 
-Unlike treaties which are explicitly negotiated and codified, the norms of CIL are not written down in any single document. Instead, CIL arises from the general and consistent practice of states, along with the subjective belief that such conduct is legally obligated. This makes the content of CIL norms often difficult to clearly define. There is debate regarding what kind of state practice contributes to the formation of CIL rules, and the subjective determination of opinio juris adds further complexity.
+Unlike treaties which are explicitly negotiated and codified, the norms of CIL are not written down in any single document. Instead, CIL arises from the general and consistent practice of states, along with the subjective belief that such conduct is legally obligated. This makes the content of CIL norms often difficult to clearly define. There is debate regarding what kind of **state practice** contributes to the formation of CIL rules, and the subjective determination of opinio juris adds further complexity.
 
 Nonetheless, CIL holds an influential position within the international legal system. According to the Statute of the International Court of Justice, international custom is considered “evidence of a general practice accepted as law.” The norms and principles of CIL are binding on all states, whether or not they have codified or agreed to them in treaties. Thus CIL provides a universal framework for evaluating the legality of state conduct and relations between states. However, the process for determining these norms remains controversial.
 
 ## Constituent Elements of CIL
 
-Customary international law (CIL) is composed of two key elements: state practice and opinio juris. 
+**Customary international** law (CIL) is composed of two key elements: state practice and opinio juris. 
 
 State practice refers to general and consistent conduct by states that develops over time and becomes accepted as law. This conduct can include diplomatic acts, public measures, official government statements, and the enactment of domestic laws and policies. For a practice to contribute to CIL, it must be extensive, representative (reflect the practice of states most interested in the norm), and consistent over time. Not all state practice necessarily contributes to CIL; the practice must reflect a legal obligation rather than simply habit or political expediency.
 

@@ -2,13 +2,14 @@
 title: 'Beyond Tariffs: The Deeper Impacts of the TPP and RCEP Agreements'
 slug: tpp-rcep
 abstract: The development of TPP and RCEP agreement
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction
 
-The Trans-Pacific Partnership (TPP) and the Regional Comprehensive Economic Partnership (RCEP) emerged as two pivotal trade agreements in the Asia-Pacific region. Both were designed to lower trade barriers, boost economic growth, and enhance investment opportunities among member nations. However, the two regional trade pacts differ in scope, coverage, and participating countries.
+The Trans-Pacific Partnership (**TPP**) and the Regional Comprehensive Economic Partnership (**RCEP**) emerged as two pivotal **trade** agreements in the Asia-Pacific region. Both were designed to lower trade barriers, boost economic growth, and enhance investment opportunities among member nations. However, the two **regional trade** pacts differ in scope, coverage, and participating countries.
 
-The TPP was initiated by the United States under former President Barack Obama to eliminate about 18,000 tariffs across 12 Pacific Rim economies, excluding China. It aimed to foster greater market access across the Pacific while offering strong protections for the environment, workers' rights, and intellectual property. However, the U.S. withdrew from the TPP in 2017, leaving the agreement in limbo. 
+The TPP was initiated by the United States under former President Barack Obama to eliminate about 18,000 tariffs across 12 Pacific Rim economies, excluding **China**. It aimed to foster greater market access across the Pacific while offering strong protections for the environment, workers' rights, and intellectual property. However, the U.S. withdrew from the TPP in 2017, leaving the agreement in limbo. 
 
 Alternatively, the RCEP was formed in response to expand trade relationships in the region, with China taking the lead. As the largest regional free trade agreement to date, the RCEP encompasses 15 Asia-Pacific countries, including 10 ASEAN members along with China, Japan, South Korea, Australia and New Zealand. It focuses on reducing tariffs, facilitating investment and services trade, and enhancing the region's business environment.
 

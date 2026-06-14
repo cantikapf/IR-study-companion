@@ -2,15 +2,16 @@
 title: The IMF And The World Bank
 slug: imf-world-bank
 abstract: This page provides an introduction to the International Monetary Fund (IMF) and the World Bank, highlighting their establishment after World War II and their role in promoting economic cooperation and stability. It also explains the original roles and purpose of the IMF, including stabilizing foreign exchange rates and assisting countries with balance of payments issues.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction
 
-The International Monetary Fund (IMF) was established in 1944 following World War II. Its founding was part of a broader international effort to promote economic cooperation and coordination in the aftermath of two devastating world wars. 
+The International Monetary Fund (**IMF**) was established in 1944 following World War II. Its founding was part of a broader international effort to promote **economic** cooperation and coordination in the aftermath of two devastating world wars. 
 
 The architects of the post-war global economic system recognized the need for international institutions to help stabilize the global economy. They believed economic cooperation was essential for rebuilding after the war, avoiding further destructive conflicts, and promoting shared prosperity. This led to the creation of several major international economic organizations, including the IMF.
 
-The IMF was specifically tasked with overseeing the international monetary system. This involved stabilizing exchange rates between currencies and assisting member countries in correcting balance of payments problems. These roles were seen as crucial for supporting international trade and preventing economic crises.
+The IMF was specifically tasked with overseeing the international monetary system. This involved stabilizing exchange rates between currencies and assisting member **countries** in correcting balance of payments problems. These roles were seen as crucial for supporting international trade and preventing economic crises.
 
 The IMF's founding and original purpose stemmed from the challenges of the interwar period, when countries engaged in competitive devaluations and erecting trade barriers. The IMF aimed to create order, cooperation and shared rules to avoid repeating this experience. Its establishment marked the beginning of over 75 years of evolution for an institution at the center of global economic governance.
 
@@ -27,7 +28,7 @@ In recent years, the roles of the IMF have expanded beyond its original purpose 
 
 **Surveillance During Normal Times**
 
-After the lessons learned from the 1982 debt crisis and 1997 Asian Financial crisis, the IMF began implementing more surveillance tasks and capacity building for member states during normal economic periods. This was aimed at ensuring countries maintained stability in their balance of payments and had strong, resilient financial institutions to withstand crises. Through bilateral surveillance with member states, the IMF monitors economic and financial policies and advises on risks that could destabilize economies. The IMF also conducts multilateral surveillance through World Economic Outlook reports analyzing the global economy. 
+After the lessons learned from the 1982 debt crisis and 1997 Asian Financial crisis, the IMF began implementing more surveillance tasks and capacity building for **member states** during normal economic periods. This was aimed at ensuring countries maintained stability in their balance of payments and had strong, resilient financial institutions to withstand crises. Through bilateral surveillance with member states, the IMF monitors economic and financial policies and advises on risks that could destabilize economies. The IMF also conducts multilateral surveillance through World Economic Outlook reports analyzing the global economy. 
 
 **Capacity Building** 
 

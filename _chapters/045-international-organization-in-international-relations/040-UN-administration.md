@@ -2,15 +2,16 @@
 title: 'The United Nations: Introduction'
 slug: un-administration
 abstract: This page providing an introduction to the United Nations (UN). It includes information about the UN's founding, its goals and functions, as well as the significance of the UN Charter as the legal basis for the organization.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction
 
-The United Nations (UN) is an intergovernmental organization founded in 1945 with the aim to maintain international peace and security, protect human rights, deliver humanitarian aid, promote sustainable development, and uphold international law.
+The **United Nations** (UN) is an intergovernmental organization founded in 1945 with the aim to maintain **international** peace and security, protect human rights, deliver humanitarian aid, promote sustainable development, and uphold international law.
 
-The UN was established after World War II to replace the ineffective League of Nations. Its founding charter was signed by 51 member states, with the goal of preventing future wars by facilitating collective security and cooperation. Over the decades, the UN has grown to comprise 193 member states. 
+The UN was established after World War II to replace the ineffective League of Nations. Its founding charter was signed by 51 **member states**, with the goal of preventing future wars by facilitating collective security and cooperation. Over the decades, the UN has grown to comprise 193 member states. 
 
-Headquartered in New York City, the UN has expanded its scope and activities significantly since its inception. While the Security Council holds primary responsibility for safeguarding peace, the organization carries out a wide array of functions through its various agencies and programs. From election monitoring to refugee relief to arms control treaties, the UN plays a vital role in global governance and cooperation.
+Headquartered in New York City, the UN has expanded its scope and activities significantly since its inception. While the **Security Council** holds primary responsibility for safeguarding peace, the organization carries out a wide array of functions through its various agencies and programs. From election monitoring to refugee relief to arms control treaties, the UN plays a vital role in global governance and cooperation.
 
 Though not a world government, the UN provides a unique forum for multilateral diplomacy and upholding international law. Its successes, limitations and evolving challenges continue to make it an indispensable actor on the world stage.
 
@@ -86,7 +87,7 @@ While the Assembly's recommendations are not legally binding on Member States, i
 
 The Secretariat is the bureaucratic staff of the UN, headed by the Secretary-General. The Secretariat of the UN carries out the day-to-day work of the UN. It services the other principal organs of the UN and administers the programs and policies laid down by them. 
 
-The Secretariat is composed of international civil servants who represent the UN rather than any individual nation or government. Staff are recruited from member states, but employment contracts pledge staff to act independently of any government. The UN Charter describes the Secretary-General as the "chief administrative officer" of the Organization who shall act in that capacity in all meetings of the General Assembly, of the Security Council, of the Economic and Social Council and of the Trusteeship Council.
+The Secretariat is composed of international civil servants who represent the UN rather than any individual nation or government. Staff are recruited from member states, but employment contracts pledge staff to act independently of any government. The UN Charter describes the Secretary-General as the "chief administrative officer" of the Organization who shall act in that capacity in all meetings of the General Assembly, of the Security Council, of the Economic and Social Council and of the **Trusteeship Council**.
 
 The functions of the Secretariat include:
 

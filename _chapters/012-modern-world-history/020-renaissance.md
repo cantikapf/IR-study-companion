@@ -2,10 +2,11 @@
 slug: rennaissance
 title: The Renaissance and the Reformation in Europe
 abstract: This chapter will cover the Renaissance and the Reformation in Europe
+simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
 ---
 
 
-The Renaissance was a period of cultural rebirth and intellectual advancement that originated in Italy during the 14th century. Marking a departure from the medieval era, the Renaissance spanned approximately from 1330 to 1530, though the beginning and end dates are debated by historians. The era is considered the bridge between the Middle Ages and the early modern period.  
+The **Renaissance** was a period of cultural rebirth and intellectual advancement that originated in Italy during the 14th century. Marking a departure from the medieval era, the Renaissance spanned approximately from 1330 to 1530, though the beginning and end dates are debated by historians. The era is considered the bridge between the Middle Ages and the early modern period.  
 
 Geographically, the Renaissance began in the prosperous city-states of Italy, notably Florence, Venice and Rome. Italy's advantageous location as a Mediterranean trading hub, its heritage of Roman antiquity, and the presence of intellectuals and wealthy patrons such as the Medici family all contributed to turning the peninsula into the cradle of the Renaissance movement. From Italy, Renaissance values and ideas later spread across Europe in the 15th and 16th centuries.
 
@@ -17,7 +18,7 @@ The thriving economy was a driving force behind the Renaissance. Two key economi
 
 Merchant capitalism emerged as feudal structures declined and a new commercial economy centered around merchants and bankers developed. The Italian city-states, especially Venice and Florence, became hubs of merchant capitalism due to advantages like proximity to trade routes and a surplus of resources. 
 
-The merchant class accumulated vast wealth through commerce, banking, and trade. Wielding economic influence, they patronized the arts, sponsored public and religious building projects, and helped spread Renaissance ideas. The prosperity of merchants meant the Church no longer held a monopoly over wealth and power.
+The merchant class accumulated vast wealth through commerce, banking, and trade. Wielding economic influence, they patronized the arts, sponsored public and religious building projects, and helped spread Renaissance ideas. The prosperity of merchants meant the **Church** no longer held a monopoly over wealth and power.
 
 Overseas trade also boomed as Italian merchants traded extensively with Asia and the Middle East. Lucrative commodities like silk, spices, and perfumes flowed into Europe via trade networks like the Silk Road and maritime routes. The Crusades had expanded trade routes and introduced new goods. This overseas commerce generated substantial profits, enriching the merchant class.
 
@@ -35,13 +36,13 @@ This growing social mobility and emphasis on the individual fostered new cultura
 
 ## Renaissance Humanism  
 
-Renaissance Humanism marked a profound shift away from the medieval scholasticism that had dominated European education and culture. Humanism emphasized the study of subjects in the humanities - grammar, rhetoric, poetry, history, and moral philosophy. The goal was to create well-rounded citizens through immersion in the classics of ancient Greece and Rome. 
+**Renaissance Humanism** marked a profound shift away from the medieval scholasticism that had dominated European education and culture. Humanism emphasized the study of subjects in the humanities - grammar, rhetoric, poetry, history, and moral philosophy. The goal was to create well-rounded citizens through immersion in the classics of ancient Greece and Rome. 
 
 Humanist educators wanted students to interact directly with original texts rather than merely debating the opinions of medieval scholars. The humanists believed education should focus less on logic, natural science, and metaphysics, and instead cultivate intellectual and moral virtues. Studying Cicero, Livy, Virgil, and other classical authors was seen as the ideal preparation for participation in civic life. 
 
 The humanists also rejected medieval scholasticism's focus on preparing for the afterlife. Instead, they promoted the idea that virtue leads to happiness in this world. Humanist thinking valued individual dignity and emphasized that humans, through reason and free will, can choose to lead ethical lives. This shift toward a more secular outlook was revolutionary for its time.
 
-Overall, Renaissance Humanism triggered a profound renewal of education that produced influential statesmen, writers, and patrons of the arts. Through its emphasis on classical languages and texts, humanist education sought to foster engaged citizens devoted to using their intellect and talent for public service. This movement to educate "good citizens" was pivotal to the Renaissance era.
+Overall, Renaissance Humanism triggered a profound renewal of education that produced influential statesmen, writers, and patrons of the arts. Through its emphasis on classical languages and texts, humanist education sought to foster engaged citizens devoted to using their intellect and talent for public service. This movement to educate "good citizens" was pivotal to the **Renaissance era**.
 
 ## Renaissance Man and Woman
 
@@ -59,7 +60,7 @@ The Renaissance era was a period of transformation for political structures in I
 
 Some city-states became constitutional oligarchies, with power concentrated among elite merchant families. Venice provides an example of an oligarchy ruled by its aristocratic merchants. Other city-states like Milan came under the control of individual families or despots. The famous Medici family turned Florence into a hereditary principality. 
 
-The impact of the Roman Catholic Church remained strong, but Renaissance humanism introduced more secular values into politics and governance. Rulers began to emphasize civic virtue and the common good rather than adhering solely to religious authority. However, the Church still exerted influence, especially the Pope as both spiritual and temporal leader of the Papal States in central Italy.
+The impact of the Roman **Catholic Church** remained strong, but Renaissance humanism introduced more secular values into politics and governance. Rulers began to emphasize civic virtue and the common good rather than adhering solely to religious authority. However, the Church still exerted influence, especially the Pope as both spiritual and temporal leader of the Papal States in central Italy.
 
 Overall, the Renaissance marked a shift toward more diverse, complex and independent political units. The weakening feudal system gave rise to autonomous city-states with distinct forms of governance, though the Church retained spiritual and political sway during this transitional period in Europe.
 

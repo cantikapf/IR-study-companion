@@ -2,15 +2,16 @@
 title: Introduction To International Relations Theories
 slug: introduction-ir-theories
 abstract: This chapter will introduce you to the field of international relations theories.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
-The study of international relations (IR) emerged as an academic discipline after World War I as scholars and practitioners sought to understand the conditions that led to the "World War" and how future wars could be prevented. Since then, IR has evolved from its early idealist roots into a diverse field encompassing multiple theoretical perspectives and methodological approaches.
+The study of international relations (IR) emerged as an academic discipline after **World** War I as scholars and practitioners sought to understand the conditions that led to the "**World War**" and how future wars could be prevented. Since then, IR has evolved from its early idealist roots into a diverse field encompassing multiple theoretical perspectives and methodological approaches.
 
 ## Ontology, Epistemology and Methodology 
 
-Each theoretical position in IR revolves around assumptions concerning ontology, epistemology, and methodology. Ontology refers to the nature of reality and what constitutes the fundamental building blocks of the social world. Epistemology examines how we can come to know this reality and the possibility of gaining objective knowledge. Methodology involves the techniques used to uncover and analyze information about world politics. 
+Each theoretical position in IR revolves around assumptions concerning ontology, epistemology, and methodology. Ontology refers to the nature of reality and what constitutes the fundamental building blocks of the social world. Epistemology examines how we can come to know this reality and the possibility of gaining objective knowledge. Methodology involves the techniques used to uncover and analyze information about **world politics**. 
 
-While positivism, a prevailing philosophy of science, has long dominated IR scholarship, particularly in the United States, its recent discrediting as a scientific practice does not diminish its historical significance in shaping the discipline. Positivism assumes an objective, observable reality exists independently of observers. Knowledge derives from sensory experience of this external reality. The social world functions according to generalizable laws analogous to the natural sciences. Positivism favors quantitative, empirical methods for uncovering causal explanations and predictive laws.
+While **positivism**, a prevailing philosophy of science, has long dominated IR scholarship, particularly in the United States, its recent discrediting as a scientific practice does not diminish its historical significance in shaping the discipline. Positivism assumes an objective, observable reality exists independently of observers. Knowledge derives from sensory experience of this external reality. The social world functions according to generalizable laws analogous to the natural sciences. Positivism favors quantitative, empirical methods for uncovering causal explanations and predictive laws.
 
 In contrast, post-positivist approaches in IR question the existence of an observer-independent reality. Social phenomena have inherently subjective qualities not governed by immutable laws. Post-positivism emphasizes understanding the contextual meaning of events, using qualitative methods interpretive of subjective human experiences. 
 
@@ -28,7 +29,7 @@ These critiques have undermined positivism and sparked vigorous debates about ap
 
 ## Defining IR as a Science 
 
-Two pivotal meta-theoretical questions have persistently defined IR: what constitutes the scientific study of world politics and the perennial debate over whether IR qualifies as a science. IR scholars have long wrestled with defining the field as a science, sparking significant debates over what constitutes scientific study and rigor when analyzing global politics and relations between states. 
+Two pivotal meta-theoretical questions have persistently defined IR: what constitutes the scientific study of world politics and the perennial **debate** over whether IR qualifies as a science. IR scholars have long wrestled with defining the field as a science, sparking significant debates over what constitutes scientific study and rigor when analyzing global politics and relations between states. 
 
 Many have critiqued IR as failing to meet key criteria of a science, lacking theoretical coherence, an agreed upon methodology, or defined boundaries as an academic discipline. The complexity of international relations, with countless variables interacting in dynamic and unpredictable ways, poses challenges for systematic theory building and testing. IR's subject matter - the behavior of states driven by national interests and power - is difficult to measure and quantify precisely. 
 

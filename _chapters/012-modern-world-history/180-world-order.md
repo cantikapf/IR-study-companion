@@ -2,14 +2,15 @@
 slug: world-order
 title: The Post-Cold War World Order
 abstract: The Post-Cold War World Order
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Introduction 
 
-The 21st century unfolded against a unique backdrop, marked by tectonic geopolitical shifts as the post-Cold War international order began to take shape. With the collapse of the Soviet bloc, the bipolar world dominated by the US-Soviet rivalry started transitioning into a new multipolar system. This period was characterized by complex dynamics involving the rise of new global powers, uncertainties about power balances, and debates around emerging international institutions and globalization. 
+The 21st century unfolded against a unique backdrop, marked by tectonic geopolitical shifts as the post-**Cold **War** international order began to take shape. With the collapse of the Soviet bloc, the bipolar world dominated by the US-Soviet rivalry started transitioning into a new multipolar system. This period was characterized by complex dynamics involving the rise of new global powers, uncertainties about power balances, and debates around emerging international institutions and globalization. 
 
-There were conflicting perspectives on whether this emerging landscape would lead to greater stability and the triumph of Western liberal values, as proposed by Fukuyama's 'End of History' thesis, or fuel new conflicts and civilizational clashes, as envisioned by Samuel Huntington's 'Clash of Civilizations.' The Declaration of a New World Order by President Bush Sr. called for greater international cooperation, but also raised concerns about accountability of major powers like the US. Overall, this fluid geopolitical backdrop provided the stage for the unfolding of global affairs in the 21st century.
+There were conflicting perspectives on whether this emerging landscape would lead to greater stability and the triumph of Western liberal values, as proposed by Fukuyama's 'End of History' thesis, or fuel new conflicts and civilizational clashes, as envisioned by Samuel Huntington's 'Clash of Civilizations.' The Declaration of a New **World Order** by President Bush Sr. called for greater international cooperation, but also raised concerns about accountability of major powers like the US. Overall, this fluid geopolitical backdrop provided the stage for the unfolding of global affairs in the 21st century.
 
 ## Fukuyama's 'End of History'
 
@@ -27,9 +28,9 @@ Fukuyama saw these strands of reasoning intertwining to make the dominance of li
 
 ## New World Order 
 
-The declaration of a New World Order by President Bush Sr. aimed at ushering in a new era of international cooperation and the promotion of democratic values, with the United States emerging as the unipolar power. This contrasted with the previous Cold War era defined by bipolar arrangements between the US and Soviet blocs. 
+The declaration of a New World Order by President Bush Sr. aimed at ushering in a new era of international cooperation and the promotion of democratic values, with the **United States** emerging as the unipolar power. This contrasted with the previous Cold War era defined by bipolar arrangements between the US and Soviet blocs. 
 
-However, some experts expressed concerns about the stability of these post-Cold War arrangements. Political scientist John Mearsheimer, for example, warned of potential dangers, expressing concerns about the stability of the bipolar Cold War order. He argued that Europe could become unstable in a multipolar environment, contrasting it with the relative peace maintained during the bipolar Cold War.
+However, some experts expressed concerns about the stability of these **post-Cold War** arrangements. Political scientist John Mearsheimer, for example, warned of potential dangers, expressing concerns about the stability of the bipolar Cold War order. He argued that Europe could become unstable in a multipolar environment, contrasting it with the relative peace maintained during the bipolar Cold War.
 
 In his declaration, President Bush Sr. aimed to promote a cooperative vision for global affairs with shared responsibility. His New World Order emphasized collective security and the need for nations to work together. However, questions arose about the accountability of powerful nations, particularly the United States, within the United Nations framework if the world was to truly speak with one voice.
 

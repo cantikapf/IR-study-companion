@@ -2,25 +2,26 @@
 title: Cyber Warfare
 slug: cyber-warfare
 abstract: Cyberwar in the context of international relations and the impact of cyberwarfare on the global political landscape.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
-Cyberwar refers to the use of computational technologies in the military or diplomatic contexts of international affairs and interactions between nation states. It involves direct battles using information technology capabilities. Cybersecurity, on the other hand, refers to a state's defensive (and sometimes offensive) capabilities within the domain of cyberspace. 
+Cyberwar refers to the use of computational technologies in the military or diplomatic contexts of international affairs and interactions between nation **states**. It involves direct battles using information technology capabilities. Cybersecurity, on the other hand, refers to a state's defensive (and sometimes offensive) capabilities within the domain of cyberspace. 
 
 While the common usage of the term "cyberwar" seems to indicate direct clashes between computational technologies and state actors, its true intent is to suggest that there is an ongoing technological battle within the larger context of a foreign policy interaction between nation states. As expert Hersh has defined it, cyberwar involves "the penetration of foreign networks for the purpose of disrupting or dismantling those networks and making them inoperable."
 
 ## Cyber War vs Cybersecurity
 
-Cyberwar refers to the use of computational technologies in the military or diplomatic arenas of international affairs and interactions. It involves direct attacks using technology against an opponent's computer systems or infrastructure. 
+Cyberwar refers to the use of computational technologies in the military or diplomatic arenas of international affairs and interactions. It involves direct **attacks** using technology against an opponent's computer systems or infrastructure. 
 
 Cybersecurity refers to a state's defensive (and sometimes offensive) capabilities in cyberspace. It involves protecting a state's own systems, networks, and critical infrastructure from cyberattacks. Cybersecurity also enables a state to respond to or deter cyberattacks through development of its technological defenses and capabilities.
 
 The common usage of the term cyberwar seems to indicate direct battle and attacks between computational technologies and state actors. However, the true intent is usually to suggest there is an ongoing technological struggle taking place in the context of a broader geopolitical, military or diplomatic interaction between nation states. Cyberwar is one aspect of state conflict and rivalry that unfolds through cyberspace.
 
-In essence, cyberwar refers specifically to offensive operations and attacks, while cybersecurity indicates defensive capabilities and protections. But in practice, cybersecurity infrastructure can also enable offensive cyber capabilities for cyberwar. The relationship between cyberwar and cybersecurity is complex, as both offensive and defensive cyber technologies shape the dynamics of conflict and rivalry between states.
+In essence, cyberwar refers specifically to offensive operations and attacks, while cybersecurity indicates defensive capabilities and protections. But in practice, cybersecurity infrastructure can also enable offensive **cyber** capabilities for cyberwar. The relationship between cyberwar and cybersecurity is complex, as both offensive and defensive cyber technologies shape the dynamics of conflict and rivalry between states.
 
 ## Cyber War and International Relations
 
-Cyber warfare has a significant impact on international relations, affecting various aspects such as security, global governance, and the geopolitical landscape. The rise of the cyber domain has led to a revolution in military affairs, changing how societies and nations interact. 
+**Cyber warfare** has a significant impact on international relations, affecting various aspects such as security, global governance, and the geopolitical landscape. The rise of the cyber domain has led to a revolution in military affairs, changing how societies and nations interact. 
 
 Realism has been a dominant paradigm in the international relations field and is based on a general set of assumptions about international security, which is now being challenged and reshaped by the emergence of cyber conflict. The war in Ukraine, for example, has revealed the extensive impact of cyber operations on modern warfare and international dynamics. 
 
@@ -37,7 +38,7 @@ Geopolitics and cyber power are intertwined, and states need to adapt to the new
 
 ## The Value of Chaos & Fear
 
-Fear and chaos are key pillars in a cyber strategy when it comes to international conflict between nations. The ability for a state to launch devastating offensive cyber attacks alone might be enough to modify the behavior of rival states without ever having to actually deploy them. 
+Fear and chaos are key pillars in a cyber strategy when it comes to international conflict between nations. The ability for a state to launch devastating offensive **cyber attacks** alone might be enough to modify the behavior of rival states without ever having to actually deploy them. 
 
 Simply attaining a minimal level of security to deter large-scale cyber attacks could motivate an enemy to launch a cyber technology arms race in order to gain the upper hand. This cyber arms race, like traditional arms races for weapons and military capabilities, reduces confidence between rival states and escalates tensions further.
 

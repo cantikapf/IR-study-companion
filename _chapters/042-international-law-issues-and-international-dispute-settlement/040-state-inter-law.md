@@ -2,13 +2,14 @@
 title: State And International Law
 slug: state-and-international-law
 abstract: This page explores the complex issue of secession under international law, discussing the challenges faced by secessionist movements, the role of recognition, and the principles of state responsibility and diplomatic protection.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-Secession is the separation of part of the territory of an existing state so that the territory can become a new state. It differs from dissolution, which is when a state ceases to exist entirely and its territory may be reorganized into one or more new states. 
+Secession is the separation of part of the territory of an existing **state** so that the territory can become a new state. It differs from dissolution, which is when a state ceases to exist entirely and its territory may be reorganized into one or more new **states**. 
 
-Secession is controversial under international law and is often rejected by states. When part of a state attempts to secede, it is typically met with opposition from the existing state which views it as a threat to its territorial integrity. There are few examples of successful secessions that have been accepted by the international community. States generally argue that secession should only occur with the consent of the existing state.
+Secession is controversial under **international** law** and is often rejected by states. When part of a state attempts to secede, it is typically met with opposition from the existing state which views it as a threat to its territorial integrity. There are few examples of successful secessions that have been accepted by the international community. States generally argue that secession should only occur with the consent of the existing state.
 
 The right to self-determination is often raised in arguments for secession. However, self-determination is generally interpreted as a right to internal self-determination (meaningful political, economic and cultural participation within one's existing state) rather than external self-determination (the right to separate and form a new state). Overall, secession remains a complex issue in international law and global politics.
 
@@ -52,7 +53,7 @@ In essence, recognition provides legitimacy and empowerment to engage with the g
 
 ## State Responsibility
 
-State responsibility is a fundamental principle of international law that governs the obligations of states and the consequences when states breach an international legal obligation. The rules of state responsibility have important relationships with other areas of international law, such as the law of treaties. 
+**State responsibility** is a fundamental principle of international law that governs the obligations of states and the consequences when states breach an international legal obligation. The rules of state responsibility have important relationships with other areas of international law, such as the law of treaties. 
 
 The law of state responsibility helps characterize when a state is responsible for an internationally wrongful act. For state responsibility to arise, there must exist an international legal obligation in force between two states. Then, there must be an act or omission by the responsible state that violates this obligation, and this act or omission must be attributable to the state based on the conduct of state organs or agents. Finally, the wrongful act must have caused loss or damage.
 

@@ -2,13 +2,14 @@
 slug: state-in-society
 title: State in Society
 abstract: This sector will explain state concept in social science
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction 
 
-The state is a fundamental concept in politics that refers to the political organization of a nation or territory. At its core, the state represents the institutions and structures that enable governance over a population within a defined geographic area. The primary role of the state is to establish order, protect citizens, and provide public services. States enact and enforce laws, collect taxes, defend borders, and conduct diplomacy with other states. In essence, the state creates the overarching political framework that allows society to function in an orderly manner.
+The **state** is a fundamental concept in politics that refers to the **political** organization of a nation or territory. At its core, the state represents the institutions and structures that enable governance over a population within a defined geographic area. The primary role of the state is to establish order, protect citizens, and provide public services. **States** enact and enforce laws, collect taxes, defend borders, and conduct diplomacy with other states. In essence, the state creates the overarching political framework that allows society to function in an orderly manner.
 
-While states vary widely in their specific forms, they share core features such as sovereignty, legitimacy, territory, and the monopoly on the use of force. Sovereignty refers to supreme authority within borders, legitimacy denotes acceptance by citizens of state authority, territory constitutes the geographic area of control, and the monopoly on force enables enforcement of laws and defense of borders. States also mint currency, conduct elections, provide infrastructure and education, and establish economic regulations. The structures and institutions that perform these roles constitute the apparatus of the state.
+While states vary widely in their specific forms, they share core features such as sovereignty, legitimacy, territory, and the monopoly on the use of force. Sovereignty refers to supreme **authority** within borders, legitimacy denotes acceptance by citizens of state authority, territory constitutes the geographic area of control, and the monopoly on force enables enforcement of laws and defense of borders. States also mint currency, conduct elections, provide infrastructure and education, and establish economic regulations. The structures and institutions that perform these roles constitute the apparatus of the state.
 
 The state serves vital social purposes. By maintaining order and stability, upholding law and property rights, defending borders, and enabling governance, the state creates conditions for economic growth, social development, and public welfare. The evolution of the state has facilitated more complex organization and achievements for human civilization. However, the powers of the state carry risks of overreach, inefficiency, corruption, and abuse if proper checks and balances are not maintained. At its best, the state balances providing order and services for citizens while respecting civil liberties and rights. Understanding the nature and role of the state is crucial for analyzing political systems, governments, and social relations between state and society.
 
@@ -26,7 +27,7 @@ The historical emergence of the state can be attributed to various factors that 
 
 - **Political Power** - As rulers and their cadre of servants grew more ambitious and competitive, they consolidated greater authority and resources. The organizational apparatus of early states emerged from rulers' efforts to expand political power beyond local villages or tribes.
 
-These interrelated factors drove more complex political organization in the form of states with institutional authority over defined territories and populations. War, land control, social classes, private property, and political power combined as catalysts for this new form of sovereignty that would shape world history.
+These interrelated factors drove more complex political organization in the form of states with institutional authority over defined territories and populations. War, land control, social classes, private property, and political **power** combined as catalysts for this new form of sovereignty that would shape world history.
 
 ## The State and Power
 

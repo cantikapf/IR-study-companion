@@ -2,11 +2,12 @@
 title: Social Research Method
 slug: social-reserach-method
 abstract: Social research involves the systematic collection and analysis of data related to the social world. 
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Introduction
 
-Social research involves the systematic collection and analysis of data related to the social world. The goal of social research is to develop an understanding of social phenomena, uncover new insights, test theories, assess social interventions, and inform policy decisions. 
+**Social** **research** involves the systematic collection and analysis of data related to the social world. The goal of **social research** is to develop an understanding of social phenomena, uncover new insights, test theories, assess social interventions, and inform policy decisions. 
 
 Social research serves four primary purposes:
 
@@ -145,7 +146,7 @@ Social theories are comprised of several key components:
 
 There are two primary ways that theories are constructed in social research: deductive and inductive.
 
-<center> <img src="static\modules\the wheel of reserach.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/the wheel of reserach.png " alt="" width="70%" /> </center>
 
 ### Deductive Theory Construction
 

@@ -2,6 +2,7 @@
 title: Basic Explanation of Liberalism in IR
 slug: basic-liberalism
 abstract: The introduction of Liberalism in International Relations 
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 
@@ -11,7 +12,7 @@ abstract: The introduction of Liberalism in International Relations
 
 <br>
 
-Liberalism and realism represent contrasting perspectives in international relations (IR). While realism has traditionally dominated IR theory and practice, liberalism emerged in the 20th century as a viable alternative approach, gaining particular prominence after World War 2 and again after the end of the Cold War. However, major international events and developments since the 1990s have consistently brought realism back into focus as the dominant paradigm in international relations.
+**Liberalism** and realism represent contrasting perspectives in **international** relations (IR). While realism has traditionally dominated IR theory and practice, liberalism emerged in the 20th century as a viable alternative approach, gaining particular prominence after **World War** 2 and again after the end of the Cold War. However, major international events and developments since the 1990s have consistently brought realism back into focus as the dominant paradigm in international relations.
 
 Although liberalism seemed ascendant at certain points in recent history, the two perspectives have been engaged in an ongoing debate about the fundamental nature of IR. This continuing discussion between realism and liberalism has been a central theme in IR scholarship since the mid-1980s, with evolved variants of the two theories providing the main conceptual frameworks that define the field. However, it is important to note that policymakers and scholars use the terms realism and liberalism differently in practice.
 
@@ -25,13 +26,13 @@ Liberalism is founded on several core tenets that shape its perspectives on gove
 
 ## Liberalism in International Relations
 
-Liberalism considers states as having varying characteristics and proposes diverse causes for conflicts, ranging from imperialism to undemocratic regimes. In contrast to realism's view of an inherent struggle for power, liberalism attributes the root causes of war to flawed domestic governance and international systems.
+Liberalism considers **states** as having varying characteristics and proposes diverse causes for conflicts, ranging from imperialism to undemocratic regimes. In contrast to realism's view of an inherent struggle for power, liberalism attributes the root causes of war to flawed domestic governance and international systems.
 
 Concepts like collective security, open commerce, and world government are suggested as remedies to mitigate conflict between states. Collective security involves nations agreeing to collectively respond to acts of aggression, while open commerce aims to build economic ties and interdependence. World government proposes consolidating authority into international institutions that can mediate disputes.
 
 Liberalism also advances the idea of the democratic peace theory. This attributes democracies' inherently pacifist nature to domestic constraints and norms against warfare. Therefore, promoting democracy worldwide could create more peaceful relations between liberal states.
 
-Overall, liberalism offers more optimistic alternatives for international cooperation than realism. It advocates new systems and institutions to transcend power politics between states. However, putting these liberal ideals into practice has proven challenging.
+Overall, liberalism offers more optimistic alternatives for international **cooperation** than realism. It advocates new systems and institutions to transcend power politics between states. However, putting these liberal ideals into practice has proven challenging.
 
 ## Failure of the League of Nations
 

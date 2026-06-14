@@ -2,11 +2,12 @@
 title: International Treaties
 slug: international-treaties
 abstract: Treaties are binding agreements between states that are governed by international law.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction
 
-Treaties are binding agreements between states that are governed by international law. They go by many different names - conventions, international agreements, pacts, general acts, charters, statutes, declarations, or covenants - but their purpose remains the same. Treaties serve a vital role in international relations by facilitating cooperation between states, establishing rules and norms, and codifying international law. 
+**Treaties** are binding agreements between **states** that are governed by **international** law**. They go by many different names - conventions, international agreements, pacts, general acts, charters, statutes, declarations, or covenants - but their purpose remains the same. Treaties serve a vital role in international relations by facilitating cooperation between states, establishing rules and norms, and codifying international law. 
 
 Some of the most well-known and impactful treaties include:
 
@@ -27,7 +28,7 @@ States enter into treaties for several key reasons:
 
 ## Treaties and Customary Law
 
-There is no formal hierarchy between treaties and customary international law. However, in cases where the two conflict, the newer and more specific treaty rule will generally prevail. 
+There is no formal hierarchy between treaties and customary international law. However, in cases where the two conflict, the newer and more specific **treaty** rule will generally prevail. 
 
 Treaties can interact with customary law in a few ways. Treaties can codify existing customary practices into a written text. They can also provide incentives and momentum for new customary norms to develop. And existing customary law often forms the background assumptions and context for treaty negotiations and provisions.
 

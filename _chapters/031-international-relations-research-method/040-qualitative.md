@@ -2,11 +2,12 @@
 title: 'Research Method: Qualitative'
 slug: qualitative
 abstract: Qualitative research, commonly called “interpretive research”, is a method that relies heavily on “thick” verbal descriptions of a particular social context being studied. 
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 # What is qualitative research?
 
-Qualitative research, commonly called “interpretive research”, is a method that relies heavily on “thick” verbal descriptions of a particular social context being studied. Qualitative research is an inquiry approach in which the inquirer explores a central phenomenon (one key concept), asks participants broad, general questions, collects detailed views of participants in the form of words or images, analyzes and codes the data for description and themes, interprets the meaning of the information drawing on personal reflections and past research, and writes the final report that includes personal biases and a flexible structure.
+**Qualitative** **research**, commonly called “interpretive research”, is a method that relies heavily on “thick” verbal descriptions of a particular social context being studied. Qualitative research is an inquiry approach in which the inquirer explores a central phenomenon (one key concept), asks participants broad, general questions, collects detailed views of participants in the form of words or images, analyzes and codes the **data** for description and themes, interprets the meaning of the information drawing on personal reflections and past research, and writes the final report that includes personal biases and a flexible structure.
 # The General Characteristics of Qualitative Research
 
 Qualitative research has several defining characteristics:
@@ -44,7 +45,7 @@ The goal is to use open-ended questions focused on gathering descriptive data on
 
 ### Data Collection
 
-Data collection involves gathering information to address the research questions. Common qualitative data collection methods include interviews, focus groups, observations, and analysis of documents or artifacts. The researcher may collect data themselves through fieldwork, or utilize existing documents and records relevant to the research topic.
+Data collection involves gathering information to address the research questions. Common qualitative data collection methods include interviews, focus groups, observations, and analysis of documents or artifacts. The **researcher** may collect data themselves through fieldwork, or utilize existing documents and records relevant to the research topic.
 
 ### Data Analysis
 
@@ -72,31 +73,31 @@ The researcher chooses an approach such as phenomenology, grounded theory, ethno
 
 Narrative research focuses on studying an individual's life story and experiences. The researcher collects data through many forms, like interviews, documents, pictures, etc. This method aims to provide insight into how people make sense of their lives and their perceived reality.
 
-<center> <img src="static\modules\narrative research.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/narrative research.png" alt="" width="70%" /> </center>
 
 - Phenomenology
 
 Phenomenological research aims to understand and describe the "essence" of a phenomenon from the perspective of those who have experienced it first-hand. Data is collected through in-depth interviews with participants about their lived experiences. The goal is to identify shared meanings and the core of the phenomenon.
 
-<center> <img src="static\modules\Phenomenology.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Phenomenology.png" alt="" width="70%" /> </center>
 
 - Ethnography
 
 Ethnography involves studying the shared patterns of behaviors, beliefs, and language within a culture-sharing group. Data collection methods include participant observation, interviews, and artifact analysis. The researcher is immersed in the culture over an extended period.
 
-<center> <img src="static\modules\Ethnography.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Ethnography.png " alt="" width="70%" /> </center>
 
 - Grounded Theory
 
 Grounded theory utilizes data to generate or discover a theory. The researcher analyzes data through coding, memo-writing, and diagramming. Data collection and analysis occur simultaneously, allowing theories to emerge from the data rather than preceding it.
 
-<center> <img src="static\modules\Grounded Theory.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Grounded Theory.png" alt="" width="70%" /> </center>
 
 - Case Study
 
 Case studies investigate a contemporary phenomenon in depth and in its real-world context. Data collection involves multiple sources like interviews, documents, observation, etc. The goal is an in-depth understanding of a case or bounded system from various perspectives.
 
-<center> <img src="static\modules\Case Study.png] " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Case Study.png] " alt="" width="70%" /> </center>
 
 ### Considerations for Selecting People/Sites to Study:
 

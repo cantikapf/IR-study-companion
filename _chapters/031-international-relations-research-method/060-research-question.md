@@ -2,11 +2,12 @@
 title: Research Question
 slug: research-question
 abstract: A clearly defined research question guides the researcher in multiple aspects of the study including determining the research design, methodology, data collection procedures, and analysis techniques.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## The Importance of the Research Question
 
-The research question is the fundamental core of a research project. It serves as the foundation on which the entire study is constructed. A clearly defined research question guides the researcher in multiple aspects of the study including determining the research design, methodology, data collection procedures, and analysis techniques.
+The **research** **question** is the fundamental core of a **research project**. It serves as the foundation on which the entire study is constructed. A clearly defined research question guides the researcher in multiple aspects of the study including determining the research design, methodology, data collection procedures, and analysis techniques.
 
 The research question identifies the primary aim and objectives that the study intends to address. It delineates the scope and provides direction for all stages of the research process. A well-formulated research question allows the researcher to determine the type of data needed, the approach to data collection, and how the information will be analyzed. It enables the researcher to stay focused on the main goals of the project throughout its duration.
 
@@ -22,7 +23,7 @@ In essence, the research question is the compass that steers the research ship t
 
 ## Research Question vs. Thesis Statement
 
-A research question and thesis statement have fundamental differences:
+A research question and **thesis statement** have fundamental differences:
 
 - A research question asks about a problem or issue to explore. It identifies the purpose and goals for a research project. The question lays the foundation for the research by guiding the methodology and data collection.
 - A thesis statement, on the other hand, makes an argument and directly answers the research question. It is a concise statement that summarizes the central argument or claim of the paper. The thesis provides the direction and focus for the entire work.
@@ -62,7 +63,7 @@ International Relations (IR) is a diverse field that examines relationships betw
 
 ### Example of The Differences Topics in Descriptive and Research Paper
 
-<center> <img src="static\modules\descriptive paper vs research paper.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/descriptive paper vs research paper.png" alt="" width="70%" /> </center>
 
 ## Writing an Initial Subtopic Question
 
@@ -77,7 +78,7 @@ The initial question is needed to guide preliminary, foundation-building researc
 
 **Example**
 
-<center> <img src="static\modules\subtopic question example.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/subtopic question example.png" alt="" width="70%" /> </center>
 
 ---
 

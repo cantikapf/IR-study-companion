@@ -2,11 +2,12 @@
 title: International Human Right Law
 slug: international-human-right-law
 abstract: International human rights law (IHRL) is a body of international laws designed to protect and promote the rights and freedoms of all individuals, regardless of their nationality or status.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction to IHRL  
 
-International human rights law (IHRL) refers to the body of international laws designed to promote human rights around the world. At its core, IHRL aims to protect the inherent dignity and equal worth of all human beings. 
+**International** **human** rights law (**IHRL**) refers to the body of international laws designed to promote human rights around the world. At its core, IHRL aims to protect the inherent dignity and equal worth of all human beings. 
 
 IHRL is founded on the principle that all people should enjoy basic rights and fundamental freedoms regardless of their nationality, gender, race, ethnicity, language, or other status. It recognizes that human rights are universal - meaning they apply to every single person equally.
 
@@ -17,7 +18,7 @@ Some key features of the IHRL system:
 - IHRL places obligations on states to respect, protect, and fulfill human rights. This means states must refrain from violating rights, prevent violations by third parties, and take positive steps to facilitate the enjoyment of rights.
 - Implementation and enforcement of IHRL occurs at national, regional, and international levels. Monitoring bodies review states' compliance with their obligations. 
 
-The ultimate purpose of IHRL is to promote universal respect for and observance of human rights and freedoms. By codifying rights into binding treaties and principles, IHRL seeks to hold states accountable for protecting the dignity of all people.
+The ultimate purpose of IHRL is to promote universal respect for and observance of human rights and freedoms. By codifying rights into binding treaties and principles, IHRL seeks to hold **states** accountable for protecting the dignity of all people.
 
 ## History and Development of IHRL
 

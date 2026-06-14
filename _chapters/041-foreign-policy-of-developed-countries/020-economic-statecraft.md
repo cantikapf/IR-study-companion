@@ -2,13 +2,14 @@
 title: Economic Statecraft
 slug: economic-statecraft
 abstract: Economic statecraft foreign policy tools like sanctions and incentives to influence the behavior of other states.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## What is Economic Statecraft
 
-Economic statecraft refers to the use of economic tools by a state to influence the behavior of another state. It involves wielding economic influence and leveraging economic power to achieve foreign policy objectives. 
+**Economic** **statecraft** refers to the use of economic tools by a state to influence the behavior of another state. It involves wielding economic influence and leveraging economic power to achieve foreign policy objectives. 
 
-Economic statecraft can take both positive and negative forms. Negative economic statecraft involves the use of punitive economic measures like sanctions, tariffs, and trade embargoes to inflict economic pain and coerce a change in behavior of the target state. For example, in 1973 the OPEC countries used the "oil weapon" to punish the US for its support of Israel in the Yom Kippur War by cutting oil exports and hiking prices.
+Economic statecraft can take both positive and negative forms. Negative economic statecraft involves the use of punitive economic measures like **sanctions**, tariffs, and trade embargoes to inflict economic pain and coerce a change in behavior of the target state. For example, in 1973 the OPEC countries used the "oil weapon" to punish the US for its support of Israel in the Yom Kippur War by cutting oil exports and hiking prices.
 
 Positive economic statecraft provides economic benefits like trade deals, financial aid, and investment to induce cooperation from the target state. For instance, the US provided extensive financial aid to Western Europe under the Marshall Plan from 1948-1952 to help rebuild economies, create stable democracies, and counter Soviet influence during the early Cold War period.
 
@@ -37,7 +38,7 @@ By using these types of sanctions, countries attempt to inflict economic damage 
 
 ## Case Study: Russia-Ukraine Sanctions
 
-The conflict between Russia and Ukraine began in 2014 when Russia annexed the Crimean Peninsula from Ukraine. This prompted economic sanctions by Western nations against Russia.
+The conflict between **Russia** and Ukraine began in 2014 when Russia annexed the Crimean Peninsula from Ukraine. This prompted economic sanctions by Western nations against Russia.
 
 The United States, European Union, Canada, Australia, New Zealand, Japan, and others imposed a series of economic sanctions against Russia. These included:
 

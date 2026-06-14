@@ -2,15 +2,16 @@
 title: 'Approaches to IPE: Constructivism vs. Marxism'
 slug: constructivism-marxist
 abstract: This chapter will explaining about constructivism and marxism theory in IPE.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 # Introduction
 
-International Political Economy (IPE) has seen the rise of two influential perspectives - constructivism and Marxism. These perspectives have challenged conventional narratives and assumptions within the field. 
+**International** Political** Economy (IPE) has seen the rise of two influential perspectives - **constructivism** and Marxism. These perspectives have challenged conventional narratives and assumptions within the field. 
 
-Constructivism contends that ideas, values, norms, and identities play a critical role in shaping actors' behaviors and influencing international political and economic dynamics. It emphasizes the socially constructed nature of factors like interests and identities. Constructivism has become a prominent counterpoint to materialist theories like Mercantilism and Liberalism in explaining motivations behind choices.
+Constructivism contends that **ideas**, values, norms, and identities play a critical role in shaping actors' behaviors and influencing international political and economic dynamics. It emphasizes the socially constructed nature of factors like interests and identities. Constructivism has become a prominent counterpoint to materialist theories like Mercantilism and Liberalism in explaining motivations behind choices.
 
-In contrast, Marxism originated from Karl Marx's critique of capitalism and his analysis of its inherent contradictions. Marxism focuses on the exploitative nature of capitalist relations of production. It predicts that the internal tensions of capitalism will lead to its eventual collapse and replacement by socialism and communism. Marxism diverges from traditional IPE theories in its argument that corporations, not states or markets, determine resource allocation under capitalism.
+In contrast, Marxism originated from Karl **Marx**'s critique of capitalism and his analysis of its inherent contradictions. Marxism focuses on the exploitative nature of capitalist relations of production. It predicts that the internal tensions of capitalism will lead to its eventual collapse and replacement by socialism and communism. Marxism diverges from traditional IPE theories in its argument that corporations, not states or markets, determine resource allocation under capitalism.
 
 ## Constructivism Basics 
 

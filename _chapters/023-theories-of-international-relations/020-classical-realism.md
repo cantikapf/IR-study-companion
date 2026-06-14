@@ -2,6 +2,7 @@
 title: Classical Realism
 slug: classical-realism
 abstract: This chapter explains the theory of classical realism in International Relations
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Realism Summary
@@ -11,13 +12,13 @@ abstract: This chapter explains the theory of classical realism in International
 - Behavioral dynamics: state is rational actors seeking to maximize its interest or national objectives in foreign policy
 - Issues: national security issues are most important
 
-**Classical Realism** tend to:
+**Classical** Realism** tend to:
 1. Advocate holistic understanding of politics
-2. Recognize the close relationship of domestic and international
+2. Recognize the close relationship of domestic and **international**
 3. Acknowledge the role of ethnics and community
 4. Regard history as cyclical
 
-Keyword: Groupism (alliance), Egoism (self-interest), Power-centrism (hegemony)
+Keyword: Groupism (alliance), Egoism (self-interest), **Power**-centrism (hegemony)
 
 ---
 ## Classical Realism Core Concepts
@@ -26,11 +27,11 @@ Classical Realism introduces several key concepts that shape its worldview:
 
 ### Groupism
 
-Groupism refers to the significance of human groups, especially nation-states and nationalism, for survival in the realist perspective. It emphasizes that states are the principal actors in global politics and that nationalism binds people together under a common identity to form these coherent groups. Alliance formation between states is an extension of groupism.
+Groupism refers to the significance of human groups, especially nation-**states** and nationalism, for survival in the realist perspective. It emphasizes that states are the principal actors in global politics and that nationalism binds people together under a common identity to form these coherent groups. Alliance formation between states is an extension of groupism.
 
 ### Egoism
 
-Egoism is the view that self-interest is the driving motivator behind political behavior. Classical realists see egoism as rooted in human nature - people and states seek to promote their own interests above others. Egoism manifests in the rational pursuit of national interests by states in the international arena.
+Egoism is the view that self-interest is the driving motivator behind political behavior. **Classical realists** see egoism as rooted in human nature - people and states seek to promote their own interests above others. Egoism manifests in the rational pursuit of national interests by states in the international arena.
 
 ### Power-centrism
 

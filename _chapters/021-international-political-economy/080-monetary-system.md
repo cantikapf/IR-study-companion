@@ -2,16 +2,17 @@
 title: International Monetary System
 slug: monetary-system
 abstract: The history of International Monetary System
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction
 The international monetary system facilitates economic transactions between countries through the use of national currencies. It provides a mechanism for setting currency exchange rates and enables cross-border flows related to trade, investment, and finance. An effective international monetary system is crucial for global economic growth and stability.
 
-When the system functions smoothly, international trade and investment thrive. However, when it malfunctions or collapses, it can grind global economic activity to a halt. The international monetary system aims to mitigate risks and minimize disruptions that can ripple across borders. 
+When the system functions smoothly, international trade and investment thrive. However, when it malfunctions or collapses, it can grind global economic activity to a halt. The **international monetary** system aims to mitigate risks and minimize disruptions that can ripple across borders. 
 
-At its core, the system exists to overcome the lack of globally accepted currencies. With countries using their own legal tender, exchanges are necessary to conduct business across borders. The prevailing exchange rates at any given time ultimately reflect the complex interactions between global supply and demand for currencies.
+At its core, the system exists to overcome the lack of globally accepted currencies. With countries using their own legal tender, exchanges are necessary to conduct business across borders. The prevailing **exchange** rates** at any given time ultimately reflect the complex interactions between global supply and demand for currencies.
 
-By establishing structures and guidelines for currency valuation and exchange, the international monetary system provides the foundation for international economic engagement. Its sound functioning facilitates cross-border transactions that increase global productivity and raise standards of living.
+By establishing structures and guidelines for currency valuation and exchange, the international **monetary system** provides the foundation for international economic engagement. Its sound functioning facilitates cross-border transactions that increase global productivity and raise standards of living.
 
 ## National Currencies and Exchanges
 
@@ -25,7 +26,7 @@ On a broader scale, the international monetary system provides a framework for c
 
 Exchange rates play a critical role within the international monetary system. They represent the relative price of one currency in terms of another and fluctuate based on the supply and demand for currencies. This impacts both international trade and individuals in profound ways.
 
-For international trade, exchange rates influence the prices of exports and imports. An appreciation in a country's currency makes its exports more expensive and imports cheaper. This can reduce export competitiveness and domestic production while increasing import spending. Conversely, a depreciation makes exports cheaper and imports more expensive, potentially boosting exports and domestic industries competing with imports. As such, exchange rate changes can significantly impact a country's trade flows and current account balance.
+For international trade, exchange rates influence the prices of exports and imports. An appreciation in a country's currency makes its exports more expensive and imports cheaper. This can reduce export competitiveness and domestic production while increasing import spending. Conversely, a depreciation makes exports cheaper and imports more expensive, potentially boosting exports and domestic industries competing with imports. As such, **exchange rate** changes can significantly impact a country's trade flows and current account balance.
 
 For individuals, currency fluctuations affect one's purchasing power and wealth. If someone holds assets denominated in a foreign currency that appreciates, this increases their wealth and buying power for foreign goods and services. However, currency depreciation reduces real wealth and purchasing power. Significant devaluation can be devastating, wiping out savings and earnings. Even small daily fluctuations impact prices for imported consumer goods, overseas travel, studying abroad, and more. Individuals must closely monitor exchange rates for financial planning and decisions.
 

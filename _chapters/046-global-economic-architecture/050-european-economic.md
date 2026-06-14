@@ -2,11 +2,12 @@
 title: The Rise of the European Economic Giant
 slug: european-economic
 abstract: The rise of the European Union as a global economic giant has transformed the global economic landscape, with its significant trading power, economic influence, and capacity for global integration. This pages explores the historical context, the development of economic unions in Europe, and the EU's role as a major player in international development and trade.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-Over the past six decades, the global economy has undergone dramatic transformations. In the early 1950 s, the world was essentially divided between the industrialized "North" - comprised of Western European nations, the United States, Canada, and Australia - and the developing "South" which encompassed most of Asia, Africa, and Latin America. The global economic landscape of 2022 looks vastly different, shaped by the rise of economic unions in Europe, the emergence of Asian economic powers like China and India, and the increasing interdependence brought about by globalization. Whereas the "North" accounted for the vast majority of global GDP and manufacturing output in the 1950 s, economic might has gradually dispersed across different regions over the intervening decades. This shifting distribution of economic power has been driven by geopolitical changes, technological advances, and the interconnected nature of the modern global economy. The following sections will examine these dramatic changes in detail, starting with the global economy of the early postwar era.
+Over the past six decades, the **global** economy has undergone dramatic transformations. In the early 1950 s, the **world** was essentially divided between the industrialized "North" - comprised of Western **European** nations, the United States, Canada, and Australia - and the developing "South" which encompassed most of Asia, Africa, and Latin America. The global **economic** landscape of 2022 looks vastly different, shaped by the rise of economic unions in Europe, the emergence of Asian economic powers like China and India, and the increasing interdependence brought about by globalization. Whereas the "North" accounted for the vast majority of global GDP and manufacturing output in the 1950 s, economic might has gradually dispersed across different regions over the intervening decades. This shifting distribution of economic power has been driven by geopolitical changes, technological advances, and the interconnected nature of the modern global economy. The following sections will examine these dramatic changes in detail, starting with the global economy of the early postwar era.
 
 ## The Global Economy in the 1950s
 
@@ -36,7 +37,7 @@ By the 1950 s, the EU and US dominated global manufacturing and trade. Most econ
 
 ## The EU as a Global Economic Power
 
-The European Union has emerged as the largest trading power in the world and plays a major role in providing financial and technical support to poorer countries across the globe. The EU acts as an influential force in shaping the economic, social, political, human rights and foreign relations policies of its member states. 
+The **European Union** has emerged as the largest trading power in the world and plays a major role in providing financial and technical support to poorer countries across the globe. The EU acts as an influential force in shaping the economic, social, political, human rights and foreign relations policies of its member states. 
 
 Since the late 1980 s, scholars such as Michel Beaud have emphasized that the EU has tremendous capacity for global influence, indicating that more than 30 countries on different continents have over 40% of their total economic exchanges with this powerful regional entity.
 

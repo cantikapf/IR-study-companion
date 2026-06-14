@@ -2,13 +2,14 @@
 title: Alternative Media and International Politics
 slug: media-politics
 abstract: Case studies of alternative media and their impact on international politics.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 ## Introduction
 
-Social media platforms have increasingly played a role in protest movements and political uprisings over the past decade. With the rise of platforms like Twitter, Facebook, and YouTube, activists have new tools to quickly disseminate information, organize protests, and garner global support for their causes. 
+**Social** **media** platforms have increasingly played a role in protest movements and political uprisings over the past decade. With the rise of platforms like **Twitter**, Facebook, and YouTube, activists have new tools to quickly disseminate information, organize protests, and garner global support for their causes. 
 
-Perhaps the first major "Twitter revolution" occurred during the 2009 Iranian election protests. Activists used Twitter and Facebook to spread their message and organize demonstrations after the re-election of Iranian President Mahmoud Ahmadinejad, which many suspected was rigged. This showed how social media could provide powerful, speedy, and relatively low-cost tools for political activism.
+Perhaps the first major "**Twitter revolution**" occurred during the 2009 Iranian election protests. Activists used Twitter and Facebook to spread their message and organize demonstrations after the re-election of Iranian President Mahmoud Ahmadinejad, which many suspected was rigged. This showed how social media could provide powerful, speedy, and relatively low-cost tools for political activism.
 
 However, experts debate the actual impact of social media on these protests. While social media helps spread information rapidly, some argue it played a minor role compared to on-the-ground organizing. The political context also affects how useful social media tools are, and the willingness of citizens to take to the streets. 
 

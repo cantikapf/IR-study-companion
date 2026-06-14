@@ -2,16 +2,17 @@
 slug: history-matters
 title: Why History Matters?
 abstract: Why we should study international history?
+simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
 ---
 
 
-History, with all its intricacies and nuances, serves as an indispensable foundation for comprehending the complex dynamics of international relations in today's interconnected world. As the repository of humanity's experiences, triumphs, and tribulations throughout the ages, the study of history provides crucial context and insights that shape our understanding of modern diplomacy, politics, conflicts, and global affairs.  
+**History**, with all its intricacies and nuances, serves as an indispensable foundation for comprehending the complex dynamics of international relations in today's interconnected world. As the repository of humanity's experiences, triumphs, and tribulations throughout the ages, the study of history provides crucial context and insights that shape our understanding of modern diplomacy, politics, conflicts, and global affairs.  
 
-Although examining historical narratives inevitably involves grappling with subjectivity and inherent biases, the wealth of information on past interactions and events equips us with the perspective and knowledge needed to better navigate the present. Beyond just understanding the current global landscape, history also influences foreign policy, economic relations between nations, and the power balances that emerge on the international stage. Ultimately, historical analysis fosters greater dialogue and cooperation globally by revealing shared challenges and experiences that unite societies across borders and cultures. For these reasons, history remains essential to unraveling and engaging with the intricacies of the modern world order.
+Although examining **historical** narratives inevitably involves grappling with subjectivity and inherent biases, the wealth of information on **past** interactions and events equips us with the perspective and knowledge needed to better navigate the present. Beyond just understanding the current global landscape, history also influences foreign policy, economic relations between **nations**, and the power balances that emerge on the international stage. Ultimately, historical analysis fosters greater dialogue and cooperation globally by revealing shared challenges and experiences that unite societies across borders and cultures. For these reasons, history remains essential to unraveling and engaging with the intricacies of the modern world order.
 
 ## Subjectivity of History 
 
-As a narrative of the past, history is inherently subjective and susceptible to bias. The question of who writes history and whose version of the past prevails is an important one. History is written by the victors, as the saying goes, and often reflects the perspective and priorities of those in power. Dominant cultures and points of view tend to shape historical narratives and mainstream understandings of the past.
+As a narrative of the past, history is inherently subjective and susceptible to bias. The question of who writes history and whose version of the past prevails is an important one. History is written by the victors, as the saying goes, and often reflects the perspective and priorities of those in power. Dominant cultures and points of view tend to shape **historical narratives** and mainstream understandings of the past.
 
 For example, in the United States and Europe, histories have traditionally privileged white, male, colonial perspectives and minimized or excluded the experiences of women, people of color, indigenous peoples, and colonized nations. Events, changes, and developments deemed important from a Eurocentric point of view have been emphasized, while other regions and groups are marginalized. Even methods and sources used to study the past - such as written documents - can introduce subjectivity and implicit biases.
 

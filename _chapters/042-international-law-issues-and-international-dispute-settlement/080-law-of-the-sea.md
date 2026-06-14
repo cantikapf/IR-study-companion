@@ -2,21 +2,22 @@
 title: The Law Of The Sea
 slug: law-of-the-sea
 abstract: The law of the sea governs the use of oceans and seas, establishing guidelines for territorial waters, economic zones, fishing rights, navigation, and environmental protection.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-The law of the sea refers to the body of laws, agreements, conventions, and treaties that govern the uses of the world's oceans and seas. It establishes guidelines for determining territorial waters, exclusive economic zones, fishing rights, navigation rights, environmental protections, scientific research, and more. 
+The law of the **sea** refers to the body of laws, agreements, conventions, and treaties that govern the uses of the world's oceans and seas. It establishes guidelines for determining territorial waters, exclusive economic zones, fishing rights, navigation rights, environmental protections, scientific research, and more. 
 
 The law of the sea is important because the oceans cover over 70% of the Earth's surface and are vital for transportation, food, energy, recreation, and more. As maritime activities increased over the centuries, it became necessary to establish rules and norms to reduce conflicts, protect resources, and enable cooperation on issues like overfishing and pollution.
 
 The most comprehensive framework for the law of the sea is the United Nations Convention on the Law of the Sea (UNCLOS), adopted in 1982. UNCLOS has been ratified by most maritime nations and is considered the constitution for the oceans. It aims to balance the interests of coastal states in protecting their sovereignty and resources, with the interests of all states in freedom of navigation and access to maritime resources.
 
-The law of the sea continues to evolve through international agreements, regulations, court decisions, and state practice. It provides crucial governance for the shared global commons of the oceans and enables sustainable development of maritime activities that benefit all countries. Having clear rules of the sea helps reduce conflicts, facilitate commerce and resource management, and protect the marine environment.
+The law of the sea continues to evolve through international agreements, regulations, court decisions, and **state** practice. It provides crucial governance for the shared global commons of the oceans and enables sustainable development of maritime activities that benefit all countries. Having clear rules of the sea helps reduce conflicts, facilitate commerce and resource management, and protect the marine environment.
 
 ## UN Convention on the Law of the Sea
 
-The United Nations Convention on the Law of the Sea (UNCLOS) is an international agreement that defines the rights and responsibilities of nations regarding the world's oceans. It was adopted in 1982 and came into force in 1994. UNCLOS defines several maritime zones, including internal waters, territorial seas, contiguous zones, exclusive economic zones, continental shelves and the high seas. 
+The United Nations Convention on the Law of the Sea (UNCLOS) is an international agreement that defines the rights and responsibilities of nations regarding the world's oceans. It was adopted in 1982 and came into force in 1994. UNCLOS defines several maritime zones, including internal waters, territorial seas, contiguous zones, exclusive economic zones, continental shelves and the **high seas**. 
 
 The convention aims to establish a comprehensive legal framework that governs all ocean space and maritime activities. It covers topics such as navigational rights, maritime boundary delimitation, conservation of marine living resources, protection of the marine environment, marine scientific research, piracy and maritime security.
 
@@ -26,7 +27,7 @@ Overall, UNCLOS struck a balance between the interests of coastal states in mana
 
 ## Internal Waters
 
-Internal waters are defined in the UN Convention on the Law of the Sea (UNCLOS) as waters on the landward side of the baseline of the territorial sea. They are considered part of the internal sovereignty of the coastal state.  
+Internal waters are defined in the UN Convention on the Law of the Sea (UNCLOS) as waters on the landward side of the baseline of the **territorial sea**. They are considered part of the internal sovereignty of the **coastal state**.  
 
 Some examples of internal waters include:
 

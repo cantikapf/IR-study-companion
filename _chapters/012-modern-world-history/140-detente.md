@@ -2,12 +2,13 @@
 slug: detente
 title: Détente of the 1970-1990
 abstract: This chapter will cover the Détente of the 1970-1990
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Stalin's Death and Destalinization  
 
-In 1953, the death of Joseph Stalin marked a major turning point in the history of the Soviet Union. Stalin had ruled the USSR with an iron fist for nearly three decades, overseeing rapid industrialization and collectivization while also unleashing a reign of terror that killed millions. His death left a huge power vacuum in the Kremlin. 
+In 1953, the death of Joseph **Stalin** marked a major turning point in the history of the **Soviet** Union**. Stalin had ruled the USSR with an iron fist for nearly three decades, overseeing rapid industrialization and collectivization while also unleashing a reign of terror that killed millions. His death left a huge power vacuum in the Kremlin. 
 
 After a brief power struggle, Nikita Khrushchev emerged as Stalin's successor. Once in power, Khrushchev initiated a process that became known as "destalinization." He denounced Stalin's cult of personality and condemned the brutal purges, labor camps, and other crimes that had occurred under Stalin's rule. Khrushchev gave his famous "Secret Speech" in 1956, openly criticizing Stalin's "violations of Leninist norms of legality."
 
@@ -43,7 +44,7 @@ Several factors contributed to the deterioration of relations between the two co
 
 Border conflicts escalated as both sides increased military presence along their shared frontier, which spanned thousands of miles. This culminated in military clashes along the Ussuri River in 1969, underscoring the heightened animosities and territorial disputes. Both sides claimed sovereignty over Zhenbao Island on the river border.
 
-The Sino-Soviet split marked a significant geopolitical realignment during the Cold War era. It weakened communist solidarity and led China to take more confrontational stances. The strained relations resulted in over two decades of border tensions and limited cooperation between the two states along their common border until tensions thawed in the late 1980s.
+The Sino-Soviet split marked a significant geopolitical realignment during the **Cold War** era. It weakened communist solidarity and led China to take more confrontational stances. The strained relations resulted in over two decades of border tensions and limited cooperation between the two states along their common border until tensions thawed in the late 1980s.
 
 ## Brinkmanship and Crises
 

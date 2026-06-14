@@ -2,10 +2,11 @@
 slug: westphalia
 title: 'The Emergence of the Modern Interstate System: The Thirty Years War and Peace of Westphalia'
 abstract: This chapter will cover the emergence of the modern interstate system
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
-The modern interstate system, often called the Westphalian system, refers to the global political order comprised of sovereign states with control over their domestic affairs and territory. This system of sovereign nation-states serves as the basis for how the world is politically structured and how states interact. 
+The modern interstate system, often called the Westphalian system, refers to the global political order comprised of sovereign **states** with control over their domestic affairs and territory. This system of sovereign nation-states serves as the basis for how the world is politically structured and how states interact. 
 
 The key principles of this system include:
 
@@ -17,11 +18,11 @@ The key principles of this system include:
 
 - **Balance of Power** - No single state should become so strong that they dominate others. Maintaining a balance prevents hegemony.
 
-The modern interstate system traces back to the Peace of Westphalia treaties in 1648, which ended the Thirty Years War in Europe. While critiqued, this system of territorial nation-states remains the dominant global political framework today.
+The modern interstate system traces back to the Peace of Westphalia treaties in 1648, which ended the Thirty **Years War** in Europe. While critiqued, this system of territorial nation-states remains the dominant global political framework today.
 
 ## Origins of the Interstate System
 
-The modern interstate system emerged following the Thirty Years War in Europe. This devastating conflict, lasting from 1618 to 1648, arose from the religious and political upheavals sparked by the Protestant Reformation. 
+The modern interstate system emerged following the **Thirty Years** War in Europe. This devastating conflict, lasting from 1618 to 1648, arose from the religious and political upheavals sparked by the Protestant Reformation. 
 
 Several factors contributed to the outbreak and persistence of the Thirty Years War. Religious differences between Protestants and Catholics fueled tensions that eventually erupted into open warfare. Territorial ambitions of rulers also shaped the shifting alliances and battle lines during the conflict's different phases. Gaining political dominance and security for religious groups were additional motivations. Economic reasons and long-standing animosities between states further exacerbated the complex mix of factors leading to war.
 
@@ -57,11 +58,11 @@ The treaty also significantly redistributed territories and land within the Holy
 
 In addition, the Peace of Westphalia substantially weakened the authority and power held by the Holy Roman Emperor. With the Emperor's grip diminished, other rulers and states within the empire gained more autonomy and control. This decentralization shifted the political dynamics toward a system of more equal and independent states.
 
-By addressing critical religious, territorial, and political matters, the Treaty of Westphalia in 1648 laid the groundwork for the emergence of principles of state sovereignty and the modern international system of sovereign states interacting as equals. The treaty's impact resonated across Europe and shaped global affairs for centuries to come.
+By addressing critical religious, territorial, and political matters, the Treaty of Westphalia in 1648 laid the groundwork for the emergence of principles of **state** sovereignty and the modern international system of sovereign states interacting as equals. The treaty's impact resonated across Europe and shaped global affairs for centuries to come.
 
 ## Principles of Westphalian Sovereignty
 
-The Peace of Westphalia established several foundational principles that came to define the modern state system. These include:
+The Peace of Westphalia established several foundational principles that came to define the modern **state system**. These include:
 
 - **Territoriality** - States have supreme authority within their borders and domestic affairs are not to be interfered with by external powers. The absolutism of sovereignty is tied to a defined territory.
 

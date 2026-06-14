@@ -2,11 +2,12 @@
 title: The Subjects Of International Law
 slug: subjects-of-international-law
 abstract: Explain the subjects of international law.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-The Montevideo Convention on the Rights and Duties of States is an international treaty signed in 1933 that establishes the definition and rights of statehood. The treaty outlines 4 key criteria for an entity to be considered a "state" under international law: 
+The **Montevideo Convention** on the Rights and Duties of States is an **international** treaty signed in 1933 that establishes the definition and rights of statehood. The treaty outlines 4 key criteria for an entity to be considered a "state" under **international law**: 
 
 - A permanent population
 - A defined territory
@@ -15,7 +16,7 @@ The Montevideo Convention on the Rights and Duties of States is an international
 
 The Montevideo Convention has become one of the foundational doctrines of international law and relations. It arose during a period of turmoil in Latin America, when various entities were claiming independence and statehood. The Convention aimed to provide objective criteria for evaluating these claims and determining which entities truly constituted states. By codifying the attributes of statehood, the Montevideo Convention brought clarity and consistency to processes of state formation and recognition.
 
-The concept of "permanent population" means there must be a stable community of people concentrated in a defined territory. "Defined territory" signifies demarcated borders and jurisdiction over a geographic area. "Effective government" refers to institutional authorities with administrative control and independent governance. "Capacity to enter into relations with other states" indicates the authority to engage with other sovereign entities. These principles continue to guide international law today.
+The concept of "permanent population" means there must be a stable community of people concentrated in a **defined **territory**. "Defined territory" signifies demarcated borders and jurisdiction over a geographic area. "Effective government" refers to institutional authorities with administrative control and independent governance. "Capacity to enter into relations with other states" indicates the authority to engage with other sovereign entities. These principles continue to guide international law today.
 
 ## Permanent Population
 

@@ -2,6 +2,7 @@
 slug: cuban-missile-crisis
 title: Cuban Missile Crisis
 abstract: This chapter will cover the Cuban Missile Crisis
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
@@ -13,7 +14,7 @@ abstract: This chapter will cover the Cuban Missile Crisis
 
 <br>
 
-The nuclear arms race emerged as a fierce competition for nuclear supremacy between the United States and the Soviet Union during the Cold War. Originating from the development of the first nuclear weapon by the U.S. in World War II, the devastating impact of atomic bombs on Japan marked the beginning of a new era. While World War II concluded, the nuclear arms race persisted, signaling a heightened global threat. After World War II, the U.S. held a monopoly on nuclear knowledge and materials. However, the Soviet Union quickly closed the gap, detonating its first atomic bomb in 1949. This unexpected development initiated a nuclear arms race, intensifying tensions between the superpowers. The shift in the balance of power set the stage for an era defined by the possession and proliferation of nuclear weapons.
+The **nuclear** arms race emerged as a fierce competition for nuclear supremacy between the **United States** and the **Soviet Union** during the **Cold War**. Originating from the development of the first nuclear weapon by the U.S. in World War II, the devastating impact of atomic bombs on Japan marked the beginning of a new era. While World War II concluded, the nuclear arms race persisted, signaling a heightened global threat. After World War II, the U.S. held a monopoly on nuclear knowledge and materials. However, the Soviet Union quickly closed the gap, detonating its first atomic bomb in 1949. This unexpected development initiated a nuclear arms race, intensifying tensions between the superpowers. The shift in the balance of power set the stage for an era defined by the possession and proliferation of nuclear weapons.
 
 ## US Nuclear Monopoly After WWII 
 
@@ -35,7 +36,7 @@ The shift in the balance of power set the stage for an era defined by the posses
 
 By the 1950s, the nuclear arms race was in full swing. The U.S. tested the first hydrogen bomb in 1952, with the USSR following suit in 1953. The competition extended into the development of intercontinental ballistic missiles and nuclear-powered submarines capable of launching nuclear missiles. 
 
-As both nations acquired the means to annihilate each other, the stakes grew increasingly high. The nuclear arms race bred fear and suspicion between the superpowers. Both sides were wary of falling behind, continuing the rapid buildup of nuclear arsenals. This dangerous dynamic raised the risk of nuclear war through miscalculation.
+As both nations acquired the means to annihilate each other, the stakes grew increasingly high. The nuclear arms race bred fear and suspicion between the superpowers. Both sides were wary of falling behind, continuing the rapid buildup of nuclear arsenals. This dangerous dynamic raised the risk of **nuclear war** through miscalculation.
 
 The nuclear arms race was a central feature of Cold War geopolitics. The U.S. and Soviet stockpiling of thousands of nuclear weapons perpetuated a state of tension and mutual distrust for decades. The threat of instant and total destruction loomed over the entire era.
 

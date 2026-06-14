@@ -2,9 +2,10 @@
 title: Natural Disaster And Global Politics
 slug: natural-disaster
 abstract: Understanding the connections between politics and natural disasters can help societies become more resilient and responsive when catastrophe strikes.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
-Natural disasters can have immense impacts on societies, causing catastrophic loss of life and economic damage. However, they can also act as catalysts for political change by disrupting the status quo and creating opportunities for new leaders and ideologies to emerge. This materials examines the complex relationship between natural disasters and politics, focusing on how disasters can activate civil societies, create political openings, accelerate or disrupt existing trajectories, and interact with the interests of domestic and international actors. Looking at real-world case studies like the 2004 Indian Ocean tsunami, we explore how pre-disaster conditions shape disaster response, and how natural disasters have triggered political transformations at the local and national level. While disasters bring devastation, they can also open possibilities for political rebuilding and progress that serves the interests of affected populations. 
+Natural **disasters** can have immense impacts on societies, causing catastrophic loss of life and economic damage. However, they can also act as catalysts for **political** change by disrupting the status quo and creating opportunities for new leaders and ideologies to emerge. This materials examines the complex relationship between **natural disasters** and politics, focusing on how disasters can activate civil societies, create political openings, accelerate or disrupt existing trajectories, and interact with the interests of domestic and international actors. Looking at real-world case studies like the 2004 Indian Ocean tsunami, we explore how pre-**disaster** conditions shape disaster response, and how natural disasters have triggered political transformations at the local and national level. While disasters bring devastation, they can also open possibilities for political rebuilding and progress that serves the interests of affected populations. 
 
 ## Post-Disaster Political Spaces
 
@@ -40,7 +41,7 @@ The critical juncture viewpoint sees disasters as potential catalysts for irreve
 
 ## Case Study: 2004 Tsunami in Aceh
 
-On December 26, 2004, a massive 9.1-9.3 magnitude earthquake struck off the coast of Sumatra, generating a devastating tsunami that slammed into Indonesia's Aceh province. Over 167,000 people were killed in Aceh alone, with entire coastal communities wiped out. 
+On December 26, 2004, a massive 9.1-9.3 magnitude earthquake struck off the coast of Sumatra, generating a devastating tsunami that slammed into Indonesia's **Aceh** province. Over 167,000 people were killed in Aceh alone, with entire coastal communities wiped out. 
 
 The tsunami became a major turning point for Aceh's political and security situation. For decades, Aceh had been embroiled in a violent separatist conflict led by the Free Aceh Movement (GAM) against the Indonesian government. The disaster created a rare opportunity for peace. Both sides declared a ceasefire within days to allow aid into the devastated region. 
 

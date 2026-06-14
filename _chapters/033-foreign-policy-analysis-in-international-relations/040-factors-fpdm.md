@@ -2,11 +2,12 @@
 title: Factor Affecting Foreign Policy Decision
 slug: factors-fpdm
 abstract: Foreign policy decisions are complex and influenced by various psychological factors, necessitating a psychological approach to Foreign Policy Decision Making (FPDM). These factors include information processing, framing, cognitive biases, and the personal attributes and beliefs of leaders.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Psychological Factors
 
-Psychological factors that shape foreign policy decision making encompass cognitive consistency, evoked sets, emotions, images, belief systems, analogies, leaders' personality and leadership style. 
+Psychological factors that shape **foreign** **policy** **decision making** encompass cognitive consistency, evoked sets, emotions, images, belief systems, analogies, leaders' personality and leadership style. 
 
 Psychological factors shaping foreign policy decision making:
 1. Cognitive consistency
@@ -46,7 +47,7 @@ Analogies and learning involve leaders equating current events with past occurre
 
 ## Leaders' personality
 
-Leaders' personality traits, encompassing temperament, cognitions, motives, and social context, significantly influence foreign policy decisions. For example, insecurity can shape leaders' policy choices and affect how they handle emotions.
+Leaders' personality traits, encompassing temperament, cognitions, motives, and social context, significantly influence foreign **policy decisions**. For example, insecurity can shape leaders' policy choices and affect how they handle emotions.
 
 - Temperament: a person's style of behavior and typical way of responding
 - Cognitions: factors such as beliefs, values, and attitude
@@ -57,7 +58,7 @@ Leaders' personality traits, encompassing temperament, cognitions, motives, and 
 
 Analyzing leadership style is crucial in understanding decision-making processes. Leaders may be responsive to constraints, either challenging or respecting them, and demonstrate openness or closure to information. Motivations, whether problem-focused or relationship-focused, further shape decision-making. For instance, an accommodative leadership style, as seen in Indonesia's President Jokowi, emphasizes building relations and overcoming differences with other actors. Jokowi's policy, marked by respecting constraints and being open to information, reflects his accommodative approach in international relations.
 
-<center> <img src="static\modules\leadership style.png] " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/leadership style.png] " alt="" width="70%" /> </center>
 
 **Responsive to constraints**
 

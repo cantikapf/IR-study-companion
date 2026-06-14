@@ -2,11 +2,12 @@
 title: Peace Operations
 slug: peace-operations
 abstract: This chapter will explain about Peace Operations
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Genocide and Crimes against Humanity
 
-Genocide involves acts committed with the intent to destroy a national, ethnic, racial, or religious group, encompassing killing, causing harm, inflicting conditions of destruction, preventing births, and transferring children. War crimes, exemplified by historical events like WWII and more recent occurrences in Yugoslavia, Sierra Leone, and Darfur, constitute serious violations of the law of war, leading to individual criminal responsibility. Ethnic cleansing, demonstrated in conflicts like Assam violence and the Syrian civil war, entails the forced removal of ethnic or religious groups to achieve ethnic homogeneity. Crimes against humanity encompass deliberate acts in widespread attacks, such as apartheid and rape, as seen in Yugoslavia, Rwanda, Sierra Leone, and Cambodia.
+Genocide involves acts committed with the intent to destroy a national, **ethnic**, racial, or religious group, encompassing killing, causing harm, inflicting conditions of destruction, preventing births, and transferring children. **War** crimes, exemplified by historical events like WWII and more recent occurrences in Yugoslavia, **Sierra Leone**, and Darfur, constitute serious violations of the law of war, leading to individual criminal responsibility. Ethnic cleansing, demonstrated in conflicts like Assam violence and the Syrian **civil war**, entails the forced removal of ethnic or religious groups to achieve ethnic homogeneity. Crimes against humanity encompass deliberate acts in widespread attacks, such as apartheid and rape, as seen in Yugoslavia, Rwanda, Sierra Leone, and Cambodia.
 
 ## Ethnic Conflict
 
@@ -22,7 +23,7 @@ Resolving ethnic civil wars involves diverse strategies. Compromise settlements,
 
 ## Peace Operations
 
-Peace operations encompass conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding. These actions aim to observe, monitor, and contribute to rebuilding war-torn societies. The effectiveness of peace operations varies based on factors such as consent, neutrality, impartiality, the spectrum of force, and authorization.
+**Peace operations** encompass conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding. These actions aim to observe, monitor, and contribute to rebuilding war-torn societies. The effectiveness of peace operations varies based on factors such as consent, neutrality, impartiality, the spectrum of force, and authorization.
 
 <div class="table-wrapper" markdown="block">
 

@@ -2,13 +2,14 @@
 title: Women's Economic Roles And The Development Paradigm
 slug: women-economic-role
 abstract: Women's full participation in the economy is crucial for sustainable development and economic growth. This article explores women's economic roles, gender gaps, and policy approaches to promote women's empowerment.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction 
 
-Women make up half of the world's population and their full participation in economic activity is essential for achieving sustainable development and economic growth globally. Despite major progress in recent decades, women continue to face systemic barriers that restrict their economic opportunities and hinder development outcomes.  
+**Women** make up half of the world's population and their full participation in **economic** activity is essential for achieving sustainable development and economic growth globally. Despite major progress in recent decades, women continue to face systemic barriers that restrict their economic opportunities and hinder development outcomes.  
 
-However, prevailing social, cultural and institutional norms still constrain women's agency and economic potential. Persistent gender inequalities in earnings, employment, leadership and asset ownership continue to undermine inclusive growth. Tackling discriminatory laws and social norms, while expanding access to resources and opportunities for women, can yield a triple dividend - for women, their families, and nations' economies.  
+However, prevailing social, cultural and institutional norms still constrain women's agency and economic potential. Persistent **gender** inequalities in earnings, employment, leadership and asset ownership continue to undermine inclusive growth. Tackling discriminatory laws and social norms, while expanding access to resources and opportunities for women, can yield a triple dividend - for women, their families, and nations' economies.  
 
 The following sections will examine women's roles in both the productive economy and the care economy, analyze gender gaps across economic indicators, and discuss policy approaches to promote women's economic empowerment. The evidence affirms that achieving gender equality is not only a matter of rights, but smart economics. Unleashing women's full potential can provide a powerful and transformative boost to development worldwide.
 
@@ -32,7 +33,7 @@ The feminization of poverty refers to the increasing prevalence and proportion o
 
 Global data shows that women are more likely to live in poverty than men. For example, estimates suggest over 600 million women live in extreme poverty globally compared to just under 500 million men. The prevalence and depth of poverty is often greater for women across regions like sub-Saharan Africa, South Asia, and Latin America.  
 
-Several factors drive the feminization of poverty. Women face significant barriers to paid work and decent jobs, and tend to be concentrated in informal, vulnerable, and low-paying sectors. Household dynamics often allocate more resources to male members. Globalization has adversely impacted women workers in sectors like agriculture and textiles. Discrimination in institutions like credit and financial markets also hamper women entrepreneurs and breadwinners.  
+Several factors drive the feminization of poverty. Women face significant barriers to paid work and decent jobs, and tend to be concentrated in informal, vulnerable, and low-paying sectors. Household dynamics often allocate more resources to male members. Globalization has adversely impacted women workers in sectors like agriculture and textiles. Discrimination in institutions like credit and financial markets also hamper **women entrepreneurs** and breadwinners.  
 
 Tackling the root causes of gender gaps in economic participation, wages, and access to resources is key to reversing the feminization of poverty. More equitable development policies, programs, and interventions are needed to uplift poor women out of poverty.
 

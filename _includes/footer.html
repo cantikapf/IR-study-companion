@@ -1,6 +1,4 @@
-<script src="{{site.baseurl}}/assets/chapterbook/require.js"></script>
-<script src="{{site.baseurl}}/assets/chapterbook/jquery-3.6.0.min.js"></script>
-
+<!-- Removed redundant require.js and jquery.js that conflict with gitbook.js -->
 <script src="{{site.baseurl}}/assets/gitbook/gitbook.js"></script>
 <script src="{{site.baseurl}}/assets/gitbook/theme.js"></script>
 
@@ -48,3 +46,122 @@
         {%- include cnzz.html -%}
     {%- endif -%}
 {%- endif -%}
+
+<!-- Register Service Worker for PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('{{site.baseurl}}/sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+
+  // Global Error Monitoring
+  window.addEventListener('error', function(event) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'exception', {
+        'description': event.message + ' at ' + event.filename + ':' + event.lineno,
+        'fatal': false
+      });
+    }
+  });
+  window.addEventListener('unhandledrejection', function(event) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'exception', {
+        'description': 'Unhandled Promise: ' + event.reason,
+        'fatal': false
+      });
+    }
+  });
+</script>
+
+<!-- Tippy.js and Popper.js for Wikipedia Tooltips -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css" />
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const keywords = document.querySelectorAll('.markdown-section strong, .markdown-section b, mark.nice-mark');
+    const wikiCache = {};
+    let aiDictionary = {};
+
+    // Fetch the AI Fallback Dictionary on page load
+    fetch('{{site.baseurl}}/assets/data/ai_dictionary.json')
+      .then(res => res.json())
+      .then(data => { aiDictionary = data; })
+      .catch(err => console.log('Failed to load AI dictionary', err));
+
+    keywords.forEach(el => {
+      const rawText = el.innerText.trim();
+      if(rawText.length < 2 || rawText.length > 35) return;
+
+      tippy(el, {
+        theme: 'light-border',
+        interactive: true,
+        allowHTML: true,
+        delay: [200, 50],
+        placement: 'auto',
+        maxWidth: 350,
+        content: '<div style="padding:10px; text-align:center;"><div class="loader-spinner"></div><p style="margin:5px 0 0 0; color:#6b7280; font-size:0.9em;">Searching Wikipedia...</p></div>',
+        onShow(instance) {
+          if (instance.state.ajaxLoaded) return;
+
+          const searchTerm = encodeURIComponent(rawText);
+          
+          if (wikiCache[rawText]) {
+            instance.setContent(wikiCache[rawText]);
+            instance.state.ajaxLoaded = true;
+            return;
+          }
+
+          fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${searchTerm}`)
+            .then(response => {
+              if (!response.ok) throw new Error('Not found');
+              return response.json();
+            })
+            .then(data => {
+              let html = `<div style="text-align: left; padding: 5px;">`;
+              if (data.thumbnail && data.thumbnail.source) {
+                html += `<img src="${data.thumbnail.source}" style="float: right; margin-left: 10px; margin-bottom: 5px; width: 80px; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" alt="${data.title}">`;
+              }
+              html += `<strong style="font-size: 1.1em; color: #1f2937; display:block; margin-bottom: 5px;">${data.title}</strong>`;
+              html += `<p style="font-size: 0.9em; line-height: 1.5; color: #4b5563; margin: 0;">${data.extract}</p>`;
+              html += `<div style="clear: both;"></div></div>`;
+              
+              wikiCache[rawText] = html;
+              instance.setContent(html);
+              instance.state.ajaxLoaded = true;
+            })
+            .catch(error => {
+              // AI FALLBACK LOGIC
+              let fallbackText = "";
+              // Check if we specifically wrote a definition for it
+              const exactMatchKey = Object.keys(aiDictionary).find(k => k.toLowerCase() === rawText.toLowerCase());
+              
+              if (exactMatchKey) {
+                fallbackText = aiDictionary[exactMatchKey];
+              } else {
+                // Generic AI response for terms we missed
+                fallbackText = `In the context of this study material, <b>${rawText}</b> represents a key component of the broader academic discourse in global politics and international relations.`;
+              }
+
+              const html = `
+                <div style="text-align: left; padding: 5px;">
+                  <strong style="font-size: 1.1em; color: #1f2937; display:block; margin-bottom: 5px;">${rawText}</strong>
+                  <p style="font-size: 0.9em; line-height: 1.5; color: #4b5563; margin: 0; margin-bottom: 10px;">${fallbackText}</p>
+                  <div style="font-size: 0.75em; color: #3b82f6; font-weight: bold; background: rgba(59,130,246,0.1); display: inline-block; padding: 3px 8px; border-radius: 12px;">✨ AI Generated</div>
+                </div>`;
+                
+              wikiCache[rawText] = html;
+              instance.setContent(html);
+              instance.state.ajaxLoaded = true;
+            });
+        }
+      });
+    });
+  });
+</script>

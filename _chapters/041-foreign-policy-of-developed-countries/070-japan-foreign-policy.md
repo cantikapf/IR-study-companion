@@ -2,11 +2,12 @@
 title: Japan Foreign Policy
 slug: japan-foreign-policy
 abstract: Explores the power struggles between key actors, the impact of central government reforms, and the influence of external pressures in Japan's foreign policy making.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Introduction
 
-Foreign policy making in Japan is a contentious process that involves various institutional and ideational factors. The weak position of the prime minister vis-à-vis fragmented sub-governments, the nexus between politicians, bureaucrats, and businesspeople, and the existence of powerful veto players are some of the institutional constraints that put into question the prime minister's and foreign minister's abilities to exert leadership in a top-down manner. 
+**Foreign policy** making in **Japan** is a contentious process that involves various institutional and ideational factors. The weak position of the **prime minister** vis-à-vis fragmented sub-governments, the nexus between politicians, bureaucrats, and businesspeople, and the existence of powerful veto players are some of the institutional constraints that put into question the prime minister's and foreign minister's abilities to exert leadership in a top-down manner. 
 
 On the other hand, the antimilitary social norms and culture, stemming from the traumatic history of the country, are considered by constructivists as dominant domestic factors behind Tokyo's pacifist security policy. The study of foreign policy making in Japan also highlights the impact of central government reforms on the balance of power in foreign policy making.
 
@@ -50,7 +51,7 @@ He wanted Japan to assume an "honorable position" in the international community
 
 ## Historical Problem
 
-During the Koizumi administration, history problems caused a significant deterioration in Japan's relations with China and South Korea. The prime minister's obstinate yearly visits to the Yasukuni Shrine and the failure to address concerns over Japanese history textbooks led to anti-Japanese sentiments in these countries. 
+During the Koizumi administration, history problems caused a significant deterioration in Japan's relations with China and **South Korea**. The prime minister's obstinate yearly visits to the Yasukuni Shrine and the failure to address concerns over Japanese history textbooks led to anti-Japanese sentiments in these countries. 
 
 The Ministry of Foreign Affairs (MOFA) bureaucrats, concerned about the impact of history problems on diplomacy, tried to convince the prime minister to stop visiting Yasukuni. Even some of Koizumi's closest associates, such as Chief Cabinet Secretary Fukuda Yasuo, advocated for a more accommodative stance towards neighboring countries. The contentious nature of Japanese diplomacy was revealed both in the Kantei–MOFA–ruling party triangle and within the ruling party itself. 
 

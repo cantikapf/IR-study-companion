@@ -2,17 +2,18 @@
 title: World Trading System In The 20th Century And Beyond
 slug: world-trading-system
 abstract: This page provides an introduction to international economics, covering topics such as international trade theory, patterns of trade, trade policy, international finance, and the role of international trade organizations.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction to International Economics
 
-International economics refers to a study of international forces that influence the domestic conditions of an economy and shape the economic relationship between countries. It examines the interconnections between national economies and their interaction with the rest of the world. 
+**International** economics refers to a study of international forces that influence the domestic conditions of an economy and shape the economic relationship between countries. It examines the interconnections between national economies and their interaction with the rest of the world. 
 
 International economics can be divided into two broad areas of study:
 
-**International Trade**
+**International **Trade**
 
-International trade examines the real transactions between countries including exports, imports, and balance of payments. It focuses on topics like comparative advantage, patterns of trade, protectionism vs free trade, and the impact of trade policies. International trade theory aims to understand the gains from trade, interaction between countries, and trade flows.
+**International trade** examines the real transactions between countries including exports, imports, and balance of payments. It focuses on topics like comparative advantage, patterns of trade, protectionism vs free trade, and the impact of trade policies. International trade theory aims to understand the gains from trade, interaction between countries, and trade flows.
 
 **International Finance** 
 
@@ -46,7 +47,7 @@ The Linder hypothesis states that countries with similar demand structures will 
 
 ### Trade Policy 
 
-Governments use trade policy tools such as tariffs, quotas, export subsidies, and voluntary export restraints to influence trade flows. These policy tools have different economic effects.
+Governments use **trade policy** tools such as tariffs, quotas, export subsidies, and voluntary export restraints to influence trade flows. These policy tools have different economic effects.
 
 Optimal tariff theory shows that under certain assumptions, a large country can use an import tariff to improve its welfare at the expense of its trading partner. However, such beggar-thy-neighbor policies lower global welfare if trading partners retaliate. Strategic trade policy involves government intervention to help domestic firms compete with foreign rivals.
 

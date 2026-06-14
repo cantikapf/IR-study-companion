@@ -2,22 +2,23 @@
 slug: birth-prc
 title: The Birth and Rise of the People’s Republic of China
 abstract: This chapter will cover the birth and rise of the People’s Republic of China
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Introduction
 
-The period from the 1920s to the 1970s was a tumultuous and transformative time in China's history. Coming out of the fall of the Qing dynasty in 1912, China struggled to overcome foreign domination, internal divisions, and occupation by Japan to establish a strong, unified nation. 
+The period from the 1920s to the 1970s was a tumultuous and transformative time in **China**'s history. Coming out of the fall of the Qing dynasty in 1912, China struggled to overcome foreign domination, internal divisions, and occupation by Japan to establish a strong, unified nation. 
 
-During the 1920s and 1930s, China was embroiled in conflict between the Nationalists or Guomindang led by Chiang Kai-shek and the Communists led by Mao Zedong. This rivalry was interrupted by the Second Sino-Japanese War from 1937-1945, during which China faced a devastating invasion by Imperial Japan. After the defeat of Japan, the Chinese Civil War between the Nationalists and Communists resumed in earnest. This culminated in the 1949 Revolution, where the Communists emerged victorious under Mao Zedong's leadership.
+During the 1920s and 1930s, China was embroiled in conflict between the Nationalists or Guomindang led by Chiang Kai-shek and the Communists led by **Mao Zedong**. This rivalry was interrupted by the Second Sino-Japanese War from 1937-1945, during which China faced a devastating invasion by Imperial Japan. After the defeat of Japan, the Chinese Civil War between the Nationalists and Communists resumed in earnest. This culminated in the 1949 Revolution, where the Communists emerged victorious under Mao Zedong's leadership.
 
-The establishment of the People's Republic of China in 1949 marked the beginning of dramatic social and economic changes under Communist Party rule. The first decade saw campaigns aimed at rapid industrialization, agricultural collectivization, and socialist transformation. However, devastating policies like the Great Leap Forward led to famine and millions of deaths. 
+The establishment of the People's Republic of China in 1949 marked the beginning of dramatic social and economic changes under **Communist Party** rule. The first decade saw campaigns aimed at rapid industrialization, agricultural collectivization, and socialist transformation. However, devastating policies like the Great Leap Forward led to famine and millions of deaths. 
 
-During the 1960s and early 1970s, Mao initiated mass mobilization campaigns like the Great Proletarian Cultural Revolution to renew communist ideology. However, these resulted in widespread violence, youth militancy, and economic disruption. By Mao's death in 1976, China was ready to gradually embrace pragmatism, economic development, and a move toward capitalism starting in the late 1970s under Deng Xiaoping.
+During the 1960s and early 1970s, Mao initiated mass mobilization campaigns like the Great Proletarian **Cultural Revolution** to renew communist ideology. However, these resulted in widespread violence, youth militancy, and economic disruption. By Mao's death in 1976, China was ready to gradually embrace pragmatism, economic development, and a move toward capitalism starting in the late 1970s under Deng Xiaoping.
 
 ## Conflict Between Communists & Nationalists in 1920s-1930s
 
-In the aftermath of the 1911 Xinhai Revolution, China descended into a period of internal strife and conflict between rival warlords vying for control. Out of this chaos emerged two major political parties - the Chinese Communist Party (CCP) and the Nationalist Party or Kuomintang (KMT). 
+In the aftermath of the 1911 Xinhai Revolution, China descended into a period of internal strife and conflict between rival warlords vying for control. Out of this chaos emerged two major political parties - the **Chinese Communist** Party (CCP) and the Nationalist Party or Kuomintang (KMT). 
 
 The CCP was founded in 1921 in Shanghai, led by Chen Duxiu and Li Dazhao. Inspired by Marxist-Leninist ideology, the CCP attracted support from intellectuals, students and urban workers. In 1927, Mao Zedong emerged as a paramount leader of the CCP through his organization of peasant uprisings in Hunan province. Mao advocated a rural-based revolutionary strategy, mobilizing the peasantry rather than the urban proletariat. 
 

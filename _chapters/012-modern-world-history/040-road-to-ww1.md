@@ -2,12 +2,13 @@
 slug: road-to-ww1
 title: The Road to the First World War
 abstract: This chapter will explain the background of the First World War
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Introduction 
 
-The path to World War I was paved by a complex web of factors that turned a regional dispute in the Balkans into a global conflagration. Alliances, imperialism, militarism, nationalism, and industrialization all contributed to the tensions that exploded into full-scale war in 1914. The crisscrossing nature of European alliances meant that the assassination of Archduke Franz Ferdinand in Sarajevo triggered a domino effect, with the major powers drawn into the war through the defense pacts they had signed. The Great Powers of Europe, including Britain, France, Germany, Austria-Hungary and Russia, had been preparing for a large-scale war for years through massive military buildups and aggressive foreign policies aimed at expanding their colonial empires. The cultivation of strident nationalism by political elites further ratcheted up tensions between countries and created a population eager for war. New technologies like the machine gun and railroad heightened confidence in offensive battlefield strategies. Ultimately, the combination of these complex factors created a powder keg in Europe that was ignited by the spark of an assassination in 1914.
+The path to **World **War** I was paved by a complex web of factors that turned a regional dispute in the Balkans into a global conflagration. Alliances, imperialism, militarism, nationalism, and industrialization all contributed to the tensions that exploded into full-scale war in 1914. The crisscrossing nature of European alliances meant that the assassination of Archduke Franz Ferdinand in Sarajevo triggered a domino effect, with the major powers drawn into the war through the defense pacts they had signed. The Great Powers of Europe, including Britain, France, **Germany**, Austria-Hungary and Russia, had been preparing for a large-scale war for years through massive military buildups and aggressive foreign policies aimed at expanding their colonial empires. The cultivation of strident nationalism by political elites further ratcheted up tensions between countries and created a population eager for war. New technologies like the machine gun and railroad heightened confidence in offensive battlefield strategies. Ultimately, the combination of these complex factors created a powder keg in Europe that was ignited by the spark of an assassination in 1914.
 
 ## Alliances
 
@@ -17,13 +18,13 @@ The path to World War I was paved by a complex web of factors that turned a regi
 
 <br>
 
-Alliances bound European nations in complex webs of agreements in the early 20th century. The two major opposing alliances were the Triple Entente and the Triple Alliance. 
+Alliances bound European nations in complex webs of agreements in the early 20th century. The two major opposing alliances were the **Triple Entente** and the Triple Alliance. 
 
 The Triple Entente consisted of Russia, France, and Britain. Russia aligned with France out of a mutual distrust and history of conflict with Germany and Austria-Hungary. Britain later joined to counter rising German naval power. The Triple Entente pledged support to each other if attacked.
 
 The Triple Alliance consisted of Germany, Austria-Hungary, and Italy. Bismarck originally established this alliance to isolate France diplomatically after the Franco-Prussian war. Italy was promised territorial gains from Austria-Hungary to secure their participation. However, Italy left the Triple Alliance in 1914 due to disputes over territory.
 
-Tensions escalated as the alliances turned into rival blocs. When Austria-Hungary declared war on Serbia after the assassination of Archduke Ferdinand, it triggered a domino effect of military mobilizations and declarations of war within the alliances. Russia mobilized to support Serbia, Germany declared war on Russia, and France was brought into the war based on their alliance with Russia. The complex web of alliances was a major factor leading to the outbreak of the first global war.
+Tensions escalated as the alliances turned into rival blocs. When Austria-Hungary **declared war** on Serbia after the assassination of Archduke Ferdinand, it triggered a domino effect of military mobilizations and declarations of war within the alliances. Russia mobilized to support Serbia, Germany declared war on Russia, and France was brought into the war based on their alliance with Russia. The complex web of alliances was a major factor leading to the outbreak of the first global war.
 
 ## Imperialism
 

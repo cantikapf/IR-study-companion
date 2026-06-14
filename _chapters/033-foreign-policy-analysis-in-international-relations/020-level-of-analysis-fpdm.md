@@ -2,15 +2,16 @@
 title: Level Of Analysis In Foreign Policy Decision Making
 slug: level-of-analysis-fpdm
 abstract: The explanation of individual, state, and system level of analysis in foreign policy decision making.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Level of Analysis in Foreign Policy Decision Making
 
 ### Individual-level analysis
 
-Individual-level analysis involves understanding how the human decision-making process influences foreign policy. Foreign policy making is much more likely than domestic policy making to be centered on a country’s top leadership.
+Individual-level **analysis** involves understanding how the human decision-making process influences **foreign** **policy**. Foreign policy making is much more likely than domestic policy making to be centered on a country’s top leadership.
 
-Some key factors considered in individual-level analysis:
+Some key **factors** considered in individual-level analysis:
 
 - **Cognitive Factors**: How do decision makers perceive the world and process information? What are their core beliefs and paradigms? How do they interpret new information? Cognitive biases can skew perceptions.
 - **Emotional Factors**: Emotions like fear, anger, or grief can shape policy choices. Stressful situations may impair rational thinking. Psychological traits like risk tolerance play a role.
@@ -52,7 +53,7 @@ Economic interdependence between states and relative gains/losses factor into fo
 
 Prevailing norms and expectations around issues like human rights, non-intervention, and weapons non-proliferation shape foreign policy options. Reputation and credibility matter when states consider adhering to or violating international norms. Norms evolve over time and state actions can modify norms.
 
-<center> <img src="static\modules\levels of analysis.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/levels of analysis.png " alt="" width="70%" /> </center>
 
 ## Case Study: The Vietnam War
 

@@ -2,11 +2,12 @@
 title: Global Security Issues
 slug: global-security-issues
 abstract: The concept of security in International Relations context
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 ## Introduction
 
-Concepts of security have evolved significantly beyond traditional military frameworks and national security perspectives. Security is increasingly recognized as a complex, multidimensional phenomenon encompassing political, economic, societal and environmental aspects. While traditional approaches focused narrowly on national interests and the balance of power between states, contemporary perspectives argue for expanded notions of security centered on individuals, groups and humanity as a whole. 
+Concepts of **security** have evolved significantly beyond traditional military frameworks and **national security** perspectives. Security is increasingly recognized as a complex, multidimensional phenomenon encompassing political, economic, societal and environmental aspects. While traditional approaches focused narrowly on national interests and the balance of power between **states**, contemporary perspectives argue for expanded notions of security centered on individuals, groups and humanity as a whole. 
 
 The end of the Cold War brought increased debate over the meaning of security. As the threat of direct military confrontation between superpowers declined, new risks and dangers emerged on a global scale. Globalization, the rise of non-state actors, climate change, cyberattacks, terrorism, and pandemics present interdependent dangers unconstrained by national borders. This complex of interconnected threats requires rethinking traditional state-centric ideas of security focused solely on protecting territory from military attack.
 
@@ -14,9 +15,9 @@ Expanding conceptions of security beyond the traditional understandings rooted i
 
 ## The Traditional Approach to National Security 
 
-The traditional approach to national security focuses on nation-states as the primary actors in an anarchic international system. This realist perspective views the international arena as akin to a Hobbesian state of nature in which states must rely on self-help to survive. With no overarching authority, states operate in a self-help system and power capabilities determine security.
+The traditional approach to national security focuses on nation-states as the primary actors in an anarchic **international** system. This realist perspective views the international arena as akin to a Hobbesian state of nature in which states must rely on self-help to survive. With no overarching authority, states operate in a self-help system and power capabilities determine security.
 
-According to realists, the international structure compels states to pursue power; especially military power. State sovereignty and the balance of power between states is crucial for stability and preventing hegemony by one state. International institutions have a limited effect.  
+According to realists, the international structure compels states to pursue power; especially military power. State sovereignty and the balance of power between states is crucial for stability and preventing hegemony by one state. **International institutions** have a limited effect.  
 
 The traditional security perspective is state-centric with military power seen as the best guarantor of security. It focuses on concepts like deterrence, offensive and defensive capabilities, alliances, and balancing against threats. The primary threats are viewed as coming from rival states. 
 

@@ -2,13 +2,14 @@
 title: 'Neoliberalism Explained: The Ideology That Transformed Modern Capitalism'
 slug: neoliberalism-policy
 abstract: The policy of Neoliberalism in International Political Economy
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Introduction
 
-Neoliberalism is an economic and political ideology that gained significant influence in the late 20th century. At its core, neoliberalism revolves around limited government intervention, strong property rights, free markets, and minimal state involvement in economic affairs. 
+Neoliberalism is an **economic** and political ideology that gained significant influence in the late 20th century. At its core, neoliberalism revolves around limited **government** intervention, strong property rights, **free markets**, and minimal **state** involvement in economic affairs. 
 
-This ideology aims to foster economic prosperity by emphasizing individual entrepreneurial freedoms, self-regulating markets, and a restricted role of the state. Neoliberal thought asserts that the market is most efficient at allocating resources and generating wealth in society.
+This ideology aims to foster economic prosperity by emphasizing individual entrepreneurial freedoms, self-regulating markets, and a restricted role of the state. **Neoliberal** thought asserts that the market is most efficient at allocating resources and generating wealth in society.
 
 By reducing barriers to trade, encouraging privatization, cutting taxes, and limiting government regulation and spending, neoliberal policies intend to unleash the full potential of free market capitalism. This hands-off approach envisions that economic advancement will occur most successfully with minimal state interference.
 

@@ -2,6 +2,7 @@
 title: Institution In International Security
 slug: institution-security
 abstract: This chapter will explain the institution in international security.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
@@ -12,8 +13,8 @@ abstract: This chapter will explain the institution in international security.
 
 |  | **Realist Definition** | **Alternative Definition** |
 | ---- | ---- | ---- |
-| 1. | *Alliance / collective defense*<br><br>Structures whereby regional actor seek to ally themselves with other like-minded states against a perceived common threat / enemy. Members can influence each other's security-policy decision making process<br><br>Example: NATO, US-Japan Mutual Security Treat, ANZUS | *Common security*<br><br>Structures whereby superpower rivals acknowledge that unilateral security is no longer possible as states are increasingly economically, culturally, politically, and military interdependent<br><br>Example: Warsaw Pact, European Neutral, Japan, 3rd World Pact |
-| 2. | *Collective Security*<br><br>Structures whereby the commitment is to respond to an unknown / unspecified aggressor in support of an unknown victim<br><br>Members agree to use peaceful means to settle their disputes and to act collectively to prevent / remove any threat to the peace & stability of the individual states<br><br>Example: UN | *Comprehensive Security*<br><br>Structure whereby states expand it's understanding of security to include non-military issues<br><br>Example: Japanese security policy, ASEAN concept of national resilience |
+| 1. | *Alliance / collective defense*<br><br>Structures whereby regional actor seek to ally themselves with other like-minded states against a perceived common threat / enemy. Members can influence each other's **security**-policy decision making process<br><br>Example: NATO, US-Japan Mutual Security Treat, ANZUS | *Common security*<br><br>Structures whereby superpower rivals acknowledge that unilateral security is no longer possible as states are increasingly economically, culturally, politically, and military interdependent<br><br>Example: Warsaw Pact, European Neutral, Japan, 3rd World Pact |
+| 2. | ***Collective Security***<br><br>Structures whereby the commitment is to respond to an unknown / unspecified aggressor in support of an unknown victim<br><br>Members agree to use peaceful means to settle their disputes and to act collectively to prevent / remove any threat to the peace & stability of the individual states<br><br>Example: UN | *Comprehensive Security*<br><br>Structure whereby states expand it's understanding of security to include non-military issues<br><br>Example: Japanese security policy, ASEAN concept of national resilience |
 | 3. | *Concert Security*<br><br>Structures whereby only the great powers work together to prevent aggression<br><br>Members are work together to resolves disputes / crises through informal negotiation<br>\|<br>Example: Concert of Europe in the Post-Napoleonic Europe of the 19th century | *Cooperative Security*<br><br>Structures whereby states behaviors' about security changes from one of competition with other states to cooperate with those states<br><br>Example: Canada & Australia's approach to security, workshops on managing potential conflicts in the South China Sea |
     
 </div>
@@ -32,7 +33,7 @@ Example:
 
 ## Regional Institution
 
-The end of the Cold War brought a seismic shift in the global order, with regional alliances and institutions adapting to the disappearance of the Cold War bipolar world. With the Soviet Union's collapse, regional security dynamics underwent transformation. From the 1990s onwards, while some institutions dissolved or reinvented their purpose, like the Warsaw Pact, others expanded their membership and scope, as in the case of NATO and the EU. The post-Cold War period has witnessed the ascendance of regional security frameworks centered around shared identities, interests, and perceived threats.
+The end of the **Cold War** brought a seismic shift in the global order, with regional alliances and institutions adapting to the disappearance of the Cold War bipolar world. With the Soviet Union's collapse, regional security dynamics underwent transformation. From the 1990s onwards, while some institutions dissolved or reinvented their purpose, like the Warsaw Pact, others expanded their membership and scope, as in the case of NATO and the EU. The post-Cold War period has witnessed the ascendance of regional security frameworks centered around shared identities, interests, and perceived threats.
 
 States engage in regional security institutions as responses to power shifts in the international system and see them as tools for confidence-building, conflict prevention, and upholding sovereignty. These institutions encompass formal alliances like ANZUS and informal groupings like ASEAN, aiming to tackle both traditional and non-traditional security threats. Their effectiveness varies based on commitment to cooperation, resources, mandate, and cohesion. Regional institutions complement the UN's global approach to peace and security, helping to manage conflicts and build trust locally. However, they face limitations when member states' interests diverge or when crises spill beyond regional boundaries.
 
@@ -76,7 +77,7 @@ The United Nations was founded in 1945 with the aim of maintaining international
 
 The UN's main security roles are carried out by the Security Council, which is charged with maintaining peace, authorizing military action, enacting economic sanctions, and admitting new members. The Security Council has faced challenges in recent decades as the nature of conflicts has changed. During the Cold War, it was often paralyzed by vetoes from the US and USSR. In the post-Cold War era, most conflicts have been intrastate rather than between countries. This poses difficulties for traditional UN peacekeeping operations, which rely on host state consent.
 
-<center> <img src="static\modules\UN.png" alt="UN" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/UN.png" alt="UN" width="70%" /> </center>
 
 ## Nuclear Institutions
 

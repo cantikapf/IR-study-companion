@@ -2,15 +2,16 @@
 title: 'Global Economic Architecture: The View on Global Economic Hegemony'
 slug: economic-hegemony
 abstract: International politics and the global economy are closely linked to the idea of hegemonic stability, which argues that a dominant world power is critical in upholding international rules and providing public goods. This material examines the characteristics and responsibilities of a hegemonic power and evaluates China, the United States, and the European Union as contenders for global economic hegemony.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-International politics and the global economy are closely linked to the idea of hegemonic stability. This concept holds that a dominant world power, known as the hegemon, is critical in upholding international rules, facilitating exchange, and providing public goods. According to the theory of hegemonic stability, the presence of a hegemonic power creates a stable international system. 
+International politics and the global economy are closely linked to the idea of **hegemonic** stability. This concept holds that a dominant world **power**, known as the hegemon, is critical in upholding international rules, facilitating exchange, and providing public goods. According to the theory of hegemonic stability, the presence of a **hegemonic power** creates a stable international system. 
 
-The hegemonic stability theory argues that the international system functions best when there is a single, strong actor that can create and enforce the rules of interaction. This dominant state must be willing and able to provide key collective goods, such as a stable currency, freedom of navigation, and support for open markets. By taking on a leadership role, the hegemon encourages cooperation and discourages aggression within the international order. However, maintaining hegemonic power also requires significant resources and capabilities.
+The hegemonic stability theory argues that the international system functions best when there is a single, strong actor that can create and enforce the rules of interaction. This dominant state must be willing and able to provide key collective goods, such as a stable **currency**, freedom of navigation, and support for open markets. By taking on a leadership role, the hegemon encourages cooperation and discourages aggression within the international order. However, maintaining hegemonic power also requires significant resources and capabilities.
 
-There is debate over which country today constitutes the hegemonic power. China, the United States, and the European Union are often put forth as contenders for this leadership position in the current global order. By examining the characteristics and responsibilities of hegemonic states, it becomes clearer which nation is able to perform this pivotal role.
+There is debate over which country today constitutes the hegemonic power. **China**, the United States, and the European Union are often put forth as contenders for this leadership position in the current global order. By examining the characteristics and responsibilities of hegemonic states, it becomes clearer which nation is able to perform this pivotal role.
 
 ## Characteristics of a Hegemonic Power
 

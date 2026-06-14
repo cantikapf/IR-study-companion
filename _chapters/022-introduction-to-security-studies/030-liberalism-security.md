@@ -2,17 +2,18 @@
 title: Liberalism In Security Studies
 slug:  liberalism-security
 abstract: Liberalism concept in security studies.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 ## Introduction
 
-Liberalism is a political ideology centered around values like individual freedom, political participation, private property, equal opportunity, and free will. In the context of security studies, liberalism refers to a set of theories that aim to promote peace and cooperation between states. 
+**Liberalism** is a political ideology centered around values like individual freedom, political participation, private property, equal opportunity, and free will. In the context of security studies, liberalism refers to a set of theories that aim to promote **peace** and cooperation between **states**. 
 
-Liberalism envisions a world where democracy, economic integration, and international institutions help states overcome mistrust and avoid violent conflict. The liberal peace encompasses the idea that principles like open markets, rule of law, and democratic norms foster security and prosperity.
+Liberalism envisions a world where democracy, economic integration, and international **institutions** help states overcome mistrust and avoid violent conflict. The liberal peace encompasses the idea that principles like open markets, rule of law, and **democratic** norms foster security and prosperity.
 
 Various strands of liberal thought contribute to our understanding of how to construct a more peaceful world order. Liberal theories argue states can transcend conflict and competition through embracing tenets of democracy, economic interdependence, and institutionalized cooperation. 
 
-<center> <img src="static\modules\liberalism.png" alt="liberalism" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/liberalism.png" alt="liberalism" width="70%" /> </center>
 
 ## Traditional Liberalism
 

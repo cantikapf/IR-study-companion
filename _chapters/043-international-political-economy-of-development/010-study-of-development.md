@@ -2,20 +2,21 @@
 title: Study Of Development
 slug: study-of-development
 abstract: This chapter explores the study of development, starting with the history of development and the Industrial Revolution in Britain. It discusses the impact of colonialism on development, economic growth in Western nations, global inequality, post-WW2 aid, the Millennium Development Goals (MDGs), and the Sustainable Development Goals (SDGs). The chapter also delves into development thought and how it shapes societies and policies. 
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## The History of Development
 ### Industrial Revolution in Britain 
 
-The Industrial Revolution began in Britain in the late 18th century with the introduction of machines and factories powered by steam engines. This replaced the previous system of cottage industries and manual labor. 
+The **Industrial Revolution** began in Britain in the late 18th century with the introduction of machines and factories powered by steam engines. This replaced the previous system of cottage industries and manual labor. 
 
-The development of the steam engine was revolutionary, allowing the efficient conversion of heat energy into mechanical work. James Watt patented a steam engine design in 1769 that was vastly more efficient than earlier versions. 
+The **development** of the steam engine was revolutionary, allowing the efficient conversion of heat energy into mechanical work. James Watt patented a steam engine design in 1769 that was vastly more efficient than earlier versions. 
 
 The mechanization of textile production in factories marked the beginning of the Industrial Revolution. The spinning jenny, water frame, and spinning mule enabled the mass production of cotton textiles. The shift from hand production methods to machines dramatically increased the productivity of textile workers.
 
 Britain's supplies of coal and iron ore fueled the Industrial Revolution. Coal powered steam engines while iron was used to make machines, tools, and buildings. British inventors developed machines and manufacturing techniques that spread across Europe and America in the early 19th century.
 
-The factory system concentrated workers and machines in one location under a central authority. Factories emerged across Britain's coalfields and textile regions during the Industrial Revolution. This new system led to rapid economic growth along with urbanization and social changes.
+The factory system concentrated workers and machines in one location under a central authority. Factories emerged across Britain's coalfields and textile regions during the Industrial Revolution. This new system led to rapid **economic growth** along with urbanization and social changes.
 
 ### Colonialism
 
@@ -60,7 +61,7 @@ Still, foreign aid from developed to developing countries continues to play a ma
 
 ### Millennium Development Goals
 
-In the year 2000, all 189 United Nations member states and 23 international organizations committed to help achieve 8 international development goals by the year 2015. The United Nations Millennium Declaration, signed in September 2000, was the first step toward the Millennium Development Goals (MDGs). 
+In the year 2000, all 189 United Nations member states and 23 international organizations committed to help achieve 8 international **development goals** by the year 2015. The United Nations Millennium Declaration, signed in September 2000, was the first step toward the Millennium Development Goals (MDGs). 
 
 The 8 MDGs were:
 
@@ -77,7 +78,7 @@ The MDGs aimed to spur development by improving social and economic conditions i
 
 ### Sustainable Development Goals
 
-In 2015, the United Nations General Assembly adopted the 2030 Agenda for Sustainable Development, which includes 17 Sustainable Development Goals (SDGs) for the year 2030. The SDGs build on the Millennium Development Goals (MDGs) which spanned 2000-2015, but take a broader approach to development. 
+In 2015, the United Nations General Assembly adopted the 2030 Agenda for **Sustainable Development**, which includes 17 Sustainable Development Goals (SDGs) for the year 2030. The SDGs build on the Millennium Development Goals (MDGs) which spanned 2000-2015, but take a broader approach to development. 
 
 The 17 SDGs incorporate economic, social, and environmental dimensions of sustainable development, with an emphasis on leaving no one behind. The goals cover poverty eradication, food security, health, education, gender equality, clean water and sanitation, affordable clean energy, decent work, infrastructure and industrialization, inequality, sustainable cities, responsible consumption, climate action, life below water, life on land, peace, justice and institutions, and partnerships.
 

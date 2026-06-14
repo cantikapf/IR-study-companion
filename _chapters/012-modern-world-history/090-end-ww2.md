@@ -2,16 +2,17 @@
 slug: end-ww2
 title: The Ending of The Second World War
 abstract: This chapter will cover the ending of the Second World War
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Introduction: End of World War II transformed the global order
 
-The end of World War II marked a pivotal turning point in world history. With the surrender of the Axis powers in Europe on May 8, 1945 (Victory in Europe Day) and Imperial Japan on September 2, 1945 (Victory over Japan Day), the most widespread and deadliest war mankind had ever seen finally came to a close after nearly six years of brutal conflict.
+The end of **World** **War** II marked a pivotal turning point in world history. With the surrender of the Axis powers in Europe on May 8, 1945 (Victory in Europe Day) and Imperial Japan on September 2, 1945 (Victory over Japan Day), the most widespread and deadliest war mankind had ever seen finally came to a close after nearly six years of brutal conflict.
 
 More than 70 million people were killed during World War II, making it the bloodiest war in human history. The war caused unprecedented devastation worldwide, with countless cities and towns reduced to rubble. However, the end of the global conflict also brought forth seeds of renewal, setting the stage for the emergence of the United Nations, the beginning of the Cold War between rival superpowers, and the start of decolonization in Africa and Asia.
 
-The aftermath of World War II ushered in a profoundly changed world order. With Europe in ruins and economies across the globe devastated, the center of power shifted from old European colonial powers like Britain and France to two new superpowers - the United States and the Soviet Union. The global political alignment was redrawn, relationships between nations were reconfigured, independence movements gained momentum, and the shadow of nuclear weapons began to loom over humanity.
+The aftermath of World War II ushered in a profoundly changed world order. With Europe in ruins and economies across the globe devastated, the center of power shifted from old European colonial powers like Britain and France to two new superpowers - the **United States** and the **Soviet Union**. The global political alignment was redrawn, relationships between nations were reconfigured, independence movements gained momentum, and the shadow of nuclear weapons began to loom over humanity.
 
 Understanding the conclusion of the most destructive war in history provides crucial insight into the postwar geopolitical realignment that still continues to shape international relations today. The end of World War II marked both an ending and a beginning - the end of an era defined by world war and empire, and the beginning of an uncertain new age marked by superpower rivalry, nuclear deterrence, and the collapse of colonialism.
 

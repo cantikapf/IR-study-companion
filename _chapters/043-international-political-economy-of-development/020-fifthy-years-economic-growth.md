@@ -2,13 +2,14 @@
 title: Fifty Years Of Economic Growth And Development Strategy
 slug: fifty-years-economic-growth
 abstract: This chapter explores the fifty years of economic growth and development strategies, highlighting the shift in thinking, the role of the state, market failures, and the importance of finding the right balance between government intervention and market forces.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction 
 
-The decades following World War 2 marked a major shift in thinking about economic growth and development strategies globally. Industrialization took off in the 1950s, fueled by post-war recovery, cheap energy, improved transport, and changing terms of trade. This was paired with the rise of a "growth ideology" among national elites, who came to believe in the importance of rapid industrialization and economic growth, often led by a strong interventionist state.  
+The decades following World War 2 marked a major shift in thinking about **economic** **growth** and development strategies globally. Industrialization took off in the 1950s, fueled by post-war recovery, cheap energy, improved transport, and changing terms of trade. This was paired with the rise of a "growth ideology" among national elites, who came to believe in the importance of rapid industrialization and **economic growth**, often led by a strong interventionist **state**.  
 
-This represented a departure from pre-war colonial policies that tended to favor economic laissez-faire. The devastation of the Great Depression along with the state control seen during WW2 shifted views towards a larger role for government management of the economy. Policymakers now had Keynesian fiscal and monetary tools to smooth fluctuations in the business cycle. The early success of state-directed development in the Soviet Union further reinforced this thinking.
+This represented a departure from pre-war colonial **policies** that tended to favor economic laissez-faire. The devastation of the Great Depression along with the state control seen during WW2 shifted views towards a larger role for government management of the economy. Policymakers now had Keynesian fiscal and monetary tools to smooth fluctuations in the business cycle. The early success of state-directed development in the Soviet Union further reinforced this thinking.
 
 ## Pre-1945 Development Thinking
 

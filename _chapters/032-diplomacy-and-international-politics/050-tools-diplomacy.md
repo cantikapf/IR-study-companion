@@ -2,10 +2,11 @@
 title: Tools and Instruments Of Diplomacy
 slug: tools-diplomacy
 abstract: This chapter will introduce you to the tools and instruments of diplomacy.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 
-The promotion of trade and investment has long been an important diplomatic tool for economic development. Cultural diplomacy involves sharing cultural values and traditions to strengthen relationships between countries. Public diplomacy goes beyond traditional state-to-state diplomacy to engage foreign publics and non-state actors. Digital technology and social media are transforming diplomatic communications. Economic diplomacy entails using economic assets to increase security and cooperation. International law provides a framework for diplomacy by regulating state actions. The Vienna Conventions codified rules on treaties, diplomatic relations, and consular relations between states. By exploring these diverse facets of diplomacy, this content aims to provide a comprehensive overview of modern diplomatic relations and how they are conducted. The complex challenges of our globalized world require innovative diplomatic solutions across economic, cultural, technological, legal and public spheres.
+The promotion of trade and investment has long been an important diplomatic tool for economic development. Cultural **diplomacy** involves sharing cultural values and traditions to strengthen relationships between countries. **Public diplomacy** goes beyond traditional state-to-state diplomacy to engage foreign publics and non-state actors. Digital technology and social media are transforming diplomatic communications. Economic diplomacy entails using economic assets to increase security and cooperation. **International** law** provides a framework for diplomacy by regulating state actions. The Vienna Conventions codified rules on treaties, diplomatic relations, and consular relations between states. By exploring these diverse facets of diplomacy, this content aims to provide a comprehensive overview of modern diplomatic relations and how they are conducted. The complex challenges of our globalized world require innovative diplomatic solutions across economic, cultural, technological, legal and public spheres.
 
 ## Trade & Investment 
 
@@ -101,7 +102,7 @@ In summary, while imperfect, international law remains an important instrument i
 
 ## Vienna Convention on the Law of Treaties
 
-The Vienna Convention on the Law of Treaties is an international agreement that regulates treaties between states. It was opened for signature in 1969 and entered into force in January 1980.
+The **Vienna Convention** on the Law of Treaties is an international agreement that regulates treaties between states. It was opened for signature in 1969 and entered into force in January 1980.
 
 ### Overview, Purpose and Key Provisions
 

@@ -2,11 +2,12 @@
 title: Basic Understanding Of International Law
 slug: basic-inter-law
 abstract: Explains the basic understanding of international law.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Definition of International Law
 
-International Law consists of the rules and principles of general application dealing with the conduct of states and of international organizations in their international relations with one another and with private individuals, minority groups and transnational companies.
+**International** **Law** consists of the rules and principles of general application dealing with the conduct of states and of international organizations in their international relations with one another and with private individuals, minority groups and transnational companies.
 
 The domain of International Law covers issues of international concern, including the rights and duties of states, how states interact, international organizations, how armed conflicts are regulated, human rights, international criminal law, international trade, and more.
 
@@ -53,7 +54,7 @@ The 19th century saw exponential growth in treaties, multilateral conventions an
 
 ## International Law and International Relations: Two separate disciplines?
 
-<center> <img src="static\modules\IR vs inter law.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/IR vs inter law.png " alt="" width="70%" /> </center>
 
 International Law (IL) and International Relations (IR) are related but distinct academic disciplines. While IL sets out the legal rules governing international affairs, IR looks at why states and other actors follow or violate these rules.
 
@@ -101,7 +102,7 @@ International law is derived from various sources as outlined in Article 38(1) o
 
 ## Customary International Law
 
-Customary international law is one of the primary sources of international law. It refers to international obligations that arise from established state practice, rather than from formal written treaties and conventions. Customary international law comes from the consistent and widespread practice of states, accompanied by a sense of legal obligation (known as opinio juris sive necessitatis). 
+**Customary international** law is one of the primary sources of international law. It refers to international obligations that arise from established state practice, rather than from formal written treaties and conventions. Customary international law comes from the consistent and widespread practice of states, accompanied by a sense of legal obligation (known as opinio juris sive necessitatis). 
 
 In order for a practice to become binding as customary international law, it must meet two key criteria:
 

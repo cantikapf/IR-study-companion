@@ -2,6 +2,7 @@
 title: Basic Explanation of Realism in IR
 slug: basic-realism
 abstract: The introduction of Realism in International Relations
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 
@@ -14,9 +15,9 @@ abstract: The introduction of Realism in International Relations
 <br>
 <br>
 
-Realism is an influential tradition in the study of world politics deeply rooted in classical philosophy. It emphasizes statism, survival, and self-help as core tenets shaping relations between states in an anarchic international system.
+**Realism** is an influential tradition in the study of world politics deeply rooted in classical philosophy. It emphasizes statism, survival, and self-help as core tenets shaping relations between **states** in an anarchic **international** system**.
 
-Realism posits that sovereign states are the main actors in global affairs who operate in a self-help world where power is crucial for survival. International anarchy prevails beyond a state's borders, meaning there is no central authority to regulate interactions. This forces states to pursue power independently as a means of safeguarding their security and interests.
+Realism posits that sovereign states are the main actors in global affairs who operate in a self-help world where **power** is crucial for survival. International anarchy prevails beyond a state's borders, meaning there is no central authority to regulate interactions. This forces states to pursue power independently as a means of safeguarding their security and interests.
 
 The realist framework views states as unitary rational actors seeking to maximize self-interests defined in terms of power. Relations between states take the form of a struggle for power within a balance-of-power system, as they compete to prevent the rise of hegemony. Ethics and morality are secondary concerns, and leaders may disregard universal ethics in pursuit of state interests and security.
 
@@ -44,7 +45,7 @@ Structural realism, also known as neorealism, gained prominence in the 1970s and
 
 Neoclassical realism emerged in the 1990s as an attempt to incorporate elements of classical realism back into structural realism. It argues that systemic pressures constrain and shape, but do not completely determine, foreign policy choices. Unit-level factors like leaders' perceptions and domestic politics also play an important role in how states respond to threats and opportunities.
 
-<center> <img src="static\modules\taxonomy_realism.png" alt="Realism Taxonomy" width="60%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/taxonomy_realism.png" alt="Realism Taxonomy" width="60%" /> </center>
 
 <br>
 <br>
@@ -69,7 +70,7 @@ Realism makes several key assumptions about international relations:
 - States seek to maximize their share of world power relative to other states. This creates an endless competition, with nations striving to gain power at each other's expense.
 - The distribution of power capabilities among states shapes the dynamics of the international system at any given time.
 
-<center> <img src="static\modules\keypoints_realism.png" alt="Keypoints" width="50%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/keypoints_realism.png" alt="Keypoints" width="50%" /> </center>
 
 <br>
 
@@ -138,7 +139,7 @@ The prevalence of realist principles, albeit adapted contextually, demonstrates 
 
 As long as the international system remains anarchic and states prioritize survival, realism will dominate theoretical discourse. Its nuanced evolution through neoclassical realism also strengthens its explanatory power. Realism provides a sober perspective on global affairs, beyond idealism, without negating cooperation. Its longevity testifies to the tradition's profound insights into the complex workings of world politics.
 
-<center> <img src="static\modules\keypoints_realism_2.png" alt="Keypoints" width="90%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/keypoints_realism_2.png" alt="Keypoints" width="90%" /> </center>
 
 ---
 

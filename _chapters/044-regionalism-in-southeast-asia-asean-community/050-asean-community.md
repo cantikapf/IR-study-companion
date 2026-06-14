@@ -2,12 +2,13 @@
 title: Understanding ASEAN Community
 slug: asean-community
 abstract: The ASEAN Community was established to promote peace, stability, and shared prosperity in Southeast Asia through regional cooperation in politics, security, economy, and socio-culture. It comprises three pillars - the ASEAN Political-Security Community, the ASEAN Economic Community, and the ASEAN Socio-Cultural Community.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction
 The Association of Southeast Asian Nations (ASEAN) was established in 1967 by Indonesia, Malaysia, Philippines, Singapore and Thailand to promote regional cooperation in politics, security, economy and culture. Over the years, ASEAN expanded to include 10 Southeast Asian countries - Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand and Vietnam. 
 
-In 2003, ASEAN leaders resolved to establish an ASEAN Community comprising of three pillars - the ASEAN Political-Security Community, the ASEAN Economic Community and the ASEAN Socio-Cultural Community. The purpose was to accelerate regional integration in Southeast Asia in the areas of politics, security, economy and socio-culture. The ASEAN Community was formally established on 31 December 2015, marking a major milestone in ASEAN cooperation and integration.
+In 2003, **ASEAN** leaders resolved to establish an **ASEAN **Community** comprising of three pillars - the ASEAN Political-Security Community, the **ASEAN Economic** Community and the ASEAN Socio-Cultural Community. The purpose was to accelerate regional integration in Southeast Asia in the areas of politics, security, economy and socio-culture. The ASEAN Community was formally established on 31 December 2015, marking a major milestone in ASEAN cooperation and integration.
 
 ## Purpose of the ASEAN Community
 
@@ -55,7 +56,7 @@ The AEC seeks to reduce trade barriers and develop a coherent approach to extern
 
 The AEC Blueprint outlines strategic measures such as trade liberalization, service liberalization, investment liberalization, and freer flows of capital. It aims to accelerate regional integration in priority sectors through 'ASEAN Integration Initiatives.'
 
-While progress has been made, the AEC faces challenges such as eliminating non-tariff barriers, unifying standards and conformance, disputing resolution mechanisms, and addressing the development gap between ASEAN members.
+While progress has been made, the AEC faces challenges such as eliminating non-tariff barriers, unifying standards and conformance, disputing resolution mechanisms, and addressing the development gap between **ASEAN members**.
 
 ## Socio-Cultural Community
 

@@ -2,11 +2,12 @@
 title: Crime, Terrorism, And Insurgency
 slug: crime-terrorism-insurgency
 abstract: This materials cover the topic of transnational crime and insurgency.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Transnational Organized Crime
 
-Transnational organized crime (TOC) involves illegal activities coordinated across national borders, connecting individuals and groups in multiple countries. TOC takes many forms, with prominent examples including international mafia organizations, drug cartels, weapons traffickers, human trafficking rings, cybercrime networks, and financial fraud schemes. Major criminal organizations engaged in TOC include groups like the Sicilian Mafia, Russian Bratva, Japanese Yakuza, Chinese Triads, Colombian drug cartels, and the Nigerian criminal network. 
+Transnational **organized crime** (**TOC**) involves illegal activities coordinated across national borders, connecting individuals and **groups** in multiple countries. TOC takes many forms, with prominent examples including international mafia organizations, drug cartels, weapons traffickers, human trafficking rings, cybercrime networks, and financial fraud schemes. Major criminal organizations engaged in TOC include groups like the Sicilian Mafia, Russian Bratva, Japanese Yakuza, Chinese Triads, Colombian drug cartels, and the Nigerian criminal network. 
 
 TOC generates massive profits through participation in the illicit political economy, which encompasses all transactions and activities outside government regulation, taxation, and observation. Experts estimate the scale of the illicit political economy at between 5-20% of global GDP annually, representing trillions of dollars. Key activities include drug trafficking, human trafficking and human smuggling, arms dealing, counterfeiting and intellectual property violations, money laundering, racketeering, corruption and bribery, wildlife trafficking, illegal gambling, cybercrimes, and more. The illicit political economy reveals the dark underbelly of globalization, where TOC exploits the same channels of trade, finance, and communication that benefit the legal global economy.
 
@@ -14,7 +15,7 @@ TOC has grown in power and influence in recent decades due to factors like globa
 
 ### Security Threats Posed by Transnational Crime
 
-Transnational organized crime poses threats at the global, national, and individual level. 
+**Transnational organized** crime poses threats at the global, national, and individual level. 
 
 At the international level, transnational criminal organizations undermine the norms, rules, and institutions that form the foundation of the global order. By evading the law and exploiting gaps in governance, they erode fundamental pillars like sovereignty, the rule of law, and human rights. This destabilizes the international system.
 
@@ -27,7 +28,7 @@ By undermining global norms, destabilizing nations, and threatening individuals,
 
 ## Terrorism
 
-Terrorism is defined as the use of violence or fear to coerce and gain public attention. Throughout history there have been many examples of terrorist groups that resorted to acts of violence or intimidation to further their political, social, or religious agendas.
+**Terrorism** is defined as the use of violence or fear to coerce and gain public attention. Throughout history there have been many examples of terrorist groups that resorted to acts of violence or intimidation to further their political, social, or religious agendas.
 
 Some prominent historical examples of terrorism include:
 

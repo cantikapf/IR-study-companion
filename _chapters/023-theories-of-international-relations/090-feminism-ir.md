@@ -2,10 +2,11 @@
 title: Feminism In International Relations
 slug: feminism-ir
 abstract: What is feminism in international relations?
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
-Feminist theories entered the discipline of International Relations (IR) in the late 1980s and early 1990s as a critique of the mainstream theories, which largely excluded gender as a category of analysis. Feminists argued that gender hierarchies are inherent in the international system, and that only by examining them can we fully understand global politics. They emphasized that most IR knowledge has been created by and focused on men, rendering women invisible. As such, feminists have advocated for analyzing how individuals, especially marginalized people, are impacted by and impact global politics. 
+Feminist theories entered the discipline of International Relations (IR) in the late 1980s and early 1990s as a critique of the mainstream theories, which largely excluded **gender** as a category of analysis. **Feminists** argued that gender hierarchies are inherent in the international system, and that only by examining them can we fully understand **global** politics**. They emphasized that most IR knowledge has been created by and focused on men, rendering **women** invisible. As such, feminists have advocated for analyzing how individuals, especially marginalized people, are impacted by and impact global politics. 
 
 Feminist perspectives in IR are diverse, but share a commitment to gender equality and emancipation. They have illuminated issues like security, conflict, development, and the global economy through a gendered lens. This article will provide an overview of the main feminist approaches in IR theory, their perspectives on gender and security, and an application of feminist analysis to economic sanctions in Iraq. The goal is to demonstrate how feminism deepens our understanding of global politics.
 

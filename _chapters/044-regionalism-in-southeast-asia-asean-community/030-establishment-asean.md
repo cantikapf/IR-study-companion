@@ -2,13 +2,14 @@
 title: The Establishment Of ASEAN
 slug: the-establishment-of-asean
 abstract: ASEAN, the Association of Southeast Asian Nations, was established in 1967 with the goal of promoting regional peace, stability, and economic growth among its 10 member states. Through consensus building and non-interference principles, ASEAN has evolved into a community aiming for greater integration and collaboration in various areas of common interest.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction
 
-ASEAN, or the Association of Southeast Asian Nations, is a regional cooperation organization consisting of 10 Southeast Asian countries. It was established on 8 August 1967 with the signing of the Bangkok Declaration by Indonesia, Malaysia, Philippines, Singapore and Thailand. 
+**ASEAN**, or the Association of Southeast Asian Nations, is a regional cooperation organization consisting of 10 Southeast Asian countries. It was established on 8 August 1967 with the signing of the **Bangkok Declaration** by Indonesia, Malaysia, Philippines, Singapore and Thailand. 
 
-Since its early days, ASEAN has aimed to accelerate economic growth, promote regional peace and stability, and enhance collaboration among its members. Over the decades, ASEAN has grown from those 5 founding members to include Brunei, Cambodia, Laos, Myanmar and Vietnam. Together, the 10 ASEAN member states represent a region of over 650 million people.
+Since its early days, ASEAN has aimed to accelerate economic growth, promote regional peace and stability, and enhance collaboration among its members. Over the decades, ASEAN has grown from those 5 founding members to include Brunei, Cambodia, Laos, Myanmar and Vietnam. Together, the 10 ASEAN **member states** represent a region of over 650 million people.
 
 ASEAN operates based on consensus building and non-interference principles. While each member state retains its independence and sovereignty, ASEAN provides a platform for the countries to discuss and cooperate on areas of common interest such as economic development, education, culture, transnational issues, security and more. Over time, ASEAN has evolved from a loose association focused on cooperation to a more intertwined community aiming for greater economic, political-security and socio-cultural integration.
 
@@ -48,7 +49,7 @@ The Bangkok Declaration laid the groundwork for how ASEAN would be organized and
 
 ASEAN sets principles for its members as to enhance mutual trust and understanding towards greater regional cooperation. The ASEAN principles aim to strengthen the resolve and ensure compliance of member states towards the agreed goals of regional cooperation and stability. 
 
-Some key principles outlined in the ASEAN Charter include:
+Some key principles outlined in the **ASEAN Charter** include:
 
 - Mutual respect for the independence, sovereignty, equality, territorial integrity, and national identity of all nations  
 - The right of every State to lead its national existence free from external interference, subversion or coercion
@@ -65,7 +66,7 @@ The principles provide a code of conduct for interstate relations and a foundati
 
 The ASEAN principles and charter were formed to pursue regional peace and stability among member states. ASEAN sets out key principles that members must adhere to in order to build mutual trust and understanding as a foundation for greater cooperation.
 
-The ASEAN Charter, signed in November 2007, codified ASEAN norms, rules, and values. It serves as a firm foundation for ASEAN community building and brought ASEAN’s legal foundation into force. The Charter reinforces commitments to international law, rule of law, good governance, democracy and constitutional government. 
+The ASEAN Charter, signed in November 2007, codified ASEAN norms, rules, and values. It serves as a firm foundation for **ASEAN community** building and brought ASEAN’s legal foundation into force. The Charter reinforces commitments to international law, rule of law, good governance, democracy and constitutional government. 
 
 By outlining a set of principles that member states must follow, ASEAN aims to enhance political and economic stability in the region. This allows member states to focus on economic development and prosperity for their citizens rather than conflict. The charter also established various ASEAN organs to monitor and enforce compliance with ASEAN principles.
 

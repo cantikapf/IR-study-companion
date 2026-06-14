@@ -2,13 +2,14 @@
 title: Literature Review
 slug: literature-review
 abstract: Scholarly Literature and the Literature Review
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Scholarly Literature and the Literature Review
 
 ### Scholarly Literature
 
-Scholarly literature refers to research that is published in academic journals and books by experts in a particular field. It is different from more popular sources like newspapers, magazines, websites, and encyclopedias in several key ways:
+**Scholarly** **literature** refers to **research** that is published in academic journals and books by experts in a particular field. It is different from more popular sources like newspapers, magazines, websites, and encyclopedias in several key ways:
 
 - **Purpose**: Scholarly literature aims to present new research, theories, methodologies, interpretations, or arguments to advance knowledge in a field. Popular sources provide general information for a broad audience.
 - **Authors**: Scholarly literature is written by scholars and researchers who are actively contributing new knowledge in their field. Popular sources may incorporate scholarly findings, but are not written by the original researchers.
@@ -30,7 +31,7 @@ Scholarly literature provides the theoretical background and research-based evid
 
 Scholarly literature serves some key functions in the research process. Most importantly, reviewing prior scholarly work helps refine research questions and identify potential variables and hypotheses. The research questions drive the entire research project, so it's critical to harness the knowledge in existing literature to develop thoughtful and focused research questions.
 
-Additionally, the literature review establishes important connections between the proposed research and previous studies in the field. By thoroughly reviewing relevant scholarly work, researchers can show how their study fits into the existing body of knowledge. The literature review provides crucial background context and demonstrates how the new study expands on or departs from what has already been studied. In this way, the literature review helps to position new research studies in relation to prior knowledge.
+Additionally, the **literature review** establishes important connections between the proposed research and previous studies in the field. By thoroughly reviewing relevant scholarly work, researchers can show how their study fits into the existing body of knowledge. The literature review provides crucial background context and demonstrates how the new study expands on or departs from what has already been studied. In this way, the literature review helps to position new research studies in relation to prior knowledge.
 
 Overall, a strong review of scholarly literature brings clarity and direction to a research project. It enables researchers to leverage the insights and findings of previous studies to craft novel, relevant research questions that can advance knowledge in the field. The literature review is thus a vital stepping stone in developing impactful research.
 
@@ -160,7 +161,7 @@ When conducting a literature review, there are some key best practices to keep i
 
 **Example way of searching**
 
-<center> <img src="static\modules\literature review.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/literature review.png" alt="" width="70%" /> </center>
 
 #### Using the Library Effectively
 

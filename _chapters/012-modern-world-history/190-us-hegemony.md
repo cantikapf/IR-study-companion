@@ -2,14 +2,15 @@
 slug: us-hegemony
 title: 'Challenges to US Hegemony: Rising China and Russian Resurgence'
 abstract: This chapter will cover the challenges to rising China and Russian resurgence to US hegemony
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Introduction
 
-The post-Cold War era has seen the rises of two major powers that are reshaping the global order - China and Russia. While the collapse of the Soviet Union appeared to signal the emergence of a unipolar world dominated by the United States, the subsequent decades witnessed the ascendance of new players on the geopolitical stage. 
+The post-Cold War era has seen the rises of two major powers that are reshaping the global order - **China** and **Russia**. While the collapse of the Soviet Union appeared to signal the emergence of a unipolar world dominated by the United States, the subsequent decades witnessed the ascendance of new players on the geopolitical stage. 
 
-This is particularly evident in the economic and political resurgence of China and Russia. China has experienced rapid economic growth and transformed into an economic superpower, offering lucrative opportunities but also challenges for the US and the global economy. Meanwhile, Russia under Putin has focused on rebuilding state power and reasserting its geopolitical influence, especially over former Soviet territories, backed by military strength.
+This is particularly evident in the **economic** and political resurgence of China and Russia. China has experienced rapid economic growth and transformed into an economic superpower, offering lucrative opportunities but also challenges for the US and the global economy. Meanwhile, Russia under Putin has focused on rebuilding state power and reasserting its geopolitical influence, especially over former Soviet territories, backed by military strength.
 
 Though arising from different circumstances, the twin resurgences of China and Russia present new dynamics that the US must navigate. Their contrasting approaches - China's economic focus versus Russia's military assertiveness - pose complex challenges for the US on both economic and geopolitical fronts. This calls for nuanced engagement by the US, as the unipolar post-Cold War order makes way for a new era shaped by these ascendant powers.
 

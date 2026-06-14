@@ -1,6 +1,7 @@
 ---
 title: My Progress
 slug: progress
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 <style>
@@ -10,10 +11,10 @@ slug: progress
 }
 
 .progress-header {
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-    color: white;
+    **background**: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    **color**: white;
     padding: 30px;
-    border-radius: 12px;
+    **border-radius**: 12px;
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
     margin-bottom: 40px;
 }
@@ -84,7 +85,7 @@ body.dark-theme .list-section h3 {
     border-color: #374151;
 }
 
-.chapter-list {
+.**chapter-list** {
     list-style: none;
     padding: 0;
     margin: 0;

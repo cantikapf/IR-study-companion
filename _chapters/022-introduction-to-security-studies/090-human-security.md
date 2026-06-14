@@ -2,23 +2,24 @@
 title: Human Security
 slug: human-security
 abstract: This chapter will explain about Human Security
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Human Security
 
-Human security is an emerging paradigm that places ordinary people at the center of security concerns. In contrast to traditional notions of national security that focus on external military threats to the state, human security encompasses a broad range of issues that threaten the safety, livelihood and dignity of individuals. These issues include poverty, infectious diseases, natural disasters, unemployment, crime, social conflict and political repression. The concept of human security first gained prominence in the 1994 United Nations Development Programme (UNDP) Human Development Report, which argued that ensuring "freedom from want" and "freedom from fear" should be the foundations of human security.
+**Human** **security** is an emerging paradigm that places ordinary people at the center of security concerns. In contrast to traditional notions of national security that focus on external military threats to the **state**, human security encompasses a broad range of issues that threaten the safety, livelihood and dignity of individuals. These issues include **poverty**, infectious diseases, natural disasters, unemployment, crime, social conflict and political repression. The concept of human security first gained prominence in the 1994 United Nations Development Programme (UNDP) Human Development Report, which argued that ensuring "freedom from want" and "freedom from fear" should be the foundations of human security.
 
 
-<center> <img src="static\modules\human_security.png" alt="human_security" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/human_security.png" alt="human_security" width="70%" /> </center>
 
 ## How should Human Security be defined?
 
-<center> <img src="static\modules\human_security_definition.png" alt="human_security_definition" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/human_security_definition.png" alt="human_security_definition" width="70%" /> </center>
 
 ## Setting the boundaries of Human Security
 
-<center> <img src="static\modules\human_security_definition2.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/human_security_definition2.png" alt="" width="70%" /> </center>
 
 ## Debates & Unresolved Issues
 
@@ -29,7 +30,7 @@ However, globalization also creates tensions that undermine human security. Econ
 The impact of globalization on human security thus appears contradictory. While enhancing aggregate wellbeing, globalization also disrupts traditional livelihoods and ways of life. Societies must balance pursuing economic opportunity while cushioning against insecurity. There are also debates around prioritizing different dimensions of human security - whether to focus on freedom from physical violence or broader human development needs. Global policy coordination is needed, but governance gaps persist between global markets and domestic institutions.
 
 
-<center> <img src="static\modules\debates_unresolved issues.png" alt="debates_unresolved issues" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/debates_unresolved issues.png" alt="debates_unresolved issues" width="70%" /> </center>
 
 # Governance
 

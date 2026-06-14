@@ -2,21 +2,22 @@
 title: 'IR Research Method: Interview and Survey'
 slug: interview-survey
 abstract: Two common qualitative research methods are interviews and surveys.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Types of Research Data Collection Techniques
 
-<center> <img src="static\modules\types of data collection.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/types of data collection.png" alt="" width="70%" /> </center>
 
-Qualitative and quantitative methods are the two main approaches to conducting research. Qualitative research explores attitudes, behaviors, and experiences through methods like interviews and focus groups. It attempts to get an in-depth understanding of a problem. Quantitative research gathers numerical data and generalizes it across groups. It seeks to establish statistical relationships between variables.
+Qualitative and quantitative methods are the two main approaches to conducting **research**. **Qualitative research** explores attitudes, behaviors, and experiences through methods like **interviews** and focus groups. It attempts to get an in-depth understanding of a problem. Quantitative research gathers numerical data and generalizes it across groups. It seeks to establish statistical relationships between variables.
 
-Two common qualitative research methods are interviews and surveys. Interviews involve having conversations with research participants to explore their perspectives on a program or topic. Surveys gather self-reported data from research participants through a standardized set of questions. 
+Two common qualitative research methods are interviews and surveys. Interviews involve having conversations with research participants to explore their perspectives on a program or topic. Surveys gather self-reported data from research participants through a standardized set of **questions**. 
 
 ## Interview as Qualitative Research Method
 
 ### What is Interview?
 
-An interview is a qualitative research method that involves verbally asking questions and hearing the responses from the interviewee. There are several formats interviews can take:
+An **interview** is a qualitative research method that involves verbally asking questions and hearing the responses from the interviewee. There are several formats interviews can take:
 
 - **Structured Interview**: The interviewer asks a predetermined set of questions in a set order. There is no deviation from the script.
 - **Semi-Structured Interview**: The interviewer has preset questions to ask, but can change the order and wording of questions as needed. Questions can also be omitted or added spontaneously during the interview.

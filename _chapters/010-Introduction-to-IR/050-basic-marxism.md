@@ -2,6 +2,7 @@
 title: Basic Explanation of Marxism in IR
 slug: basic-marxism
 abstract: The introduction of Marxism in International Relations 
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 
@@ -13,7 +14,7 @@ Notes: I suggest to watch this video first before reading the topic 😁
 
 ## Introduction to Analyzing World Politics through a Marxist Lens
 
-Marxism provides a comprehensive framework for analyzing world politics and global dynamics through a critical socioeconomic perspective. At its core, Marxism contends that economic factors are the primary driver of societal development and that class conflict stemming from unequal economic relationships is the main source of historical change.
+**Marxism** provides a comprehensive framework for analyzing **world** politics and global dynamics through a critical socioeconomic perspective. At its **core**, Marxism contends that **economic** factors are the primary driver of societal development and that class conflict stemming from unequal economic relationships is the main source of historical change.
 
 Some key tenets of Marxism as applied to world politics include:
 
@@ -22,7 +23,7 @@ Some key tenets of Marxism as applied to world politics include:
 - **Capitalist exploitation** - Workers are exploited through capitalism's drive to maximize profits and accumulate wealth. The bourgeois ruling class benefits at the expense of the proletariat.
 - **Revolution** - Fundamental societal change is achieved through the revolutionary overthrow of the capitalist system and its replacement with socialism and eventually communism.
 
-Marxist analysis examines global economic systems, power dynamics between classes and states, and pathways to revolutionary change. It provides a moral imperative to analysts to not just study the world but to change it.
+**Marxist** analysis examines global economic systems, power dynamics between classes and states, and pathways to revolutionary change. It provides a moral imperative to analysts to not just study the world but to change it.
 
 
 ## Historical Materialism
@@ -33,7 +34,7 @@ Marx outlined his base-superstructure model to delineate the relationship betwee
 
 The means of production refer to the materials, tools, technology, resources, and infrastructure used to produce goods and services in a society. The relations of production describe the social relationships human beings enter into as they acquire and use the means of production to meet their material needs. For Marx, these evolving elements of the economic base propel changes throughout society, acting as the foundational drivers of historical transformation.
 
-<center> <img src="static\modules\base–superstructure-model.png" alt="The base–superstructure model" width= 60% /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/base–superstructure-model.png" alt="The base–superstructure model" width= 60% /> </center>
 
 
 # Imperialism and the Core-Periphery Model
@@ -48,7 +49,7 @@ Building on Lenin's theory, dependency theorists described a global capitalist s
 
 This asymmetric relationship leads to the accumulation of wealth in the core at the expense of the periphery. The periphery remains trapped in a state of underdevelopment, unable to break free from its economically subservient position.
 
-<center> <img src="static\modules\Core-Periphery-Model.png" alt="The base–superstructure model" width= 60% /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Core-Periphery-Model.png" alt="The base–superstructure model" width= 60% /> </center>
 
 <br>
 <br>
@@ -65,7 +66,7 @@ Between the core and periphery lies the semi-periphery, made up of countries lik
 
 This three zone structure stabilizes the capitalist world economy and perpetuates inequality between the core and periphery. According to Wallerstein, the current world system is near the end of its lifespan, representing an opportunity to create a more just economic order. Overall, World Systems Theory provides a framework for understanding global economic stratification.
 
-<center> <img src="static\modules\world_system_theory.png" alt="World System Theory" width= 60% /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/world_system_theory.png" alt="World System Theory" width= 60% /> </center>
 
 <br>
 

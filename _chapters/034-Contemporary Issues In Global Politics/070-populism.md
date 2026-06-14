@@ -2,11 +2,12 @@
 title: Political Populism
 slug: political-populism
 abstract: Explaination of political populism.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 ## Introduction to Populism
 
-Populism refers to a range of political stances and rhetorical styles that emphasize the interests and will of "the people," often juxtaposing this group against "the elite." The term originated in the late 19th century to describe US agrarian movements that promoted the interests of farmers and laborers against urban capitalists. 
+**Populism** refers to a range of political stances and rhetorical styles that emphasize the interests and will of "the **people**," often juxtaposing this group against "the elite." The term originated in the late 19th century to describe US agrarian movements that promoted the interests of farmers and laborers against urban capitalists. 
 
 Some key characteristics associated with populism include:
 
@@ -21,7 +22,7 @@ So in summary, populism denotes a set of political beliefs, attitudes, and rheto
 
 ## Populist Rhetoric and Messaging
 
-Populist politicians and parties tend to employ rhetoric and messaging that focuses on appealing to "ordinary" people, expressing disdain for the establishment elite, and promising to restore a country to greatness.  
+**Populist** politicians and parties tend to employ rhetoric and messaging that focuses on appealing to "ordinary" people, expressing disdain for the establishment elite, and promising to restore a country to greatness.  
 
 Common populist rhetorical techniques include:
 
@@ -33,7 +34,7 @@ Common populist rhetorical techniques include:
 - Making lavish promises to improve conditions for the people. Populists propose bold, sweeping changes like dramatically reducing immigration or providing universal income, without details on implementation.
 - Projecting themselves as strong, decisive leaders who wield power on behalf of the masses. Populists cultivate a charismatic, tough persona.
 
-This style of rhetoric and messaging is intended to resonate with ordinary citizens who feel left behind economically and socially. By positioning themselves as the voice of the people, populists aim to mobilize mass support for their movements.
+This style of rhetoric and messaging is intended to resonate with ordinary citizens who feel left behind economically and socially. By positioning themselves as the voice of the people, **populists** aim to mobilize mass support for their movements.
 
 ## Populism in Europe
 
@@ -47,7 +48,7 @@ Critics argue that the rise of populism poses a real threat to liberal democrati
 
 ## Populism in the Americas
 
-Populism has surged in popularity in the Americas in recent years, with several populist leaders coming to power in North and South America. 
+Populism has surged in popularity in the Americas in recent years, with several **populist leaders** coming to power in North and South America. 
 
 ### The Trump Presidency
 

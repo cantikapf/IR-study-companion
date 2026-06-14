@@ -2,17 +2,18 @@
 slug: social-change
 title: Understanding Social Change
 abstract: Social change concept in social science
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Defining Power
 
-Power is a complex societal force that shapes human interactions in intricate ways. As defined by sociologist Max Weber, power refers to the capacity of individuals or groups to exert their will over others, even against resistance. This capacity can involve the use of physical force but may also operate through authority, influence, or systemic norms. 
+**Power** is a complex societal force that shapes human interactions in intricate ways. As defined by sociologist **Max Weber**, power refers to the capacity of individuals or groups to exert their will over others, even against resistance. This capacity can involve the use of physical force but may also operate through **authority**, influence, or systemic norms. 
 
 At its core, power represents the ability to shape people's behavior and steer community outcomes. It manifests not just through overt shows of strength but also via subtle social cues and unspoken rules that guide conduct. Power dynamics intricately structure relationships between rulers and the ruled, managers and workers, and even inform how individuals manage their own lives. 
 
 Weber identified power as a fundamental organizing principle underpinning the formation of states, organizations, and hierarchies. The exertion of power enables some actors to mobilize resources, command obedience, and achieve desired objectives. This capacity for social influence forms a key building block of human relations.
 
-Understanding power involves looking beyond personal clout or muscle. In Weber's view, power also stems from collective political organization, social status, economic assets, cultural capital, and other resources that groups can leverage to enact their will. This multidimensional view paints power as a complex force woven into the very fabric of society.
+Understanding power involves looking beyond personal clout or muscle. In Weber's view, power also stems from collective political organization, social status, economic assets, cultural capital, and other resources that groups can leverage to enact their will. This multidimensional view paints power as a complex force woven into the very fabric of **society**.
 
 ## Authority and Legitimacy
 
@@ -30,7 +31,7 @@ These authority types showcase how acceptance of power occurs in different conte
 
 ## Perspectives on Politics
 
-The concept of politics has been interpreted in different ways by influential thinkers. Aristotle viewed politics as the means through which a community's life could be shaped. He saw politics as a practical science focused on cultivating virtue and enabling citizens to live well. This perspective emphasizes politics as a communal effort to determine guidelines and goals for society.
+The concept of **politics** has been interpreted in different ways by influential thinkers. Aristotle viewed politics as the means through which a community's life could be shaped. He saw politics as a practical science focused on cultivating virtue and enabling citizens to live well. This perspective emphasizes politics as a communal effort to determine guidelines and goals for society.
 
 In contrast, Max Weber defined politics as any kind of independent leadership in action. For him, politics involved the use of power to distribute control and regulate conduct within a given territory. Weber understood politics as inherently connected to power dynamics between groups and individuals. His definition focuses more on how power is distributed and exercised within the political sphere. 
 

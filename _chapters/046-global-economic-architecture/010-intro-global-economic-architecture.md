@@ -2,13 +2,14 @@
 title: Introduction To Global Economic Architecture
 slug: introduction-to-global-economic-architecture
 abstract: This page provides an introduction to global economic architecture, exploring the drivers, consequences, and implications of economic globalization on countries, companies, and individuals.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Economic Globalization: Increasing Interconnectedness of National Economies
 
-Globalization has dramatically increased the economic interdependence between countries over the past few decades. As national economies become more integrated through trade and financial flows, events in one country can have significant impacts around the world. Understanding the drivers, nature, and consequences of economic globalization is crucial given its immense influence on economic growth, development, and stability worldwide. 
+Globalization has dramatically increased the **economic** interdependence between **countries** over the past few decades. As national economies become more integrated through **trade** and financial flows, events in one country can have significant impacts around the world. Understanding the drivers, nature, and consequences of economic globalization is crucial given its immense influence on economic growth, development, and stability worldwide. 
 
-This material provides an in-depth look at key aspects of global economic integration. It examines the major forces spurring greater interconnectedness of national economies, the expansion of international trade and finance, and the shifting distribution of economic power. The analysis also explores the significant implications of globalization, including both benefits such as efficiency and growth, as well as costs like rising inequality and volatility. By illuminating the complex dynamics of the global economy, this guide aims to leave readers with a nuanced understanding of why increased economic interdependence matters and how it impacts countries, companies, and individuals.
+This material provides an in-depth look at key aspects of **global** economic** integration. It examines the major forces spurring greater interconnectedness of national economies, the expansion of international trade and finance, and the shifting distribution of economic power. The analysis also explores the significant implications of globalization, including both benefits such as efficiency and growth, as well as costs like rising inequality and volatility. By illuminating the complex dynamics of the global economy, this guide aims to leave readers with a nuanced understanding of why increased economic interdependence matters and how it impacts countries, companies, and individuals.
 
 ### End of the Cold War
 

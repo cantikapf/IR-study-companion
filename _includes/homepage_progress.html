@@ -1,0 +1,50 @@
+<div id="homepage-progress-container" style="display: none; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; border-left: 4px solid #3b82f6;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+    <h3 style="margin: 0; font-size: 1.1rem; color: #1f2937;">Your Learning Progress</h3>
+    <span id="progress-percentage" style="font-weight: bold; color: #3b82f6;">0%</span>
+  </div>
+  <div style="width: 100%; background: #e5e7eb; border-radius: 10px; height: 10px; overflow: hidden;">
+    <div id="progress-bar-fill" style="height: 100%; width: 0%; background: #3b82f6; transition: width 0.5s ease-out;"></div>
+  </div>
+  <p id="progress-text" style="font-size: 0.85rem; color: #6b7280; margin-top: 10px; margin-bottom: 0;">You haven't completed any chapters yet.</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Collect all chapter slugs from the site
+    const chapters = [
+      {% for chapter in site.chapters %}
+        {% if chapter.layout != 'part' %}
+        "{{ chapter.slug }}",
+        {% endif %}
+      {% endfor %}
+    ].filter(Boolean);
+
+    let completed = 0;
+    chapters.forEach(slug => {
+      if(localStorage.getItem('chapter_read_' + slug) === 'true') {
+        completed++;
+      }
+    });
+
+    const total = chapters.length;
+    if(total > 0 && completed > 0) {
+      const percentage = Math.round((completed / total) * 100);
+      
+      document.getElementById('homepage-progress-container').style.display = 'block';
+      document.getElementById('progress-percentage').innerText = percentage + '%';
+      
+      // Delay animation for visual effect
+      setTimeout(() => {
+        document.getElementById('progress-bar-fill').style.width = percentage + '%';
+      }, 300);
+
+      const textEl = document.getElementById('progress-text');
+      if (percentage === 100) {
+        textEl.innerText = "Congratulations! You have completed all chapters. 🎉";
+      } else {
+        textEl.innerText = `You have completed ${completed} out of ${total} chapters. Keep it up!`;
+      }
+    }
+  });
+</script>

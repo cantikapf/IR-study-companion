@@ -2,12 +2,13 @@
 slug: democracy-indonesia
 title: 'Democracy In Indonesia: Decentralization'
 abstract: 'This chapter will explore the democracy in Indonesia.'
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Introduction
 
-Indonesia has undergone significant political transformations throughout its history, from colonial rule under the Dutch to dictatorship under Suharto to the current democratic era. A key component of Indonesia's post-Suharto political reforms has been decentralization, the transfer of authority and responsibility from the central government to local governmental entities. 
+**Indonesia** has undergone significant political transformations throughout its history, from colonial rule under the Dutch to dictatorship under Suharto to the current democratic era. A key component of Indonesia's post-Suharto political reforms has been **decentralization**, the transfer of authority and responsibility from the **central government** to **local** governmental entities. 
 
 Decentralization was implemented in Indonesia in 1999 in response to calls for regional autonomy and more equitable development. It also aimed to address secessionist pressures and defuse tensions resulting from the Java-centric policies of previous regimes. By devolving powers to the district and municipal levels, decentralization sought to bring government closer to the people and allow more direct political participation.
 
@@ -19,7 +20,7 @@ As a far-reaching political process, decentralization has impacted regional auto
 
 Decentralization involves transferring authority and responsibility from the central government to local governmental entities. There are three main types of decentralization:
 
-**Political Decentralization** - This involves the transfer of political power and authority to subnational levels. It allows citizens to elect their own local representatives and enables local governments to have autonomy over decision-making in their jurisdiction. Political decentralization aims to give citizens more direct control over governance.
+**Political Decentralization** - This involves the transfer of political power and authority to subnational levels. It allows citizens to elect their own local representatives and enables **local governments** to have autonomy over decision-making in their jurisdiction. Political decentralization aims to give citizens more direct control over governance.
 
 **Administrative Decentralization** - This refers to the transfer of responsibility for planning, financing, and management of public functions from the central government to local governments and agencies. The goal is to redistribute administrative workload and increase efficiency. Local authorities get more discretion in implementing policies, rules, and regulations.
 

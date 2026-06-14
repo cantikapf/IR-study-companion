@@ -2,11 +2,12 @@
 title: The Evolution of International Organizations
 slug: evolution-internationa-organizations
 abstract: The evolution of international organizations can be traced back to the 19th century, with the emergence of key organizations in Europe. The establishment of the League of Nations and the International Labor Organization in the aftermath of World War I marked significant milestones in the development of international organizations.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## 19th Century Origins of International Organizations
 
-International organizations first emerged in the 19 th century in Europe as a result of both wars and conference diplomacy between European powers. 
+**International** **organizations** first emerged in the 19 th century in Europe as a result of both wars and conference diplomacy between European powers. 
 
 Several key organizations were established in the aftermath of major European wars. The Napoleonic Wars, which ravaged Europe from 1803-1815, led to the creation of the Central Commission for Navigation of the Rhine in 1815 to oversee navigation on the Rhine River. After the Crimean War of 1853-1856, the Superior Council or Health in Constantinopel was established in 1838 to coordinate quarantine and public health policies. And after the Franco-Prussian War of 1870-1871, the European Commission for the Control of the Danube was created in 1856 to administer navigation and economic development on the Danube River.
 
@@ -18,7 +19,7 @@ Overall, the 19 th century saw the emergence of the first modern international o
 
 ## League of Nations
 
-The League of Nations was established in 1919 as part of the Versailles Peace Treaty that ended World War I. Its mandate was to maintain international peace by having members submit their disputes for arbitration and avoid war as a means to solve conflicts until three months of peaceful attempts had been made. 
+The League of Nations was established in 1919 as part of the Versailles Peace Treaty that ended **World War** I. Its mandate was to maintain international peace by having members submit their disputes for arbitration and avoid war as a means to solve conflicts until three months of peaceful attempts had been made. 
 
 The League had several prominent supporters, including US President Woodrow Wilson, who played a key role in its establishment. The League's headquarters was located in Geneva, Switzerland.
 
@@ -26,7 +27,7 @@ Despite its noble goals, the League of Nations ultimately failed and collapsed i
 
 ## International Labor Organization (ILO)
 
-The International Labor Organization (ILO) was established in 1919 as part of the Treaty of Versailles that ended World War I. The ILO was created in response to concerns about labor conditions and exploitation of workers in industrializing nations. 
+The **International Labor** Organization (ILO) was established in 1919 as part of the Treaty of Versailles that ended World War I. The ILO was created in response to concerns about labor conditions and exploitation of workers in industrializing nations. 
 
 The ILO's founding purpose was to pursue social justice and lasting peace through improving labor standards. Its founders believed that poor labor conditions could lead to unrest, conflict and war within and between nations.
 

@@ -1,13 +1,14 @@
 ---
 title: Introduction
 slug: introduction
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 # Welcome to the World of International Relations! 🌍
 
-Have you ever wondered why some countries are constantly at war while others enjoy centuries of peace? Or how a sudden drop in oil prices on one side of the globe can trigger an economic boom or bust on the other? Why do global pandemics, climate change, and international trade affect our daily lives, even if they originate thousands of miles away?
+Have you ever wondered why some countries are constantly at war while others **enjoy centuries** of peace? Or how a sudden drop in oil prices on one side of the globe can trigger an economic boom or bust on the other? Why do **global** pandemics, climate change, and **international** trade affect our daily lives, even if they originate thousands of miles away?
 
-Welcome to **International Relations (IR)**—the ultimate study of how the world works.
+Welcome to **International Relations** (IR)**—the ultimate study of how the world works.
 
 ## What is International Relations?
 
@@ -33,7 +34,7 @@ This study companion is designed to demystify the complex world of global politi
 We will journey through:
 1. **The Foundations**: Understanding the basic theories (like Realism and Liberalism) that explain state behavior.
 2. **Global History**: How events like the World Wars and the Cold War shaped the modern map.
-3. **The Global Economy**: Unpacking the mysteries of international trade and development.
+3. **The Global Economy**: Unpacking the mysteries of **international trade** and development.
 4. **Contemporary Issues**: Tackling the biggest challenges of the 21st century, from climate change to cybersecurity.
 
 Get ready to zoom out, see the bigger picture, and understand the hidden forces that shape human history. **Let's dive in!**

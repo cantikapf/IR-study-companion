@@ -2,12 +2,13 @@
 title: Introduction To Foreign Policy Analysis And Foreign Policy In International Relations
 slug: intro-fpa
 abstract: What is FPA? What is foreign policy? What is the difference between FPA and IR? This chapter will introduce you to the field of foreign policy analysis (FPA) and foreign policy in international relations (IR).
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 
 # What is foreign policy analysis (FPA)?
 
-Foreign policy analysis (FPA) is a subfield of international relations that focuses on examining the processes and decision-making that shape a country's foreign policy. It aims to explain the strategies and behaviors that governments employ in their interactions with other international actors.
+**Foreign** **policy** analysis (**FPA**) is a subfield of international relations that focuses on examining the processes and decision-making that shape a country's foreign policy. It aims to explain the strategies and behaviors that governments employ in their interactions with other international actors.
 
 FPA emerged as a distinctive field of study in the 1950s and 1960s, as scholars sought to open the "black box" of foreign policy decision-making. Whereas traditional international relations theory focused on systemic factors like the distribution of power, FPA adopts a more nuanced approach that considers the domestic and individual-level variables that affect foreign policy choices. It draws on insights from multiple disciplines, including political science, history, economics, psychology, and sociology.
 
@@ -17,7 +18,7 @@ Over recent decades, FPA has established itself as a vibrant area of internation
 
 ## History and Development
 
-Foreign policy analysis emerged as a subfield of international relations in the 1950s after World War II. The objective of foreign policy analysis is to understand the processes and strategies behind a state's foreign policy decisions and actions.
+Foreign **policy analysis** emerged as a subfield of international relations in the 1950s after World War II. The objective of foreign policy analysis is to understand the processes and strategies behind a state's foreign policy decisions and actions.
 
 Whereas international relations focuses on relations between states and the international system, foreign policy analysis zooms in to examine the processes, calculations, and decisions behind a particular state's foreign policy. It seeks to understand why states make certain decisions, who the key actors and influences are behind those decisions, and how the specific context shapes the policy choices available.
 
@@ -27,7 +28,7 @@ Foreign policy is often studied by focusing on a single country and decision (e.
 
 While international relations scholars are often interested in specific foreign policies that states adopt, FPA focuses more on the overall foreign policy process. FPA examines how foreign policies are formulated and implemented, rather than just analyzing the policy outputs. It looks at the various factors that shape how state leaders arrive at foreign policy decisions.
 
-<center> <img src="static\modules\FPA and foreign policy.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/FPA and foreign policy.png " alt="" width="70%" /> </center>
 
 Some key aspects of foreign policy analysis include:
 
@@ -45,7 +46,7 @@ Some key aspects of foreign policy analysis include:
 
 **Harold and Margaret Sprout** believed that foreign policy can only be explained with reference to the psycho-milieu (the psychological, situational, political and social contexts) of the individuals involved in decision making. They thought that foreign policy can be explained based on psychology or reaction to the context. For example, Soeharto's authoritarian behavior had an impact on Indonesian foreign policy during the New Order era.
 
-<center> <img src="static\modules\paradigmatic of FPA.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/paradigmatic of FPA.png " alt="" width="70%" /> </center>
 
 ---
 

@@ -1,0 +1,57 @@
+/* Globe Styles */
+.world {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  cursor: grab;
+  margin: 0 auto;
+  transform: scale(0.6);
+  transform-origin: center center;
+}
+.world:active {
+  cursor: grabbing;
+}
+
+.world-bg {
+  display: none;
+}
+
+.world-globe {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+.world-globe-pole {
+  position: absolute;
+  width: 530px;
+  height: 530px;
+  left: -265px;
+  top: -265px;
+  border-radius: 50% 50%;
+  background-color: #fff;
+}
+
+.world-globe-doms-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+.world-globe-halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 730px;
+  height: 715px;
+  margin-left: -368px;
+  margin-top: -350px;
+}
+
+/* Removed info popup styles */

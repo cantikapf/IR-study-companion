@@ -2,11 +2,12 @@
 title: Introduction To International Organization (IO) In IR
 slug: intro-international-organization
 abstract: International organizations (IO) and intergovernmental organizations (IGOs) play a crucial role in international relations, facilitating cooperation between states and addressing global challenges. They provide a platform for coordination, drafting international law, and promoting multilateralism in the pursuit of shared goals.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## What are International Organizations (IO)?
 
-International organizations (IO) refer to formal organizations with members from three or more countries that pursue a set of shared goals. The most commonly used definition of IO in academic and practical discussions refers specifically to intergovernmental organizations (IGOs). IGOs are organizations made up of member states represented by their governments. 
+**International** **organizations** (IO) refer to formal organizations with members from three or more countries that pursue a set of shared goals. The most commonly used definition of IO in academic and practical discussions refers specifically to intergovernmental organizations (IGOs). IGOs are organizations made up of member **states** represented by their governments. 
 
 Inclusive IGOs are organizations that all parties can join if they meet the membership criteria, while exclusive IGOs are designed to deliberately exclude specific countries from joining. For example, NATO is considered an exclusive IGO since its membership is limited to Western-aligned countries. Regardless of the number of members, budget size, or institutional design, IGOs are the main focus when discussing international organizations.
 
@@ -82,7 +83,7 @@ Some examples of global governance in action are the coordination around climate
 
 ## Roles of International Organizations
 
-International organizations serve a number of important roles for member states. First, they provide a regular forum where member states can meet and discuss issues of mutual concern. The routine gatherings of IOs give members a space to develop shared understandings and find areas of agreement. 
+International organizations serve a number of important roles for **member states**. First, they provide a regular forum where member states can meet and discuss issues of mutual concern. The routine gatherings of IOs give members a space to develop shared understandings and find areas of agreement. 
 
 Second, IOs help states coordinate their actions. By pooling financial, technological, and analytical resources, states can work together effectively to accomplish goals that no single state could achieve alone. IOs provide the platform for this collaboration.
 

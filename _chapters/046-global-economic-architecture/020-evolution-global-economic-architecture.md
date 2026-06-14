@@ -2,11 +2,12 @@
 title: The Evolution of the Global Economic Architecture
 slug: evolution-global-economic-architecture
 abstract: The evolution of the global economic architecture is driven by the need to adapt to a changing world, with challenges arising from shifts in economic power and the outdated policies of international economic institutions. Efforts have been made to reform and decentralize the architecture, with the rise of forums like the G20 and regional initiatives complementing the role of global institutions like the IMF and WTO.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-The global economic architecture evolved out the historic 1944 Bretton Woods Conference comprised various international economic institutions (IEIs): International Monetary Fund (IMF), the General Agreement on Tariff and Trade (GATT) > World Trade Organization (WTO), and World Bank. G 7/G 8 was established in the mid-1970 s to oversee the IEIs. The Financial Stability Forum (FSF) was established in 1999 in response to the Asian Financial Crisis to promote financial stability and develop best practices for financial regulation and supervision. 
+The **global** economic architecture evolved out the historic 1944 Bretton Woods Conference comprised various international economic institutions (IEIs): International Monetary Fund (IMF), the General Agreement on Tariff and Trade (GATT) > **World** Trade Organization (WTO), and **World **Bank**. G 7/G 8 was established in the mid-1970 s to oversee the IEIs. The Financial Stability Forum (FSF) was established in 1999 in response to the Asian Financial Crisis to promote financial stability and develop best practices for financial regulation and supervision. 
 
 The economic architecture that was created before and worked well for a few decades has now come under severe strain. First, the governance system of the old architecture does not reflect the move from a uni-polar to multi-polar world. This was accelerated after the global financial crisis (GFC) of 2008-2009, which increased the economic power of Asia, especially China and India. 
 
@@ -16,7 +17,7 @@ At the height of the GFC, a number of academics and politicians called for a "Ne
 
 However, those hoping for a NBW were likely disappointed because the rebound from the GFC was faster than expected. Instead of a Global Depression there was a Great Recession. 
 
-Likely in the future, there will not be a NBW. Instead the global architecture will move incrementally towards a more decentralized system where national, bilateral and regional institutions work closely with a "senior" global institution.
+Likely in the future, there will not be a NBW. Instead the global architecture will move incrementally towards a more decentralized system where national, bilateral and **regional** institutions work closely with a "senior" global institution.
 
 ## The Rise of the G 20
 
