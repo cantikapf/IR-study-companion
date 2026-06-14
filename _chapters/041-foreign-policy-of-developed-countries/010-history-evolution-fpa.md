@@ -2,6 +2,7 @@
 title: The History And Evolution Of Foreign Policy Analysis
 slug: history-fpa
 abstract: The history and evolution of foreign policy analysis in the scope of developed countries.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Definition of Development Countries
@@ -27,7 +28,7 @@ Economically, a developed country has a high level of gross domestic product, hi
 
 ### Industrialization and Foreign Trade
 
-A developed country has a strong manufacturing sector and engages significantly in international trade. Goods are manufactured domestically and exported.
+A developed country has a strong manufacturing sector and engages significantly in **international** trade. Goods are manufactured domestically and exported.
 
 ### Political Stability 
 
@@ -51,7 +52,7 @@ Developed countries utilize regulations, incentives, and technology to maintain 
 
 ## Overview of Foreign Policy Analysis
 
-Foreign Policy Analysis (FPA) emerged as a subfield of International Relations in the late 1980s, with a focus on developing middle range theories to explain foreign policy decision making. Prior to this, the IR research community had concentrated on the major paradigms of Realism, Liberalism, and Constructivism. 
+**Foreign** **Policy** Analysis (FPA) emerged as a subfield of International Relations in the late 1980s, with a focus on developing middle range theories to explain foreign policy decision making. Prior to this, the IR research community had concentrated on the major paradigms of Realism, Liberalism, and Constructivism. 
 
 FPA aims to understand the actual conduct and practice of foreign policy, concentrating more on state agency rather than broad structural factors. It examines how and why states make the foreign policy decisions they do, considering the role of factors like domestic politics, individual leaders, and bureaucratic politics.
 
@@ -64,13 +65,13 @@ Some key developments in the field include:
 
 So while structural theories still dominate IR, FPA has carved out an important niche examining the microfoundations of foreign policy and state behavior.
 
-<center> <img src="static\modules\evolution of FPA.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/evolution of FPA.png " alt="" width="70%" /> </center>
 
 ## Defining Foreign Policy
 
 Foreign policies are the strategies governments use to guide their actions in the international arena. Foreign policy often are studied by focusing on a single country (e.g., a decision on the use of force by a U.S. president) or across nations (e.g., comparing environmental decisions by leaders of US, UK, Germany, France, and Italy) or across time (e.g., comparing decisions of U.S. presidents in the first and second Iraq wars). 
 
-Foreign policy analysis is the study of the conduct and practice of relations between different actors, primarily states, in the international system. International relations aims to interpret broad features of international system (‘structure’); foreign policy analysis concentrates on actual state conduct and the sources of decisions (‘agency’).
+Foreign **policy analysis** is the study of the conduct and practice of relations between different actors, primarily states, in the international system. International relations aims to interpret broad features of international system (‘structure’); foreign policy analysis concentrates on actual state conduct and the sources of decisions (‘agency’).
 
 ## Relevance of Foreign Policy
 

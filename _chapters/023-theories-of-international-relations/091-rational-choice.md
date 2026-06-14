@@ -1,13 +1,14 @@
 ---
 title: Introduction To International Relations Theories
-slug: introduction-ir-theories
+slug: rational-choice-theory
 abstract: This chapter will introduce you to the field of international relations theories.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
-Rational choice is a major approach in the study of international relations (IR) that has shaped current theoretical debates and enhanced our understanding of topics like anarchy and cooperation. The methodology of rational choice explains individual and collective outcomes by considering the goals individuals pursue within certain constraints. 
+**Rational** **choice** is a major approach in the study of international relations (IR) that has shaped current theoretical debates and enhanced our understanding of topics like anarchy and cooperation. The methodology of rational choice explains individual and collective outcomes by considering the goals individuals pursue within certain constraints. 
 
-While it is not a specific theory, rational choice assumes that actors are rational and make choices based on their preferences and available information. This approach highlights the significance of individual actors and their interests, and has been applied to various aspects of international relations, including cooperation, conflict, and institution-building. 
+While it is not a specific theory, rational choice assumes that **actors** are rational and make choices based on their preferences and available information. This approach highlights the significance of individual actors and their interests, and has been applied to various aspects of international relations, including cooperation, conflict, and institution-building. 
 
 Although rational choice is often associated with the use of mathematical models, it is not always necessary, as many applications can be described as "soft" without strict ties to formal models. Rational choice is compatible with different approaches and should not be limited by its association with specific substantive positions in international relations, such as realism, neorealism, and neoliberalism.
 
@@ -30,7 +31,7 @@ Despite these challenges, utility-maximizing theory remains an important framewo
 
 ## Decision-making process by Rational Choice theory
 
-Here are the steps of decision-making in international relations, as explained by rational choice theory:
+Here are the steps of decision-making in international relations, as explained by rational **choice theory**:
 
 1. Actors have preferences and goals that they seek to achieve.
 2. Actors gather information about the available options and the potential outcomes of each option.

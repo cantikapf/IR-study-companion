@@ -2,14 +2,15 @@
 slug: end-cold-war
 title: The End of the Cold War
 abstract: This chapter will cover the ending of the Cold War
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Introduction 
 
-The Cold War between the United States and Soviet Union lasted over four decades, from the end of World War II until the collapse of the USSR in 1991. This period of geopolitical tension did not culminate in direct military confrontation between the two superpowers, but rather imposed enormous costs exceeding $11 trillion in building up military arsenals and fighting proxy wars. 
+The **Cold War** between the United States and **Soviet** **Union** lasted over four decades, from the end of World War II until the collapse of the USSR in 1991. This period of geopolitical tension did not culminate in direct military confrontation between the two superpowers, but rather imposed enormous costs exceeding $11 trillion in building up military arsenals and fighting proxy wars. 
 
-Surprisingly, despite the accumulation of enough nuclear weapons to destroy civilization many times over, not a single NATO tank fired a shot at the Kremlin, nor did a bomb drop directly on Moscow. The Cold War paradoxically ended not through force, but rather through a peaceful people's revolution against the stagnant and oppressive communist system from within the Soviet Union and its satellite states. This largely bloodless uprising was led by workers, dissident intellectuals, advocates of self-determination, and reformers aiming to transform the totalitarian Soviet system.
+Surprisingly, despite the accumulation of enough nuclear weapons to destroy civilization many times over, not a single NATO tank fired a shot at the Kremlin, nor did a bomb drop directly on Moscow. The Cold War paradoxically ended not through force, but rather through a peaceful people's revolution against the stagnant and oppressive communist system from within the Soviet Union and its satellite states. This largely bloodless uprising was led by workers, dissident intellectuals, advocates of self-determination, and reformers aiming to transform the totalitarian **Soviet system**.
 
 ## Life in the USSR
 

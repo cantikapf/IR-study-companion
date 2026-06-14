@@ -2,15 +2,16 @@
 title: 'The World Trade Organization: From GATT to Global Trade Guardian'
 slug: gatt
 abstract: This chapter will show you the history of the World Trade Organization (WTO) and how it has become the global trade guardian.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Brief History
 
-The World Trade Organization (WTO) was established in 1995, evolving out of the General Agreement on Tariffs and Trade (GATT) which had been in place since 1947. The transition marked a shift from a multilateral treaty to an international organization with defined membership. 
+The World **Trade** Organization (**WTO**) was established in 1995, evolving out of the General Agreement on Tariffs and Trade (GATT) which had been in place since 1947. The transition marked a shift from a multilateral treaty to an international organization with defined membership. 
 
 Unlike GATT, the WTO does not have a provisional application clause. It also expanded beyond GATT to cover additional areas like non-tariff barriers, trade in services, and intellectual property rights. The WTO also established a stronger dispute settlement system than was present under GATT.
 
-Overall, the shift from GATT to the WTO represented an evolution from a set of multilateral trade agreements with limited scope into a formal international organization with a broader mandate governing world trade. This transition strengthened international cooperation on trade issues.
+Overall, the shift from GATT to the WTO represented an evolution from a set of multilateral **trade agreements** with limited scope into a formal international organization with a broader mandate governing world trade. This transition strengthened international cooperation on trade issues.
 
 <div class="table-wrapper" markdown="block">
 
@@ -25,11 +26,11 @@ Overall, the shift from GATT to the WTO represented an evolution from a set of m
 
 ## Core Principles of the WTO
 
-The World Trade Organization is guided by two core principles that shape its approach to facilitating international trade: market liberalism and non-discrimination. 
+The World Trade Organization is guided by two core principles that shape its approach to facilitating **international trade**: market liberalism and non-discrimination. 
 
 Market liberalism is the belief that an open, liberal international trade system leads to greater prosperity and improved living standards globally. This principle posits that removing barriers to trade allows countries to capitalize on their comparative advantages in production, enabling resources to be allocated more efficiently worldwide. Market liberalism has been a foundational philosophy underlying the multilateral trading system since the General Agreement on Tariffs and Trade (GATT).
 
-The principle of non-discrimination seeks to provide equal trading opportunities for WTO members. Several key tenets support non-discrimination:
+The principle of non-discrimination seeks to provide equal trading opportunities for **WTO members**. Several key tenets support non-discrimination:
 
 - Most Favored Nation (MFN): Under MFN, if a WTO member provides a trade concession or advantage to one member, it must provide the same treatment to all other WTO members. This promotes equal trading rights.
 

@@ -3,11 +3,28 @@ _draft/
 .jekyll-cache/
 sitemap.xml
 
-# Secrets
+# Secrets and Credentials
 .env
 .env.*
 *.pem
 *.key
+*.cert
+*.crt
+secrets.json
+credentials.json
+auth.json
+*.p12
+*.pfx
+.netrc
+.npmrc
+.ssh/
+id_rsa
+id_rsa.pub
+
+# IDEs and local config
+.vscode/
+.idea/
+.DS_Store
 
 # Test & Automation artifacts
 node_modules/
@@ -15,3 +32,4 @@ playwright-report/
 test-results/
 __pycache__/
 .pytest_cache/
+.venv/

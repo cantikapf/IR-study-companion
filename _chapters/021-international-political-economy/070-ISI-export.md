@@ -2,11 +2,12 @@
 title: 'From ISI to Export Orientation: How Developing Countries Navigated Trade Strategy'
 slug: ISI-export
 abstract: The export strategies of developing countries
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction to ISI
 
-Import Substitution Industrialization (ISI) refers to an economic policy aimed at fostering domestic industry growth and reducing foreign dependency. As a development strategy, ISI policies were prominently implemented across parts of Latin America, Africa, and Asia throughout much of the 20th century. 
+Import Substitution Industrialization (**ISI**) refers to an **economic** policy aimed at fostering **domestic** industry growth and reducing foreign dependency. As a development strategy, **ISI policies** were prominently implemented across parts of Latin America, Africa, and Asia throughout much of the 20th century. 
 
 The core objectives of ISI included:
 
@@ -21,7 +22,7 @@ ISI represented a pillar of developing country economic strategy for decades, th
 
 ## Advantages of ISI
 
-Import substitution industrialization (ISI) offered some key advantages for developing countries that implemented the policy. Most notably, ISI helped foster domestic industrial growth, reduced dependence on foreign imports, and provided more local job opportunities.
+Import substitution industrialization (ISI) offered some key advantages for **developing countries** that implemented the policy. Most notably, ISI helped foster domestic industrial growth, reduced dependence on foreign imports, and provided more local job opportunities.
 
 - **Job Creation** - By developing and supporting local industries, ISI allowed developing countries to create more employment opportunities. Manufacturing industries in particular were able to employ large numbers of workers as domestic production ramped up under ISI. This addressed concerns over unemployment and provided income sources beyond agriculture and resource extraction.
 

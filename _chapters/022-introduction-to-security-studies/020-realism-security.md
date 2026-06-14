@@ -2,11 +2,12 @@
 title: Realism In Security Studies
 slug: realism-security
 abstract: Realism theory in security studies concept
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 ## Introduction to Realism
 
-Realism is one of the major theoretical perspectives in the study of international relations. It emphasizes the competitive and conflictual side of international politics, arguing that the fundamental nature of international politics is defined by power politics among states in an anarchic international system.
+Realism is one of the major theoretical perspectives in the study of **international** relations. It emphasizes the competitive and conflictual side of **international politics**, arguing that the fundamental nature of international politics is defined by **power** politics among **states** in an anarchic **international system**.
 
 According to realism, states are the most important actors in the international system. The key assumptions of realism include:
 

@@ -2,21 +2,22 @@
 title: Poverty, Development, and International Aid
 slug: poverty-development-aid
 abstract: Definitions and theory about development and international aid
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Definitions of Development
 
-Defining development is complex as the concept takes on different meanings for various thinkers and theorists. At its core, development refers to positive change or the process of improving people's lives. However, perspectives differ on how development should be defined, measured, and achieved.
+Defining **development** is complex as the concept takes on different meanings for various thinkers and theorists. At its core, development refers to positive change or the process of improving people's lives. However, perspectives differ on how development should be defined, measured, and achieved.
 
-For some, development is primarily about economic growth and increasing GDP per capita. For others, human development factors like health, education, political freedom, and environmental sustainability are central. Development can also be understood as modernization, whereby traditional social structures are reorganized to increase productivity.
+For some, development is primarily about **economic** growth and increasing GDP per capita. For others, human development factors like health, education, political freedom, and environmental sustainability are central. Development can also be understood as modernization, whereby traditional social structures are reorganized to increase productivity.
 
-Some approaches critique dominant economic models, instead prioritizing redistributive justice and meeting basic human needs. There are also many theories examining the historical, political, and sociological drivers behind underdevelopment, like colonialism. How development is defined has implications for policy, as different definitions point to alternative goals and strategies for promoting societal advancement.
+Some approaches critique dominant economic models, instead prioritizing redistributive justice and meeting basic human needs. There are also many theories examining the historical, political, and sociological drivers behind **underdevelopment**, like colonialism. How development is defined has implications for policy, as different definitions point to alternative goals and strategies for promoting societal advancement.
 
 Ultimately, there is no single authoritative meaning of development. It is a complex concept intertwined with evolving philosophical, economic, and political thought. This multifaceted nature of development must be appreciated when analyzing theories and approaches.
 
 ## Poverty and Underdevelopment
 
-Very often discussions of development begin by focusing on the characteristics and descriptors of underdevelopment. For example, underdevelopment is usually characterized by low per capita incomes, low literacy rates and educational levels, lack of access to basic services like clean water, sanitation, electricity etc.
+Very often discussions of development begin by focusing on the characteristics and descriptors of underdevelopment. For example, underdevelopment is usually characterized by **low** per capita incomes, low literacy rates and educational levels, lack of access to basic services like clean water, sanitation, electricity etc.
 
 However, simply describing underdevelopment does not explain its underlying causes. Underdevelopment needs to be understood in terms of the processes and structures that perpetuate it. Merely describing that underdevelopment is characterized by poverty, low human development, lack of infrastructure etc. does not provide an understanding of how underdevelopment comes into existence and persists over time.
 
@@ -32,7 +33,7 @@ Environmental or cultural determinism refers to the view that underdevelopment i
 
 Political instability and extended periods of internal turbulence are also sometimes cited as barriers to development. When countries are plagued by issues like tribal rivalries, ethnic tensions, authoritarian regimes, and civil unrest, it becomes very difficult to focus resources on development goals. The numerous civil wars and unrest in many central African nations have clearly impeded economic and social progress in those countries.
 
-Lastly, a difficult physical environment like lack of rainfall, poor soil quality, and an absence of easily accessible natural resources can pose challenges for development. However, with appropriate technologies and policy solutions, as well as targeted foreign aid, these issues can potentially be addressed and should not condemn a nation to indefinite poverty.
+Lastly, a difficult physical environment like lack of rainfall, poor soil quality, and an absence of easily accessible natural resources can pose challenges for development. However, with appropriate technologies and policy solutions, as well as targeted foreign **aid**, these issues can potentially be addressed and should not condemn a nation to indefinite poverty.
 
 Overall, while environmental, cultural, political and geographical factors may contribute to underdevelopment in some nations, they do not provide a complete explanation. Underdevelopment arises from a complex interplay of historical, political, economic and social forces both within countries and globally. Blaming any one factor in isolation oversimplifies a complicated issue.
 

@@ -24,6 +24,9 @@
     border-spacing: 0;
     min-width: 600px;
 }
+.theory-table tr {
+    background-color: transparent !important;
+}
 .theory-table th {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     color: white;
@@ -39,18 +42,26 @@
 }
 .theory-table td {
     padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.02) !important;
     border-bottom: 1px solid rgba(150, 150, 150, 0.2);
     transition: background 0.3s;
+    color: #333;
+}
+body.dark-theme .theory-table td {
+    color: #f3f4f6;
+    background: rgba(255, 255, 255, 0.05) !important;
 }
 .theory-table tr:last-child td {
     border-bottom: none;
 }
 .theory-table tr:hover td {
-    background: rgba(79, 172, 254, 0.1);
+    background: rgba(79, 172, 254, 0.1) !important;
 }
 .theory-table td strong {
     color: #4facfe;
+}
+body.dark-theme .theory-table td strong {
+    color: #60a5fa;
 }
 </style>
 

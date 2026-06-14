@@ -2,6 +2,7 @@
 title: Global Finance And Global Trade As Agendas
 slug: global-finance-and-global-trade-as-agendas
 abstract: What is global finance and global trade system?
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 
@@ -11,11 +12,11 @@ Globalization refers to the increasing interdependence and integration of countr
 
 Intensity refers to the magnitude and density of economic flows and transactions across national borders. This includes measures such as trade volume, foreign investment flows, capital transfers, and migration. Extensity refers to the geographical spread and reach of economic flows and activities across countries. This includes the number of countries involved in trade and investment relationships and the dispersion of economic flows.
 
-An increase in both the intensity and extensity of global economic flows signals greater economic integration between nations and a higher degree of globalization. While the world has seen an overall rise in globalization since the 1970s, the process has been uneven with greater economic integration concentrated among advanced industrial economies. Many developing countries still remain weakly linked to global economic activities and flows.
+An increase in both the intensity and extensity of global economic flows signals greater economic integration between nations and a higher degree of globalization. While the **world** has seen an overall rise in globalization since the 1970s, the process has been uneven with greater economic integration concentrated among advanced industrial economies. Many developing countries still remain weakly linked to global economic activities and flows.
 
 ## Global Trade Trends
 
-Despite disruptions from economic downturns and global crises, world trade has exhibited a general upward trajectory in recent decades. The total value of exports has risen substantially since the 1970s. This reflects an intensification of global flows and economic interdependence. 
+Despite disruptions from economic downturns and global crises, **world trade** has exhibited a general upward trajectory in recent decades. The total value of exports has risen substantially since the 1970s. This reflects an intensification of global flows and economic interdependence. 
 
 However, the benefits of expanding trade have not been evenly distributed across all nations. Many less developed countries remain only lightly integrated in world trade networks. The poorest developing countries have minimal shares of global exports and imports. Their domestic economies remain insulated from the major currents of international commerce.
 
@@ -29,13 +30,13 @@ Despite increasing trends in world trade, much of this growth is attributed to r
 
 In contrast to trade, global finance remains heavily concentrated in the North Atlantic economy. The major increase in world trade since the 1970s appears to be more closely linked to regional agreements that reduce barriers between neighboring economies, rather than reflecting true worldwide integration.
 
-Looking at actual global impacts, financial trading patterns often diverge significantly from the underlying trade flows. The global reach of financial transactions does not necessarily correlate with their real economic effects across different countries and regions. Overall, the extensity and dispersal of international trade and finance varies depending on the specific metric used.
+Looking at actual global impacts, **financial** trading patterns often diverge significantly from the underlying trade flows. The global reach of financial transactions does not necessarily correlate with their real economic effects across different countries and regions. Overall, the extensity and dispersal of international trade and finance varies depending on the specific metric used.
 
 ##  Bretton Woods Conference
 
 As World War II drew to a close in 1945, the Allied powers realized they needed a new international economic order to prevent the recurrence of a post-war depression like the one that followed World War I. In July 1944, representatives from 44 Allied nations met in Bretton Woods, New Hampshire to outline a new system for regulating international finance and trade. This came to be known as the Bretton Woods conference. 
 
-The chief aim of the Bretton Woods conference was to establish a new monetary order that would foster economic growth and financial stability in the postwar world. The attendees wanted to avoid the economic policies of the 1920s and 30s that had contributed to the Great Depression. The Bretton Woods agreements introduced a regime of fixed exchange rates tied to the U.S. dollar. It also led to the creation of key international financial institutions like the International Monetary Fund (IMF) and the World Bank.
+The chief aim of the Bretton Woods conference was to establish a new monetary order that would foster economic growth and financial stability in the postwar world. The attendees wanted to avoid the economic policies of the 1920s and 30s that had contributed to the Great Depression. The Bretton Woods agreements introduced a regime of fixed exchange rates tied to the U.S. dollar. It also led to the creation of key international financial institutions like the International Monetary Fund (IMF) and the **World Bank**.
 
 One of the other major outcomes of Bretton Woods was the General Agreement on Tariffs and Trade (GATT). Drafted in 1947, GATT's purpose was to reduce barriers to international trade like tariffs and import quotas. It established principles and rules for promoting free and fair trade between nations. GATT came into effect in 1948 and would later evolve into the World Trade Organization (WTO) in 1995. Overall, the Bretton Woods conference fundamentally reshaped the global economic system in the postwar era. Its vision of integrated markets and shared financial governance laid the foundations for modern globalization.
 
@@ -61,7 +62,7 @@ While the IMF and World Bank aim to promote global growth and stability, their u
 
 ## Financial Liberalization
 
-Financial liberalization refers to policies that allow financial services firms and markets to operate with minimal regulation and oversight. In theory, financial liberalization allows capital to flow freely where it can be put to its most productive use. However, critics argue that financial liberalization has led to increased inequality and instability.
+**Financial liberalization** refers to policies that allow financial services firms and markets to operate with minimal regulation and oversight. In theory, financial liberalization allows capital to flow freely where it can be put to its most productive use. However, critics argue that financial liberalization has led to increased inequality and instability.
 
 Self-regulating financial markets have allowed wealth to become highly concentrated. The prevailing trend towards liberalization of finance from the 1980s onwards contributed to the rise of "too big to fail" banks and the wealth of top earners and large corporations. When markets are left to regulate themselves, critics believe they tend to operate in favor of the wealthy and well-connected.  
 

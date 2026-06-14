@@ -56,9 +56,9 @@
           {% endif %}
 
           {% if page.url == i_chapter.url %}
-            <li class="chapter active">
+            <li class="chapter active" data-chapter-slug="{{ i_chapter.slug }}">
           {% else %}
-            <li class="chapter {%if i_chapter_is_draft %}draft{%endif%}">
+            <li class="chapter {%if i_chapter_is_draft %}draft{%endif%}" data-chapter-slug="{{ i_chapter.slug }}">
           {% endif %}
 
             <a href="{{site.baseurl}}{{i_chapter.url}}">

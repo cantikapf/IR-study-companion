@@ -2,18 +2,19 @@
 title: 'Domestic Politics: Two Level Games'
 slug: domestic-politics
 abstract: This chapter will explain the two level games model of domestic politics.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 ## What is two-level game?
 
-The "two-level game" is a theoretical approach about how state's representative in negotiations between states shape their state's foreign policy by two stages, that is:
+The "two-**level** game" is a theoretical approach about how state's representative in negotiations between states shape their state's foreign policy by two stages, that is:
 
-1) bargaining between **international** negotiators , leading to a tentative agreement (Level I)
-2) separate discussions within each **domestic or national** group of constituents about whether to ratify the agreement (Level II). 
+1) bargaining between **international** negotiators , leading to a tentative **agreement** (Level I)
+2) separate discussions within each **domestic or national** group of **constituents** about whether to ratify the agreement (Level II). 
 
-The win-set refers to the set of all possible Level I agreements that would gain the necessary majority among the constituents when simply voted up or down. It is important for understanding the likelihood of reaching an agreement and the distribution of joint gains from the international bargain. 
+The win-set refers to the set of all possible Level I **agreements** that would gain the necessary majority among the constituents when simply voted up or down. It is important for understanding the likelihood of reaching an agreement and the distribution of joint gains from the international bargain. 
 
-The size of the "win-set" of feasible agreements depends on the distribution of power, preferences, and possible coalitions among Level II constituents. The two-level game is a complex process in which moves that are rational for a player at one level may be impolitic for that same player at the other level. The requirement that any Level I agreement must be ratified at Level II imposes a crucial theoretical link between the two levels.
+The size of the "win-set" of feasible agreements depends on the distribution of power, preferences, and possible coalitions among Level II constituents. The **two-level game** is a complex process in which moves that are rational for a player at one level may be impolitic for that same player at the other level. The requirement that any Level I agreement must be ratified at Level II imposes a crucial theoretical link between the two levels.
 
 ## Process of Two-Level Game
 
@@ -26,7 +27,7 @@ The two-level game process, as proposed by Robert D. Putnam, involves two stages
 The process is sequential, with the requirement that any Level I agreement must be ratified at Level II, thereby creating a crucial theoretical link between the two levels. The size of the "win-set," which refers to the set of all possible Level I agreements that would gain the necessary majority among the constituents when simply voted up or down, is a key determinant of the possibility of reaching an agreement. The win-set depends on the distribution of power, preferences, and possible coalitions among Level II constituents, and it affects the likelihood of reaching an agreement and the distribution of joint gains from the international bargain.
 
 
-<center> <img src="static\modules\two-level game.png" alt="" width="100%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/two-level game.png" alt="" width="100%" /> </center>
 
 
 ## Win-Sets Determinant

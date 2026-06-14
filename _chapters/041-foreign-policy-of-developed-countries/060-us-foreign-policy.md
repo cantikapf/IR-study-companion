@@ -2,11 +2,12 @@
 title: U.S. Foreign Policy
 slug: us-foreign-policy
 abstract: Keypoints on U.S. Foreign Policy.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
-US foreign policy has evolved considerably since the country's founding, shaped by changing geopolitical realities, values, and domestic politics. But some key goals have remained relatively constant - to protect the homeland, promote economic prosperity, and uphold democratic principles abroad. 
+US **foreign** **policy** has evolved considerably since the country's founding, shaped by changing geopolitical realities, values, and domestic politics. But some key goals have remained relatively constant - to protect the homeland, promote economic prosperity, and uphold democratic principles abroad. 
 
-In the 19th century, foreign policy was focused inward - on westward expansion and avoiding entanglements in European affairs. This isolationism shifted after the Spanish-American war, with the US emerging as a global power. In the 20th century, the US assumed a leadership role in WWI and WWII, then engaged in a global Cold War struggle against communism. 
+In the 19th century, foreign policy was focused inward - on westward expansion and avoiding entanglements in European affairs. This isolationism shifted after the Spanish-American war, with the US emerging as a global **power**. In the 20th century, the US assumed a leadership role in WWI and WWII, then engaged in a global Cold War struggle against communism. 
 
 After the Cold War, policymakers debated America's role in the post-Soviet world. The Clinton administration focused on open markets, democracy promotion, and multilateral engagement. After 9/11, counterterrorism became the top priority under President Bush. More recently, the US has aimed to pivot toward Asia while grappling with crises in the Middle East.
 
@@ -46,7 +47,7 @@ Principally in economic terms, prosperity focuses on goals related to the Americ
 
 ## Principles
 
-The Principles component of US foreign policy refers to the values, ideals, and beliefs that the United States has claimed to stand for in the world. These principles are rooted in the political values on which America was founded - namely, freedom, democracy, individual rights, and the rule of law. Throughout history, US leaders have invoked these principles to justify America's role in the world and its relationships with other nations.
+The Principles component of US foreign policy refers to the values, ideals, and beliefs that the **United States** has claimed to stand for in the world. These principles are rooted in the political values on which America was founded - namely, freedom, democracy, individual rights, and the rule of law. Throughout history, US leaders have invoked these principles to justify America's role in the world and its relationships with other nations.
 
 Some key principles that have shaped US foreign policy include:
 

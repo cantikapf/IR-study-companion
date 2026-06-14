@@ -2,23 +2,24 @@
 title: NGO And International Law
 slug: ngo-and-international-law
 abstract: Non-governmental organizations (NGOs) play a crucial role in shaping and influencing international law through advocacy, participation in drafting processes, and promoting compliance with legal standards.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-Non-governmental organizations (NGOs) are organizations that operate independently from any government. They are typically non-profit entities formed to advance political or social causes. NGOs actively work to address issues in areas like human rights, humanitarian aid, environmental protection, social justice, and the rights of indigenous peoples. 
+Non-governmental organizations (**NGOs**) are organizations that operate independently from any government. They are typically non-profit entities formed to advance political or social causes. NGOs actively work to address issues in areas like human rights, humanitarian aid, environmental protection, social justice, and the rights of indigenous peoples. 
 
-While NGOs are not motivated by profit, they have a strong interest in influencing the process of making international laws and norms. They aim to drive change on the issues central to their mission.
+While NGOs are not motivated by profit, they have a strong interest in influencing the process of making **international** laws and norms. They aim to drive change on the issues central to their mission.
 
 Many NGOs focus on human rights causes. Others prioritize environmental activism, such as conservation, climate change, or pollution. There are also NGOs dedicated to humanitarian relief, fighting hunger and poverty, protecting refugees, and advancing indigenous rights.
 
-Though they lack the governing power of states, NGOs make an impact through advocacy, activism, and influencing both domestic policy and international institutions. Their involvement has shaped the development of international law over recent decades.
+Though they lack the governing power of states, NGOs make an impact through advocacy, activism, and influencing both domestic policy and international institutions. Their involvement has shaped the development of **international **law** over recent decades.
 
 ## History of NGOs in International Law
 
 Non-governmental organizations (NGOs) have been involved in the development of international law for over a century. One of the earliest attempts by an NGO to influence international law was the campaign of the British Anti Slavery and Aborigines Protection Society. This NGO advocated for decades to end slavery and the slave trade. Their efforts culminated in 1926 with the adoption of the Slavery Convention, which outlawed slavery in signatory countries. 
 
-The Slavery Convention marked a significant milestone, demonstrating the ability of NGOs to impact the creation of binding international laws. Through persistent advocacy and influencing politicians, the British Anti Slavery Society was instrumental in bringing about an international treaty banning slavery globally. Their campaign set a precedent for NGOs being involved in developing international legal standards and treaties.
+The Slavery Convention marked a significant milestone, demonstrating the ability of NGOs to impact the creation of binding **international laws**. Through persistent advocacy and influencing politicians, the British Anti Slavery Society was instrumental in bringing about an international treaty banning slavery globally. Their campaign set a precedent for NGOs being involved in developing international legal standards and treaties.
 
 ## NGO Influence in Developing International Law
 

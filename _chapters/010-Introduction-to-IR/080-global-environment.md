@@ -2,18 +2,19 @@
 title: Global Environment As Agendas
 slug: global-environment-as-agendas
 abstract: Environment issue in International Relations context
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 
 ## Early Environmental Milestones
 
-The modern environmental movement gained momentum in the late 1960s and early 1970s with major international conferences and reports that brought global attention to environmental issues. 
+The modern **environmental** movement gained momentum in the late 1960s and early 1970s with major international conferences and reports that brought global attention to **environmental issues**. 
 
 In 1968, the UN General Assembly convened the UN Conference on the Human Environment in Stockholm, Sweden. This marked the first major international gathering focused on environmental issues. Out of this conference came a declaration that served as an "action plan" for global environmental governance and led to the creation of the United Nations Environment Programme (UNEP). UNEP became the first UN agency focused solely on the environment.
 
-The 1972 UN Conference on the Human Environment, also known as the Stockholm Conference, built on the momentum of the 1968 gathering. At this conference, 113 countries adopted the Stockholm Declaration, which included 26 principles concerning the environment and development. This declaration put environmental issues on the global agenda.
+The 1972 UN Conference on the Human Environment, also known as the Stockholm Conference, built on the momentum of the 1968 gathering. At this conference, 113 countries adopted the Stockholm Declaration, which included 26 principles concerning the environment and **development**. This declaration put environmental issues on the global agenda.
 
-In 1987, the concept of sustainable development was formalized with the publication of the Brundtland Report, named after Chairman Gro Harlem Brundtland. Officially titled "Our Common Future," this report defined sustainable development as "development that meets the needs of the present without compromising the ability of future generations to meet their own needs." The Brundtland Report brought major attention to the idea of balancing environmental protection and economic development.
+In 1987, the concept of **sustainable development** was formalized with the publication of the Brundtland Report, named after Chairman Gro Harlem Brundtland. Officially titled "Our Common Future," this report defined sustainable development as "development that meets the needs of the present without compromising the ability of future generations to meet their own needs." The Brundtland Report brought major attention to the idea of balancing environmental protection and economic development.
 
 Through these milestones, environmental issues transitioned from national to global concerns. This set the stage for the creation of international institutions and agreements to address worldwide environmental problems.
 
@@ -23,7 +24,7 @@ A key outcome of the 1968 UN Conference on the Human Environment was the creatio
 
 The conference also spurred many national governments to establish their own environmental agencies and departments. For example, the United States formed the Environmental Protection Agency (EPA) in 1970, while the UK founded the Department of the Environment in 1971. These new agencies were tasked with researching environmental issues, monitoring pollution levels, and developing and enforcing environmental regulations at the domestic level.
 
-Another vital institution that emerged was the Intergovernmental Panel on Climate Change (IPCC), established in 1988 by UNEP and the World Meteorological Organization. The IPCC assesses the scientific literature on climate change and provides reports synthesizing the latest evidence and projections. These authoritative reports have played a key role in building consensus on the reality and risks of human-caused climate change. The IPCC and former Vice President Al Gore were awarded the Nobel Peace Prize in 2007 for their efforts to expand knowledge of manmade climate change and laying the foundations for action to counteract it.
+Another vital institution that emerged was the Intergovernmental Panel on **Climate Change** (IPCC), established in 1988 by UNEP and the World Meteorological Organization. The IPCC assesses the scientific literature on climate change and provides reports synthesizing the latest evidence and projections. These authoritative reports have played a key role in building consensus on the reality and risks of human-caused climate change. The IPCC and former Vice President Al Gore were awarded the Nobel Peace Prize in 2007 for their efforts to expand knowledge of manmade climate change and laying the foundations for action to counteract it.
 
 ## Emergence of Sustainable Development
 

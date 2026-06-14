@@ -2,13 +2,14 @@
 title: 'Approaches to IPE: Mercantilism vs. Liberalism'
 slug: merchantilism-liberalism
 abstract: 'This chapter will  introduce you to the two main approaches to IPE: mercantilism and liberalism.'
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 
 ---
 
 
 ## Introduction to Mercantilism and Liberalism
 
-Mercantilism and liberalism represent two major, and at times competing, schools of thought in international political economy. Mercantilism emerged in the seventeenth and eighteenth centuries, developing theories linking economic activity and state power. Core mercantilist ideas emphasize the interconnection between national power and economic strength, see trade as a means for states to acquire wealth, and prioritize certain economic sectors deemed most valuable. 
+Mercantilism and liberalism represent two major, and at times competing, schools of thought in international political economy. Mercantilism emerged in the seventeenth and eighteenth centuries, developing theories linking **economic** activity and **state** power. Core mercantilist ideas emphasize the interconnection between national power and economic strength, see **trade** as a means for states to acquire **wealth**, and prioritize certain economic sectors deemed most valuable. 
 
 In contrast, liberalism arose in the eighteenth century as an intellectual challenge to mercantilism. Led by thinkers like Adam Smith and David Ricardo, liberalism distinguishes between economics and politics, argues that trade benefits countries regardless of surpluses or deficits, and contends that wealth derives from efficiently producing goods and engaging in trade, not just manufacturing. Liberalism advocates market-based allocation of resources to maximize individual welfare.
 
@@ -16,7 +17,7 @@ While differing substantially, mercantilism and liberalism have both significant
 
 ## Core Principles of Mercantilism
 
-Mercantilism is rooted in theories from the 17th and 18th centuries that link economic activity and state power. At its core, mercantilism holds three central propositions:
+Mercantilism is rooted in theories from the 17th and 18th centuries that link economic activity and **state power**. At its core, mercantilism holds three central propositions:
 
 - National power and wealth are intricately connected. Mercantilists argue that a country's economic and military power are directly tied together. They believe that a strong economy is necessary to support military strength and national security.
 

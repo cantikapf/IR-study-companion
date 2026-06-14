@@ -2,6 +2,7 @@
 slug: domino-cold-war
 title: 'When One Falls, They All Will Follow: The Domino Theory and the Cold War'
 abstract: How the Domino Theory and the Cold War shaped the world
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
@@ -27,7 +28,7 @@ abstract: How the Domino Theory and the Cold War shaped the world
 
 ## Potsdam Conference Sets Post-War Tone
 
-The Potsdam Conference from July 17 to August 2, 1945 set the tone for post-war Europe. Held near Berlin, the meeting included the "Big Three" allied leaders - U.S. President Harry S. Truman, British Prime Minister Winston Churchill (later replaced by Clement Attlee), and Soviet Premier Joseph Stalin. 
+The Potsdam Conference from July 17 to August 2, 1945 set the tone for post-**war** Europe. Held near Berlin, the meeting included the "Big Three" allied leaders - U.S. President Harry S. Truman, British Prime Minister Winston Churchill (later replaced by Clement Attlee), and **Soviet** Premier Joseph Stalin. 
 
 The primary focus was the future of Germany and Eastern Europe following Germany's surrender a few months prior. Major outcomes included:
 
@@ -51,13 +52,13 @@ By the time it ended in 1951, the Marshall Plan had effectively rebuilt industri
 
 ## Berlin Blockade 
 
-After Germany's defeat in World War II, the country was divided into four occupied zones controlled by the Allied powers of the United States, Great Britain, France and the Soviet Union. Berlin, located deep in the Soviet sector, was also divided into four occupied zones. 
+After Germany's defeat in World War II, the country was divided into four occupied zones controlled by the Allied powers of the United States, Great Britain, France and the **Soviet Union**. Berlin, located deep in the Soviet sector, was also divided into four occupied zones. 
 
 In June 1948, the Soviets instituted a full blockade of West Berlin in an attempt to gain control of the entire city. All rail, road and water access was cut off by Soviet forces. In response, the United States and Great Britain organized a massive airlift operation to fly in the food, fuel and supplies needed by West Berlin's population of 2 million people.
 
 For nearly a year, American and British planes flew hundreds of thousands of flights into Tempelhof Airport, providing up to 13,000 tons of supplies to West Berlin each day. The Soviets had not expected such a sustained and successful response. On May 12, 1949, they lifted the blockade, and airlift operations began to wind down.
 
-The Berlin Blockade was an early Cold War crisis that increased tensions between the Western powers and the Soviet Union. It demonstrated American resolve to contain Soviet influence in Europe. The successful airlift operation showed the world that the Soviet blockade could be circumvented. The crisis ended in a victory for the West that led to the rapid unification of the three western occupation zones into West Germany in 1949.
+The Berlin Blockade was an early **Cold War** crisis that increased tensions between the Western powers and the Soviet Union. It demonstrated American resolve to contain Soviet influence in Europe. The successful airlift operation showed the world that the Soviet blockade could be circumvented. The crisis ended in a victory for the West that led to the rapid unification of the three western occupation zones into West Germany in 1949.
 
 ## NATO Formation Provides Western Alliance
 
@@ -75,7 +76,7 @@ Specifically, the Truman Doctrine authorized $400 million in aid to Greece and T
 
 The Truman Doctrine thus signaled a stark departure from America's prior isolationist policies. Whereas the U.S. had formerly avoided major involvement in European affairs, the Truman Doctrine committed the United States to actively supporting anti-communist regimes worldwide. It reflected an effort by the U.S. to assume a larger role in global politics and use its influence to check the spread of Soviet power.
 
-The Truman Doctrine remained in effect long after the initial aid to Greece and Turkey. It provided the foundation for American intervention and nation-building efforts throughout the Cold War era, from the Korean War to the Vietnam War. The policy of communist containment dominated U.S. foreign policy for over four decades after Truman's declaration.
+The Truman Doctrine remained in effect long after the initial aid to Greece and Turkey. It provided the foundation for American intervention and nation-building efforts throughout the Cold War era, from the Korean War to the **Vietnam War**. The policy of communist containment dominated U.S. foreign policy for over four decades after Truman's declaration.
 
 ## Korean War 
 

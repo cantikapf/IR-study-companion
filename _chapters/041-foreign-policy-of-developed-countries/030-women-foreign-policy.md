@@ -2,11 +2,12 @@
 title: 'Women And Foreign Policy: Swedish Feminist Foreign Policy'
 slug: women-foreign-policy
 abstract: Foreign policy that is dominated by masculine values is a problem. The Swedish feminist foreign policy is (one of) the solution.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Introduction 
 
-Foreign policy decision-making has historically been male-dominated. Institutions and processes involved in formulating foreign policy have traditionally excluded women or minimized their influence. This male dominance stems from societal norms and beliefs that men are more suited to leadership roles, especially in areas involving security, defense and international relations. 
+**Foreign** **policy** decision-making has historically been male-dominated. Institutions and processes involved in formulating foreign policy have traditionally excluded **women** or minimized their influence. This male dominance stems from societal norms and beliefs that men are more suited to leadership roles, especially in areas involving security, defense and international relations. 
 
 However, throughout history, some powerful women have found ways to shape the foreign policy of their nations. Examples include Cleopatra in ancient Egypt, Queen Elizabeth I in 16th century England, and Catherine the Great in 18th century Russia. In modern times, women like Prime Minister Margaret Thatcher in the UK, Prime Minister Gro Harlem Brundtland in Norway, and U.S. Secretaries of State Madeleine Albright and Hillary Clinton have played major roles in foreign policy. 
 
@@ -69,7 +70,7 @@ The decision-making processes often exclude women's perspectives, as factors lik
 
 ## Swedish Feminist Foreign Policy
 
-Since October 2014, Sweden became the first country that applied feminist foreign policy. The feminist foreign policy applied the gender equality perspectives in response to any foreign policy issues in international politics.  
+Since October 2014, Sweden became the first country that applied feminist foreign policy. The feminist foreign policy applied the **gender equality** perspectives in response to any foreign policy issues in international politics.  
 
 The core of Feminist Foreign Policy focused on 4R’s, such as women and girls’ rights, Representation and Resources, and also Reality. This core as an essential strategy to improve women and girl condition from discrimination and gender inequality in a whole aspect of life.
 

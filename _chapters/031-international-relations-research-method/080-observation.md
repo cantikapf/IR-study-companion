@@ -2,13 +2,14 @@
 title: 'IR Research Method: Participant Observation and Focus Group'
 slug: observation-method
 abstract: Observation is a systematic method of watching, recording, analyzing and interpreting people's behavior, events, or phenomena in their natural setting.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Observation
 
 ### What is Observation?
 
-Observation is a systematic method of watching, recording, analyzing and interpreting people's behavior, events, or phenomena in their natural setting. The observer does not interact or intervene in what is being observed, but simply watches without influencing the situation or outcomes.
+**Observation** is a systematic method of watching, recording, analyzing and interpreting people's behavior, events, or phenomena in their natural setting. The observer does not interact or intervene in what is being observed, but simply watches without influencing the situation or outcomes.
 
 Key aspects of observation as a scientific research method include:
 
@@ -35,11 +36,11 @@ The goal of observation research is to generate insights into behaviors, relatio
 
 - Participant Observation
 
-Participant observation involves the researcher directly participating in the activities of the group being studied. The researcher becomes an active member in the culture or context being observed in order to gain greater insight and understanding.
+**Participant observation** involves the **researcher** directly participating in the activities of the **group** being studied. The researcher becomes an active member in the culture or context being observed in order to gain greater insight and understanding.
 
 - Non-participant Observation
 
-In non-participant observation, the researcher remains separate from the group under study and does not actively participate in their activities. The researcher observes from an outsider's perspective without direct involvement with the participants.
+In **non-participant observation**, the researcher remains separate from the group under study and does not actively participate in their activities. The researcher observes from an outsider's perspective without direct involvement with the participants.
 
 - Direct Observation
 

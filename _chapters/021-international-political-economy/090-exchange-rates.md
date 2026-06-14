@@ -2,13 +2,14 @@
 title: 'The Tug-of-War Over Exchange Rates: Political Interests vs. Economic Welfare'
 slug: exchange-rates
 abstract: The system of international exchange rates
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction 
 
-Monetary and exchange rate policies are critical tools used by governments and central banks to influence economic outcomes. Monetary policy refers to central bank actions aimed at controlling interest rates and money supply, which in turn impact inflation, consumption, investment, and overall economic growth. Exchange rate policy relates to a government's management of its currency's value relative to other currencies. This impacts trade balances, capital flows, and a country's competitiveness. 
+Monetary and **exchange** **rate** policies are critical tools used by governments and central banks to influence economic outcomes. Monetary policy refers to central bank actions aimed at controlling interest rates and money supply, which in turn impact inflation, consumption, investment, and overall economic growth. Exchange **rate policy** relates to a government's management of its currency's value relative to other currencies. This impacts trade balances, capital flows, and a country's competitiveness. 
 
-There are differing schools of thought on the ideal approach to setting monetary and exchange rate policies. The dominant view has been that independent central banks should pursue price stability through interest rate adjustments and market-determined exchange rates. However, some argue that governments should take a more active role in managing monetary and exchange rate policies to achieve broader socioeconomic objectives. One such approach is the society-centered perspective.
+There are differing schools of thought on the ideal approach to setting monetary and exchange **rate policies**. The dominant view has been that independent central banks should pursue price stability through interest rate adjustments and market-determined exchange rates. However, some argue that governments should take a more active role in managing monetary and exchange rate policies to achieve broader socioeconomic objectives. One such approach is the society-centered perspective.
 
 ## Overview of Society-Centered Approach
 

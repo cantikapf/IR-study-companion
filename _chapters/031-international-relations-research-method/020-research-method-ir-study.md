@@ -2,31 +2,32 @@
 title: Research Method in International Relations Study
 slug: research-ir-study
 abstract: Examine the empirical-interpretive divide in IR and some of the key debates around theory, epistemology, and methodology that shape the field
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
-International Relations (IR) is a relatively young field of academic study that emerged in the early 20th century. IR as a discipline is focused on the study of the international system, including relations between states, international institutions, non-state actors like NGOs and MNCs, global issues like climate change, and more. 
+**International** Relations** (IR) is a relatively young field of academic study that emerged in the early 20th century. IR as a discipline is focused on the study of the international system, including relations between states, international institutions, non-state actors like NGOs and MNCs, global issues like climate change, and more. 
 
 IR draws upon various disciplines in the social sciences and humanities, including political science, economics, history, law, sociology, and philosophy. This multidisciplinary lineage means IR utilizes diverse theoretical frameworks and methodological approaches. 
 
-IR scholarship addresses both empirical questions and interpretative questions. Empirical research analyzes events, developments, or trends in world politics using scientific methods and evidence-based analysis. Interpretative research focuses more on understanding meanings, ideas, norms, identities and culture in the international system through critical analysis.
+IR scholarship addresses both empirical questions and interpretative questions. Empirical **research** analyzes events, developments, or trends in world politics using scientific methods and evidence-based analysis. Interpretative research focuses more on understanding meanings, ideas, norms, identities and culture in the international system through critical analysis.
 
 This multiplicity of research agendas has led to debates within IR on appropriate standards of rigor and disciplinary boundaries. Positivists argue IR should utilize the scientific method while post-positivists critique this approach.
 
 ## Empirical–Interpretive Divide
 
-IR scholarship can be grouped into two broad **epistemological traditions** that advance competing claims as to what should be regarded as acceptable knowledge within the field: empiricism and interpretivism. This dichotomy replicates a divide that is evident across the social sciences and coalesces around the question of what knowledge is of disciplinary value and what knowledge should we strive to produce?
+IR scholarship can be grouped into two broad **epistemological traditions** that advance competing claims as to what should be regarded as acceptable knowledge within the field: **empiricism** and interpretivism. This dichotomy replicates a divide that is evident across the social sciences and coalesces around the question of what knowledge is of disciplinary value and what knowledge should we strive to produce?
 
 Empiricism generally holds that valid evidence of social phenomena should be derived through factual evidence produced via systematic and replicable research governed by established scientific methods. Empiricists promote the application of the scientific method to verify causal relationships and derive generalizable conclusions on the basis of empirical evidence. 
 
 In contrast, interpretivism eschews the notion that the study of society is analogous to the study of nature. Interpretivists argue that researchers cannot identify impenetrable regularities or discover constant conjunctions in human affairs akin to the physical sciences. The focus is more on understanding meanings, motives, reasons and other subjective experiences central to social life yet neglected by empirical techniques wedded to the data derived from observation of the external world.
 
-<center> <img src="static\modules\empirical-interpretive divide.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/empirical-interpretive divide.png" alt="" width="70%" /> </center>
 
-<center> <img src="static\modules\empirical-interpretive divide2.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/empirical-interpretive divide2.png " alt="" width="70%" /> </center>
 
 ## Empiricism/Positivism
 
-Empiricism in international relations aims to **apply research practices from the natural sciences to the study of world politics**. It is based on the broad assumption that **knowledge can be accumulated through objective observation and systematic testing**. Empiricists view international relations as a social science that should be studied in a measurable, replicable, and evidence-based manner. Theories can be generated through careful observation and then tested empirically. According to empiricists, international politics can be studied as an objective reality distinct from the perceptions of the researcher. The validity of theories is judged by their predictive power and ability to produce testable hypotheses. 
+Empiricism in international relations aims to **apply research practices from the natural sciences to the study of world politics**. It is based on the broad assumption that **knowledge can be accumulated through objective observation and systematic testing**. Empiricists view international relations as a social science that should be studied in a measurable, replicable, and evidence-based manner. Theories can be generated through careful observation and then tested empirically. According to empiricists, **international politics** can be studied as an objective reality distinct from the perceptions of the researcher. The validity of theories is judged by their predictive power and ability to produce testable hypotheses. 
 
 Some key scholars associated with empiricism in international relations include Hans Morgenthau, who developed realist theory, and Kenneth Waltz, known for structural realism. Both approached the study of world politics with the intention of constructing testable theories that could explain and predict state behavior and international outcomes. Overall, empiricism remains a dominant epistemology within the field of international relations today.
 
@@ -74,7 +75,7 @@ Both Cox and Ashley adopt reflective approaches that seek to problematize and un
 
 **Arab Spring**
 
-<center> <img src="static\modules\example-arab-spring.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/example-arab-spring.png" alt="" width="70%" /> </center>
 
 ## From Theory to Method: Research Choices
 

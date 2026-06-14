@@ -2,17 +2,18 @@
 title: Territory and International Law
 slug: territory-law
 abstract: This chapter explores the concepts of territory and territorial sovereignty in international law, examining their significance, principles, and processes.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## The Concept of Territory in International Law  
 
-Territory and territorial sovereignty are foundational concepts in international law. A territory refers to the geographical area that falls under the sovereign control and jurisdiction of a state or governing authority. Territorial sovereignty is the principle that a state has supreme authority and jurisdiction over a defined territory and the permanent population residing there. 
+Territory and **territorial sovereignty** are foundational concepts in international law. A territory refers to the geographical area that falls under the sovereign control and jurisdiction of a state or governing authority. Territorial sovereignty is the principle that a state has supreme authority and jurisdiction over a defined territory and the permanent population residing there. 
 
-International law recognizes territorial sovereignty as a key right of states. It provides states with exclusive authority over their territory and domestic affairs, while prohibiting intervention in the territory or internal matters of other states. The inviolability of a state's territory is enshrined in Article 2(4) of the UN Charter, which prohibits the threat or use of force against the "territorial integrity or political independence of any state."
+International law recognizes territorial sovereignty as a key right of **states**. It provides states with exclusive authority over their territory and domestic affairs, while prohibiting intervention in the territory or internal matters of other states. The inviolability of a state's territory is enshrined in Article 2(4) of the UN Charter, which prohibits the threat or use of force against the "territorial integrity or political independence of any state."
 
 Territorial sovereignty requires both an established territory over which a state can exert control and independence from external authorities. Changes in territorial control have major implications in international law, as they alter the distribution of sovereign authority and jurisdiction between states. International law has developed rules and processes for determining territorial boundaries, acquiring or transferring territory, and resolving disputes over territory between states.
 
-This article will examine key concepts around territory and territorial sovereignty in international law. It will cover the development of territorial integrity norms, the relationship between territory and sovereignty, and processes for acquiring, transferring and demarcating territory. Special territorial issues like boundary rivers and outer space will also be explored. By clarifying the role of territory in the international legal order, we can better understand a foundational pillar of the global system.
+This article will examine key concepts around territory and territorial sovereignty in international law. It will cover the development of territorial integrity norms, the relationship between territory and sovereignty, and processes for acquiring, transferring and demarcating territory. Special territorial issues like boundary rivers and **outer** **space** will also be explored. By clarifying the role of territory in the international legal order, we can better understand a foundational pillar of the global system.
 
 ### Territorial Integrity
 

@@ -2,13 +2,14 @@
 title: Neorealism
 slug: neorealism-ir
 abstract: Neorealism or Structural Realism explanation of international relations.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Introduction to Structural Realism
 
-Structural realism emerged from classical realism as an approach to understanding international relations that emphasizes the competitive nature of the international system. Whereas classical realists focused on human nature as the root cause of conflict between states, structural realists highlight the anarchic structure of the international system as the key driver of state behavior.
+Structural realism emerged from classical realism as an approach to understanding international relations that emphasizes the competitive nature of the **international system**. Whereas classical **realists** focused on human nature as the root cause of conflict between **states**, structural realists highlight the anarchic structure of the international system as the key driver of state behavior.
 
-Specifically, structural realists argue that in an **anarchic system where there is no overarching authority, states operate in a self-help environment and compete for power out of self-interest and the motivation for survival**. The lack of a central global authority means states cannot rely on institutions for protection but must provide for their own security. This encourages states to accumulate material capabilities and engage in power politics to shift the balance of power in their favor.
+Specifically, structural realists argue that in an **anarchic system where there is no overarching authority, states operate in a self-help environment and compete for **power** out of self-interest and the motivation for survival**. The lack of a central global authority means states cannot rely on institutions for protection but must provide for their own security. This encourages states to accumulate material capabilities and engage in power politics to shift the balance of power in their favor.
 
 **Neorealists think that power is what matters in world politics.  It depends on the material capabilities that a state can do**.  States fight for power and do everything they can to tip the scales of power in their favor.
 
@@ -36,7 +37,7 @@ Structural realists also recognize a debate around revisionist states vs status 
 
 ## Bipolarity vs Multipolarity
 
-Structural realists have an important debate on whether a bipolar system (two great powers) or a multipolar system (three or more great powers) is more stable in international relations.
+Structural realists have an important debate on whether a bipolar system (two **great powers**) or a multipolar system (three or more great powers) is more stable in international relations.
 
 ### Bipolarity More Stable?
 

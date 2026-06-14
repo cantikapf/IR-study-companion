@@ -2,15 +2,16 @@
 title: The Industrial Revolution That Changed Trade Forever
 slug: industrial-revolution
 abstract: The Industrial Revolution in the late 18th and early 19th centuries brought about immense changes in Europe and the world, leading to new manufacturing processes, mass production, and the need for new systems of international trade and diplomacy. This article explores the transformative impact of the Industrial Revolution on trade relations and the emergence of trade policy as a distinct diplomatic priority.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-The late 18 th and early 19 th centuries were a time of immense change in Europe and around the world. The Industrial Revolution, beginning in Britain in the mid-1700 s, led to new manufacturing processes, mass production, and rapid urbanization. This reshaped economies and societies. At the same time, the era saw nearly constant warfare, with the French Revolutionary and Napoleonic Wars lasting over two decades from 1792 to 1815. 
+The late 18 th and early 19 th centuries were a time of immense change in Europe and around the world. The Industrial Revolution, beginning in **Britain** in the mid-1700 s, led to new manufacturing processes, mass production, and rapid urbanization. This reshaped economies and societies. At the same time, the era saw nearly constant warfare, with the French Revolutionary and Napoleonic Wars lasting over two decades from 1792 to 1815. 
 
-These twin forces of industrialization and war disrupted traditional economic relations and required new systems of international trade and diplomacy. Countries needed access to raw materials to fuel factories and markets to sell their new mass-produced goods. The scale of industrial production outstripped the capacity of domestic markets. This necessitated an unprecedented expansion of international trade networks.
+These twin forces of industrialization and war disrupted traditional economic relations and required new systems of international **trade** and diplomacy. Countries needed access to raw materials to fuel factories and markets to sell their new mass-produced goods. The scale of industrial production outstripped the capacity of domestic markets. This necessitated an unprecedented expansion of **international trade** networks.
 
-At the same time, the wars upended alliances and closed off markets. This volatility highlighted the need for stable commercial relations that rose above political conflicts. In this context, trade policy and negotiating trade agreements became a distinct diplomatic priority for the first time. Countries realized trade was too important to be used as a blunt weapon of war and politics. They needed new tools of diplomacy to create an international system that facilitated the flow of commerce in an industrial age, regardless of political quarrels.
+At the same time, the wars upended alliances and closed off markets. This volatility highlighted the need for stable commercial relations that rose above political conflicts. In this context, **trade policy** and negotiating trade agreements became a distinct diplomatic priority for the first time. Countries realized trade was too important to be used as a blunt weapon of war and politics. They needed new tools of diplomacy to create an international system that facilitated the flow of commerce in an industrial age, regardless of political quarrels.
 
 ## The First Transformation 
 
@@ -22,7 +23,7 @@ This transformation saw trade policy and agreements become distinct from broader
 
 ## Liberalization in Perspectives - Adam Smith 
 
-A defining argument for opening up international trade came from the Scottish political economist Adam Smith in his seminal 1776 work, An Inquiry into the Nature and Causes of the Wealth of Nations. Smith put forward a comprehensive case for free trade and economic liberalization, believing it would increase prosperity for all nations. He argued against the prevailing mercantilist practices of his time that emphasized maximizing exports and minimizing imports using tariffs and other trade restrictions. 
+A defining argument for opening up international trade came from the Scottish political economist Adam Smith in his seminal 1776 work, An Inquiry into the Nature and Causes of the Wealth of Nations. Smith put forward a comprehensive case for **free trade** and economic liberalization, believing it would increase prosperity for all nations. He argued against the prevailing mercantilist practices of his time that emphasized maximizing exports and minimizing imports using tariffs and other trade restrictions. 
 
 Smith made the case that trade should flow freely according to market forces of supply and demand rather than artificial constraints. He reasoned that specialization and division of labor would allow every country to focus on what they could produce most efficiently. By exporting this surplus and importing what other countries produce more efficiently, the collective result would be greater economic growth and standards of living for every nation involved. Smith also contended that free trade expands the market and promotes competition, keeping prices lower for consumers. His theories formed the intellectual basis of a movement towards economic liberalization and free trade that would steadily gain influence in the 19 th century.
 

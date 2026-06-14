@@ -2,9 +2,10 @@
 slug: culture-social-science
 title: Culture and Social Science
 abstract: This sector will cover the elements of culture and it's relation to social science
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
-In the exploration of human co-existence, delving into key concepts such as the "State of Nature" and the "Social Contract" provides a foundational understanding. The State of Nature, conceived as a pre-social condition, gives rise to the Social Contract—an agreement among community members or between the community and the Sovereign. The Sovereign, embodying the legitimate head of the state, can take the form of an individual (monarch or government) or the collective representation of the people themselves.
+In the exploration of human co-existence, delving into key concepts such as the "State of **Nature**" and the "**Social Contract**" provides a foundational understanding. The State of Nature, conceived as a pre-social condition, gives rise to the Social Contract—an agreement among community members or between the community and the Sovereign. The Sovereign, embodying the legitimate head of the state, can take the form of an individual (monarch or government) or the collective representation of the people themselves.
 
 ### Human Nature and the Idea of Co-existence
 
@@ -14,7 +15,7 @@ Kant introduces the intriguing notion that the State of Nature is a fiction, and
 
 ### Elements of Culture
 
-Culture, defined as the total pattern of human behavior and its products, includes thought, speech, action, and artifacts. Passed from adults to children, culture shapes society's shared language, norms, and values, relying on the capacity for learning through tools, language, and abstract thought. This interplay between culture and human societies is a reciprocal relationship, influencing one another over generations.
+**Culture**, defined as the total pattern of human behavior and its products, includes thought, speech, action, and artifacts. Passed from adults to children, culture shapes society's shared language, norms, and values, relying on the capacity for learning through tools, language, and abstract thought. This interplay between culture and human societies is a reciprocal relationship, influencing one another over generations.
 
 ### Culture and Society
 
@@ -22,11 +23,11 @@ Zooming in on the intricate relationship between culture and society, the struct
 
 ### Types of Cultures and Multicultural Society
 
-Examining types of cultures, **high culture** distinguishes society's elite, while **popular culture** is widespread among the general population. **Subcultures** differentiate segments, and **countercultures** oppose dominant standards, showcasing the diversity within societies. In a multicultural society, people from different races, cultures, and traditions coexist with mutual respect, celebrating the richness of cultural diversity.
+Examining types of **cultures**, **high culture** distinguishes society's elite, while **popular culture** is widespread among the general population. **Subcultures** differentiate segments, and **countercultures** oppose dominant standards, showcasing the diversity within societies. In a multicultural society, people from different races, cultures, and traditions coexist with mutual respect, celebrating the richness of cultural diversity.
 
 ### **Multiculturalism and Cultural Relativism**
 
-Multiculturalism, defined as the tolerance of different cultures within a political unit, encompasses ideological, discursive, and policy dimensions. Cultural relativism asserts the equal validity of cultures, emphasizing understanding within the local context. It recognizes that different cultures have different moral codes, promoting an objective analysis from each culture's perspective.
+Multiculturalism, defined as the tolerance of different cultures within a political unit, encompasses ideological, discursive, and policy dimensions. **Cultural relativism** asserts the equal validity of cultures, emphasizing understanding within the local context. It recognizes that different cultures have different moral codes, promoting an objective analysis from each culture's perspective.
 
 ### **Cultural Relativism and Ethnocentrism**
 

@@ -2,12 +2,13 @@
 slug: great-depression
 title: The Great Depression
 abstract: This chapter will cover the Great Depression
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Introduction
 
-The Great Depression was preceded by widespread economic struggles in the decade following World War I. The Versailles Treaty, which formally ended the war in 1919, required Germany to pay heavy reparations to the Allied powers. This severely weakened the German economy and disrupted the entire European industrial economy that had relied on Germany as a key trading partner before the war. 
+The **Great** **Depression** was preceded by widespread economic struggles in the decade following World War I. The **Versailles Treaty**, which formally ended the war in 1919, required Germany to pay heavy reparations to the Allied powers. This severely weakened the German economy and disrupted the entire European industrial economy that had relied on Germany as a key trading partner before the war. 
 
 In the 1920s, European nations struggled to rebuild from the devastation of World War I. Agricultural production declined and industrial growth stalled due to reduced demand, trade barriers, and tight credit. The United States emerged from the war relatively unscathed and became the world's leading lender and exporter in the 1920s. However, this growth was largely fueled by credit and speculative investing. The U.S. stock market reached dizzying heights in the late 1920s untethered from the underlying economic fundamentals.
 
@@ -57,7 +58,7 @@ The onset of the Great Depression cannot be attributed to one single event or fa
 
 ## 1932 Election and FDR
 
-The 1932 election marked a major turning point in handling the Great Depression, as Democratic nominee Franklin Roosevelt projected a bold image of taking decisive action against the economic crisis. FDR campaigned on a promise of providing a "New Deal" for the American people if elected president. 
+The 1932 election marked a major turning point in handling the Great Depression, as Democratic nominee Franklin Roosevelt projected a bold image of taking decisive action against the economic crisis. **FDR** campaigned on a promise of providing a "New Deal" for the American people if elected president. 
 
 After three years of worsening Depression under Republican President Herbert Hoover, FDR emerged as a compelling alternative. Roosevelt attacked the failures of the Hoover Administration to revive the economy and ease widespread suffering. He called for greater government intervention, relief programs for the poor, and reforms to the financial system.
 

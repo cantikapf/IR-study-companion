@@ -2,9 +2,10 @@
 slug: politics-and-social
 title: Politics and Social
 abstract: Power in the perspective of social science
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
-Social change refers to the transformation in social relationships, customs, societal structures, and cultural patterns over time. As a dynamic, continuous, universal, and essential process, social change exhibits distinct characteristics:
+**Social** **change** refers to the transformation in social relationships, customs, societal structures, and cultural patterns over time. As a dynamic, continuous, universal, and essential process, social change exhibits distinct characteristics:
 
 - It is a community-driven process, with changes originating from shifts in societal relationships and collective behaviors. The scope of social change extends beyond isolated groups or individuals.
 
@@ -22,7 +23,7 @@ Social change refers to the transformation in social relationships, customs, soc
 
 ## Factors Influencing Social Change
 
-Social change is influenced by a diverse array of intersecting factors that shape the process of societal evolution. These factors range from natural forces to human-driven elements that collectively contribute to altering social structures, relationships, and cultural dynamics within societies over time.
+Social change is influenced by a diverse array of intersecting **factors** that shape the process of societal evolution. These factors range from natural forces to human-driven elements that collectively contribute to altering social structures, relationships, and cultural dynamics within **societies** over time.
 
 **Biological Factors**
 

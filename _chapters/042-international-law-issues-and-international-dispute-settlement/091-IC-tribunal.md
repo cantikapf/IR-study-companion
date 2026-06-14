@@ -2,11 +2,12 @@
 title: International Courts and Tribunal
 slug: international-courts-and-tribunal
 abstract: International courts play a crucial role in settling disputes between states, enforcing international law, developing legal principles, and promoting justice in the international system.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction to International Courts
 
-International courts are judicial bodies that adjudicate legal disputes between sovereign states, and in some cases, individuals. They play an important role in peacefully settling international disputes and enforcing international law. 
+**International** **courts** are judicial bodies that adjudicate legal disputes between sovereign states, and in some cases, individuals. They play an important role in peacefully settling international disputes and enforcing **international law**. 
 
 International courts serve several key purposes:
 
@@ -26,7 +27,7 @@ International courts can be categorized into four main types:
 
 ### Global Courts
 
-Global courts have jurisdiction that extends across borders and continents. The International Court of Justice (ICJ) is an example of a global court. Based in The Hague, the ICJ settles legal disputes between countries and provides advisory opinions on legal questions proposed by authorized UN organs and agencies. All UN member states are automatically parties to the ICJ statute, but they are not obligated to comply with the court's rulings.
+Global courts have jurisdiction that extends across borders and continents. The **International Court** of Justice (ICJ) is an example of a global court. Based in The Hague, the ICJ settles legal disputes between countries and provides advisory opinions on legal questions proposed by authorized UN organs and agencies. All UN member states are automatically parties to the ICJ statute, but they are not obligated to comply with the court's rulings.
 
 ### Regional Courts 
 

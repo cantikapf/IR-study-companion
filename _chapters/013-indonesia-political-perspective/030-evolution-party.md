@@ -2,13 +2,14 @@
 slug: evolution-party
 title: The Evolution of Indonesia's Political Party System
 abstract: This chapter will explore the evolution of Indonesia's political party system.
+simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
 ---
 
 ## Introduction
 
-Ruling political parties are pivotal actors within political systems, whether in totalitarian regimes, authoritarian governments, or democratic systems. These parties play an outsized role in mobilizing and controlling mass participation, often operating under significant governmental oversight and control. Even in authoritarian contexts, ruling parties actively promote mass public support for the government in power. 
+Ruling **political** **parties** are pivotal actors within political systems, whether in totalitarian regimes, authoritarian governments, or democratic systems. These parties play an outsized role in mobilizing and controlling mass participation, often operating under significant governmental oversight and control. Even in authoritarian contexts, ruling parties actively promote mass public support for the government in power. 
 
-Political parties, as distinct from interest groups, serve as organized entities that aim to elect their candidates to government offices, thereby directly influencing policies. In democratic systems, parties compete against each other in elections to gain power, and voters use party identification as a heuristic to choose between candidates. This dynamic clearly illustrates the integral role political parties play in shaping the political landscape.
+Political parties, as distinct from interest groups, serve as organized entities that aim to elect their candidates to government offices, thereby directly influencing policies. In democratic systems, parties compete against each other in elections to gain power, and voters use **party** identification as a heuristic to choose between candidates. This dynamic clearly illustrates the integral role political parties play in shaping the political landscape.
 
 Beyond electoral competition, the functions of political parties also encompass recruiting political leaders, formulating government policies and programs, and organizing government structures. These diverse functions all contribute to the overarching influence and impact political parties exert on governance structures and outcomes.
 
@@ -32,7 +33,7 @@ In certain political systems, political parties are absent entirely. Government 
 
 **One-Party Systems** 
 
-This model involves single party rule, with one dominant political party controlling the government. Opposition parties are either officially outlawed or unable to effectively challenge the ruling party's power. Examples include China under the Communist Party, Mexico under PRI dominance, and South Korea under Liberal Party rule in the 1950s-60s.
+This model involves single party rule, with one dominant **political party** controlling the government. Opposition parties are either officially outlawed or unable to effectively challenge the ruling party's power. Examples include China under the Communist Party, Mexico under PRI dominance, and South Korea under Liberal Party rule in the 1950s-60s.
 
 **Two-Party Systems**
 

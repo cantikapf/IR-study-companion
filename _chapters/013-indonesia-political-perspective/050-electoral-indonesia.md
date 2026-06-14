@@ -2,6 +2,7 @@
 slug: electoral-indonesia
 title: Indonesia's Electoral Landscape
 abstract: This chapter will explore the electoral landscape in Indonesia.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
@@ -21,15 +22,15 @@ While elections provide a snapshot of the public's preferences, ongoing civic pa
 
 ## Electoral Systems
 
-There are two major principles determining structure general election systems use - the single member constituency system and the multi member constituency system. 
+There are two major principles determining structure general election systems use - the single member constituency **system** and the multi member constituency system. 
 
 ### Single Member Constituencies
 
-The single member constituency system, also known as the district system, has each elected representative tied to a specific geographic constituency. This fosters greater accountability as the representative must closely align with constituent interests to be re-elected. It also promotes party integration and cooperation as representatives must work within their party to attain parliamentary majorities. However, a key disadvantage is that it can lead to distortions between the percentage of votes a party receives and the number of representatives it has in parliament. Smaller parties may get left out entirely.
+The single member constituency system, also known as the **district system**, has each elected representative tied to a specific geographic constituency. This fosters greater accountability as the representative must closely align with constituent interests to be re-elected. It also promotes **party** integration and cooperation as representatives must work within their party to attain parliamentary majorities. However, a key disadvantage is that it can lead to distortions between the percentage of votes a party receives and the number of representatives it has in parliament. Smaller parties may get left out entirely.
 
 ### Multi Member Constituencies  
 
-In contrast, the multi member proportional representation system aims to closely match the percentage of votes a party receives with the percentage of seats it gets in parliament. This makes it more representative of voter preferences. However, it tends to accentuate party differences over constituency concerns, as representatives feel accountable to the party first. This can contribute to political fragmentation as many smaller parties can gain seats. It also weakens the direct relationship between constituents and their representatives.
+In contrast, the multi member **proportional** representation system aims to closely match the percentage of votes a party receives with the percentage of seats it gets in parliament. This makes it more representative of voter preferences. However, it tends to accentuate party differences over constituency concerns, as representatives feel accountable to the party first. This can contribute to political fragmentation as many smaller parties can gain seats. It also weakens the direct relationship between constituents and their representatives.
 
 ## Single Member Constituencies (District System)
 
@@ -43,7 +44,7 @@ Overall, the single-member constituency system emphasizes party integration and 
 
 ## Multi Member Constituencies 
 
-Conversely, the proportional representation system that uses multi-member constituencies is deemed more representative, as it better aligns the percentage of votes a party receives with the percentage of parliamentary seats they are allocated. This helps ensure that the number of seats each party gets closely reflects their portion of the national vote.
+Conversely, the **proportional representation** system that uses multi-member constituencies is deemed more representative, as it better aligns the percentage of votes a party receives with the percentage of parliamentary seats they are allocated. This helps ensure that the number of seats each party gets closely reflects their portion of the national vote.
 
 However, proportional representation systems that use multi-member constituencies also tend to accentuate differences between parties, as they encourage many different parties to run rather than forcing them to form pre-electoral coalitions. This can lead to a more fragmented political landscape with many small parties representing narrow interests rather than a few large "big tent" parties.  
 

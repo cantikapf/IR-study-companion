@@ -2,13 +2,14 @@
 title: The Politics of Trade
 slug: trade-politics
 abstract: This chapter will explain about the models of trade policy preferences
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Society-Centered Approach to Trade Politics 
 
-A society-centered approach to trade politics asserts that government trade policy objectives are influenced by the responses of politicians to the demands of interest groups or societies. For instance, the European Union's reluctance to liberalize European agriculture reflects policymakers' responses to the demands of European farmers. This approach highlights the interplay between organized interests and political institutions, recognizing the distributional consequences of trade and how winners and losers engage in political competition to advance their economic interests.
+A society-centered approach to **trade** politics asserts that government **trade **policy** objectives are influenced by the responses of politicians to the demands of interest groups or societies. For instance, the European Union's reluctance to liberalize European agriculture reflects policymakers' responses to the demands of European farmers. This approach highlights the interplay between organized interests and political institutions, recognizing the distributional consequences of trade and how winners and losers engage in political competition to advance their economic interests.
 
-Trade policy preferences are further explored through two models: the Factor Model and the Sector Model. The Factor Model contends that trade politics are driven by the competition between factors of production, such as labor and capital, resulting in distinct trade policy preferences. On the other hand, the Sector Model argues that trade divides society along industry lines due to differing assumptions about factor mobility. Both models agree that trade policy preferences hinge on the income consequences of trade, with winners advocating trade liberalization and losers favoring protectionism.
+Trade policy preferences are further explored through two models: the **Factor Model** and the **Sector Model**. The Factor Model contends that trade politics are driven by the competition between factors of production, such as labor and capital, resulting in distinct trade policy preferences. On the other hand, the Sector Model argues that trade divides society along industry lines due to differing assumptions about factor mobility. Both models agree that trade policy preferences hinge on the income consequences of trade, with winners advocating trade liberalization and losers favoring protectionism.
 
 ## Factor Model
 

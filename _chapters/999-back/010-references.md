@@ -3,11 +3,12 @@ title: References
 slug: references
 disable_toc: true
 #class: references
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## References
 
-**Introuduction to International Relations**
+**Introuduction to **International** Relations**
 
 - Baylis, J., Smith, S., & Owens, P. (Eds.). (2017). The globalization of world politics: An introduction to international relations (Second international edition). Oxford University Press.
 - Chen, D. (2017, February 27). Is China Ready for Global Leadership? [Online News]. The Diplomat. https://thediplomat.com/2017/02/is-china-ready-for-global-leadership/
@@ -88,11 +89,11 @@ Gross, L. (1948). The Peace of Westphalia, 1648–1948. American Journal of Inte
 - Kumar, R. (2019). Research methodology: A step-by-step guide for beginners (Fifth edition). SAGE.
 - Roselle, L., & Spray, S. L. (2020). Research and writing in international relations (Third Edition). Routledge.
 
-**Diplomacy and International Politics**
+**Diplomacy and International **Politics**
 
 - Cooper, A. F., Heine, J., & Thakur, R. (Eds.). (2013). The Oxford handbook of modern diplomacy. Oxford University Press.
 
-**Foreign Policy Analysis in International Relations**
+**Foreign Policy** Analysis in International Relations**
 
 - Dugis, V. (2007). Analysing Foreign Policy. Masyarakat, Kebudayaan, Politik, 20, 41–52.
 - Hermann, M. G. (2005). Assessing leadership style: Trait analysis. The Psychological Assessment of Political Leaders, 7(2), 178–212.

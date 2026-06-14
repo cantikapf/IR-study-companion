@@ -2,11 +2,12 @@
 title: 'Inequality And Development: An Overview'
 slug: inequality-development
 abstract: In this chapter, we provide an overview of inequality and development. We discuss the different types of inequality, the attributes used to measure it, its historical trends, and the drivers behind it.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-Inequality is a complex and multifaceted issue that persists within countries and across the global landscape. At its core, inequality refers to an uneven distribution of income, wealth, opportunities, and other attributes within a society or population. Understanding inequality matters greatly for reasons related to fairness, justice, economic outcomes, and overall human wellbeing. 
+**Inequality** is a complex and multifaceted issue that persists within countries and across the global landscape. At its core, inequality refers to an uneven distribution of **income**, wealth, opportunities, and other attributes within a society or population. Understanding inequality matters greatly for reasons related to fairness, justice, **economic** outcomes, and overall human wellbeing. 
 
 Defining and analyzing inequality provides insight into how resources, capital, and access are allocated in a society. It sheds light on discrepancies that may exist between different groups based on factors like gender, race, geography, and socioeconomic status. Examining inequality involves measuring gaps in income, consumption, wealth, health, education, political power, and more. The resulting information can inform policies and interventions aimed at balancing these distributions and promoting more equitable societies.
 
@@ -18,7 +19,7 @@ Inequality can take different forms and span various groups within society. Two 
 
 **Vertical inequality** refers to inequality among individuals within a country. This considers the distribution of income, wealth, or other attributes across the population. Measures of vertical inequality examine disparities between richer and poorer people within a society.
 
-In contrast,** horizontal inequality** looks at disparities between groups that are at the same economic level. Rather than focusing on individuals, horizontal inequality examines differences between groups defined by characteristics like ethnicity, race, religion, or geography. For example, horizontal inequality may capture gaps in income between ethnic groups in a country, even if they share similar economic status overall.
+In contrast,** **horizontal inequality** looks at disparities between groups that are at the same economic level. Rather than focusing on individuals, horizontal inequality examines differences between groups defined by characteristics like ethnicity, race, religion, or geography. For example, horizontal inequality may capture gaps in income between ethnic groups in a country, even if they share similar economic status overall.
 
 While vertical inequality concentrates on individuals, horizontal inequality centers on inequality between groups and categories of people. Assessing both vertical and horizontal inequality provides a more comprehensive understanding of disparities within a society. The distinction helps clarify whether inequality stems from gaps between individuals or divides between different groups. Considering both dimensions is crucial when evaluating and addressing inequality.
 

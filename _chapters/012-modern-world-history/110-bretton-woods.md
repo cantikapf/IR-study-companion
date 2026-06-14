@@ -2,20 +2,21 @@
 slug: bretton-woods
 title: The Rise of the Bretton Woods Institutions
 abstract: This chapter will cover the rise of the Bretton Woods Institutions
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 
 ## Introduction 
 
-The Bretton Woods conference, named after its location in New Hampshire, represented a pivotal moment in reshaping the international monetary system following World War II. Attended by delegates from 44 allied nations in July 1944, the gathering sought to establish a new framework for economic cooperation and currency stability. 
+The **Bretton** **Woods** conference, named after its location in New Hampshire, represented a pivotal moment in reshaping the international monetary system following World War II. Attended by delegates from 44 allied nations in July 1944, the gathering sought to establish a new framework for economic cooperation and currency stability. 
 
-Led by British economist John Maynard Keynes and U.S. Treasury official Harry Dexter White, the negotiations ultimately yielded agreements to create several key institutions, including the International Monetary Fund (IMF) and the International Bank for Reconstruction and Development (IBRD), now known as the World Bank. The new system also introduced features like fixed but adjustable exchange rates pegged to the U.S. dollar.
+Led by British economist John Maynard Keynes and U.S. Treasury official Harry Dexter White, the negotiations ultimately yielded agreements to create several key institutions, including the International Monetary Fund (IMF) and the International Bank for Reconstruction and Development (IBRD), now known as the **World Bank**. The new system also introduced features like fixed but adjustable exchange rates pegged to the U.S. dollar.
 
 Known as the Bretton Woods monetary order, this framework went on to dominate global finance for almost 30 years. Despite its eventual breakdown in the early 1970s, Bretton Woods profoundly influenced post-war policies and organizations aimed at fostering international financial cooperation.
 
 ## Background
 
-The Bretton Woods Conference in 1944 emerged against the backdrop of restrictive economic policies and challenges in the preceding decades that demonstrated a need for a new global economic system.  
+The Bretton **Woods Conference** in 1944 emerged against the backdrop of restrictive economic policies and challenges in the preceding decades that demonstrated a need for a new global economic system.  
 
 In the years leading up to World War 2, nations operated under the gold standard which pegged currency values to gold. This resulted in limited currency availability and inflexibility which constricted governments' abilities to respond to economic crises. 
 

@@ -2,16 +2,17 @@
 slug: civil-military
 title: Civil-Military Relations in Indonesia
 abstract: This chapter will explore the civil-military relations in Indonesia.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## Introduction 
 
-Indonesia's military has played a central role in the country's politics and governance throughout its history, from independence in 1945 to the present day. During the authoritarian "New Order" era under President Suharto from 1965 to 1998, the military was a key pillar supporting his regime, with both political and economic power. However, since the collapse of the New Order and Indonesia's transition to democracy, the role and position of the military has evolved significantly. Democratization has required the military to withdraw from day-to-day politics and governance and focus on national defense and security matters. At the same time, the military has retained significant influence, presenting ongoing challenges in civil-military relations in the country. Key issues include the military's distrust of political Islam, its vast economic interests developed under the New Order, and debates over its proper role in a democratic Indonesia. This content examines the major historical shifts and current tensions in civil-military relations in the post-Suharto democratic era. Understanding this complex dynamic between military, political and civilian actors is crucial to analyzing Indonesia's democratization progress and future policy directions.
+**Indonesia**'s **military** has played a central role in the country's politics and governance throughout its history, from independence in 1945 to the present day. During the authoritarian "New Order" era under President Suharto from 1965 to 1998, the military was a key pillar supporting his regime, with both political and economic power. However, since the collapse of the New Order and Indonesia's transition to democracy, the role and position of the military has evolved significantly. Democratization has required the military to withdraw from day-to-day politics and governance and focus on national defense and security matters. At the same time, the military has retained significant influence, presenting ongoing challenges in civil-military relations in the country. Key issues include the military's distrust of **political Islam**, its vast economic interests developed under the New Order, and debates over its proper role in a democratic Indonesia. This content examines the major historical shifts and current tensions in civil-military relations in the post-Suharto democratic era. Understanding this complex dynamic between military, political and civilian actors is crucial to analyzing Indonesia's democratization progress and future policy directions.
 
 ## Dwifungsi Doctrine Under Sukarno and Suharto
 
-The dwifungsi ("dual function") doctrine refers to the Indonesian military's formalized role in politics and security matters. The origins of dwifungsi trace back to General Abdul Haris Nasution during the era of President Sukarno in the 1950s and 1960s. 
+The dwifungsi ("dual function") doctrine refers to the **Indonesian military**'s formalized role in politics and security matters. The origins of dwifungsi trace back to General Abdul Haris Nasution during the era of President Sukarno in the 1950s and 1960s. 
 
 Nasution introduced the military's perspective of being the guardian of national unity and order, which later became known as the "middle path." The doctrine justified military involvement in government by positioning the armed forces as protectors of the Indonesian revolution.
 
@@ -41,7 +42,7 @@ Wahid also wanted to establish diplomatic relations with Israel, which the TNI o
 
 Even as Indonesia's military took on a less dominant role after 1998, challenges persist in civil-military relations. One major issue stems from the military's distrust of political Islam. The Indonesian armed forces have been dominated by secular nationalists in the leadership ranks since independence. This created skepticism within the military establishment towards Muslim political movements, which were seen as a potential threat to national unity and stability. 
 
-The military's historical role in suppressing Muslim rebellions in the 1950s and 1960s exacerbated this distrust towards political Islam. Campaigns against Darul Islam and other uprisings left the armed forces wary of Muslim political mobilization. As a result, the secular nationalism prevalent in the military creates tensions with Islamist parties and hinders fully harmonious civil-military relations. Even though the military no longer asserts direct political control, its unease with political Islam lingers and poses an obstacle to smooth relations between military leadership and emerging democratic institutions.
+The military's historical role in suppressing Muslim rebellions in the 1950s and 1960s exacerbated this distrust towards political Islam. Campaigns against **Darul Islam** and other uprisings left the armed forces wary of Muslim political mobilization. As a result, the secular nationalism prevalent in the military creates tensions with Islamist parties and hinders fully harmonious civil-military relations. Even though the military no longer asserts direct political control, its unease with political Islam lingers and poses an obstacle to smooth relations between military leadership and emerging democratic institutions.
 
 ## Military's Economic Interests
 

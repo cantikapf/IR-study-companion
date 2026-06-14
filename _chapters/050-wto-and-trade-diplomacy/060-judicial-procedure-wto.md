@@ -2,11 +2,12 @@
 title: 'When Negotiations Fail: The Rise of Judicial Procedures in Trade Agreements'
 slug: judicial-procedure-wto
 abstract: The rise of judicial mechanisms in trade diplomacy has transformed how international trade issues are resolved, favoring rule-based adjudication over political deal-making. This chapter explores the importance of judicial mechanisms, the process for resolving disputes, and the impact of judicialization on diplomacy and trade relations.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-The rise of judicial mechanisms in trade diplomacy since the 1990 s represents a significant transformation in how international trade issues are resolved between nations. During this period, traditional diplomatic approaches that relied on direct negotiation between parties began to lose effectiveness. As a result, judicial procedures and institutions have progressively replaced standard diplomacy as the primary means of settling trade disputes and advancing trade cooperation. This shift reflects a new paradigm in trade relations, one that favors rule-based adjudication through impartial third parties over purely political deal-making between national governments.
+The rise of **judicial** mechanisms in **trade** diplomacy since the 1990 s represents a significant transformation in how international trade issues are resolved between nations. During this period, traditional diplomatic approaches that relied on direct negotiation between parties began to lose effectiveness. As a result, judicial procedures and institutions have progressively replaced standard diplomacy as the primary means of settling **trade disputes** and advancing trade cooperation. This shift reflects a new paradigm in trade relations, one that favors rule-based adjudication through impartial third parties over purely political deal-making between national governments.
 
 The new prominence of judicial mechanisms marks a departure from decades of trade diplomacy based on conventional negotiation tactics. Whereas such diplomacy depended on leverage, bargaining, and the threat of retaliation, judicial approaches introduce binding legal rulings as well as compulsory procedures. This removes the possibility for nations to simply withdraw from the process if they find the outcome unfavorable. The rise of judicialization has compelled states to resolve their differences within a legal framework, even when traditional diplomacy fails to yield agreement. While not eliminating political negotiation entirely, legal recourse now serves as an underpinning of trade relations between nations in the modern era.
 
@@ -14,7 +15,7 @@ The new prominence of judicial mechanisms marks a departure from decades of trad
 
 Traditional diplomatic approaches to negotiating and enforcing trade agreements have yielded progressively less fruit over the past two decades. As a result, judicial mechanisms are increasingly coming to substitute for traditional diplomacy, perhaps if only by default. 
 
-Where diplomatic negotiations often stall due to disagreement or lack of compromise between parties, judicial mechanisms provide more definitive rulings and pathways for dispute resolution. Their legally-binding nature also provides greater incentives for compliance.
+Where diplomatic negotiations often stall due to disagreement or lack of compromise between parties, judicial mechanisms provide more definitive rulings and pathways for **dispute** resolution. Their legally-binding nature also provides greater incentives for compliance.
 
 Overall, the rise of judicial mechanisms signals a shift away from achieving trade cooperation solely through traditional diplomacy. With negotiations yielding diminishing returns, countries seem more willing to turn to third-party adjudication to advance their trade interests. The substitution of judicial processes appears to be happening gradually but steadily.
 
@@ -50,7 +51,7 @@ The ECJ served an important role in the new European community by creating a way
 
 The ECJ's binding judgments set precedents in EU trade law. Its mission was to ensure proper interpretation and equal application of ECSC treaty provisions in all member states. While the ECSC only involved a limited number of economic sectors related to coal and steel, the EEC expanded this framework to all economic sectors. As the EEC evolved into the EU, the ECJ expanded into a full judicial system spanning all areas of EU policy and law.
 
-By establishing the ECJ in the 1950 s, the founders of the European community paved the way for binding legal dispute resolution between states. This model of a permanent trade court with compulsory jurisdiction would later inspire the World Trade Organization's dispute settlement understanding in the 1990 s. The ECJ proved that judicial procedures could supplement traditional diplomacy in resolving complex trade conflicts.
+By establishing the ECJ in the 1950 s, the founders of the European community paved the way for binding legal dispute resolution between states. This model of a permanent trade court with compulsory jurisdiction would later inspire the World Trade Organization's **dispute settlement** understanding in the 1990 s. The ECJ proved that judicial procedures could supplement traditional diplomacy in resolving complex trade conflicts.
 
 ## ECJ as Backstop Where Negotiation Failed
 

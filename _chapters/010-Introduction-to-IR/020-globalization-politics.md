@@ -2,6 +2,7 @@
 title: Globalization And Global Politics
 slug: globalization-and-global-politics
 abstract: The explanation of globalization and global politics in the International Relations context
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 ## Summary Video
@@ -18,15 +19,15 @@ abstract: The explanation of globalization and global politics in the Internatio
 
 ## Introduction
 
-Globalization is fundamentally defined by increased worldwide interconnectedness and interdependence. This is evident in the operations of more than 45,000 international NGOs, the ability to connect like-minded individuals across the planet, and a growing recognition of global problems demanding global solutions.
+**Globalization** is fundamentally defined by increased worldwide interconnectedness and interdependence. This is evident in the operations of more than 45,000 international NGOs, the ability to connect like-minded individuals across the planet, and a growing recognition of **global** problems demanding global solutions.
 
-Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of world output and two-thirds of world trade, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation-states find themselves increasingly embedded within a thickening web of international relationships and decision-making.
+Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of **world** output and two-thirds of **world trade**, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation-states find themselves increasingly embedded within a thickening web of international relationships and decision-making.
 
 Under conditions of political globalization, states are increasingly embedded in thickening and overlapping worldwide web
 
 **Worldwide Web**
 
-<center> <img src="static\modules\worldwide.png" alt="Worldwide Web" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/worldwide.png" alt="Worldwide Web" width="70%" /> </center>
 
 <br>
 
@@ -80,7 +81,7 @@ While globalization connects the world, the benefits have accrued asymmetrically
 
 The long-established Westphalian principles of sovereignty, autonomy, and territoriality that have traditionally governed the realm of global politics are fundamentally challenged under conditions of contemporary globalization.
 
-Nation states today find themselves increasingly embedded within complex webs of multilateral and transnational decision-making processes and institutions that diffuse sovereignty and autonomy. This contributes to the steady emergence of an evolving global governance complex.
+Nation states today find themselves increasingly embedded within complex webs of multilateral and transnational decision-making processes and institutions that diffuse sovereignty and autonomy. This contributes to the steady emergence of an evolving **global governance** complex.
 
 Where previously states interacted mainly bilaterally within an anarchic international system, they now negotiate and cooperate within diverse multilateral forums and regimes that transcend territorial boundaries. States thereby sacrifice portions of sovereignty and autonomy to partake in joint decision-making.
 
@@ -102,7 +103,7 @@ Overall, while global governance holds promise in coordinating collective action
 
 **The Global Governance Complex**
 
-<center> <img src="static\modules\global_governance.png" alt="Global Governance" width="90%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/global_governance.png" alt="Global Governance" width="90%" /> </center>
 
 ---
 

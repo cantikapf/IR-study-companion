@@ -2,15 +2,16 @@
 title: The Use Of Force In International Law
 slug: the-use-of-force-in-international-law
 abstract: International law governs the use of force by states, providing legal frameworks and exceptions for self-defense, collective security, and humanitarian intervention.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-International law governs when and how states may lawfully use force. The United Nations Charter and customary international law set out the legal framework on the resort to force by states. Use of force by states is prohibited, except in cases of self-defense or collective security authorized by the UN Security Council. 
+**International** law** governs when and how states may lawfully use force. The United Nations Charter and customary international law set out the legal framework on the resort to force by states. Use of force by states is prohibited, except in cases of self-defense or collective **security** authorized by the UN **Security Council**. 
 
 There are three main exceptions to the general prohibition on force: self-defense, collective security, and humanitarian intervention. The right to self-defense, outlined in Article 51 of the UN Charter, allows states to use force in response to an armed attack. Collective security is authorized by the UN Security Council under Chapter VII of the Charter. Humanitarian intervention, though controversial, may be justified under customary international law in cases of grave human rights violations.  
 
-International law has evolved to address modern threats like terrorism and civil wars. However, balancing state sovereignty and human rights remains an ongoing challenge. Overall, international law aims to restrict use of force to promote peace and security. This content will provide an overview of the key principles and complexities involved.
+International law has evolved to address modern threats like terrorism and civil wars. However, balancing **state** sovereignty and human rights remains an ongoing challenge. Overall, international law aims to restrict use of force to promote peace and security. This content will provide an overview of the key principles and complexities involved.
 
 ## Use of Force by States  
 

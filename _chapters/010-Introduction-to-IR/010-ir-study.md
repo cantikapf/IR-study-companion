@@ -2,6 +2,7 @@
 title: Study Of International Relations
 slug: study-of-international-relations
 abstract:  Understand the foundational principles and key theories shaping the field of international relations, including realism, liberalism, Marxism, and constructivism, as well as their applications in analyzing global politics, economics, and security issues.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Video Summary
@@ -14,13 +15,13 @@ abstract:  Understand the foundational principles and key theories shaping the f
 
 ## Introduction 
 
-International Relations, as an academic field of study, is fundamentally distinct from the superficial treatment of international affairs frequently seen in news media and current events coverage. While journalism may portray the latest geopolitical happenings or foreign policy issues, International Relations as a discipline encompasses a much broader and deeper analysis.
+**International** **Relations**, as an academic field of study, is fundamentally distinct from the superficial treatment of international affairs frequently seen in news media and current events coverage. While journalism may portray the latest geopolitical happenings or foreign policy issues, International Relations as a discipline encompasses a much broader and deeper analysis.
 
-The study of International Relations delves beyond ephemeral news stories and temporary crises to **examine underlying structures, actors, processes and theoretical frameworks that shape global events**. It is a rigorous academic pursuit, with an extensive scholarly tradition traceable to foundational thinkers and seminal works. 
+The study of International Relations delves beyond ephemeral news stories and temporary crises to <mark class="nice-mark">examine underlying structures, actors, processes and theoretical frameworks that shape global events</mark>. It is a rigorous academic pursuit, with an extensive scholarly tradition traceable to foundational thinkers and seminal works. 
 
 Unlike the snapshot understanding of world affairs offered by journalism, International Relations relies on conceptual models, empirical evidence and reasoned debate to construct comprehensive explanations. The field distinguishes itself through its commitment to theoretical coherence, objective inquiry and substantive research methodologies.
 
-In essence, International Relations is the systematic study of complex interconnections between nations, states, institutions and people at the global level. It seeks to analyze patterns, causations and implications in ways that fleeting news accounts cannot. The field reflects sustained efforts to comprehend key dynamics and relationships in the international sphere.
+In essence, International Relations is the systematic study of complex interconnections between nations, **states**, institutions and people at the global level. It seeks to analyze patterns, causations and implications in ways that fleeting news accounts cannot. The field reflects sustained efforts to comprehend key dynamics and relationships in the international sphere.
 
 ## Beyond Current Affairs
 
@@ -40,9 +41,9 @@ This expansive scope differentiates the academic discipline of International Rel
 
 ## The International System
 
-The international system refers to the overarching global structure that shapes interactions between actors in world politics. Unlike domestic political systems with formal institutions and hierarchies, the international system operates in a decentralized manner without a supreme authority. 
+The **international system** refers to the overarching global structure that shapes interactions between actors in world politics. Unlike domestic political systems with formal institutions and hierarchies, the international system operates in a decentralized manner without a supreme authority. 
 
-Several key characteristics define the anarchical nature of the international system:
+Several key characteristics define the <mark class="nice-mark" style="--color: hsl(13, 100%, 87%)">anarchical nature</mark> of the international system:
 
 - Absence of a central global authority, leading to decentralized power dynamics between states 
 - Self-help system where states must ultimately rely on their capabilities for security
@@ -65,7 +66,7 @@ Ultimately, the structure and processes of the international system provide the 
 
 The primary actors in International Relations are sovereign states and governments. Understanding the modern state involves recognizing the criteria of statehood outlined in the Montevideo Convention in 1933, which specifies four key elements - a permanent population, a defined territory, a government, and the capacity to enter into relations with other states.
 
-The historical origins of the modern state can be traced to developments in Europe, starting with the Peace of Westphalia in 1648 which ushered in a system of sovereign states. The concept of state sovereignty was further articulated by thinkers like Jean Bodin and Thomas Hobbes, who emphasized the central authority and absolute power of the sovereign within a defined territory. 
+The historical origins of the modern state can be traced to developments in Europe, starting with the Peace of Westphalia in 1648 which ushered in a system of sovereign states. The concept of <mark class="nice-mark" style="--color: hsl(158, 47%, 83%)">state sovereignty</mark> was further articulated by thinkers like Jean Bodin and Thomas Hobbes, who emphasized the central authority and absolute power of the sovereign within a defined territory. 
 
 Sovereignty denotes supreme authority within the state's borders and equal status among states in the international system. It affirms the right of a state to self-governance and non-intervention by external forces. State sovereignty remains a core principle in International Relations despite contemporary challenges like globalization.
 
@@ -95,7 +96,7 @@ At the same time, civil society actors like NGOs and social movements aim to inf
 
 Therefore, International Relations analysis requires examining complex state-nonstate interactions, recognizing how they wield hard, soft, and asymmetric power to influence one another. Their relationship shapes international outcomes, from trade and investment flows to issues like climate change policy. Neither states nor non-state entities operate in isolation. It is vital to analyze how they cooperate, compete, and come into conflict through their interactions.
 
-{% include flashcards.html term1="lude flashcards.html %" def1="ude flashcards.html %" term2="de flashcards.html %" def2="ude flashcards.html %" term3="de flashcards.html %" def3="ude flashcards.html %" term4="de flashcards.html %" def4="ude flashcards.html %" %}
+{% include flashcards.html term1="International Relations" def1="The study of the interconnectedness of politics, economics, and law on a global level" term2="State" def2="A political entity with a permanent population, defined territory, and sovereign government" term3="Sovereignty" def3="The supreme authority of a state to govern itself without external interference" term4="Anarchy" def4="The absence of a central, overarching authority above sovereign states in the global system" %}
 
 ## Theoretical Frameworks
 

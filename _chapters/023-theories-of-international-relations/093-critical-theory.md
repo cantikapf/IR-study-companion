@@ -2,9 +2,10 @@
 title: Critical Theory
 slug: critical-theory
 abstract: This chapter will introduce you to the field of critical theory.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
-Critical theory emerged as an influential perspective within international relations (IR) theory in the late 1980s and 1990s. The origins of critical theory in IR lie in thought associated with the Frankfurt School. Frankfurt School thinking was inspired by Marxist and Western Marxist theorizing, but sought to revise and reformulate many key understandings of these strands of thought. 
+**Critical** **theory** emerged as an influential perspective within **international relations** (IR) theory in the late 1980s and 1990s. The origins of critical theory in IR lie in thought associated with the **Frankfurt School**. Frankfurt School thinking was inspired by Marxist and Western Marxist theorizing, but sought to revise and reformulate many key understandings of these strands of thought. 
 
 Critical theory aims to move beyond simply describing reality, instead seeking to interpretively engage with the open-ended unfolding of social relations and identities in world politics. It is concerned with exposing oppression in international relations and representing underrepresented actors and perspectives. Critical theorists are committed to reflexivity, skepticism of fact/value separation, and self-awareness.
 

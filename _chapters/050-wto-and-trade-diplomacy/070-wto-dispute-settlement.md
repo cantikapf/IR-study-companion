@@ -2,12 +2,13 @@
 title: WTO Dispute Settlement Mechanism
 slug: wto-dispute-settlement
 abstract: The WTO dispute settlement system is a crucial component of the global trading system, providing a rules-based framework for resolving trade disputes and enforcing commitments. It aims to promote compliance through consultations and, if necessary, adjudication, ensuring stability and predictability in international trade.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 
 ## Dispute Settlement Process Overview
 
-The dispute settlement process in the WTO typically involves three main stages:
+The **dispute** settlement** process in the **WTO** typically involves three main stages:
 
 - **Consultations** - The parties in dispute participate in direct consultations to try to reach a mutually agreed solution. Consultations give the parties an opportunity to discuss the matter and find a satisfactory resolution without proceeding further in the dispute settlement process.
 - **Adjudication** - If consultations fail to resolve the dispute within 60 days, the complainant may request that a panel be established to adjudicate the matter. The panel investigates the dispute, consults with experts if needed, and issues a written report with findings and recommendations. If either party appeals, the report will be reviewed by the Appellate Body. 
@@ -27,7 +28,7 @@ If consultations fail to resolve the dispute within 60 days, the complaining cou
 
 ## Consultation Phase
 
-The consultation phase is the first stage of WTO dispute settlement and lasts for a maximum of 60 days. During this time, the complainant member requests consultations with the respondent member to clarify the facts and allow for an opportunity to reach a mutually agreed solution. 
+The consultation phase is the first stage of **WTO dispute** settlement and lasts for a maximum of 60 days. During this time, the complainant member requests consultations with the respondent member to clarify the facts and allow for an opportunity to reach a mutually agreed solution. 
 
 Consultations give parties a chance to discuss the matter and find a satisfactory solution without resorting to litigation. The parties assess the facts and legal basis for the complaint during consultations. Notably, under WTO rules, everything that is said during consultations must remain confidential and without prejudice to legal rights.
 
@@ -45,7 +46,7 @@ The panel aims to issue its final report within 6 months. The report is submitte
 
 ## Appellate Review
 
-The Appellate Body provides an additional review option for panel decisions. Comprised of 7 members, the Appellate Body can hear appeals from parties who are not satisfied with the panel's findings. 
+The **Appellate Body** provides an additional review option for panel decisions. Comprised of 7 members, the Appellate Body can hear appeals from parties who are not satisfied with the panel's findings. 
 
 Only legal issues addressed in the panel report, and legal interpretations developed by the panel, can be appealed. The Appellate Body has the authority to uphold, modify, or reverse the legal findings of the panel report. 
 

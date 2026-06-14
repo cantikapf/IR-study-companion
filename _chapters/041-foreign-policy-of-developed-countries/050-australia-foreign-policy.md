@@ -2,12 +2,13 @@
 title: Australia Foreign Policy and Current Issues
 slug: australia-foreign-policy
 abstract: Demonstrate how Australia's political institutions shape the country's priorities, positions and engagement on the international stage.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 
 ---
 
 ## The influence of Australia's Political Institutions on Foreign Policy
 
-Australia's foreign policy is shaped and influenced by various political institutions and actors within the government. While the Prime Minister plays a leading role in setting the strategic agenda and vision for foreign policy, other key institutions like Cabinet, Parliament, the Foreign Minister and Trade Minister, as well as domestic groups like media and business, all contribute to and impact the foreign policymaking process and outcomes. 
+Australia's **foreign** **policy** is shaped and influenced by various political institutions and actors within the government. While the **Prime Minister** plays a leading role in setting the strategic agenda and vision for foreign policy, other key institutions like Cabinet, Parliament, the Foreign Minister and Trade Minister, as well as domestic groups like media and business, all contribute to and impact the foreign policymaking process and outcomes. 
 
 At the highest level, the Prime Minister is responsible for the overall strategic direction and vision of foreign policy, and has significant influence due to their general responsibility for the government's agenda. The Foreign Affairs and Trade ministers handle more day-to-day policy and are accountable for specific functional areas. Cabinet serves as the key decision-making body that sets policy directions. Parliament influences policy through debates and committee work. Political parties also play a role in foreign policy within the parliamentary process.
 

@@ -2,11 +2,12 @@
 title: 'Research Method: Quantitative'
 slug: quantitative
 abstract: Quantitative research is a type of empirical research that uses numbers and statistics to express its findings.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## What is Quantitative Research?
 
-Quantitative research is a type of empirical research that uses numbers and statistics to express its findings. It relies on statistical analyses and numerical measurements of specific aspects of a phenomenon under study. The key characteristic that distinguishes quantitative research from other types of empirical research is its use of numbers and statistical analyses.
+**Quantitative** **research** is a type of empirical research that uses numbers and statistics to express its findings. It relies on statistical analyses and numerical measurements of specific aspects of a phenomenon under study. The key characteristic that distinguishes quantitative research from other types of empirical research is its use of numbers and statistical analyses.
 
 In quantitative research, data is collected in the form of numbers and statistics. The quantity, amount, intensity or frequency of something is measured. 
 
@@ -17,7 +18,7 @@ In quantitative research, data is collected in the form of numbers and statistic
 	- Values
 	- Intensity
 
-Common ways of collecting quantitative data include surveys, polls, questionnaires and **empirical** observations that yield statistical data. The data is then analyzed using statistical techniques in order to reveal patterns, averages, correlations and other statistical relationships between variables.
+Common ways of collecting quantitative data include surveys, polls, questionnaires and **empirical** observations that yield statistical data. The data is then analyzed using statistical techniques in order to reveal patterns, averages, correlations and other statistical relationships between **variables**.
 
 Quantitative research is based on testing a theory composed of variables that are measured with numbers and analyzed with statistics in order to determine if the theory explains or predicts a phenomenon of interest. The variables used in quantitative research are carefully operationalized to ensure they can be measured, typically on instruments with numeric scales. The purpose of measurement in quantitative research is to be able to generalize findings from a smaller group to a larger population.
 
@@ -42,7 +43,7 @@ Some of the key characteristics of quantitative research include:
 - Selecting appropriate methods
 - Validity and reliability of the data
 
-<center> <img src="static\modules\quantitative research model.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/quantitative research model.png " alt="" width="70%" /> </center>
 
 ## Purpose of Quantitative Research
 
@@ -56,7 +57,7 @@ Descriptive quantitative research focuses on "mapping out" the details of a circ
 
 ### Causal
 
-Causal quantitative research seeks to determine cause-and-effect relationships between variables through experimentation and statistical analysis. Causal studies test whether changes in an independent variable actually produce changes in a specified dependent variable. For instance, an experiment could test whether a new educational program (independent variable) improves student test scores (dependent variable). Causal research assesses the impact or objectives of a program or intervention.
+Causal quantitative research seeks to determine cause-and-effect relationships between variables through experimentation and statistical analysis. Causal studies test whether changes in an independent **variable** actually produce changes in a specified dependent variable. For instance, an experiment could test whether a new educational program (independent variable) improves student test scores (dependent variable). Causal research assesses the impact or objectives of a program or intervention.
 
 ## Key Components of Quantitative Research
 
@@ -97,9 +98,9 @@ A variable is a concept that can be measured. It is a property that takes on dif
 
 The main difference between a concept and a variable is measurability. A variable must be observable or measurable.
 
-<center> <img src="static\modules\concept and variable differences.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/concept and variable differences.png" alt="" width="70%" /> </center>
 
-<center> <img src="static\modules\example of concept and variable.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/example of concept and variable.png" alt="" width="70%" /> </center>
 
 ## Types of Variables
 
@@ -114,9 +115,9 @@ There are several ways to categorize the different types of variables:
 
 **Example of Variable Based on Causal Relationship**
 
-<center> <img src="static\modules\example causal relationship.png] " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/example causal relationship.png] " alt="" width="70%" /> </center>
 
-<center> <img src="static\modules\example causal relationship 2.png] " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/example causal relationship 2.png] " alt="" width="70%" /> </center>
 
 
 ### Variables Based on Study Design

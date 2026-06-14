@@ -2,11 +2,12 @@
 title: Modes of Diplomacy
 slug: modes-diplomacy
 abstract: Few modes of diplomaces are discussed in this chapter.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Bilateral Diplomacy
 
-Bilateral diplomacy refers to the conduct of relations between two sovereign states. It is the most traditional form of diplomacy, focused on advancing the specific interests of two countries within their bilateral relationship.
+**Bilateral** **diplomacy** refers to the conduct of relations between two sovereign states. It is the most traditional form of diplomacy, focused on advancing the specific interests of two countries within their bilateral relationship.
 
 **History and Key Developments**
 
@@ -28,7 +29,7 @@ Several trends have impacted modern bilateral diplomacy:
 
 ## Multilateral Diplomacy
 
-Multilateral diplomacy is the practice of coordinating diplomatic activities between multiple countries to address issues affecting more than two nations or parties. Unlike bilateral diplomacy between two states, multilateralism involves diverse groups working together to find solutions to complex global challenges.
+**Multilateral diplomacy** is the practice of coordinating diplomatic activities between multiple countries to address issues affecting more than two nations or parties. Unlike bilateral diplomacy between two states, multilateralism involves diverse groups working together to find solutions to complex global challenges.
 
 The scope of multilateral diplomacy encompasses both formal institutions like the United Nations, as well as more flexible arrangements like ad-hoc coalitions or regional alliances. Whereas bilateral diplomacy typically focuses on narrow national interests, multilateralism aims to advance broader goals shared by the international community.
 
@@ -104,7 +105,7 @@ The impact of these commissions has varied. Some, like the Brundtland Commission
 
 ## Institutionalized Diplomacy
 
-**Definition:** Gatherings at the maximum level of political authority, summits are—potentially the powerhouse of modern diplomacy. By definition, summits refer to official meetings among heads of state and government—meetings among leaders at the apex of state power.
+**Definition:** Gatherings at the maximum level of political authority, **summits** are—potentially the powerhouse of modern diplomacy. By definition, summits refer to official meetings among heads of state and government—meetings among leaders at the apex of state power.
 
 **Types of institutionalized summits:**
 

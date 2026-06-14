@@ -2,16 +2,17 @@
 slug: basic-political
 title: Basic Poilitical Concepts
 abstract: What is politics? When did it start? What are the basic concepts of politics? This chapter will answer these questions and more.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
 ## Introduction to Politics
 
-Politics refers to activities associated with governance and decision-making of groups of people. At its core, politics involves the use of power and authority to impact society. 
+Politics refers to activities associated with governance and decision-making of groups of people. At its core, politics involves the use of **power** and authority to impact society. 
 
-The term "politics" originates from the Greek word "politika" which means "affairs of the cities". It refers to the art or science of organizing and governing societies.
+The term "politics" originates from the Greek word "politika" which means "affairs of the cities". It refers to the art or **science** of organizing and governing societies.
 
-Politics involves the creation and operations of governments, political parties, organizations, legislations, policies and negotiations between varied interest groups. It is about how power is distributed and decisions are made in societies.
+Politics involves the creation and operations of governments, **political** parties, organizations, legislations, policies and negotiations between varied interest groups. It is about how power is distributed and decisions are made in societies.
 
 The purpose of politics is to address issues faced by societies and organize collective efforts towards shared goals that improve lives. It enables social coordination and decision-making to determine how limited resources are allocated, which programs are implemented and whose interests are served. 
 
@@ -21,7 +22,7 @@ At its core, politics is about actualizing the ideals of fairness, justice, secu
 
 ## History and Origin of Political Science
 
-Political science emerged as a distinct field of study in the 19th century, developing alongside other social sciences like sociology, anthropology, economics, and psychology. These new fields arose in response to the social and political changes brought about by the Enlightenment, the Industrial Revolution, and the rise of liberal democracy. 
+**Political science** emerged as a distinct field of study in the 19th century, developing alongside other social sciences like sociology, anthropology, economics, and psychology. These new fields arose in response to the social and political changes brought about by the Enlightenment, the Industrial Revolution, and the rise of liberal democracy. 
 
 Several key thinkers helped establish political science as a modern academic discipline. Alexis de Tocqueville, often called the founder of political science, wrote extensively on democracy in America in the 1830s. Other influential early political scientists included John Stuart Mill, who explored ideas of representative government and utilitarianism in the mid-19th century.
 
@@ -94,7 +95,7 @@ Some key aspects studied within political science include:
 - Comparative politics - The analysis and comparison of political institutions, processes and policies across different countries. 
 - International relations - The interactions between nation states, inter-governmental organizations, non-state actors and more at the global level.
 
-The study of political science provides insights into the issues societies grapple with and the solutions they develop through governance systems. It aims to shed light on the forces that shape collective decision-making. Political science scholarship also enables citizens to better understand public affairs, equipping them to participate actively in civic life. Overall, political science plays a vital role in building knowledge to improve governance, public policy and civic engagement.
+The study of political science provides insights into the issues societies grapple with and the solutions they develop through governance systems. It aims to shed light on the forces that shape collective decision-making. Political science scholarship also enables citizens to better understand public affairs, equipping them to participate actively in civic life. Overall, political science plays a vital role in building knowledge to improve governance, **public policy** and civic engagement.
 
 ## Decision-Making 
 

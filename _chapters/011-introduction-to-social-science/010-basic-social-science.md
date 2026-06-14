@@ -2,6 +2,7 @@
 slug: social-science-concept
 title: Social Scinece Concept
 abstract: This materials will explain the basic conpect of Social Science
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ### **Defining Social Science**
@@ -9,11 +10,11 @@ abstract: This materials will explain the basic conpect of Social Science
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/mE-CyA9A9DQ?si=1iGLpKs0ISY5LLpe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
 <br>
 
-Social science is the collective body of knowledge that explores the nature, growth, and functioning of human society. Unlike the natural sciences that focus on phenomena such as stem cells and light waves, social science delves into the intricate workings of society itself, utilizing social and behavioral explanations to comprehend the complex tapestry of human interactions.
+**Social** **science** is the collective body of knowledge that explores the nature, growth, and functioning of human society. Unlike the natural sciences that focus on phenomena such as stem cells and light waves, social science delves into the intricate workings of society itself, utilizing social and behavioral explanations to comprehend the complex tapestry of human interactions.
 
 ### **The Scope of Social Sciences**
 
-Social scientists employ empirical research methods to investigate interpersonal and intrapersonal behaviors, ranging from the dynamics of falling in love to the motivations behind criminal activities. Empirical research, as a cornerstone of international relations, draws knowledge from observed and measured phenomena, providing insights derived from actual experiences rather than theoretical speculation.
+**Social scientists** employ empirical research methods to investigate interpersonal and intrapersonal behaviors, ranging from the dynamics of falling in love to the motivations behind criminal activities. Empirical research, as a cornerstone of international relations, draws knowledge from observed and measured phenomena, providing insights derived from actual experiences rather than theoretical speculation.
 
 ### **The Focus of Social Sciences**
 
@@ -21,7 +22,7 @@ The study of social science involves a nuanced exploration of human relationship
 
 ### **The Origins of Social Science**
 
-As the 19th century dawned, social science secured a firm and respectable position across leading European countries. Figures like Auguste Comte influenced subsequent luminaries such as Emile Durkheim and Karl Marx. Despite its historical roots, social science is a relatively young science, with ongoing debates about its limits and boundaries, as noted by Lawrence A. Kempton in "Social Sciences Today."
+As the 19th century dawned, social science secured a firm and respectable position across leading European countries. Figures like Auguste Comte influenced subsequent luminaries such as Emile Durkheim and Karl Marx. Despite its historical roots, social science is a relatively young science, with ongoing debates about its limits and boundaries, as noted by Lawrence A. Kempton in "**Social Sciences** Today."
 
 ### **Scientific Methods and Applications**
 

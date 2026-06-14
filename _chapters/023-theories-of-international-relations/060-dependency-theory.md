@@ -2,16 +2,17 @@
 title: Dependency Theory
 slug: dependency-theory
 abstract: Explanation of dependency theory.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 
-Dependency theory emerged in the late 1950s and early 1960s as a critique of modernization theory and as a way to explain persistent underdevelopment in Latin America and other developing regions. 
+**Dependency** **theory** emerged in the late 1950s and early 1960s as a critique of modernization theory and as a way to explain persistent underdevelopment in Latin America and other developing regions. 
 
-The theory arose in response to concerns that economic growth in the advanced industrialized countries did not necessarily lead to growth in the poorer countries. Dependency theorists argued that poverty in developing countries was not because they were "backward" or lacked the necessary cultural values for development, as modernization theorists claimed.
+The theory arose in response to concerns that economic growth in the advanced industrialized **countries** did not necessarily lead to growth in the poorer countries. Dependency theorists argued that poverty in developing countries was not because they were "backward" or lacked the necessary cultural values for development, as modernization theorists claimed.
 
 Instead, dependency theorists focused on the problem of exploitation of peripheral and semi-peripheral countries by the wealthy core countries. They suggested that Western colonization and economic dominance created a dependence that led to long-lasting patterns of poverty. 
 
-<center> <img src="static\modules\world systen.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/world systen.png " alt="" width="70%" /> </center>
 
 Dependency theory also challenged the prevailing approach of the post-World War II era that advocated "**development through industrialization**." In contrast, dependency theorists believed that countries needed to focus on internal factors first rather than uncritically copying industrial policies from advanced capitalist countries.
 

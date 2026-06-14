@@ -2,11 +2,12 @@
 title: History Of Diplomacy
 slug: history-diplomacy
 abstract: A review of the history of diplomacy highlights
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
-Diplomacy has played an instrumental role throughout history in facilitating communication and relations between distinct groups, entities, and nations. At its core, diplomacy entails the management of relationships and affairs between different international actors. It involves the use of dialogue, negotiation, compromise, and other non-violent means to resolve disputes, while advancing a country's interests.
+**Diplomacy** has played an instrumental role throughout history in facilitating communication and relations between distinct groups, entities, and nations. At its core, diplomacy entails the management of relationships and affairs between different international actors. It involves the use of dialogue, negotiation, compromise, and other non-violent means to resolve disputes, while advancing a country's interests.
 
-The origins of diplomacy stretch back thousands of years, with evidence of formal diplomatic dealings and exchanges between nations dating back to the earliest civilizations. From the ancient Near East to the Greek and Italian city-states, methods and approaches to diplomacy have evolved over time to adapt to changing political landscapes. Key developments include the establishment of permanent embassies and foreign ministries, the emergence of diplomatic immunity, and the codification of diplomatic rules and procedures.
+The origins of diplomacy stretch back thousands of years, with evidence of formal **diplomatic** dealings and exchanges between nations dating back to the earliest civilizations. From the ancient Near East to the Greek and **Italian city-states**, methods and approaches to diplomacy have evolved over time to adapt to changing political landscapes. Key developments include the establishment of permanent embassies and **foreign** ministries, the emergence of **diplomatic immunity**, and the codification of diplomatic rules and procedures.
 
 While diplomacy has at times failed to prevent war and conflict, it remains an essential tool for furthering cooperation and pursuing foreign policy aims without resorting to violence. When conducted effectively and ethically, diplomacy provides the basis for compromise, mutual understanding, and the peaceful resolution of differences. A review of the history of diplomacy highlights not only how the practice has changed over time, but also its enduring importance for navigating complex international relations.
 

@@ -2,23 +2,24 @@
 title: Understanding ASEAN Chapter
 slug: asean-chapter
 abstract: This chapter provides an overview of the ASEAN Charter, its rationale, and the process of its creation, highlighting its significance in institutionalizing ASEAN and codifying member state commitments.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction
 
-The Association of Southeast Asian Nations (ASEAN) was established in 1967 by five founding members - Indonesia, Malaysia, Philippines, Singapore, and Thailand. Brunei Darussalam joined in 1984, Vietnam in 1995, Lao PDR and Myanmar in 1997, and Cambodia in 1999. 
+The Association of Southeast Asian Nations (**ASEAN**) was established in 1967 by five founding members - Indonesia, Malaysia, Philippines, Singapore, and Thailand. Brunei Darussalam joined in 1984, Vietnam in 1995, Lao PDR and Myanmar in 1997, and Cambodia in 1999. 
 
 ASEAN was originally created to promote economic, social, and cultural cooperation as well as regional peace and stability. Over the decades, ASEAN rapidly expanded its mandate into the political-security, economic and socio-cultural spheres. By the early 2000s, ASEAN had established over 30 sectoral ministerial bodies and dialogue partnerships with 11 external partners. It evolved into the driving force for key architectures such as ASEAN Regional Forum, ASEAN Plus Three, and East Asia Summit.
 
-Despite the deepening integration and rising profile of ASEAN, it continued to operate as a loosely-organized entity without a formal charter or constitution. This limited ASEAN's ability to build stronger institutions and streamline decision-making. The 1997 Asian Financial Crisis further exposed the weaknesses of the organization's framework. 
+Despite the deepening integration and rising profile of ASEAN, it continued to operate as a loosely-organized entity without a formal **charter** or constitution. This limited ASEAN's ability to build stronger institutions and streamline decision-making. The 1997 Asian Financial Crisis further exposed the weaknesses of the organization's framework. 
 
-These issues prompted ASEAN leaders to explore ways to empower the regional bloc with a legal personality and institutional framework. The push for an ASEAN Charter intensified in 2003 with the Declaration of ASEAN Concord II. After extensive consultations and negotiations, the ASEAN Charter was adopted in 2007 and came into force in 2008.
+These issues prompted ASEAN leaders to explore ways to empower the regional bloc with a legal personality and institutional framework. The push for an **ASEAN Charter** intensified in 2003 with the Declaration of ASEAN Concord II. After extensive consultations and negotiations, the ASEAN Charter was adopted in 2007 and came into force in 2008.
 
 ## Rationale for the ASEAN Charter
 
 The idea for an ASEAN Charter originated from the need to strengthen the institutional framework and effectiveness of ASEAN. Prior to the Charter, ASEAN operated as a loosely-organized political association without a formal constitution since its inception in 1967. By the early 2000s, cooperation had expanded to over 30 sectoral ministerial bodies covering political-security, economic, and socio-cultural areas. 
 
-However, the lack of a legal and institutional framework was hindering ASEAN's ability to achieve its goals and fully realize an ASEAN Community. There was a need to boost the community-building process with a solid institutional foundation. The acceleration of the ASEAN Community target date from 2020 to 2015 at the 12th ASEAN Summit in Cebu further underscored the urgency.
+However, the lack of a legal and institutional framework was hindering ASEAN's ability to achieve its goals and fully realize an **ASEAN Community**. There was a need to boost the community-building process with a solid institutional foundation. The acceleration of the ASEAN Community target date from 2020 to 2015 at the 12th **ASEAN Summit** in Cebu further underscored the urgency.
 
 On the economic front, ASEAN was actively negotiating free trade agreements with major partners like China, Japan, South Korea, India, Australia-New Zealand, and the EU. Yet the absence of a formal charter or treaty raised doubts about ASEAN's legal standing as an intergovernmental organization.
 

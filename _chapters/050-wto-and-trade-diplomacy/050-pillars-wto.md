@@ -2,18 +2,19 @@
 title: 'The 3 Pillars of the WTO: How Law, Economics, and Politics Shaped Global Trade'
 slug: pillars-wto
 abstract: This chapter provides an overview of the legal, economic, and political foundations of the World Trade Organization (WTO) and explores the challenges it currently faces in these areas.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 
 ## Introduction
 
-The purpose of this content is to provide an overview of the legal, economic, and political foundations that led to the creation of the World Trade Organization (WTO). It will analyze these foundations, explore the challenges currently facing the WTO, and connect the historical themes to the present day. 
+The purpose of this content is to provide an overview of the legal, economic, and political foundations that led to the creation of the World **Trade** Organization (**WTO**). It will analyze these foundations, explore the challenges currently facing the WTO, and connect the historical themes to the present day. 
 
 Three major developments were required before a multilateral trading order could be created:
 
 1. The emergence of the idea of national sovereignty
-2. The notion that countries can gain from freer trade 
-3. The resolution of the paradox of power dynamics between nations
+2. The notion that **countries** can gain from freer trade 
+3. The resolution of the paradox of **power** dynamics between nations
 
 The analysis will proceed in three steps:
 
@@ -27,7 +28,7 @@ Law provides greater certainty in relations between states and constrains what m
 
 ### The Creation of International Organizations
 
-Kant’s proposal envisioned his ideal institution would be narrowly aimed at securing peace, and the league would not have “any dominion over the power” of the member states and there would be no “need for them to submit to civil laws and their compulsion.” It was not until the middle of the 19 th century that states would begin to establish formal and permanent international organizations. 
+Kant’s proposal envisioned his ideal institution would be narrowly aimed at securing peace, and the league would not have “any dominion over the power” of the member states and there would be no “need for them to submit to civil laws and their compulsion.” It was not until the middle of the 19 th century that states would begin to establish formal and permanent **international** organizations. 
 
 ### The ITO and GATT 
 

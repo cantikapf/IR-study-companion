@@ -2,19 +2,20 @@
 title: 'The United Nations: Maintaining International Peace And Security'
 slug: un-security
 abstract: The United Nations (UN) is an intergovernmental organization established in 1945 to maintain international peace and security. This material explores the role of the UN Security Council, the need for expanding its membership, and the implementation of the UN Charter in preventing and resolving conflicts.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 ## Introduction
 
-The United Nations (UN) is an intergovernmental organization that was established in 1945 after World War II with the aim of maintaining international peace and security, developing friendly relations among nations, achieving international cooperation, and being a center for harmonizing the actions of nations. The creation of the UN reflected a vision for a new post-war global order and a desire to avoid the horrors of another world war. 
+The **United Nations** (UN) is an intergovernmental organization that was established in 1945 after World War II with the aim of maintaining international peace and **security**, developing friendly relations among nations, achieving international cooperation, and being a center for harmonizing the actions of nations. The creation of the UN reflected a vision for a new post-war global order and a desire to avoid the horrors of another world war. 
 
-The UN officially came into existence on October 24, 1945, following ratification of the UN Charter by the five permanent members of the Security Council and a majority of the other signatories. 51 countries in total signed the Charter at the United Nations Conference on International Organization in San Francisco, which took place from April to June 1945. The Charter has since been ratified by all 193 UN member states.
+The UN officially came into existence on October 24, 1945, following ratification of the UN Charter by the five permanent members of the **Security **Council** and a majority of the other signatories. 51 countries in total signed the Charter at the United Nations Conference on International Organization in San Francisco, which took place from April to June 1945. The Charter has since been ratified by all 193 UN member states.
 
 The UN headquarters is located in New York City and the organization has additional offices around the world. As of 2022, there are 193 member states of the UN. The organization and its specialized agencies were awarded the Nobel Peace Prize in 2001.
 
 ## UN Security Council
 
-The United Nations Security Council is one of the six principal organs established by the United Nations Charter. Under the Charter, the Security Council has primary responsibility for maintaining international peace and security. The Security Council has 15 members, including five permanent members - China, France, Russia, the United Kingdom and the United States - and ten non-permanent members elected for two-year terms by the UN General Assembly. 
+The United **Nations Security** Council is one of the six principal organs established by the United Nations Charter. Under the Charter, the Security Council has primary responsibility for maintaining international peace and security. The Security Council has 15 members, including five permanent members - China, France, Russia, the United Kingdom and the United States - and ten non-permanent members elected for two-year terms by the UN General Assembly. 
 
 The Security Council takes the lead in determining the existence of a threat to the peace or act of aggression. It calls upon the parties to a dispute to settle it by peaceful means and recommends methods of adjustment or terms of settlement. In some cases, the Security Council can resort to imposing sanctions or even authorize the use of force to maintain or restore international peace and security. 
 

@@ -2,6 +2,7 @@
 title: Liberalism
 slug: liberalism-ir
 abstract: Liberalism in International Relations context
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Liberalism Summary
@@ -27,14 +28,14 @@ Within the liberal framework, three sets of rights form the foundation. These in
 2. Right necessary to protect and promote the capacity of social economy rights
 3. Democratic participation or representation
 
-Liberals emphasize the importance of private property rights, believing individuals have a right to own property and engage in market transactions freely. This enables individuals to pursue their economic interests and contributes to an efficient allocation of resources and economic prosperity.
+Liberals emphasize the importance of private property rights, believing individuals have a right to own property and engage in market transactions freely. This enables individuals to pursue their **economic** interests and contributes to an efficient allocation of resources and economic prosperity.
 
 In addition, liberals argue that some rights are necessary to promote social welfare and regulate the economy. These include rights to education, healthcare, social security, and labor regulations. While valuing free markets, liberals contend that governments should provide services and protections to support a thriving economy and society.
 
 Finally, liberals stress democratic participation and representation. Citizens should have the right to elect their leaders and influence government policy. Democratically elected governments, representing the will of the people, can best protect individual liberties. Through voting, civil liberties, and active civic participation, citizens can shape their society.
 ## Realist Constraint
 
-The realist perspective presents an alternative view of the international system. According to realists, the international arena operates in a state of anarchy, with no overarching authority to govern relations between sovereign states. This creates an inherently competitive environment, where states must be continuously aware of potential threats from other nations.
+The realist perspective presents an alternative view of the international system. According to realists, the international arena operates in a state of anarchy, with no overarching authority to govern relations between sovereign **states**. This creates an inherently competitive environment, where states must be continuously aware of potential threats from other nations.
 
 **Immanuel Kant's** liberal institutionalist perspective contrasts with realism but still accommodates notions of conflict among sovereign states. Kant recognized that states exist in an anarchical system and acknowledged tendencies toward conflict driven by self-interest. However, he believed it was possible to transcend realist constraints through reason.
 
@@ -48,7 +49,7 @@ Therefore, Kant's liberal institutionalism acknowledges the realist view of an a
 
 ## Kantian Triangle
 
-<center> <img src="static\modules\Kantian_triangle.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/Kantian_triangle.png " alt="" width="70%" /> </center>
 
 Kantian Triangle is the illustration of Kantian perspective on world politics, which is about an interdependent system of influences, which are seen to exist in a series of 'feedback loops' with each the major forces strengthening the others. The illustration show that the system directly promoting peace. 
 

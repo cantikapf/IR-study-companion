@@ -2,14 +2,15 @@
 slug: post-ww
 title: 'The Post-War World Order'
 abstract: How the Marshall Plan and UN Reshaped Global Politics
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 ## The Marshall Plan
 
-The Marshall Plan, named after US Secretary of State George Marshall, marked a pivotal moment in the post-WWII era. Between 1948 and 1952, the United States provided over $13 billion in financial aid to Western European countries, including Britain, France, West Germany, Italy, and the Netherlands. 
+The **Marshall Plan**, named after US Secretary of State George Marshall, marked a pivotal moment in the post-WWII era. Between 1948 and 1952, the **United** States** provided over $13 billion in financial aid to Western European countries, including Britain, France, West Germany, Italy, and the Netherlands. 
 
-The goals of the Marshall Plan were twofold. First, it aimed to rebuild war-torn Western European economies and create stable markets for American exports. By reviving industrial production and infrastructure development, the United States hoped to prevent serious economic crises that could lead to political instability or communist expansion. Second, the initiative served as an overt use of America's economic power to further its foreign policy agenda. Providing aid was a strategic move in the early Cold War years to align Western European nations with the United States and build a bulwark against Soviet communist influence.
+The goals of the Marshall Plan were twofold. First, it aimed to rebuild war-torn Western European economies and create stable markets for American exports. By reviving industrial production and infrastructure development, the United States hoped to prevent serious economic crises that could lead to political instability or communist expansion. Second, the initiative served as an overt use of America's economic power to further its foreign policy agenda. Providing aid was a strategic move in the early **Cold War** years to align Western European nations with the United States and build a bulwark against Soviet communist influence.
 
 The Marshall Plan was a defining episode in the Cold War as it highlighted the use of economic power as a foreign policy tool. The United States' willingness to dedicate such substantial resources to rebuilding former enemy states marked a significant change in its approach to international relations.
 
@@ -29,7 +30,7 @@ Three major global financial institutions were established:
 
 - **General Agreement on Tariffs and Trade (GATT)** - An organization intended to supervise global trade and reduce barriers/restrictions. GATT evolved into the World Trade Organization in 1995.
 
-These Bretton Woods institutions differ from the United Nations in their specific economic mandates. While the UN has a broader mission focused on international cooperation, peace, and human rights, the IMF, World Bank, and GATT/WTO concentrate narrowly on global finance, development, and trade. The Bretton Woods system laid the foundations for today's globalized economy and interdependent financial system.
+These Bretton Woods institutions differ from the **United Nations** in their specific economic mandates. While the UN has a broader mission focused on international cooperation, peace, and human rights, the IMF, World Bank, and GATT/WTO concentrate narrowly on global finance, development, and trade. The Bretton Woods system laid the foundations for today's globalized economy and interdependent financial system.
 
 ## The United Nations
 

@@ -2,13 +2,14 @@
 slug: history-social-science-role
 title: The History and It's Role to Social Science
 abstract: This section will cover the importance of studying history in social science
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
-In this section, we'll learn about the importance of studying history in social science.
+In this section, we'll learn about the importance of studying **history** in **social** **science**.
 
 ### The Importance of Studying History
 
-History serves as a cornerstone in the realm of social science, playing a pivotal role in shaping human thought and understanding. At its core, the concept of history delves into fundamental aspects of human agency, the dynamics of change, the influence of material circumstances on human affairs, and the perceived meaning behind historical events. The study of history offers more than a mere exploration of the past; it presents an opportunity to glean insights and learn valuable lessons that can be applied to our present circumstances.
+History serves as a cornerstone in the realm of social science, playing a pivotal role in shaping **human** thought and understanding. At its core, the concept of history delves into fundamental aspects of human agency, the dynamics of change, the influence of material circumstances on human affairs, and the perceived meaning behind historical events. The study of history offers more than a mere exploration of the past; it presents an opportunity to glean insights and learn valuable lessons that can be applied to our present circumstances.
 
 ### Exploring Critical Question in the Study of History
 

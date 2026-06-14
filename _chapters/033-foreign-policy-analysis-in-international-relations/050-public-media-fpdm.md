@@ -2,13 +2,14 @@
 title: Public Opinion, Media And Foreign Policy
 slug: public-opinion-media-fpdm
 abstract: The media plays an increasingly influential role in foreign policy around the world. 
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
-As technology has enabled the widespread and rapid dissemination of information, the way governments make decisions on the global stage has fundamentally changed. No longer can foreign policy formation happen behind closed doors without scrutiny from the public. The media acts as a critical link between governments and their citizens, shaping public opinion on international affairs. 
+As technology has enabled the widespread and rapid dissemination of information, the way governments make decisions on the global stage has fundamentally changed. No longer can foreign **policy** formation happen behind closed doors without scrutiny from the **public**. The **media** acts as a critical link between governments and their citizens, shaping **public opinion** on international affairs. 
 
 At the same time, the media has become an active environment that foreign policy decision-makers must navigate. How issues and events are framed in the news influences policy choices and strategies. Governments invest significant resources into managing their image and messaging in the media through public relations techniques like "spin." While the media empowers the public, it also provides an opportunity for governments to manipulate public opinion to align with policy goals. The complex interplay between the media, public opinion, and foreign policymaking is integral to understanding international relations in the modern world.
 
-This content will explore the variables that define the media's role in foreign policy. From political communication regimes to news values, many factors determine how the media covers global affairs and how this coverage in turn impacts policy decisions. Understanding these dynamics is key to evaluating the media's growing clout in international relations.
+This content will explore the variables that define the media's role in foreign policy. From **political communication** regimes to news values, many factors determine how the media covers global affairs and how this coverage in turn impacts policy decisions. Understanding these dynamics is key to evaluating the media's growing clout in international relations.
 
 ## Political Communication Regime 
 

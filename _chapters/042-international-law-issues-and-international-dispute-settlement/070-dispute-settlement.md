@@ -2,13 +2,14 @@
 title: Dispute Settlement
 slug: dispute-settlement
 abstract: Dispute settlement refers to the various methods states can utilize to resolve disagreements under international law.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
-Dispute settlement refers to the various methods states can utilize to resolve disagreements under international law. There are two main categories of dispute settlement techniques: diplomatic procedures and adjudication.
+**Dispute** **settlement** refers to the various methods **states** can utilize to resolve disagreements under international law. There are two main categories of dispute settlement techniques: diplomatic procedures and adjudication.
 
 Diplomatic methods aim to reach mutually acceptable solutions through negotiation and third-party assistance. These flexible procedures include bilateral negotiation, inquiry, mediation, conciliation, and good offices. Diplomatic techniques allow states to control the process and outcome.
 
-Adjudication involves binding third-party decisions based on international law. This includes arbitration and judicial settlement through institutions like the International Court of Justice. Adjudication is more rigid but can definitively resolve legal disputes.
+Adjudication involves binding third-party decisions based on international law. This includes arbitration and judicial settlement through institutions like the International Court of Justice. Adjudication is more rigid but can definitively resolve legal **disputes**.
 
 Overall, states have numerous options for settling conflicts cooperatively through compromise. The UN Charter obliges states to seek peaceful dispute resolution. However, the choice of method remains flexible. Diplomatic and adjudicative techniques have advantages and disadvantages, so states weigh various factors in selecting an approach.
 

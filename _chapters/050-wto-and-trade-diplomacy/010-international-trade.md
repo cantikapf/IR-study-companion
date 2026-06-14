@@ -2,19 +2,20 @@
 title: International Trade As Diplomacy
 slug: international-trade-as-diplomacy
 abstract: International trade is a fundamental component of the global economy, driving economic growth and enabling billions of people to work and consume. Diplomacy plays a crucial role in facilitating and managing international trade relationships, ensuring cooperation and resolving conflicts.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## A Dynamic of World Trade 
 
-International trade is no longer just about buyers and sellers, shipping and marketing, firms and distributors. Nor is it only about customs officials and border inspections, tariffs and quotas, export subsidies and import licenses. 
+**International** **trade** is no longer just about buyers and sellers, shipping and marketing, firms and distributors. Nor is it only about customs officials and border inspections, tariffs and quotas, export subsidies and import licenses. 
 
-International trade as a percentage of world economic output has increased from around 2% in the early 19 th century to nearly 35% in the year 2000. Trade today is an inescapable, indispensable component of a global economy that enables the world’s billions to work, earn a living, and consume and invest the fruits of their labors.
+**International trade** as a percentage of world economic output has increased from around 2% in the early 19 th century to nearly 35% in the year 2000. Trade today is an inescapable, indispensable component of a global economy that enables the world’s billions to work, earn a living, and consume and invest the fruits of their labors.
 
 Without international trade, there can be no global economic prosperity. The dramatic increase in trade relative to overall global economic activity is a metaphor for the increasing necessity for people across the world to engage with one another: to deal with each other’s differences and to do business with one another.
 
 ## Diplomacy: Fundamental and Essential Human Activity
 
-Diplomacy that makes international trade possible and profitable is no longer just about nation-state governments, bilateral trade liberalization treaties, multilateral trade organizations, and FTAs. Trade since ancient times has been at the core of the agenda of diplomats. Trade has not only been a primary object of diplomatic representation and communication but also understood as the exchange of goods, services, capital, and labor. 
+**Diplomacy** that makes international trade possible and profitable is no longer just about nation-state governments, bilateral trade liberalization treaties, multilateral trade organizations, and FTAs. Trade since ancient times has been at the core of the agenda of diplomats. Trade has not only been a primary object of diplomatic representation and communication but also understood as the exchange of goods, services, capital, and labor. 
 
 Without diplomacy to build relationships, facilitate communication, negotiate agreements, and resolve conflicts, international trade as we know it today would not be possible. Diplomacy provides the foundation that enables buyers and sellers around the world to connect and conduct business across borders. This involves diplomatic efforts between governments, but also increasingly includes non-state actors such as firms, NGOs, and other organizations. The landscape of international trade relies on ongoing diplomatic representation and relationship management.
 
@@ -32,7 +33,7 @@ A new diplomatic studies paradigm illuminates complex processes in international
 
 Trade agreements have diplomatic and political dimensions that shape international commerce. The politics of negotiation, ratification, and implementation of trade pacts like NAFTA and the TPP exemplify this. Ongoing diplomacy is also essential after the ink dries on trade deals. Diplomatic communication facilitates day-to-day commercial activities and resolves problems for traders and investors operating across borders. It helps translate the words of trade agreements into workable trading relationships. This involves not just government officials but also front-line private-sector actors engaging in informal diplomacy.
 
-The emerging paradigm recognizes that trade diplomacy encompasses both formal negotiation of trade pacts and ongoing efforts to manage complex cross-border business relationships. This more comprehensive view provides valuable insights into the intersection of diplomacy, politics, and economics in the world trading system.
+The emerging paradigm recognizes that **trade diplomacy** encompasses both formal negotiation of trade pacts and ongoing efforts to manage complex cross-border business relationships. This more comprehensive view provides valuable insights into the intersection of diplomacy, politics, and economics in the world trading system.
 
 ## Non-State Actors in Diplomacy 
 

@@ -2,11 +2,12 @@
 title: Introduction To Diplomacy And International Politics
 slug: intro-diplo
 abstract: What is the function of diplomacy? What is the role of diplomats? What is the difference between diplomacy and foreign policy? This chapter will introduce you to the field of diplomacy and international politics.
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## What is diplomacy?
 
-Diplomacy is the main way that countries interact with each other. It involves communication and negotiations between professional diplomats and government officials to help countries achieve their foreign policy goals without using propaganda or force. 
+Diplomacy is the main way that countries interact with each other. It involves communication and negotiations between professional diplomats and government officials to help countries achieve their **foreign** **policy** goals without using propaganda or force. 
 
 The key purpose of diplomacy is to enable countries to secure the objectives of their foreign policy without resorting to conflict or violence. Diplomacy achieves this through discussions and negotiations between diplomats and officials which aim to build agreements and identify shared interests. It provides a more civilized alternative to brute force for countries to deal with their differences and advocate for themselves on the world stage.
 

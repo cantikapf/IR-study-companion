@@ -2,13 +2,14 @@
 title: Regionalism In International Affairs
 slug: regionalism-in-international-affairs
 abstract: Introduction to regionalism in International Relations
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction to Regional Cooperation and Integration
 
-Regional cooperation and integration encompass a diverse range of economic, social, political, and security arrangements between countries in a geographic region. These can range from limited functional cooperation in specific sectors, to deep integration leading to unified governance structures beyond the nation-state.
+**Regional** cooperation and **integration** encompass a diverse range of economic, social, political, and security arrangements between countries in a geographic region. These can range from limited functional cooperation in specific sectors, to deep integration leading to unified governance structures beyond the nation-state.
 
-At its core, regional integration refers to countries voluntarily pooling sovereignty and harmonizing policies to benefit the region as a whole. Key components include:
+At its core, **regional integration** refers to countries voluntarily pooling sovereignty and harmonizing policies to benefit the region as a whole. Key components include:
 
 - **Functional cooperation** - involves limited arrangements for countries to work together in specific areas like transportation, energy, or the environment.
 
@@ -16,7 +17,7 @@ At its core, regional integration refers to countries voluntarily pooling sovere
 
 - **Political cooperation** - involves alignment on certain values, norms, and practices regarding governance. This may include shared commitments to democracy, human rights, or rule of law.
 
-Regional integration differs from and can be seen as the next step beyond regional cooperation. It leads to the creation of a common regional space with distinct rules and in some cases, supranational institutions. Examples include customs unions, common markets, or economic and monetary unions.
+Regional integration differs from and can be seen as the next step beyond **regional cooperation**. It leads to the creation of a common regional space with distinct rules and in some cases, supranational institutions. Examples include customs unions, common markets, or economic and monetary unions.
 
 There are several drivers behind countries pursuing greater regional integration, including:
 
@@ -50,7 +51,7 @@ Overall, regional integration involves complex tradeoffs between independence, s
 
 ## Regional Integration in a Global Context
 
-Regional integration takes on varying dynamics in different parts of the world. The Americas often frame regionalism in contrast to the dominant role of the United States, leading to multiple competing regional projects and identities. In Africa, regional integration emerged alongside anti-colonial politics, with some arrangements growing out of colonial-era boundaries and administration. Asia faces particular challenges in pursuing regional integration due to the lack of coherent 'natural' regions, with projects often focused on specific issues like security or trade. The Eurasian region is shaped by complex integration politics influenced by Russia, China, and the European Union. 
+Regional integration takes on varying dynamics in different parts of the world. The Americas often frame regionalism in contrast to the dominant role of the United States, leading to multiple competing regional projects and identities. In Africa, regional integration emerged alongside anti-colonial politics, with some arrangements growing out of colonial-era boundaries and administration. Asia faces particular challenges in pursuing regional integration due to the lack of coherent 'natural' regions, with projects often focused on specific issues like security or trade. The Eurasian region is shaped by complex integration politics influenced by Russia, China, and the **European** Union. 
 
 In the Americas, an overarching 'Latin American' identity often serves as a counterpart to the United States, despite tensions between specific countries in the region. This has given rise to competing regional projects, including: the Organization of American States, which originated out of 19th century Pan-Americanism; the Latin American Free Trade Association and its successor Mercosur, which united the Southern Cone countries; the Andean Community bringing together the Andean countries of South America; the Bolivarian Alliance for the Americas (ALBA) launched by Venezuela and Cuba; and the Pacific Alliance formed by Mexico, Colombia, Peru and Chile. Different political and economic motives shape these diverse regional organizations.
 

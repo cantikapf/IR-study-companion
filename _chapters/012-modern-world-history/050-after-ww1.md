@@ -1,15 +1,16 @@
 ---
-slug: road-to-ww1
+slug: after-the-first-world-war
 title: After The First World War
 abstract: This chapter will summarize the aftermath of the First World War
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 
 # Introduction
 
-World War I was the first truly global war, spanning across multiple continents and involving dozens of nations around the world. What started out as a conflict in Europe, ignited by the assassination of Austrian Archduke Franz Ferdinand in 1914, quickly escalated into a battle on a scale never before seen in human history up until that point. 
+**World** **War** I was the first truly global war, spanning across multiple continents and involving dozens of nations around the world. What started out as a conflict in Europe, ignited by the assassination of Austrian Archduke Franz Ferdinand in 1914, quickly escalated into a battle on a scale never before seen in human history up until that point. 
 
-The war pitted two major alliances against each other - the Central Powers and the Allied Powers. The Central Powers consisted primarily of Germany, Austria-Hungary, Bulgaria, and the Ottoman Empire. They were opposed by the Allied Powers, made up of the United Kingdom, France, Russia, Italy, Japan, and eventually the United States. 
+The war pitted two major alliances against each other - the Central Powers and the Allied Powers. The Central Powers consisted primarily of **Germany**, Austria-Hungary, Bulgaria, and the Ottoman Empire. They were opposed by the Allied Powers, made up of the United Kingdom, France, Russia, Italy, Japan, and eventually the United States. 
 
 For over four years, these two alliances engaged in bloody trench warfare and epic battles involving millions of soldiers. New weapons and technologies like poison gas, machine guns, tanks and aircraft were introduced, making this one of the deadliest wars in modern history. By the time an armistice was signed in 1918, over 9 million soldiers had lost their lives, and another 21 million were wounded.
 
@@ -113,7 +114,7 @@ The armistice came into effect six hours later at 11 AM. Fighting on the Western
 
 - Allied blockade of Germany to continue
 
-Joyous celebrations erupted across Europe at the cessation of hostilities. Having negotiated from a defeated position, Germany still resented the armistice conditions. This sowed the seeds for undermining the subsequent Treaty of Versailles, bring lasting peace no closer. But for the moment, the "war to end all wars" had concluded.
+Joyous celebrations erupted across Europe at the cessation of hostilities. Having negotiated from a defeated position, Germany still resented the armistice conditions. This sowed the seeds for undermining the subsequent **Treaty** of Versailles, bring lasting peace no closer. But for the moment, the "war to end all wars" had concluded.
 
 ## Treaty of Versailles
 

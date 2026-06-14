@@ -2,9 +2,10 @@
 title: Understanding Issues of International Politics
 slug: inter-politics
 abstract: Key issue in international politics.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
-International politics refers to the relationships between countries and how they interact on the global stage. Some of the key issues in international politics include:
+**International** politics refers to the relationships between countries and how they interact on the global stage. Some of the key issues in international politics include:
 
 - **Security** - Countries seek to protect their national interests and ensure the safety and stability of their citizens. This involves both domestic security within a nation's borders as well as international efforts to prevent conflict. Maintaining national security often requires diplomacy, building alliances, gathering intelligence, and when necessary, the use of military force.
 
@@ -16,7 +17,7 @@ International politics refers to the relationships between countries and how the
 
 - **Health** - Disease transcends borders, so global health issues require international cooperation. Health diplomacy negotiates solutions for communicable diseases, environmental health threats, health system capacity problems, and the social determinants of health.
 
-This overview highlights some of the major ongoing issues in international politics that require diplomacy, negotiation, and collective action between nations to address. The remainder of this piece will explore these issues in greater depth.
+This overview highlights some of the major ongoing issues in international politics that require **diplomacy**, negotiation, and collective action between nations to address. The remainder of this piece will explore these issues in greater depth.
 
 ## Security
 
@@ -111,7 +112,7 @@ Modern diplomacy for human rights may be thought of in two ways:
 
 ### Definition of Health Diplomacy
 
-Health diplomacy refers to the processes through which government, multilateral, and civil society actors negotiate responses to health challenges, or utilize health concepts or mechanisms in policy development to achieve other political, economic, social, or environmental goals. 
+**Health diplomacy** refers to the processes through which government, multilateral, and civil society actors negotiate responses to health challenges, or utilize health concepts or mechanisms in policy development to achieve other political, economic, social, or environmental goals. 
 
 The effect of globalization has made health experts and policymakers increasingly aware that health affects and is affected by both domestic politics and international relations. Health diplomacy sees health as having the potential to be a progressive ‘spillover’ force for cooperation in the international system. Global health challenges like pandemics and antimicrobial resistance can affect national security, economic welfare, development, and human dignity—issues at the core of foreign policy and diplomacy.
 

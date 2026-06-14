@@ -2,15 +2,16 @@
 title: Constructivism And Other Approach In Security Studies
 slug: constructivism-others
 abstract: This chapter will explain the constructivist approach to security studies and also other's approaches.
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 # Contructivism
 
-Constructivism is an influential theoretical approach in international relations that emerged in the 1980s and 1990s. Drawing on sociological insights, constructivism emphasizes the social construction of the world through ongoing processes of interaction between agents and structures. It asserts that international politics is shaped not just by material factors, but also socially constructed norms, identities, and ideas. 
+Constructivism is an influential theoretical approach in **international relations** that emerged in the 1980s and 1990s. Drawing on sociological insights, constructivism emphasizes the social construction of the world through ongoing processes of interaction between agents and structures. It asserts that international politics is shaped not just by material factors, but also socially constructed norms, identities, and ideas. 
 
 At the core of constructivism is the premise that agents (e.g. states, leaders, communities) and structures (e.g. international systems and institutions) constitute one another through their interactions. Agents make decisions and take actions based on intersubjective meanings, collective knowledge, and social norms, not just material calculations. Meanwhile, structures like international law and organizations are created by states and shape state interests and behavior.
 
-Constructivism stands in contrast to rationalist international relations theories like neorealism that focus primarily on the distribution of material capabilities. Instead, constructivism highlights the central role of ideational factors, shared knowledge, and social relationships in world politics. It provides a sociological lens to examine how interests and identities are produced, how norms emerge and evolve, and how security and power are socially constructed over time.
+Constructivism stands in contrast to rationalist international relations theories like neorealism that focus primarily on the distribution of material capabilities. Instead, constructivism highlights the central role of ideational factors, shared knowledge, and social relationships in world politics. It provides a sociological lens to examine how interests and identities are produced, how norms emerge and evolve, and how **security** and power are socially constructed over time.
 
 ## Core Tenets
 
@@ -28,7 +29,7 @@ Moreover, security involves continuous processes of contestation and negotiation
 
 # The Copenhagen School
 
-Emerging from the defunct Copenhagen Peace Research Institute, the Copenhagen School broadens the concept of security beyond just military concerns to include issues like environmental degradation, poverty, and human rights abuses. This school of thought focuses on how security threats are socially constructed and given meaning through intersubjective processes between political leaders, experts, and the public. 
+Emerging from the defunct Copenhagen Peace Research Institute, the **Copenhagen School** broadens the concept of security beyond just military concerns to include issues like environmental degradation, poverty, and human rights abuses. This school of thought focuses on how security threats are socially constructed and given meaning through intersubjective processes between political leaders, experts, and the public. 
 
 A core contribution of the Copenhagen School is the framework of "securitization" proposed by Barry Buzan, Ole Wæver, and others. Securitization refers to the process by which an issue is turned into a security threat that requires emergency action. This occurs when a securitizing actor (e.g. a political leader) declares an existential threat, convincing a target audience to accept exceptional measures beyond normal politics. Issues can also be "desecuritized" when they are no longer treated as security matters. 
 
@@ -52,7 +53,7 @@ As a Dutch academic, Jaap de Wilde contributed significantly to the Copenhagen S
 
 # Critical Theory Challenges Traditional Notions of Security
 
-Critical theory provides a philosophical and ideological critique of traditional international relations theory and conceptions of security. Rather than accepting the premise of security studies at face value, critical theorists question the underlying assumptions and perspectives that shape mainstream security discourse. 
+**Critical theory** provides a philosophical and ideological critique of traditional international relations theory and conceptions of security. Rather than accepting the premise of security studies at face value, critical theorists question the underlying assumptions and perspectives that shape mainstream security discourse. 
 
 Most notably, critical theory views security as a 'derivative concept' - meaning one's understanding and definition of security is not objective, but rather derives from broader political, philosophical and ideological outlooks. Critical theory rejects the notion that the study of security can be value-neutral or objective.
 
@@ -64,7 +65,7 @@ In terms of methodology, critical theory distinguishes itself from traditional '
 
 ## The Welsh School of Critical Security Studies
 
-Wales, United Kingdom has become a hub for the development and expansion of critical security studies. The Welsh School of Critical Security Studies focuses on deepening the understanding of security by examining the concept through alternative viewpoints. 
+Wales, United Kingdom has become a hub for the development and expansion of critical security studies. The **Welsh School** of Critical Security Studies focuses on deepening the understanding of security by examining the concept through alternative viewpoints. 
 
 Scholars associated with the Welsh School aim to broaden the definition of security beyond just the military domain. They argue that security should encompass economic, societal, environmental, and human rights issues as well. The Welsh School also emphasizes the subjectivity of security, asserting that one's conception of security derives significantly from their political and philosophical perspective.
 

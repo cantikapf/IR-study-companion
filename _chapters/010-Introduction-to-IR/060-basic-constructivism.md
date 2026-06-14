@@ -2,6 +2,7 @@
 title: Basic Explanation of Constructivism in IR
 slug: basic-constructivism
 abstract: The introduction of Constructivism in International Relations 
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 ## Introduction to Constructivism
@@ -12,7 +13,7 @@ abstract: The introduction of Constructivism in International Relations
 
 <br>
 
-Constructivism is a theoretical perspective in international relations that emphasizes the central role of human consciousness, ideas, norms, knowledge, language, symbols, and rules in shaping international politics. It contends that structures in world politics are not predetermined by nature, but are socially constructed through collective meaning and understanding. Various theories that predated constructivism made similar claims, including Marxism, the English School, and feminist approaches. But constructivists spoke more directly to the issues that mattered to neorealists and neoliberal institutionalist about how identity, norms, and culture shape patterns of war and peace.
+**Constructivism** is a theoretical perspective in international relations that emphasizes the central role of human consciousness, ideas, **norms**, knowledge, language, symbols, and rules in shaping international politics. It contends that **structures** in world politics are not predetermined by nature, but are socially constructed through collective meaning and understanding. Various theories that predated constructivism made similar claims, including Marxism, the English School, and feminist approaches. But constructivists spoke more directly to the issues that mattered to neorealists and neoliberal institutionalist about how identity, norms, and culture shape patterns of war and peace.
 
 Some key tenets and assumptions of constructivism include:
 
@@ -23,13 +24,13 @@ Some key tenets and assumptions of constructivism include:
 - The emphasis is on shared understandings and intersubjective meanings - how states comprehend each other's intentions and motives matters more than strictly material factors.
 - Change is possible - international structures are not immutable and can be reconstructed through new discourse and the emergence and contestation of new norms and collective meanings.
 
-So in essence, constructivism views world politics as a socially constructed and interpreted process, contrasting with rationalist approaches that emphasize material factors and self-interest. Ideas and social reality have real power in shaping global relations.
+So in essence, constructivism views world politics as a socially constructed and interpreted process, contrasting with rationalist approaches that emphasize material factors and self-interest. Ideas and **social** reality have real power in shaping global relations.
 
 ## Human Consciousness and Social Realities 
 
 Constructivism places human consciousness at the center in understanding world politics. This perspective emphasizes how the ideas, knowledge, symbols, language, and other notions that make up our mental maps are socially constructed through collective meaning making. Although aspects of the world may seem objective, constructivists contend that they actually represent "social facts" - shared concepts, categories, and rules that are created and reified through social interaction. 
 
-While the world has an irreducible social nature, constructivism argues that it is through human consciousness that meaning is assigned to objects and activities. Rather than taking social realities as eternal givens, constructivists examine how certain beliefs come to be widely accepted, and how the intersubjective Web of shared meanings shapes international relations. Actors do not behave based on objective laws that exist separate from consciousness. Instead, the interpretation of the world is mediated through collectively constructed symbols, rules, and notions that make up what actors perceive as knowledge. This socially derived "knowledge" informs action, even though it encapsulates shared meanings rather than eternal truths.
+While the world has an irreducible social nature, constructivism argues that it is through human consciousness that meaning is assigned to objects and activities. Rather than taking social realities as eternal givens, constructivists examine how certain beliefs come to be widely accepted, and how the intersubjective Web of shared meanings shapes international relations. **Actors** do not behave based on objective laws that exist separate from consciousness. Instead, the interpretation of the world is mediated through collectively constructed symbols, rules, and notions that make up what actors perceive as knowledge. This socially derived "knowledge" informs action, even though it encapsulates shared meanings rather than eternal truths.
 
 ## Agency and Structure
 

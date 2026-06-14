@@ -23,6 +23,7 @@ copyright:
 
 # Customize the link favicon in header. Will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path: static/icon.png
+og_image: static/social.jpg
 
 #
 # Navigation menus
@@ -120,7 +121,6 @@ regenerate: true
 
 plugins:
   #  - jekyll-feed
-  - jekyll-readme-index
   - jekyll-seo-tag
   - jekyll-sitemap
 
@@ -152,3 +152,6 @@ kramdown:
     guess_lang: true
 syntax_highlighter_style: colorful
 markdown_ext: markdown,mkdown,mkdn,mkd,md
+
+sass:
+  style: compressed

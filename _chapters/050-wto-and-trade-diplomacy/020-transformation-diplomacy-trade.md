@@ -2,11 +2,12 @@
 title: Three Transformation of Diplomacy and International Trade
 slug: transformation-diplomacy-trade
 abstract: International trade and diplomacy are intertwined, with diplomacy playing a crucial role in facilitating and governing trade relationships. This chapter explores the transformation of diplomacy and its impact on international trade, highlighting the emergence of non-state actors and the challenges and opportunities they bring to trade diplomacy.
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction
 
-International trade refers to the exchange of goods, services, and capital across national borders and territories. Historically, international trade emerged and evolved gradually, expanding in scope and scale over the centuries. In the early 19 th century, international trade accounted for around 2% of total global economic output. However, by the year 2000, the share of international trade had risen dramatically to approximately 35% of the world's gross domestic product. 
+**International** **trade** refers to the exchange of goods, services, and capital across national borders and territories. Historically, international trade emerged and evolved gradually, expanding in scope and scale over the centuries. In the early 19 th century, international trade accounted for around 2% of total global economic output. However, by the year 2000, the share of international trade had risen dramatically to approximately 35% of the world's gross domestic product. 
 
 This steady growth underscores the rising indispensability of international trade as a core component of the global economy. Trade enables people worldwide to find employment, earn income, produce goods and services, and invest and consume the fruits of economic activity. Without the flows of international trade, global economic prosperity on the scale witnessed today would not be feasible. The steep increase in the ratio of trade to overall economic output symbolizes the growing necessity for diverse populations across the world to connect, overcome differences, and engage in commercial exchange and business relationships with each other.
 
@@ -16,7 +17,7 @@ International trade today has become an indispensable component of the global ec
 
 ## Diplomacy: Fundamental and Essential Human Activity
 
-Diplomacy is a fundamental and essential human activity that enables international trade. Without diplomacy between nations, trade could not take place in the orderly and mutually-beneficial fashion that has allowed the modern global economy to develop and thrive.  
+**Diplomacy** is a fundamental and essential human activity that enables international trade. Without diplomacy between nations, trade could not take place in the orderly and mutually-beneficial fashion that has allowed the modern global economy to develop and thrive.  
 
 Diplomacy provides the communication channels, negotiation frameworks, and representation of national interests that allow countries to come together and establish the treaties and agreements that govern international trade. It facilitates the relationships and understandings between nations that make cross-border business transactions viable and profitable. In essence, diplomacy lays the groundwork that enables international commerce and financial flows to occur.
 
@@ -36,7 +37,7 @@ Overall, trade brings broad economic gains through efficiency and specialization
 
 A new diplomatic studies paradigm illuminates these processes by focusing not only upon the negotiation and politics of trade agreements but also upon the ongoing diplomatic representation and communication required to manage trading relationships. 
 
-This new paradigm recognizes that trade diplomacy involves more than just negotiating trade agreements. It requires ongoing diplomatic engagement between countries to foster strong trading relationships over time. 
+This new paradigm recognizes that **trade diplomacy** involves more than just negotiating trade agreements. It requires ongoing diplomatic engagement between countries to foster strong trading relationships over time. 
 
 After trade deals are struck, diplomats play a key role in representing their countries' interests, communicating concerns, and troubleshooting problems in the trading relationship. They help smooth out any issues that arise and keep the flow of trade and benefits strong between the partners.
 

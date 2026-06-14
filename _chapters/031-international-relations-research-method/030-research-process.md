@@ -2,11 +2,12 @@
 title: Research Process
 slug: research-process
 abstract: the phase of making research in International Relations study
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## Summary
 
-PHASE 1: DECIDING WHAT TO RESEARCH
+PHASE 1: DECIDING WHAT TO **RESEARCH**
 
 - Step 1: formulating a research problem
 
@@ -27,7 +28,7 @@ PHASE 3: CONDUCTING A RESEARCH STUDY
 
 The first phase of the research process involves deciding what topic or issue you want to study. This phase lays the groundwork for the rest of your research.
 
-The key step in Phase 1 is formulating a research problem. The research problem identifies what you intend to study and is the foundation of your research project. It helps guide all subsequent stages of the research process.
+The key step in Phase 1 is formulating a **research problem**. The research problem identifies what you intend to study and is the foundation of your research project. It helps guide all subsequent stages of the research process.
 
 ### 1. Formulating a research problem
 
@@ -47,7 +48,7 @@ Planning a research study is a critical phase that lays the groundwork for condu
 
 ### 2. Conceptualizing a research design
 
-The research design provides a framework for collecting and analyzing data to answer the research questions. It specifies the overall approach and methods that will be used, such as qualitative, quantitative, mixed methods, experimental, quasi-experimental, correlational, etc. The design outlines the procedures for selecting participants, collecting data, and analyzing results. A well-conceived design ensures the study will effectively address the research problem.
+The **research design** provides a framework for collecting and analyzing **data** to answer the **research questions**. It specifies the overall approach and methods that will be used, such as qualitative, quantitative, mixed methods, experimental, quasi-experimental, correlational, etc. The design outlines the procedures for selecting participants, collecting data, and analyzing results. A well-conceived design ensures the study will effectively address the research problem.
 
 There are several components to conceptualizing an effective research design:
 

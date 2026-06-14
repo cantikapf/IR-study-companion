@@ -2,13 +2,14 @@
 title: Game Theory
 slug: game-theory-ir
 abstract: This chapter will make you imagine the world as a game.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## What is Game Theory?
 
-Game theory is a social science approach used to **analyze the interactions between individuals or groups in strategic situations, particularly in the context of cooperation and conflict**. It is a rational and structural approach that seeks to understand the choices and strategies of actors in a given situation. 
+**Game** theory** is a social science approach used to **analyze the interactions between individuals or groups in strategic situations, particularly in the context of cooperation and conflict**. It is a rational and structural approach that seeks to understand the choices and strategies of actors in a given situation. 
 
-Game theory models are often used to analyze the dynamics of cooperation and conflict between states, where each state has two choices: cooperate or defect from the other. **The approach is based on the assumption that actors are rational and self-interested, and seeks to identify the optimal strategies for achieving their goals**. The intersection of realism and game theory has been used to analyze the challenges and possibilities of cooperation in international politics, particularly in the context of anarchical systems and the security dilemma.
+Game theory models are often used to analyze the dynamics of cooperation and conflict between states, where each state has two choices: cooperate or defect from the other. **The approach is based on the assumption that actors are rational and self-interested, and seeks to identify the optimal strategies for achieving their goals**. The intersection of realism and game theory has been used to analyze the challenges and possibilities of cooperation in international politics, particularly in the context of anarchical systems and the security **dilemma**.
 
 ## Concept From Game Theory
 
@@ -29,12 +30,12 @@ For example, imagine in this dilemma, two suspects are arrested and held in sepa
 3. **If neither testifies**, they both get a moderate sentence; Assume, each will get 1 month in prison.
 4. Assume that the two suspects don't know each other, and they just want to minimize their time in prison. should they confess?
 
-<center> <img src="static\modules\prisoner_dilemma_example_1.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/prisoner_dilemma_example_1.png" alt="" width="70%" /> </center>
 
 
 The dilemma arises because, while the best outcome for the individuals as a whole is for both to remain silent, **each prisoner has an incentive to testify, as it offers a better individual outcome regardless of the other's choice**. 
 
-The outcomes of the Prisoners' Dilemma game are as follows:
+The outcomes of the Prisoners' **Dilemma game** are as follows:
 
 1. Both players choose to defect (DD): **Mutually preferable**. The concept of a "reasonable outcome" in the context of the Prisoner's Dilemma game refers to a result that is mutually preferable for all parties involved. The moderate sentence outcome is considered the most reasonable, as it is the only outcome in which both players receive a better outcome
 2. One player chooses to defect and the other chooses to cooperate: The defector benefits from the cooperation of the other, receiving a reduced sentence, while the cooperative player receives the full prison sentence.
@@ -62,7 +63,7 @@ Example: Why states' attack each other and make World War I?
 	- All states' arming themselves (lead to war)
 	- A state disarming and the other's arming themselves
 
-<center> <img src="static\modules\prisoner_dilemma_example_2.png" alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/prisoner_dilemma_example_2.png" alt="" width="70%" /> </center>
 
 Because all countries don't want to get attacked first, it is possible all actors will arming themselves because they want to take the advantages (if it leads to war)
 

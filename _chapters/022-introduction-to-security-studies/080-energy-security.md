@@ -2,15 +2,16 @@
 title: Energy Security
 slug: energy-security
 abstract: This chapter will explain about Energy Security
+simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
 ---
 
 ## Introduction
 
-Energy security involves having access to reliable, affordable, and sustainable energy resources. It ensures that economies and societies have the energy they need to function properly. Energy security has become a growing concern in recent years. There are rising anxieties about meeting future energy needs driven by population growth, urbanization, industrialization, increased incomes, and proliferation of energy-consuming devices. Recent developments, especially regarding global petroleum output, contribute to these worries. Fears are intensifying over the slowing pace of new petroleum discoveries, the shift of production from safe regions to more dangerous areas, and attacks targeting facilities. This highlights the complexities and vulnerabilities inherent in the global energy supply system. Energy security is crucial for economic development, quality of life, and national security. However, ensuring uninterrupted, affordable energy flows is becoming increasingly difficult. Tackling this complex challenge requires coordinated action across economic, technological, geopolitical, and environmental spheres. With wise policies and prudent choices, it is possible to achieve a more secure energy future. But this depends on recognizing the fragilities within the system and taking steps to strengthen energy security.
+**Energy** security involves having access to reliable, affordable, and sustainable energy resources. It ensures that economies and societies have the energy they need to function properly. **Energy security** has become a growing concern in recent years. There are rising anxieties about meeting future energy needs driven by population growth, urbanization, industrialization, increased incomes, and proliferation of energy-consuming devices. Recent developments, especially regarding global petroleum output, contribute to these worries. Fears are intensifying over the slowing pace of new petroleum discoveries, the shift of production from safe regions to more dangerous areas, and attacks targeting facilities. This highlights the complexities and vulnerabilities inherent in the global **energy supply** system. Energy security is crucial for economic development, quality of life, and national security. However, ensuring uninterrupted, affordable energy flows is becoming increasingly difficult. Tackling this complex challenge requires coordinated action across economic, technological, geopolitical, and environmental spheres. With wise policies and prudent choices, it is possible to achieve a more secure energy future. But this depends on recognizing the fragilities within the system and taking steps to strengthen energy security.
 
 ## Complex and Vulnerable Energy Supply System
 
-The global energy supply system is highly complex, with numerous suppliers contributing to networks of pipelines, transmission lines, and maritime trade routes that span countries and continents. This intricate web of energy connections makes many nations dependent on foreign sources for their energy needs. 
+The **global energy** supply system is highly complex, with numerous suppliers contributing to networks of pipelines, transmission lines, and maritime trade routes that span countries and continents. This intricate web of energy connections makes many nations dependent on foreign sources for their energy needs. 
 
 The foreign policy dimension of energy security involves diplomatic efforts by countries to establish and maintain friendly ties with key energy providers globally. This ensures continued access to vital energy resources. The military dimension comes into play as well, with nations seeking to protect overseas energy supply routes and defend major foreign energy providers against potential threats. Military force may be used to secure energy resources directly or indirectly.
 
@@ -18,7 +19,7 @@ However, states that are heavily dependent on just a few suppliers can find them
 
 ## Anxiety Over Meeting Future Energy Needs
 
-Recent developments, particularly in the global availability of petroleum, have caused concern about meeting national energy requirements in the future. There are growing fears of a slowdown in world petroleum output with production centers shifting from the North to the South. Insurgents and extremists have also targeted oil facilities in high-risk attacks, heightening worries. 
+Recent developments, particularly in the global availability of petroleum, have caused concern about meeting national energy requirements in the future. There are growing fears of a slowdown in world petroleum output with production centers shifting from the North to the South. Insurgents and extremists have also targeted **oil** facilities in high-risk attacks, heightening worries. 
 
 Specific concerns include that many existing oilfields are approaching decline as they become depleted. New oilfield discovery rates have declined, and it remains challenging to tap into more difficult areas, which hinders full development potential. This trend suggests the world may face petroleum shortages in the future.
 

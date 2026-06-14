@@ -2,12 +2,13 @@
 slug: political-institution
 title: Indonesia Political Institutions, Political Party, And Interest Group
 abstract: This chapter will explore the political institutions, political parties, and interest groups in Indonesia.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 
 ## Introduction
 
-Indonesia's complex political history has witnessed several pivotal periods that have shaped the nation's trajectory. From colonial rule to post-independence experiments with democracy, Indonesia's political landscape has evolved through various ideological influences, power struggles, and governance models. 
+**Indonesia**'s complex **political** history has witnessed several pivotal periods that have shaped the nation's trajectory. From colonial rule to post-independence experiments with democracy, Indonesia's political landscape has evolved through various ideological influences, power struggles, and governance models. 
 
 Tracing this rich historical tapestry offers insights into Indonesia's contemporary political dynamics. The interplay between colonial legacies, nationalism, political ideologies, institutional development, and cultural influences has molded Indonesia's political culture and structures.
 
@@ -21,9 +22,9 @@ The colonial era in Indonesia was marked by several key developments that impact
 
 At the top were the European settlers and colonial administrators. Below them was a small upper class of Indonesians who had roles in the civil service or private enterprises. The vast majority of Indonesians were in the lower social strata, providing manual labor in plantations, public works projects, and the informal economy. This stratification served to entrench colonial rule by elevating indigenous elites who supported Dutch interests.
 
-Another defining aspect of the colonial era was the **Snouck Hurgronje system**, named after Dutch advisor Christiaan Snouck Hurgronje. Also known as the Ethical Policy, it involved the colonial administration recruiting indigenous civil servants exclusively from aristocratic families. This aimed to co-opt the indigenous elite by offering them privileged positions and benefits. Over time, this resulted in native bureaucratic and military corps developing parallel to the European apparatus. The Snouck system had long-term impacts by shaping an influential class of educated Indonesians who would play key roles in the independence movement. However, it also reinforced social divisions between elites and the general population.
+Another defining aspect of the colonial era was the **Snouck Hurgronje **system**, named after Dutch advisor Christiaan Snouck Hurgronje. Also known as the Ethical Policy, it involved the colonial administration recruiting indigenous civil servants exclusively from aristocratic families. This aimed to co-opt the indigenous elite by offering them privileged positions and benefits. Over time, this resulted in native bureaucratic and military corps developing parallel to the European apparatus. The Snouck system had long-term impacts by shaping an influential class of educated Indonesians who would play key roles in the independence movement. However, it also reinforced social divisions between elites and the general population.
 
-<center> <img src="static\modules\snouch system.png" alt="Snouck Hurgronje system" width="90%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/snouch system.png" alt="Snouck Hurgronje system" width="90%" /> </center>
 
 <br>
 
@@ -37,7 +38,7 @@ Cabinets during this time period were short-lived, with frequent collapses and r
 
 The Guided Democracy era under President Sukarno saw notable deviations from constitutional norms, marked by strong presidential dominance and limited roles for political parties. 
 
-During this period from 1959 to 1965, Sukarno exercised near-absolute control over the political system. The 1945 constitution was replaced with a new provisional constitution in 1959 that centralized executive power in the presidency and weakened parliamentary oversight. 
+During this period from 1959 to 1965, Sukarno exercised near-absolute control over the political system. The 1945 constitution was replaced with a new provisional constitution in 1959 that centralized **executive** power in the presidency and weakened parliamentary oversight. 
 
 Sukarno also dissolved the elected parliament and replaced it with an appointed parliament. This allowed him to bypass parliamentary opposition and rule by decree. Political parties were forced to join together under one party, the Indonesian Nationalist Party (PNI), which further consolidated Sukarno's control.
 
@@ -109,7 +110,7 @@ Decentralizing power from Jakarta to local administrations aimed to improve gove
 
 Indonesia's political culture, shaped by the process of political socialization, exhibits diverse orientations. During the New Order era under President Suharto, hierarchical power structures and **patronage systems** characterized political culture. 
 
-<center> <img src="static\modules\patronage.png" alt="Patronage" width="50%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/patronage.png" alt="Patronage" width="50%" /> </center>
 
 <br>
 <br>
@@ -213,7 +214,7 @@ Courts aim to resolve disputes through application of relevant principles. Key j
 
 Two predominant legal systems are the **adversarial system**, where opposing parties present their cases and judges act as referees, and the **inquisitorial system** where judges take an investigative role.
 
-<center> <img src="static\modules\the principle of justice.png" alt="system of justice" width="50%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/the principle of justice.png" alt="system of justice" width="50%" /> </center>
 <br>
 <br>
 

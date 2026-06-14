@@ -2,10 +2,11 @@
 title: Politics Of Multiculturalism
 slug: multiculturalism
 abstract: Exploring the politics of multiculturalism and the clash of civilizations by Samuel Huntington.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 
-Samuel P. Huntington (1927 – 2008) was an influential American political scientist best known for his "clash of civilizations" theory outlined in his 1993 Foreign Affairs article and 1996 book of the same name. Huntington argued that in the post-Cold War world, violent conflicts would increasingly emerge along cultural and religious lines rather than ideological or economic divisions. 
+Samuel P. **Huntington** (1927 – 2008) was an influential American political scientist best known for his "clash of **civilizations**" theory outlined in his 1993 Foreign Affairs article and 1996 book of the same name. Huntington argued that in the post-Cold War world, violent conflicts would increasingly emerge along **cultural** and religious lines rather than ideological or economic divisions. 
 
 Specifically, Huntington asserted that nation states were fragmenting and people were regrouping around primordial identities based on culture, religion, language, and tradition. He identified 7-8 major civilizations in the modern world: Western, Latin American, African, Islamic, Sinic (Chinese), Hindu, Orthodox (Russian), and possibly Buddhist. According to Huntington, **clashes would occur along the cultural fault lines between these civilizations as each fights to protect or expand its core values and interests.**
 
@@ -25,7 +26,7 @@ The book proved controversial, with many critiquing Huntington's categories and 
 
 ## Issues Arising from Diversity
 
-Diversity can lead to many social problems and tensions between different groups within a society. Increased immigration and the mingling of different cultures creates frictions and hostilities in several relationships:
+Diversity can lead to many social problems and tensions between different **groups** within a society. Increased immigration and the mingling of different cultures creates frictions and hostilities in several relationships:
 
 - Between the indigenous population and immigrants or minorities. The native population can feel their cultural values are under threat from foreign influences. They may resent competition for jobs, housing and social services. Racism and xenophobia can emerge.
 - Between minorities and the indigenous population. Minority groups may feel marginalized, discriminated against, or excluded from full participation in society. This can breed resentment and alienation.  
@@ -33,7 +34,7 @@ Diversity can lead to many social problems and tensions between different groups
 
 Cultural relativism also becomes an issue. How should we treat cultures that differ radically from our own? What if their practices violate principles we consider fundamental? Multicultural societies grapple with reconciling diversity with shared values and social cohesion.
 
-Managing diversity constructively is a major challenge for multicultural societies. If social tensions and problems are not addressed effectively, it can lead to greater conflict, social instability, and a weakening of democracy and social solidarity. The "failure" of multiculturalism that Huntington refers to relates to these unresolved tensions.
+Managing diversity constructively is a major challenge for multicultural societies. If social tensions and problems are not addressed effectively, it can lead to greater conflict, social instability, and a weakening of democracy and social solidarity. The "failure" of **multiculturalism** that Huntington refers to relates to these unresolved tensions.
 
 ## Defining Multiculturalism 
 

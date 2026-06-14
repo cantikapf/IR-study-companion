@@ -2,16 +2,17 @@
 slug: religion-society
 title: Religion, Society And Politics
 abstract: This chapter will explore the relationship between religion, society, and politics in Indonesia.
+simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
 ---
 
 
 ## Introduction
 
-Since 2005, Indonesia has witnessed numerous direct elections of local government heads in provinces, districts, and municipalities. A notable trend in these elections is the formation of ethnic coalitions, with political party activists asserting that voters tend to favor candidates from the same ethnic background, particularly when their group constitutes a significant majority in the region. This phenomenon has resulted in a notable convergence between ethnic population patterns and ethnic identity, as highlighted by scholars like Edward Aspinall, Sebastian Dettman, and Eve Warburton.
+Since 2005, Indonesia has witnessed numerous direct elections of local government heads in provinces, districts, and municipalities. A notable trend in these elections is the formation of **ethnic** coalitions, with political party activists asserting that voters tend to favor candidates from the same ethnic background, particularly when their group constitutes a significant majority in the region. This phenomenon has resulted in a notable convergence between ethnic population patterns and ethnic **identity**, as highlighted by scholars like Edward Aspinall, Sebastian Dettman, and Eve Warburton.
 
 ## Religion and Politics
 
-The intertwining of religion and politics has been a subject of scrutiny in Indonesia. President Joko Widodo proposed a separation of religion and politics during the Jakarta gubernatorial run-off election. Religious leaders, such as Mustofa Bisri and Quraish Shihab, attribute the rise of a hardline understanding of Islam to the presence of leaders claiming a monopoly on truth. 
+The intertwining of religion and politics has been a subject of scrutiny in Indonesia. President Joko Widodo proposed a separation of religion and politics during the Jakarta gubernatorial run-off election. **Religious** leaders, such as Mustofa Bisri and Quraish Shihab, attribute the rise of a hardline understanding of Islam to the presence of leaders claiming a monopoly on truth. 
 
 Emphasizing the need for constant re-examination and re-learning of religious texts, religious leaders argue for a nuanced interpretation relevant to the contemporary context. Mustofa Bisri contends that no one can claim a monopoly on interpreting religious texts. He highlights the importance of exercising wisdom and embedding values like justice, compassion and humanity when examining scripture. 
 
@@ -21,7 +22,7 @@ Leaders like Bisri and Shihab provide a counterpoint to hardline voices, advocat
 
 ## Medan Case Study:
 
-Medan provides an interesting case study into the interplay between identity politics and communal tensions in local elections. In the city's recent run-off mayoral election, communal solidarity and religious affiliations emerged as more pronounced factors than ethnic considerations. 
+**Medan** provides an interesting case study into the interplay between **identity politics** and communal tensions in local elections. In the city's recent run-off mayoral election, communal solidarity and religious affiliations emerged as more pronounced factors than ethnic considerations. 
 
 This was highlighted in the campaigns of Sofyan Tan, a minority Buddhist, and Rahudman Harahap, a Muslim candidate. Despite their different ethnic and religious backgrounds, Tan received significant support from Muslim voters while Harahap drew support across ethnic lines. This phenomenon of **"identity switching" reflects the complexities of identity politics in Medan's diverse society.**
 

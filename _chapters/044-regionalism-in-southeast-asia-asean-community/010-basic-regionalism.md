@@ -2,13 +2,14 @@
 title: The Basics Of Regionalism
 slug: basic-regionalism
 abstract: This page provides an introduction to the basics of regionalism, exploring the concept of regions as socially constructed entities and the pursuit of common goals through regional cooperation and integration.
+simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
 ---
 
 ## Introduction
 
-A region, in broad terms, refers to a geographical area consisting of a group of countries that are seen to form a cohesive unit. Regionalism then refers to the process through which countries within a geographical region come together and cooperate to achieve common political, economic, social, and cultural objectives. 
+A **region**, in broad terms, refers to a geographical area consisting of a group of **countries** that are seen to form a cohesive unit. Regionalism then refers to the process through which countries within a geographical region come together and cooperate to achieve common political, **economic**, social, and cultural objectives. 
 
-Regionalism involves the collective efforts and willingness of countries within a region to work together, relinquish some sovereignty, and even integrate by giving authority to a supra-national body for the purpose of addressing shared challenges and fostering a sense of regional identity. The key aspects underlying regionalism are the shared imagination and vision among member states to collaborate towards mutual goals and aspirations.
+Regionalism involves the collective efforts and willingness of countries within a region to work together, relinquish some sovereignty, and even integrate by giving authority to a supra-national body for the purpose of addressing shared challenges and fostering a sense of **regional** identity. The key aspects underlying regionalism are the shared imagination and vision among member states to collaborate towards mutual goals and aspirations.
 
 ## Regions as Socially Constructed Entities
 
@@ -26,7 +27,7 @@ Ultimately, regionalism allows countries within a geographical region to jointly
 
 ## Stages of Regional Integration
 
-Regional integration typically progresses through stages, starting with a basic free trade area and moving towards more extensive economic and even political integration. The main stages of economic integration are:
+Regional integration typically progresses through stages, starting with a basic free trade area and moving towards more extensive economic and even political integration. The main stages of **economic integration** are:
 
 - **Free Trade Area (FTA)** - This is the most basic form of economic integration. Member countries remove barriers to trade between themselves but maintain independent external tariffs against non-members. This enables free movement of goods and services within the area. Examples include ASEAN and NAFTA.
 - **Customs Union** - Member countries establish common external tariffs and commercial policies towards non-members. This enables free trade between members and a unified trade policy with non-members. The EU started as a customs union. 

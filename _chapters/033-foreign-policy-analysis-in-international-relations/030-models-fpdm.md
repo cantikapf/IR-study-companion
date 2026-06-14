@@ -2,11 +2,12 @@
 title: Understanding Models Of Decision Making In Foreign Policy Analysis
 slug: models-fpdm
 abstract: Models in analysis of foreign policy decision making
+simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
 ---
 
 ## Why we should study Foreign Policy Analysis?
 
-FPA examines the decision-making process involved in making foreign policy, including the key actors, institutions, beliefs, perceptions, and domestic and international pressures that influence policy choices. It seeks to shed light on how and why foreign policy decisions are made.
+FPA examines the decision-making process involved in making **foreign** **policy**, including the key actors, institutions, beliefs, perceptions, and domestic and international pressures that influence policy choices. It seeks to shed light on how and why foreign **policy **decisions** are made.
 
 At its core, FPA seeks to understand and explain the causes and consequences of foreign policy decisions. It is an interdisciplinary field, drawing on theories and insights from psychology, sociology, economics, history, and other fields to enrich explanations for foreign policy behavior.
 
@@ -82,7 +83,7 @@ In every game in game theory there are 3 components, namely **Actor, Strategy an
 
 Some key game theory models used in foreign policy analysis are Prisoner's Dilemma and Chicken Game. These models have implications for strategies like precommitment and brinkmanship in foreign policy. Tit-for-Tat is a game theory strategy that promotes cooperation based on reciprocity. Overall, GTM views foreign policy decisions as strategic choices shaped by both domestic and international factors. It provides a systematic way to analyze interactive decision making.
 
-<center> <img src="static\modules\game theory and RAM.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/game theory and RAM.png " alt="" width="70%" /> </center>
 
 #### Prisoner's Dilemma
 
@@ -110,7 +111,7 @@ Payoffs (possible outcomes):
 - 2 : this result is slightly better because the suspect accepted the police's offer of a deal and was offered leniency
 - 5: a suspect who accepts an offer of agreement by the police gets the best results if the other suspect refuses to cooperate and rejects the police's offer and cooperates with the other suspect
 
-<center> <img src="static\modules\PD example FPA.png " alt="" width="70%" /> </center>
+<center> <img src="{{site.baseurl}}/static/modules/PD example FPA.png " alt="" width="70%" /> </center>
 
 #### Chicken Game
 

@@ -2,10 +2,11 @@
 title: Constructivism
 slug: constructivism-ir
 abstract: This chapter will introduce you to the constructivism theory.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
 
-Constructivism in International Relations emerged from a critique of the more traditional IR theories during the Cold War period. Constructivists rejected the static material assumptions that dominated traditional IR theories and instead emphasized the social dimensions of IR and the possibility for change. **They argued that international relations are socially constructed rather than existing independently**. This means that phenomena such as states, alliances, or international institutions do not inherently exist on their own but rather come into being through human meaning and action. The central themes of change, social interactions, and ongoing processes pointed to the value of a constructivist perspective within a field that had previously focused on generalization across time, material factors, and rational choice assumptions. 
+Constructivism in **International** Relations** emerged from a critique of the more traditional IR theories during the **Cold War** period. Constructivists rejected the static material assumptions that dominated traditional IR theories and instead emphasized the **social** dimensions of IR and the possibility for change. **They argued that international relations are socially constructed rather than existing independently**. This means that phenomena such as states, alliances, or international institutions do not inherently exist on their own but rather come into being through human meaning and action. The central themes of change, social interactions, and ongoing processes pointed to the value of a constructivist perspective within a field that had previously focused on generalization across time, material factors, and rational choice assumptions. 
 
 The term "constructivism" was introduced to IR by Nicholas Onuf in 1989 to refer broadly to postpositivist perspectives which shared a skepticism of the static assumptions in mainstream IR theories. However, over time scholars began distinguishing between "conventional" constructivism and more critical variations like poststructuralism.
 
@@ -72,7 +73,7 @@ The emphasis on mutual constitution of structures and agents moves away from tra
 
 ## Case Study : NATO Enlargement
 
-The constructivist view of NATO enlargement as international socialization is based on the idea that countries learn the values and norms of the community and change how they do things in their own countries and in international relations as a result. Compared to rationalist views like neorealism and neoliberalism, which have trouble explaining why international organizations like NATO keep growing, this view gives a more complete picture of why NATO has grown.
+The constructivist view of **NATO** enlargement as international socialization is based on the idea that countries learn the values and norms of the community and change how they do things in their own countries and in international relations as a result. Compared to rationalist views like neorealism and neoliberalism, which have trouble explaining why international organizations like NATO keep growing, this view gives a more complete picture of why NATO has grown.
 
 The constructivist explanation addresses three main questions:
 

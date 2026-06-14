@@ -2,13 +2,14 @@
 title: International Law For Environmental Protection
 slug: international-law-for-environmental-protection
 abstract: International environmental law encompasses a wide range of legal frameworks and principles aimed at protecting the environment globally and regionally, addressing issues such as climate change, pollution, endangered species, and hazardous waste management.
+simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
 ---
 
 ## Introduction
 
-International environmental law refers to the body of international laws and regulations aimed at protecting the environment globally and regionally. International environmental law addresses a wide range of ecological issues including climate change, air and water pollution, protection of ecosystems and endangered species, and management of harmful substances like toxic chemicals.  
+**International** **environmental** law refers to the body of international laws and regulations aimed at protecting the environment globally and regionally. **International environmental** law addresses a wide range of ecological issues including climate change, air and water pollution, protection of ecosystems and endangered species, and management of harmful substances like toxic chemicals.  
 
-There are three main frameworks under which international environmental law operates:
+There are three main frameworks under which international **environmental law** operates:
 
 - **State Principles** - General principles articulated by states to guide policy aimed at ensuring environmental protection. These provide overall guidance but lack regulatory specifics.
 - **Environmental Treaties** - Legally binding international agreements and conventions between states to address particular ecological problems. These create specific regulatory regimes with precise guidelines, monitoring, and enforcement mechanisms. Examples include the Convention on International Trade in Endangered Species (CITES) and the Kyoto Protocol.

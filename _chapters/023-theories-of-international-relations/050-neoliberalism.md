@@ -2,9 +2,10 @@
 title: Neoliberalism
 slug: neoliberalism-ir
 abstract: The theory of neoliberalism in International Relations.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
-Neoliberalism is a theory in international relations that focuses on the role of international institutions in facilitating cooperation between states. It emerged in the 1970s and 1980s as a response to realism, challenging the view that the anarchic structure of the international system prevents cooperation. 
+**Neoliberalism** is a theory in **international** relations that focuses on the role of **international institutions** in facilitating **cooperation** between **states**. It emerged in the 1970s and 1980s as a response to realism, challenging the view that the anarchic structure of the international system prevents cooperation. 
 
 Neoliberalism makes several key assumptions:
 

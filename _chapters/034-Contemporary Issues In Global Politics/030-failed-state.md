@@ -2,15 +2,16 @@
 title: Failed State And State-building Interventions
 slug: failed-state
 abstract: failed state and state-building interventions.
+simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
 ---
 
-State failure refers to a condition where a state is unable to perform its basic duties and responsibilities. The key characteristics of state failure include the inability of the state to maintain a monopoly on the use of force, provide public services, and sustain a functioning economy and market. 
+**State** failure refers to a condition where a state is unable to perform its basic duties and responsibilities. The key characteristics of **state failure** include the inability of the state to maintain a monopoly on the use of force, provide public services, and sustain a functioning economy and market. 
 
 While state failure was initially viewed mainly as a humanitarian and economic concern, the events of 9/11 brought increased focus on failed states as sources of transnational security threats. Weak and fragile states can provide safe havens for terrorist groups to operate. The 2002 US National Security Strategy argued that America was now "threatened less by conquering states than we are by failing ones." State failure came to be seen not just as an internal or regional issue, but one with consequences for international security. The response has been an emphasis on interventions aimed at stabilizing and strengthening weak states, known as state-building interventions.
 
 ## Characteristics of State Failure 
 
-A state can be considered as having failed when it is no longer able to perform some of its core functions. The characteristics of a failed state often include:
+A state can be considered as having failed when it is no longer able to perform some of its core functions. The characteristics of a **failed state** often include:
 
 - **Loss of monopoly on force** - The state no longer maintains control over its territory and borders. Instead, militias, warlords or insurgent groups may control parts of the state's territory. The state loses its monopoly on the legitimate use of force.
 - **Inability to provide public services** - The state can no longer provide basic public services to its citizens including education, healthcare, social services, and utilities. State institutions become ineffective in delivering services. 
@@ -22,7 +23,7 @@ A failing or failed state is unable to control its territory, sustain a function
 
 ## State Failure and State-Building Interventions
 
-State-building interventions (SBIs) refer to a broad range of programs and projects designed to build or strengthen the capacity of institutions within a state to perform the functions of modern governance. The goals of SBIs include:
+State-building interventions (SBIs) refer to a broad range of programs and projects designed to build or strengthen the capacity of **institutions** within a state to perform the functions of modern governance. The goals of SBIs include:
 
 - Building effective and legitimate state institutions to maintain law and order, collect taxes, deliver public services, and other governance functions.
 - Promoting economic development through market reforms, infrastructure investment, and integration into the global economy.  
@@ -37,7 +38,7 @@ SBIs can also be reactive efforts carried out after state failure, conflict, or 
 
 The liberal view suggests that conflicting groups are merely a symptom of state failure, not the core cause. Proponents argue that the central problem of failed states is the absence of functioning political institutions. They point to interventions in Iraq and Afghanistan as failures due to the lack of long-term planning and preparation. Specifically, there were no ready political elements to govern, and no mechanisms in place to provide basic services to the civilian population. 
 
-The liberal perspective holds that the only way to mitigate state weakness and alleviate conflict is through market-led development, which can only occur if the proper institutions exist. Therefore, the central focus should be on rebuilding state institutions and capacity. The goal is to get the machinery of the state back into functional order. By creating the right institutional conditions and framework, economic development and stability will follow.
+The liberal perspective holds that the only way to mitigate state weakness and alleviate conflict is through market-led development, which can only occur if the proper institutions exist. Therefore, the central focus should be on rebuilding **state institutions** and capacity. The goal is to get the machinery of the state back into functional order. By creating the right institutional conditions and framework, economic development and stability will follow.
 
 ## Criticisms of the Liberal View
 

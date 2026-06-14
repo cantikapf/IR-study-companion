@@ -2,13 +2,14 @@
 title: Theoretical Perspective
 slug: theoritical-perspective
 abstract: The theoritical perspective of national interest and nation states.
+simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
 ---
 
 ## The Problem of "National Interests" 
 
-The concept of "national interests" is commonly used in international relations theory, especially realism, to explain and predict state behavior. However, realist theory in particular does not adequately address the question of where exactly national interests come from and whose interests they represent. 
+The concept of "national **interests**" is commonly used in international relations theory, especially realism, to explain and predict **state** behavior. However, realist theory in particular does not adequately address the question of where exactly **national interests** come from and whose interests they represent. 
 
-Nation-states are comprised of many diverse groups with divergent economic, political, and social interests - including business groups, workers, peasants, urban professionals, ethnic groups, etc. It is problematic to assume that states inherently represent the "national interest" when states are abstract entities not the same thing as the population itself. We cannot take for granted that a state's actions and policies represent the interests of all citizens equally.
+Nation-states are comprised of many diverse **groups** with divergent economic, political, and social interests - including business groups, workers, peasants, urban professionals, ethnic groups, etc. It is problematic to assume that states inherently represent the "**national interest**" when states are abstract entities not the same thing as the population itself. We cannot take for granted that a state's actions and policies represent the interests of all citizens equally.
 
 There is a need to critically examine how states are constituted, how state power operates, and which social groups or classes dominate the state apparatus and decision-making. Whose interests are being represented when we talk about the "national interest"? Is it the urban business elites, the military, certain ethnic groups, or a broader cross-section of the population? These questions are often overlooked within dominant IR theories. A more complex analysis of domestic societal actors and their access to state power is required, rather than treating states as unitary rational actors.
 

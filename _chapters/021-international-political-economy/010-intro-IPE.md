@@ -2,6 +2,7 @@
 title: Introduction To International Trade And Economy
 slug: introduction-ipe
 abstract: This chapter will introduce you to the field of international political economy (IPE).
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 ## Introduction to International Political Economy 
@@ -10,7 +11,7 @@ abstract: This chapter will introduce you to the field of international politica
 <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/cJRQkwMyup8?si=fwpdwdIHz-nGjm0Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 <br>
 
-International Political Economy (IPE) is a multidisciplinary field that explores the complex interactions between political and economic forces globally. IPE examines topics such as international money, finance, trade, investment, and the environment. As a field, it spans across academic disciplines including political science, economics, sociology, and history. IPE seeks to understand the power relations that condition economic transactions at the domestic, international, and global levels.
+**International** **Political** Economy (**IPE**) is a multidisciplinary field that explores the complex interactions between political and **economic** forces globally. IPE examines topics such as international money, finance, trade, investment, and the environment. As a field, it spans across academic disciplines including political science, economics, sociology, and history. IPE seeks to understand the power relations that condition economic transactions at the domestic, international, and global levels.
 
 Some key topics examined in IPE include:
 

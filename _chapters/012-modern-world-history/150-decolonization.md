@@ -2,16 +2,17 @@
 slug: decolonization
 title: Decolonization and Development
 abstract: This chapter will cover the Decolonization and Development
+simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
 ---
 
 
 ## Introduction
 
-The process of decolonization in the 20th century was profoundly impacted by pivotal global events. The age of imperialism set the stage for independence movements to take hold, fueled by growing nationalist sentiments. However, it was the events of World Wars I and II, along with the Cold War era that directly shaped the trajectory of decolonization.
+The process of decolonization in the 20th century was profoundly impacted by pivotal global events. The age of imperialism set the stage for independence movements to take hold, fueled by growing nationalist sentiments. However, it was the events of **World** Wars** I and II, along with the Cold **War** era that directly shaped the trajectory of decolonization.
 
-The aftermath of World War I saw greater expectations for self-determination, along with the extensive use of colonial soldiers in the war effort. This put significant financial strain on the imperial powers. World War II led to increased nationalist uprisings in many colonies and key declarations like the Atlantic Charter that advocated for people's right to choose their form of government. Additionally, condemnation of colonialism by the Soviet Union gave fuel to independence movements. 
+The aftermath of **World War** I saw greater expectations for self-determination, along with the extensive use of colonial soldiers in the war effort. This put significant financial strain on the imperial powers. World War II led to increased nationalist uprisings in many colonies and key declarations like the Atlantic Charter that advocated for people's right to choose their form of government. Additionally, condemnation of colonialism by the Soviet Union gave fuel to independence movements. 
 
-The Cold War period, with its unique blend of capitalist and socialist influences, also impacted decolonization through proxy wars and power politics maneuvers. But it was the surge of anti-colonial nationalism after 1945 that truly marked a pivotal point in the process. Independence movements in this era drew lessons from the mass politicization seen in the 1920s and 1930s across the colonized world.
+The **Cold War** period, with its unique blend of capitalist and socialist influences, also impacted decolonization through proxy wars and power politics maneuvers. But it was the surge of anti-colonial nationalism after 1945 that truly marked a pivotal point in the process. Independence movements in this era drew lessons from the mass politicization seen in the 1920s and 1930s across the colonized world.
 
 ## Post-WWI Promises of Self-Determination
 
