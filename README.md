@@ -5,7 +5,7 @@
 
 **IR Study Companion** is a platform that offers a comprehensive and free course designed to provide a structured self-study guide for individuals keen on delving into the realm of international relations. Designed with a focus on international relations, Asia, and Indonesia, this website aims to provide a structured learning path for students and curious minds alike.
 
-📚 **Live Website**: [learnintlrelations.online](https://learnintlrelations.online/) | [GitHub Pages Mirror](https://cantikaportfolio.site/IR-study-companion/)
+📚 **Live Website**: [ir-guide.netlify.app](https://ir-guide.netlify.app/) | [GitHub Pages Mirror](https://cantikapf.github.io/IR-study-companion/)
 
 ---
 
