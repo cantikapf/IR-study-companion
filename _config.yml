@@ -10,7 +10,8 @@ description: >
 # If baseurl_canonical is set,
 # a <link rel="canonical"> tag will be added to the head of each page,
 # to disambiguate links for search engines.
-baseurl_canonical: https://cantikapf.github.io/IR-chapterbook/
+url: https://ir-guide.netlify.app
+baseurl_canonical: https://ir-guide.netlify.app/
 
 # A copyright notice will be shown at the bottom of each page,
 # with the current year and the author name.

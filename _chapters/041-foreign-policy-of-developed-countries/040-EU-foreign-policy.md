@@ -1,0 +1,115 @@
+---
+title: EU Foreign Policy and Energy Security
+slug: eu-foreign-policy
+abstract: The overview of the European Union's foreign policy and energy security considerations.
+---
+
+## Historical Overview
+
+The historical development of European foreign policy is characterized by periods of increasing integration interrupted by resistance to developing a unified foreign policy. 
+
+In the post-WW2 period from 1945-1952, European integration was the product of a structural foreign policy approach. Initiatives like the Marshall Plan and the Schuman Declaration establishing the European Coal and Steel Community (ECSC) laid early groundwork for integration.  
+
+However, from 1952-1970, European integration and foreign policy became a longstanding taboo. The dominance of NATO and the transatlantic alliance led to an imbalance, overshadowing attempts at independent European foreign policy. Efforts like the proposed European Defense Community gave way to the weaker Western European Union. Even the external dimension of the EEC was limited during this period.
+
+It was not until the 1970s that European Political Cooperation (EPC) began to bring a more unified approach to foreign policy. But progress remained slow and incremental over the following decades, with various treaties attempting to further coordination. The Maastricht Treaty established the Common Foreign and Security Policy in 1992, but its implementation remained elusive.
+
+## The Post Cold War Context
+
+The end of the Cold War in the early 1990s marked a dramatic shift in the global geopolitical landscape. The decades-long ideological struggle between the capitalist West and communist East came to an abrupt end with the dissolution of the Soviet Union in 1991. This brought an end to the East-West confrontation that had defined much of the post-WWII world order.
+
+The collapse of the bipolar order required a fundamental rethinking of foreign policy on both sides. For the European Union, the post-Cold War period necessitated the creation of new foreign policy structures and capabilities detached from the NATO framework oriented around containing the Soviet threat. 
+
+The EU struggled during this period to define its role as an autonomous global power. Lacking many traditional elements of state power like a unified military, the EU has had to rely more on its economic clout and "soft power" to exert influence on the world stage. The post-Cold War period was an uncertain time as the EU sought to forge an independent foreign policy identity in an increasingly multi-polar world.
+
+## Globalization
+
+Globalization has significantly impacted foreign policy. It reflects a growing predominance of economics over politics and of foreign economic relations over traditional foreign policy. As economic interdependence increases, national governments face challenges as their traditional foreign policy tools become less effective.
+
+Globalization has both positive and negative effects on foreign policy. On the positive side, economic integration can reduce incentives for war and promote peace. However, it also leads to growing vulnerability in a burgeoning number of interrelated policy areas beyond traditional diplomacy, including the environment, public health, societal security, and more.  
+
+The EU has positioned itself as an agent of globalization, promoting multilateralism and international institutions in an attempt to protect itself from the risks of globalization. By binding itself and its neighbors in a rules-based international system, the EU hopes to manage the complex interdependence of the modern world.
+
+## The nature of EU Foreign Policy
+
+The foreign policy of the EU is complex and multifaceted. It can be characterized as:
+
+- **Multipillar** - Developed across the EU's three pillars of policy making (community pillar, justice and home affairs pillar, and common foreign and security pillar). This allows the EU to utilize a wide array of tools.
+- **Multilevel** - Involves multiple levels of governance from EU institutions to member states. Allows flexibility but also potential discord between levels.
+- **Multi-actor** - Numerous EU institutions and member states involved in foreign policy formulation and implementation. Requires coordination. 
+- **Zero-sum and positive sum games** - FP interactions can be mutually beneficial win-win situations but also competitive zero-sum dynamics between member states or with outside actors. 
+
+The multipillar structure gives the EU a unique and diverse policy toolkit spanning trade, aid, enlargement policy, diplomacy, and defense/security capacities. However, coordinating the pillars and actors within a coherent overarching strategy remains an ongoing challenge. The EU must balance competition and cooperation among members to forge common positions. Ultimately, an effective EU FP blends hard and soft power tools to serve shared interests.
+
+## Energy Security
+
+Energy security is closely tied to national security. States desire energy security in the same way that they desire military or economic security. Energy policy is inseparable from foreign policy—both producer and consumer states can no longer separate their energy policies from their foreign and security policies.  
+
+Energy security aims to assure sufficient, reliable energy supplies at reasonable prices. Energy resources affect both producer and consumer states, as well as their objectives. For producer states, energy resources can be an instrument of foreign policy to influence consumer countries to achieve foreign policy goals. A state's national power in the energy sector depends on geographical and technological factors, economic capacity, and political decisions. Specifically, a state must have energy resources within its borders, be able to extract them economically using available technology, have the economic means to develop extraction and export, and political will to exploit the resources.
+
+## Energy as Foreign Policy Tool
+
+States often use energy resources as a tool or lever within their foreign policy. Energy represents a source of control for those countries capable of accessing and selling it. As a strategic national asset, energy's ability to dramatically transform the fortunes of states is clear throughout history. 
+
+Energy-exporting states can use their resources to exert leverage over energy-importing states. By controlling the energy supply, exporters gain political influence over importers, who become dependent on continued access to energy. Exporting states may threaten to limit supplies or raise prices in order to pressure importers on foreign policy issues unrelated to energy trade.
+
+Conversely, states that lack domestic energy resources and rely heavily on imports take serious risks in becoming dependent on foreign suppliers. Energy dependence constrains their foreign policy options and forces them to consider the supplier's interests. Import-dependent states are vulnerable to supply disruptions or price manipulation. 
+
+Overall, the asymmetry between energy-rich and energy-poor states allows the former to use their resources as an instrument of foreign policy. Energy interdependence creates complex dynamics between exporters and importers as they balance economic interests and geopolitical leverage. Managing energy resources and flows is an essential part of foreign policy strategy.
+
+## EU Energy Security
+
+The EU has stressed a strong commitment to market-based approaches to external energy security. European approaches to energy security bridge three areas of debate:
+
+- Market-based and geopolitical strategies: The EU favors market-based strategies that emphasize diversification of supplies and suppliers, whereas some view energy as a geopolitical issue requiring state intervention.  
+- Relationship between energy security and producer states' governance structures: The EU links energy security to the governance structures of producer states, preferring to deal with transparent, rule-based regimes.
+- The EU as an international actor: The EU's supranational nature shapes its energy security strategy. As neither an international organization nor a state, the EU has a unique approach and capabilities.
+
+Key aspects of the EU's energy security approach include diversification of energy sources, development of renewable energy, integrated European networks, cooperation with third countries, and promoting good governance and rule of law in producer states. The EU relies more on markets than geopolitics, linking energy security to democracy and human rights in supplier states.
+
+## The EU-Russia Energy Relationship
+
+The EU is highly dependent on Russia for its energy needs, especially natural gas. Around 40% of the EU's imported gas comes from Russia. This dependence has shaped the EU's energy relationship with Russia in several key ways:
+
+### Reliable Supply and Transit
+
+- The EU is interested in a reliable supply of gas from Russia without disruptions. This means settled transit regimes through pipelines in Eastern Europe and Central Asia. 
+- In the past, disputes between Russia and transit countries like Ukraine have led to gas supply disruptions in EU countries. Diversifying transit routes could increase supply security.
+
+### Market Access and Diversification
+
+- The EU wants independent access to Central Asian energy markets without having to rely solely on Russian-controlled pipelines. 
+- Diversifying energy sources and supply routes would reduce dependence on Russia and increase the EU's energy security. This is a priority especially for newer EU members like Poland and the Baltics.
+
+### Energy Efficiency 
+
+- The EU has pushed Russia to prioritize energy efficiency and reduce waste. About 20% of Russian gas is lost due to outdated infrastructure.
+- Greater efficiency in Russia's energy industry would help ensure stable, affordable supplies to Europe in the long run.
+
+## Energy Policy Concerns 
+
+States are primarily concerned with three areas when considering the role of energy in foreign policy:
+
+**Economic Stability**
+
+Maintaining a balance of supply and demand between energy exporting and importing states is crucial for economic stability. Disruptions in energy supply, known as "energy shocks," can wreak havoc on importer economies. As such, states aim to ensure reliable access to affordable energy sources.
+
+**Political Leverage of Suppliers** 
+
+Energy exporting states often wield substantial political leverage over importing states due to their dominant position as suppliers. Exporters can potentially influence the foreign policy of importers who rely heavily on their resources.
+
+**Energy as a Tool of National Power**
+
+States with robust energy resources benefit from the raw materials of national power. Energy can be utilized as a strategic asset or foreign policy tool. States consider how control over energy resources can be leveraged as an instrument of national power.
+
+## Energy and National Power 
+
+A country's national power in the energy sector is determined by several key factors:
+
+- **Geographical Determinism** - The physical presence of energy resources like oil, natural gas, coal, etc within a state's territorial boundaries is a prerequisite for developing energy power. Without domestic resources, a state lacks direct control or sovereignty over supplies. Geography shapes options.
+- **Economic Capacity** - Simply having energy reserves is not enough. A state must also possess the financial means, technology, infrastructure, and human capital to exploit resources through exploration, extraction, transportation, refining, and export. Economic strength allows states to tap their resource potential.
+- **Political Will** - The political leadership of a state must make strategic decisions to develop the energy sector through investments, energy diplomacy, leveraging state-owned companies, and crafting partnerships with foreign firms. They must have the vision and willingness to use energy assets for economic and political ends. Energy policies are conscious political choices.
+
+A combination of favorable geography, economic capacity, and political commitment is required for a state to translate its energy resources into tangible national power on the global stage. The presence of oil or gas alone does not confer energy power - many complex factors shape whether states can successfully leverage energy resources to fulfill their strategic objectives.
+
+---
