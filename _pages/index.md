@@ -30,7 +30,7 @@ permalink: /
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_PerspectiveTransform.js"></script>
+    <script src="{{site.baseurl}}/assets/edankwan-globe/PerspectiveTransform.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="{{site.baseurl}}/assets/edankwan-globe/script.js"></script>
   </div>
