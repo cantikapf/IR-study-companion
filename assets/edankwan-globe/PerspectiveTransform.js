@@ -182,6 +182,7 @@ PerspectiveTransform.prototype = (function(){
     _setTransformStyleName();
 
     app.update = update;
+    app.calc = update; // alias expected by script.js (transformGlobe if-branch)
     app.checkError = checkError;
 
     return app;
