@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /tmp/
 
-Sitemap: https://cantikapf.github.io/IR-chapterbook/sitemap.xml
+Sitemap: https://ir-guide.netlify.app/sitemap.xml
