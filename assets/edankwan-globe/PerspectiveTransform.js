@@ -1,22 +1,3 @@
-/*
- *  Optimized version of PerspectiveTransform.js
- *  by Edan Kwan
- *  website: http://www.edankwan.com/ 
- *  twitter: https://twitter.com/#!/edankwan
- *  Lab: www.edankwan.com/lab
- *  
- *  The original PerspectiveTransform.js is created by  Israel Pastrana
- *  http://www.is-real.net/experiments/css3/wonder-webkit/js/real/display/PerspectiveTransform.js
- * 
- *  Matrix Libraries from a Java port of JAMA: A Java Matrix Package, http://math.nist.gov/javanumerics/jama/
- *  Developed by Dr Peter Coxhead: http://www.cs.bham.ac.uk/~pxc/
- *  Available here: http://www.cs.bham.ac.uk/~pxc/js/ 
- * 
- *  I simply removed some irrelevant variables and functions and merge everything into a smaller function. I also added some error checking functions and bug fixing things.
- */
-(function (define) {
-    define(function(){
-
 function PerspectiveTransform(element, width, height, useBackFacing){
 
     this.element = element;
@@ -139,9 +120,9 @@ PerspectiveTransform.prototype = (function(){
             aM[i][0] = aM[i+4][3] = i & 1 ? width + offsetX : offsetX;
             aM[i][1] = aM[i+4][4] = (i > 1 ? height + offsetY : offsetY);
             aM[i][6] = (i & 1 ? -offsetX-width : -offsetX) * (dst[i].x + offsetX);
-            aM[i][7] = (i > 1 ? -offsetY-height : -offsetY) * (dst[i].x + offsetX);
+            aM[i][7] = (i & 1 ? -offsetY-height : -offsetY) * (dst[i].x + offsetX);
             aM[i+4][6] = (i & 1 ? -offsetX-width : -offsetX) * (dst[i].y + offsetY);
-            aM[i+4][7] = (i > 1 ? -offsetY-height : -offsetY) * (dst[i].y + offsetY);
+            aM[i+4][7] = (i & 1 ? -offsetY-height : -offsetY) * (dst[i].y + offsetY);
             bM[i] = (dst[i].x + offsetX);
             bM[i + 4] = (dst[i].y + offsetY);
             aM[i][2] = aM[i+4][5] = 1;
@@ -208,9 +189,8 @@ PerspectiveTransform.prototype = (function(){
 
 })();
 
-
-        return PerspectiveTransform;
-    });
-}(typeof define === "function" && define.amd ? define : function (app) {
-    window["PerspectiveTransform"] = app();
-}));
+// Static helpers expected by the globe's script.js
+// (script.js reads PerspectiveTransform.transformStyleName and
+//  PerspectiveTransform.transformOriginStyleName at parse time)
+PerspectiveTransform.transformStyleName = 'transform';
+PerspectiveTransform.transformOriginStyleName = 'transform-origin';
