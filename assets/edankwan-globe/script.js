@@ -50,9 +50,9 @@ var isTweening = false;
 var tick = 1;
 
 var URLS = {
-    bg: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_bg.jpg',
-    diffuse: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_diffuse.jpg',
-    halo: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/6043/css_globe_halo.png',
+    bg: '{{site.baseurl}}/assets/edankwan-globe/css_globe_bg.jpg',
+    diffuse: '{{site.baseurl}}/assets/edankwan-globe/css_globe_diffuse.jpg',
+    halo: '{{site.baseurl}}/assets/edankwan-globe/css_globe_halo.png'
 };
 
 var transformStyleName = PerspectiveTransform.transformStyleName;
