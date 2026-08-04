@@ -13,26 +13,11 @@ permalink: /
     </p>
     <a href="{{site.baseurl}}/introduction.html" class="hero-btn">Start Learning Now 🚀</a>
   </div>
-  <div class="hero-image-container" style="position: relative; overflow: visible;">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/edankwan-globe/style.css">
-    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-      <div class="world" style="margin-right: 0;">
-        <div class="world-bg"></div>
-        <div class="world-globe">
-            <div class="world-globe-pole"></div>
-            <div class="world-globe-doms-container"></div>
-            <div class="world-globe-halo"></div>
-        </div>
-      </div>
-      <p style="font-size: 0.85rem; color: #6b7280; text-align: center; margin-top: -30px; z-index: 10; position: relative;">
-        Interactive CSS 3D Globe by <a href="https://codepen.io/edankwan/pen/emqgpr" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: bold;">Edan Kwan</a>
-      </p>
+  <div class="hero-image-container" style="position: relative; display: flex; align-items: center; justify-content: center;">
+    <div style="background: rgba(255,255,255,0.65); border: 1px solid #e5e7eb; border-radius: 24px; padding: 32px; max-width: 420px; text-align: center; box-shadow: 0 10px 30px rgba(59,130,246,0.08);">
+      <h3 style="margin: 0 0 12px; color: #1e3a5f; font-size: 1.25rem;">Belajar IR secara terstruktur</h3>
+      <p style="margin: 0; color: #4b5563; line-height: 1.6;">Dari teori klasik hingga isu kontemporer dunia &mdash; 100+ bab, simulasi interaktif, dan latihan recall untuk memperkuat pemahamanmu.</p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js"></script>
-    <script src="{{site.baseurl}}/assets/edankwan-globe/PerspectiveTransform.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-    <script src="{{site.baseurl}}/assets/edankwan-globe/script.js"></script>
   </div>
 </div>
 
