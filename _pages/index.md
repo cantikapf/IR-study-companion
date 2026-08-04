@@ -15,8 +15,8 @@ permalink: /
   </div>
   <div class="hero-image-container" style="position: relative; display: flex; align-items: center; justify-content: center;">
     <div style="background: rgba(255,255,255,0.65); border: 1px solid #e5e7eb; border-radius: 24px; padding: 32px; max-width: 420px; text-align: center; box-shadow: 0 10px 30px rgba(59,130,246,0.08);">
-      <h3 style="margin: 0 0 12px; color: #1e3a5f; font-size: 1.25rem;">Belajar IR secara terstruktur</h3>
-      <p style="margin: 0; color: #4b5563; line-height: 1.6;">Dari teori klasik hingga isu kontemporer dunia &mdash; 100+ bab, simulasi interaktif, dan latihan recall untuk memperkuat pemahamanmu.</p>
+      <h3 style="margin: 0 0 12px; color: #1e3a5f; font-size: 1.25rem;">Learn IR in a structured way</h3>
+      <p style="margin: 0; color: #4b5563; line-height: 1.6;">From classical theories to contemporary global issues &mdash; 100+ chapters, interactive simulations, and recall practice to strengthen your understanding.</p>
     </div>
   </div>
 </div>
