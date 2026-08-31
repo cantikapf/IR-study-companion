@@ -26,6 +26,8 @@
 | M2 | Second Brain & Content Audit | Verifikasi fakta, mitigasi halusinasi, dan audit referensi | M1 | DONE |
 | M3 | Scandinavian Course Prototype | Interactive LMS harness + Utilitarian Home Academy | M2 | DONE |
 | M4 | Production Theme Upgrade | Migrasi layout Jekyll ke Utilitarian Course Player & Home | M3 | DONE |
+| M5 | Bespoke Native LMS Engine | Eliminasi GitBook & implementasi Full LMS Player + Drawer | M4 | DONE |
+
 
 
 ## Lessons Learned

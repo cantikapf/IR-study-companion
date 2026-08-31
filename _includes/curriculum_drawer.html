@@ -1,0 +1,79 @@
+<!-- Bespoke LMS Curriculum Drawer Component -->
+<div class="lms-drawer-backdrop" id="curriculum-drawer-backdrop" aria-hidden="true"></div>
+
+<aside class="lms-curriculum-drawer" id="curriculum-drawer" aria-label="Curriculum Syllabus" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-header-left">
+      <span class="drawer-badge">Full Syllabus</span>
+      <h2 class="drawer-title">Course Curriculum</h2>
+      <div class="drawer-progress-stat">
+        <span id="drawer-completed-count">0</span> / <span id="drawer-total-count">157</span> Lessons Completed
+      </div>
+    </div>
+    <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close syllabus drawer">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="drawer-search-bar">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="text" id="drawer-search-input" placeholder="Search 157 lessons, theories, treaties..." aria-label="Search lessons">
+  </div>
+
+  <div class="drawer-content" id="drawer-syllabus-tree">
+    {% include chapter-iterate-init.html %}
+
+    {% for i in (0..site.chapters.size) %}
+      {% if page.id == i_chapter.id %}
+        {% include chapter-iterate-vars.html set="page" %}
+      {% else %}
+        {% if page_chapter and page_next_chapter == nil and i_chapter_is_visible %}
+          {% include chapter-iterate-vars.html set="page_next" %}
+        {% endif %}
+      {% endif %}
+
+      {% unless i_chapter_is_visible %}
+        {% include chapter-iterate-next.html %}
+        {% continue %}
+      {% endunless %}
+
+      {% if i_part_folder and i_part_folder != i_prev_part_folder and i_part_unnumbered == false %}
+        {% if i_prev_part_folder %}
+            </ul>
+          </div>
+        {% endif %}
+        <div class="drawer-module-group" data-module="{{ i_part_num }}">
+          <div class="drawer-module-header">
+            <span class="drawer-module-tag">Module {{ i_part_num }}</span>
+            <h3 class="drawer-module-title">{{ i_part_label }}</h3>
+          </div>
+          <ul class="drawer-lessons-list">
+      {% endif %}
+
+      {% if i_chapter_is_part_index %}
+        {% include chapter-iterate-next.html %}
+        {% continue %}
+      {% endif %}
+
+      <li class="drawer-lesson-item {% if page.url == i_chapter.url %}is-active{% endif %}" data-slug="{{ i_chapter.slug }}">
+        <a href="{{ site.baseurl }}{{ i_chapter.url }}" class="drawer-lesson-link">
+          <span class="drawer-lesson-status" aria-hidden="true">
+            <i class="fa fa-circle-thin status-uncheck"></i>
+            <i class="fa fa-check-circle status-check"></i>
+          </span>
+          <span class="drawer-lesson-title-text">
+            {% if i_chapter_num %}<span class="drawer-lesson-num">{{ i_chapter_num }}.</span>{% endif %}
+            {{ i_chapter.title | escape }}
+          </span>
+        </a>
+      </li>
+
+      {% include chapter-iterate-next.html %}
+    {% endfor %}
+
+    {% if i_prev_part_folder %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</aside>

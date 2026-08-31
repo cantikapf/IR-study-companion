@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     {% include build-chapter-nav.html %}
-
     {%- include head.html -%}
 
     {% if page.collection == "chapters" %}
@@ -16,9 +15,8 @@
         <link rel="next" href="{{site.baseurl}}{{page_next_chapter.url}}" />
       {% endif %}
     {% endif %}
-
   </head>
-  <body>
+  <body class="{% if page.class %}{{ page.class }}{% endif %}">
     <!-- SVG Filter for nice-mark -->
     <svg width="0" height="0" aria-hidden="true" style="position: absolute;">
       <defs>
@@ -29,107 +27,52 @@
       </defs>
     </svg>
 
-    <div class="book">
-      {{ chapter-nav }}
+    <!-- Bespoke LMS Navigation Header -->
+    <header class="lms-topbar" role="banner">
+      <div class="lms-topbar-inner">
+        <div class="lms-brand-group">
+          <a href="{{ site.baseurl }}/" class="lms-brand-link">
+            <span>{{ site.title | escape }}</span>
+            <span class="lms-brand-badge">LMS Platform</span>
+          </a>
 
-      <div class="book-body">
-        <div class="book-header" role="navigation">
-          {% if site.github_edit.enabled %}
-            <a
-              href="{{ site.github_edit.base_url }}{{ page.path }}"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Edit on GitHub"
-              class="github-edit-link">
-              <i class="fa fa-github"></i>
-            </a>
-          {% endif %}
-          <h1>
-            <a href="{{site.baseurl}}/index.html">{{ site.title | escape }}</a>
-          </h1>
+          <button class="lms-btn-syllabus js-open-drawer" aria-label="Open Syllabus Drawer">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span>Curriculum</span>
+            <kbd class="lms-syllabus-kbd">S</kbd>
+          </button>
         </div>
-        <!-- .book-header -->
 
-        <div class="body-inner">
-          <div
-            class="page-wrapper"
-            tabindex="-1"
-            role="main">
-            <div class="page-inner {% if page.class %}{{ page.class }}{% endif %}">
+        <div class="lms-topbar-center">
+          {% if page_chapter and page_chapter_is_part_index != true %}
+            <span class="lms-current-meta">
+              {% if page_part_num %}<strong>Module {{ page_part_num }}</strong> &bull; {% endif %}
+              {{ page.title | escape }}
+            </span>
+          {% endif %}
+        </div>
 
-              {% include above-content.html %}
-
-              <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 20px; padding-top: 10px;">
-                {% include dark_mode.html %}
-                {% include progress.html %}
-              </div>
-
-              {{ content }}
-
-              {% include below-content.html %}
-
+        <div class="lms-topbar-actions">
+          <div class="lms-progress-mini" title="Global Course Progress">
+            <div class="lms-progress-bar-sm">
+              <div class="lms-progress-fill-sm" id="topbar-progress-fill"></div>
             </div>
-            <!-- .page-inner -->
+            <span class="lms-progress-text-sm" id="topbar-progress-pct">0%</span>
           </div>
-          <!-- .page-wrapper -->
+
+          {% include dark_mode.html %}
         </div>
-        <!-- .body-inner -->
-        <div class="page-footer">
-          {% include footer-extra.html %}
-
-          {% if site.bottom_nav %}
-            <div class="bottom-nav">
-              {% for item in site.bottom_nav %}
-                {% unless forloop.first %}
-                  -
-                {% endunless %}
-                {% assign item_url = item.url %}
-                {% assign starts_with = item_url | slice: 0, 4 %}
-                {% if starts_with != "http" %}
-                  {% assign item_url = item_url | prepend: site.baseurl %}{% endif %}
-                <a href="{{ item_url }}">
-                  {{ item.label }}
-                </a>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-          {% if site.copyright %}
-            <div class="copyright">
-              {% assign latest_year = "now" | date: "%Y" %}
-              {% capture copyright_start_year %}
-                {{ site.copyright.start_year }}{% endcapture %}
-              {% if site.copyright.url %}
-                <a href="{{ site.baseurl }}{{ site.copyright.url }}">
-              {% endif %}
-              &copy;
-              {% if copyright_start_year and copyright_start_year != latest_year %}
-                {{ copyright_start_year }}-{% endif %}
-              {{ latest_year }}
-              {{ site.author }}
-              {% if site.copyright.url %}
-                </a>
-              {% endif %}
-            </div>
-          {% endif %}
-
-        </div>
-        <!-- .chapter-footer -->
-
       </div>
-      <!-- .book-body -->
-    </div>
-    <!-- .book -->
+    </header>
+
+    <!-- Main Course Content Viewport -->
+    <main class="lms-main-viewport" role="main">
+      {{ content }}
+    </main>
+
+    <!-- Curriculum Syllabus Off-Canvas Drawer -->
+    {% include curriculum_drawer.html %}
 
     {%- include footer.html -%}
-
-    <script>
-      var gitbook = gitbook || [];
-      gitbook.push(function() {
-        gitbook.page.hasChanged({%- include gitbook-metadata.json.tpl -%});
-      });
-    </script>
-    
-    {% include chapter_progress_menu.html %}
   </body>
-</html>
+</html>

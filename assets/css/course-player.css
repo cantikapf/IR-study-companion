@@ -1,0 +1,651 @@
+/* ==========================================================================
+   Bespoke Native LMS Engine - Scandinavian Utilitarian Stylesheet
+   Replaces legacy GitBook/Chapterbook styles completely.
+   ========================================================================== */
+
+:root {
+  /* Surface & Canvas System */
+  --lms-canvas: #ffffff;
+  --lms-surface: #ffffff;
+  --lms-subtle: rgb(0 0 0 / 2.5%);
+  --lms-hover: rgb(0 0 0 / 4%);
+  --lms-pressed: rgb(0 0 0 / 8%);
+
+  /* Ink Precision Ladder (jakubkrehel/better-typography) */
+  --lms-ink-primary: #09090b;
+  --lms-ink-secondary: rgb(9 9 11 / 70%);
+  --lms-ink-tertiary: rgb(9 9 11 / 50%);
+  --lms-ink-muted: rgb(9 9 11 / 35%);
+
+  /* Structural Hairlines & Borders */
+  --lms-hairline: rgb(0 0 0 / 9%);
+  --lms-border-strong: rgb(0 0 0 / 16%);
+
+  /* Spatial Geometry & Concentric Radius */
+  --lms-radius-sm: 6px;
+  --lms-radius-md: 10px;
+  --lms-radius-lg: 14px;
+  --lms-radius-pill: 9999px;
+
+  /* Capped Reading Measures */
+  --lms-measure-prose: 70ch;
+  --lms-measure-app: 1200px;
+
+  /* Soft Ambient Elevation */
+  --lms-shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
+  --lms-shadow-md: 0 4px 12px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 4%);
+  --lms-shadow-lg: 0 12px 32px -4px rgb(0 0 0 / 12%), 0 4px 12px rgb(0 0 0 / 6%);
+
+  /* Animation Easing */
+  --lms-ease: cubic-bezier(0.2, 0, 0, 1);
+  --lms-duration: 0.22s;
+}
+
+/* Dark Mode Tokens */
+body.dark-theme {
+  --lms-canvas: #09090b;
+  --lms-surface: #121215;
+  --lms-subtle: rgb(255 255 255 / 3%);
+  --lms-hover: rgb(255 255 255 / 6%);
+  --lms-pressed: rgb(255 255 255 / 10%);
+
+  --lms-ink-primary: #f4f4f5;
+  --lms-ink-secondary: rgb(244 244 245 / 75%);
+  --lms-ink-tertiary: rgb(244 244 245 / 55%);
+  --lms-ink-muted: rgb(244 244 245 / 35%);
+
+  --lms-hairline: rgb(255 255 255 / 12%);
+  --lms-border-strong: rgb(255 255 255 / 20%);
+}
+
+/* Base Reset & Typography */
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--lms-canvas);
+  color: var(--lms-ink-primary);
+  font-family: "Inter Variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.lms-drawer-locked {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   LMS Topbar & Navigation Shell
+   ========================================================================== */
+.lms-topbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  background: var(--lms-canvas);
+  border-bottom: 1px solid var(--lms-hairline);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+}
+
+.lms-topbar-inner {
+  width: 100%;
+  max-width: var(--lms-measure-app);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lms-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lms-brand-link {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--lms-ink-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.lms-brand-badge {
+  font-size: 0.675rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--lms-radius-pill);
+  color: var(--lms-ink-secondary);
+}
+
+.lms-btn-syllabus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--lms-ink-primary);
+  cursor: pointer;
+  transition: all var(--lms-duration) var(--lms-ease);
+}
+.lms-btn-syllabus:hover {
+  background: var(--lms-hover);
+  border-color: var(--lms-border-strong);
+}
+
+.lms-syllabus-kbd {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.35rem;
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: 4px;
+  color: var(--lms-ink-tertiary);
+}
+
+.lms-topbar-center {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (min-width: 860px) {
+  .lms-topbar-center {
+    display: flex;
+  }
+}
+
+.lms-current-meta {
+  font-size: 0.825rem;
+  color: var(--lms-ink-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lms-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lms-progress-mini {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lms-progress-bar-sm {
+  width: 80px;
+  height: 6px;
+  background: var(--lms-subtle);
+  border-radius: var(--lms-radius-pill);
+  overflow: hidden;
+}
+
+.lms-progress-fill-sm {
+  height: 100%;
+  width: 0%;
+  background: var(--lms-ink-primary);
+  transition: width 0.4s var(--lms-ease);
+}
+
+.lms-progress-text-sm {
+  font-size: 0.775rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--lms-ink-secondary);
+}
+
+/* ==========================================================================
+   Course Player Layout (Focus View)
+   ========================================================================== */
+.lms-player-container {
+  max-width: var(--lms-measure-app);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1060px) {
+  .lms-player-container {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+}
+
+.lms-prose-column {
+  min-width: 0;
+}
+
+/* Lesson Header Card */
+.lesson-header-card {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--lms-hairline);
+}
+
+.lesson-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lms-ink-tertiary);
+  margin-bottom: 0.75rem;
+}
+.lesson-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+.lesson-breadcrumbs a:hover {
+  color: var(--lms-ink-primary);
+  text-decoration: underline;
+}
+
+.lesson-title {
+  font-size: 2.15rem;
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--lms-ink-primary);
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+.lesson-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.825rem;
+  color: var(--lms-ink-tertiary);
+}
+
+.lesson-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Course Prose Reading Container */
+.course-prose-body {
+  max-width: var(--lms-measure-prose);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--lms-ink-primary);
+  text-wrap: pretty;
+}
+
+.course-prose-body p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.course-prose-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--lms-ink-primary);
+  text-wrap: balance;
+}
+
+.course-prose-body h3 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--lms-ink-primary);
+}
+
+.course-prose-body ul, .course-prose-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.course-prose-body li {
+  margin-bottom: 0.5rem;
+}
+
+.course-prose-body mark.nice-mark {
+  background: var(--lms-subtle);
+  border-bottom: 2px solid var(--lms-ink-primary);
+  color: inherit;
+  padding: 0.1rem 0.3rem;
+}
+
+.course-prose-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.925rem;
+}
+.course-prose-body th, .course-prose-body td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--lms-hairline);
+  text-align: left;
+}
+.course-prose-body th {
+  font-weight: 600;
+  background: var(--lms-subtle);
+  color: var(--lms-ink-primary);
+}
+
+/* Secondary Sticky Sidebar (On-Page Outline) */
+.lms-outline-column {
+  display: none;
+}
+@media (min-width: 1060px) {
+  .lms-outline-column {
+    display: block;
+  }
+}
+
+.lms-outline-sticky {
+  position: sticky;
+  top: 84px;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--lms-hairline);
+}
+
+.lms-outline-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lms-ink-tertiary);
+  margin-bottom: 0.85rem;
+}
+
+.lms-outline-sticky ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lms-outline-sticky li {
+  margin-bottom: 0.6rem;
+}
+.lms-outline-sticky a {
+  font-size: 0.825rem;
+  color: var(--lms-ink-secondary);
+  text-decoration: none;
+  line-height: 1.4;
+  display: block;
+  transition: color var(--lms-duration) var(--lms-ease);
+}
+.lms-outline-sticky a:hover {
+  color: var(--lms-ink-primary);
+}
+
+/* Sticky Action Dock */
+.lms-action-dock {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lms-hairline);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-dock-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--lms-ink-secondary);
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  text-decoration: none;
+  transition: all var(--lms-duration) var(--lms-ease);
+  min-height: 44px;
+}
+.btn-dock-nav:hover {
+  color: var(--lms-ink-primary);
+  background: var(--lms-hover);
+  border-color: var(--lms-border-strong);
+}
+
+.btn-dock-complete {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--lms-ink-primary);
+  border: none;
+  border-radius: var(--lms-radius-md);
+  cursor: pointer;
+  transition: all var(--lms-duration) var(--lms-ease);
+  min-height: 44px;
+}
+body.dark-theme .btn-dock-complete {
+  background: #f4f4f5;
+  color: #09090b;
+}
+.btn-dock-complete:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.btn-dock-complete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==========================================================================
+   Curriculum Drawer (Off-Canvas Syllabus)
+   ========================================================================== */
+.lms-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--lms-ease);
+}
+.lms-drawer-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lms-curriculum-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 460px;
+  background: var(--lms-surface);
+  border-right: 1px solid var(--lms-hairline);
+  box-shadow: var(--lms-shadow-lg);
+  z-index: 1010;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.28s var(--lms-ease);
+}
+.lms-curriculum-drawer.is-open {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--lms-hairline);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.drawer-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lms-ink-tertiary);
+}
+.drawer-title {
+  font-size: 1.3rem;
+  font-weight: 750;
+  margin: 0.25rem 0 0.4rem;
+  color: var(--lms-ink-primary);
+}
+.drawer-progress-stat {
+  font-size: 0.8rem;
+  color: var(--lms-ink-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.drawer-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--lms-ink-tertiary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--lms-radius-sm);
+  transition: color var(--lms-duration) var(--lms-ease);
+}
+.drawer-close-btn:hover {
+  color: var(--lms-ink-primary);
+}
+
+.drawer-search-bar {
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid var(--lms-hairline);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--lms-subtle);
+}
+.drawer-search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--lms-ink-primary);
+  outline: none;
+}
+.drawer-search-bar input::placeholder {
+  color: var(--lms-ink-muted);
+}
+
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem 3rem;
+}
+
+.drawer-module-group {
+  margin-bottom: 1.75rem;
+}
+.drawer-module-header {
+  margin-bottom: 0.6rem;
+}
+.drawer-module-tag {
+  font-size: 0.675rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lms-ink-tertiary);
+}
+.drawer-module-title {
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--lms-ink-primary);
+  margin: 0.15rem 0 0;
+}
+
+.drawer-lessons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-lesson-item {
+  border-radius: var(--lms-radius-md);
+  margin-bottom: 0.2rem;
+  transition: background var(--lms-duration) var(--lms-ease);
+}
+.drawer-lesson-item:hover {
+  background: var(--lms-hover);
+}
+.drawer-lesson-item.is-active {
+  background: var(--lms-pressed);
+}
+.drawer-lesson-item.is-active .drawer-lesson-title-text {
+  font-weight: 650;
+  color: var(--lms-ink-primary);
+}
+
+.drawer-lesson-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--lms-ink-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.drawer-lesson-status {
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
+  color: var(--lms-ink-muted);
+}
+.drawer-lesson-status .status-check {
+  display: none;
+}
+.drawer-lesson-item.is-completed .drawer-lesson-status {
+  color: rgb(16 185 129);
+}
+.drawer-lesson-item.is-completed .status-uncheck {
+  display: none;
+}
+.drawer-lesson-item.is-completed .status-check {
+  display: inline-block;
+}
+
+.drawer-lesson-num {
+  font-variant-numeric: tabular-nums;
+  color: var(--lms-ink-tertiary);
+  margin-right: 0.2rem;
+}
