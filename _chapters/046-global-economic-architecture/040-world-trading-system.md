@@ -11,7 +11,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 
 International economics can be divided into two broad areas of study:
 
-**International **Trade**
+**International Trade**
 
 **International trade** examines the real transactions between countries including exports, imports, and balance of payments. It focuses on topics like comparative advantage, patterns of trade, protectionism vs free trade, and the impact of trade policies. International trade theory aims to understand the gains from trade, interaction between countries, and trade flows.
 

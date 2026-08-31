@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-axis="quiet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IR Study Companion — Online Course Experience Prototype</title>
+  <link rel="stylesheet" href="prototype.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Floating Scandinavian Harness Bar with Instant Switcher -->
+  <header class="harness-bar" role="banner">
+    <div class="harness-brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ink-primary);">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span>IR Study Companion</span>
+      <span class="harness-brand-badge">Course Player Prototype</span>
+    </div>
+
+    <!-- Instant Switcher (3 Scandinavian Axes) -->
+    <div class="harness-switcher" role="group" aria-label="Design System Axis Switcher">
+      <button class="harness-switcher-btn active" data-axis="quiet" aria-pressed="true" title="Ultra-clean, distraction-free reading immersion">
+        Quiet
+      </button>
+      <button class="harness-switcher-btn" data-axis="editorial" aria-pressed="false" title="Academic press, formal serif headings, hairline rules">
+        Editorial
+      </button>
+      <button class="harness-switcher-btn" data-axis="utilitarian" aria-pressed="false" title="High-efficiency LMS, comprehensive syllabus drawer">
+        Utilitarian
+      </button>
+    </div>
+
+    <div class="harness-controls">
+      <button class="harness-ghost-btn" id="btn-toggle-drawer" aria-expanded="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="9" y1="3" x2="9" y2="21"></line>
+        </svg>
+        <span>Hide Syllabus</span>
+      </button>
+      <a href="home.html" class="harness-ghost-btn" style="text-decoration: none;" title="Go to Home Academy">
+        <span>View Home Academy ➔</span>
+      </a>
+      <button class="harness-ghost-btn" id="btn-reset-progress" title="Reset localStorage state">
+        <span>Reset Progress</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Course Player Layout -->
+  <div class="course-shell">
+    
+    <!-- Curriculum Drawer / Syllabus (Sidebar) -->
+    <aside class="curriculum-drawer" id="curriculum-drawer" aria-label="Course Curriculum">
+      <div class="drawer-header">
+        <div class="drawer-track-title">Track 1: Foundations of Global Politics</div>
+        <div class="drawer-module-name">Module 023: Theories of International Relations</div>
+        
+        <div class="module-progress-wrapper">
+          <div class="progress-label-row">
+            <span>Progress</span>
+            <span class="tabular-number" id="progress-text">20%</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+            <div class="progress-fill" id="progress-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="curriculum-list">
+        <li class="lesson-item completed" data-lesson-id="ch-01">
+          <div class="lesson-status-icon" aria-hidden="true">✓</div>
+          <div class="lesson-info">
+            <div class="lesson-name">1. Classical Realism: Human Nature & Power</div>
+            <div class="lesson-meta tabular-number">10 min • Reading</div>
+          </div>
+        </li>
+
+        <li class="lesson-item active" data-lesson-id="ch-02">
+          <div class="lesson-status-icon" aria-hidden="true"></div>
+          <div class="lesson-info">
+            <div class="lesson-name">2. Defensive vs. Offensive Realism</div>
+            <div class="lesson-meta tabular-number">14 min • Reading + Quiz</div>
+          </div>
+        </li>
+
+        <li class="lesson-item" data-lesson-id="ch-03">
+          <div class="lesson-status-icon" aria-hidden="true"></div>
+          <div class="lesson-info">
+            <div class="lesson-name">3. Structural Realism & International Anarchy</div>
+            <div class="lesson-meta tabular-number">12 min • Reading</div>
+          </div>
+        </li>
+
+        <li class="lesson-item" data-lesson-id="ch-04">
+          <div class="lesson-status-icon" aria-hidden="true"></div>
+          <div class="lesson-info">
+            <div class="lesson-name">4. Security Dilemma & Prisoner's Dilemma Lab</div>
+            <div class="lesson-meta tabular-number">18 min • Simulation Lab</div>
+          </div>
+        </li>
+
+        <li class="lesson-item" data-lesson-id="ch-05">
+          <div class="lesson-status-icon" aria-hidden="true"></div>
+          <div class="lesson-info">
+            <div class="lesson-name">5. Module Assessment & Review</div>
+            <div class="lesson-meta tabular-number">15 min • Milestone Exam</div>
+          </div>
+        </li>
+      </nav>
+    </aside>
+
+    <!-- Main Course Stage (Content Viewport) -->
+    <main class="course-main" role="main">
+      <article class="lesson-viewport">
+        
+        <!-- Lesson Breadcrumb & Metadata Bar -->
+        <header class="lesson-top-bar">
+          <div class="lesson-breadcrumbs">
+            <span>Track 1</span>
+            <span>/</span>
+            <span>Module 023</span>
+            <span>/</span>
+            <span style="color: var(--ink-primary); font-weight: 500;">Lesson 2</span>
+          </div>
+          <div class="lesson-estimate tabular-number">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>14 min read</span>
+          </div>
+        </header>
+
+        <!-- Lesson Title -->
+        <h1 class="lesson-heading">Defensive vs. Offensive Realism: Anarchy, Power, and the Security Dilemma</h1>
+        <p class="prose-lead">
+          While both neorealist branches accept that the international system is anarchic, they fundamentally diverge on a critical question: how much power does a state need to guarantee its survival?
+        </p>
+
+        <!-- Micro-Learning Unit: Learning Objectives -->
+        <section class="learning-outcomes-box" aria-label="Learning Objectives">
+          <div class="outcomes-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <h4>Learning Outcomes</h4>
+          </div>
+          <ul class="outcomes-list">
+            <li>Distinguish Kenneth Waltz's defensive structural realism from John Mearsheimer's offensive structural realism.</li>
+            <li>Analyze how the security dilemma creates unintended spirals of tension even between security-seeking states.</li>
+            <li>Evaluate historical and contemporary Great Power rivalries through the lens of power maximization vs. status quo balance.</li>
+          </ul>
+        </section>
+
+        <!-- Courseware Prose Body -->
+        <section class="prose-section">
+          <h2>1. The Anarchic Imperative: Survival as Primary Motive</h2>
+          <p>
+            In international relations theory, <em>structural realism (neorealism)</em> treats states as rational unitary actors operating under structural anarchy—the absence of a centralized global sovereign capable of enforcing contracts or preventing aggression. Because there is no 911 in global politics, states must rely on <strong>self-help</strong>.
+          </p>
+          <p>
+            However, the theoretical consensus fractures over the strategic behavior anarchy incentivizes:
+          </p>
+
+          <div class="insight-callout">
+            <p>
+              <strong>Core Analytical Division:</strong> Are states structurally motivated to be <em>security maximizers</em> seeking an appropriate amount of power to survive (Defensive Realism), or are they compelled to be <em>power maximizers</em> striving for regional hegemony because absolute security can never be assured (Offensive Realism)?
+            </p>
+          </div>
+
+          <h2>2. Defensive Realism: Balance over Hegemony</h2>
+          <p>
+            Pioneered by <strong>Kenneth Waltz</strong> (<em>Theory of International Politics</em>, 1979) and expanded by Robert Jervis and Stephen Van Evera, defensive realism posits that the international system provides strong incentives for states to maintain their position within the balance of power, rather than pursuing expansion.
+          </p>
+          <p>
+            Defensive realists argue that expansionist policies are inherently self-defeating because they prompt the formation of <strong>counter-balancing coalitions</strong>. When Napoleonic France or Imperial Germany attempted to dominate the European continent, surrounding powers banded together to restore structural equilibrium.
+          </p>
+        </section>
+
+        <!-- Interactive Lab Callout -->
+        <section class="lab-callout-card" aria-label="Practical Simulation Lab">
+          <div class="lab-meta-group">
+            <span class="lab-badge">Interactive Simulation Lab</span>
+            <div class="lab-title">The Escalation Matrix: Crisis Bargaining Simulator</div>
+            <p class="lab-desc">
+              Test defensive vs. offensive doctrines under time pressure. Manage brinkmanship, military alerts, and alliance signals without triggering inadvertent nuclear escalation.
+            </p>
+          </div>
+          <button class="lab-action-btn" onclick="alert('Simulation Lab opened in interactive sandbox mode.');">
+            <span>Launch Lab</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </section>
+
+        <!-- Active Recall Flashcard (Minimalist Scandinavian 3D Flip) -->
+        <section class="flashcard-section" aria-label="Active Recall Concept Practice">
+          <div class="section-eyebrow-row">
+            <span class="eyebrow-label">Active Recall Card</span>
+            <span class="eyebrow-label">Click card to reveal definition</span>
+          </div>
+
+          <div class="flashcard-interactive" id="active-flashcard" tabindex="0" role="button" aria-label="Concept flashcard: Security Dilemma. Press Enter to flip.">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="eyebrow-label">Concept</span>
+                <div class="flashcard-term">The Security Dilemma (Jervis, 1978)</div>
+                <span class="flashcard-hint">Click or press Enter to flip ➔</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="eyebrow-label">Theoretical Implication</span>
+                <div class="flashcard-definition">
+                  A condition wherein actions taken by a state to heighten its own security (such as increasing military strength or forming alliances) inadvertently cause other states to respond with similar measures, producing an escalation that leaves both sides less secure than before.
+                </div>
+                <span class="flashcard-hint">Click to flip back ↺</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Knowledge Checkpoint: Restrained Monochrome Quiz -->
+        <section class="quiz-wrapper" aria-label="Chapter Knowledge Checkpoint">
+          <div class="quiz-header">
+            <div class="quiz-badge">Knowledge Checkpoint</div>
+            <span class="eyebrow-label tabular-number">Question 1 of 1</span>
+          </div>
+
+          <div class="quiz-prompt">
+            According to Kenneth Waltz's defensive realism, why is relentless power maximization considered an irrational strategy for states in an anarchic system?
+          </div>
+
+          <div class="quiz-options-group" role="radiogroup" aria-label="Quiz Answer Options">
+            <label class="quiz-option-card" data-value="a">
+              <input type="radio" name="quiz_proto" value="a" style="position: absolute; opacity: 0;">
+              <span class="quiz-radio" aria-hidden="true"></span>
+              <span class="quiz-option-text">Because international organizations like the United Nations automatically sanction aggressive states.</span>
+            </label>
+
+            <label class="quiz-option-card" data-value="b">
+              <input type="radio" name="quiz_proto" value="b" style="position: absolute; opacity: 0;">
+              <span class="quiz-radio" aria-hidden="true"></span>
+              <span class="quiz-option-text">Because expansionist bids inherently trigger counter-balancing coalitions from other states, undermining long-term security.</span>
+            </label>
+
+            <label class="quiz-option-card" data-value="c">
+              <input type="radio" name="quiz_proto" value="c" style="position: absolute; opacity: 0;">
+              <span class="quiz-radio" aria-hidden="true"></span>
+              <span class="quiz-option-text">Because human nature is inherently altruistic, making military dominance ethically unnecessary.</span>
+            </label>
+
+            <label class="quiz-option-card" data-value="d">
+              <input type="radio" name="quiz_proto" value="d" style="position: absolute; opacity: 0;">
+              <span class="quiz-radio" aria-hidden="true"></span>
+              <span class="quiz-option-text">Because economic interdependence has completely eliminated the utility of military forces between sovereign nations.</span>
+            </label>
+          </div>
+
+          <div class="quiz-footer">
+            <span class="eyebrow-label">Instant Feedback Engine</span>
+            <button class="quiz-btn-submit" id="quiz-submit-btn">Verify Answer</button>
+          </div>
+
+          <div class="quiz-feedback-banner" id="quiz-feedback" role="alert"></div>
+        </section>
+
+        <!-- Course Player Footer Action Bar -->
+        <footer class="lesson-action-bar">
+          <button class="btn-prev-lesson" onclick="alert('Navigating to previous lesson...');">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Previous Lesson</span>
+          </button>
+
+          <button class="btn-complete-continue" id="btn-complete-continue">
+            <span>Complete & Continue to Lesson 3</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </footer>
+
+      </article>
+    </main>
+
+  </div>
+
+  <script src="prototype.js"></script>
+</body>
+</html>

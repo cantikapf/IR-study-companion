@@ -1,8 +1,8 @@
 ---
-title: Introduction To International Relations Theories
+title: Rational Choice Theory
 slug: rational-choice-theory
-abstract: This chapter will introduce you to the field of international relations theories.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+abstract: Explanation of rational choice theory and utility-maximizing frameworks in International Relations.
+simple_summary: "Imagine world leaders playing chess. Rational Choice Theory looks at how countries calculate their moves, weigh risks and rewards, and try to make the smartest decisions for their own benefit."
 ---
 
 

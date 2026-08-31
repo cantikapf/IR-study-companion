@@ -7,7 +7,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 
 ## Introduction
 
-**Treaties** are binding agreements between **states** that are governed by **international** law**. They go by many different names - conventions, international agreements, pacts, general acts, charters, statutes, declarations, or covenants - but their purpose remains the same. Treaties serve a vital role in international relations by facilitating cooperation between states, establishing rules and norms, and codifying international law. 
+**Treaties** are binding agreements between **states** that are governed by **international law**. They go by many different names - conventions, international agreements, pacts, general acts, charters, statutes, declarations, or covenants - but their purpose remains the same. Treaties serve a vital role in international relations by facilitating cooperation between states, establishing rules and norms, and codifying international law. 
 
 Some of the most well-known and impactful treaties include:
 

@@ -8,11 +8,9 @@ simple_summary: "The world is shrinking! Because of the internet, airplanes, and
 
 ## Early Environmental Milestones
 
-The modern **environmental** movement gained momentum in the late 1960s and early 1970s with major international conferences and reports that brought global attention to **environmental issues**. 
+The modern **environmental** movement gained momentum in the late 1960s and early 1970s with major international initiatives and reports that brought global attention to **environmental issues**. 
 
-In 1968, the UN General Assembly convened the UN Conference on the Human Environment in Stockholm, Sweden. This marked the first major international gathering focused on environmental issues. Out of this conference came a declaration that served as an "action plan" for global environmental governance and led to the creation of the United Nations Environment Programme (UNEP). UNEP became the first UN agency focused solely on the environment.
-
-The 1972 UN Conference on the Human Environment, also known as the Stockholm Conference, built on the momentum of the 1968 gathering. At this conference, 113 countries adopted the Stockholm Declaration, which included 26 principles concerning the environment and **development**. This declaration put environmental issues on the global agenda.
+In 1968, the UN General Assembly (Resolution 2398) recognized the urgent need to address environmental degradation and decided to convene a dedicated global gathering. This culminated in the landmark **1972 United Nations Conference on the Human Environment** held in Stockholm, Sweden—the first major international gathering focused specifically on human-environment interactions. At Stockholm, 113 countries adopted the Stockholm Declaration containing 26 principles, creating an international action plan and paving the way for the establishment of the United Nations Environment Programme (UNEP) in December 1972 as the first UN body dedicated exclusively to environmental affairs.
 
 In 1987, the concept of **sustainable development** was formalized with the publication of the Brundtland Report, named after Chairman Gro Harlem Brundtland. Officially titled "Our Common Future," this report defined sustainable development as "development that meets the needs of the present without compromising the ability of future generations to meet their own needs." The Brundtland Report brought major attention to the idea of balancing environmental protection and economic development.
 
@@ -20,7 +18,7 @@ Through these milestones, environmental issues transitioned from national to glo
 
 ## Creation of Environmental Institutions 
 
-A key outcome of the 1968 UN Conference on the Human Environment was the creation of the United Nations Environment Programme (UNEP) in 1972. Headquartered in Nairobi, Kenya, UNEP coordinates the UN's environmental activities and implements environmental programs. 
+A key outcome of the 1972 Stockholm Conference was the creation of the United Nations Environment Programme (UNEP), headquartered in Nairobi, Kenya. UNEP coordinates the UN's environmental activities and implements international environmental programs. 
 
 The conference also spurred many national governments to establish their own environmental agencies and departments. For example, the United States formed the Environmental Protection Agency (EPA) in 1970, while the UK founded the Department of the Environment in 1971. These new agencies were tasked with researching environmental issues, monitoring pollution levels, and developing and enforcing environmental regulations at the domestic level.
 

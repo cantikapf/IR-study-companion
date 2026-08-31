@@ -7,7 +7,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 
 ## Introduction
 
-South **East **Asia** (SEA) refers to the southern region of Asia, located between the Indian subcontinent to the west and China, Korea, and Japan to the north and east. The region comprises the mainland **Southeast Asian** countries of Myanmar, Thailand, Laos, Cambodia, and Vietnam, as well as the Maritime Southeast Asian nations of Malaysia, Singapore, Indonesia, Brunei, Philippines, and Timor-Leste. 
+**Southeast Asia** (SEA) refers to the southern region of Asia, located between the Indian subcontinent to the west and China, Korea, and Japan to the north and east. The region comprises the mainland **Southeast Asian** countries of Myanmar, Thailand, Laos, Cambodia, and Vietnam, as well as the Maritime Southeast Asian nations of Malaysia, Singapore, Indonesia, Brunei, Philippines, and Timor-Leste. 
 
 Geographically, SEA stretches from Myanmar in the northwest down through Malaysia and Indonesia, with over 600 million people inhabiting its 4.5 million square kilometers. SEA lies along critical sea lanes and is an important nexus point between the Indian and Pacific oceans. The region is incredibly diverse, with hundreds of ethnic groups and languages spoken across the 11 countries.
 

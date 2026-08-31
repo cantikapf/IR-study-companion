@@ -13,15 +13,11 @@ While diplomacy has at times failed to prevent war and conflict, it remains an e
 
 ## The History of Diplomacy
 
-**Great Kings in Near East 2-4 BCE**
+**The Ancient Near East (2nd Millennium BCE)**
 
-In the era of the Great Kings in the Near East from around 2-4 BCE, diplomacy relied heavily on messengers and merchant caravans to deliver messages between rulers. Since communication was slow, unpredictable, and insecure, diplomacy rarely happened.
+Diplomatic interaction between sovereign rulers has deep roots in the Ancient Near East, famously documented in the 14th-century BCE Amarna Letters. In this "Club of the Great Powers" (encompassing Egypt, Babylonia, Assyria, Mitanni, and the Hittites), monarchs addressed each other as "brother" and dispatched envoys carrying diplomatic gifts and cuneiform tablets. However, communications were constrained: messengers traveled on foot, horseback, or via merchant caravans across long trade routes, taking weeks or months.
 
-Messengers on foot or horseback carried correspondence between rulers, but could take weeks or months to reach their destination, with no guarantee they would arrive safely. Merchant caravans provided a slightly more reliable means of transporting letters and envoys, as they followed established trade routes. But their scheduled journeys still meant lengthy delays sending and receiving diplomatic communications.
-
-Without quick and dependable postal systems, diplomacy between distant kings faced major challenges. Negotiations took place at a glacial pace, with long lapses waiting for responses. There was little opportunity for dynamic back-and-forth dialogue to resolve disputes or forge alliances. The difficulty of direct ruler-to-ruler contact constrained diplomatic efforts during this era in the Near East.
-
-**Greek City State 4-5th BCE**
+**Greek City-States (5th–4th Century BCE)**
 
 Diplomacy started to develop between the independent Greek city-states in the 4th and 5th centuries BCE. Each city-state would appoint a respected citizen known as a "proxenos" to represent their interests and negotiate on their behalf when dealing with another city-state. The proxenos enjoyed diplomatic immunity, meaning that they could not be harmed or imprisoned while carrying out their diplomatic duties. This was an early precedent for the idea of diplomatic immunity.
 
@@ -128,7 +124,7 @@ Diplomacy involves following certain ethics and norms to allow diplomats to effe
 
 The Congress of Vienna in 1815 established an international system of diplomatic rank. This rank system allowed for the appropriate diplomatic representation in negotiations and disputes. Higher ranked diplomats would be sent for more significant negotiations.
 
-Diplomatic immunity also became an important ethical concept. The Vienna Convention on Diplomatic Relations in 1964 established that diplomats must have special privileges and immunities under local criminal and civil law. This immunity enables diplomats to carry out their functions and duties without interference or coercion from the host country.
+Diplomatic immunity also became an important ethical and legal concept. The Vienna Convention on Diplomatic Relations (adopted in 1961, entered into force in 1964) codified customary international law, establishing that diplomats enjoy functional immunity from local criminal and civil jurisdiction. This immunity enables diplomatic agents to carry out their missions without interference or coercion from the receiving state.
 
 The rank system and immunity uphold diplomatic ethics by facilitating diplomacy between countries. By protecting the ability of diplomats to conduct their duties, these norms aim to encourage open communication and mediation of conflicts. Adhering to diplomatic ethics has been crucial in the history of diplomacy.
 

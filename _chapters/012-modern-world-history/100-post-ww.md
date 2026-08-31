@@ -8,7 +8,7 @@ simple_summary: "Why do countries sometimes fight? Imagine two kids who don't tr
 
 ## The Marshall Plan
 
-The **Marshall Plan**, named after US Secretary of State George Marshall, marked a pivotal moment in the post-WWII era. Between 1948 and 1952, the **United** States** provided over $13 billion in financial aid to Western European countries, including Britain, France, West Germany, Italy, and the Netherlands. 
+The **Marshall Plan**, named after US Secretary of State George Marshall, marked a pivotal moment in the post-WWII era. Between 1948 and 1952, the **United States** provided over $13 billion in financial aid to Western European countries, including Britain, France, West Germany, Italy, and the Netherlands. 
 
 The goals of the Marshall Plan were twofold. First, it aimed to rebuild war-torn Western European economies and create stable markets for American exports. By reviving industrial production and infrastructure development, the United States hoped to prevent serious economic crises that could lead to political instability or communist expansion. Second, the initiative served as an overt use of America's economic power to further its foreign policy agenda. Providing aid was a strategic move in the early **Cold War** years to align Western European nations with the United States and build a bulwark against Soviet communist influence.
 

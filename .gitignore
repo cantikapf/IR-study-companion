@@ -33,3 +33,6 @@ test-results/
 __pycache__/
 .pytest_cache/
 .venv/
+
+# Obsidian local cache/workspace
+.obsidian/workspace*

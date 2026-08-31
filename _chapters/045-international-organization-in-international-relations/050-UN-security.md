@@ -9,7 +9,7 @@ simple_summary: "Why do countries sometimes fight? Imagine two kids who don't tr
 
 The **United Nations** (UN) is an intergovernmental organization that was established in 1945 after World War II with the aim of maintaining international peace and **security**, developing friendly relations among nations, achieving international cooperation, and being a center for harmonizing the actions of nations. The creation of the UN reflected a vision for a new post-war global order and a desire to avoid the horrors of another world war. 
 
-The UN officially came into existence on October 24, 1945, following ratification of the UN Charter by the five permanent members of the **Security **Council** and a majority of the other signatories. 51 countries in total signed the Charter at the United Nations Conference on International Organization in San Francisco, which took place from April to June 1945. The Charter has since been ratified by all 193 UN member states.
+The UN officially came into existence on October 24, 1945, following ratification of the UN Charter by the five permanent members of the **Security Council** and a majority of the other signatories. 51 countries in total signed the Charter at the United Nations Conference on International Organization in San Francisco, which took place from April to June 1945. The Charter has since been ratified by all 193 UN member states.
 
 The UN headquarters is located in New York City and the organization has additional offices around the world. As of 2022, there are 193 member states of the UN. The organization and its specialized agencies were awarded the Nobel Peace Prize in 2001.
 

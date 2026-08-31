@@ -7,7 +7,7 @@ simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the
 
 # Introduction
 
-**International** Political** Economy (IPE) has seen the rise of two influential perspectives - **constructivism** and Marxism. These perspectives have challenged conventional narratives and assumptions within the field. 
+**International Political Economy** (IPE) has seen the rise of two influential perspectives - **constructivism** and Marxism. These perspectives have challenged conventional narratives and assumptions within the field. 
 
 Constructivism contends that **ideas**, values, norms, and identities play a critical role in shaping actors' behaviors and influencing international political and economic dynamics. It emphasizes the socially constructed nature of factors like interests and identities. Constructivism has become a prominent counterpoint to materialist theories like Mercantilism and Liberalism in explaining motivations behind choices.
 

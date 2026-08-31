@@ -12,7 +12,7 @@ simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the
 - Behavioral dynamics: state is rational actors seeking to maximize its interest or national objectives in foreign policy
 - Issues: national security issues are most important
 
-**Classical** Realism** tend to:
+**Classical Realism** tend to:
 1. Advocate holistic understanding of politics
 2. Recognize the close relationship of domestic and **international**
 3. Acknowledge the role of ethnics and community

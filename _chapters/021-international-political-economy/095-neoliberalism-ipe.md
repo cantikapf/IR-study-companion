@@ -7,7 +7,7 @@ simple_summary: "Imagine the world as a giant marketplace where everyone is buyi
 
 ## Introduction
 
-Neoliberalism refers to a set of **economic** policies centered around the primacy of **free **markets** and limited state intervention. At its core, neoliberalism promotes the unhindered flow of goods, resources, capital and enterprises across borders with minimal barriers like tariffs or regulations. The primary aim is to seek cost-effective resources worldwide and maximize profits and efficiency through **market** competition and reduced trade barriers. Advocates believe that allowing the **free market** to self-regulate can lead to optimal economic outcomes as market forces naturally balance themselves through supply and demand dynamics. 
+Neoliberalism refers to a set of **economic** policies centered around the primacy of **free markets** and limited state intervention. At its core, neoliberalism promotes the unhindered flow of goods, resources, capital and enterprises across borders with minimal barriers like tariffs or regulations. The primary aim is to seek cost-effective resources worldwide and maximize profits and efficiency through **market** competition and reduced trade barriers. Advocates believe that allowing the **free market** to self-regulate can lead to optimal economic outcomes as market forces naturally balance themselves through supply and demand dynamics. 
 
 Some key tenets of neoliberalism include:
 

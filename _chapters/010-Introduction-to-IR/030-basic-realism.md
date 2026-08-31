@@ -15,7 +15,7 @@ simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the
 <br>
 <br>
 
-**Realism** is an influential tradition in the study of world politics deeply rooted in classical philosophy. It emphasizes statism, survival, and self-help as core tenets shaping relations between **states** in an anarchic **international** system**.
+**Realism** is an influential tradition in the study of world politics deeply rooted in classical philosophy. It emphasizes statism, survival, and self-help as core tenets shaping relations between **states** in an anarchic **international system**.
 
 Realism posits that sovereign states are the main actors in global affairs who operate in a self-help world where **power** is crucial for survival. International anarchy prevails beyond a state's borders, meaning there is no central authority to regulate interactions. This forces states to pursue power independently as a means of safeguarding their security and interests.
 

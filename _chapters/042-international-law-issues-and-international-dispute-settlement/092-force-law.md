@@ -7,7 +7,7 @@ simple_summary: "Think of this chapter like the rules of a playground. Without r
 
 ## Introduction
 
-**International** law** governs when and how states may lawfully use force. The United Nations Charter and customary international law set out the legal framework on the resort to force by states. Use of force by states is prohibited, except in cases of self-defense or collective **security** authorized by the UN **Security Council**. 
+**International law** governs when and how states may lawfully use force. The United Nations Charter and customary international law set out the legal framework on the resort to force by states. Use of force by states is prohibited, except in cases of self-defense or collective **security** authorized by the UN **Security Council**. 
 
 There are three main exceptions to the general prohibition on force: self-defense, collective security, and humanitarian intervention. The right to self-defense, outlined in Article 51 of the UN Charter, allows states to use force in response to an armed attack. Collective security is authorized by the UN Security Council under Chapter VII of the Charter. Humanitarian intervention, though controversial, may be justified under customary international law in cases of grave human rights violations.  
 

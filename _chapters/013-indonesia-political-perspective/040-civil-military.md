@@ -66,7 +66,7 @@ The administration of President Megawati Sukarnoputri from 2001 to 2004 marked a
 
 Upon becoming president, Megawati exercised civilian control over the military by selecting loyalists for key military leadership positions. This included General Sutarto as the commander of the armed forces. At the same time, Megawati did not aggressively pursue investigations into past military human rights abuses, which helped avoid confrontations.
 
-Megawati also reduced the formal political role of the military. She dissolved the military faction in parliament and separated the police force from the military. These reforms shifted the military's focus towards external defense while ending its domestic security role.
+Megawati's tenure also oversaw the consolidation of key security sector reforms. While the structural separation of the national police (Polri) from the armed forces had been initiated in 1999 under Habibie and formalized by MPR Decrees in 2000 under Abdurrahman Wahid, Megawati's administration oversaw the final phase-out of appointed military and police seats in the national parliament (DPR) by the 2004 elections. Furthermore, the landmark Law No. 34/2004 on the TNI was enacted in 2004, codifying the military's mandate strictly as an external defense instrument and prohibiting active military personnel from engaging in partisan politics and commercial businesses.
 
 Additionally, Megawati empowered reformist officers and marginalized hardliners. This helped professionalize the armed forces and align them with democratic principles. The military supported Megawati's presidency, seeing her as a source of stability amidst Indonesia's fragile democracy.
 

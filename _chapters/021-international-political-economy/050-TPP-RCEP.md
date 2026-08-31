@@ -97,7 +97,7 @@ The key differences lie in their membership, with the TPP originally led by the 
 
 On the other hand, the RCEP resembles a more traditional free trade agreement focused on facilitating trade in goods, services, and investments. It provides a foundation of intellectual property protections and enforcement, as well as measures to support e-commerce, SMEs, government procurement, and competition regulation to improve the business environment.
 
-The impacts of these agreements remain to be seen. The TPP awaits ratification after U.S. withdrawal, while the RCEP represents a milestone regional trade pact covering nearly half the world's population. Both likely will shape global trade relations and spur economic growth among members, despite their differences in scope and depth. The TPP potentially could have more transformative impacts if ratified, while the RCEP makes incremental steps as one of the largest free trade agreements ever implemented.
+Following the U.S. withdrawal in 2017, the remaining 11 countries (led by Japan and Australia) successfully revived the pact as the **Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)**, which entered into force in December 2018. Meanwhile, the **RCEP** officially entered into force on January 1, 2022, solidifying its place as the world's largest free trade bloc. Both agreements continue to shape Asia-Pacific economic architecture, supply chain resilience, and the geopolitical balance between high-standard regulatory integration (CPTPP) and broad tariff reduction (RCEP).
 
 ---
     

@@ -21,11 +21,7 @@ simple_summary: "The world is shrinking! Because of the internet, airplanes, and
 
 **Globalization** is fundamentally defined by increased worldwide interconnectedness and interdependence. This is evident in the operations of more than 45,000 international NGOs, the ability to connect like-minded individuals across the planet, and a growing recognition of **global** problems demanding global solutions.
 
-Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of **world** output and two-thirds of **world trade**, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation-states find themselves increasingly embedded within a thickening web of international relationships and decision-making.
-
-Under conditions of political globalization, states are increasingly embedded in thickening and overlapping worldwide web
-
-**Worldwide Web**
+Trade emerges as a major driver of globalization, with over $4 trillion flowing daily through foreign exchange markets. Transnational corporations contribute to over a quarter of **world** output and two-thirds of **world trade**, highlighting their role in weaving an intricate web of global business. Under conditions of political globalization, nation-states find themselves increasingly embedded within a thickening and overlapping web of international relationships and multilateral decision-making.
 
 <center> <img src="{{site.baseurl}}/static/modules/worldwide.png" alt="Worldwide Web" width="70%" /> </center>
 

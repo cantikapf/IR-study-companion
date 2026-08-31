@@ -13,7 +13,7 @@ While NGOs are not motivated by profit, they have a strong interest in influenci
 
 Many NGOs focus on human rights causes. Others prioritize environmental activism, such as conservation, climate change, or pollution. There are also NGOs dedicated to humanitarian relief, fighting hunger and poverty, protecting refugees, and advancing indigenous rights.
 
-Though they lack the governing power of states, NGOs make an impact through advocacy, activism, and influencing both domestic policy and international institutions. Their involvement has shaped the development of **international **law** over recent decades.
+Though they lack the governing power of states, NGOs make an impact through advocacy, activism, and influencing both domestic policy and international institutions. Their involvement has shaped the development of **international law** over recent decades.
 
 ## History of NGOs in International Law
 

@@ -7,7 +7,7 @@ simple_summary: "Think of this chapter like the rules of a playground. Without r
 
 ## Introduction
 
-Customary **international** law** (**CIL**) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris, the belief that such practice is carried out because it is required by law. CIL is an important and authoritative source of international law that is considered universal, applying to all states, but also controversial due to its unclear origins and content. 
+Customary **international law** (**CIL**) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris, the belief that such practice is carried out because it is required by law. CIL is an important and authoritative source of international law that is considered universal, applying to all states, but also controversial due to its unclear origins and content. 
 
 Unlike treaties which are explicitly negotiated and codified, the norms of CIL are not written down in any single document. Instead, CIL arises from the general and consistent practice of states, along with the subjective belief that such conduct is legally obligated. This makes the content of CIL norms often difficult to clearly define. There is debate regarding what kind of **state practice** contributes to the formation of CIL rules, and the subjective determination of opinio juris adds further complexity.
 

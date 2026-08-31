@@ -8,7 +8,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 
 ## Stalin's Death and Destalinization  
 
-In 1953, the death of Joseph **Stalin** marked a major turning point in the history of the **Soviet** Union**. Stalin had ruled the USSR with an iron fist for nearly three decades, overseeing rapid industrialization and collectivization while also unleashing a reign of terror that killed millions. His death left a huge power vacuum in the Kremlin. 
+In 1953, the death of Joseph **Stalin** marked a major turning point in the history of the **Soviet Union**. Stalin had ruled the USSR with an iron fist for nearly three decades, overseeing rapid industrialization and collectivization while also unleashing a reign of terror that killed millions. His death left a huge power vacuum in the Kremlin. 
 
 After a brief power struggle, Nikita Khrushchev emerged as Stalin's successor. Once in power, Khrushchev initiated a process that became known as "destalinization." He denounced Stalin's cult of personality and condemned the brutal purges, labor camps, and other crimes that had occurred under Stalin's rule. Khrushchev gave his famous "Secret Speech" in 1956, openly criticizing Stalin's "violations of Leninist norms of legality."
 

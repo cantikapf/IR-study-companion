@@ -8,7 +8,7 @@ simple_summary: "Imagine the world as a giant marketplace where everyone is buyi
 
 ## Introduction
 
-The process of decolonization in the 20th century was profoundly impacted by pivotal global events. The age of imperialism set the stage for independence movements to take hold, fueled by growing nationalist sentiments. However, it was the events of **World** Wars** I and II, along with the Cold **War** era that directly shaped the trajectory of decolonization.
+The process of decolonization in the 20th century was profoundly impacted by pivotal global events. The age of imperialism set the stage for independence movements to take hold, fueled by growing nationalist sentiments. However, it was the events of **World Wars I and II**, along with the Cold War era that directly shaped the trajectory of decolonization.
 
 The aftermath of **World War** I saw greater expectations for self-determination, along with the extensive use of colonial soldiers in the war effort. This put significant financial strain on the imperial powers. World War II led to increased nationalist uprisings in many colonies and key declarations like the Atlantic Charter that advocated for people's right to choose their form of government. Additionally, condemnation of colonialism by the Soviet Union gave fuel to independence movements. 
 

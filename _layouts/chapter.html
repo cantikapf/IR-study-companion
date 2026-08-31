@@ -129,24 +129,43 @@ layout: default
   {{ content }}
 
   {% if page.slug %}
-  <div class="chapter-actions-wrapper">
-      <button id="mark-read-btn" class="btn btn-mark-read" aria-pressed="false" aria-label="Mark chapter as read">
-         <i class="fa fa-check" aria-hidden="true"></i> <span class="btn-text">Mark as Read</span>
-      </button>
+  <div class="course-action-bar" id="course-action-bar">
+      {% if page_prev_chapter %}
+      <a href="{{ site.baseurl }}{{ page_prev_chapter.url }}" class="btn-prev-lesson">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i> <span>Previous Lesson</span>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+
+      <div style="display: inline-flex; align-items: center; gap: 0.75rem;">
+          <button id="mark-read-btn" class="btn-complete-continue" aria-pressed="false" aria-label="Complete and continue">
+              <i class="fa fa-check" aria-hidden="true"></i> <span class="btn-text">Complete Lesson</span>
+          </button>
+          {% if page_next_chapter %}
+          <a id="next-lesson-btn" href="{{ site.baseurl }}{{ page_next_chapter.url }}" class="btn-complete-continue" style="background: var(--ink-primary); display: none;">
+              <span>Next Lesson</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          {% endif %}
+      </div>
   </div>
   <script>
   document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('mark-read-btn');
+      const nextBtn = document.getElementById('next-lesson-btn');
       const btnText = btn.querySelector('.btn-text');
       const btnIcon = btn.querySelector('i');
       const chapterSlug = "{{ page.slug }}";
       
       const setCompletedState = () => {
-          btn.classList.add('btn-mark-read--completed');
+          btn.style.background = 'var(--surface-subtle)';
+          btn.style.color = 'var(--ink-secondary)';
+          btn.style.border = '1px solid var(--border-hairline)';
           btn.setAttribute('aria-pressed', 'true');
           btn.disabled = true;
-          btnText.textContent = 'Marked as Read';
+          btnText.textContent = 'Completed ✓';
           btnIcon.className = 'fa fa-check-circle';
+          if(nextBtn) nextBtn.style.display = 'inline-flex';
       };
 
       if (localStorage.getItem('chapter_read_' + chapterSlug) === 'true') {
@@ -157,8 +176,12 @@ layout: default
           if(btn.disabled) return;
           localStorage.setItem('chapter_read_' + chapterSlug, 'true');
           setCompletedState();
-          
           window.dispatchEvent(new Event('chapter_read'));
+          {% if page_next_chapter %}
+          setTimeout(() => {
+              window.location.href = "{{ site.baseurl }}{{ page_next_chapter.url }}";
+          }, 400);
+          {% endif %}
       });
   });
   </script>
@@ -244,3 +267,4 @@ layout: default
   </div>
   <!-- .chapter-pager -->
 {% endif %}
+

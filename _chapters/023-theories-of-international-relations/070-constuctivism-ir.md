@@ -6,7 +6,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 ---
 
 
-Constructivism in **International** Relations** emerged from a critique of the more traditional IR theories during the **Cold War** period. Constructivists rejected the static material assumptions that dominated traditional IR theories and instead emphasized the **social** dimensions of IR and the possibility for change. **They argued that international relations are socially constructed rather than existing independently**. This means that phenomena such as states, alliances, or international institutions do not inherently exist on their own but rather come into being through human meaning and action. The central themes of change, social interactions, and ongoing processes pointed to the value of a constructivist perspective within a field that had previously focused on generalization across time, material factors, and rational choice assumptions. 
+Constructivism in **International Relations** emerged from a critique of the more traditional IR theories during the **Cold War** period. Constructivists rejected the static material assumptions that dominated traditional IR theories and instead emphasized the **social** dimensions of IR and the possibility for change. **They argued that international relations are socially constructed rather than existing independently**. This means that phenomena such as states, alliances, or international institutions do not inherently exist on their own but rather come into being through human meaning and action. The central themes of change, social interactions, and ongoing processes pointed to the value of a constructivist perspective within a field that had previously focused on generalization across time, material factors, and rational choice assumptions. 
 
 The term "constructivism" was introduced to IR by Nicholas Onuf in 1989 to refer broadly to postpositivist perspectives which shared a skepticism of the static assumptions in mainstream IR theories. However, over time scholars began distinguishing between "conventional" constructivism and more critical variations like poststructuralism.
 
@@ -48,18 +48,6 @@ Conventional constructivism adds a social dimension that is missing from rationa
 Critical constructivists have questioned the individualist ontology of rationalism and instead emphasize a social ontology. As fundamentally social beings, individuals or states cannot be separated from the context of normative meaning which shapes their identities and possibilities. 
 
 Critical perspectives also focus on how structures not only constrain actors, but also constitute their identities. The individual or state can influence their environment as well as being influenced by it, through a process of interaction and mutual constitution.
-
-## Conventional Constructivism
-
-Conventional constructivism is said to occupy the middle ground between rationalism and poststructuralism. By adopting a positivist epistemology, constructivists have gained considerable legitimacy, such that their debate with rationalists has come to occupy an important place in the discipline.
-
-Constructivism adds a social dimension that is missing from rationalist approaches. What is rational is seen as a function of legitimacy, defined by shared values and norms within institutions or other social structures rather than purely individual interests.
-
-## Critical Constructivism
-
-Critical constructivists have questioned the individualist ontology of rationalism and instead emphasize a social ontology. As fundamentally social beings, individuals or states cannot be separated from a context of normative meaning which shapes who they are and the possibilities available to them. 
-
-Structures not only constrain actors they also constitute identities. The individual or state can also influence their environment as well as being influenced by it, through a process of interaction and mutual constitution.
 
 ## Structures and Agents
 
