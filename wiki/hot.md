@@ -47,5 +47,9 @@ tags:
   5. `_includes/head.html` & `_includes/footer.html`: Membersihkan script dan stylesheet usang GitBook 2016.
 - Pengujian otomatis `pytest` (6 passed) dan build Jekyll produksi 100% sukses tanpa galat (157 bab terkompilasi dalam 53 detik).
 
+## Active Threads
 
+- **Official YouTube Revamp (@IRinANutshell)**:
+  - Kanal resmi [`https://www.youtube.com/@IRinANutshell`](https://www.youtube.com/@IRinANutshell) kini terintegrasi dalam rencana ekosistem IR Study Companion.
+  - Berdasarkan studi [Higgsfield](https://higgsfield.ai/blog/faceless-youtube-videos-faceless-studio), [ViralFeed](https://viralfeed.ai/faceless-creator-hub), dan [OpenMontage](https://github.com/calesthio/OpenMontage), format video course ditingkatkan dari stickman primitif menjadi **mini-dokumenter sinematik 3–5 menit** yang memadukan footage arsip bebas royalti, peta konflik beranimasi SVG/Remotion, narasi multi-track berbobot analitis, dan penataan pacing retensi tinggi guna memenuhi syarat kelayakan monetisasi YouTube (YPP).
 
