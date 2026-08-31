@@ -5,6 +5,8 @@
 ## Architecture / Workflow
 - **Overview**: 
   Platform pembelajaran daring mandiri untuk studi Hubungan Internasional berbasis static site generator Jekyll. Dilengkapi dengan pipeline otomatisasi Python untuk ekstraksi dan penataan fitur interaktif (kuis, flashcard), serta jaminan kualitas melalui unit testing `pytest` dan E2E testing `Playwright`.
+- **Official YouTube Channel**:
+  [`https://www.youtube.com/@IRinANutshell`](https://www.youtube.com/@IRinANutshell) — Channel video edukasi resmi pendamping kurikulum web IR Study Companion, dirancang dengan format faceless explainer/mini-dokumenter berdurasi 3–5 menit menuju monetisasi YouTube Partner Program (YPP).
 
 ## Feature Inventory
 | # | Feature / Scope Item | Description | Milestone | Status |

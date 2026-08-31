@@ -31,7 +31,7 @@ permalink: /
         </div>
       </div>
     </div>
-    <a href="{{ site.baseurl }}/chapters/010-Introduction-to-IR/010-ir-study.html" class="resume-action-btn" id="resume-target-btn">
+    <a href="{{ site.baseurl }}/study-of-international-relations.html" class="resume-action-btn" id="resume-target-btn">
       <span id="resume-btn-label">Start Learning</span> ➔
     </a>
   </div>
@@ -85,7 +85,7 @@ permalink: /
         </div>
         <div class="track-footer">
           <span style="font-size: 0.8rem; color: var(--ink-tertiary);">42 total lessons</span>
-          <a href="{{ site.baseurl }}/chapters/010-Introduction-to-IR/010-ir-study.html" class="track-link-btn">Explore Track ➔</a>
+          <a href="{{ site.baseurl }}/study-of-international-relations.html" class="track-link-btn">Explore Track ➔</a>
         </div>
       </article>
 
@@ -108,7 +108,7 @@ permalink: /
         </div>
         <div class="track-footer">
           <span style="font-size: 0.8rem; color: var(--ink-tertiary);">34 total lessons</span>
-          <a href="{{ site.baseurl }}/chapters/012-History-of-World-Politics/010-early-modern-europe.html" class="track-link-btn">Explore Track ➔</a>
+          <a href="{{ site.baseurl }}/history-matters.html" class="track-link-btn">Explore Track ➔</a>
         </div>
       </article>
 
@@ -131,7 +131,7 @@ permalink: /
         </div>
         <div class="track-footer">
           <span style="font-size: 0.8rem; color: var(--ink-tertiary);">35 total lessons</span>
-          <a href="{{ site.baseurl }}/chapters/021-International-Political-Economy/010-ipe-foundations.html" class="track-link-btn">Explore Track ➔</a>
+          <a href="{{ site.baseurl }}/introduction-ipe.html" class="track-link-btn">Explore Track ➔</a>
         </div>
       </article>
 
@@ -154,7 +154,7 @@ permalink: /
         </div>
         <div class="track-footer">
           <span style="font-size: 0.8rem; color: var(--ink-tertiary);">46 total lessons</span>
-          <a href="{{ site.baseurl }}/chapters/042-International-Law/010-sources-il.html" class="track-link-btn">Explore Track ➔</a>
+          <a href="{{ site.baseurl }}/basic-inter-law.html" class="track-link-btn">Explore Track ➔</a>
         </div>
       </article>
     </div>
@@ -178,7 +178,7 @@ permalink: /
             Test Allison's bureaucratic models in a simulated brinkmanship scenario. Choose between preemptive airstrikes, backchannel diplomacy, or naval blockade.
           </p>
         </div>
-        <a href="{{ site.baseurl }}/chapters/031-Foreign-Policy-Analysis/020-fpa-models.html" class="lab-card-btn">Run Scenario ➔</a>
+        <a href="{{ site.baseurl }}/models-fpdm.html#crisis-sim" class="lab-card-btn">Run Scenario ➔</a>
       </article>
 
       <article class="lab-card">
@@ -189,7 +189,7 @@ permalink: /
             Calculate payoffs in Iterated Prisoner's Dilemma, Stag Hunt, and Chicken game. Observe how shadows of the future induce cooperative equilibria.
           </p>
         </div>
-        <a href="{{ site.baseurl }}/chapters/033-Research-Methods-in-IR/092-game-theory-ir.html" class="lab-card-btn">Open Arena ➔</a>
+        <a href="{{ site.baseurl }}/game-theory-ir.html#game-theory-sim" class="lab-card-btn">Open Arena ➔</a>
       </article>
 
       <article class="lab-card">
@@ -200,7 +200,7 @@ permalink: /
             Serve as an Appellate Body panelist adjudicating anti-dumping tariffs, subsidies, and Article XX environmental trade exceptions.
           </p>
         </div>
-        <a href="{{ site.baseurl }}/chapters/045-International-Organizations/050-WTO.html" class="lab-card-btn">Enter Panel ➔</a>
+        <a href="{{ site.baseurl }}/wto-decision-making.html#wto-sim" class="lab-card-btn">Enter Panel ➔</a>
       </article>
     </div>
   </section>
