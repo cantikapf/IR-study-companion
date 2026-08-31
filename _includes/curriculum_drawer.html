@@ -22,6 +22,7 @@
 
   <div class="drawer-content" id="drawer-syllabus-tree">
     {% include chapter-iterate-init.html %}
+    {% assign drawer_group_open = false %}
 
     {% for i in (0..site.chapters.size) %}
       {% if page.id == i_chapter.id %}
@@ -37,17 +38,20 @@
         {% continue %}
       {% endunless %}
 
-      {% if i_part_folder and i_part_folder != i_prev_part_folder and i_part_unnumbered == false %}
-        {% if i_prev_part_folder %}
+      {% if i_part_folder and i_part_folder != i_prev_part_folder %}
+        {% if drawer_group_open %}
             </ul>
           </div>
+          {% assign drawer_group_open = false %}
         {% endif %}
-        <div class="drawer-module-group" data-module="{{ i_part_num }}">
+
+        <div class="drawer-module-group" data-module="{% if i_part_unnumbered %}{{ i_part_sort_index }}{% else %}{{ i_part_num }}{% endif %}">
           <div class="drawer-module-header">
-            <span class="drawer-module-tag">Module {{ i_part_num }}</span>
-            <h3 class="drawer-module-title">{{ i_part_label }}</h3>
+            <span class="drawer-module-tag">{% if i_part_unnumbered %}Resources{% else %}Module {{ i_part_num }}{% endif %}</span>
+            <h3 class="drawer-module-title">{% if i_part_sort_index == '000' %}Course Guide{% elsif i_part_sort_index == '999' %}Academic Bibliography{% else %}{{ i_part_label }}{% endif %}</h3>
           </div>
           <ul class="drawer-lessons-list">
+        {% assign drawer_group_open = true %}
       {% endif %}
 
       {% if i_chapter_is_part_index %}
@@ -71,9 +75,10 @@
       {% include chapter-iterate-next.html %}
     {% endfor %}
 
-    {% if i_prev_part_folder %}
+    {% if drawer_group_open %}
         </ul>
       </div>
+      {% assign drawer_group_open = false %}
     {% endif %}
   </div>
 </aside>
