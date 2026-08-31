@@ -50,7 +50,8 @@ tags:
 
 ## Active Threads
 
-- **Official YouTube Revamp (@IRinANutshell)**:
-  - Kanal resmi [`https://www.youtube.com/@IRinANutshell`](https://www.youtube.com/@IRinANutshell) kini terintegrasi dalam rencana ekosistem IR Study Companion.
-  - Berdasarkan studi [Higgsfield](https://higgsfield.ai/blog/faceless-youtube-videos-faceless-studio), [ViralFeed](https://viralfeed.ai/faceless-creator-hub), dan [OpenMontage](https://github.com/calesthio/OpenMontage), format video course ditingkatkan dari stickman primitif menjadi **mini-dokumenter sinematik 3–5 menit** yang memadukan footage arsip bebas royalti, peta konflik beranimasi SVG/Remotion, narasi multi-track berbobot analitis, dan penataan pacing retensi tinggi guna memenuhi syarat kelayakan monetisasi YouTube (YPP).
+- **Official YouTube Revamp (@IRinANutshell) - HeyHistorically Pivot**:
+  - Kanal resmi [`https://www.youtube.com/@IRinANutshell`](https://www.youtube.com/@IRinANutshell) telah beralih total ke **2D Animated Storytelling Full English** ala channel viral `@HeyHistorically`.
+  - Pilot episode pertama bertajuk *The Cuban Missile Crisis: The Day the World Almost Ended* (62s, 1080p 24fps) sukses diproduksi dengan voiceover neural bahasa Inggris (*ChristopherNeural*), karikatur kartun 2D ekspresif (JFK & Khrushchev), snap-zooms, camera shakes, dan sound design dramatis dengan total biaya API Rp 0,-.
+
 
