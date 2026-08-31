@@ -2,13 +2,20 @@
 layout: default
 ---
 
-{% if page.title %}
-  <h1 id="{{ page.id }}" data-level="1.1" class="no_toc">{{ page.title | escape }}</h1>
-{% endif %}
-{% if page.subtitle %}
-  <div class="page-subtitle">{{ page.subtitle | escape }}</div>
-{% endif %}
+<div class="lms-player-container" style="grid-template-columns: 1fr;">
+  <div class="lms-prose-column" style="max-width: var(--lms-measure-prose); margin: 0 auto;">
+    {% if page.title %}
+      <header class="lesson-header-card">
+        <h1 class="lesson-title">{{ page.title | escape }}</h1>
+        {% if page.subtitle %}
+          <div style="font-size: 1.1rem; color: var(--lms-ink-secondary); margin-top: -0.5rem;">{{ page.subtitle | escape }}</div>
+        {% endif %}
+      </header>
+    {% endif %}
 
-<section class="normal markdown-section">
-  {{ content }}
-</section>
+    <article class="course-prose-body">
+      {{ content }}
+    </article>
+  </div>
+</div>
+

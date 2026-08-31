@@ -39,10 +39,13 @@ tags:
   3. `_includes/flashcards.html`: Transformasi ke kartu konsep Active Recall 3D flip minimalis dengan elevasi bayangan halus.
   4. `_layouts/chapter.html`: Penambahan aksi pembelajaran Course Player (`[ ✓ Complete Lesson ]` dan `[ Next Lesson ➔ ]`).
   5. `_pages/index.md`: Beranda produksi kini resmi beralih ke *Utilitarian Course Academy Dashboard* lengkap dengan Resume Learning Card dinamis, Metrics Strip, 4 Structured Tracks, dan Interactive Labs Showcase.
-- Pengujian otomatis `pytest` (6 passed in 0.03s) dan build produksi `jekyll build` selesai tanpa galat (157 bab terkompilasi dalam 56 detik).
+- **Eksekusi Sukses Milestone M5 (Bespoke Native LMS Engine Overhaul)**:
+  1. `_config.yml`: Mencopot `remote_theme: jasongrimes/jekyll-chapterbook` secara permanen.
+  2. `_layouts/default.html`: Menghapus seluruh struktur DOM GitBook (`.book`, `.book-summary`, `.book-header`). Digantikan dengan modern LMS shell (`.lms-topbar`, `.lms-main-viewport`, dan `.lms-curriculum-drawer`).
+  3. `_layouts/chapter.html`: Ditransformasikan menjadi *Course Player Focus View* bebas distraksi dengan metadata bar (durasi baca otomatis), on-page outline navigasi sticky, dan *sticky action dock*.
+  4. `_includes/curriculum_drawer.html` & `assets/js/course-player.js`: Drawer silabus off-canvas modern dengan status centang realtime (`localStorage`), pencarian instan 157 materi, dan shortcut keyboard `S`/`Esc`.
+  5. `_includes/head.html` & `_includes/footer.html`: Membersihkan script dan stylesheet usang GitBook 2016.
+- Pengujian otomatis `pytest` (6 passed) dan build Jekyll produksi 100% sukses tanpa galat (157 bab terkompilasi dalam 53 detik).
 
-## Active Threads
-
-- Seluruh sasaran utama transformasi dari "documentation site" menjadi "modern online course / LMS" telah tuntas dan live pada kode produksi.
 
 

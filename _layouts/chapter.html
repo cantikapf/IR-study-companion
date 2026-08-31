@@ -3,268 +3,140 @@ layout: default
 ---
 
 {% include build-chapter-nav.html %}
-{% include reading_progress.html %}
 
-{% if page_chapter_is_draft %}
-  <div class="markdown-section color-callout-light with-border" style="padding: 5px; padding-left: 10px; font-size: 16px; margin-bottom: 20px;">
-    This chapter is a
-    <b>draft</b>.
-    <a href="{{site.baseurl}}/outline.html">See the outline.</a>
-  </div>
-{% endif %}
+<div class="lms-player-container">
+  <div class="lms-prose-column">
+    <!-- Lesson Header -->
+    <header class="lesson-header-card">
+      <nav class="lesson-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="{{ site.baseurl }}/">Curriculum</a>
+        <span>&rsaquo;</span>
+        {% if page_part_label %}
+          <span>Module {{ page_part_num | default: "01" }}: {{ page_part_label }}</span>
+          <span>&rsaquo;</span>
+        {% endif %}
+        <span style="color: var(--lms-ink-primary);">Lesson {{ page_chapter_num | default: "01" }}</span>
+      </nav>
 
-  <nav aria-label="Breadcrumb" class="breadcrumb markdown-section">
-    <ul>
-      {% if site.bookcrumbs.book_url %}
-        {% capture book_url %}{{site.baseurl}}{{site.bookcrumbs.book_url}}{% endcapture %}
-          <li>
-            {% unless book_url == page.url %}  
-              <a href="{{ book_url }}">
-            {% endunless %}
-              {% if site.bookcrumbs.book_icon %}<img class="book-icon" src="{{site.baseurl}}/{{ site.bookcrumbs.book_icon }}">{% endif %}
-              Book
-            {% unless book_url == page.url %}
-              </a>
-            {% endunless %}
-          </li>
-      {% endif %}
+      <h1 class="lesson-title">{{ page.title | escape }}</h1>
 
-      {% if site.bookcrumbs.contents_url %}
-        {% capture contents_url %}{{site.baseurl}}{{site.bookcrumbs.contents_url}}{% endcapture %}
-        <li {% if contents_url == page.url %}class="no-arrow"{% endif %}>
-          {% if contents_url != page.url %}
-            <a href="{{ contents_url }}">
-          {% endif %}
-            Contents
-          {% if contents_url != page.url %}
-            </a>
-          {% endif %}
-        </li>
-      {% endif %}
-
-      {% if page_chapter_is_part_index and page_part_num%}
-        <li class="breadcrumb-part no-arrow">
-          Part {{ page_part_num }}:
-        </li>
-      {% endif %}
-
-      {% if page_chapter and page_chapter_is_part_index != true %}
-        {% unless page_part_unnumbered and page_chapter_num == nil %}
-
-          {% if page_part_folder %}
-            {% unless page_part_unnumbered %}
-              <li class="breadcrumb-part">
-                {% if page_part_index_chapter %}
-                  <a href="{{ site.baseurl }}{{ page_part_index_chapter.url }}">
-                {% endif %}
-                Part {{ page_part_num }}: {{ page_part_label }}
-                {% if page_part_index_chapter %}
-                  </a>
-                {% endif %}
-              </li>
-            {% endunless %}
-          {% endif %}
-
-          {% if page_chapter_num %}
-            <li class="no-arrow">
-              Chapter {{ page_chapter_num }}.
-            </li>
-          {% endif %}
-
-        {% endunless %}
-      {% endif %}
-    </ul>
-  </nav>
-{% if page_chapter_is_part_index %}
-
-  {% if page_part_num or page_part_label %}
-      <h1 class="heading-chapter-title heading-part">       
-        {{ page_part_label | escape }}
-      </h1>
-  {% endif %}
-{% else %}
-  {% if page.title %}
-    <h1
-      id="{{ page.slug }}"
-      data-level="1.1"
-      class="heading-chapter-title no_toc">{{ page.title | escape }}</h1>
-    {% include reading_time.html %}
-  {% endif %}
-{% endif %}
-
-<section class="normal markdown-section">
-
-  {% if page.abstract %}
-    <div class="chapter-abstract color-callout-dark">
-      {{ page.abstract }}
-    </div>
-  {% endif %}
-
-  {% if page.simple_summary %}
-    <details class="simple-words-box">
-      <summary class="simple-words-summary">
-        <span class="icon">💡</span> <strong>In Simple Words...</strong>
-      </summary>
-      <div class="simple-words-content">
-        {{ page.simple_summary }}
-      </div>
-    </details>
-  {% endif %}
-
-  {% if site.in_chapter_toc.enabled and page.disable_toc != true and page_chapter_is_part_index != true %}
-    {% capture in_chapter_toc %}
-      {% include toc.html html=content h_min=site.sidebar_toc.h_min h_max=site.sidebar_toc.h_max %}{% endcapture %}
-    {% capture in_chapter_toc %}{{ in_chapter_toc | strip }}{% endcapture %}
-
-    {% if in_chapter_toc and in_chapter_toc != "" %}
-      <div class="page-toc">
-        <div class="page-toc-heading">
-          In this chapter:
-          {{ in_chapter_toc }}
+      <div class="lesson-meta-bar">
+        {% if page_part_label %}
+          <div class="lesson-meta-item">
+            <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+            <span>{{ page_part_label }}</span>
+          </div>
+        {% endif %}
+        <div class="lesson-meta-item">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <span id="lesson-reading-time">8 min read</span>
+        </div>
+        <div class="lesson-meta-item">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <span>Academic Core</span>
         </div>
       </div>
+    </header>
+
+    {% if page.abstract %}
+      <div style="background: var(--lms-subtle); border-left: 3px solid var(--lms-ink-primary); padding: 1rem 1.25rem; border-radius: 0 var(--lms-radius-md) var(--lms-radius-md) 0; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; color: var(--lms-ink-secondary);">
+        <strong>Learning Objective:</strong> {{ page.abstract }}
+      </div>
     {% endif %}
-  {% endif %}
 
-  {{ content }}
+    {% if page.simple_summary %}
+      <details class="simple-words-box" style="margin-bottom: 2.25rem;">
+        <summary class="simple-words-summary">
+          <span class="icon">💡</span> <strong>In Simple Words...</strong>
+        </summary>
+        <div class="simple-words-content">
+          {{ page.simple_summary }}
+        </div>
+      </details>
+    {% endif %}
 
-  {% if page.slug %}
-  <div class="course-action-bar" id="course-action-bar">
-      {% if page_prev_chapter %}
-      <a href="{{ site.baseurl }}{{ page_prev_chapter.url }}" class="btn-prev-lesson">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i> <span>Previous Lesson</span>
-      </a>
-      {% else %}
-      <div></div>
-      {% endif %}
+    <!-- Article Content -->
+    <article class="course-prose-body" id="course-article-body">
+      {{ content }}
+    </article>
+
+    <!-- Sticky Bottom Action Dock -->
+    <nav class="lms-action-dock" aria-label="Lesson completion and navigation">
+      <div>
+        {% if page_prev_chapter %}
+          <a href="{{ site.baseurl }}{{ page_prev_chapter.url }}" class="btn-dock-nav">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> <span>Previous Lesson</span>
+          </a>
+        {% endif %}
+      </div>
 
       <div style="display: inline-flex; align-items: center; gap: 0.75rem;">
-          <button id="mark-read-btn" class="btn-complete-continue" aria-pressed="false" aria-label="Complete and continue">
-              <i class="fa fa-check" aria-hidden="true"></i> <span class="btn-text">Complete Lesson</span>
+        {% if page.slug %}
+          <button id="mark-read-btn" class="btn-dock-complete" aria-pressed="false" aria-label="Complete lesson">
+            <i class="fa fa-check" aria-hidden="true"></i> <span class="btn-text">Complete Lesson</span>
           </button>
-          {% if page_next_chapter %}
-          <a id="next-lesson-btn" href="{{ site.baseurl }}{{ page_next_chapter.url }}" class="btn-complete-continue" style="background: var(--ink-primary); display: none;">
-              <span>Next Lesson</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        {% endif %}
+
+        {% if page_next_chapter %}
+          <a id="next-lesson-btn" href="{{ site.baseurl }}{{ page_next_chapter.url }}" class="btn-dock-complete" style="display: none; text-decoration: none;">
+            <span>Next Lesson</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
           </a>
-          {% endif %}
+        {% endif %}
       </div>
+    </nav>
   </div>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('mark-read-btn');
-      const nextBtn = document.getElementById('next-lesson-btn');
-      const btnText = btn.querySelector('.btn-text');
-      const btnIcon = btn.querySelector('i');
-      const chapterSlug = "{{ page.slug }}";
-      
-      const setCompletedState = () => {
-          btn.style.background = 'var(--surface-subtle)';
-          btn.style.color = 'var(--ink-secondary)';
-          btn.style.border = '1px solid var(--border-hairline)';
-          btn.setAttribute('aria-pressed', 'true');
-          btn.disabled = true;
-          btnText.textContent = 'Completed ✓';
-          btnIcon.className = 'fa fa-check-circle';
-          if(nextBtn) nextBtn.style.display = 'inline-flex';
-      };
 
-      if (localStorage.getItem('chapter_read_' + chapterSlug) === 'true') {
-          setCompletedState();
-      }
-
-      btn.addEventListener('click', () => {
-          if(btn.disabled) return;
-          localStorage.setItem('chapter_read_' + chapterSlug, 'true');
-          setCompletedState();
-          window.dispatchEvent(new Event('chapter_read'));
-          {% if page_next_chapter %}
-          setTimeout(() => {
-              window.location.href = "{{ site.baseurl }}{{ page_next_chapter.url }}";
-          }, 400);
-          {% endif %}
-      });
-  });
-  </script>
-  {% endif %}
-
-  {% comment %}{% include chapter-iterate-vars.html inspect="page" %}{% endcomment %}
-</section>
-
-{% if page_prev_chapter or page_next_chapter %}
-  <div class="chapter-pager">
-
-    {% if page_next_chapter %}
-      {% if page_next_chapter_is_part_index %}
-        {% assign next_title = page_next_part_label %}
-      {% else %}
-        {% assign next_title = page_next_chapter.title %}
-      {% endif %}
-      <a
-        href="{{site.baseurl}}{{ page_next_chapter.url }}"
-        class="chapter-next {% unless page_prev_chapter %}pager-unique{% endunless %}"
-        aria-label="Next page: {{ next_title | escape }}"
-        data-level="1.1"
-        data-path="{{site.baseurl}}{{ page_next_chapter.url }}">
-        <div class="pager-arrow">
-          <i class="fa fa-arrow-right"></i>
-        </div>
-        <div class="pager-labels">
-          <div class="part">
-            Next:
-            {% if page_next_chapter_is_part_index %}
-              Part {{ page_next_part_num }}.
-            {% else %}
-              {% if page_next_part_label %}
-                {{ page_next_part_label }}
-                {% if page_next_chapter_num %} &#8250;{% endif %}
-              {% endif %}
-              {% if page_next_chapter_num %}Chapter {{ page_next_chapter_num }}.{% endif %}
-            {% endif %}
-          </div>
-          <div class="chapter-label">
-            {{ next_title | escape }}
-          </div>
-        </div>
-      </a>
-    {% endif %}
-
-    {% if page_prev_chapter %}
-      {% if page_prev_chapter_is_part_index %}
-        {% assign prev_title = page_prev_part_label %}
-      {% else %}
-        {% assign prev_title = page_prev_chapter.title %}
-      {% endif %}
-      <a
-        href="{{site.baseurl}}{{ page_prev_chapter.url }}"
-        class="chapter-prev {% unless page_next_chapter %}pager-unique{% endunless %}"
-        aria-label="Previous page: {{ prev_title | escape }}"
-        data-level="1.1"
-        data-path="{{site.baseurl}}{{ page_prev_chapter.url }}">
-        <div class="pager-arrow">
-          <i class="fa fa-arrow-left"></i>
-        </div>
-        <div class="pager-labels">
-          <div class="part">
-            Previous:
-            {% if page_prev_chapter_is_part_index %}
-              Part {{ page_prev_part_num }}.
-            {% else %}
-              {% if page_prev_part_label %}
-                {{ page_prev_part_label }}
-                {% if page_prev_chapter_num %}&#8250;{% endif %}
-              {% endif %}
-              {% if page_prev_chapter_num %}Chapter {{ page_prev_chapter_num }}.{% endif %}
-            {% endif %}
-          </div>
-          <div class="chapter-label">
-            {{ prev_title | escape }}
-          </div>
-        </div>
-      </a>
-    {% endif %}
-
-    <div style="clear: both;"></div>
+  <!-- On-Page Subheadings Navigation (Desktop Outline) -->
+  <div class="lms-outline-column" aria-hidden="true">
+    <div class="lms-outline-sticky">
+      <div class="lms-outline-title">On This Lesson</div>
+      {% capture in_chapter_toc %}
+        {% include toc.html html=content h_min=2 h_max=3 %}
+      {% endcapture %}
+      {{ in_chapter_toc }}
+    </div>
   </div>
-  <!-- .chapter-pager -->
+</div>
+
+{% if page.slug %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mark-read-btn');
+    const nextBtn = document.getElementById('next-lesson-btn');
+    if (!btn) return;
+
+    const btnText = btn.querySelector('.btn-text');
+    const btnIcon = btn.querySelector('i');
+    const chapterSlug = "{{ page.slug }}";
+    
+    const setCompletedState = () => {
+        btn.style.background = 'var(--lms-subtle)';
+        btn.style.color = 'var(--lms-ink-secondary)';
+        btn.style.border = '1px solid var(--lms-hairline)';
+        btn.setAttribute('aria-pressed', 'true');
+        btn.disabled = true;
+        btnText.textContent = 'Lesson Completed ✓';
+        btnIcon.className = 'fa fa-check-circle';
+        if(nextBtn) nextBtn.style.display = 'inline-flex';
+    };
+
+    if (localStorage.getItem('chapter_read_' + chapterSlug) === 'true') {
+        setCompletedState();
+    }
+
+    btn.addEventListener('click', () => {
+        if(btn.disabled) return;
+        localStorage.setItem('chapter_read_' + chapterSlug, 'true');
+        setCompletedState();
+        window.dispatchEvent(new Event('chapter_read'));
+        {% if page_next_chapter %}
+        setTimeout(() => {
+            window.location.href = "{{ site.baseurl }}{{ page_next_chapter.url }}";
+        }, 350);
+        {% endif %}
+    });
+});
+</script>
 {% endif %}
+
 
