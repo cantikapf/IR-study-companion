@@ -7,7 +7,7 @@ simple_summary: "Imagine the world as a giant marketplace where everyone is buyi
 
 ## Introduction
 
-The **global** economic architecture evolved out the historic 1944 Bretton Woods Conference comprised various international economic institutions (IEIs): International Monetary Fund (IMF), the General Agreement on Tariff and Trade (GATT) > **World** Trade Organization (WTO), and **World **Bank**. G 7/G 8 was established in the mid-1970 s to oversee the IEIs. The Financial Stability Forum (FSF) was established in 1999 in response to the Asian Financial Crisis to promote financial stability and develop best practices for financial regulation and supervision. 
+The **global** economic architecture evolved out the historic 1944 Bretton Woods Conference comprised various international economic institutions (IEIs): International Monetary Fund (IMF), the General Agreement on Tariff and Trade (GATT) > **World** Trade Organization (WTO), and **World Bank**. G 7/G 8 was established in the mid-1970 s to oversee the IEIs. The Financial Stability Forum (FSF) was established in 1999 in response to the Asian Financial Crisis to promote financial stability and develop best practices for financial regulation and supervision. 
 
 The economic architecture that was created before and worked well for a few decades has now come under severe strain. First, the governance system of the old architecture does not reflect the move from a uni-polar to multi-polar world. This was accelerated after the global financial crisis (GFC) of 2008-2009, which increased the economic power of Asia, especially China and India. 
 

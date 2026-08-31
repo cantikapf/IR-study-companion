@@ -1,0 +1,12 @@
+{
+  "turn1-learning-enforcer": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell.exe -ExecutionPolicy Bypass -NoProfile -File scripts/enforce_turn1.ps1",
+        "timeout": 10
+      }
+    ]
+  }
+}

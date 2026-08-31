@@ -8,7 +8,7 @@ simple_summary: "Why do countries sometimes fight? Imagine two kids who don't tr
 
 ## Introduction 
 
-The 21st century unfolded against a unique backdrop, marked by tectonic geopolitical shifts as the post-**Cold **War** international order began to take shape. With the collapse of the Soviet bloc, the bipolar world dominated by the US-Soviet rivalry started transitioning into a new multipolar system. This period was characterized by complex dynamics involving the rise of new global powers, uncertainties about power balances, and debates around emerging international institutions and globalization. 
+The 21st century unfolded against a unique backdrop, marked by tectonic geopolitical shifts as the post-**Cold War** international order began to take shape. With the collapse of the Soviet bloc, the bipolar world dominated by the US-Soviet rivalry started transitioning into a new multipolar system. This period was characterized by complex dynamics involving the rise of new global powers, uncertainties about power balances, and debates around emerging international institutions and globalization. 
 
 There were conflicting perspectives on whether this emerging landscape would lead to greater stability and the triumph of Western liberal values, as proposed by Fukuyama's 'End of History' thesis, or fuel new conflicts and civilizational clashes, as envisioned by Samuel Huntington's 'Clash of Civilizations.' The Declaration of a New **World Order** by President Bush Sr. called for greater international cooperation, but also raised concerns about accountability of major powers like the US. Overall, this fluid geopolitical backdrop provided the stage for the unfolding of global affairs in the 21st century.
 

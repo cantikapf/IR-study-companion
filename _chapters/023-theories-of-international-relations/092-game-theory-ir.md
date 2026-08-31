@@ -7,7 +7,7 @@ simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the
 
 ## What is Game Theory?
 
-**Game** theory** is a social science approach used to **analyze the interactions between individuals or groups in strategic situations, particularly in the context of cooperation and conflict**. It is a rational and structural approach that seeks to understand the choices and strategies of actors in a given situation. 
+**Game theory** is a social science approach used to **analyze the interactions between individuals or groups in strategic situations, particularly in the context of cooperation and conflict**. It is a rational and structural approach that seeks to understand the choices and strategies of actors in a given situation. 
 
 Game theory models are often used to analyze the dynamics of cooperation and conflict between states, where each state has two choices: cooperate or defect from the other. **The approach is based on the assumption that actors are rational and self-interested, and seeks to identify the optimal strategies for achieving their goals**. The intersection of realism and game theory has been used to analyze the challenges and possibilities of cooperation in international politics, particularly in the context of anarchical systems and the security **dilemma**.
 
@@ -35,13 +35,14 @@ For example, imagine in this dilemma, two suspects are arrested and held in sepa
 
 The dilemma arises because, while the best outcome for the individuals as a whole is for both to remain silent, **each prisoner has an incentive to testify, as it offers a better individual outcome regardless of the other's choice**. 
 
-The outcomes of the Prisoners' **Dilemma game** are as follows:
+The outcomes of the Prisoner's Dilemma game are structured by a payoff matrix of four possibilities:
 
-1. Both players choose to defect (DD): **Mutually preferable**. The concept of a "reasonable outcome" in the context of the Prisoner's Dilemma game refers to a result that is mutually preferable for all parties involved. The moderate sentence outcome is considered the most reasonable, as it is the only outcome in which both players receive a better outcome
-2. One player chooses to defect and the other chooses to cooperate: The defector benefits from the cooperation of the other, receiving a reduced sentence, while the cooperative player receives the full prison sentence.
-3. Both players choose to cooperate (CC): **Reasonable outcome**. "Reasonable outcome" in the context of the Prisoner's Dilemma game refers to a result that is mutually preferable for all parties involved. In this outcome, both players receive a reduced sentence. 
+1. **Both players choose to cooperate (CC) — [Reward for Mutual Cooperation]**: Both suspects remain silent (or both states disarm). They achieve a mutually beneficial outcome (e.g. 1 month in prison each). This is the socially Pareto-optimal outcome.
+2. **Both players choose to defect (DD) — [Punishment for Mutual Defection]**: Both suspects confess (or both states arm). Because each acts out of rational fear and self-interest, both end up worse off than if they had cooperated (e.g. 8 months in prison each). Crucially, **DD represents the Nash Equilibrium** of the game, because neither player has an incentive to unilaterally change their strategy.
+3. **One defects, the other cooperates (DC vs CD) — [Temptation vs Sucker's Payoff]**: The defector receives freedom (0 months), while the cooperator suffers the maximum penalty (12 months). The temptation to exploit the other (DC) and the fear of being exploited (CD) drive rational actors to defect.
 
-"What makes this configuration disturbing is that even if each side prefers CC to DD (and each knows that this is the other's preference) the result can be DD because each is driven by the hope of gaining its first choice - which would be to exploit the other (DC) and its fear that, if it cooperates, the other will exploit it (CD)." ([Jervis, 1988](https://www.jstor.org/stable/2010216)).
+As Robert Jervis highlighted:
+> "What makes this configuration disturbing is that even if each side prefers CC to DD (and each knows that this is the other's preference) the result can be DD because each is driven by the hope of gaining its first choice - which would be to exploit the other (DC) and its fear that, if it cooperates, the other will exploit it (CD)." ([Jervis, 1988](https://www.jstor.org/stable/2010216)).
 
 ## Prisoner's Dilemma in International Relation Context
 

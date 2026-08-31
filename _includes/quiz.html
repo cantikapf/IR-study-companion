@@ -1,85 +1,130 @@
 <style>
 .quiz-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 32px 0;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    font-family: 'Inter', sans-serif;
+    background: var(--surface-bg, #ffffff);
+    border: 1px solid var(--border-hairline, rgba(0, 0, 0, 0.1));
+    border-radius: var(--radius-card, 14px);
+    padding: 1.75rem;
+    margin: 2.5rem 0;
+    box-shadow: var(--shadow-elevation-1, 0 1px 2px rgba(0, 0, 0, 0.04));
+    font-family: inherit;
     color: inherit;
+}
+.quiz-header-badge {
+    font-size: 0.725rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-tertiary, #666666);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+}
+.quiz-header-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink-primary, #000000);
 }
 .quiz-question {
     font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 16px;
+    font-weight: 650;
+    margin-bottom: 1.25rem;
+    line-height: 1.45;
+    color: var(--ink-primary, #000000);
+    text-wrap: balance;
 }
 .quiz-options {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.65rem;
 }
 .quiz-option {
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.03);
-    border: 2px solid transparent;
+    padding: 0.95rem 1.15rem;
+    border-radius: var(--radius-inner, 8px);
+    background: var(--surface-bg, #ffffff);
+    border: 1px solid var(--border-hairline, rgba(0, 0, 0, 0.1));
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
     font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.45;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    min-height: 48px;
+    color: var(--ink-secondary, #333333);
 }
 .quiz-option:hover {
-    background: rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
+    background: var(--surface-hover, rgba(0, 0, 0, 0.04));
+    border-color: var(--border-strong, rgba(0, 0, 0, 0.18));
 }
 .quiz-option.selected {
-    border-color: #4facfe;
-    background: rgba(79, 172, 254, 0.1);
+    border-color: var(--ink-primary, #000000);
+    background: var(--surface-pressed, rgba(0, 0, 0, 0.08));
+    color: var(--ink-primary, #000000);
 }
 .quiz-option.correct {
-    border-color: #00f2fe;
-    background: rgba(0, 242, 254, 0.2);
-    color: #008a96;
+    border-color: var(--semantic-success-border, rgba(16, 185, 129, 0.3));
+    background: var(--semantic-success-bg, rgba(16, 185, 129, 0.1));
+    color: var(--semantic-success-ink, rgb(5, 150, 105));
+    font-weight: 600;
 }
 .quiz-option.wrong {
-    border-color: #ff4b2b;
-    background: rgba(255, 75, 43, 0.1);
-    color: #cc250a;
+    border-color: var(--semantic-error-border, rgba(239, 68, 68, 0.25));
+    background: var(--semantic-error-bg, rgba(239, 68, 68, 0.08));
+    color: var(--semantic-error-ink, rgb(220, 38, 38));
 }
 .quiz-submit {
-    margin-top: 20px;
-    padding: 10px 24px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
+    margin-top: 1.25rem;
+    padding: 0.65rem 1.4rem;
+    background: var(--brand-accent, #111827);
+    color: var(--brand-accent-contrast, #ffffff);
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
+    border-radius: var(--radius-inner, 8px);
+    font-weight: 600;
+    font-size: 0.875rem;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 44px;
+    transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
 .quiz-submit:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+    opacity: 0.92;
+    transform: translateY(-1px);
 }
 .quiz-feedback {
-    margin-top: 16px;
-    font-weight: 600;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-inner, 8px);
+    font-size: 0.875rem;
     display: none;
+    line-height: 1.5;
+}
+.quiz-feedback.show-correct {
+    display: block;
+    background: var(--semantic-success-bg, rgba(16, 185, 129, 0.1));
+    border: 1px solid var(--semantic-success-border, rgba(16, 185, 129, 0.3));
+    color: var(--semantic-success-ink, rgb(5, 150, 105));
+}
+.quiz-feedback.show-wrong {
+    display: block;
+    background: var(--semantic-error-bg, rgba(239, 68, 68, 0.08));
+    border: 1px solid var(--semantic-error-border, rgba(239, 68, 68, 0.25));
+    color: var(--semantic-error-ink, rgb(220, 38, 38));
 }
 </style>
 
-<div class="quiz-container" id="quiz-{{ include.id }}">
+<div class="quiz-container" id="quiz-{{ include.id }}" aria-label="Knowledge Checkpoint">
+    <div class="quiz-header-badge">Knowledge Checkpoint</div>
     <div class="quiz-question">{{ include.question }}</div>
-    <div class="quiz-options">
-        <div class="quiz-option" data-idx="1" tabindex="0" role="button">{{ include.opt1 }}</div>
-        <div class="quiz-option" data-idx="2" tabindex="0" role="button">{{ include.opt2 }}</div>
-        <div class="quiz-option" data-idx="3" tabindex="0" role="button">{{ include.opt3 }}</div>
-        <div class="quiz-option" data-idx="4" tabindex="0" role="button">{{ include.opt4 }}</div>
+    <div class="quiz-options" role="radiogroup">
+        <div class="quiz-option" data-idx="1" tabindex="0" role="radio" aria-checked="false">{{ include.opt1 }}</div>
+        <div class="quiz-option" data-idx="2" tabindex="0" role="radio" aria-checked="false">{{ include.opt2 }}</div>
+        <div class="quiz-option" data-idx="3" tabindex="0" role="radio" aria-checked="false">{{ include.opt3 }}</div>
+        <div class="quiz-option" data-idx="4" tabindex="0" role="radio" aria-checked="false">{{ include.opt4 }}</div>
     </div>
-    <button class="quiz-submit" onclick="submitQuiz('{{ include.id }}', '{{ include.correct }}')">Submit</button>
+    <button class="quiz-submit" onclick="submitQuiz('{{ include.id }}', '{{ include.correct }}')">Verify Answer</button>
     <div class="quiz-feedback" id="feedback-{{ include.id }}" aria-live="polite"></div>
 </div>
 
@@ -101,9 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if(btn) btn.style.display = 'none';
         const feedback = document.getElementById('feedback-' + quizId);
         if(feedback) {
-            feedback.textContent = "You have already completed this quiz! ✅";
-            feedback.style.display = 'block';
-            feedback.style.color = '#008a96';
+            feedback.textContent = "Completed! You have already verified this question correctly. ✓";
+            feedback.className = 'quiz-feedback show-correct';
         }
     }
 
@@ -111,8 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
     options.forEach(opt => {
         const selectOption = () => {
             if(localStorage.getItem('quiz_' + quizId + '_completed')) return;
-            options.forEach(o => o.classList.remove('selected'));
+            options.forEach(o => {
+                o.classList.remove('selected');
+                o.setAttribute('aria-checked', 'false');
+            });
             opt.classList.add('selected');
+            opt.setAttribute('aria-checked', 'true');
         };
         opt.addEventListener('click', selectOption);
         opt.addEventListener('keydown', (e) => {
@@ -130,9 +178,8 @@ function submitQuiz(id, correctIdx) {
     const feedback = document.getElementById('feedback-' + id);
     
     if(!selected) {
-        feedback.textContent = "Please select an answer.";
-        feedback.style.display = 'block';
-        feedback.style.color = '#ff4b2b';
+        feedback.textContent = "Please select an option before submitting.";
+        feedback.className = 'quiz-feedback show-wrong';
         return;
     }
     
@@ -140,24 +187,22 @@ function submitQuiz(id, correctIdx) {
     if(selectedIdx === correctIdx) {
         selected.classList.add('correct');
         selected.classList.remove('selected');
-        feedback.textContent = "That's correct! 🎉";
-        feedback.style.color = '#008a96';
-        feedback.style.display = 'block';
+        feedback.textContent = "Correct! You have successfully mastered this core concept. ✓";
+        feedback.className = 'quiz-feedback show-correct';
         
         // Save to local storage
         if (!localStorage.getItem('quiz_' + id + '_completed')) {
             localStorage.setItem('quiz_' + id + '_completed', 'true');
-            // Dispatch event for progress tracker
             window.dispatchEvent(new Event('quiz_completed'));
         }
         
         container.querySelector('.quiz-submit').style.display = 'none';
     } else {
         selected.classList.add('wrong');
-        setTimeout(() => selected.classList.remove('wrong'), 1000);
-        feedback.textContent = "Incorrect. Try again.";
-        feedback.style.color = '#cc250a';
-        feedback.style.display = 'block';
+        setTimeout(() => selected.classList.remove('wrong'), 800);
+        feedback.textContent = "Incorrect. Review the passage above and try again.";
+        feedback.className = 'quiz-feedback show-wrong';
     }
 }
 </script>
+

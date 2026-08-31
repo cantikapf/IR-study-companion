@@ -19,7 +19,7 @@ Inequality can take different forms and span various groups within society. Two 
 
 **Vertical inequality** refers to inequality among individuals within a country. This considers the distribution of income, wealth, or other attributes across the population. Measures of vertical inequality examine disparities between richer and poorer people within a society.
 
-In contrast,** **horizontal inequality** looks at disparities between groups that are at the same economic level. Rather than focusing on individuals, horizontal inequality examines differences between groups defined by characteristics like ethnicity, race, religion, or geography. For example, horizontal inequality may capture gaps in income between ethnic groups in a country, even if they share similar economic status overall.
+In contrast, **horizontal inequality** looks at disparities between groups that are at the same economic level. Rather than focusing on individuals, horizontal inequality examines differences between groups defined by characteristics like ethnicity, race, religion, or geography. For example, horizontal inequality may capture gaps in income between ethnic groups in a country, even if they share similar economic status overall.
 
 While vertical inequality concentrates on individuals, horizontal inequality centers on inequality between groups and categories of people. Assessing both vertical and horizontal inequality provides a more comprehensive understanding of disparities within a society. The distinction helps clarify whether inequality stems from gaps between individuals or divides between different groups. Considering both dimensions is crucial when evaluating and addressing inequality.
 

@@ -8,7 +8,7 @@ simple_summary: "Think of this chapter like the rules of a playground. Without r
 
 ## Dispute Settlement Process Overview
 
-The **dispute** settlement** process in the **WTO** typically involves three main stages:
+The **dispute settlement** process in the **WTO** typically involves three main stages:
 
 - **Consultations** - The parties in dispute participate in direct consultations to try to reach a mutually agreed solution. Consultations give the parties an opportunity to discuss the matter and find a satisfactory resolution without proceeding further in the dispute settlement process.
 - **Adjudication** - If consultations fail to resolve the dispute within 60 days, the complainant may request that a panel be established to adjudicate the matter. The panel investigates the dispute, consults with experts if needed, and issues a written report with findings and recommendations. If either party appeals, the report will be reviewed by the Appellate Body. 

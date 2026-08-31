@@ -8,7 +8,7 @@ simple_summary: "Have you ever been in a school club where everyone has to vote 
 ## Introduction
 The Association of Southeast Asian Nations (ASEAN) was established in 1967 by Indonesia, Malaysia, Philippines, Singapore and Thailand to promote regional cooperation in politics, security, economy and culture. Over the years, ASEAN expanded to include 10 Southeast Asian countries - Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand and Vietnam. 
 
-In 2003, **ASEAN** leaders resolved to establish an **ASEAN **Community** comprising of three pillars - the ASEAN Political-Security Community, the **ASEAN Economic** Community and the ASEAN Socio-Cultural Community. The purpose was to accelerate regional integration in Southeast Asia in the areas of politics, security, economy and socio-culture. The ASEAN Community was formally established on 31 December 2015, marking a major milestone in ASEAN cooperation and integration.
+In 2003, **ASEAN** leaders resolved to establish an **ASEAN Community** comprising of three pillars - the ASEAN Political-Security Community, the **ASEAN Economic** Community and the ASEAN Socio-Cultural Community. The purpose was to accelerate regional integration in Southeast Asia in the areas of politics, security, economy and socio-culture. The ASEAN Community was formally established on 31 December 2015, marking a major milestone in ASEAN cooperation and integration.
 
 ## Purpose of the ASEAN Community
 

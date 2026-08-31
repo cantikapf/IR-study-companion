@@ -265,5 +265,637 @@
     --c-danger-bg: #ffe0e0;
     --c-danger-text: #600;
     --c-danger-title: #c00;
-    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-family: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* Scandinavian Neutral Alpha Ladder (scandinavian-design) */
+    --canvas-bg: #ffffff;
+    --surface-bg: #ffffff;
+    --surface-subtle: rgb(0 0 0 / 2%);
+    --surface-hover: rgb(0 0 0 / 4%);
+    --surface-pressed: rgb(0 0 0 / 8%);
+
+    /* Ink Ladder */
+    --ink-primary: #000000;
+    --ink-secondary: rgb(0 0 0 / 64%);
+    --ink-tertiary: rgb(0 0 0 / 56%);
+    --ink-muted: rgb(0 0 0 / 38%);
+
+    /* Structural Hairlines & Elevation Shadows (jakubkrehel/better-ui) */
+    --border-hairline: rgb(0 0 0 / 10%);
+    --border-strong: rgb(0 0 0 / 18%);
+    --shadow-elevation-1: 0 1px 2px rgb(0 0 0 / 4%), 0 4px 12px rgb(0 0 0 / 5%);
+    --shadow-elevation-2: 0 4px 6px -1px rgb(0 0 0 / 5%), 0 12px 24px -4px rgb(0 0 0 / 8%);
+
+    /* Semantic Accents */
+    --semantic-success-bg: rgb(16 185 129 / 10%);
+    --semantic-success-ink: rgb(5 150 105);
+    --semantic-success-border: rgb(16 185 129 / 30%);
+
+    --semantic-error-bg: rgb(239 68 68 / 8%);
+    --semantic-error-ink: rgb(220 38 38);
+    --semantic-error-border: rgb(239 68 68 / 25%);
+
+    --brand-accent: #111827;
+    --brand-accent-contrast: #ffffff;
+
+    /* Concentric Radius & Capped Measure */
+    --radius-card: 14px;
+    --radius-inner: 8px;
+    --radius-pill: 9999px;
+    --measure-prose: 68ch;
+    --measure-container: 1120px;
+    --ease-spring: cubic-bezier(0.2, 0, 0, 1);
+    --duration-interactive: 0.2s;
 }
+
+/* ==========================================================================
+   Scandinavian Typography & Capped Measure (jakubkrehel/better-typography)
+   ========================================================================== */
+.markdown-section {
+    max-width: var(--measure-prose);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.heading-chapter-title {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    color: var(--ink-primary);
+}
+
+.markdown-section p,
+.chapter-abstract {
+    text-wrap: pretty;
+    line-height: 1.68;
+    color: var(--ink-secondary);
+}
+
+.tabular-number {
+    font-variant-numeric: tabular-nums;
+}
+
+.eyebrow-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-tertiary);
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Course Player Top Bar & Actions (Utilitarian LMS)
+   ========================================================================== */
+.course-player-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-hairline);
+    font-size: 0.825rem;
+    color: var(--ink-tertiary);
+}
+
+.course-player-crumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-player-estimate {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Learning Outcomes Callout Include */
+.learning-outcomes-box {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.outcomes-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.outcomes-header h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 650;
+    margin: 0;
+    color: var(--ink-primary);
+}
+
+.outcomes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.outcomes-list li {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    line-height: 1.5;
+}
+
+.outcomes-list li::before {
+    content: "—";
+    color: var(--ink-tertiary);
+    font-weight: 600;
+}
+
+/* Course Player Action Bar (Footer Action) */
+.course-action-bar {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-hairline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn-complete-continue {
+    background: var(--brand-accent);
+    color: var(--brand-accent-contrast) !important;
+    border: none;
+    padding: 0.85rem 1.65rem;
+    border-radius: var(--radius-inner);
+    font-size: 0.95rem;
+    font-weight: 650;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 48px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: all var(--duration-interactive) var(--ease-spring);
+    text-decoration: none !important;
+}
+
+.btn-complete-continue:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.btn-prev-lesson {
+    background: transparent;
+    border: 1px solid var(--border-hairline);
+    color: var(--ink-secondary) !important;
+    padding: 0.85rem 1.25rem;
+    border-radius: var(--radius-inner);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none !important;
+    transition: all var(--duration-interactive) var(--ease-spring);
+}
+
+.btn-prev-lesson:hover {
+    color: var(--ink-primary) !important;
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+}
+
+/* ==========================================================================
+   Home Academy Utilitarian Styles
+   ========================================================================== */
+.home-viewport {
+    width: 100%;
+    max-width: var(--measure-container);
+    margin: 0 auto;
+    padding: 2.5rem 1rem 6rem;
+}
+
+.home-hero {
+    margin-bottom: 3rem;
+    max-width: 820px;
+}
+
+.home-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-tertiary);
+    margin-bottom: 1rem;
+}
+
+.home-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink-primary);
+}
+
+.home-title {
+    font-size: 2.75rem;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--ink-primary);
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    text-wrap: balance;
+}
+
+.home-description {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--ink-secondary);
+    margin-bottom: 0;
+    max-width: 68ch;
+    text-wrap: pretty;
+}
+
+/* Dynamic Resume Learning Card */
+.resume-card {
+    background: var(--surface-bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-card);
+    padding: 1.75rem 2rem;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--shadow-elevation-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.resume-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.8125rem;
+}
+
+.resume-tag {
+    background: var(--surface-hover);
+    border: 1px solid var(--border-hairline);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-inner);
+    font-weight: 600;
+    color: var(--ink-primary);
+}
+
+.resume-lesson-title {
+    font-size: 1.25rem;
+    font-weight: 650;
+    color: var(--ink-primary);
+    margin-bottom: 0.75rem;
+}
+
+.resume-progress-container {
+    max-width: 440px;
+}
+
+.resume-progress-track {
+    width: 100%;
+    height: 6px;
+    background: var(--surface-hover);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    margin-bottom: 0.35rem;
+}
+
+.resume-progress-fill {
+    height: 100%;
+    background: var(--ink-primary);
+    border-radius: var(--radius-pill);
+    transition: width 0.4s var(--ease-spring);
+}
+
+.resume-progress-caption {
+    font-size: 0.775rem;
+    color: var(--ink-tertiary);
+}
+
+.resume-action-btn {
+    background: var(--brand-accent);
+    color: var(--brand-accent-contrast) !important;
+    text-decoration: none !important;
+    padding: 0.9rem 1.65rem;
+    border-radius: var(--radius-inner);
+    font-size: 0.95rem;
+    font-weight: 650;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    white-space: nowrap;
+    min-height: 48px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: all var(--duration-interactive) var(--ease-spring);
+}
+
+.resume-action-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* Metrics Strip */
+.metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin-bottom: 3.5rem;
+    border-top: 1px solid var(--border-hairline);
+    border-bottom: 1px solid var(--border-hairline);
+}
+
+.metric-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink-primary);
+}
+
+.metric-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-tertiary);
+}
+
+/* Section Header */
+.home-section-header {
+    margin-bottom: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.home-section-title {
+    font-size: 1.4rem;
+    font-weight: 650;
+    color: var(--ink-primary);
+}
+
+.home-section-subtitle {
+    font-size: 0.95rem;
+    color: var(--ink-tertiary);
+}
+
+/* Tracks Grid */
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+}
+
+.track-card {
+    background: var(--surface-bg);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-card);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--duration-interactive) var(--ease-spring);
+    box-shadow: var(--shadow-elevation-1);
+}
+
+.track-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevation-2);
+}
+
+.track-eyebrow-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.track-number {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-tertiary);
+}
+
+.track-badge {
+    font-size: 0.725rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-inner);
+    background: var(--surface-hover);
+    color: var(--ink-secondary);
+}
+
+.track-title {
+    font-size: 1.25rem;
+    font-weight: 650;
+    color: var(--ink-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.track-description {
+    font-size: 0.925rem;
+    color: var(--ink-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.55;
+}
+
+.track-modules-list {
+    list-style: none;
+    border-top: 1px solid var(--border-hairline);
+    padding: 1rem 0 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.track-module-item {
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.track-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-hairline);
+}
+
+.track-link-btn {
+    text-decoration: none !important;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--ink-primary) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap var(--duration-interactive) var(--ease-spring);
+}
+
+.track-link-btn:hover {
+    gap: 0.65rem;
+}
+
+/* Labs Showcase Grid */
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.lab-card {
+    background: var(--surface-bg);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--duration-interactive) var(--ease-spring);
+}
+
+.lab-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+}
+
+.lab-badge-type {
+    font-size: 0.725rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-primary);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.lab-card-title {
+    font-size: 1.1rem;
+    font-weight: 650;
+    color: var(--ink-primary);
+    margin-bottom: 0.5rem;
+}
+
+.lab-card-desc {
+    font-size: 0.875rem;
+    color: var(--ink-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.55;
+}
+
+.lab-card-btn {
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-primary) !important;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-inner);
+    font-size: 0.825rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-decoration: none !important;
+    min-height: 40px;
+    transition: all var(--duration-interactive) var(--ease-spring);
+}
+
+.lab-card-btn:hover {
+    background: var(--ink-primary);
+    color: #ffffff !important;
+    border-color: var(--ink-primary);
+}
+
+/* Dark Mode Overrides for Utilitarian System */
+body.dark-theme {
+    --canvas-bg: #0a0a0a;
+    --surface-bg: #121212;
+    --surface-subtle: #181818;
+    --surface-hover: #222222;
+    --surface-pressed: #2a2a2a;
+    --ink-primary: #f9fafb;
+    --ink-secondary: rgb(255 255 255 / 65%);
+    --ink-tertiary: rgb(255 255 255 / 45%);
+    --border-hairline: rgb(255 255 255 / 12%);
+    --border-strong: rgb(255 255 255 / 22%);
+    --brand-accent: #f9fafb;
+    --brand-accent-contrast: #0a0a0a;
+}
+
+body.dark-theme .book-header {
+    background: #0a0a0a !important;
+    border-bottom: 1px solid var(--border-hairline) !important;
+}
+
+body.dark-theme .book-summary {
+    background: #0d0d0d !important;
+    border-right: 1px solid var(--border-hairline) !important;
+}
+
+body.dark-theme .book,
+body.dark-theme .book-body,
+body.dark-theme .page-inner {
+    background: #0a0a0a !important;
+}
+
+@media (max-width: 960px) {
+    .tracks-grid,
+    .labs-grid {
+        grid-template-columns: 1fr;
+    }
+    .resume-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .home-title {
+        font-size: 2.15rem;
+    }
+}
+

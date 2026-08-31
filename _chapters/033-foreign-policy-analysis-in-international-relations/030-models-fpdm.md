@@ -7,7 +7,7 @@ simple_summary: "Diplomacy is basically the art of talking things out instead of
 
 ## Why we should study Foreign Policy Analysis?
 
-FPA examines the decision-making process involved in making **foreign** **policy**, including the key actors, institutions, beliefs, perceptions, and domestic and international pressures that influence policy choices. It seeks to shed light on how and why foreign **policy **decisions** are made.
+FPA examines the decision-making process involved in making **foreign** **policy**, including the key actors, institutions, beliefs, perceptions, and domestic and international pressures that influence policy choices. It seeks to shed light on how and why foreign **policy decisions** are made.
 
 At its core, FPA seeks to understand and explain the causes and consequences of foreign policy decisions. It is an interdisciplinary field, drawing on theories and insights from psychology, sociology, economics, history, and other fields to enrich explanations for foreign policy behavior.
 
@@ -62,7 +62,7 @@ RAM has its roots in economics and uses concepts such as utility maximization to
 
 #### The steps of Rational Model of Decision Making
 
-**A set of steps in the rational model (Greg Crashman,1993)** :
+**A set of steps in the rational model (Greg Cashman, 1993)**:
 - Identify problem
 - Identify and rank goals (preferences)
 - Gather information (this can be ongoing)

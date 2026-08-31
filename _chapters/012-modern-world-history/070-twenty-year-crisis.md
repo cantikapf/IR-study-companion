@@ -8,7 +8,7 @@ simple_summary: "Think of this chapter as an important puzzle piece. It explains
 
 ## Introduction 
 
-E.H. Carr's influential 1939 book "The Twenty Years' Crisis: 1919-1939" examined the turbulent interwar period between the two **world** wars. Carr, a British historian, journalist, and international relations theorist, wrote the book in response to the escalating international tensions that led to the outbreak of **World **War** II. 
+E.H. Carr's influential 1939 book "The Twenty Years' Crisis: 1919-1939" examined the turbulent interwar period between the two **world** wars. Carr, a British historian, journalist, and international relations theorist, wrote the book in response to the escalating international tensions that led to the outbreak of **World War II**. 
 
 Published on the eve of WWII, "The Twenty Years' Crisis" provided a thorough critique of international relations in the preceding two decades. Carr challenged the prevailing optimism and liberal internationalism of the era, as exemplified by Woodrow Wilson's "Fourteen Points" speech and the establishment of the **League** of **Nations**. 
 

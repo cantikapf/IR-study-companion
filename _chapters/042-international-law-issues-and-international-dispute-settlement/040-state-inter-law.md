@@ -9,7 +9,7 @@ simple_summary: "Think of this chapter like the rules of a playground. Without r
 
 Secession is the separation of part of the territory of an existing **state** so that the territory can become a new state. It differs from dissolution, which is when a state ceases to exist entirely and its territory may be reorganized into one or more new **states**. 
 
-Secession is controversial under **international** law** and is often rejected by states. When part of a state attempts to secede, it is typically met with opposition from the existing state which views it as a threat to its territorial integrity. There are few examples of successful secessions that have been accepted by the international community. States generally argue that secession should only occur with the consent of the existing state.
+Secession is controversial under **international law** and is often rejected by states. When part of a state attempts to secede, it is typically met with opposition from the existing state which views it as a threat to its territorial integrity. There are few examples of successful secessions that have been accepted by the international community. States generally argue that secession should only occur with the consent of the existing state.
 
 The right to self-determination is often raised in arguments for secession. However, self-determination is generally interpreted as a right to internal self-determination (meaningful political, economic and cultural participation within one's existing state) rather than external self-determination (the right to separate and form a new state). Overall, secession remains a complex issue in international law and global politics.
 

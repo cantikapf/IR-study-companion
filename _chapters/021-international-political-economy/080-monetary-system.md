@@ -10,7 +10,7 @@ The international monetary system facilitates economic transactions between coun
 
 When the system functions smoothly, international trade and investment thrive. However, when it malfunctions or collapses, it can grind global economic activity to a halt. The **international monetary** system aims to mitigate risks and minimize disruptions that can ripple across borders. 
 
-At its core, the system exists to overcome the lack of globally accepted currencies. With countries using their own legal tender, exchanges are necessary to conduct business across borders. The prevailing **exchange** rates** at any given time ultimately reflect the complex interactions between global supply and demand for currencies.
+At its core, the system exists to overcome the lack of globally accepted currencies. With countries using their own legal tender, exchanges are necessary to conduct business across borders. The prevailing **exchange rates** at any given time ultimately reflect the complex interactions between global supply and demand for currencies.
 
 By establishing structures and guidelines for currency valuation and exchange, the international **monetary system** provides the foundation for international economic engagement. Its sound functioning facilitates cross-border transactions that increase global productivity and raise standards of living.
 

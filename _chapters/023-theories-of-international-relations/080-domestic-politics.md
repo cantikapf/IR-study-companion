@@ -34,9 +34,9 @@ The process is sequential, with the requirement that any Level I agreement must 
 
 The concept of "win-set" in the two-level games theory is a crucial determinant of the possibility of reaching an agreement in international negotiations. The win-set refers to the set of all possible Level I agreements that would gain the necessary majority among the constituents when simply voted up or down. It is influenced by several factors, including:
 
-1. **Distribution of power and preferences**: The size of the win-set depends on the distribution of power, preferences, and possible coalitions among Level 1 constituents.
-2. **Domestic political constraints**: The preferences and power of domestic actors, such as interest groups, political parties, bureaucrats, and the general public, can affect the size of the win-set.
-3. **Overlap of win-sets**: The likelihood of reaching an agreement is increased if the win-sets of the negotiating parties overlap, meaning that there is some common ground on which they can agree. Conversely, if the win-sets do not overlap, the negotiations are more likely to break down.
+1. **Distribution of power and preferences**: The size of the win-set depends on the distribution of power, preferences, and possible coalitions among Level II constituents.
+2. **Domestic political constraints**: The preferences and power of domestic actors, such as interest groups, political parties, bureaucrats, and the general public, directly determine the size and flexibility of the Level II win-set.
+3. **Overlap of win-sets**: The likelihood of reaching an international agreement is increased if the Level II win-sets of the negotiating parties overlap. Conversely, if the win-sets do not overlap, Level I negotiations inevitably break down or face involuntary defection.
 
 ## What if state's failed to ratify the agreement?
 
