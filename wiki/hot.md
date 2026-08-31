@@ -45,7 +45,8 @@ tags:
   3. `_layouts/chapter.html`: Ditransformasikan menjadi *Course Player Focus View* bebas distraksi dengan metadata bar (durasi baca otomatis), on-page outline navigasi sticky, dan *sticky action dock*.
   4. `_includes/curriculum_drawer.html` & `assets/js/course-player.js`: Drawer silabus off-canvas modern dengan status centang realtime (`localStorage`), pencarian instan 157 materi, dan shortcut keyboard `S`/`Esc`.
   5. `_includes/head.html` & `_includes/footer.html`: Membersihkan script dan stylesheet usang GitBook 2016.
-- Pengujian otomatis `pytest` (6 passed) dan build Jekyll produksi 100% sukses tanpa galat (157 bab terkompilasi dalam 53 detik).
+  6. **Permalinks & Navigation Audit**: Mengoreksi seluruh tautan di `_pages/index.md` dari format path direktori lama ke flat slug permalinks (`/:slug.html`), menautkan anchor simulasi (`#crisis-sim`, `#game-theory-sim`, `#wto-sim`), dan mengonfirmasi 0 broken link di seluruh 2.828 file output build.
+- Pengujian otomatis `pytest` (6 passed) dan build Jekyll produksi 100% sukses tanpa galat (157 bab terkompilasi dalam 80 detik).
 
 ## Active Threads
 
