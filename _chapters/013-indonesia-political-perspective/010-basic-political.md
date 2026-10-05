@@ -2,7 +2,7 @@
 slug: basic-political
 title: Basic Poilitical Concepts
 abstract: What is politics? When did it start? What are the basic concepts of politics? This chapter will answer these questions and more.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "What is politics really about beneath the noise of campaigns and parliaments? At its core, politics is the science of power: who gets what, when, and how, and who holds the legitimate authority to enforce collective rules. The ultimate puzzle of political life is striking a delicate balance between the state authority needed to preserve peace and order, and the essential civic liberties required for citizens to truly flourish."
 ---
 
 
@@ -179,7 +179,6 @@ Government is the organization that makes, enforces, and implements political de
 
 The functions of government directly impact the lives of citizens. By studying how governments fulfill these core responsibilities, political science develops insights into the problems and prospects of societies. Understanding the role of government provides citizens the knowledge to participate effectively in civic life and shape public policies for the common good.
 
----
 
 ---
 

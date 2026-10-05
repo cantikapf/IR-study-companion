@@ -2,7 +2,7 @@
 slug: political-institution
 title: Indonesia Political Institutions, Political Party, And Interest Group
 abstract: This chapter will explore the political institutions, political parties, and interest groups in Indonesia.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "How did the world's largest archipelagic nation evolve from colonial bureaucratic co-optation into a resilient constitutional democracy? Indonesia navigated unstable parliamentary cabinets in the 1950s, presidential decrees under Guided Democracy, and thirty years of tightly controlled New Order authoritarianism before unleashing Reformasi. By dismantling imperial executive dominance and establishing independent courts, Indonesia proved that deep institutional checks can survive and anchor an extraordinarily diverse society."
 ---
 
 
@@ -319,7 +319,6 @@ The judicial system in Indonesia underwent significant reforms following the end
 
 These post-reformation judicial institutions have played important oversight, anti-corruption and public advocacy roles in the years since democratic reforms began in Indonesia.
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 title: The Rise of the European Economic Giant
 slug: european-economic
 abstract: The rise of the European Union as a global economic giant has transformed the global economic landscape, with its significant trading power, economic influence, and capacity for global integration. This pages explores the historical context, the development of economic unions in Europe, and the EU's role as a major player in international development and trade.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "How did a continent shattered by two devastating world wars rebuild itself into the planet's wealthiest, most integrated single market? By pooling vital industries like coal, steel, and eventually monetary policy, Western European leaders made armed conflict among themselves materially impossible while forging an economic titan. Today, even without a standing military, the European Union commands global power through the 'Brussels Effect'—forcing multinational corporations across the globe to comply with European data, trade, and environmental standards to access its half-billion consumers."
 ---
 
 ## Introduction
@@ -97,7 +97,6 @@ The EU's economic might also gives it significant influence in international fin
 
 In summary, through the creation of a common market and shared currency, the nations of Europe have successfully forged one of the largest economic entities in the world. The European Union today stands alongside the US and China as one of the three pillars of the global economy, giving it substantial influence in economic affairs. Its trade dominance and financial power ensure the EU will remain an impactful force shaping the global economic landscape for years to come.
 
----
 
 ---
 

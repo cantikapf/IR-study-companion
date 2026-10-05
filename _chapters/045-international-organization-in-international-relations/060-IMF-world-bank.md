@@ -2,7 +2,7 @@
 title: The IMF And The World Bank
 slug: imf-world-bank
 abstract: This page provides an introduction to the International Monetary Fund (IMF) and the World Bank, highlighting their establishment after World War II and their role in promoting economic cooperation and stability. It also explains the original roles and purpose of the IMF, including stabilizing foreign exchange rates and assisting countries with balance of payments issues.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Born from the 1944 Bretton Woods conference to prevent the competitive currency devaluations that fueled the Great Depression, the IMF and World Bank are the supreme architects of global finance. While the IMF acts as an emergency international lender of last resort for balance of payments crises, its loans often come with painful structural adjustment conditionalities that spark bitter domestic backlashes. Furthermore, because voting power is tied to financial quotas rather than population, wealthy Western powers retain decisive control, fueling growing demands for institutional reform from rising Global South economies."
 ---
 
 ## Introduction
@@ -104,7 +104,6 @@ However, the IMF faces criticism that its neoliberal and interventionist approac
 
 Looking forward, the IMF must continue adapting to fulfill its purpose of ensuring international financial stability during crises, while balancing country ownership and mitigating side effects of its policies. Its governance structure may need reforms to reflect the multifaceted needs of developing economies. But the joint commitment of member states will be crucial in enabling the IMF to equitably meet financing needs during global shocks like the pandemic.
 
----
 
 ---
 
@@ -113,3 +112,8 @@ Looking forward, the IMF must continue adapting to fulfill its purpose of ensuri
 
 ### Knowledge Check
 {% include quiz.html id="quiz_060_IMF_world_bank" question="What was the IMF originally established to do?" opt1="Provide humanitarian aid to developing countries" opt2="Stabilize foreign exchange rates and assist with balance of payments" opt3="Promote global free trade agreements" opt4="Enforce economic sanctions on countries" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="045" %}

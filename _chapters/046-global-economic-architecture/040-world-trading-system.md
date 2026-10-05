@@ -2,7 +2,7 @@
 title: World Trading System In The 20th Century And Beyond
 slug: world-trading-system
 abstract: This page provides an introduction to international economics, covering topics such as international trade theory, patterns of trade, trade policy, international finance, and the role of international trade organizations.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "During the 1930s, desperate governments slapped retaliatory tariffs on foreign imports, triggering an economic death spiral that deepened the Great Depression. To end that beggar-thy-neighbor cycle, nations forged the GATT and WTO around a groundbreaking standard: treat all foreign trading partners equally and resolve disputes through legal panels rather than tariff shootouts. But as global rounds stalled, countries pivoted to competing regional pacts, creating a tangled 'noodle bowl' of overlapping customs rules that modern exporters must navigate."
 ---
 
 ## Introduction to International Economics
@@ -187,7 +187,6 @@ The political economy of trade examines how political pressures and institutions
 
 In summary, the political economy of trade examines how political factors like lobbying, public opinion, and democratic institutions shape trade policy and outcomes. It provides insights into trends like protectionism and fluctuations in support for liberalization.
 
----
 
 ---
 

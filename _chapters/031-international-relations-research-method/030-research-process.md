@@ -2,7 +2,7 @@
 title: Research Process
 slug: research-process
 abstract: the phase of making research in International Relations study
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Writing an academic thesis or policy report is not a chaotic sprint of last-minute reading; it is a structured, eight-step journey. Before collecting a single survey or reading treaty archives, a researcher must clearly define the puzzle, choose an airtight research design, and specify sampling rules. By treating research as an orderly cycle—from problem formulation to data analysis and reporting—scholars ensure their findings can withstand tough scrutiny."
 ---
 
 ## Summary
@@ -103,7 +103,6 @@ After collecting the data, it needs to be prepared for analysis. This can involv
 
 Finally, the researcher has to communicate the results and conclusions in a research report or paper. This includes summarizing the methodology, reporting statistical analysis, interpreting the findings, stating conclusions, and making recommendations. The results should be presented logically and coherently. Tables and figures can help convey main findings. Limitations of the research methods and potential biases need to be disclosed. The conclusions should tie directly back to the research problem and purpose. Suggestions for practical applications of the research and future studies can be made. The report should have an academic tone and conform to disciplinary writing conventions. Sharing the research findings advances scientific knowledge.
 
----
 
 ---
 

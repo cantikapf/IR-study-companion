@@ -1,13 +1,12 @@
 ---
 title: Crime, Terrorism, And Insurgency
 slug: crime-terrorism-insurgency
-abstract: This materials cover the topic of transnational crime and insurgency.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Modern security threats rarely arrive in enemy uniforms with fighter jets; they hide in encrypted chats, shadow financial networks, and stateless insurgencies. Transnational cartels exploit open global shipping routes to generate illicit trillions, while asymmetric terrorist groups use fear to provoke states into costly overreactions. Because you cannot defeat a decentralized ideology or borderless network with conventional airstrikes alone, counterinsurgency requires winning the trust of local populations and cutting off illicit financing."
 ---
 
 ## Transnational Organized Crime
 
-Transnational **organized crime** (**TOC**) involves illegal activities coordinated across national borders, connecting individuals and **groups** in multiple countries. TOC takes many forms, with prominent examples including international mafia organizations, drug cartels, weapons traffickers, human trafficking rings, cybercrime networks, and financial fraud schemes. Major criminal organizations engaged in TOC include groups like the Sicilian Mafia, Russian Bratva, Japanese Yakuza, Chinese Triads, Colombian drug cartels, and the Nigerian criminal network. 
+Transnational **organized crime** (**TOC**), formally defined under the 2000 United Nations Convention against Transnational Organized Crime (Palermo Convention), involves structured illicit activities conducted across national jurisdictions, connecting individuals and **groups** in multiple countries. TOC takes many forms, with prominent examples including international mafia organizations, drug cartels, weapons traffickers, human trafficking rings, cybercrime networks, and financial fraud schemes. Major criminal organizations engaged in TOC include groups like the Sicilian Mafia, Russian Bratva, Japanese Yakuza, Chinese Triads, Colombian drug cartels, and the Nigerian criminal network. 
 
 TOC generates massive profits through participation in the illicit political economy, which encompasses all transactions and activities outside government regulation, taxation, and observation. Experts estimate the scale of the illicit political economy at between 5-20% of global GDP annually, representing trillions of dollars. Key activities include drug trafficking, human trafficking and human smuggling, arms dealing, counterfeiting and intellectual property violations, money laundering, racketeering, corruption and bribery, wildlife trafficking, illegal gambling, cybercrimes, and more. The illicit political economy reveals the dark underbelly of globalization, where TOC exploits the same channels of trade, finance, and communication that benefit the legal global economy.
 
@@ -30,7 +29,7 @@ By undermining global norms, destabilizing nations, and threatening individuals,
 
 **Terrorism** is defined as the use of violence or fear to coerce and gain public attention. Throughout history there have been many examples of terrorist groups that resorted to acts of violence or intimidation to further their political, social, or religious agendas.
 
-Some prominent historical examples of terrorism include:
+David C. Rapoport (2002, "The Four Waves of Modern Terrorism") conceptualizes modern international terrorism across four successive cyclical waves:
 
 - Anarchist terrorism in the 19th century sought to eliminate all government and ruling classes. Groups like Narodnaya Volya assassinated political leaders including Czar Alexander II of Russia. 
 - Anti-colonial terrorist groups fought for independence from colonial rule. Examples include the Irish Republican Army fighting against British rule and Zionist groups like Irgun targeting the British in Mandatory Palestine.
@@ -101,16 +100,11 @@ An integrated civil-military focus allows counterinsurgency efforts to incorpora
 
 Counterinsurgency strategies must evolve and adapt based on the changing nature of insurgencies. Insurgent tactics are not static, so counterinsurgency efforts cannot remain fixed either. Allowance for on-the-ground flexibility is vital for effectively countering insurgents. Commanders and soldiers need room to adjust approaches as the situation develops.
 
-In today's media environment, perception management is also crucial. Counterinsurgency forces must try to influence how their actions are portrayed and perceived globally. The concept of the "strategic corporal" highlights the impact individual soldiers can have, with their conduct broadcast worldwide. Spin control and public relations are now central components of counterinsurgency campaigns.
+In today's media environment, perception management is also crucial. Counterinsurgency forces must try to influence how their actions are portrayed and perceived globally. General Charles Krulak (1999, "The Strategic Corporal: Leadership in the Three Block War") highlighted how tactical actions by individual front-line soldiers can immediately generate strategic political ramifications, with their conduct broadcast worldwide. Spin control and public relations are now central components of counterinsurgency campaigns.
 
 Overall, counterinsurgency is not a pre-set strategy but rather an evolving response. It requires continuous assessment and adaptation based on insurgent actions. Rigid, inflexible approaches will fail against flexible, dynamic insurgents. On-the-ground flexibility informed by local conditions is essential. Counterinsurgency forces must also manage public perception through media spin, given the reach insurgents now have. Adaptability and evolution are key for successful counterinsurgency efforts in the modern era.
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Transnational Organized Crime" def1="Illegal activities coordinated across national borders" term2="Terrorism" def2="Use of violence or fear to coerce and gain public attention" term3="Insurgency" def3="Organized movement to overthrow an established government or occupying power" term4="Illicit Political Economy" def4="Transactions and activities outside government regulation and taxation" %}
 

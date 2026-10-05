@@ -2,7 +2,7 @@
 title: Introduction To Global Economic Architecture
 slug: introduction-to-global-economic-architecture
 abstract: This page provides an introduction to global economic architecture, exploring the drivers, consequences, and implications of economic globalization on countries, companies, and individuals.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Imagine the world economy as a massive power grid: when every country ran its own isolated generator, a blackout in one place left everyone else completely untouched. But through post-Cold War market openings, multinational supply chains, and digital capital flows, national economies fused into a single interconnected network. This interdependence supercharges efficiency and consumer abundance, but it also ensures that financial shocks or production snags anywhere can now ripple across the globe at blinding speed."
 ---
 
 ## Economic Globalization: Increasing Interconnectedness of National Economies
@@ -115,7 +115,6 @@ Economic globalization was driven by economic, technological and political devel
 
 In summary, the period since the end of the Cold War has seen dramatic economic globalization and integration, with both benefits and costs. States have less control while markets and multinationals have gained power. Managing the rapid pace of change and tackling negative impacts will be key challenges going forward.
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 title: Understanding ASEAN Community
 slug: asean-community
 abstract: The ASEAN Community was established to promote peace, stability, and shared prosperity in Southeast Asia through regional cooperation in politics, security, economy, and socio-culture. It comprises three pillars - the ASEAN Political-Security Community, the ASEAN Economic Community, and the ASEAN Socio-Cultural Community.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "Launched in 2015, the ASEAN Community represents Southeast Asia's boldest vision yet: uniting over 650 million people across three interlocking pillars of Political-Security, Economic, and Socio-Cultural cooperation. Under the Economic Community (AEC), the bloc strives to forge a tariff-free single production base, while the Political-Security pillar anchors regional stability amidst escalating US-China rivalry. Yet the community's true litmus test lies in overcoming deep internal divides—navigating the contentious South China Sea disputes and narrowing the development gap between maritime giants and mainland economies."
 ---
 
 ## Introduction
@@ -158,6 +158,8 @@ Continued integration and cooperation will bolster ASEAN's resilience and collec
 
 ---
 
+{% include sim_scs_dispute.html %}
+
 ---
 
 ### Interactive Learning 
@@ -165,3 +167,8 @@ Continued integration and cooperation will bolster ASEAN's resilience and collec
 
 ### Knowledge Check
 {% include quiz.html id="quiz_050_asean_community" question="What are the three pillars of the ASEAN Community?" opt1="ASEAN Political-Security Community, ASEAN Economic Community, ASEAN Cultural Community" opt2="ASEAN Political-Security Community, ASEAN Economic Community, ASEAN Socio-Cultural Community" opt3="ASEAN Economic Community, ASEAN Socio-Cultural Community, ASEAN Environmental Community" opt4="ASEAN Political-Security Community, ASEAN Social Community, ASEAN Environmental Community" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="044" %}

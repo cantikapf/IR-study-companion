@@ -1,8 +1,7 @@
 ---
 title: Peace Operations
 slug: peace-operations
-abstract: This chapter will explain about Peace Operations
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Traditional UN peacekeepers were lightly armed 'blue helmets' who stood between two consenting armies with binoculars after a ceasefire was already signed. But post-Cold War civil wars and genocides in Rwanda and Srebrenica shattered that passive model. Modern peace operations had to evolve from passive monitoring into robust peace enforcement and complex peacebuilding—intervening to disarm warlords, protect desperate civilians, and rebuild collapsed judicial systems."
 ---
 
 ## Genocide and Crimes against Humanity
@@ -23,7 +22,7 @@ Resolving ethnic civil wars involves diverse strategies. Compromise settlements,
 
 ## Peace Operations
 
-**Peace operations** encompass conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding. These actions aim to observe, monitor, and contribute to rebuilding war-torn societies. The effectiveness of peace operations varies based on factors such as consent, neutrality, impartiality, the spectrum of force, and authorization.
+**Peace operations** encompass conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding—first comprehensively codified in UN Secretary-General Boutros Boutros-Ghali's landmark report *An Agenda for Peace* (1992). These actions aim to observe, monitor, and contribute to rebuilding war-torn societies. The effectiveness of peace operations varies based on factors such as consent, neutrality, impartiality, the spectrum of force, and authorization.
 
 <div class="table-wrapper" markdown="block">
 
@@ -43,8 +42,8 @@ Reforms in peace operations have been proposed by key figures like Kofi Annan, L
 
 - Kofi Annan (1997)
 	- Reconceptualization of peacekeeping
-- Lakhdar Brahimi (2000)
-	- Impartial defense, flexibility, robustness
+- Lakhdar Brahimi (2000 Report of the Panel on UN Peace Operations, A/55/305)
+	- Operational doctrine of robust peacekeeping, realistic mandates, and clear rules of engagement
 - Jean-Marie Guéhenno (2005)
 	- 5 goals for Peace Operations 2010
 - Ban (2007)
@@ -60,18 +59,13 @@ The Westphalian system upholds sovereignty and non-interference, assuming sovere
 
 ## Responsibility to Protect
 
-The Responsibility to Protect (R2P) is a global political commitment to prevent genocide, war crimes, ethnic cleansing, and crimes against humanity. R2P involves three pillars: the protection responsibilities of the state, international assistance and capacity-building, and timely and decisive response.
+The Responsibility to Protect (R2P), formulated by the International Commission on Intervention and State Sovereignty (ICISS, 2001) and unanimously endorsed at the 2005 UN World Summit (Resolution A/RES/60/1, paras 138–139), rests upon three non-sequential pillars: the protection responsibilities of the state, international assistance and capacity-building, and timely and decisive response.
 
 ## R2P in Practice
 
 R2P has been applied in various crises, including Darfur in 2006, Libya in 2011, Côte d’Ivoire in 2011, South Sudan in 2011, Yemen in 2011, Syria in 2012, and the Central African Republic in 2013, with corresponding UN resolutions and peacekeeping operations.
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Genocide" def1="Acts to destroy a national, ethnic, racial, or religious group" term2="Peace Operations" def2="Conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding" term3="Ethnic Conflict" def3="Clashes between contending ethnic groups" term4="Responsibility to Protect" def4="Global commitment to prevent genocide, war crimes, and ethnic cleansing" %}
 

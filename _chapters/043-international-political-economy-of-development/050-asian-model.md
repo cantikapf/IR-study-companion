@@ -2,7 +2,7 @@
 title: The Asian Model Of Development
 slug: asian-model
 abstract: The Asian model of development is characterized by rapid economic growth, geographical diversity, and a rich cultural heritage. However, it also faces sustainability challenges and the need for inclusive and green development.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "How did war-devastated East Asian nations transform into global industrial and technological giants in just two generations without succumbing to Soviet-style planning or laissez-faire chaos? Under the 'developmental state' model, visionary state agencies in Japan, South Korea, and Taiwan picked strategic industrial champions while forcing them to compete ruthlessly in global export markets. By pairing state-directed bank credit with uncompromising performance discipline, East Asia engineered history's swiftest economic transformation."
 ---
 
 ## Introduction
@@ -105,7 +105,6 @@ Finally, the region's future trajectory rests on tackling lingering social and e
 
 Overall, maintaining dynamic growth while transitioning to new drivers of demand, steadying geopolitical frictions, and pursuing solutions for domestic issues will determine Asia's model in the years ahead. Plotting a course that balances economic, political, and social objectives will be crucial to adapting the model to emerging realities. The region's diversity and complexity will make constructing this balanced path both challenging and pivotal.
 
----
 
 ---
 

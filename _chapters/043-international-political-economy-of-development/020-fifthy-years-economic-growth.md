@@ -2,7 +2,7 @@
 title: Fifty Years Of Economic Growth And Development Strategy
 slug: fifty-years-economic-growth
 abstract: This chapter explores the fifty years of economic growth and development strategies, highlighting the shift in thinking, the role of the state, market failures, and the importance of finding the right balance between government intervention and market forces.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "The half-century following World War II shattered the illusion that national wealth converges automatically. While East Asian tiger economies leaped from agrarian poverty to high-tech manufacturing through export discipline, Latin America and Sub-Saharan Africa foundered under debt crises and closed-door import substitution. Fifty years of global trial and error proved that escaping poverty requires pragmatic state capacity and competitive international trade, not rigid economic dogma."
 ---
 
 ## Introduction 
@@ -114,7 +114,6 @@ By the 1980s, the success of export-led growth in East Asia along with stagnatio
 
 Looking forward, developing nations need balanced, context-specific strategies that empower citizens, regulate markets, and build capable institutions. The terrain has shifted from a focus on national economic growth to reducing spatial and socioeconomic disparities. With global integration, nations must also consider cross-border impacts and coordinate on providing international public goods. By learning from past extremes, integrating local and global perspectives, and leveraging the strengths of states, markets and civil society - developing countries can forge inclusive, sustainable growth trajectories.
 
----
 
 ---
 

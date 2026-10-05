@@ -2,7 +2,7 @@
 title: U.S. Foreign Policy
 slug: us-foreign-policy
 abstract: Keypoints on U.S. Foreign Policy.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "United States foreign policy has always been torn between two competing national impulses: isolationist detachment behind oceanic moats and crusading internationalism to shape the global order. Under the American Constitution, external diplomacy is an ongoing tug-of-war between presidential commander-in-chief powers and congressional purse strings. Whether projecting military dominance or championing democratic ideals, Washington must continually balance its hard geopolitical interests against the moral values it professes to lead the free world with."
 ---
 
 US **foreign** **policy** has evolved considerably since the country's founding, shaped by changing geopolitical realities, values, and domestic politics. But some key goals have remained relatively constant - to protect the homeland, promote economic prosperity, and uphold democratic principles abroad. 
@@ -112,7 +112,7 @@ While Congress and other actors influence foreign policy, the president sits at 
 
 ## Legislative Branch
 
-Congress plays a key role in shaping U.S. foreign policy. The Senate must ratify all treaties by a two-thirds supermajority vote. The Senate also must confirm all major ambassadorial and cabinet appointments that deal with foreign policy matters. 
+Congress exercises substantial constitutional authority in checking and directing U.S. foreign policy. The Senate must ratify all treaties by a two-thirds supermajority vote. The Senate also must confirm all major ambassadorial and cabinet appointments that deal with foreign policy matters. 
 
 Additionally, Congress holds several foreign policy powers, including:
 
@@ -124,7 +124,6 @@ Additionally, Congress holds several foreign policy powers, including:
 
 In practice, Congress tends to defer to the President on routine foreign policy matters. However, Congress has asserted its authority at times, such as blocking arms sales or imposing sanctions. When the President and Congress clash over foreign policy, tensions and compromise between the two branches often emerge. As public opinion and partisan control of government shifts, the relative balance of power between the executive and legislative branches continues to evolve.
 
----
 
 ---
 

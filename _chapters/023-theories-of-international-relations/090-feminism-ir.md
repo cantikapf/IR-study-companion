@@ -2,7 +2,7 @@
 title: Feminism In International Relations
 slug: feminism-ir
 abstract: What is feminism in international relations?
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "For decades, International Relations was written almost exclusively by men who viewed global politics as a high-stakes duel between male leaders and generals. Feminist scholars flipped this perspective by asking Cynthia Enloe's subversive question: 'Where are the women?' From garment workers sustaining global trade to mothers surviving wartime blockades, feminism shows that world politics relies heavily on gendered labor, challenging the myth that true security can only be measured in weapons and military dominance."
 ---
 
 
@@ -98,7 +98,6 @@ Feminists see economic sanctions as an expression of masculine confrontation - a
 
 Feminists question norms of state responsibility and borders that distance nations from the human impact of their policies. Borders construct artificial separations between "self" and "other," enabling countries to separate themselves from accountability.  Feminists encourage reflecting on global hierarchies and recalibrating responsibility for international policies that cause real individual suffering.
 
----
 
 ---
 

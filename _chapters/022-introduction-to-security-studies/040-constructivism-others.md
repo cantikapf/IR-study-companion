@@ -1,13 +1,12 @@
 ---
 title: Constructivism And Other Approach In Security Studies
 slug: constructivism-others
-abstract: This chapter will explain the constructivist approach to security studies and also other's approaches.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "A single nuclear weapon in the hands of North Korea terrifies Washington, while hundreds of nuclear warheads held by the United Kingdom cause zero panic. Why? As constructivism explains, security threats are not pure physical numbers—they are socially constructed through shared identities and historical relationships. Furthermore, as the Copenhagen School shows, leaders can 'securitize' anything from migration to disease through speech acts, convincing the public to suspend normal democratic laws in the name of an existential emergency."
 ---
 
-# Contructivism
+# Constructivism
 
-Constructivism is an influential theoretical approach in **international relations** that emerged in the 1980s and 1990s. Drawing on sociological insights, constructivism emphasizes the social construction of the world through ongoing processes of interaction between agents and structures. It asserts that international politics is shaped not just by material factors, but also socially constructed norms, identities, and ideas. 
+Constructivism is an influential theoretical approach in **international relations** pioneered by Nicholas Onuf (1989) and Alexander Wendt (1992, 1999). Drawing on sociological insights, constructivism emphasizes the social construction of the world through ongoing processes of interaction between agents and structures. It asserts that international politics is shaped not just by material factors, but also socially constructed norms, identities, and ideas. 
 
 At the core of constructivism is the premise that agents (e.g. states, leaders, communities) and structures (e.g. international systems and institutions) constitute one another through their interactions. Agents make decisions and take actions based on intersubjective meanings, collective knowledge, and social norms, not just material calculations. Meanwhile, structures like international law and organizations are created by states and shape state interests and behavior.
 
@@ -49,7 +48,7 @@ Ole Wæver, a Danish political scientist, is another prominent theorist of the C
 
 ### Jaap de Wilde 
 
-As a Dutch academic, Jaap de Wilde contributed significantly to the Copenhagen School's theoretical breadth. De Wilde's research delved into environmental security and European cooperation. He co-wrote the seminal book "Security: A New Framework for Analysis" with Barry Buzan and Ole Wæver in 1998, cementing core Copenhagen School concepts.
+As a Dutch academic, Jaap de Wilde contributed significantly to the Copenhagen School's theoretical breadth. De Wilde's scholarship analyzed environmental security and European cooperation. He co-wrote the seminal book "Security: A New Framework for Analysis" with Barry Buzan and Ole Wæver in 1998, cementing core Copenhagen School concepts.
 
 # Critical Theory Challenges Traditional Notions of Security
 
@@ -65,7 +64,7 @@ In terms of methodology, critical theory distinguishes itself from traditional '
 
 ## The Welsh School of Critical Security Studies
 
-Wales, United Kingdom has become a hub for the development and expansion of critical security studies. The **Welsh School** of Critical Security Studies focuses on deepening the understanding of security by examining the concept through alternative viewpoints. 
+Wales, United Kingdom has become a hub for the development and expansion of critical security studies. The **Welsh School** (or Aberystwyth School) of Critical Security Studies, founded by Ken Booth and Richard Wyn Jones, focuses on deepening the understanding of security by examining the concept through alternative viewpoints. 
 
 Scholars associated with the Welsh School aim to broaden the definition of security beyond just the military domain. They argue that security should encompass economic, societal, environmental, and human rights issues as well. The Welsh School also emphasizes the subjectivity of security, asserting that one's conception of security derives significantly from their political and philosophical perspective.
 
@@ -85,7 +84,7 @@ Critical theorists have challenged traditional perspectives on international rel
 
 # Feminism
 
-Feminist perspectives in security studies have challenged patriarchal assumptions and provided distinctive insights. Feminists focus on the gendered nature of global politics, exposing how security discourse contains masculine biases. For example, protection and defense are framed around stereotypically male traits like strength and aggression. 
+Feminist security studies, developed by scholars such as J. Ann Tickner (*Gender in International Relations*, 1992) and Cynthia Enloe (*Bananas, Beaches and Bases*, 1989), challenge patriarchal assumptions and provided distinctive insights. Feminists focus on the gendered nature of global politics, exposing how security discourse contains masculine biases. For example, protection and defense are framed around stereotypically male traits like strength and aggression. 
 
 Feminists also highlight how women often hold more cooperative and peace-oriented viewpoints compared to men. This cooperative ethic stems from women's shared experience of subordination and vulnerability. Women leaders sometimes employ negotiation and compromise to a greater degree.
 
@@ -96,11 +95,6 @@ Feminist scholars emphasize the need to include women in security policymaking i
 The feminist critique has enriched understandings of security by revealing typically overlooked assumptions. It demonstrates how factors like gender norms and identities construct the meaning of security in global politics and society. Feminist approaches continue to provide vital alternative frameworks for rethinking security.
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Constructivism" def1="Theoretical approach emphasizing social construction of international relations" term2="Intersubjectivity" def2="Shared understandings and meanings emerging through social interactions" term3="Securitization" def3="Process of turning an issue into a security threat requiring emergency action" term4="Critical Theory" def4="Philosophical critique of traditional international relations theory and security" %}
 

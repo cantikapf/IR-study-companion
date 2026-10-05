@@ -1,12 +1,11 @@
 ---
 slug: domino-cold-war
 title: 'When One Falls, They All Will Follow: The Domino Theory and the Cold War'
-abstract: How the Domino Theory and the Cold War shaped the world
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "Because nuclear weapons made direct combat between Washington and Moscow suicidal, the Cold War was fought through covert coups, civil wars, and proxy battlefields across the Global South. Driven by George Kennan's containment doctrine and the 'domino theory,' the US feared that even a small nation falling to communism would topple entire regions. This zero-sum paranoia dragged superpowers into bloody quagmires from Korea to Vietnam."
 ---
 
 
-# Cold War in a Nutshell
+# The Cold War and Containment Doctrine
 
 <br>
 
@@ -146,6 +145,8 @@ At the same time, the Cold War spawned bloody proxy conflicts in regions like Ko
 The Cold War ultimately reshaped the global order. The collapse of the Soviet Union left the U.S. as the sole superpower for a time. It also opened the door for a new world order with growing multi-polarity and the rise of additional global powers like China. Echoes of Cold War tensions persist between Russia and the West over issues like Ukraine. While the direct confrontation ended, the Cold War's complex influences continue to shape international relations.
 
 ---
+
+{% include sim_nuclear_deterrence.html %}
 
 ---
 

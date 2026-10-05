@@ -2,7 +2,7 @@
 slug: women-indonesia
 title: Women In Indonesian Politics
 abstract: This chapter will explore women's representation in Indonesia political system
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "From the historic 1928 Women's Congress to the enactment of a 30 percent legislative candidate quota, Indonesian women have continually fought for a rightful seat in policymaking. While affirmative action laws opened party ballots and elevated female lawmakers, traditional patriarchal norms and dynastic party gatekeeping still constrain their leadership. Achieving true gender parity in politics is not merely about meeting ballot percentages—it requires reshaping party structures so women can wield substantive legislative authority."
 ---
 
 
@@ -133,7 +133,6 @@ While Indonesian women have made important strides, more work remains to foster 
 
 The path forward requires a comprehensive, coordinated effort across all levels of society. From grassroots advocacy to policy reforms, impactful change hinges on a collective commitment to gender equity as a core value. With ongoing persistence and unity, Indonesian women can achieve equal representation and voice in the political realm.
 
----
 
 ---
 

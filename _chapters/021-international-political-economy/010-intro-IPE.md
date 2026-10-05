@@ -1,8 +1,7 @@
 ---
 title: Introduction To International Trade And Economy
 slug: introduction-ipe
-abstract: This chapter will introduce you to the field of international political economy (IPE).
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Economics teaches that markets are steered by supply and demand, while political science studies power and borders. International Political Economy (IPE) shows that you cannot separate the two: markets cannot exist without states to enforce contracts and protect shipping lanes, and states cannot survive without taxing wealth created in markets. Studying IPE means tracing how money shapes geopolitics and how political power dictates who gets rich and who stays poor."
 ---
 
 ## Introduction to International Political Economy 
@@ -57,7 +56,7 @@ In essence, IPE explores how international economic activity enables and constra
 
 ## IPE and Comparative Politics 
 
-In the realm of Comparative Politics, International Political Economy delves into political institutions' ability to respond to unemployment and the effects of emerging political forces on coalitions. 
+In the realm of Comparative Politics, International Political Economy investigates institutional responsiveness to unemployment and the effects of emerging political forces on coalitions. 
 
 Specifically, IPE analyzes how economic crises and shifts impact domestic political structures and test their resiliency. For example, periods of high unemployment tend to increase social unrest and anti-establishment political movements. IPE examines how existing political institutions adapt policies and reforms in response, such as expanding unemployment benefits or job retraining programs. However, institutional inertia and path dependency can make implementing timely and adequate responses difficult.
 
@@ -127,7 +126,7 @@ The interconnectivity across these issue areas creates complex dynamics that IPE
 
 ## International Economics
 
-International Economics focuses on how nations interact through trade, money flows, and investment. Micro-economics explores the benefits of trade, trade patterns, and government trade policy. Macro-economics delves into the balance of payments, exchange rate determination, international policy coordination, and the international capital market. International Economics includes both real transactions, such as international trade, and financial transactions, such as international money.
+International Economics focuses on how nations interact through trade, money flows, and investment. Micro-economics explores the benefits of trade, trade patterns, and government trade policy. Macro-economics systematically investigates the balance of payments, exchange rate determination, international policy coordination, and the international capital market. International Economics includes both real transactions, such as international trade, and financial transactions, such as international money.
 
 **International Trade**
 
@@ -150,9 +149,6 @@ Multinational corporations expanding abroad can contribute to job creation, curr
 Globalization enabled by international business provides competitive advantages for companies in sales, profits, scale, and resources. But it also exposes domestic industries and employees to disruptive global competition. Economies can benefit from new innovations and efficiencies. But traditional sectors face pressures to innovate rapidly or lose market share to foreign rivals. Policymakers must balance these complex factors when regulating international business.
 
 For individuals, working for multinationals or starting international ventures provides diverse experiences, expands perspectives, and creates unique career opportunities. The confidence gained from bridging different cultures helps develop cosmopolitan worldviews. But connecting people globally also enables rapid spread of harmful or unethical business practices across borders. Overall, international business integrates the world economically but raises important societal questions around shared responsibilities.
-
----
-    
 
 
 ---

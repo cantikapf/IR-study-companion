@@ -2,6 +2,7 @@
 title: EU Foreign Policy and Energy Security
 slug: eu-foreign-policy
 abstract: The overview of the European Union's foreign policy and energy security considerations.
+simple_summary: "The European Union is an unprecedented geopolitical experiment: a collective titan in trade and regulation that often struggles to speak with a single voice during major international crises. Its unique multi-pillar diplomacy blends immense normative and economic leverage with fragmented national security interests among twenty-seven sovereign member states. Nowhere is this vulnerability more visible than in energy security, where reliance on external authoritarian suppliers repeatedly tests Europe's moral principles against geopolitical survival."
 ---
 
 ## Historical Overview

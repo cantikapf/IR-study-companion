@@ -2,7 +2,7 @@
 title: 'IR Research Method: Participant Observation and Focus Group'
 slug: observation-method
 abstract: Observation is a systematic method of watching, recording, analyzing and interpreting people's behavior, events, or phenomena in their natural setting.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "What political leaders say in formal press releases often contradicts what they actually do behind closed doors. Observation and field research allow scholars to watch political behavior as it happens in real time—whether shadowing delegates in the corridors of a UN summit or sitting inside an NGO refugee camp. By observing real interactions rather than polished speeches, researchers capture the subtle human rituals of diplomacy and protest."
 ---
 
 ## Observation
@@ -89,7 +89,6 @@ Focus groups serve various research purposes, including:
 - Implementation
 - Assessment
 
----
 
 ---
 

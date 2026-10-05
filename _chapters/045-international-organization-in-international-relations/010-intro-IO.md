@@ -1,8 +1,8 @@
 ---
 title: Introduction To International Organization (IO) In IR
 slug: intro-international-organization
-abstract: International organizations (IO) and intergovernmental organizations (IGOs) play a crucial role in international relations, facilitating cooperation between states and addressing global challenges. They provide a platform for coordination, drafting international law, and promoting multilateralism in the pursuit of shared goals.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+abstract: International organizations (IOs) and intergovernmental organizations (IGOs) serve as central institutional mechanisms in international relations, facilitating interstate cooperation and mitigating collective action problems. They provide a platform for coordination, drafting international law, and promoting multilateralism in the pursuit of shared goals.
+simple_summary: "In global politics, navigating anarchy requires more than casual bilateral conversations; it demands institutionalized architecture. International Organizations bridge the gap between sovereign states (IGOs) and transnational civil society (INGOs), providing permanent secretariats and structured rules to solve cross-border collective action dilemmas. Beyond physical headquarters, they anchor broader international regimes—shared sets of principles and expectations that transform chaotic interstate competition into predictable multilateral diplomacy."
 ---
 
 ## What are International Organizations (IO)?
@@ -143,7 +143,6 @@ International organizations are often criticized as being dominated by the most 
 
 Critics argue that international organizations infringe upon the sovereignty of member states. Binding rules and decisions made by international bodies undermine the authority of national governments. Some fear international organizations will become unaccountable "world governments" that impose solutions. Supporters counter that states voluntarily join organizations and can withdraw. Pooling sovereignty is necessary to tackle global issues no state can solve alone.
 
----
 
 ---
 

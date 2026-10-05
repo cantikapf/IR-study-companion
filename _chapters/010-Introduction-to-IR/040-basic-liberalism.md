@@ -2,7 +2,7 @@
 title: Basic Explanation of Liberalism in IR
 slug: basic-liberalism
 abstract: The introduction of Liberalism in International Relations 
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Liberals argue that countries are not doomed to fight forever. If nations build three bridges—democratic governments where voters can fire warmongers, deep trade ties that make shooting your customers economic suicide, and international organizations like the UN to negotiate rules—peace becomes both rational and profitable for everyone involved."
 ---
 
 
@@ -12,33 +12,35 @@ simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the
 
 <br>
 
-**Liberalism** and realism represent contrasting perspectives in **international** relations (IR). While realism has traditionally dominated IR theory and practice, liberalism emerged in the 20th century as a viable alternative approach, gaining particular prominence after **World War** 2 and again after the end of the Cold War. However, major international events and developments since the 1990s have consistently brought realism back into focus as the dominant paradigm in international relations.
+**Liberalism** and realism represent the foundational dialectic in international relations (IR) theory. While realism posits an enduring struggle for power and security under structural anarchy, liberalism emerged in the 20th century as an alternative framework arguing that conflict is not an inevitable structural destiny, but a contingent outcome of domestic regimes, institutional deficits, and economic barriers. Liberal thought gained significant traction after the First World War under Woodrow Wilson's Fourteen Points, expanded after World War II through the Bretton Woods and United Nations frameworks, and experienced unprecedented optimism following the collapse of the Soviet Union in 1989–1991.
 
-Although liberalism seemed ascendant at certain points in recent history, the two perspectives have been engaged in an ongoing debate about the fundamental nature of IR. This continuing discussion between realism and liberalism has been a central theme in IR scholarship since the mid-1980s, with evolved variants of the two theories providing the main conceptual frameworks that define the field. However, it is important to note that policymakers and scholars use the terms realism and liberalism differently in practice.
+Rather than treating the international system as a static zero-sum arena, liberalism investigates how state and non-state actors construct cooperative arrangements that yield positive-sum payoffs (absolute gains). This ongoing debate between realism and liberalism has evolved since the 1980s into the structured neo-realist and neo-liberal institutionalist synthesis, establishing the analytical benchmark for contemporary global governance scholarship.
 
 ## Fundamentals of Liberalism
 
-Liberalism is founded on several core tenets that shape its perspectives on governance and economics. 
-- First, liberalism emphasizes **equality and basic rights** for all citizens, rejecting systems that provide greater power or privilege to certain groups over others based on class, race, religion, or other factors. 
-- Second, liberalism asserts that legislative authority should be derived from the people through systems of **democratic governance**. This contrasts with systems where monarchs, aristocracies, or other elites hold power without popular consent.
-- Third, liberalism argues for **strong individual property rights and ownership**. Individuals should be free to obtain property through legal means and not have it arbitrarily seized by governments or elites. 
-- Finally, liberalism expresses a preference for **free markets as the most efficient economic system**. Competition and consumer choice, rather than state control, should drive the economy. Overall, these principles of equality, democratic governance, individual rights, and free markets form the basis of liberalism and distinguish it from other perspectives.
+Liberalism is founded on several core philosophical tenets that shape its perspective on domestic governance and world order:
+- First, liberalism emphasizes **individual liberty, equality, and fundamental rights**, rejecting political systems that institutionalize privileges based on caste, class, religion, or monarchical lineage.
+- Second, legislative and sovereign authority must derive from the governed through **constitutional and democratic systems**. This contractual legitimacy ensures that foreign policy reflects public consent rather than the unrestrained whims of autocratic rulers.
+- Third, liberalism defends **private property rights and the rule of law**, establishing enforceable boundaries against arbitrary state expropriation.
+- Fourth, liberalism prioritizes **open markets and free trade** as catalysts for social welfare and international stability. Specialization and cross-border exchange create mutual dependencies that dramatically raise the opportunity costs of violent conflict.
 
 ## Liberalism in International Relations
 
-Liberalism considers **states** as having varying characteristics and proposes diverse causes for conflicts, ranging from imperialism to undemocratic regimes. In contrast to realism's view of an inherent struggle for power, liberalism attributes the root causes of war to flawed domestic governance and international systems.
+In international relations, liberalism rejects the structural realist assumption that states act as undifferentiated 'billiard balls' driven solely by systemic distribution of capabilities. Instead, liberalism treats the domestic composition of states—their regime types, constitutional checks, civil societies, and bureaucratic processes—as decisive determinants of external conduct. Conflict is attributed to undemocratic autocracies, rent-seeking domestic coalitions, misperception, and institutional market failures rather than an unalterable *animus dominandi*.
 
-Concepts like collective security, open commerce, and world government are suggested as remedies to mitigate conflict between states. Collective security involves nations agreeing to collectively respond to acts of aggression, while open commerce aims to build economic ties and interdependence. World government proposes consolidating authority into international institutions that can mediate disputes.
-
-Liberalism also advances the idea of the democratic peace theory. This attributes democracies' inherently pacifist nature to domestic constraints and norms against warfare. Therefore, promoting democracy worldwide could create more peaceful relations between liberal states.
-
-Overall, liberalism offers more optimistic alternatives for international **cooperation** than realism. It advocates new systems and institutions to transcend power politics between states. However, putting these liberal ideals into practice has proven challenging.
+To mitigate international anarchy, liberal theory advances three core pillars often termed the 'Kantian Triangle' (Russett & Oneal, 2001):
+1. **Republican Liberalism (Democracy)**: Grounded in Immanuel Kant's *Perpetual Peace* (1795) and refined by Michael Doyle (1983), the Democratic Peace proposition demonstrates that while democracies fight non-democracies, consolidated constitutional democracies rarely, if ever, wage war against one another due to institutional checks and shared normative commitments to peaceful dispute resolution.
+2. **Commercial Liberalism (Economic Interdependence)**: Free commerce fosters cross-border supply chains and mutual economic vulnerabilities. Aggression disrupts vital trade routes and foreign investments, making peace economically advantageous.
+3. **Liberal Institutionalism (International Regimes)**: Multilateral institutions create transparent rules, lower transaction costs, reduce information asymmetries, and provide monitoring mechanisms that prevent free-riding and enforce compliance.
 
 ## Failure of the League of Nations
 
-The League of Nations was established after World War I with the aim of resolving international disputes through negotiation and collective security. However, the League ultimately failed to prevent World War II, exposing a major gap between the rhetorical idealism underpinning the League and the realist constraints of international politics at the time.
+The establishment of the League of Nations under the 1919 Treaty of Versailles represented the first modern experiment in collective security, spearheaded by Woodrow Wilson's idealistic vision. The League Covenant sought to replace secret balance-of-power diplomacy with a universal legal framework where an attack against one member was considered an aggression against all.
 
-The failure of the League of Nations to prevent World War II despite its ambitious vision exposed the dominance of power politics and national interests over liberal ideals like international cooperation and collective security. This demonstrated the gap between rhetorical idealism and realpolitik constraints, setting the stage for renewed realist perspectives in international relations after 1945. The League's demise highlighted that successful multilateral institutions require great power support and willingness to back rhetoric with concrete actions.
+However, the League collapsed with the outbreak of the Second World War, illustrating the acute vulnerabilities of ungrounded institutional idealism when confronted by revisionist powers (E.H. Carr, 1939). Structurally, the League suffered from fatal institutional defects:
+- **Absence of Major Powers**: The United States Senate refused to ratify the Covenant, leaving the League without its chief ideological and material sponsor, while the Soviet Union and Germany were excluded during crucial formative years.
+- **The Unanimity Rule**: Decisions in the League Council and Assembly required unanimous consent (Article 5), granting any aggressor or sympathizer an effective procedural veto.
+- **Enforcement Disconnect**: When Japan invaded Manchuria (1931) and Italy invaded Abyssinia (1935), member states proved unwilling to shoulder the economic and military costs of imposing decisive sanctions, revealing that multilateral institutions cannot function as neutral arbiters without great power alignment and credible enforcement mechanisms.
 
 ## The United Nations
 
@@ -109,9 +111,6 @@ While both neo-realists and neo-liberalists agree on the anarchic nature of the 
 In contrast, neo-realists contend that international cooperation is inherently difficult due to the structure of the international system. State interests are rarely in complete alignment, so relative gains become more important, along with concerns about cheating or free-riding. Power disparities between states further hinder mutually beneficial agreements. While institutions have a role, neo-realists assert that their influence is limited without the power to enforce compliance.
 
 In the neo-neo debate, neo-liberalists express greater faith in international institutions, norms, and regimes to promote cooperation between rational state actors. Neo-realists remain more skeptical, arguing that power dynamics between states are the primary determinants of cooperation. Ultimately, both theories provide valuable insights into the possibilities and limits of cooperation in global politics.
-
-
----
 
 
 ---

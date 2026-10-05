@@ -2,7 +2,7 @@
 title: Introduction To International Relations Theories
 slug: introduction-ir-theories
 abstract: This chapter will introduce you to the field of international relations theories.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Trying to understand world politics without theory is like trying to navigate an unfamiliar continent without a map; you will be overwhelmed by chaotic noise. International Relations theories don't just describe events—they supply lenses that decide what facts actually matter, whether you see the world as a clash of military armies, a network of trading partners, or an unjust capitalist hierarchy. By charting the discipline's four 'Great Debates,' this chapter reveals why scholars constantly disagree on what drives war, peace, and human history."
 ---
 
 The study of international relations (IR) emerged as an academic discipline after **World** War I as scholars and practitioners sought to understand the conditions that led to the "**World War**" and how future wars could be prevented. Since then, IR has evolved from its early idealist roots into a diverse field encompassing multiple theoretical perspectives and methodological approaches.
@@ -85,7 +85,6 @@ There are divergent conceptions of what constitutes a theory in international re
 
 There are divergent views on issues like objectivity, theory testing, and the relationship between theory and practice. This underscores the importance of considering meta-theoretical issues and assumptions in evaluating IR theories. Different conceptions of theory play crucial roles in shaping the IR discipline.
 
----
 
 ---
 

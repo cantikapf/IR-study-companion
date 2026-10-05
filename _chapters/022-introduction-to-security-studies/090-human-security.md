@@ -1,14 +1,13 @@
 ---
 title: Human Security
 slug: human-security
-abstract: This chapter will explain about Human Security
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "A country can possess stealth fighters and nuclear submarines while its own citizens die of contaminated water, chronic hunger, and preventable diseases. The 1994 UNDP Human Development Report fundamentally redefined security by shifting the spotlight from state borders to the individual human being. Championing 'freedom from fear' and 'freedom from want,' human security argues that genuine defense means protecting daily lives, health, and civil dignity from structural violence."
 ---
 
 
 ## Human Security
 
-**Human** **security** is an emerging paradigm that places ordinary people at the center of security concerns. In contrast to traditional notions of national security that focus on external military threats to the **state**, human security encompasses a broad range of issues that threaten the safety, livelihood and dignity of individuals. These issues include **poverty**, infectious diseases, natural disasters, unemployment, crime, social conflict and political repression. The concept of human security first gained prominence in the 1994 United Nations Development Programme (UNDP) Human Development Report, which argued that ensuring "freedom from want" and "freedom from fear" should be the foundations of human security.
+**Human** **security** is an emerging paradigm that places ordinary people at the center of security concerns. In contrast to traditional notions of national security that focus on external military threats to the **state**, human security encompasses a broad range of issues that threaten the safety, livelihood and dignity of individuals. These issues include **poverty**, infectious diseases, natural disasters, unemployment, crime, social conflict and political repression. The concept of human security first gained institutional prominence in the landmark 1994 United Nations Development Programme (UNDP) Human Development Report, conceived under the intellectual leadership of Mahbub ul Haq and Amartya Sen. The report articulated two core pillars—"freedom from fear" and "freedom from want"—and defined human security across seven interconnected dimensions: economic, food, health, environmental, personal, community, and political security.
 
 
 <center> <img src="{{site.baseurl}}/static/modules/human_security.png" alt="human_security" width="70%" /> </center>
@@ -86,13 +85,13 @@ Balancing human security with state security regarding population flows requires
 
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Human Security" def1="Paradigm focusing on safety, livelihood, and dignity of individuals" term2="Globalization" def2="Process increasing interconnectedness and interdependence worldwide" term3="Poverty" def3="State of lacking basic needs, opportunity, and human development" term4="Constructivism" def4="Theory viewing security dilemmas as socially constructed and subject to change" %}
 
 ### Knowledge Check
 {% include quiz.html id="quiz_090_human_security" question="What is the core concept of human security?" opt1="National security focusing on external military threats" opt2="Safety, livelihood, and dignity of individuals" opt3="Economic development and globalization" opt4="Traditional realist approaches to security" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="022" %}

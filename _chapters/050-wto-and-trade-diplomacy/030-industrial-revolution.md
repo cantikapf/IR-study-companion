@@ -2,7 +2,7 @@
 title: The Industrial Revolution That Changed Trade Forever
 slug: industrial-revolution
 abstract: The Industrial Revolution in the late 18th and early 19th centuries brought about immense changes in Europe and the world, leading to new manufacturing processes, mass production, and the need for new systems of international trade and diplomacy. This article explores the transformative impact of the Industrial Revolution on trade relations and the emergence of trade policy as a distinct diplomatic priority.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Before the steam engine, nations treated commerce as economic warfare—hoarding gold and using tariffs to bankrupt rivals. But when mass factory production outgrew domestic borders, international trade became an existential necessity for economic survival. The Industrial Revolution decoupled trade policy from raw military conquest, sparking intense theoretical battles between Adam Smith's open-market gospel and Alexander Hamilton's infant-industry protectionism that still define trade debates today."
 ---
 
 ## Introduction
@@ -105,7 +105,6 @@ Ultimately, the early 19 th century planted the seeds for modern international t
 
 The era highlights how economic transformations shape diplomacy. As methods of production evolved, international economic integration became more imperative. This compelled nations to cooperate more on trade regardless of political conflicts. The experience of early 19 th century European trade diplomacy illustrates the potential for economic interdependence to act as a stabilizing force in international relations.
 
----
 
 ---
 

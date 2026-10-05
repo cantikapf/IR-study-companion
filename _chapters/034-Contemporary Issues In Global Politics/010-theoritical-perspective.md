@@ -1,8 +1,7 @@
 ---
-title: Theoretical Perspective
+title: Theoretical Perspectives in Global Politics
 slug: theoritical-perspective
-abstract: The theoritical perspective of national interest and nation states.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Realists talk about the 'national interest' as if an entire country were a single human being with one unified mind. But in reality, who decides that interest—the military generals, multinational corporate CEOs, impoverished farmers, or urban consumers? Because no single ideology holds a monopoly on truth, Analytical Eclecticism urges us to stop fighting dogmatic paradigm wars and instead combine insights pragmatically to solve urgent real-world crises."
 ---
 
 ## The Problem of "National Interests" 
@@ -35,7 +34,7 @@ Therefore, it is important to analyze how modern nation-states are constituted a
 
 No single theoretical perspective can sufficiently explain the complex issues witnessed in world politics today. The international landscape involves intricate historical processes, diverse actors, and multifaceted power dynamics that often transcend the assumptions and focus of any one theory. For example, realism may provide insights into military rivalries between great powers, but falls short in accounting for transnational activism or the power of norms. Constructivism helps reveal the constitutive role of social identities and norms, but does not offer much on the distribution of material capabilities. 
 
-Rather than rigidly applying a single lens, an eclectic and pragmatic approach allows scholars to select from relevant theoretical concepts and logics to provide a more nuanced analysis. Known as analytical eclecticism, this strategy uses concrete real world problems as its starting point, and then draws judiciously on available theories based on their explanatory merit for the specific issue at hand. The objective is not to create an overarching meta-theory, but rather to be able to better reveal the complexities and nuances within particular research problems which may be obscured by inherent assumptions within any given theory. Analytical eclecticism aims to avoid theoretical blind spots and provide deeper understanding of multifaceted issues in world politics.
+Rather than rigidly applying a single lens, an eclectic and pragmatic approach allows scholars to select from relevant theoretical concepts and logics to provide a more nuanced analysis. Known as analytic eclecticism—rigorously conceptualized by Rudra Sil and Peter J. Katzenstein in *Beyond Paradigms* (2010)—this strategy uses concrete real-world problems as its starting point, and then draws judiciously on available theories based on their explanatory merit for the specific issue at hand. The objective is not to create an overarching meta-theory, but rather to be able to better reveal the complexities and nuances within particular research problems which may be obscured by inherent assumptions within any given theory. Analytical eclecticism aims to avoid theoretical blind spots and provide deeper understanding of multifaceted issues in world politics.
 
 ## Starting from Concrete Problems
 
@@ -50,9 +49,6 @@ Overall, the focus on using concrete real world problems as the starting point f
 Analytical eclecticism allows scholars to overcome the inherent blind spots within individual theories. By using multiple perspectives and focusing on concrete issues, analysts can reveal complexities and nuances that may be obscured by the assumptions of a single theory. For example, realism's state-centric approach can miss the significance of domestic social forces, while liberalism's focus on cooperation may underestimate power politics. Eclecticism enables a more comprehensive understanding by leveraging the strengths of different theories and mitigating their weaknesses. The goal is not theoretical purity but pragmatic elucidation of multifaceted real-world problems. Shedding light on blind spots allows for deeper insight.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="National Interest" def1="A state's priorities and goals in international relations" term2="Anthropomorphism" def2="Attributing human-like qualities to non-human entities, like states" term3="Analytical Eclecticism" def3="Combining multiple theories to analyze complex issues pragmatically" term4="State Constituency" def4="The diverse groups and interests within a nation-state" %}
 

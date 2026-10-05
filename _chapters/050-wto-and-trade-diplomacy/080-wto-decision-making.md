@@ -2,12 +2,12 @@
 title: How the WTO Makes Decisions
 slug: wto-decision-making
 abstract: The World Trade Organization (WTO) operates on a consensus-based decision-making process, where all major decisions are made collectively by member countries. This chapter provides an overview of how the WTO makes decisions, including the roles of the Ministerial Conference and General Council, the process of trade agreement negotiations, and the implementation of WTO agreements.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Inside the World Trade Organization, every member nation—from economic titans like the United States to developing island states—holds an effective veto under the strict consensus rule. While this guarantees remarkable sovereign equality in international rulemaking, the doctrine that 'nothing is agreed until everything is agreed' has created paralyzing diplomatic stalemates. The ongoing dilemma of trade governance is sustaining consensus-based multilateralism in an era of deep geopolitical fragmentation."
 ---
 
 ## Introduction
 
-The World **Trade** Organization (**WTO**) is an organization that oversees international trade agreements between its member nations. Headquartered in Geneva, Switzerland and established in 1995, the WTO currently has 164 members that represent nearly all of global commerce. 
+The World **Trade** Organization (**WTO**) is an organization that oversees international trade agreements between its member nations. Headquartered in Geneva, Switzerland and established in 1995, the WTO has 166 members (following the accessions of Timor-Leste and Comoros at MC13 in 2024), representing over 98% of global commerce. 
 
 The purpose of this material is to provide an overview of how decisions are made within the WTO. Specifically, we will explore the consensus-based approach to decision making, the roles of the Ministerial Conferences and **General Council**, the process of trade agreement negotiations, the implementation of **WTO agreements**, and the dispute settlement mechanism. Gaining a better understanding of these topics will shed light on how the rules and regulations governing international trade are determined by the members of the WTO.
 
@@ -124,3 +124,8 @@ The World Trade Organization serves an important role in facilitating trade and 
 
 ### Knowledge Check
 {% include quiz.html id="quiz_080_wto_decision_making" question="What is the basis for decision-making in the World Trade Organization?" opt1="Majority voting by member countries" opt2="Consensus-based approach with no formal objection" opt3="Decisions made by a single governing body" opt4="Unilateral actions by the organization's leadership" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="050" %}

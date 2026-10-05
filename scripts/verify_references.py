@@ -62,7 +62,15 @@ def check_url(url):
 
 def parse_references():
     with open(REFERENCES_FILE, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+        content = f.read()
+
+    # Skip YAML frontmatter
+    if content.startswith('---'):
+        parts = content.split('---', 2)
+        if len(parts) >= 3:
+            content = parts[2]
+
+    lines = content.splitlines()
 
     current_module = "General"
     entries = []

@@ -60,6 +60,11 @@
             <span class="lms-progress-text-sm" id="topbar-progress-pct">0%</span>
           </div>
 
+          <button class="lms-btn-icon-topbar js-open-sync" title="Backup or Restore Progress" aria-label="Backup or restore study progress">
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <span>Backup / Sync</span>
+          </button>
+
           {% include dark_mode.html %}
         </div>
       </div>
@@ -72,6 +77,12 @@
 
     <!-- Curriculum Syllabus Off-Canvas Drawer -->
     {% include curriculum_drawer.html %}
+
+    <!-- Progress Backup & Sync Modal -->
+    {% include progress_sync_modal.html %}
+
+    <!-- Guided Onboarding Modal -->
+    {% include onboarding_modal.html %}
 
     {%- include footer.html -%}
   </body>

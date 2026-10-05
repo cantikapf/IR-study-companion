@@ -1,8 +1,7 @@
 ---
 title: The Actors of Diplomacy
 slug: actors-diplomacy
-abstract: This chapter will introduce you to the actors of diplomacy.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Gone are the days when diplomacy was the exclusive monopoly of aristocrats in foreign ministries. Today, global negotiations involve whole-of-government delegations, transnational NGOs shaming dictators, multinational corporations steering tech standards, and mayors conducting climate paradiplomacy. In an interconnected world, modern diplomats no longer simply speak to other states—they orchestrate coalitions across fluid networks of civil society and global markets."
 ---
 
 ## Bureaucracy
@@ -94,13 +93,13 @@ However, NGOs also face limitations in scope, resources, and influence. Many NGO
 
 ## Cultural Exchange
 
-Cultural exchange plays a vital role in international relations by fostering greater mutual understanding between countries. Through mutual sharing and collaboration in areas like arts, education, language, and sports, cultural diplomacy can humanize interactions and build trust even when official relations may be strained. 
+Cultural exchange constitutes a primary instrument of soft power—defined by Joseph Nye (2004) as the ability to achieve desired outcomes through attraction and persuasion rather than military coercion or economic inducement. Through mutual sharing and collaboration in areas like arts, education, language, and sports, cultural diplomacy can humanize interactions and build trust even when official relations may be strained. 
 
 Governments, non-profits, and educational institutions engage in a variety of cultural exchange initiatives to showcase their countries' unique cultures while also learning from others. These include academic exchanges that allow students to study abroad, bilateral partnerships between museums and art institutions, collaborative musical and dance productions, language learning programs, culinary exchanges, sports demonstrations, and more.
 
 The key is that cultural exchange needs to be a two-way street. The most successful initiatives emphasize reciprocity and bidirectional sharing, rather than just one party projecting their culture onto others. When both sides participate equally, cultural exchange lays the groundwork for productive political and economic ties by nurturing mutual respect. Even when countries have major differences, cultural connections remind people of their shared humanity and common ground.
 
-While governments play a key role, non-state actors are crucial in facilitating lasting people-to-people cultural exchanges. Cities, universities, community organizations, companies, and individuals all contribute to the rich tapestry of global cultural connections. With support and funding from governments, their more informal and grassroots exchanges can counter simplistic stereotypes and build relationships that political contacts alone cannot achieve.
+While governments play a key role, non-state actors are crucial in facilitating lasting people-to-people cultural exchanges. Cities, universities, community organizations, companies, and non-state entities establish dense, decentralized networks of cross-border engagement, a phenomenon Brian Hocking (1999) termed 'catalytic diplomacy'. With support and funding from governments, their more informal and grassroots exchanges can counter simplistic stereotypes and build relationships that political contacts alone cannot achieve.
 
 Cultural exchange requires moving beyond just showcasing the outward facing elements of a country's culture, towards facilitating meaningful dialogue and collaboration. When implemented thoughtfully, it provides a powerful pathway for fostering understanding and laying the groundwork for more robust international cooperation.
 
@@ -133,9 +132,6 @@ The world of diplomacy is undergoing major changes as new actors emerge and take
 The expansion of diplomatic actors is an irreversible result of globalization. By proactively addressing the challenges outlined above, policymakers can harness the opportunities of this new landscape to promote greater inclusion, innovation and understanding in global affairs. The public and future generations stand to benefit immensely from a reimagining of diplomacy fit for an interconnected world.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Whole-of-government approach" def1="Diplomacy involving various government ministries and departments" term2="Foreign Service Officers" def2="Diplomats representing their state's interests abroad" term3="Intergovernmental Organizations" def3="Formal institutions established by treaty among sovereign states" term4="Civil Society" def4="Individuals and organizations operating outside government and business" %}
 

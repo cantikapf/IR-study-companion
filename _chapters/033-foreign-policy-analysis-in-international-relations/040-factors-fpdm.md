@@ -2,7 +2,7 @@
 title: Factor Affecting Foreign Policy Decision
 slug: factors-fpdm
 abstract: Foreign policy decisions are complex and influenced by various psychological factors, necessitating a psychological approach to Foreign Policy Decision Making (FPDM). These factors include information processing, framing, cognitive biases, and the personal attributes and beliefs of leaders.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Presidents and prime ministers do not make foreign policy in an emotional vacuum; their decisions are filtered through powerful psychological lenses. Historical analogies like 'Munich 1938' or 'Vietnam' can trigger knee-jerk panic, while cognitive biases lead leaders to ignore vital intelligence that clashes with their personal worldviews. Understanding why foreign interventions succeed or fail requires examining the psychology, ego, and temperament of the individuals sitting in the Situation Room."
 ---
 
 ## Psychological Factors

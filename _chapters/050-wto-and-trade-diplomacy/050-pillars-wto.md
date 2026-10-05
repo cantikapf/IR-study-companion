@@ -2,7 +2,7 @@
 title: 'The 3 Pillars of the WTO: How Law, Economics, and Politics Shaped Global Trade'
 slug: pillars-wto
 abstract: This chapter provides an overview of the legal, economic, and political foundations of the World Trade Organization (WTO) and explores the challenges it currently faces in these areas.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "The World Trade Organization rests upon an ingenious three-pillar architecture: legal certainty, economic comparative advantage, and political power management. By enshrining the core doctrines of Non-Discrimination—treating foreign goods identically to domestic ones and granting all trading partners Most-Favored-Nation status—the WTO transformed brute economic bullying into predictable, rules-bound international law. Yet its survival depends on balancing national sovereignty against legally binding global disciplines."
 ---
 
 
@@ -142,7 +142,6 @@ At the same time, developing countries have leveraged their collective power thr
 
 The distribution of power affects nearly all aspects of WTO operations, from agenda-setting to rulemaking to compliance mechanisms. Managing power dynamics is central to the efficacy and legitimacy of the multilateral trading system. The WTO's capacity to promote open and inclusive trade depends on addressing imbalances and finding compromise between competing national interests.
 
----
 
 ---
 

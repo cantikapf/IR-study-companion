@@ -2,7 +2,7 @@
 title: International Treaties
 slug: international-treaties
 abstract: Treaties are binding agreements between states that are governed by international law.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Treaties are the binding written contracts of the international system, formalized by the foundational doctrine of pacta sunt servanda—promises must be kept. From initial negotiation to domestic legislative ratification, sovereign states meticulously define their obligations while using reservations to carve out delicate compromises. Yet treaty freedom is not absolute: under the Vienna Convention on the Law of Treaties, any pact that violates peremptory norms of jus cogens, such as the prohibition on genocide or aggressive war, is automatically null and void."
 ---
 
 ## Introduction
@@ -117,7 +117,6 @@ However, there are some limitations to this principle:
 
 So while Pacta Sunt Servanda upholds the sanctity of treaties, states still have ways to limit, change or end treaty commitments under specific circumstances allowed by international law. The principles of good faith and pacta sunt servanda work together to promote a rules-based international order.
 
----
 
 ---
 

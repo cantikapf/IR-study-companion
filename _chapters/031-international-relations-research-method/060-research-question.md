@@ -2,7 +2,7 @@
 title: Research Question
 slug: research-question
 abstract: A clearly defined research question guides the researcher in multiple aspects of the study including determining the research design, methodology, data collection procedures, and analysis techniques.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "A weak research question is like a blurry camera lens: no matter how expensive your equipment is, the final picture will be ruined. A great research question acts as a precise compass, defining the boundaries of your investigation and distinguishing what you want to discover from the thesis statement you will ultimately defend. Without a sharp puzzle to solve, researchers risk wandering aimlessly through endless archives."
 ---
 
 ## The Importance of the Research Question

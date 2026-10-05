@@ -2,7 +2,7 @@
 title: Dependency Theory
 slug: dependency-theory
 abstract: Explanation of dependency theory.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Mainstream economists once claimed that poor countries were simply 'young' economies waiting to climb the modernization ladder. Dependency theorists exposed a harsher truth: the global South isn't underdeveloped because of internal backwardness, but because it is actively exploited. By trading cheap bananas, copper, and coffee for expensive Western manufactured goods, peripheral nations suffer from systematically declining terms of trade that funnel wealth straight into the industrialized Core."
 ---
 
 
@@ -104,7 +104,6 @@ Dependency theory has some critics who say it oversimplifies the reasons why Thi
 Even with these problems, dependency theory has given us new ways to look at the real world of international political economy. It has also helped us understand why some Third World countries aren't developing as much as they could, and it has raised the question of who is responsible for that.
 
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 title: Customary International Law
 slug: customary-international-law
 abstract: Customary international law (CIL) refers to the set of binding legal obligations and rights that emerge from the practice of states and opinio juris. This article explores the constituent elements of CIL, theories on its formation, examples of CIL norms, and why states comply with customary international law.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Long before modern diplomatic treaties were typed and signed, the foundations of world order grew organically out of unwritten custom. Customary international law crystallizes when states consistently follow a shared practice over decades and do so out of a genuine conviction that it is legally required (opinio juris), rather than mere habit or politeness. Because it binds all sovereign states—except those that openly and persistently object from the beginning—customary law ensures that basic rules of coexistence apply universally, even where formal treaty ratifications fall short."
 ---
 
 ## Introduction
@@ -115,7 +115,6 @@ CIL's sources are more material than formal - what states actually do, along wit
 
 Going forward, CIL will likely continue to adapt to new challenges and technologies. CIL provides means to regulate emerging domains like cybersecurity and outer space. Though CIL has weaknesses, its flexibility and grounding in state practice give it an important role in the international legal order. Clarifying norms and their basis in consistent state conduct and beliefs will strengthen CIL's legitimacy and utility. Overall, CIL represents an evolving product of state behavior and shared understandings that shapes global order.
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 slug: civil-military
 title: Civil-Military Relations in Indonesia
 abstract: This chapter will explore the civil-military relations in Indonesia.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "For decades under the Dwifungsi doctrine, the Indonesian military was not merely an external defense force—it sat in parliament, operated commercial enterprises, and supervised local politics. Dismantling this military dominance was the supreme test of Reformasi: separating the national police, eliminating appointed legislative seats, and passing the 2004 TNI Law to enshrine civilian control. While the armed forces returned to the barracks, balancing professional defense readiness with civilian democratic oversight remains an ongoing constitutional journey."
 ---
 
 
@@ -112,7 +112,6 @@ However, challenges remain due to the military's vast economic interests, suspic
 
 The post-authoritarian period has seen gradual improvements in civil-military balance under leaders like Megawati, though more progress is needed to consolidate democratic norms. As Indonesia evolves politically, managing the military's role in an increasingly pluralistic landscape will be an ongoing task requiring deft leadership and negotiation. Ultimately, a constructive civil-military dynamic that respects democratic values will be key to Indonesia's future as a mature democracy.
 
----
 
 ---
 

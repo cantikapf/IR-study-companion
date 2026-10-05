@@ -2,7 +2,7 @@
 slug: evolution-party
 title: The Evolution of Indonesia's Political Party System
 abstract: This chapter will explore the evolution of Indonesia's political party system.
-simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
+simple_summary: "Political parties are the engines that turn societal divisions into national policy, but in Indonesia, their design has swung like a dramatic pendulum. From the fractured multi-party ideological rivalries of the 1950s to the forced three-party straitjacket under the New Order, parties have constantly redefined power. In the post-1998 era, the explosion of competitive parties widened democratic representation, while simultaneously giving rise to pragmatic ruling cartels where ideological differences frequently yield to coalition building."
 ---
 
 ## Introduction
@@ -112,7 +112,6 @@ Authoritarian governments and totalitarian regimes often utilize ruling parties 
 Across political systems, the importance of political parties stems from their multifaceted functions beyond just electoral competition. Their role extends to recruiting leaders, formulating policies, and organizing government structures. Through these functions, ruling parties in particular hold tremendous influence over governance and policymaking.
 
 Understanding the categorization of party systems provides perspective on the varied structures that political parties operate within. While some nations lack organized party systems entirely, others feature single-party dominance or multiparty competition. Appreciating this diversity helps underscore the pivotal role played by political parties and ruling parties worldwide.
----
 
 ---
 

@@ -1,15 +1,14 @@
 ---
 title: Understanding Issues of International Politics
 slug: inter-politics
-abstract: Key issue in international politics.
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "Operating in an 'anarchical society' without a global sovereign, states must constantly navigate five systemic arenas: national defense, strategic arms control (like SALT and START), post-war peacebuilding, universal human rights, and global health diplomacy. When pandemics ignore passports and nuclear arsenals threaten mutual annihilation, international politics ceases to be a luxury debate. Cooperating across these shared vulnerabilities is the ultimate test of human survival."
 ---
 
-**International** politics refers to the relationships between countries and how they interact on the global stage. Some of the key issues in international politics include:
+International politics operates within what Hedley Bull (1977, *The Anarchical Society*) termed an "anarchical society"—a domain where sovereign states recognize common rules and shared institutions despite the absence of an overarching world government. Some of the key issues in international politics include:
 
 - **Security** - Countries seek to protect their national interests and ensure the safety and stability of their citizens. This involves both domestic security within a nation's borders as well as international efforts to prevent conflict. Maintaining national security often requires diplomacy, building alliances, gathering intelligence, and when necessary, the use of military force.
 
-- **Arms Control** - Limiting the development and proliferation of weapons, especially weapons of mass destruction like nuclear arms, is an important goal of international politics. Arms control negotiations aim to reduce stockpiles and the risk of war through treaties like SALT and START.
+- **Arms Control** - Limiting the development and proliferation of weapons, especially weapons of mass destruction like nuclear arms, is an important goal of international politics. As Thomas Schelling and Morton Halperin classically formulated in *Strategy and Arms Control* (1961), modern arms control aims to stabilize deterrence, minimize the likelihood of war, and reduce the catastrophic destruction should deterrence fail, as institutionalized in the Strategic Arms Limitation Talks (SALT I & II) and Strategic Arms Reduction Treaties (START).
 
 - **Peace Building** - After conflict ends, peace building seeks to prevent violence from reemerging and establish long-term peace. This can involve rebuilding society, creating mechanisms for cooperation, and transforming relationships between groups. International organizations like the UN play an important role.
 
@@ -169,11 +168,13 @@ Key aspects of NCDs as they relate to health diplomacy include:
 Overall, the growth of NCDs necessitates new forms of collaboration and diplomacy between nations and stakeholders. By acknowledging shared interests in addressing common risk factors, health diplomacy has potential to build stronger global partnerships for improving prevention and control of NCDs.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Security" def1="Protection of states and citizens from threats" term2="Arms Control" def2="International restrictions on development and proliferation of weapons" term3="Peace Building" def3="Preventing conflict recurrence and establishing long-term peace" term4="Human Rights" def4="Protection and promotion of fundamental human rights and dignity" %}
 
 ### Knowledge Check
 {% include quiz.html id="quiz_060_inter_politics" question="What is the primary goal of security in international politics?" opt1="To promote economic cooperation" opt2="To protect states and citizens from threats" opt3="To advance human rights" opt4="To control the spread of diseases" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="032" %}

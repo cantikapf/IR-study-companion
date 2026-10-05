@@ -1,8 +1,7 @@
 ---
 slug: world-order
 title: The Post-Cold War World Order
-abstract: The Post-Cold War World Order
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "When the Berlin Wall fell, theorists rushed to declare a 'New World Order'—with Francis Fukuyama boldly proclaiming the 'End of History' and the permanent triumph of Western liberal democracy. Yet this unipolar moment proved surprisingly turbulent. While major-power warfare vanished, ancient ethnic animosities exploded into genocidal civil wars from Rwanda to the Balkans, demonstrating that removing superpower rivalry did not automatically bring global harmony."
 ---
 
 
@@ -108,9 +107,7 @@ The end of the Cold War provided a historic inflection point that shaped geopoli
 
 Key discussions centered around the possibility of a New World Order marked by international cooperation, the changing nature of conflicts, and the role of deterrence. Huntington provided an alternate vision with his "Clash of Civilizations" theory, cautioning that future conflicts may be cultural rather than ideological. 
 
-In this context, defining war beyond state conflicts and examining power balances and accountability of nations proved critical. While the post-Cold War order enabled new possibilities, it also posed risks of instability amidst the realignment of powers. The complex interplay between historical transitions, cultural divides, and evolving power dynamics underscores the nuanced trajectory of 21st century global affairs.
-
----
+In this context, defining security beyond inter-state conflict and examining the legitimacy and accountability of global institutions proved critical. While the post-Cold War order initially enabled multilateral cooperation, contemporary geopolitical frictions demonstrate that history did not end; rather, ideological, civilizational, and material rivalries continue to reconfigure 21st-century global governance.
 
 ---
 

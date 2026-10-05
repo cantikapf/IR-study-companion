@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "video-shotcraft": {
+      "source": "Vincentwei1021/video-shotcraft",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a35848ae1710f4b9d499c0dee386d70d84db4cb174430ca731eb38f9fce4b810"
+    },
+    "video-talkcraft": {
+      "source": "Vincentwei1021/video-talkcraft",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "76a21c57605760e01743f8e13f4284ed0abe6dc2339feee169763c6e49aa82c6"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 title: Basic Understanding Of International Law
 slug: basic-inter-law
 abstract: Explains the basic understanding of international law.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Unlike domestic legal systems that rely on police forces and central legislatures, international law operates in an anarchic world without a global sovereign. It functions because states voluntarily bind themselves through written treaties and customary practices rooted in a mutual sense of legal obligation (opinio juris). While cynics view international rules as mere paper promises easily broken by great powers, states routinely follow international law because predictability, reputational credibility, and reciprocal cooperation are far cheaper than permanent chaos."
 ---
 
 ## Definition of International Law
@@ -128,7 +128,6 @@ The ICJ is composed of 15 judges elected by the UN General Assembly and Security
 
 While ICJ decisions legally bind only the states involved in each case, its interpretations of international law carry persuasive authority and influence. The Court's decisions often clarify aspects of customary international law and the meaning of treaties. By helping resolve disputes peacefully, the ICJ contributes to the development and evolution of international law.
 
----
 
 ---
 

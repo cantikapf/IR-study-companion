@@ -2,7 +2,7 @@
 title: The Establishment Of ASEAN
 slug: the-establishment-of-asean
 abstract: ASEAN, the Association of Southeast Asian Nations, was established in 1967 with the goal of promoting regional peace, stability, and economic growth among its 10 member states. Through consensus building and non-interference principles, ASEAN has evolved into a community aiming for greater integration and collaboration in various areas of common interest.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "In August 1967, five visionary foreign ministers gathered in Bangkok to achieve the unthinkable: turning an active conflict zone recently torn apart by the Konfrontasi into an oasis of regional peace. Rather than establishing legalistic courts or supranational armies, the Bangkok Declaration pioneered the legendary 'ASEAN Way'—a diplomatic culture anchored in quiet consultation (musyawarah), unanimous consensus (mufakat), and strict non-interference. By prioritizing trust-building over rigid enforcement, ASEAN created an enduring diplomatic miracle that kept Southeast Asia free from major interstate war for over half a century."
 ---
 
 ## Introduction
@@ -122,7 +122,6 @@ Over time, ASEAN evolved from a forum for cooperation to an engine for regional 
 
 Realizing the ASEAN Community vision requires commitment from all member states as well as engagement with stakeholders across sectors. ASEAN has become an important platform for member states to manage relations, pursue shared interests, and elevate the region’s voice in global affairs. While challenges remain, ASEAN has and will continue to play a vital role in Southeast Asia's development story.
 
----
 
 ---
 

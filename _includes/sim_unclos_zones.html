@@ -1,0 +1,309 @@
+<style>
+#unclos-zones-sim {
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 30px 0;
+    border: 1px solid #374151;
+}
+.sim-uz-panel {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+.sim-uz-header {
+    border-bottom: 2px solid #374151;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.sim-uz-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sim-uz-header p {
+    color: #9ca3af;
+    margin: 10px 0 0 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.sim-uz-text-primary { color: #f9fafb; }
+.sim-uz-text-muted { color: #9ca3af; }
+.sim-uz-success { border: 1px solid #10b981; color: #10b981; background: rgba(16,185,129,0.1); padding: 15px; border-radius: 6px; }
+.sim-uz-failure { border: 1px solid #ef4444; color: #ef4444; background: rgba(239,68,68,0.1); padding: 15px; border-radius: 6px; }
+.sim-uz-warning { border: 1px solid #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.1); padding: 15px; border-radius: 6px; }
+.sim-uz-btn {
+    padding: 12px 15px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.sim-uz-btn:hover {
+    background: #4b5563;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+}
+.sim-uz-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+.sim-uz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .sim-uz-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.sim-uz-fade {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+.sim-uz-diagram {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #374151;
+}
+.sim-uz-diagram-surface {
+    display: flex;
+    height: 80px;
+}
+.sim-uz-diagram-seabed {
+    display: flex;
+    height: 40px;
+}
+.sim-uz-zone-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+.sim-uz-zone-block span {
+    font-size: 0.65rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+.sim-uz-zone-block:last-child {
+    border-right: none;
+}
+.sim-uz-zone-iw { background: #1e3a5f; flex: 1; }
+.sim-uz-zone-ts { background: #1e40af; flex: 1; }
+.sim-uz-zone-cz { background: #2563eb; flex: 1; }
+.sim-uz-zone-eez { background: #3b82f6; flex: 2; }
+.sim-uz-zone-hs { background: #93c5fd; flex: 3; color: #111827; }
+.sim-uz-zone-cs { background: #60a5fa; flex: 5; }
+.sim-uz-zone-ta { background: #374151; flex: 3; }
+
+.sim-uz-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.sim-uz-choices .sim-uz-btn {
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 120px;
+}
+.sim-uz-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #9ca3af;
+}
+.sim-uz-feedback {
+    margin-top: 20px;
+    display: none;
+}
+</style>
+
+<div id="unclos-zones-sim">
+    <div class="sim-uz-header">
+        <h3>🌊 Simulation: UNCLOS Maritime Zone Mapper</h3>
+        <p>Master the maritime zones defined by the 1982 UN Convention on the Law of the Sea. Classify each scenario by clicking the correct maritime zone where it applies.</p>
+    </div>
+
+    <div class="sim-uz-diagram">
+        <div class="sim-uz-diagram-surface">
+            <div class="sim-uz-zone-block sim-uz-zone-iw" title="Internal Waters">🏠 IW<span>0nm</span></div>
+            <div class="sim-uz-zone-block sim-uz-zone-ts" title="Territorial Sea">🚢 TS<span>12nm</span></div>
+            <div class="sim-uz-zone-block sim-uz-zone-cz" title="Contiguous Zone">🛡️ CZ<span>24nm</span></div>
+            <div class="sim-uz-zone-block sim-uz-zone-eez" title="Exclusive Economic Zone">🐟 EEZ<span>200nm</span></div>
+            <div class="sim-uz-zone-block sim-uz-zone-hs" title="High Seas">🌊 HS<span>>200nm</span></div>
+        </div>
+        <div class="sim-uz-diagram-seabed">
+            <div class="sim-uz-zone-block sim-uz-zone-cs" title="Continental Shelf">🗺️ Continental Shelf<span>up to 350nm</span></div>
+            <div class="sim-uz-zone-block sim-uz-zone-ta" title="The Area">⚓ The Area<span>Seabed</span></div>
+        </div>
+    </div>
+
+    <div id="sim-uz-game-container" class="sim-uz-panel">
+        <div class="sim-uz-progress">
+            <span id="sim-uz-q-counter">Question 1 of 6</span>
+            <span id="sim-uz-score-counter">Score: 0</span>
+        </div>
+        
+        <h4 id="sim-uz-scenario-text" style="font-size: 1.1rem; line-height: 1.5; margin-top: 0;"></h4>
+
+        <div class="sim-uz-choices" id="sim-uz-choices-container">
+            <button class="sim-uz-btn" onclick="simUzAnswer('Internal Waters')">Internal Waters</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('Territorial Sea')">Territorial Sea</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('Contiguous Zone')">Contiguous Zone</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('EEZ')">EEZ</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('Continental Shelf')">Continental Shelf</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('High Seas')">High Seas</button>
+            <button class="sim-uz-btn" onclick="simUzAnswer('The Area')">The Area</button>
+        </div>
+
+        <div id="sim-uz-feedback" class="sim-uz-feedback sim-uz-fade" aria-live="polite">
+            <div id="sim-uz-feedback-content"></div>
+            <button class="sim-uz-btn" style="margin-top: 15px;" onclick="simUzNext()">Next Scenario &rarr;</button>
+        </div>
+    </div>
+
+    <div id="sim-uz-end-container" class="sim-uz-panel sim-uz-fade" style="display: none; text-align: center;">
+        <h3 style="margin-top: 0;">Simulation Complete</h3>
+        <p style="font-size: 1.2rem; margin: 20px 0;">Your Final Score: <strong id="sim-uz-final-score"></strong></p>
+        <div class="sim-uz-success" style="margin-bottom: 20px; text-align: left;">
+            <strong>Analysis:</strong> UNCLOS successfully established a comprehensive legal framework for the oceans, balancing the security and economic interests of coastal states (through extended sovereignty like EEZ and Continental Shelf) with the traditional freedoms of maritime powers (like innocent passage and high seas freedoms).
+        </div>
+        <button class="sim-uz-btn" onclick="simUzRestart()">Restart Simulation</button>
+    </div>
+</div>
+
+<script>
+(function() {
+    const scenarios = [
+        {
+            text: "A foreign warship transits through coastal waters without stopping, in what the coastal state considers 'innocent passage.'",
+            correct: "Territorial Sea",
+            feedback: "Correct! Under UNCLOS Articles 17-19, foreign ships enjoy the right of innocent passage through the territorial sea (0-12nm), provided they do not engage in any threat or use of force."
+        },
+        {
+            text: "A coastal state arrests a foreign fishing vessel operating without a license 150 nautical miles from shore.",
+            correct: "EEZ",
+            feedback: "Correct! Under UNCLOS Article 56, the coastal state has sovereign rights for the purpose of exploring, exploiting, conserving and managing natural resources within its 200nm Exclusive Economic Zone."
+        },
+        {
+            text: "An oil company drills on the seabed 300nm from shore under a coastal state license, based on geological continental shelf extension.",
+            correct: "Continental Shelf",
+            feedback: "Correct! Under UNCLOS Article 76, coastal states may claim extended continental shelf rights up to 350nm if they can prove the natural prolongation of their land mass to the Commission on the Limits of the Continental Shelf (CLCS)."
+        },
+        {
+            text: "A foreign university research vessel conducts marine scientific research 100nm from shore without notifying the coastal state.",
+            correct: "EEZ",
+            feedback: "Correct zone (EEZ), but this constitutes a violation! Under UNCLOS Article 246, marine scientific research in the EEZ requires the express consent of the coastal state. The research vessel should have obtained prior authorization."
+        },
+        {
+            text: "An international naval coalition conducts an anti-piracy patrol in open ocean 500nm from any coast.",
+            correct: "High Seas",
+            feedback: "Correct! Under UNCLOS Article 87, the high seas are open to all states. Article 100 establishes a duty for all states to cooperate in the repression of piracy — this is one of the few bases for universal jurisdiction at sea."
+        },
+        {
+            text: "A deep-sea mining company extracts polymetallic nodules from the ocean floor 4000m deep, under license from the International Seabed Authority.",
+            correct: "The Area",
+            feedback: "Correct! Under UNCLOS Part XI, the deep seabed beyond national jurisdiction is designated 'The Area' and declared the Common Heritage of Mankind. All mineral resources are administered by the International Seabed Authority (ISA)."
+        }
+    ];
+
+    let currentIdx = 0;
+    let score = 0;
+
+    const gameContainer = document.getElementById('sim-uz-game-container');
+    const endContainer = document.getElementById('sim-uz-end-container');
+    const qCounter = document.getElementById('sim-uz-q-counter');
+    const scoreCounter = document.getElementById('sim-uz-score-counter');
+    const scenarioText = document.getElementById('sim-uz-scenario-text');
+    const choicesContainer = document.getElementById('sim-uz-choices-container');
+    const feedbackBox = document.getElementById('sim-uz-feedback');
+    const feedbackContent = document.getElementById('sim-uz-feedback-content');
+    const finalScore = document.getElementById('sim-uz-final-score');
+
+    function loadScenario() {
+        if (currentIdx >= scenarios.length) {
+            showEndScreen();
+            return;
+        }
+
+        const sc = scenarios[currentIdx];
+        qCounter.textContent = `Question ${currentIdx + 1} of ${scenarios.length}`;
+        scenarioText.textContent = sc.text;
+        
+        feedbackBox.style.display = 'none';
+        
+        const buttons = choicesContainer.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+        });
+    }
+
+    window.simUzAnswer = function(chosenZone) {
+        const sc = scenarios[currentIdx];
+        const isCorrect = chosenZone === sc.correct;
+
+        const buttons = choicesContainer.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent !== chosenZone && btn.textContent !== sc.correct) {
+                btn.style.opacity = '0.4';
+            }
+        });
+
+        feedbackBox.style.display = 'block';
+        
+        if (isCorrect) {
+            score++;
+            scoreCounter.textContent = `Score: ${score}`;
+            feedbackContent.className = 'sim-uz-success';
+            feedbackContent.innerHTML = `<strong>Correct (${chosenZone})!</strong><br><br>${sc.feedback}`;
+        } else {
+            feedbackContent.className = 'sim-uz-failure';
+            feedbackContent.innerHTML = `<strong>Incorrect.</strong> You chose ${chosenZone}, but the correct zone is <strong>${sc.correct}</strong>.<br><br>${sc.feedback}`;
+        }
+    };
+
+    window.simUzNext = function() {
+        currentIdx++;
+        loadScenario();
+    };
+
+    window.simUzRestart = function() {
+        currentIdx = 0;
+        score = 0;
+        scoreCounter.textContent = `Score: 0`;
+        endContainer.style.display = 'none';
+        gameContainer.style.display = 'block';
+        loadScenario();
+    };
+
+    // Initialize
+    loadScenario();
+})();
+</script>

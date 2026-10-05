@@ -2,7 +2,7 @@
 title: Japan Foreign Policy
 slug: japan-foreign-policy
 abstract: Explores the power struggles between key actors, the impact of central government reforms, and the influence of external pressures in Japan's foreign policy making.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Bound by the pacifist constraints of Article 9 of its post-war Constitution, Japan mastered the art of low-profile economic diplomacy while sheltering under the American security umbrella. Yet Tokyo's foreign policy is far from passive: behind the scenes, strong prime ministerial leadership at the Kantei constantly wrestles with cautious foreign ministry bureaucrats and nationalistic political factions. In a rapidly changing Indo-Pacific, Japan is steadily normalizing its defense capabilities and pioneering free-and-open regional initiatives without abandoning its constitutional commitment to peace."
 ---
 
 ## Introduction
@@ -104,3 +104,8 @@ In summary, the EAC initiative faced challenges during the Kan Naoto administrat
 
 ### Knowledge Check
 {% include quiz.html id="quiz_070_japan_foreign_policy" question="What is a key factor influencing Japan's foreign policy making?" opt1="The strong position of the prime minister" opt2="The power struggles between the Kantei, MOFA officials, and ruling party backbenchers" opt3="The absence of external pressures" opt4="The dominance of the military in decision-making" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="041" %}

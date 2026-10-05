@@ -2,7 +2,7 @@
 slug: democracy-indonesia
 title: 'Democracy In Indonesia: Decentralization'
 abstract: 'This chapter will explore the democracy in Indonesia.'
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Following the fall of Suharto, Indonesia averted national collapse not by tightening central control, but by launching one of the world's most daring 'Big Bang' decentralization experiments. By transferring budgets and executive powers directly to over five hundred regencies and cities, Jakarta defused separatist tensions and brought governance closer to ordinary people. Yet this devolution also fostered entrenched local dynasties and money politics, showing that decentralizing authority does not automatically eliminate patronage."
 ---
 
 
@@ -114,7 +114,6 @@ Looking ahead, the future of effective decentralization depends on strengthening
 
 If thoughtfully implemented, decentralization can support democratization, equitable development, and unity amidst diversity in Indonesia. But continued reform is needed to fully realize its potential benefits. The interplay between local and national governance will shape the next chapter of Indonesia's political evolution.
 
----
 
 ---
 

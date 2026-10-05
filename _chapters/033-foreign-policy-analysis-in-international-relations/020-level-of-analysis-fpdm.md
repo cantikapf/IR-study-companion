@@ -2,87 +2,62 @@
 title: Level Of Analysis In Foreign Policy Decision Making
 slug: level-of-analysis-fpdm
 abstract: The explanation of individual, state, and system level of analysis in foreign policy decision making.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "When an international crisis erupts, where should you point your investigative flashlight? Kenneth Waltz and J. David Singer showed that foreign policy must be analyzed on three distinct tiers: the individual leader's psychological fears and ego (1st image), the country's domestic regime and bureaucratic infighting (2nd image), and the harsh pressures of global anarchy and superpower rivalry (3rd image). Shifting between these three zoom levels prevents analysts from blaming an entire world crisis on a single leader's mood."
 ---
 
-## Level of Analysis in Foreign Policy Decision Making
+## Levels of Analysis in Foreign Policy Decision-Making
 
-### Individual-level analysis
+Methodological rigor in International Relations requires distinguishing between different sources of causation. The level-of-analysis framework was canonically introduced by **Kenneth Waltz** in *Man, the State, and War* (1959) as three distinct "images" of world politics, and further formalized by **J. David Singer** in his seminal 1961 paper, *"The Level-of-Analysis Problem in International Relations"*. Analysts employ these tiers to prevent confounding variables across individual agency, domestic institutions, and systemic structure.
 
-Individual-level **analysis** involves understanding how the human decision-making process influences **foreign** **policy**. Foreign policy making is much more likely than domestic policy making to be centered on a country’s top leadership.
+### 1. Individual-Level Analysis (First Image)
 
-Some key **factors** considered in individual-level analysis:
+The individual level of analysis investigates how cognitive processing, belief systems, psychological traits, and biological constraints in leaders determine foreign policy choices. This level rejects the neorealist assumption of the state as a homogeneous unitary actor, recognizing that human decision-makers operate under bounded rationality.
 
-- **Cognitive Factors**: How do decision makers perceive the world and process information? What are their core beliefs and paradigms? How do they interpret new information? Cognitive biases can skew perceptions.
-- **Emotional Factors**: Emotions like fear, anger, or grief can shape policy choices. Stressful situations may impair rational thinking. Psychological traits like risk tolerance play a role.
-- **Psychological Factors**: Personality traits, mental health, ego, ambitions - these can determine if leaders are aggressive, cautious, reactive, or proactive. Psychological biases influence interpretation of events.
-- **Biological Factors**: Health issues, medications, sleep patterns, or substance use can impact judgment and energy levels. Age and generational experiences may shape perspectives.
-- **Perceptions**: How do leaders view threats, opportunities, and options? Flawed threat perceptions can lead to missteps. Optimism or pessimism colors choices. Selective perception reinforces biases.
+Key analytical dimensions at the individual level include:
 
-Understanding how these individual-level factors shape foreign policy decision making provides insight into why leaders make certain choices. Psychology, emotions, biology, and perceptions fundamentally influence human behavior and judgment.
+- **Cognitive Schemas and Operational Codes**: Formulated by Nathan Leites (1951) and refined by Alexander George (1969), operational codes represent a leader's fundamental philosophical and instrumental beliefs regarding the nature of political conflict and optimal strategic action.
+- **Cognitive and Psychological Biases**: Robert Jervis (*Perception and Misperception in International Politics*, 1976) demonstrated how confirmation bias, cognitive consistency, selective filtering, and wishful thinking systematically distort how decision-makers evaluate incoming intelligence.
+- **Emotions and Stress**: Acute international crises impose extreme psychological stress, truncating time horizons, escalating threat perception, and encouraging premature closure in cognitive evaluation (Ole Holsti, 1972).
+- **Prospect Theory**: Amos Tversky and Daniel Kahneman (1979; applied to IR by Jack Levy, 1992) established that political leaders are risk-averse when defending perceived gains, but demonstrate extreme risk acceptance (*gambling for resurrection*) when operating in the domain of losses.
 
-### State Level Analysis
+### 2. State- and Domestic-Level Analysis (Second Image)
 
-State level analysis examines how factors within a state influence its foreign policy decisions and actions. This includes aspects like the type of government, political culture, and domestic actors like bureaucracies.
+State-level analysis examines domestic attributes and internal political dynamics that shape external policy outputs. Rather than treating the state as a "black box" (billiard-ball model), this tier deconstructs domestic institutions and societal coalitions.
 
-#### Type of Government
+Key domestic determinants include:
 
-The type of government a country has affects how foreign policy decisions are made. In authoritarian governments, the leader often has absolute power over foreign policy. Democratic governments tend to have more diverse inputs, oversight, and constraints on executive power over foreign policy. Parliamentary systems allow for faster policy changes while presidential systems generally promote more continuity.
+- **Regime Type and Democratic Peace**: As demonstrated by Michael Doyle (1983) drawing on Immanuel Kant (1795), institutional checks and balances, transparent public contestation, and electoral accountability constrain democratic executives from waging war against fellow democracies, whereas authoritarian regimes concentrate foreign policy authority in narrow ruling juntas.
+- **Bureaucratic Politics**: Graham Allison's Governmental Politics Model (1971) asserts that foreign policy decisions emerge from bureaucratic bargaining, turf battles, and standard operating procedures (*"Where you stand depends on where you sit"*).
+- **Strategic Culture and National Identity**: A state's historical narratives, collective trauma, and geographical memory generate durable cultural predispositions toward the use of force, multilateral engagement, or isolationism (Alastair Iain Johnston, 1995).
+- **Domestic Interest Groups and Public Opinion**: Pluralist bargaining among industrial lobbies, military-industrial complexes, and legislative oversight committees circumscribes the executive's negotiating leeway, establishing the parameters of Putnam's (1988) domestic win-sets.
 
-#### Political Culture
+### 3. System-Level Analysis (Third Image)
 
-A country's history, values, ideology, and beliefs shape its political culture and outlook on international relations. Political culture helps determine what foreign policy goals and actions are seen as legitimate or acceptable. For example, pacifist cultures are less likely to support military interventions.
+System-level analysis examines structural pressures, power configurations, and institutional constraints imposed on all states by the international system. It focuses on the external operating environment rather than internal state characteristics.
 
-#### Bureaucracies
+Key structural drivers include:
 
-Government agencies and bureaucracies are important actors in foreign policymaking. They provide intelligence, analysis, options, and implementation plans to leaders. Larger bureaucracies can develop institutional cultures and capabilities that shape what policy options get priority. Competing bureaucracies can lead to rivalries over policy.
+- **Anarchy and Structural Realism**: Kenneth Waltz (*Theory of International Politics*, 1979) established that the absence of a global sovereign compels states into self-help competition, prioritizing physical security and survival above domestic ideological preferences.
+- **System Polarity**: The distribution of relative material capabilities—whether unipolar, bipolar, or multipolar—structures structural stability, alliance flexibility, and the prevalence of systemic conflict.
+- **Economic Interdependence**: Complex interdependence (Robert Keohane and Joseph Nye, 1977) creates reciprocal vulnerabilities and sensitivity costs that alter the expected utility of military coercion versus multilateral economic coordination.
+- **International Norms and Regimes**: Institutional regimes (Krasner, 1983) and normative taboos—such as the non-use of nuclear weapons (Nina Tannenwald, 2007) and sovereignty-respecting customary law—provide shared expectations that bound state conduct.
 
-### System-Level Analysis
+<center> <img src="{{site.baseurl}}/static/modules/levels of analysis.png " alt="Levels of Analysis Diagram" width="70%" /> </center>
 
-System-level analysis focuses on the external constraints on foreign policy that arise from the structure of the international system. Countries do not make foreign policy decisions in a vacuum - they must account for systemic factors like power dynamics, economic realities, and international norms.
+## Case Application: US Decision-Making in the Vietnam War (1964–1968)
 
-**Power Relationships**
+The American intervention and escalation in Vietnam provides a classic empirical case demonstrating the explanatory power of triangulating across all three levels:
 
-The distribution of power in the international system affects foreign policy decision-making. The number of great powers and how they relate to one another is important. A multipolar system with several powerful actors creates different constraints than a bipolar system with two superpowers or a unipolar system with one hegemon. The global and regional context of power also matters.
+- **Individual Level**: President Lyndon B. Johnson's insecurity regarding personal credibility, his fear of being labeled "the president who lost Southeast Asia," and his cognitive operational code led him to view de-escalation as unacceptable weakness. Concurrently, Defense Secretary Robert McNamara's technocratic obsession with quantitative body counts distorted battlefield reality.
+- **State/Domestic Level**: Institutional rivalry between the Department of State, the Pentagon, and the CIA led to fragmented strategic planning. Simultaneously, domestic electoral calculations—fearing a right-wing McCarthyist backlash that could derail the domestic "Great Society" legislative agenda—disincentivized candid public appraisal of war costs.
+- **System Level**: Structural Cold War bipolarity and George Kennan's containment doctrine dictated that any communist advance was perceived through zero-sum lens. The domino theory held that failure to intervene in Saigon would shatter American extended deterrence credibility across European and Asian alliances.
 
-**Economic Realities**
-
-Economic interdependence between states and relative gains/losses factor into foreign policy calculations. Seeking absolute economic gains is often tempered by concerns over relative gains compared to other states. Economic sanctions and incentives are tools used to influence foreign policy behavior.
-
-**International Norms**
-
-Prevailing norms and expectations around issues like human rights, non-intervention, and weapons non-proliferation shape foreign policy options. Reputation and credibility matter when states consider adhering to or violating international norms. Norms evolve over time and state actions can modify norms.
-
-<center> <img src="{{site.baseurl}}/static/modules/levels of analysis.png " alt="" width="70%" /> </center>
-
-## Case Study: The Vietnam War
-
-The Vietnam War presents an interesting case study for foreign policy analysis. The war lasted from 1955 to 1975, with direct U.S. involvement from 1965 to 1973. There are several key factors that influenced U.S. foreign policy decisions during this time:
-
-**Individual Level**
-
-- President Lyndon B. Johnson's personality and leadership style impacted his decisions to escalate and continue the war. As an ambitious politician, he felt pressure not to be the first president to "lose a war."
-- Secretary of Defense Robert McNamara pushed for the use of statistical analysis and "metrics" to measure success in Vietnam. This focus on data versus reality on the ground contributed to continued involvement.
-- Cognitive biases and the " anchoring effect" caused leaders to stick with their initial assessments that victory could be achieved.
-
-**State Level**
-
-- The organizational bureaucracy of the military and defense departments enabled continuation of failed policies. Dissenting perspectives were pushed aside.
-- Congress initially gave broad war powers to the President without oversight, enabling unilateral decision making.
-
-**System Level**
-
-- The Cold War environment and containment policy led to the view that loss in Vietnam meant loss of credibility globally.
-- Domino theory exaggerated risks of communism spreading across Southeast Asia.
-
-In summary, the complex foreign policy decisions during the Vietnam War can be analyzed through the three levels of FPA theory. Cognitive biases, individual beliefs, organizational factors, and the Cold War system all combined to shape the tragic decisions made by U.S. leaders.
-
----
+Analyzing foreign policy through Waltz's and Singer's multi-level architecture clarifies that state conduct is rarely explained by a single variable; rather, strategic choices reflect the interaction between structural pressures from above, institutional constraints from below, and cognitive processing at the core.
 
 ---
 
 ### Interactive Learning 
-{% include flashcards.html term1="Individual-level analysis" def1="Examines how human decision-making influences foreign policy" term2="State-level analysis" def2="Studies factors within a state that influence foreign policy decisions" term3="System-level analysis" def3="Focuses on external constraints on foreign policy from the international system" term4="Cognitive Factors" def4="How decision makers perceive and process information in foreign policy" %}
+{% include flashcards.html term1="First Image (Individual Level)" def1="Analyzes cognitive schemas, operational codes, and psychological biases of decision-makers (Waltz 1959, Jervis 1976)" term2="Second Image (State Level)" def2="Examines domestic institutions, bureaucratic politics, and regime type constraints (Allison 1971, Doyle 1983)" term3="Third Image (Systemic Level)" def3="Focuses on structural anarchy, polarity, and distribution of material capabilities (Waltz 1979)" term4="Operational Code" def4="A leader's core philosophical and instrumental beliefs regarding political conflict and strategic action (George 1969)" %}
 
 ### Knowledge Check
-{% include quiz.html id="quiz_020_level_of_analysis_fpdm" question="What level of analysis focuses on the external constraints on foreign policy that arise from the structure of the international system?" opt1="Individual-level analysis" opt2="System-level analysis" opt3="State-level analysis" opt4="Cognitive Factors" correct="2" %}
+{% include quiz.html id="quiz_020_level_of_analysis_fpdm" question="Which level of analysis focuses on external structural constraints, systemic anarchy, and the global distribution of power?" opt1="Individual-level analysis (First Image)" opt2="System-level analysis (Third Image)" opt3="State-level analysis (Second Image)" opt4="Cognitive schema analysis" correct="2" %}

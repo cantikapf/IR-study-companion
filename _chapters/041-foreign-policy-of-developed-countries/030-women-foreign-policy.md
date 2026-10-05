@@ -2,7 +2,7 @@
 title: 'Women And Foreign Policy: Swedish Feminist Foreign Policy'
 slug: women-foreign-policy
 abstract: Foreign policy that is dominated by masculine values is a problem. The Swedish feminist foreign policy is (one of) the solution.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "For centuries, national security and foreign diplomacy were treated as an exclusively masculine domain dominated by military calculations and realpolitik posturing. Pioneered by Sweden's 2014 feminist foreign policy framework, integrating women's rights, representation, and resources challenges this narrow paradigm. Bringing women into diplomacy is not merely about demographic equity—empirical evidence proves that peace treaties negotiated with women's participation are substantially more durable and transformative."
 ---
 
 ## Introduction 
@@ -55,7 +55,7 @@ Overall, women's personal backgrounds equip them differently for foreign policy.
 Women have been pushing to gain more influence in foreign policy. Their increasing involvement has had several notable effects:
 
 - **Closing the Gender Gap** - As more women take on leadership roles in foreign policy, they help close the gender gap that has long excluded women from decision-making positions. Women bring new perspectives and priorities to the table. Their presence and voices lead to more gender sensitive policies.
-- **Overcoming Stereotypes and Beliefs** - Women in foreign policy must confront stereotypes that they are unqualified, overly emotional, or ill-suited for the job. But as more women excel in senior positions, they prove these stereotypes wrong and earn respect. Their successes pave the way for future women leaders.
+- **Overcoming Stereotypes and Beliefs** - Women in foreign policy must confront stereotypes that they are unqualified, overly emotional, or ill-suited for the job. But as more women excel in senior positions, they prove these stereotypes wrong and earn respect. Their demonstrated institutional effectiveness establishes precedents that institutionalize expanded access for subsequent cohorts of women leaders.
 - **Different Attitudes and Management Styles** - Women often bring different attitudes and leadership styles that can positively impact foreign policy. Research shows that women leaders tend to be more collaborative and democratic. They utilize soft power tools more. Women also seem more inclined to use negotiation over aggression. Their involvement provides balance in decision-making.
 
 So while challenges remain, the growing influence of women in foreign policy is making the field more inclusive and sensitive to women's perspectives. Their input is reshaping priorities, attitudes and approaches.
@@ -108,7 +108,6 @@ Some key challenges that remain include:
 
 So while the rhetoric and intentions toward greater gender equality in foreign policy have grown, significant challenges remain in translating this into reality. Greater representation, shifting cultures and attitudes, and overcoming resistance will be key priorities going forward.
 
----
 
 ---
 

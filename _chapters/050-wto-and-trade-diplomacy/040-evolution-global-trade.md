@@ -2,7 +2,7 @@
 title: 'From Silk Road to Superhighway: The Evolution of Global Trade Diplomacy'
 slug: evolution-global-trade
 abstract: International trade has evolved significantly over the past two centuries, becoming a crucial driver of global economic prosperity. This article explores the growth of international trade, its impact on wealth distribution, the role of diplomacy, and the emergence of non-state actors in trade negotiations.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "From camel caravans along ancient Silk Road trails to giant container vessels crisscrossing the oceans, international trade has become humanity's most intricate mutual survival system. Global specialization generates immense collective wealth, but it also repeatedly exposes vulnerable local industries to disruptive foreign competition. The enduring paradox of trade diplomacy is why cross-border commerce continues expanding exponentially even while multilateral negotiations frequently grind to a halt under domestic political pressure."
 ---
 
 ## Introduction
@@ -85,7 +85,6 @@ Yet at the same time, much of the diplomacy that takes place within the institut
 
 The ubiquity of real-time communication channels, which make it much easier for non-state actors and the global public to be aware of and participate in trade diplomacy, also makes that diplomacy much more difficult. The public visibility of negotiating positions and debates makes compromise or flexibility more politically difficult for governments. This exacerbates the structural difficulties inherent in trade negotiations between sovereign states with asymmetric economic size or influence.
 
----
 
 ---
 

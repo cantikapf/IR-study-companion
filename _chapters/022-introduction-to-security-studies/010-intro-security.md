@@ -1,13 +1,12 @@
 ---
 title: Introduction To Security Studies
 slug: introduction-security
-abstract: This chapter will introduce you to the field of security studies in International Relations context.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "During the Cold War, security simply meant pointing missiles at another superpower to prevent an invasion. But when the Berlin Wall fell, scholars realized that tanks cannot defend a population against pandemics, cyberattacks, or climate disasters. Security studies transformed from asking 'how does the state survive military assault?' to 'whose safety are we actually protecting—the regime, the state, or the human beings living inside it?'"
 ---
 
 ## Introduction
 
-**Security** has been a heavily debated concept within **International Security Studies** (ISS), evolving significantly from its origins in post-World War II discussions on protecting states and societies from external and internal dangers. At its core, security encompasses the preservation of core values and freedom from threats for individuals, groups, and nations. However, there remains substantial disagreement within ISS on the primary focus and scope of security, whether it should center on safeguarding individual citizens, nation-states, the international system, or an emerging global society. 
+**Security** has been a heavily debated concept within **International Security Studies** (ISS), evolving significantly from its origins in post-World War II strategic studies to contemporary multidimensional frameworks. As Arnold Wolfers classically observed in 1952, security operates as an "ambiguous symbol" that may not have any precise meaning without specifying whose values are being preserved and against which threats. At its core, security encompasses the preservation of core values and freedom from existential threats for referent objects—whether individuals, social groups, sovereign states, or the global ecosystem. However, fundamental debates persist within ISS regarding the primary referent and scope of security, specifically whether analysis should prioritize state survival, regional stability, or global human welfare. Barry Buzan's seminal work *People, States and Fear* (1983) systematically expanded this agenda by demonstrating that security dynamics operate across five distinct yet interconnected sectors: military, political, economic, societal, and environmental. 
 
 During the **Cold War**, the predominant focus was on **national security**, emphasizing military capabilities to combat immediate threats, often blurring the lines between state and societal protection. The Cold War period solidified this conception, with security largely defined in relation to state power and external dangers. As the complexities of globalization emerged in the post-Cold War era, debates widened to incorporate political, economic, societal and environmental aspects of security. The introduction of transnational issues like terrorism, financial crises, climate change and cyberattacks highlighted the interconnectedness of security across borders and the potential need to shift from national to international or global perspectives. This evolution challenged traditional notions of security centered on military force and urgencies of danger and protection.
 
@@ -65,13 +64,8 @@ Overall, the post-Cold War era necessitated an evolution in thinking from nation
 **Post-structuralist** views challenge dominant security discourses that privilege the nation-state and military responses. Changing the discourse around security may fundamentally alter international politics. Post-structuralists contend that security should focus on emancipating individuals rather than empowering states. This involves critically examining the language and social structures that contribute to conflict and instability. Post-structuralism opens space for diverse voices and perspectives largely marginalized in traditional security studies. It encourages questioning underlying assumptions and power dynamics inherent in mainstream security paradigms.
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
-{% include flashcards.html term1="National Security" def1="Protection of a nation-state from external and internal threats" term2="Global Security" def2="Security threats that affect the entire world, beyond national borders" term3="Human Security" def3="Focus on protecting individuals from threats to their safety and dignity" term4="Realism" def4="Theoretical perspective emphasizing state power and military capabilities" %}
+{% include flashcards.html term1="National Security" def1="State-centric defense prioritizing survival against external and internal military threats" term2="Global Security" def2="Cooperative frameworks addressing planetary threats to the global commons" term3="Human Security" def3="People-centered approach prioritizing individual freedom from fear and freedom from want" term4="Realism" def4="Theoretical paradigm emphasizing state survival, self-help, and military power" %}
 
 ### Knowledge Check
-{% include quiz.html id="quiz_010_intro_security" question="What is the primary focus of security studies in the context of International Relations?" opt1="Protecting the interests of a particular nation-state" opt2="Addressing global security threats that affect the entire world" opt3="Promoting international cooperation and collective security" opt4="Emancipating individuals from threats to their safety and dignity" correct="2" %}
+{% include quiz.html id="quiz_010_intro_security" question="How did the conceptual scope of International Security Studies (ISS) primarily evolve following the Cold War?" opt1="It narrowed strictly to superpower nuclear deterrence postures" opt2="It expanded beyond state-centric military defense to incorporate environmental, economic, and human security dimensions" opt3="It dissolved the concept of state sovereignty in favor of direct world governance" opt4="It eliminated military strategy entirely from the security agenda" correct="2" %}

@@ -2,7 +2,7 @@
 title: Global Finance And Global Trade As Agendas
 slug: global-finance-and-global-trade-as-agendas
 abstract: What is global finance and global trade system?
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Money and merchandise don't flow across borders by accident; they travel on tracks laid by the 1944 Bretton Woods conference. While institutions like the WTO, IMF, and World Bank were built to prevent global financial crashes and spur commerce, they also reflect deep power imbalances. Wealthy Western donors hold the biggest voting shares, leaving developing nations bound to strict loan conditions while vast regions of the Global South remain clustered at the margins of world trade."
 ---
 
 
@@ -93,8 +93,6 @@ This crisis revealed the incompatibility of financial liberalization policies wi
 ## Conclusion 
 
 In conclusion, the 2007-2008 sub-prime mortgage crisis provides a case study on the pitfalls of unchecked financial liberalization and deregulation. Despite the prevailing trend towards removing restrictions on global financial flows, the crisis revealed the incompatibility of financial liberalization with necessary control regimes and oversight. When large banks were allowed to take on excessive risks in the mortgage securities market without accountability, it led to a system-wide meltdown that required massive public bailouts to contain. The crisis underscored that financial institutions must be subject to prudent regulations in areas like capital requirements, leverage limits, and transparency rules. Pure self-regulation is insufficient. While the ideology of open and borderless finance seems attractive in theory, the real-world economy requires a careful balance between market freedoms and regulatory controls. The sub-prime experience demonstrated that tipping too far towards liberalization exposes the financial system to cascading systemic risks. Governments around the world are still grappling with how to strike the right balance. But the key lesson is that some regulation and supervision of global finance is indispensible for economic stability. The crisis showed financial liberalization has limits, and global finance cannot safely operate as an uncontrolled, self-governing entity detached from public authority.
-
----
 
 
 ---

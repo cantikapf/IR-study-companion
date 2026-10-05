@@ -1,8 +1,7 @@
 ---
 slug: cuban-missile-crisis
 title: Cuban Missile Crisis
-abstract: This chapter will cover the Cuban Missile Crisis
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "In October 1962, the world came within hours of thermonuclear annihilation when Soviet nuclear missiles were discovered just 90 miles off Florida. Over thirteen agonizing days, President Kennedy and Premier Khrushchev stared into the nuclear abyss, using a naval quarantine and tense backchannel diplomacy to defuse the standoff. The near-miss forced both superpowers to install a direct hotline and recognize that nuclear brinkmanship had existential limits."
 ---
 
 
@@ -97,8 +96,6 @@ Even after developing the concept of Mutual Assured Destruction and establishing
 While the Cuban Missile Crisis highlighted the dangers of uncontrolled nuclear proliferation, it did not eliminate the perceived need for nuclear deterrence on both sides. The Partial Nuclear Test Ban Treaty of 1963 was an important step, but only a limited agreement. The underlying rivalry between capitalism and communism, and the fierce competition for global dominance, meant that the threat of nuclear war loomed large throughout the Cold War period.
 
 Despite recurrent attempts at diplomacy and arms control, neither side was ready to concede their nuclear arsenals or abandon their core ideologies. Consequently, the nuclear arms race persisted as an ever-dangerous fixture of the Cold War landscape, casting a shadow over global politics for decades. Its legacy of proliferation and mutually ensured destruction would linger long after the Cold War ended.
-
----
 
 ---
 

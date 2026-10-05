@@ -1,8 +1,7 @@
 ---
 title: Political Populism
 slug: political-populism
-abstract: Explaination of political populism.
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "Populism draws a sharp, moralistic line between two groups: 'the pure, virtuous people' versus 'the corrupt, self-serving elite.' Framing politics as a moral crusade rather than a negotiation, populist leaders dismiss judicial checks, independent media, and international treaties as undemocratic obstacles to the popular will. Whether on the left or the right, populism surges whenever ordinary citizens feel economically abandoned by globalized markets and culturally alienated by political establishments."
 ---
 
 ## Introduction to Populism
@@ -18,7 +17,7 @@ Some key characteristics associated with populism include:
 - Supporting charismatic, authoritarian leadership built on personalistic ties. Populist leaders often cultivate a strong connection to their base while consolidating power.
 - Using demagoguery and folksy rhetoric to galvanize mass support. Populist communicators use resonant slogans, symbols, and charged language. 
 
-So in summary, populism denotes a set of political beliefs, attitudes, and rhetorical techniques that separates "the people" from "the elite" and calls for the will of the masses to be translated directly into policy.
+In political science, Cas Mudde (2004, "The Populist Zeitgeist") authoritatively conceptualizes populism as a "thin-centered ideology" that considers society to be ultimately separated into two homogeneous and antagonistic camps: "the pure people" versus "the corrupt elite," arguing that politics should be an expression of the *volonté générale* (general will). As Jan-Werner Müller (*What Is Populism?*, 2016) further highlights, populists inherently make a moralistic, anti-pluralist claim to exclusive representation of the "authentic people."
 
 ## Populist Rhetoric and Messaging
 
@@ -132,10 +131,7 @@ Community organizing and civic participation can mobilize people power as a coun
 
 Dialogue, education, and awareness campaigns can reinforce shared values of diversity, tolerance, cooperation across differences, and respect for minority rights. Populism thrives on division, so initiatives that bring people together and highlight similarities rather than differences are important. Platforms for marginalized voices and efforts to increase understanding across groups counters the divisive 'us vs them' rhetoric of populists.
 
---
-
 ---
-
 ### Interactive Learning 
 {% include flashcards.html term1="Populism" def1="A range of political stances emphasizing the interests of 'the people' against 'the elite'" term2="Charismatic Leadership" def2="A strong, personalistic leadership style often used by populist leaders" term3="Majoritarianism" def3="A political approach prioritizing the will of the majority over minority rights" term4="Demagoguery" def4="Using emotional appeals and simple language to gain mass support" %}
 

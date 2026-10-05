@@ -2,7 +2,7 @@
 title: Territory and International Law
 slug: territory-law
 abstract: This chapter explores the concepts of territory and territorial sovereignty in international law, examining their significance, principles, and processes.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Territory is the tangible physical stage upon which sovereign statehood is anchored, guarded by the international prohibition against conquest and forcible border changes. International law meticulously distinguishes lawful territorial acquisition—such as voluntary treaty cession or continuous administrative prescription—from illegal armed annexation. As technology pushed human activity skyward, the legal boundary drew a sharp line: while states exert complete sovereignty over their domestic airspace, outer space remains a global commons (res communis) forever open to all humanity and immune to national appropriation."
 ---
 
 ## The Concept of Territory in International Law  
@@ -115,7 +115,6 @@ Special considerations around boundary rivers and outer space were also covered.
 
 In summary, territory remains a crucial foundation of the international legal order. The inviolability of borders and state sovereignty over land, airspace and maritime zones are critical to peaceful relations. As technology progresses, applying existing legal principles to new frontiers like outer space continues to be an evolving challenge. But at its core, international law still firmly upholds territorial integrity while balancing shared interests.
 
----
 
 ---
 

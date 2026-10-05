@@ -1,8 +1,7 @@
 ---
 slug: westphalia
 title: 'The Emergence of the Modern Interstate System: The Thirty Years War and Peace of Westphalia'
-abstract: This chapter will cover the emergence of the modern interstate system
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "After thirty years of religious bloodletting wiped out a third of Central Europe's population, European rulers made a pragmatic truce: whose realm, his religion (*cuius regio, eius religio*). The Peace of Westphalia in 1648 birthed modern sovereignty by decreeing that no emperor or pope could dictate domestic laws inside another ruler's borders. It turned Europe into a system of legally equal, self-governing states."
 ---
 
 
@@ -104,25 +103,21 @@ The Westphalian principles crafted centuries ago continue to underpin today's gl
 
 The traditional narrative of the Westphalian state system has been challenged by some scholars and thinkers. Some key critiques include:
 
-### The Myth of Westphalia
+### The Revisionist Critique: Deconstructing the "Westphalian Myth"
 
-Some argue that the Peace of Westphalia in 1648 did not actually create the modern state system as is commonly believed. Sovereignty existed in various forms before 1648, and the treaties did not actually guarantee absolute authority of states over domestic affairs. Interventions in the domestic affairs of other states persisted after Westphalia. According to this view, the narrative of Westphalia as marking the emergence of the state system is a myth.
+In contemporary IR historiography, the standard textbook portrayal of 1648 as the instantaneous genesis of sovereign statehood has faced rigorous deconstruction:
 
-### Post-Westphalian Order
+- **The Myth of Westphalia (Andreas Osiander, 2001)**: Textual analysis of the treaties of Münster and Osnabrück reveals that the signatories did not intend to dismantle imperial hierarchies or create a secular interstate system based on absolute sovereignty. Instead, the treaties reaffirmed imperial constitutional arrangements within the Holy Roman Empire, granting limited treaty-making autonomy to imperial estates (*Landeshoheit*) provided alliances were not directed against the Emperor.
+- **Sovereignty as "Organized Hypocrisy" (Stephen Krasner, 1999)**: Krasner demonstrates that Westphalian sovereignty—defined by territorial autonomy and the exclusion of external authority structures—has routinely been compromised throughout modern history via coercion, imposition, conventions, and voluntary contracts. Rather than an absolute institutional norm, sovereign non-intervention operates as organized hypocrisy invoked pragmatically by great powers.
 
-Some observers argue that globalization and the rise of international organizations have fundamentally challenged traditional Westphalian sovereignty. States have ceded some sovereignty to international bodies like the UN, EU, and other regional organizations that can intervene in domestic affairs. Non-state actors like multinational corporations and NGOs have also gained power and influence that transcend state boundaries. Some scholars propose that a new "post-Westphalian order" is emerging where state sovereignty is less absolute and traditional views of territoriality and non-interference need rethinking.
+### The Contemporary Debate: Toward a Post-Westphalian Order?
 
-## Conclusion
+In the 21st century, the Westphalian principle of inviolable domestic jurisdiction faces persistent structural pressures:
 
-The modern interstate system emerged from the devastating Thirty Years War in Europe and was solidified through the Treaty of Westphalia in 1648. This treaty established key principles like state sovereignty, territorial integrity, legal equality between states, non-interference in domestic affairs, and maintaining a balance of power. These tenets came to define international relations and spread globally through processes like colonization and decolonization. 
+- **Erosion of Exclusivity**: Supranational integration (e.g., the European Union), global market volatility, trans-border environmental crises, and non-state violent networks challenge the state's monopoly on territorial control.
+- **Normative Interventions**: The codification of humanitarian norms—most notably the **Responsibility to Protect (R2P)** endorsed at the 2005 UN World Summit—redefines sovereignty not as an unconditional shield for ruling regimes (*sovereignty as control*), but as a conditional duty to protect populations from mass atrocities (*sovereignty as responsibility*).
 
-While foundational, the myth of Westphalia has also been challenged. Critics argue sovereignty predated 1648 and the treaty did not guarantee absolute authority within borders. Ongoing interventions and power dynamics reveal limitations to the Westphalian order. Some argue we are moving to a post-Westphalian era with rising non-state actors and challenges to traditional state sovereignty.
-
-Despite critiques, the core ideas of the Peace of Westphalia still shape the modern state system. States remain the preeminent global actors with sovereign control over their territories and domestic affairs. However, evolving political realities demonstrate the complexities of global governance in a rapidly changing world. While foundational, the Westphalian principles may require re-evaluation to effectively meet contemporary needs.
-
-The interstate system's origins and principles provide context for current geopolitics. Ongoing discourse on state sovereignty, power balances, territorial authority, and governance structures continues to reference the Thirty Years War settlement. The Peace of Westphalia endures as a pivotal moment in international relations, but its principles require continual reassessment as the political world evolves.
-
----
+Despite these evolving normative and material challenges, the territorial sovereign state remains the primary legal subject of international law, the exclusive holder of lawful coercive power, and the foundational building block of the global multilateral architecture.
 
 ---
 

@@ -2,7 +2,7 @@
 title: 'The United Nations: Introduction'
 slug: un-administration
 abstract: This page providing an introduction to the United Nations (UN). It includes information about the UN's founding, its goals and functions, as well as the significance of the UN Charter as the legal basis for the organization.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "Operating a global forum for 193 sovereign nations is a mammoth administrative balancing act governed by the UN Charter. While the General Assembly provides an egalitarian town hall where every nation has an equal vote, executive authority is concentrated in the 15-member Security Council. At the center of this diplomatic web sits the UN Secretariat and the Secretary-General, who uses the unique pulpit of Article 99 and discreet quiet diplomacy to sound global alarms and mediate conflicts before they spiral out of control."
 ---
 
 ## Introduction
@@ -144,7 +144,6 @@ The UN plays an important role in promoting international cooperation and establ
 
 By providing a forum for cooperation and a basic code of conduct between nations, the UN system aims to prevent armed conflict and promote peace, security, development, and human rights worldwide. Despite imperfections, the UN has arguably helped limit inter-state wars and fosters dialogue for resolving disputes. With most countries participating, the UN helps shape modern norms and laws in international relations.
 
----
 
 ---
 

@@ -1,0 +1,428 @@
+<style>
+  #balance-power-sim {
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 30px 0;
+    border: 1px solid #374151;
+  }
+  .sim-bop-header {
+    border-bottom: 2px solid #374151;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  .sim-bop-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sim-bop-header-desc {
+    color: #d1d5db;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .sim-bop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .sim-bop-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .sim-bop-card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+  }
+  .sim-bop-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .sim-bop-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: #9ca3af;
+  }
+  .sim-bop-stats-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #374151;
+    font-weight: bold;
+    color: #f9fafb;
+  }
+  .sim-bop-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  .sim-bop-select:focus {
+    outline: none;
+    border-color: #60a5fa;
+  }
+  .sim-bop-select option {
+    background: #1f2937;
+  }
+  .sim-bop-results {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    margin-bottom: 20px;
+  }
+  .sim-bop-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .sim-bop-results-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .sim-bop-alliance-stat {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+  }
+  .sim-bop-alliance-a {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: #3b82f6;
+  }
+  .sim-bop-alliance-b {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+  }
+  .sim-bop-meter {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background: #1f2937;
+    transition: all 0.3s ease;
+  }
+  .sim-bop-status-success {
+    color: #10b981;
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+  }
+  .sim-bop-status-warning {
+    color: #f59e0b;
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+  }
+  .sim-bop-status-failure {
+    color: #ef4444;
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+  }
+  .sim-bop-status-neutral {
+    color: #9ca3af;
+    border-color: #374151;
+    background: #111827;
+  }
+  .sim-bop-meter-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  .sim-bop-meter-desc {
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .sim-bop-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sim-bop-btn {
+    padding: 12px 15px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .sim-bop-btn:hover {
+    background: #4b5563;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+  }
+  .sim-bop-btn-primary {
+    background: #3b82f6;
+    border-color: #2563eb;
+  }
+  .sim-bop-btn-primary:hover {
+    background: #2563eb;
+    border-color: #60a5fa;
+  }
+  .sim-bop-analysis {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+  }
+  .sim-bop-analysis h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #60a5fa;
+  }
+  .sim-bop-historical {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background: rgba(96, 165, 250, 0.05);
+    animation: fadeIn 0.3s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div id="balance-power-sim">
+  <div class="sim-bop-header">
+    <h3>⚖️ Simulation: The Balance of Power Configurator</h3>
+    <div class="sim-bop-header-desc">
+      It's 1914. As a European statesman, construct alliance blocs among the Great Powers. Can you build a stable balance — or will your alliances drag the continent into catastrophic war?
+    </div>
+  </div>
+
+  <div class="sim-bop-grid" id="sim-bop-powers">
+    <!-- Powers injected via JS -->
+  </div>
+
+  <div class="sim-bop-results" aria-live="polite">
+    <div class="sim-bop-results-grid">
+      <div class="sim-bop-alliance-stat sim-bop-alliance-a">
+        <h4 style="margin:0 0 10px 0; color: #60a5fa;">Alliance A (Blue)</h4>
+        <div style="font-size: 1.5rem; font-weight: bold;" id="sim-bop-score-a">0</div>
+        <div style="color: #d1d5db; font-size: 0.9rem; margin-top: 5px;" id="sim-bop-members-a">None</div>
+      </div>
+      <div class="sim-bop-alliance-stat sim-bop-alliance-b">
+        <h4 style="margin:0 0 10px 0; color: #ef4444;">Alliance B (Red)</h4>
+        <div style="font-size: 1.5rem; font-weight: bold;" id="sim-bop-score-b">0</div>
+        <div style="color: #d1d5db; font-size: 0.9rem; margin-top: 5px;" id="sim-bop-members-b">None</div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 15px; color: #9ca3af; text-align: center; font-size: 0.95rem;">
+      Neutral Power: <span id="sim-bop-score-n" style="font-weight: bold; color: #f9fafb;">0</span>
+    </div>
+
+    <div id="sim-bop-meter-container" class="sim-bop-meter sim-bop-status-neutral">
+      <div class="sim-bop-meter-title" id="sim-bop-meter-title">Select alliances to analyze balance</div>
+      <div class="sim-bop-meter-desc" id="sim-bop-meter-desc">Power imbalance and stability will be displayed here.</div>
+    </div>
+  </div>
+
+  <div class="sim-bop-controls">
+    <button class="sim-bop-btn sim-bop-btn-primary" id="sim-bop-btn-1914">Compare with 1914</button>
+    <button class="sim-bop-btn" id="sim-bop-btn-reset">Reset Alliances</button>
+  </div>
+  
+  <div id="sim-bop-historical-analysis" class="sim-bop-historical">
+    <h4 style="margin-top:0; color:#f9fafb;">Historical Analysis: 1914</h4>
+    <p>In 1914, the Triple Entente (Britain + France + Russia = 42) faced the Triple Alliance (Germany + Austria-Hungary + Italy = 34). The 10.5% imbalance might suggest stability, but several factors destabilized the balance:</p>
+    <ol style="margin-bottom:0;">
+      <li style="margin-bottom:8px;"><strong>Chain-Ganging</strong> (Christensen & Snyder): Rigid alliance commitments meant a local Balkan crisis automatically activated the entire alliance system.</li>
+      <li style="margin-bottom:8px;"><strong>Cult of the Offensive</strong> (Van Evera): Military planners on all sides believed offense had the advantage, creating pressure for preemptive mobilization.</li>
+      <li><strong>Italy's Defection</strong>: Italy actually left the Triple Alliance in 1914, further destabilizing the system.</li>
+    </ol>
+    <p style="margin-bottom:0; margin-top:12px; font-weight:bold; color:#60a5fa;">The lesson: raw power calculations alone don't predict war. Perceptions, alliance credibility, and military doctrine matter just as much.</p>
+  </div>
+
+  <div class="sim-bop-analysis">
+    <h4>Theory Analysis: Balance of Power</h4>
+    <p style="margin-bottom:0; color:#d1d5db; line-height:1.5;">According to neorealist scholars like Kenneth Waltz, stability in the international system depends on the distribution of power (polarity). Bipolar systems (two balanced blocs) are historically more stable than multipolar systems because miscalculation is less likely and powers balance internally rather than through complex chain-ganging. Classical realists like Hans Morgenthau argue that statesmen must actively craft balances through alliances to prevent hegemony.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  const powers = [
+    { id: 'gb', name: 'Britain', flag: '🇬🇧', naval: 10, land: 5 },
+    { id: 'fr', name: 'France', flag: '🇫🇷', naval: 6, land: 8 },
+    { id: 'de', name: 'Germany', flag: '🇩🇪', naval: 7, land: 9 },
+    { id: 'ru', name: 'Russia', flag: '🇷🇺', naval: 3, land: 10 },
+    { id: 'ah', name: 'Austria-Hungary', flag: '🇦🇹', naval: 2, land: 7 },
+    { id: 'it', name: 'Italy', flag: '🇮🇹', naval: 4, land: 5 }
+  ];
+
+  let state = {};
+
+  const gridEl = document.getElementById('sim-bop-powers');
+  const scoreAEl = document.getElementById('sim-bop-score-a');
+  const scoreBEl = document.getElementById('sim-bop-score-b');
+  const scoreNEl = document.getElementById('sim-bop-score-n');
+  const memAEl = document.getElementById('sim-bop-members-a');
+  const memBEl = document.getElementById('sim-bop-members-b');
+  const meterContainer = document.getElementById('sim-bop-meter-container');
+  const meterTitle = document.getElementById('sim-bop-meter-title');
+  const meterDesc = document.getElementById('sim-bop-meter-desc');
+  const historicalAnalysis = document.getElementById('sim-bop-historical-analysis');
+
+  function init() {
+    state = {};
+    gridEl.innerHTML = '';
+    
+    powers.forEach(p => {
+      p.total = p.naval + p.land;
+      state[p.id] = 'neutral';
+      
+      const card = document.createElement('div');
+      card.className = 'sim-bop-card';
+      
+      card.innerHTML = `
+        <div class="sim-bop-card-header">
+          <span style="font-size:1.3rem;">${p.flag}</span>
+          <span>${p.name}</span>
+        </div>
+        <div class="sim-bop-stats">
+          <span>Naval Power:</span>
+          <span>${p.naval}</span>
+        </div>
+        <div class="sim-bop-stats">
+          <span>Land Power:</span>
+          <span>${p.land}</span>
+        </div>
+        <div class="sim-bop-stats-total">
+          <span>Total Power:</span>
+          <span>${p.total}</span>
+        </div>
+        <select class="sim-bop-select" id="sim-bop-sel-${p.id}" aria-label="Alliance selection for ${p.name}">
+          <option value="neutral">Neutral</option>
+          <option value="a">Alliance A (Blue)</option>
+          <option value="b">Alliance B (Red)</option>
+        </select>
+      `;
+      gridEl.appendChild(card);
+
+      const sel = document.getElementById(`sim-bop-sel-${p.id}`);
+      sel.addEventListener('change', (e) => {
+        state[p.id] = e.target.value;
+        historicalAnalysis.style.display = 'none';
+        update();
+      });
+    });
+
+    document.getElementById('sim-bop-btn-reset').addEventListener('click', () => {
+      powers.forEach(p => {
+        state[p.id] = 'neutral';
+        document.getElementById(`sim-bop-sel-${p.id}`).value = 'neutral';
+      });
+      historicalAnalysis.style.display = 'none';
+      update();
+    });
+
+    document.getElementById('sim-bop-btn-1914').addEventListener('click', () => {
+      const hist = {
+        'gb': 'a', 'fr': 'a', 'ru': 'a',
+        'de': 'b', 'ah': 'b', 'it': 'b'
+      };
+      powers.forEach(p => {
+        state[p.id] = hist[p.id];
+        document.getElementById(`sim-bop-sel-${p.id}`).value = hist[p.id];
+      });
+      historicalAnalysis.style.display = 'block';
+      update();
+    });
+
+    update();
+  }
+
+  function update() {
+    let scoreA = 0;
+    let scoreB = 0;
+    let scoreN = 0;
+    let memA = [];
+    let memB = [];
+
+    powers.forEach(p => {
+      if (state[p.id] === 'a') {
+        scoreA += p.total;
+        memA.push(p.name);
+      } else if (state[p.id] === 'b') {
+        scoreB += p.total;
+        memB.push(p.name);
+      } else {
+        scoreN += p.total;
+      }
+    });
+
+    scoreAEl.innerText = scoreA;
+    scoreBEl.innerText = scoreB;
+    scoreNEl.innerText = scoreN;
+
+    memAEl.innerText = memA.length > 0 ? memA.join(', ') : 'None';
+    memBEl.innerText = memB.length > 0 ? memB.join(', ') : 'None';
+
+    meterContainer.className = 'sim-bop-meter';
+
+    if (scoreA === 0 && scoreB === 0) {
+      meterContainer.classList.add('sim-bop-status-neutral');
+      meterTitle.innerText = "Select alliances to analyze balance";
+      meterDesc.innerText = "Power imbalance and stability will be displayed here.";
+      return;
+    }
+
+    if ((scoreA > 0 && scoreB === 0) || (scoreB > 0 && scoreA === 0)) {
+      meterContainer.classList.add('sim-bop-status-failure');
+      meterTitle.innerText = "Unipolar — Hegemony";
+      meterDesc.innerText = "No balancing coalition exists. Hegemony is unchecked.";
+      return;
+    }
+
+    const imbalance = Math.abs(scoreA - scoreB) / (scoreA + scoreB) * 100;
+    const imbFormatted = imbalance.toFixed(1) + "%";
+
+    if (imbalance < 10) {
+      meterContainer.classList.add('sim-bop-status-success');
+      meterTitle.innerText = `✅ Stable Balance (Imbalance: ${imbFormatted})`;
+      meterDesc.innerText = "Neither bloc has sufficient advantage to risk war. Deterrence holds.";
+    } else if (imbalance <= 30) {
+      meterContainer.classList.add('sim-bop-status-warning');
+      meterTitle.innerText = `⚠️ Uneasy Equilibrium (Imbalance: ${imbFormatted})`;
+      meterDesc.innerText = "A dangerous gap exists. The stronger bloc may be tempted by preventive war.";
+    } else {
+      meterContainer.classList.add('sim-bop-status-failure');
+      meterTitle.innerText = `❌ Hegemonic Threat (Imbalance: ${imbFormatted})`;
+      meterDesc.innerText = "One bloc dominates. History shows this level of asymmetry often leads to war or capitulation.";
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

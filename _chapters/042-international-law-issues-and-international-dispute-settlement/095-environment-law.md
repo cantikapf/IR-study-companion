@@ -2,7 +2,7 @@
 title: International Law For Environmental Protection
 slug: international-law-for-environmental-protection
 abstract: International environmental law encompasses a wide range of legal frameworks and principles aimed at protecting the environment globally and regionally, addressing issues such as climate change, pollution, endangered species, and hazardous waste management.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Ecological crises do not carry passports or stop at national customs checkpoints. Because toxic clouds and ocean plastics naturally drift across sovereign borders, International Environmental Law emerged to govern the shared planetary commons. Grounded in foundational doctrines like the no-harm rule, the precautionary principle, and 'polluter pays,' global environmental treaties unite sovereign states to manage transboundary threats that no single nation can defeat alone."
 ---
 
 ## Introduction
@@ -172,7 +172,6 @@ Key points:
 - Non-state actors like NGOs and corporations are playing more influential roles in environmental governance and must be engaged.
 - Ongoing international cooperation and strengthened global governance are essential to address our shared environmental challenges. We must work together across borders to protect the planetary systems on which our collective future depends.
 
----
 
 ---
 
@@ -181,3 +180,8 @@ Key points:
 
 ### Knowledge Check
 {% include quiz.html id="quiz_095_environment_law" question="What is the primary goal of international environmental treaties?" opt1="To promote economic growth over environmental protection" opt2="To protect the environment globally and regionally" opt3="To establish binding emissions limits on developed nations only" opt4="To provide financial assistance to developing nations" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="042" %}

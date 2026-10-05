@@ -2,7 +2,7 @@
 title: Dispute Settlement
 slug: dispute-settlement
 abstract: Dispute settlement refers to the various methods states can utilize to resolve disagreements under international law.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "When international friction erupts, nations are legally bound under UN Charter Article 33 to resolve their disagreements without resorting to guns and missiles. Disputing states choose between flexible diplomatic channels—where parties retain control through direct negotiations, neutral good offices, third-party mediation, and factual commissions of inquiry—or binding judicial arbitration. While binding courts deliver definitive legal verdicts, diplomatic compromise remains the workhorse of global peace because it allows proud sovereign states to save face while preserving vital bilateral partnerships."
 ---
 
 **Dispute** **settlement** refers to the various methods **states** can utilize to resolve disagreements under international law. There are two main categories of dispute settlement techniques: diplomatic procedures and adjudication.
@@ -110,7 +110,6 @@ When diplomatic efforts fail, states may pursue institutional adjudication throu
 
 Dispute settlement protects state sovereignty while avoiding the human costs of unrestrained conflicts. Despite competing interests, shared principles of peace and justice allow states to settle differences through compromise. With creativity and good faith, the international community can develop techniques to resolve even intractable disputes.
 
----
 
 ---
 

@@ -35,6 +35,12 @@ layout: default
           <i class="fa fa-graduation-cap" aria-hidden="true"></i>
           <span>Academic Core</span>
         </div>
+        {% if page.slug %}
+          <button id="lesson-bookmark-btn" class="lesson-bookmark-btn" aria-label="Bookmark lesson" data-slug="{{ page.slug }}">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+            <span class="bookmark-label">Bookmark</span>
+          </button>
+        {% endif %}
       </div>
     </header>
 
@@ -50,7 +56,7 @@ layout: default
           <span class="icon">💡</span> <strong>In Simple Words...</strong>
         </summary>
         <div class="simple-words-content">
-          {{ page.simple_summary }}
+          {{ page.simple_summary | markdownify }}
         </div>
       </details>
     {% endif %}
@@ -59,6 +65,22 @@ layout: default
     <article class="course-prose-body" id="course-article-body">
       {{ content }}
     </article>
+
+    <!-- In-Lesson Terminology Digest Box (Automatic Specialized Term Notes) -->
+    <section class="lesson-terms-digest" id="lesson-terms-digest" style="display: none;" aria-label="Catatan Istilah Kunci dalam Bab Ini">
+      <div class="lesson-terms-header">
+        <div class="lesson-terms-title-group">
+          <div class="lesson-terms-title">
+            <i class="fa fa-book" aria-hidden="true"></i> <span>Catatan Istilah Kunci dalam Bab Ini</span>
+          </div>
+          <span class="lesson-terms-badge" id="lesson-terms-count-badge">0 Istilah</span>
+        </div>
+        <p class="lesson-terms-subtitle">
+          Maksud sederhana dan intuitif dari istilah-istilah khusus hubungan internasional yang muncul pada materi ini agar mudah dipahami siapa saja tanpa bahasa yang rumit.
+        </p>
+      </div>
+      <div class="lesson-terms-grid" id="lesson-terms-grid"></div>
+    </section>
 
     <!-- Sticky Bottom Action Dock -->
     <nav class="lms-action-dock" aria-label="Lesson completion and navigation">

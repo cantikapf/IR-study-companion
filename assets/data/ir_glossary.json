@@ -1,0 +1,1612 @@
+[
+  {
+    "term": "Absolute Gains",
+    "category": "Theory & Epistemology",
+    "scholars": "Robert Keohane, Arthur Stein",
+    "definition": "A liberal institutionalist perspective focusing on whether an outcome improves a state's own welfare regardless of how much other participants gain ('Do we both gain?').",
+    "module": "023",
+    "chapter_slug": "neoliberal-institutionalism",
+    "plain_id": "Prinsip kaum liberal di mana negara fokus pada keuntungan bersama secara total; asalkan negara sendiri bertambah kaya atau aman, tidak masalah jika negara rekanan juga ikut bertambah kaya.",
+    "plain_en": "A liberal perspective where states focus on whether they achieve a positive net benefit from cooperation, regardless of how much other participants also gain."
+  },
+  {
+    "term": "AICHR",
+    "category": "Regionalism & ASEAN",
+    "scholars": "ASEAN (2009)",
+    "definition": "The ASEAN Intergovernmental Commission on Human Rights, a consultative regional body mandated to promote and protect human rights across Southeast Asian member states.",
+    "module": "044",
+    "chapter_slug": "asean-community",
+    "plain_id": "Komisi Hak Asasi Manusia Antarpemerintah ASEAN: badan regional resmi yang dibentuk untuk mempromosikan dan melindungi hak-hak dasar warga negara di kawasan Asia Tenggara.",
+    "plain_en": "The ASEAN Intergovernmental Commission on Human Rights: ASEAN's official regional body established to promote human rights and fundamental freedoms."
+  },
+  {
+    "term": "Aliran Politics (Politik Aliran)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "Geertz (The Religion of Java 1960), Feith (1962)",
+    "definition": "A sociological framework describing Indonesian political mobilization structured along distinct religious and ideological subcultures: santri (devout Islamic), abangan (traditionalist/nominal), and secular-nationalist.",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/030-evolution-party",
+    "plain_id": "Pola politik di Indonesia di mana dukungan terhadap partai politik terikat kuat pada identitas keagamaan atau budaya leluhur (seperti santri, abangan, dan nasionalis sekuler) ketimbang isu program kerja semata.",
+    "plain_en": "Political loyalty organized around deep-seated religious and socio-cultural identities (Islamic devout vs. traditionalist secular nationalists)."
+  },
+  {
+    "term": "Alliance System",
+    "category": "Modern History & Geopolitics",
+    "scholars": "Snyder (Alliance Politics 1997), Taylor (1954)",
+    "definition": "A formal network of bilateral and multilateral mutual defense pacts where signatory states pledge to assist each other militarily if attacked, which in 1914 escalated a local Balkan crisis into World War I.",
+    "module": "012",
+    "chapter_slug": "_chapters/012-modern-world-history/040-road-to-ww1",
+    "plain_id": "Jaringan perjanjian militer antar-negara di mana jika salah satu sekutu diserang, negara lain otomatis ikut berperang membela. Sistem inilah yang mengubah konflik lokal di Balkan tahun 1914 menjadi Perang Dunia I.",
+    "plain_en": "Formal defense treaties pledging mutual military aid, which turned a local 1914 Balkan clash into a devastating global world war."
+  },
+  {
+    "term": "Anarchy",
+    "category": "Theory & Epistemology",
+    "scholars": "Thomas Hobbes, Kenneth Waltz, Hedley Bull",
+    "definition": "The ordering principle of the international system characterized by the absence of a central, overarching government or hierarchical authority with legitimate monopoly over the use of force.",
+    "module": "010",
+    "chapter_slug": "study-of-international-relations",
+    "plain_id": "Ketiadaan 'pemerintah dunia' atau otoritas tertinggi di atas negara. Bukan berarti dunia selalu rusuh atau kacau balau, melainkan tidak ada 'polisi global' yang punya wewenang mutlak memaksa negara-negara berdaulat untuk patuh.",
+    "plain_en": "The absence of an overarching world government or global police. Sovereign states have no higher authority above them to enforce rules or guarantee their safety."
+  },
+  {
+    "term": "Anti-Dumping Duty",
+    "category": "Political Economy",
+    "scholars": "GATT Article VI, WTO Anti-Dumping Agreement",
+    "definition": "A border tariff levied by an importing nation to neutralize the unfair price distortion caused when a foreign firm exports products below their normal domestic market value.",
+    "module": "050",
+    "chapter_slug": "trade-remedies-wto",
+    "plain_id": "Pajak bea masuk khusus yang dipungut oleh suatu negara terhadap barang impor yang sengaja dijual dengan harga super murah di bawah harga pasar wajar demi menghancurkan produsen lokal.",
+    "plain_en": "A protective customs tariff imposed on foreign imports that are priced unfairly below their normal market value to harm domestic manufacturers."
+  },
+  {
+    "term": "Archipelagic State Principle",
+    "category": "International Law",
+    "scholars": "Djuanda Declaration (1957), UNCLOS Part IV",
+    "definition": "The legal regime recognizing that an island-state constitutes an indivisible geographic entity, allowing the drawing of straight archipelagic baselines enclosing internal waters and archipelagic sealanes.",
+    "module": "013",
+    "chapter_slug": "basic-political",
+    "plain_id": "Prinsip Negara Kepulauan (seperti Indonesia) di mana seluruh perairan di antara pulau-pulau ditarik sebagai satu kesatuan wilayah kedaulatan utuh, bukan perairan internasional yang memisahkan daratan.",
+    "plain_en": "The UNCLOS legal principle recognizing that waters connecting islands in archipelagic nations (like Indonesia) constitute unified sovereign internal territory."
+  },
+  {
+    "term": "ASEAN Centrality",
+    "category": "Regionalism & ASEAN",
+    "scholars": "ASEAN Charter Article 1(15)",
+    "definition": "The principle that ASEAN acts as the primary driving force and institutional convenor for wider Asia-Pacific and Indo-Pacific multilateral forums, including the ARF, ADMM-Plus, EAS, and RCEP.",
+    "module": "044",
+    "chapter_slug": "asean-centrality",
+    "plain_id": "Prinsip bahwa ASEAN harus menjadi pengemudi utama dan tuan rumah netral bagi seluruh arsitektur diplomasi dan dialog keamanan di kawasan Asia-Pasifik dan Indo-Pasifik.",
+    "plain_en": "The principle that ASEAN must remain the central driver and neutral convener of regional security dialogues and economic partnerships in the Indo-Pacific."
+  },
+  {
+    "term": "ASEAN Way",
+    "category": "Regionalism & ASEAN",
+    "scholars": "Bangkok Declaration 1967, Amitav Acharya",
+    "definition": "A normative diplomatic code practiced in Southeast Asia emphasizing consensus decision-making (Musyawarah-Mufakat), non-interference in internal affairs, quiet diplomacy, and informal consultation.",
+    "module": "044",
+    "chapter_slug": "basic-regionalism",
+    "plain_id": "Gaya diplomasi khas Asia Tenggara yang mengutamakan musyawarah untuk mufakat, obrolan santai tanpa konfrontasi terbuka, dan pantangan keras mencampuri urusan dalam negeri tetangga.",
+    "plain_en": "The distinctive diplomatic norm in Southeast Asia emphasizing informal dialogue, unanimous consensus (musyawarah-mufakat), and strict non-interference in domestic affairs."
+  },
+  {
+    "term": "Asymmetric Warfare",
+    "category": "Security & Strategy",
+    "scholars": "Mao Zedong, Ivan Arreguín-Toft",
+    "definition": "Conflict between belligerents whose relative military power, resources, and strategic doctrines differ drastically, typically pitting conventional state armed forces against insurgent or guerrilla networks.",
+    "module": "022",
+    "chapter_slug": "asymmetric-warfare",
+    "plain_id": "Peperangan antara dua pihak yang kekuatan militernya sangat timpang (misal: tentara superpower modern melawan milisi gerilya), di mana pihak yang lebih lemah menggunakan taktik non-konvensional, jebakan, atau perang urat saraf.",
+    "plain_en": "Conflict between belligerents whose military power differs vastly, where the weaker party relies on unconventional tactics like guerrilla warfare and ambushes."
+  },
+  {
+    "term": "Audience Costs",
+    "category": "Diplomacy & FPA",
+    "scholars": "James Fearon (1994)",
+    "definition": "The domestic political penalties that political leaders suffer from voters or elites if they escalate a public foreign crisis and subsequently back down or bluff.",
+    "module": "033",
+    "chapter_slug": "domestic-politics-fpdm",
+    "plain_id": "Hukuman politik di dalam negeri (seperti kalah pemilu atau dicemooh rakyat) yang harus ditanggung oleh seorang pemimpin jika dia sudah mengancam negara lain di depan umum namun kemudian menarik ancamannya.",
+    "plain_en": "The domestic political penalty a democratic leader suffers from voters if they issue a public threat or red line against an adversary and then back down."
+  },
+  {
+    "term": "Autarky",
+    "category": "Political Economy",
+    "scholars": "Friedrich List, Classical Mercantilism",
+    "definition": "A national economic policy of complete self-sufficiency that seeks to eliminate reliance on international trade, foreign imports, and global financial markets.",
+    "module": "021",
+    "chapter_slug": "introduction-ipe",
+    "plain_id": "Kebijakan isolasi ekonomi ekstrem di mana suatu negara berupaya mencukupi seluruh kebutuhan pangan dan industrinya sendiri tanpa bergantung sama sekali pada perdagangan luar negeri.",
+    "plain_en": "A policy of extreme national self-sufficiency where a country refuses or drastically restricts trade with the outside world."
+  },
+  {
+    "term": "Balance of Power",
+    "category": "Theory & Epistemology",
+    "scholars": "Hans Morgenthau, Kenneth Waltz",
+    "definition": "A systemic mechanism wherein states form alliances or expand internal military armaments to prevent any single state or coalition from achieving preponderant hegemony.",
+    "module": "023",
+    "chapter_slug": "realism-in-ir",
+    "plain_id": "Keseimbangan kekuatan di mana negara-negara saling mengimbangi kekuatan militer atau membentuk koalisi aliansi agar tidak ada satu negara adidaya pun yang mendominasi dunia.",
+    "plain_en": "A situation where states build up their military or form alliances to prevent any single superpower from becoming strong enough to dominate everyone else."
+  },
+  {
+    "term": "Balance of Threat",
+    "category": "Theory & Epistemology",
+    "scholars": "Stephen Walt (1987)",
+    "definition": "A modification of neorealist balance of power asserting that states balance against perceived threats, determined by aggregate power, geographical proximity, offensive capabilities, and aggressive intentions.",
+    "module": "023",
+    "chapter_slug": "neorealism-structural-realism",
+    "plain_id": "Teori Stephen Walt bahwa negara-negara membentuk persekutuan bukan semata-mata untuk mengimbangi negara yang paling kuat secara militer, melainkan untuk mengimbangi negara yang perilakunya paling mengancam.",
+    "plain_en": "Stephen Walt's theory arguing that states align against the countries they perceive as most threatening (based on proximity, aggressive intentions, and power), not simply the strongest state."
+  },
+  {
+    "term": "Bandung Spirit",
+    "category": "Indonesian Diplomacy",
+    "scholars": "Asian-African Conference (1955)",
+    "definition": "The ethos of political solidarity, peaceful coexistence, anti-colonialism, and non-alignment born among newly independent nations in Bandung, championing the Ten Principles of Bandung.",
+    "module": "013",
+    "chapter_slug": "indonesia-foreign-policy-history",
+    "plain_id": "Semangat Konferensi Asia-Afrika (KAA) Bandung 1955: persatuan antarbangsa yang baru merdeka untuk melawan kolonialisme, menjunjung kesetaraan ras, dan hidup berdampingan secara damai tanpa memihak blok adidaya.",
+    "plain_en": "The principles of anti-colonialism, sovereign equality, and peaceful coexistence established at the historic 1955 Asian-African Conference in Bandung, Indonesia."
+  },
+  {
+    "term": "Bandwagoning",
+    "category": "Theory & Epistemology",
+    "scholars": "Kenneth Waltz, Stephen Walt",
+    "definition": "A foreign policy alignment strategy where a weaker state aligns with a stronger or threatening power to share the spoils of victory or avoid being attacked.",
+    "module": "023",
+    "chapter_slug": "realism-in-ir",
+    "plain_id": "Taktik negara kecil atau lemah yang memilih bergabung dan tunduk ke kubu negara adidaya terkuat yang sedang mengancam mereka demi mendapatkan perlindungan dan sisa keuntungan.",
+    "plain_en": "The strategic choice of a weaker state to align with a stronger, threatening superpower in hopes of survival and sharing the spoils of victory."
+  },
+  {
+    "term": "Bangkok Declaration (1967)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "ASEAN Declaration (8 August 1967), Leifer (1996)",
+    "definition": "The founding five-point document signed by Indonesia, Malaysia, the Philippines, Singapore, and Thailand on August 8, 1967, establishing the Association of Southeast Asian Nations (ASEAN).",
+    "module": "044",
+    "chapter_slug": "_chapters/044-regionalism-in-southeast-asia-asean-community/030-establishment-asean",
+    "plain_id": "Deklarasi bersejarah yang ditandatangani 5 tokoh pendiri (termasuk Adam Malik dari Indonesia) di Bangkok pada 8 Agustus 1967 yang menandai lahirnya organisasi ASEAN demi menjaga perdamaian dan stabilitas Asia Tenggara.",
+    "plain_en": "The historic founding document signed on 8 August 1967 by five Southeast Asian foreign ministers establishing the ASEAN regional organization."
+  },
+  {
+    "term": "Bipolarity",
+    "category": "Theory & Epistemology",
+    "scholars": "Kenneth Waltz",
+    "definition": "A structural distribution of power in the international system where two superpowers dominate systemic military, diplomatic, and ideological competition (exemplified by the US-Soviet Cold War).",
+    "module": "010",
+    "chapter_slug": "the-international-system",
+    "plain_id": "Sistem politik dunia yang dikuasai oleh dua negara adidaya raksasa yang saling bersaing ketat (seperti era Perang Dingin antara Amerika Serikat melawan Uni Soviet).",
+    "plain_en": "An international distribution of power dominated by two rival superpowers (such as the US and USSR during the Cold War)."
+  },
+  {
+    "term": "Brinkmanship",
+    "category": "Security & Strategy",
+    "scholars": "Thomas Schelling, John Foster Dulles",
+    "definition": "A strategic competition where a state deliberately escalates a crisis to the very brink of disaster (e.g., nuclear war) to force the adversary to back down first (the logic of the game of Chicken).",
+    "module": "022",
+    "chapter_slug": "crisis-escalation",
+    "plain_id": "Taktik diplomasi berbahaya di mana satu negara sengaja mendorong krisis militer hingga ke tepi jurang perang untuk memaksa musuh mundur ketakutan.",
+    "plain_en": "The practice of pushing a dangerous geopolitical crisis to the very brink of active warfare to force an opponent to back down."
+  },
+  {
+    "term": "Buck-Passing",
+    "category": "Theory & Epistemology",
+    "scholars": "John Mearsheimer, Barry Posen",
+    "definition": "A strategic strategy in multipolar systems where a threatened great power attempts to shift the burden of confronting or checking an aggressor state onto another power.",
+    "module": "023",
+    "chapter_slug": "offensive-vs-defensive-realism",
+    "plain_id": "Strategi licik suatu negara yang menghindar dari kewajiban melawan ancaman musuh dengan membiarkan negara tetangganya yang menanggung beban perang dan biaya pertempuran terlebih dahulu.",
+    "plain_en": "A diplomatic strategy where a state avoids confronting a rising threat directly, hoping that other nations will absorb the costs and fight the aggressor instead."
+  },
+  {
+    "term": "Bureaucratic Politics Model",
+    "category": "Diplomacy & FPA",
+    "scholars": "Graham Allison, Morton Halperin",
+    "definition": "A foreign policy analysis model asserting that foreign policy decisions emerge not from unitary rational calculation, but from bargaining, turf battles, and compromises among competing government ministries and officials.",
+    "module": "033",
+    "chapter_slug": "models-fpdm",
+    "plain_id": "Teori bahwa kebijakan luar negeri bukan hasil keputusan satu pikiran tunggal yang cerdas, melainkan hasil kompromi dan perebutan pengaruh sengit antarmenteri dan lembaga intelijen di balik pintu tertutup.",
+    "plain_en": "The model asserting that foreign policy decisions are messy compromises resulting from bureaucratic competition and bargaining between government agencies."
+  },
+  {
+    "term": "Carbon Leakage",
+    "category": "Political Economy",
+    "scholars": "EU CBAM (2023)",
+    "definition": "The relocation of carbon-intensive industrial manufacturing from nations with strict environmental regulations and carbon pricing to foreign jurisdictions with lax climate policies.",
+    "module": "050",
+    "chapter_slug": "green-trade-diplomacy",
+    "plain_id": "Kondisi di mana pabrik-pabrik penghasil polusi tinggi memindahkan operasionalnya dari negara yang punya aturan emisi ketat ke negara berkembang yang aturannya lebih longgar, sehingga polusi global sama sekali tidak berkurang.",
+    "plain_en": "The situation where businesses relocate pollution-heavy manufacturing to countries with lax climate regulations to evade emissions costs, failing to reduce global emissions."
+  },
+  {
+    "term": "Care Economy (Ekonomi Pengasuhan)",
+    "category": "Political Economy",
+    "scholars": "Folbre (The Invisible Heart 2001), Benería (2003)",
+    "definition": "The sector of economic activities involving childcare, eldercare, nursing, and domestic labor, historically uncompensated and disproportionately performed by women, yet foundational to economic productivity.",
+    "module": "043",
+    "chapter_slug": "_chapters/043-international-political-economy-of-development/040-women-economic-role",
+    "plain_id": "Sektor kerja merawat keluarga (mengurus anak, memasak, merawat lansia) yang sebagian besar dikerjakan perempuan tanpa digaji, padahal menjadi fondasi utama yang memungkinkan para pekerja lain bisa pergi bekerja di kantor atau pabrik setiap hari.",
+    "plain_en": "Unpaid household and caregiving work (childcare, nursing, domestic labor) disproportionately done by women, vital for sustaining the formal economy."
+  },
+  {
+    "term": "Case Study",
+    "category": "Methods & Epistemology",
+    "scholars": "Gerring (2004), Yin (2018)",
+    "definition": "An intensive qualitative analysis of a single unit or a small number of units (e.g., the Cuban Missile Crisis) to elucidate features of a larger class of similar phenomena.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/040-qualitative",
+    "plain_id": "Penyelidikan mendalam terhadap satu peristiwa atau negara tertentu (contoh: Krisis Misil Kuba 1962) sebagai 'kaca pembesar' untuk memahami bagaimana krisis nuklir serupa bisa terjadi.",
+    "plain_en": "An in-depth investigation of a single historical event or country used to extract broader lessons about international behavior."
+  },
+  {
+    "term": "Chain-Ganging",
+    "category": "Theory & Epistemology",
+    "scholars": "Thomas Christensen, Jack Snyder",
+    "definition": "A pathology of rigid multipolar alliance systems (exemplified in 1914) where unconditional defense commitments drag all allied states into war over the recklessness of a single minor partner.",
+    "module": "012",
+    "chapter_slug": "road-to-ww1",
+    "plain_id": "Bahaya sistem aliansi yang terlalu kaku di mana negara-negara saling terikat seperti rantai; jika satu sekutu kecil terseret perang, seluruh sekutu besar lainnya otomatis ikut terseret ke dalam perang dunia.",
+    "plain_en": "The danger in mutual defense pacts where great powers are unconditionally bound together, allowing a reckless junior ally to drag everyone into a catastrophic major war."
+  },
+  {
+    "term": "Chapter VII Enforcement",
+    "category": "International Law",
+    "scholars": "UN Charter Articles 39–51",
+    "definition": "The legal regime empowering the UN Security Council to determine the existence of any threat to the peace, breach of the peace, or act of aggression and mandate binding economic sanctions or armed military force.",
+    "module": "045",
+    "chapter_slug": "un-security",
+    "plain_id": "Bab VII Piagam PBB yang memberi wewenang legal terkuat bagi Dewan Keamanan PBB untuk menjatuhkan sanksi ekonomi atau mengerahkan pasukan militer gabungan guna memulihkan perdamaian dunia.",
+    "plain_en": "The powerful section of the UN Charter granting the Security Council the legal authority to impose binding sanctions or authorize military force to restore international peace."
+  },
+  {
+    "term": "Classical Realism",
+    "category": "Theory & Epistemology",
+    "scholars": "Thucydides, Niccolò Machiavelli, Hans Morgenthau",
+    "definition": "An IR paradigm locating the root causes of conflict, war, and power competition in the inherently flawed, power-seeking nature of human beings (animus dominandi).",
+    "module": "023",
+    "chapter_slug": "classical-realism",
+    "plain_id": "Pandangan bahwa perang dan perebutan kekuasaan terjadi karena sifat dasar manusia yang memang serakah, egois, dan selalu haus akan kekuasaan.",
+    "plain_en": "The view that international conflict is driven by the inherently flawed, selfish, and power-hungry nature of human beings."
+  },
+  {
+    "term": "CNN Effect",
+    "category": "Diplomacy & FPA",
+    "scholars": "Livingston (1997), Robinson (The CNN Effect 2002)",
+    "definition": "The theory that real-time, 24-hour broadcast news coverage of humanitarian crises pressures government policymakers to intervene militarily or diplomatically abroad.",
+    "module": "033",
+    "chapter_slug": "_chapters/033-foreign-policy-analysis-in-international-relations/050-public-media-fpdm",
+    "plain_id": "Fenomena di mana siaran berita televisi atau media sosial yang menyiarkan penderitaan korban perang selama 24 jam penuh menekan para presiden/perdana menteri untuk segera turun tangan memberi bantuan militer atau kemanusiaan.",
+    "plain_en": "The theory that 24/7 rolling news coverage of humanitarian horrors compels political leaders to launch foreign interventions."
+  },
+  {
+    "term": "Cold War",
+    "category": "Modern History & Geopolitics",
+    "scholars": "Gaddis (2005), Kennan (1947)",
+    "definition": "The geopolitical, ideological, and strategic confrontation between the United States and the Soviet Union (1947–1991), waged through proxy wars, arms races, and covert operations without direct superpower clash.",
+    "module": "012",
+    "chapter_slug": "_chapters/012-modern-world-history/170-end-cold-war",
+    "plain_id": "Persaingan sengit antara blok Barat (AS & sekutu kapitalis) melawan blok Timur (Uni Soviet & sekutu komunis) selama 1947–1991. Disebut 'dingin' karena kedua raksasa nuklir ini tidak pernah saling tembak langsung di medan perang terbuka, melainkan lewat adu pengaruh dan perang perantara (proxy war).",
+    "plain_en": "The 1947–1991 global ideological contest between the US and USSR, fought via proxy wars, deterrence, and intelligence rather than direct clash."
+  },
+  {
+    "term": "Collective Defense",
+    "category": "Security & Strategy",
+    "scholars": "NATO Article 5",
+    "definition": "A mutual defense pact where a specific group of allied states pledges to assist and defend one another against external, third-party aggression.",
+    "module": "022",
+    "chapter_slug": "nato-collective-defense",
+    "plain_id": "Perjanjian aliansi militer sekelompok negara (seperti Pasal 5 NATO) untuk bersama-sama melawan ancaman militer dari negara musuh di luar aliansi mereka.",
+    "plain_en": "A mutual defense alliance (such as NATO Article 5) where member states pledge to fight together against external adversaries outside their coalition."
+  },
+  {
+    "term": "Collective Security",
+    "category": "International Law",
+    "scholars": "Woodrow Wilson, Inis Claude",
+    "definition": "A systemic security architecture (embodied in the League of Nations and UN Charter) wherein all member states agree that an attack on any single member constitutes an attack on all, requiring collective enforcement.",
+    "module": "045",
+    "chapter_slug": "un-collective-security",
+    "plain_id": "Sistem keamanan bersama di mana semua negara sepakat bahwa serangan terhadap satu anggota dianggap sebagai serangan terhadap semua anggota, dan semua negara akan bersatu menghukum sang penyerang.",
+    "plain_en": "An institutional system where all member states agree that an attack on any member is considered an attack on everyone, requiring universal collective military response."
+  },
+  {
+    "term": "Comparative Advantage",
+    "category": "Political Economy",
+    "scholars": "David Ricardo",
+    "definition": "An economic principle demonstrating that nations mutually gain from international trade when each specializes in producing goods for which it incurs the lowest domestic opportunity cost.",
+    "module": "021",
+    "chapter_slug": "classical-ipe",
+    "plain_id": "Prinsip ekonomi bahwa setiap negara sebaiknya fokus memproduksi barang yang bisa dibuatnya dengan biaya paling efisien, lalu melakukan perdagangan bebas dengan negara lain sehingga semua pihak menjadi lebih makmur.",
+    "plain_en": "The economic principle that countries should specialize in producing goods they can make most efficiently and trade with others, making all trading partners better off."
+  },
+  {
+    "term": "Compellence",
+    "category": "Security & Strategy",
+    "scholars": "Thomas Schelling",
+    "definition": "The threat or limited application of military force designed to persuade an adversary to halt or reverse an action already initiated.",
+    "module": "032",
+    "chapter_slug": "tools-diplomacy",
+    "plain_id": "Penggunaan ancaman atau kekuatan militer untuk memaksa pihak lain menghentikan sesuatu yang sedang mereka lakukan atau memaksa mereka melakukan tindakan tertentu yang sebenarnya tidak mereka inginkan.",
+    "plain_en": "The coercive use of threats or force to make an adversary stop an ongoing action or do something they do not want to do."
+  },
+  {
+    "term": "Concert of Democracies",
+    "category": "Diplomacy & FPA",
+    "scholars": "Ivo Daalder, James Lindsay",
+    "definition": "A proposed multilateral alliance or coalition of democratic states operating outside universal bodies like the UN to coordinate security and economic responses to illiberal powers.",
+    "module": "041",
+    "chapter_slug": "history-fpa",
+    "plain_id": "Gagasan aliansi khusus negara-negara demokratis untuk bekerja sama di luar forum PBB dalam menghadapi ancaman dari negara-negara otoriter.",
+    "plain_en": "A proposed international coalition of democratic states operating outside universal bodies like the UN to coordinate security and economic responses to illiberal regimes."
+  },
+  {
+    "term": "Containment",
+    "category": "Security & Strategy",
+    "scholars": "George F. Kennan (1947)",
+    "definition": "The grand strategy pursued by the United States during the Cold War to prevent the geopolitical and ideological expansion of the Soviet Union through a counter-force posture.",
+    "module": "012",
+    "chapter_slug": "cold-war-origins",
+    "plain_id": "Strategi pembendungan yang diterapkan AS selama Perang Dingin untuk mencegah pengaruh komunisme Uni Soviet menyebar ke negara-negara lain di dunia.",
+    "plain_en": "The Cold War grand strategy devised by George F. Kennan to prevent the territorial and ideological expansion of Soviet communism."
+  },
+  {
+    "term": "Countervailing Duty (CVD)",
+    "category": "Political Economy",
+    "scholars": "WTO Agreement on Subsidies and Countervailing Measures (SCM)",
+    "definition": "A specific duty imposed to offset the unfair cost advantage of foreign imports that have received illegal or actionable government subsidies in their country of origin.",
+    "module": "050",
+    "chapter_slug": "trade-remedies-wto",
+    "plain_id": "Bea masuk tambahan yang dikenakan untuk menetralkan subsidi yang diberikan pemerintah asing kepada pabriknya, agar harga barang impor tersebut tidak mendistorsi persaingan yang adil.",
+    "plain_en": "An additional tariff imposed on imports to offset unfair subsidies provided by the exporting country's government to its domestic industries."
+  },
+  {
+    "term": "CPTPP",
+    "category": "Political Economy",
+    "scholars": "11 Pacific Basin Nations (2018)",
+    "definition": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership: a high-standard regional trade treaty governing labor standards, state-owned enterprises, environmental protections, and digital trade.",
+    "module": "050",
+    "chapter_slug": "TPP-RCEP",
+    "plain_id": "Perjanjian perdagangan bebas berstandar tinggi di lingkar Pasifik (melibatkan 11 negara seperti Jepang, Kanada, Australia, dan Singapura) yang menuntut standar ketat perlindungan hak cipta, buruh, dan lingkungan.",
+    "plain_en": "A high-standard mega-regional free trade agreement among 11 Pacific Rim nations promoting deep trade liberalization, intellectual property, and labor protections."
+  },
+  {
+    "term": "Critical Theory",
+    "category": "Theory & Epistemology",
+    "scholars": "Robert W. Cox, Jürgen Habermas, Max Horkheimer",
+    "definition": "A dialectical approach that interrogates the historical origins, ideological biases, and power hierarchies embedded in social institutions, aiming at human emancipation rather than mere status-quo problem-solving.",
+    "module": "023",
+    "chapter_slug": "critical-theory-ir",
+    "plain_id": "Pendekatan yang membongkar bahwa teori-teori politik internasional sering kali diciptakan untuk melayani kepentingan pihak yang berkuasa, serta memperjuangkan pembebasan kelompok yang tertindas.",
+    "plain_en": "An approach questioning who benefits from established theories of world politics, arguing that knowledge is never neutral and should aim to liberate oppressed peoples."
+  },
+  {
+    "term": "Cultural Relativism",
+    "category": "Theory & Epistemology",
+    "scholars": "Boas (1887), Donnelly (1984)",
+    "definition": "The view that cultural practices, beliefs, and values must be evaluated within their own societal context rather than measured against external universal standards.",
+    "module": "011",
+    "chapter_slug": "_chapters/011-introduction-to-social-science/030-culture-social-science",
+    "plain_id": "Pandangan bahwa norma, etika, dan kebiasaan suatu bangsa harus dinilai berdasarkan konteks budayanya sendiri, bukan dipaksakan diukur memakai standar nilai moral bangsa lain (misalnya nilai Barat).",
+    "plain_en": "The principle that cultural values and rights must be understood in their own societal context rather than judged by universal external yardsticks."
+  },
+  {
+    "term": "De-Dollarization",
+    "category": "Political Economy",
+    "scholars": "BRICS, Barry Eichengreen",
+    "definition": "The systemic process whereby sovereign nations diversify bilateral trade invoicing, currency reserves, and international settlements away from exclusive reliance on the United States dollar.",
+    "module": "046",
+    "chapter_slug": "global-financial-system",
+    "plain_id": "Upaya negara-negara (seperti aliansi BRICS) untuk mengurangi pemakaian mata uang Dolar AS dalam perdagangan internasional dan beralih menggunakan mata uang lokal mereka sendiri.",
+    "plain_en": "The strategic effort by nations to reduce reliance on the US Dollar in international trade and currency reserves, switching to alternative currencies or gold."
+  },
+  {
+    "term": "Decentralization (Otonomi Daerah)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "Aspinall & Fealy (2003), Hadiz (2010)",
+    "definition": "The transfer of political, administrative, and fiscal authority from the central government in Jakarta to regional regencies (kabupaten) and cities (kota), enacted under Law No. 22/1999 post-Reformasi.",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/060-democracy-indonesia",
+    "plain_id": "Pelimpahan wewenang dan pengelolaan anggaran dari pemerintah pusat di Jakarta kepada pemerintah kabupaten dan kota di seluruh daerah Indonesia pasca-Reformasi 1998, agar pembangunan tidak terpusat di Jawa.",
+    "plain_en": "The devolution of political and fiscal powers from Jakarta to municipal and regency governments across Indonesia enacted after the 1998 Reformasi."
+  },
+  {
+    "term": "Defensive Realism",
+    "category": "Theory & Epistemology",
+    "scholars": "Robert Jervis, Stephen Walt, Charles Glaser",
+    "definition": "A structural realist variant arguing that the international system incentivizes states to maintain moderate, status-quo balances of power, as aggressive expansion provokes counter-balancing coalitions.",
+    "module": "023",
+    "chapter_slug": "offensive-vs-defensive-realism",
+    "plain_id": "Teori bahwa negara hanya butuh kekuatan militer secukupnya untuk mempertahankan diri. Jika terlalu agresif memperluas wilayah, negara-negara tetangga justru akan bersatu mengeroyok dan mengalahkannya.",
+    "plain_en": "The belief that states only need enough power to defend themselves, as aggressive expansion backfires by provoking counter-alliances."
+  },
+  {
+    "term": "Democratic Peace Theory",
+    "category": "Security & Strategy",
+    "scholars": "Immanuel Kant, Michael Doyle, Bruce Russett",
+    "definition": "The empirical and theoretical proposition that while democracies frequently fight autocratic states, consolidated liberal democracies rarely, if ever, go to war against one another.",
+    "module": "022",
+    "chapter_slug": "democratic-peace-theory",
+    "plain_id": "Teori yang menyatakan bahwa negara-negara demokrasi hampir tidak pernah saling berperang satu sama lain, karena pemimpinnya bertanggung jawab kepada rakyat dan terbiasa menyelesaikan sengketa lewat musyawarah.",
+    "plain_en": "The empirical finding and theory that mature democratic states rarely, if ever, go to war with one another due to institutional checks and shared democratic norms."
+  },
+  {
+    "term": "Dependency Theory (Dependencia)",
+    "category": "Political Economy",
+    "scholars": "Raúl Prebisch, Fernando Henrique Cardoso, Andre Gunder Frank",
+    "definition": "A structuralist school arguing that peripheral developing economies are systematically underdeveloped by an unequal global capitalist system that extracts surplus value to enrich the industrialized core.",
+    "module": "043",
+    "chapter_slug": "dependency-theory",
+    "plain_id": "Teori dari Amerika Latin yang berargumen bahwa negara-negara miskin di belahan selatan dieksploitasi sumber dayanya untuk memperkaya negara-negara maju di belahan utara melalui sistem perdagangan global yang tidak adil.",
+    "plain_en": "A theory arguing that global capitalism keeps developing nations impoverished as mere resource suppliers to enrich industrialized wealthy core nations."
+  },
+  {
+    "term": "Deterrence",
+    "category": "Security & Strategy",
+    "scholars": "Thomas Schelling, Glenn Snyder",
+    "definition": "The persuasion of a potential adversary that the expected costs, risks, and retaliation of an aggressive action will far outweigh any anticipated gains.",
+    "module": "022",
+    "chapter_slug": "deterrence-theory",
+    "plain_id": "Upaya mencegah musuh menyerang dengan cara mengancam bahwa jika mereka berani menyerang, balasan yang akan mereka terima akan jauh lebih menyakitkan daripada keuntungan yang mereka peroleh.",
+    "plain_en": "The strategy of preventing an adversary from taking hostile action by threatening retaliation so severe that the costs far outweigh any potential gains."
+  },
+  {
+    "term": "Developmental State",
+    "category": "Political Economy",
+    "scholars": "Johnson (MITI and the Japanese Miracle 1982), Wade (1990)",
+    "definition": "A political-economic model where the state plays an active, interventionist steering role in directing economic development, subsidizing export industries, and allocating strategic capital (e.g., Japan, South Korea, Taiwan).",
+    "module": "043",
+    "chapter_slug": "_chapters/043-international-political-economy-of-development/060-dev-china-india-chile-african-arab",
+    "plain_id": "Model negara di mana pemerintah pusat turun tangan langsung memimpin strategi ekonomi: memilih industri unggulan, memberi subsidi besar, dan membimbing pengusaha nasional agar mampu bersaing dan mengalahkan produk luar negeri (contoh: Jepang, Korea Selatan pasca-perang).",
+    "plain_en": "A model where the government aggressively guides national industrial growth and directs capital to export champions (e.g., post-war Japan and South Korea)."
+  },
+  {
+    "term": "Disaster Diplomacy",
+    "category": "Diplomacy & FPA",
+    "scholars": "Kelman (Disaster Diplomacy 2012), Gaillard (2007)",
+    "definition": "The investigation of how disaster risk reduction and post-disaster humanitarian aid catalyze, influence, or fail to resolve bilateral political conflicts between hostile nations.",
+    "module": "034",
+    "chapter_slug": "_chapters/034-Contemporary Issues In Global Politics/080-natural-disaster",
+    "plain_id": "Diplomasi yang muncul akibat bencana alam besar: saat dua negara yang bermusuhan saling mengirim tim SAR dan bantuan medis, membuka peluang mencairnya ketegangan politik (contoh: tsunami Aceh 2004 mempercepat perdamaian GAM-RI).",
+    "plain_en": "The phenomenon where joint relief efforts after severe natural disasters provide a diplomatic opening to ease hostilities between conflicting states."
+  },
+  {
+    "term": "Dispute Settlement Body (DSB)",
+    "category": "Political Economy",
+    "scholars": "WTO Dispute Settlement Understanding (1995)",
+    "definition": "The judicial branch of the WTO responsible for establishing panels, adopting appellate reports, and authorizing trade retaliation when member states breach multilateral trade agreements.",
+    "module": "050",
+    "chapter_slug": "wto-decision-making",
+    "plain_id": "Badan penyelesaian sengketa di bawah WTO yang bertindak sebagai 'pengadilan dagang' resmi untuk memutuskan apakah suatu negara bersalah menerapkan bea masuk atau pembatasan dagang yang curang.",
+    "plain_en": "The WTO's dispute adjudication arm that investigates trade violations and issues binding rulings to resolve international commercial disputes."
+  },
+  {
+    "term": "Economic Statecraft",
+    "category": "Diplomacy & FPA",
+    "scholars": "Baldwin (Economic Statecraft 1985), Mastanduno (1998)",
+    "definition": "The use of economic instruments (sanctions, tariffs, aid, investment bans, or trade privileges) by a sovereign state to exert power and achieve foreign policy objectives.",
+    "module": "041",
+    "chapter_slug": "_chapters/041-foreign-policy-of-developed-countries/020-economic-statecraft",
+    "plain_id": "Penggunaan kekuatan ekonomi (seperti embargo dagang, sanksi keuangan, pembekuan aset bank, atau bantuan dana) oleh suatu negara sebagai 'senjata' untuk memaksa negara lain menuruti kemauannya tanpa perlu berperang.",
+    "plain_en": "Using economic weapons (sanctions, trade embargoes, foreign aid) as diplomatic leverage to compel other nations to change their policies."
+  },
+  {
+    "term": "Electoral Threshold (Ambang Batas Parlemen)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "Reilly (2001), Mietzner (2014)",
+    "definition": "A legal minimum percentage of the national popular vote that a political party must secure in legislative elections to obtain seats in the People's Representative Council (DPR).",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/050-electoral-indonesia",
+    "plain_id": "Syarat minimal persentase suara sah nasional (misalnya 4%) yang wajib diraih oleh sebuah partai politik dalam Pemilu agar berhak mengirimkan wakilnya duduk di kursi DPR RI.",
+    "plain_en": "The legal minimum percentage of the national vote a party must win in general elections to secure seats in parliament."
+  },
+  {
+    "term": "Elite Interview",
+    "category": "Methods & Epistemology",
+    "scholars": "Aberbach & Rockman (2002), Tansey (2007)",
+    "definition": "A qualitative research technique conducting semi-structured interviews with high-ranking decision-makers, diplomats, and policy experts to uncover unwritten negotiation dynamics.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/090-survey",
+    "plain_id": "Wawancara khusus dengan tokoh-tokoh penting pembuat kebijakan (seperti menteri luar negeri, duta besar, atau jenderal) untuk menggali rahasia di balik layar yang tidak tertulis di dokumen publik.",
+    "plain_en": "Interviews with high-ranking diplomats, ministers, or military leaders to uncover backstage political dynamics not recorded in public records."
+  },
+  {
+    "term": "Embedded Liberalism",
+    "category": "Political Economy",
+    "scholars": "John Gerard Ruggie",
+    "definition": "The post-WWII economic compromise reconciling international multilateral free trade with domestic state welfare, full employment policies, and capital controls.",
+    "module": "021",
+    "chapter_slug": "bretton-woods-system",
+    "plain_id": "Sistem ekonomi pasca-PD II yang membuka perdagangan bebas internasional namun tetap memperbolehkan pemerintah dalam negeri membelanjakan uang untuk jaminan sosial dan perlindungan buruh.",
+    "plain_en": "The post-WWII economic compromise combining free international trade with domestic government social safety nets to protect citizens from market shocks."
+  },
+  {
+    "term": "Energy Security",
+    "category": "Security & Strategy",
+    "scholars": "Yergin (The Prize 1991), Hughes (2012)",
+    "definition": "The uninterrupted availability of energy sources at an affordable price, encompassing physical protection of critical infrastructure, diversification of fuel supplies, and geopolitical supply chain stability.",
+    "module": "022",
+    "chapter_slug": "_chapters/022-introduction-to-security-studies/080-energy-security",
+    "plain_id": "Kemampuan suatu negara untuk menjamin pasokan energi (minyak, gas, listrik) selalu cukup, tidak terputus, dan dengan harga terjangkau bagi rakyat dan industrinya, tanpa mudah disandera oleh negara pengekspor.",
+    "plain_en": "A nation's capacity to secure reliable, uninterrupted, and affordable energy supplies without being vulnerable to geopolitical blackmail."
+  },
+  {
+    "term": "English School (International Society)",
+    "category": "Theory & Epistemology",
+    "scholars": "Hedley Bull, Martin Wight, Barry Buzan",
+    "definition": "A theoretical tradition positing that sovereign states form an 'anarchical society' bound by shared norms, diplomatic institutions, conventions, and international law.",
+    "module": "023",
+    "chapter_slug": "english-school-ir",
+    "plain_id": "Teori yang memandang bahwa meski dunia tidak punya pemerintah tunggal, negara-negara membentuk 'masyarakat beradab' yang terikat norma diplomasi, hukum internasional, dan etika bersama.",
+    "plain_en": "A framework arguing that states form an 'international society' bound by common rules, diplomatic norms, and shared values, rather than existing in constant lawless warfare."
+  },
+  {
+    "term": "Epistemic Community",
+    "category": "Theory & Epistemology",
+    "scholars": "Peter M. Haas (1992)",
+    "definition": "A network of recognized knowledge-based experts who share principled beliefs, causal methodologies, and common policy enterprises, helping states define interests under conditions of technical uncertainty.",
+    "module": "031",
+    "chapter_slug": "social-reserach-method",
+    "plain_id": "Komunitas para ilmuwan dan pakar yang memiliki keahlian ilmiah khusus di bidang tertentu (misal: perubahan iklim) dan memberikan saran teknis yang mempengaruhi kebijakan para pemimpin dunia.",
+    "plain_en": "A network of recognized scientific and policy experts whose authoritative knowledge shapes international agreements on technical issues like climate change."
+  },
+  {
+    "term": "Exclusive Economic Zone (EEZ)",
+    "category": "International Law",
+    "scholars": "UNCLOS 1982 Part V",
+    "definition": "A maritime area extending up to 200 nautical miles from baselines in which the coastal state exercises sovereign rights over living and non-living natural resources while preserving high-seas navigation freedoms for all states.",
+    "module": "042",
+    "chapter_slug": "law-of-the-sea",
+    "plain_id": "Wilayah laut hingga 200 mil laut dari pantai di mana negara memiliki hak eksklusif untuk mengeksploitasi sumber daya alam (seperti menangkap ikan dan mengebor minyak), namun kapal asing tetap bebas berlayar.",
+    "plain_en": "An oceanic zone extending up to 200 nautical miles from shore where a coastal state has exclusive rights to manage natural resources like fisheries and offshore oil."
+  },
+  {
+    "term": "Export-Oriented Industrialization (EOI)",
+    "category": "Political Economy",
+    "scholars": "Alice Amsden, Robert Wade",
+    "definition": "A developmental strategy focusing on integrating domestic industries into competitive global export markets through strategic state industrial policy, used by East Asian Tiger economies.",
+    "module": "043",
+    "chapter_slug": "east-asian-miracle",
+    "plain_id": "Strategi pembangunan (sukses di Asia Timur seperti Korsel dan Taiwan) yang fokus memproduksi barang berdaya saing tinggi untuk diekspor ke pasar dunia alih-alih hanya mengandalkan pasar lokal.",
+    "plain_en": "An economic growth strategy focusing on manufacturing high-quality goods specifically for export to competitive global markets."
+  },
+  {
+    "term": "Extended Deterrence",
+    "category": "Security & Strategy",
+    "scholars": "Thomas Schelling, Glenn Snyder",
+    "definition": "A commitment by a nuclear-armed power to protect foreign allies under its 'nuclear umbrella', warning adversaries that an attack on the ally will be treated as an attack on the guarantor itself.",
+    "module": "022",
+    "chapter_slug": "alliances-deterrence",
+    "plain_id": "Janji negara adidaya (seperti AS) untuk melindungi sekutunya dengan menggunakan senjata nuklirnya jika sekutu tersebut diserang musuh (sering disebut 'payung nuklir').",
+    "plain_en": "A superpower's commitment to protect its non-nuclear allies by extending its nuclear umbrella against foreign aggression."
+  },
+  {
+    "term": "Feminist International Relations",
+    "category": "Theory & Epistemology",
+    "scholars": "J. Ann Tickner, Cynthia Enloe",
+    "definition": "A critical framework examining how gendered assumptions and hierarchies shape international politics, security doctrines, diplomacy, and global political economy.",
+    "module": "023",
+    "chapter_slug": "feminist-ir-theory",
+    "plain_id": "Kritik bahwa politik global dan urusan perang selama ini terlalu didominasi sudut pandang laki-laki dan mengabaikan bagaimana konflik berdampak pada perempuan serta pentingnya kesetaraan gender.",
+    "plain_en": "A perspective examining how international politics is heavily shaped by masculine biases, highlighting the role of women and gender inequality in war and diplomacy."
+  },
+  {
+    "term": "Financial Contagion",
+    "category": "Political Economy",
+    "scholars": "Asian Financial Crisis 1997, 2008 Global Financial Crisis",
+    "definition": "The rapid cross-border transmission of financial instability, currency collapse, and banking crises from one economy to neighboring or interconnected economies regardless of fundamentals.",
+    "module": "046",
+    "chapter_slug": "global-financial-system",
+    "plain_id": "Efek penularan krisis finansial layaknya wabah penyakit; ketika krisis perbankan atau anjloknya mata uang di satu negara merembet cepat meruntuhkan ekonomi negara-negara tetangga.",
+    "plain_en": "The rapid spread of financial market turmoil and currency crises from one country to other regional or global economies."
+  },
+  {
+    "term": "First-Strike Capability",
+    "category": "Security & Strategy",
+    "scholars": "Herman Kahn, Albert Wohlstetter",
+    "definition": "The capacity to launch a preemptive nuclear strike that completely destroys the adversary's nuclear retaliatory arsenal before they can respond.",
+    "module": "022",
+    "chapter_slug": "nuclear-strategy",
+    "plain_id": "Kemampuan militer suatu negara untuk meluncurkan serangan nuklir kejutan pertama yang begitu dahsyat sehingga seluruh senjata nuklir musuh hancur sebelum sempat membalas.",
+    "plain_en": "The capacity to launch a surprise pre-emptive nuclear attack that completely wipes out an opponent's retaliatory arsenal."
+  },
+  {
+    "term": "Floating Exchange Rate",
+    "category": "Political Economy",
+    "scholars": "Friedman (1953), Obstfeld & Rogoff (1996)",
+    "definition": "A monetary regime in which a country's currency price is determined by the open market mechanisms of supply and demand relative to other currencies, without official government pegging.",
+    "module": "021",
+    "chapter_slug": "_chapters/021-international-political-economy/090-exchange-rates",
+    "plain_id": "Sistem kurs mengambang di mana nilai tukar rupiah atau mata uang lain naik-turun secara bebas mengikuti permintaan dan penawaran di pasar uang dunia, bukan dipatok sepihak oleh pemerintah.",
+    "plain_en": "A regime where currency values fluctuate freely based on private foreign exchange market forces without fixed government pegs."
+  },
+  {
+    "term": "Fragile State",
+    "category": "Security & Strategy",
+    "scholars": "Fund for Peace, OECD",
+    "definition": "A sovereign state where central government authority, institutional capacity, and public service provision have deteriorated to the point where it cannot maintain domestic order or security.",
+    "module": "034",
+    "chapter_slug": "humanitarian-intervention-r2p",
+    "plain_id": "Negara rapuh yang pemerintahnya sangat lemah atau lumpuh, sehingga tidak mampu menjaga keamanan, menegakkan hukum, atau menyediakan kebutuhan dasar bagi warganya.",
+    "plain_en": "A country characterized by severe governance weakness, institutional breakdown, and inability to maintain security or provide basic public services."
+  },
+  {
+    "term": "Gender Quota (Kuota Gender 30%)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "Dahlerup (2006), Krook (2009)",
+    "definition": "An affirmative action regulation requiring political parties in Indonesia to include at least 30% female candidates on their legislative electoral candidate lists.",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/070-women-indonesia",
+    "plain_id": "Aturan hukum yang mewajibkan setiap partai politik mencalonkan minimal 30% perempuan dalam daftar calon anggota legislatif (caleg) untuk mendorong keterwakilan perempuan di parlemen.",
+    "plain_en": "Affirmative action rule mandating that women make up at least 30% of candidate nomination lists for legislative elections."
+  },
+  {
+    "term": "Gini Coefficient",
+    "category": "Political Economy",
+    "scholars": "Gini (1912), Milanovic (Worlds Apart 2005)",
+    "definition": "A statistical measure of income or wealth distribution inequality across a population, ranging from 0 (perfect equality) to 1 (complete inequality where one person holds all wealth).",
+    "module": "043",
+    "chapter_slug": "_chapters/043-international-political-economy-of-development/030-inequality-development",
+    "plain_id": "Angka statistik (skala 0 sampai 1) yang mengukur tingkat ketimpangan pembagian kekayaan di suatu negara: nilai mendekati 0 berarti pendapatan rakyat terbagi rata, sedangkan mendekati 1 berarti seluruh uang terkumpul di tangan segelintir orang kaya.",
+    "plain_en": "A 0-to-1 statistical index measuring income inequality: 0 means everyone earns equally, while 1 means a single elite holds all the wealth."
+  },
+  {
+    "term": "Grand Strategy",
+    "category": "Security & Strategy",
+    "scholars": "Paul Kennedy, Barry Posen, John Lewis Gaddis",
+    "definition": "The overarching, long-term conceptual theory and coordination of a nation-state's military, diplomatic, economic, and moral instruments of power to achieve vital national security objectives.",
+    "module": "041",
+    "chapter_slug": "history-fpa",
+    "plain_id": "Rencana induk jangka panjang suatu negara yang memadukan seluruh sumber daya militer, ekonomi, diplomasi, dan intelijen untuk mengamankan kepentingan nasionalnya dalam puluhan tahun ke depan.",
+    "plain_en": "A state's comprehensive long-term roadmap coordinating military, economic, and diplomatic tools to achieve foundational national security goals."
+  },
+  {
+    "term": "Groupthink",
+    "category": "Diplomacy & FPA",
+    "scholars": "Irving Janis (1972)",
+    "definition": "A psychological phenomenon in cohesive decision-making groups where the desire for harmony and consensus overrides realistic appraisals of alternative courses of action, leading to catastrophic foreign policy errors.",
+    "module": "033",
+    "chapter_slug": "psychology-foreign-policy",
+    "plain_id": "Kelemahan psikologis kelompok pembuat keputusan yang terlalu ingin rukun sehingga tidak ada yang berani mengkritik ide buruk bos mereka, sering kali berujung pada bencana kebijakan luar negeri.",
+    "plain_en": "A psychological phenomenon where a desire for conformity and harmony in a decision-making group suppresses dissenting views, leading to disastrous policy blunders."
+  },
+  {
+    "term": "Hegemonic Stability Theory",
+    "category": "Political Economy",
+    "scholars": "Charles Kindleberger, Robert Gilpin, Stephen Krasner",
+    "definition": "The proposition that an open, stable liberal international economic order requires the leadership of a single dominant hegemonic state to enforce rules, provide market liquidity, and serve as lender of last resort.",
+    "module": "021",
+    "chapter_slug": "hegemonic-stability-theory",
+    "plain_id": "Teori bahwa sistem perekonomian dunia hanya bisa stabil dan terbuka jika ada satu negara adidaya (hegemon) yang kuat dan rela membiayai aturan main serta menjamin keamanan perdagangan global.",
+    "plain_en": "The theory that the global economy requires a single dominant superpower (hegemon) willing to enforce rules and provide public goods to remain open and stable."
+  },
+  {
+    "term": "Hegemony (Gramscian / Coxian)",
+    "category": "Theory & Epistemology",
+    "scholars": "Antonio Gramsci, Robert W. Cox",
+    "definition": "A historic structure of dominance that combines coercive material power with ideological and normative consent, institutionalized globally through international organizations and culture.",
+    "module": "023",
+    "chapter_slug": "critical-theory-ir",
+    "plain_id": "Bentuk dominasi kekuasaan di mana pihak yang berkuasa tidak hanya menggunakan senjata dan polisi, melainkan berhasil membuat pihak yang dikuasai secara sukarela menerima cara pandang penguasa sebagai hal yang wajar dan benar.",
+    "plain_en": "A critical theory concept showing that true power dominance relies not just on force, but on shaping ideas and culture so that subordinate classes accept the status quo as natural."
+  },
+  {
+    "term": "Hierarchy in International Relations",
+    "category": "Theory & Epistemology",
+    "scholars": "David A. Lake",
+    "definition": "An analytical approach demonstrating that rather than pure anarchy, international relations frequently features institutionalized hierarchical authority relationships (empires, protectorates, spheres of influence).",
+    "module": "010",
+    "chapter_slug": "the-international-system",
+    "plain_id": "Kenyataan bahwa meskipun di atas kertas semua negara berdaulat dan setara, dalam praktik nyata hubungan internasional selalu ada negara kuat yang memimpin dan mendikte negara-negara bawahannya.",
+    "plain_en": "The empirical reality that despite formal sovereign equality, world politics features distinct hierarchical relationships where dominant powers exert authority over subordinate states."
+  },
+  {
+    "term": "Human Security",
+    "category": "Security & Strategy",
+    "scholars": "Mahbub ul Haq, Amartya Sen (UNDP 1994)",
+    "definition": "A paradigm broadening the referent object of security from the territorial state to the individual human being, focusing on freedom from fear, freedom from want, and freedom to live in dignity.",
+    "module": "022",
+    "chapter_slug": "human-security",
+    "plain_id": "Pergeseran fokus keamanan dari melindungi 'wilayah negara' ke arah melindungi 'kehidupan manusia' dari kemiskinan, penyakit kelaparan, bencana alam, dan pelanggaran hak asasi manusia.",
+    "plain_en": "A human-centered security concept prioritizing the protection of individual citizens from poverty, disease, and violence, rather than merely guarding state borders."
+  },
+  {
+    "term": "Hybrid Warfare",
+    "category": "Security & Strategy",
+    "scholars": "Frank Hoffman, Valery Gerasimov",
+    "definition": "A military strategy blending conventional military capabilities, irregular tactics, cyber operations, disinformation, and economic coercion beneath the threshold of open interstate warfare.",
+    "module": "034",
+    "chapter_slug": "cyber-warfare",
+    "plain_id": "Strategi perang modern yang menggabungkan serangan militer konvensional dengan taktik non-militer seperti peretasan siber, penyebaran hoaks/disinformasi, dan tekanan ekonomi untuk mengacaukan lawan.",
+    "plain_en": "A modern military strategy blending conventional military force with cyberattacks, disinformation campaigns, and economic coercion to destabilize an adversary."
+  },
+  {
+    "term": "Import Substitution Industrialization (ISI)",
+    "category": "Political Economy",
+    "scholars": "Raúl Prebisch, Celso Furtado",
+    "definition": "A developmental trade policy seeking to replace foreign industrial imports with domestically manufactured goods through high protective tariffs, quotas, and state-subsidized credit.",
+    "module": "043",
+    "chapter_slug": "import-substitution-industrialization",
+    "plain_id": "Strategi pembangunan ekonomi di mana negara melarang atau mengenakan pajak tinggi pada barang impor agar industri pabrik dalam negeri bisa tumbuh membuat produk pengganti sendiri.",
+    "plain_en": "A development strategy where a country restricts foreign imports to foster and protect its own domestic manufacturing industries."
+  },
+  {
+    "term": "Innocent Passage",
+    "category": "International Law",
+    "scholars": "UNCLOS 1982 Article 17",
+    "definition": "The right of foreign ships to navigate continuously and expeditiously through another state's territorial sea without prior authorization, provided the passage is not prejudicial to the peace, good order, or security of the coastal state.",
+    "module": "042",
+    "chapter_slug": "maritime-zones-unclos",
+    "plain_id": "Hak lintas damai bagi kapal asing untuk melintasi laut teritorial negara lain secara cepat dan terus-menerus tanpa mengganggu perdamaian, ketertiban, atau keamanan negara pantai tersebut.",
+    "plain_en": "The right of foreign ships to navigate peacefully and continuously through a coastal state's territorial sea without threatening its security or peace."
+  },
+  {
+    "term": "International Monetary System",
+    "category": "Political Economy",
+    "scholars": "Eichengreen (Globalizing Capital 2008), Cohen (1977)",
+    "definition": "The institutional arrangements, rules, conventions, and instruments that govern foreign exchange rates, cross-border payments, and capital flows among sovereign nations.",
+    "module": "021",
+    "chapter_slug": "_chapters/021-international-political-economy/080-monetary-system",
+    "plain_id": "Aturan main dan kesepakatan antar-negara tentang bagaimana uang ditukar dan pembayaran antar-negara dilakukan di seluruh dunia (misalnya penentuan nilai dolar AS, emas, atau euro).",
+    "plain_en": "The international rules, conventions, and institutions that govern how currencies are valued, traded, and settled across national borders."
+  },
+  {
+    "term": "Interpretivism",
+    "category": "Theory & Epistemology",
+    "scholars": "Max Weber, Clifford Geertz",
+    "definition": "An epistemological approach arguing that social reality cannot be explained through natural-science laws, but requires understanding (Verstehen) of subjective meanings, cultural contexts, and human intentions.",
+    "module": "011",
+    "chapter_slug": "epistemology-social-science",
+    "plain_id": "Pendekatan yang menyatakan bahwa tindakan negara tidak bisa sekadar dihitung dengan rumus angka, melainkan harus dipahami dari makna budaya, bahasa, keyakinan, dan cara berpikir para pelakunya.",
+    "plain_en": "The philosophy that social reality cannot be reduced to hard numbers, requiring researchers to interpret the subjective meanings, cultures, and beliefs of human actors."
+  },
+  {
+    "term": "Iron Curtain",
+    "category": "Modern History & Geopolitics",
+    "scholars": "Churchill (Fulton Speech 1946)",
+    "definition": "The political, military, and ideological barrier erected by the Soviet Union post-WWII to seal itself and its European satellite states off from open contact with the West.",
+    "module": "012",
+    "chapter_slug": "_chapters/012-modern-world-history/170-end-cold-war",
+    "plain_id": "Istilah metafora untuk garis pemisah ideologis dan militer yang membelah benua Eropa menjadi dua selama Perang Dingin: Eropa Barat yang bebas dan Eropa Timur di bawah kendali ketat Uni Soviet.",
+    "plain_en": "The ideological and fortified border separating communist Eastern Europe from capitalist Western Europe during the Cold War."
+  },
+  {
+    "term": "Jus ad Bellum",
+    "category": "International Law",
+    "scholars": "UN Charter Article 2(4) & Article 51",
+    "definition": "The branch of public international law establishing the criteria, conditions, and legal justifications governing when a sovereign state may legitimately resort to armed force.",
+    "module": "042",
+    "chapter_slug": "use-of-force-international-law",
+    "plain_id": "Aturan hukum internasional mengenai alasan yang sah untuk memulai perang (dalam Piagam PBB hanya dibolehkan untuk membela diri atau atas mandat resmi Dewan Keamanan PBB).",
+    "plain_en": "The criteria under international law that determine whether a state has a legitimate justification for resorting to war or armed conflict."
+  },
+  {
+    "term": "Jus Cogens (Peremptory Norm)",
+    "category": "International Law",
+    "scholars": "VCLT Article 53",
+    "definition": "A fundamental body of overarching international legal norms accepted by the global community from which no derogation or treaty exception is permitted (e.g., prohibitions against genocide, slavery, torture, and wars of aggression).",
+    "module": "042",
+    "chapter_slug": "sources-international-law",
+    "plain_id": "Norma tertinggi dalam hukum internasional yang bersifat mutlak dan tidak boleh dilanggar dalam situasi apa pun oleh negara mana pun (contoh: larangan genosida, agresi militer, dan perbudakan).",
+    "plain_en": "Fundamental, non-negotiable peremptory norms of international law from which no derogation is permitted (e.g., prohibitions on genocide, torture, and aggressive war)."
+  },
+  {
+    "term": "Jus in Bello (International Humanitarian Law)",
+    "category": "International Law",
+    "scholars": "Geneva Conventions 1949, Additional Protocols 1977",
+    "definition": "The law of armed conflict regulating the conduct of warfare, mandating military necessity, distinction between combatants and non-combatants, proportionality, and humane treatment of prisoners of war.",
+    "module": "042",
+    "chapter_slug": "international-humanitarian-law",
+    "plain_id": "Aturan hukum mengenai tata cara berperang di medan tempur (seperti Konvensi Jenewa) yang melarang membunuh warga sipil, mewajibkan merawat tawanan, dan membatasi jenis senjata.",
+    "plain_en": "The laws of armed conflict governing conduct during warfare, designed to protect civilians, wounded soldiers, and limit unnecessary human suffering."
+  },
+  {
+    "term": "Levels of Analysis",
+    "category": "Theory & Epistemology",
+    "scholars": "Kenneth Waltz, J. David Singer",
+    "definition": "A methodological framework categorizing explanations of international events into three distinct levels: individual (first image), domestic state/society (second image), and international system (third image).",
+    "module": "010",
+    "chapter_slug": "levels-of-analysis-ir",
+    "plain_id": "Tiga 'kacamata' untuk membedah peristiwa dunia: tingkat individu (sifat pemimpin), tingkat negara (sistem politik dalam negeri), atau tingkat sistem internasional (hubungan kekuatan global).",
+    "plain_en": "A framework dividing foreign policy explanations into three lenses: the individual level (the leader), the domestic level (the country's regime), and the systemic level (the global balance of power)."
+  },
+  {
+    "term": "Liberal International Order (LIO)",
+    "category": "Theory & Epistemology",
+    "scholars": "G. John Ikenberry",
+    "definition": "A rules-based multilateral order structured around open markets, multilateral security institutions, democratic norms, and American leadership forged after 1945.",
+    "module": "041",
+    "chapter_slug": "history-fpa",
+    "plain_id": "Tatanan dunia berbasis aturan yang dipimpin negara-negara Barat sejak 1945, ditopang oleh perdagangan bebas terbuka, lembaga multilateral (PBB, IMF, WTO), dan penegakan demokrasi serta HAM.",
+    "plain_en": "The rules-based international order established after WWII led by the West, underpinned by open markets, multilateral institutions, and democratic norms."
+  },
+  {
+    "term": "Maoism",
+    "category": "Modern History & Geopolitics",
+    "scholars": "Mao Zedong (1949), Schram (1989)",
+    "definition": "The variant of Marxist-Leninist ideology developed by Mao Zedong, viewing the rural peasantry rather than the urban industrial proletariat as the primary engine of anti-imperialist revolution.",
+    "module": "012",
+    "chapter_slug": "_chapters/012-modern-world-history/160-birth-prc",
+    "plain_id": "Paham komunisme khas Tiongkok gagasan Mao Zedong yang menjadikan petani desa—bukan buruh pabrik perkotaan—sebagai motor utama revolusi bersenjata melawan kaum borjuis dan imperialisme.",
+    "plain_en": "Mao's adaptation of Marxism-Leninism that positioned rural peasants rather than urban factory workers as the driving force of socialist revolution."
+  },
+  {
+    "term": "Mercantilism",
+    "category": "Political Economy",
+    "scholars": "Alexander Hamilton, Friedrich List",
+    "definition": "An economic doctrine holding that state power and national security depend upon the accumulation of wealth, trade surpluses, and state intervention to support strategic industries.",
+    "module": "021",
+    "chapter_slug": "introduction-ipe",
+    "plain_id": "Paham ekonomi klasik yang memandang kekayaan dunia bersifat terbatas. Negara harus memaksimalkan ekspor, membatasi impor, dan menimbun cadangan emas/devisa demi memperkuat kekuatan militer dan politiknya.",
+    "plain_en": "An economic philosophy viewing trade as a zero-sum game, where states must maximize exports and restrict imports to amass national wealth and power."
+  },
+  {
+    "term": "Minilateralism",
+    "category": "Diplomacy & FPA",
+    "scholars": "Moisés Naím, Stewart Patrick",
+    "definition": "A targeted diplomatic format that convenes the smallest number of states necessary to address a specific issue (e.g., Quad, AUKUS, I2U2), chosen as an efficient alternative to unwieldy universal multilateral bodies.",
+    "module": "032",
+    "chapter_slug": "multilateral-diplomacy",
+    "plain_id": "Diplomasi kelompok kecil yang melibatkan hanya sedikit negara yang berkepentingan langsung (seperti Quad atau AUKUS) agar bisa mengambil keputusan penting secara cepat tanpa hambatan birokrasi forum besar.",
+    "plain_en": "Targeted diplomatic cooperation between small groups of countries (e.g., Quad or AUKUS) designed to act quickly on specific shared security or economic problems."
+  },
+  {
+    "term": "Modernization Theory",
+    "category": "Theory & Epistemology",
+    "scholars": "Rostow (1960), Lipset (1959)",
+    "definition": "A developmental paradigm asserting that traditional societies inevitably progress through linear industrial stages toward modern, democratic, Western-style capitalism.",
+    "module": "011",
+    "chapter_slug": "_chapters/011-introduction-to-social-science/060-social-change",
+    "plain_id": "Teori klasik yang meyakini bahwa semua negara berkembang lambat laun akan mengikuti jejak Barat: bergerak dari masyarakat agraris tradisional menuju industrialisasi modern, pasar bebas, dan demokrasi.",
+    "plain_en": "The theory that all nations follow a linear evolutionary path from traditional agricultural societies to modern, democratic, industrialized economies."
+  },
+  {
+    "term": "Montevideo Convention (1933)",
+    "category": "International Law",
+    "scholars": "Montevideo Convention on Rights and Duties of States (1933), Crawford (2006)",
+    "definition": "The customary treaty codifying the four foundational criteria of statehood: a permanent population, a defined territory, an effective government, and the capacity to enter into relations with other states.",
+    "module": "042",
+    "chapter_slug": "_chapters/042-international-law-issues-and-international-dispute-settlement/040-state-inter-law",
+    "plain_id": "Konvensi internasional yang menetapkan 4 syarat sah bagi suatu wilayah untuk diakui sebagai sebuah 'Negara': punya rakyat tetap, punya wilayah tertentu, punya pemerintah yang berdaulat, dan mampu berhubungan dengan negara lain.",
+    "plain_en": "The landmark 1933 treaty establishing the 4 legal criteria of statehood: permanent population, defined territory, functioning government, and diplomatic capacity."
+  },
+  {
+    "term": "Most-Favoured-Nation (MFN)",
+    "category": "Political Economy",
+    "scholars": "GATT 1947 Article I, WTO",
+    "definition": "A cornerstone principle of international trade law requiring that any commercial advantage, tariff concession, or privilege granted to one nation must immediately be extended to all other WTO member states.",
+    "module": "050",
+    "chapter_slug": "international-trade-as-diplomacy",
+    "plain_id": "Aturan dasar WTO yang mewajibkan negara memperlakukan semua mitra dagangnya secara setara; jika satu negara diberi keringanan tarif bea masuk, keringanan itu otomatis berlaku untuk semua anggota WTO lainnya.",
+    "plain_en": "The WTO principle requiring a member state to grant the same favorable trade terms (such as low tariffs) to all other member nations without discrimination."
+  },
+  {
+    "term": "Multiculturalism",
+    "category": "Theory & Epistemology",
+    "scholars": "Kymlicka (Multicultural Citizenship 1995), Taylor (1994)",
+    "definition": "A political philosophy advocating the accommodation and equal civic recognition of diverse cultural, ethnic, and religious communities within a single nation-state without forced assimilation.",
+    "module": "034",
+    "chapter_slug": "_chapters/034-Contemporary Issues In Global Politics/060-multiculturalism",
+    "plain_id": "Kebijakan dan pandangan hidup yang menghargai keberagaman suku, agama, dan budaya dalam satu negara, di mana kelompok minoritas tidak dipaksa melebur (asimilasi), melainkan diakui hak-hak budayanya secara setara.",
+    "plain_en": "The policy of actively recognizing and protecting diverse ethnic and cultural communities within a society without forcing them to assimilate."
+  },
+  {
+    "term": "Multipolarity",
+    "category": "Theory & Epistemology",
+    "scholars": "Hans Morgenthau, Kenneth Waltz",
+    "definition": "An international system characterized by three or more roughly equal great powers competing and forming fluid balance-of-power coalitions.",
+    "module": "010",
+    "chapter_slug": "the-international-system",
+    "plain_id": "Sistem dunia di mana terdapat tiga atau lebih negara kekuatan besar yang kekuatannya relatif seimbang (seperti Eropa sebelum Perang Dunia I atau dinamika dunia saat ini).",
+    "plain_en": "An international system where power is distributed among three or more roughly equal major powers."
+  },
+  {
+    "term": "Mutual Assured Destruction (MAD)",
+    "category": "Security & Strategy",
+    "scholars": "Bernard Brodie, Thomas Schelling, Robert McNamara",
+    "definition": "A condition of strategic stability where two nuclear-armed adversaries both possess secure, survivable second-strike capabilities, ensuring that any nuclear aggression results in the total destruction of both sides.",
+    "module": "022",
+    "chapter_slug": "deterrence-theory",
+    "plain_id": "Kondisi di mana dua negara berkekuatan nuklir sama-sama menyadari bahwa jika salah satu memulai perang nuklir, kedua belah pihak dipastikan akan hancur lebur tanpa pemenang, sehingga perang nuklir justru tercegah.",
+    "plain_en": "A Cold War doctrine where both superpowers possess enough survivable nuclear weapons that any attack would result in total mutual annihilation, deterring either side from starting a war."
+  },
+  {
+    "term": "National Treatment",
+    "category": "Political Economy",
+    "scholars": "GATT Article III, WTO",
+    "definition": "A foundational trade norm prohibiting states from discriminating against imported foreign goods in favor of domestic products through internal taxes or domestic regulations once customs borders are crossed.",
+    "module": "050",
+    "chapter_slug": "wto-principles",
+    "plain_id": "Prinsip WTO bahwa barang impor yang sudah masuk dan membayar bea cukai tidak boleh didiskriminasi atau dikenai pajak tambahan dibanding barang buatan lokal di pasar dalam negeri.",
+    "plain_en": "The WTO rule requiring that once imported goods pass customs, they must be treated no less favorably than locally produced domestic products."
+  },
+  {
+    "term": "Neoliberal Institutionalism",
+    "category": "Theory & Epistemology",
+    "scholars": "Robert Keohane, Joseph Nye",
+    "definition": "A rationalist perspective demonstrating that even under structural anarchy, international institutions foster durable cooperation by reducing transaction costs, sharing information, and mitigating cheating.",
+    "module": "023",
+    "chapter_slug": "neoliberal-institutionalism",
+    "plain_id": "Pandangan bahwa meskipun dunia anarki, negara-negara tetap bisa bekerja sama secara damai jika didukung lembaga internasional (seperti PBB atau WTO) yang membuat aturan main menjadi jelas dan mencegah kecurangan.",
+    "plain_en": "The theory that international organizations allow countries to cooperate peacefully by creating clear rules, sharing information, and reducing the fear of cheating."
+  },
+  {
+    "term": "Neoliberalism",
+    "category": "Political Economy",
+    "scholars": "Harvey (A Brief History of Neoliberalism 2005), Hayek (1944)",
+    "definition": "A political-economic ideology advocating free markets, deregulation, privatization, free trade, and minimal state intervention in the economy.",
+    "module": "021",
+    "chapter_slug": "_chapters/021-international-political-economy/095-neoliberalism-ipe",
+    "plain_id": "Paham ekonomi yang meyakini bahwa pasar bebas adalah jalan terbaik menuju kemakmuran: peran pemerintah harus dibatasi seminimal mungkin, pajak dipangkas, dan sektor publik diserahkan ke pihak swasta.",
+    "plain_en": "An economic doctrine advocating deregulation, privatization, free trade, and reducing government intervention in the economy."
+  },
+  {
+    "term": "Nine-Dash Line",
+    "category": "Regionalism & ASEAN",
+    "scholars": "South China Sea Arbitration (2016)",
+    "definition": "A historic maritime claim line utilized by China to assert historic rights and maritime jurisdiction over approximately 80% of the South China Sea, ruled invalid under UNCLOS in 2016.",
+    "module": "044",
+    "chapter_slug": "asean-community",
+    "plain_id": "Klaim sepihak sembilan garis putus-putus oleh Tiongkok atas hampir seluruh wilayah Laut China Selatan, yang telah diputus tidak memiliki dasar hukum oleh Pengadilan Arbitrase Permanen (PCA) 2016.",
+    "plain_en": "Beijing's expansive historical maritime claim covering most of the South China Sea, ruled invalid under UNCLOS by the Permanent Court of Arbitration in 2016."
+  },
+  {
+    "term": "Non-Aligned Movement (NAM)",
+    "category": "Indonesian Diplomacy",
+    "scholars": "Belgrade Summit (1961), Sukarno, Tito, Nehru, Nasser",
+    "definition": "A multilateral forum of 120 developing nations founded to preserve diplomatic independence, oppose colonialism, and resist alignment with either the Western or Eastern superpower blocs during the Cold War.",
+    "module": "013",
+    "chapter_slug": "indonesia-foreign-policy-history",
+    "plain_id": "Gerakan Non-Blok (GNB): wadah persatuan lebih dari 120 negara berkembang yang memilih netral dan tidak mau menjadi bidak catur dalam persaingan militer blok-blok negara adidaya.",
+    "plain_en": "A forum of 120+ developing nations committed to remaining neutral and independent from the geopolitical rivalries of major power blocs."
+  },
+  {
+    "term": "Non-Refoulement",
+    "category": "International Law",
+    "scholars": "1951 Refugee Convention Article 33",
+    "definition": "A fundamental principle of customary international refugee law prohibiting states from expelling or returning a refugee to a country where their life or freedom would be threatened.",
+    "module": "034",
+    "chapter_slug": "migration-refugee-politics",
+    "plain_id": "Prinsip hukum internasional mutlak yang melarang suatu negara mendeportasi atau memulangkan pengungsi ke negara asalnya jika di sana mereka terancam siksaan atau pembunuhan.",
+    "plain_en": "The fundamental international refugee law principle forbidding countries from expelling asylum seekers to places where their life or freedom would be threatened."
+  },
+  {
+    "term": "Norm Life Cycle",
+    "category": "Theory & Epistemology",
+    "scholars": "Martha Finnemore, Kathryn Sikkink (1998)",
+    "definition": "A three-stage model of how international norms evolve and become institutionalized: norm emergence (championed by norm entrepreneurs), norm cascade (tipping point across states), and norm internalization (taken-for-granted status).",
+    "module": "023",
+    "chapter_slug": "constructivism-in-ir",
+    "plain_id": "Tiga tahap lahirnya aturan etika global: dimulai dari pelopor norma yang mengampanyekannya, lalu menyebar luas diadopsi banyak negara, hingga akhirnya menjadi kewajaran yang diakui otomatis oleh seluruh dunia.",
+    "plain_en": "Martha Finnemore and Kathryn Sikkink's model tracking how global ideas evolve: norm emergence, norm cascade (broad acceptance), and norm internalization (taken for granted)."
+  },
+  {
+    "term": "Nuclear Non-Proliferation Treaty (NPT)",
+    "category": "Security & Strategy",
+    "scholars": "UN General Assembly (1968)",
+    "definition": "A landmark international treaty establishing a three-pillar regime: preventing the spread of nuclear weapons, promoting nuclear disarmament, and fostering peaceful civilian nuclear energy cooperation.",
+    "module": "034",
+    "chapter_slug": "nuclear-proliferation",
+    "plain_id": "Traktat internasional 1968 yang melarang negara-negara tanpa senjata nuklir untuk membuatnya, sementara lima negara pemilik nuklir resmi berjanji untuk menuju pelucutan senjata total dan berbagi teknologi nuklir damai.",
+    "plain_en": "A landmark 1968 treaty designed to prevent the spread of nuclear weapons, promote disarmament, and encourage peaceful uses of nuclear energy."
+  },
+  {
+    "term": "Offense-Defense Balance",
+    "category": "Security & Strategy",
+    "scholars": "Robert Jervis, Stephen Van Evera",
+    "definition": "A strategic condition assessing whether military technology, geography, and doctrine make it easier to attack and conquer territory or to defend against invasion.",
+    "module": "022",
+    "chapter_slug": "offense-defense-theory",
+    "plain_id": "Kondisi militer apakah lebih mudah menyerang atau bertahan. Jika teknologi membuat penyerangan lebih mudah, perang lebih gampang pecah; sebaliknya jika pertahanan lebih kuat, dunia cenderung lebih damai.",
+    "plain_en": "A concept assessing whether military technology favors the attacker or the defender; when defense has the advantage, peace is much more likely."
+  },
+  {
+    "term": "Offensive Realism",
+    "category": "Theory & Epistemology",
+    "scholars": "John Mearsheimer",
+    "definition": "A structural realist variant arguing that because states can never be certain of others' intentions, rational great powers seek to maximize relative power and attain regional hegemony.",
+    "module": "023",
+    "chapter_slug": "offensive-vs-defensive-realism",
+    "plain_id": "Teori bahwa cara terbaik bagi negara besar untuk aman adalah menjadi sekuat mungkin dan mendominasi kawasannya (hegemoni), karena niat negara lain tidak pernah bisa dipercaya 100%.",
+    "plain_en": "The belief that great powers must maximize their power and strive to become the dominant hegemon because they can never be sure of other countries' true intentions."
+  },
+  {
+    "term": "Official Development Assistance (ODA)",
+    "category": "Diplomacy & FPA",
+    "scholars": "Easterly (The White Man's Burden 2006), Sachs (The End of Poverty 2005)",
+    "definition": "Government aid designed to promote the economic development and welfare of developing countries, provided through grants or concessional loans with a grant element of at least 25%.",
+    "module": "034",
+    "chapter_slug": "_chapters/034-Contemporary Issues In Global Politics/020-poverty-development-aid",
+    "plain_id": "Bantuan keuangan resmi (hibah atau pinjaman bunga sangat rendah) dari negara maju kepada negara berkembang untuk membiayai pembangunan rumah sakit, sekolah, jalan, atau pengentasan kemiskinan.",
+    "plain_en": "Official financial aid and low-interest loans from rich nations to developing countries dedicated to economic welfare and poverty reduction."
+  },
+  {
+    "term": "Opinio Juris Sive Necessitatis",
+    "category": "International Law",
+    "scholars": "ICJ Statute Article 38(1)(b)",
+    "definition": "The subjective, psychological conviction of sovereign states that a general behavioral practice is undertaken out of a binding sense of legal obligation, constituting a necessary component of customary international law.",
+    "module": "042",
+    "chapter_slug": "customary-international-law",
+    "plain_id": "Keyakinan bahwa suatu kebiasaan dijalankan oleh negara bukan karena sopan santun belaka, melainkan karena mereka yakin tindakan tersebut memang diwajibkan oleh hukum internasional.",
+    "plain_en": "The subjective belief by states that a general practice is being carried out because it is required by an underlying international legal obligation."
+  },
+  {
+    "term": "P5 Veto Power",
+    "category": "International Law",
+    "scholars": "UN Charter Article 27(3)",
+    "definition": "The special voting privilege granted to the five permanent members of the UN Security Council (US, UK, France, Russia, China), where a negative vote by any single permanent member vetoes any non-procedural resolution.",
+    "module": "045",
+    "chapter_slug": "un-security",
+    "plain_id": "Hak istimewa lima negara anggota tetap Dewan Keamanan PBB (AS, Rusia, Tiongkok, Inggris, Prancis) untuk membatalkan resolusi apa pun hanya dengan satu suara 'tidak'.",
+    "plain_en": "The exclusive power of the five permanent UN Security Council members (US, UK, France, Russia, China) to block any substantive resolution with a single negative vote."
+  },
+  {
+    "term": "Pacta Sunt Servanda",
+    "category": "International Law",
+    "scholars": "VCLT 1969 Article 26",
+    "definition": "The fundamental maxim of public international law establishing that every treaty in force is legally binding upon the sovereign parties to it and must be performed by them in good faith.",
+    "module": "042",
+    "chapter_slug": "basic-inter-law",
+    "plain_id": "Prinsip hukum paling mendasar bahwa 'janji dan traktat yang telah disepakati wajib ditepati dengan itikad baik' oleh setiap negara yang menandatanganinya.",
+    "plain_en": "The foundational legal maxim that treaties and international agreements are legally binding and must be performed in good faith."
+  },
+  {
+    "term": "Paradiplomacy",
+    "category": "Diplomacy & FPA",
+    "scholars": "Ivo Duchacek, Panayotis Soldatos",
+    "definition": "Foreign policy actions and international relations conducted by sub-national entities (regions, provinces, federated states, and mega-cities) promoting local trade, culture, and environmental cooperation.",
+    "module": "032",
+    "chapter_slug": "paradiplomacy-subnational",
+    "plain_id": "Aktivitas diplomasi dan hubungan luar negeri yang dijalankan secara mandiri oleh pemerintah daerah, provinsi, atau kota dengan pihak luar negeri (misal: kerja sama kota kembar *Sister City*).",
+    "plain_en": "International relations and diplomatic outreach conducted by subnational governments, such as provinces or cities, rather than the central government."
+  },
+  {
+    "term": "Participant Observation",
+    "category": "Methods & Epistemology",
+    "scholars": "Wacquant (2005), Neumann (2012)",
+    "definition": "An ethnographic method where the researcher immerses themselves directly in the daily diplomatic or organizational environment of the subjects being studied.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/080-observation",
+    "plain_id": "Metode di mana peneliti terjun langsung dan ikut beraktivitas di dalam lingkungan yang diteliti (misalnya magang di markas PBB atau kedutaan besar) untuk merasakan langsung budaya kerja diplomasinya.",
+    "plain_en": "Immersing oneself directly inside an institution (like interning at the UN or an embassy) to observe diplomatic culture from the inside."
+  },
+  {
+    "term": "Path Dependence",
+    "category": "Theory & Epistemology",
+    "scholars": "Pierson (2000), Arthur (1989)",
+    "definition": "The concept that institutional decisions made early in history constrain subsequent choices, making it difficult or costly to alter course once a trajectory is chosen.",
+    "module": "012",
+    "chapter_slug": "_chapters/012-modern-world-history/010-why-history-matter",
+    "plain_id": "Kondisi di mana keputusan sejarah masa lalu 'mengunci' pilihan masa kini. Sekali suatu negara memilih arah sistem tertentu, berpindah haluan di kemudian hari akan sangat sulit dan mahal.",
+    "plain_en": "The idea that historical choices lock societies into specific institutional paths, making future changes difficult and costly."
+  },
+  {
+    "term": "Peacebuilding",
+    "category": "International Law",
+    "scholars": "Boutros Boutros-Ghali ('An Agenda for Peace' 1992)",
+    "definition": "Action undertaken to identify and support structures which tend to strengthen and solidify peace in order to avoid a relapse into conflict, addressing the socio-economic and institutional root causes of war.",
+    "module": "045",
+    "chapter_slug": "un-peacekeeping-generations",
+    "plain_id": "Upaya jangka panjang setelah perang usai untuk membangun kembali sekolah, rumah sakit, perekonomian, dan rekonsiliasi masyarakat agar benih-benih konflik tidak kambuh kembali.",
+    "plain_en": "Long-term assistance provided to countries emerging from conflict to restore institutions, heal social trauma, and build conditions for lasting peace."
+  },
+  {
+    "term": "Persona Non Grata",
+    "category": "International Law",
+    "scholars": "Vienna Convention on Diplomatic Relations 1961 Article 9",
+    "definition": "A formal diplomatic mechanism whereby a host state informs a sending state that an accredited diplomat is no longer welcome and must be recalled, without needing to justify its decision.",
+    "module": "032",
+    "chapter_slug": "intro-diplo",
+    "plain_id": "Pernyataan resmi bahwa seorang diplomat asing tidak lagi diterima di negara tuan rumah dan harus segera meninggalkan negara tersebut (biasanya akibat skandal mata-mata atau pelanggaran hukum).",
+    "plain_en": "A formal diplomatic status meaning an unacceptable individual; used by host governments to expel foreign diplomats."
+  },
+  {
+    "term": "Politik Bebas-Aktif",
+    "category": "Indonesian Diplomacy",
+    "scholars": "Mohammad Hatta (1948)",
+    "definition": "Indonesia's foundational foreign policy doctrine: 'Bebas' (independent from alignment with major power military blocs) and 'Aktif' (actively contributing to international peace and anti-colonial justice).",
+    "module": "013",
+    "chapter_slug": "basic-political",
+    "plain_id": "Prinsip diplomasi luar negeri Indonesia sejak Mohammad Hatta 1948: 'Bebas' dari ikatan aliansi blok kekuatan besar dunia, dan 'Aktif' menyumbang peran nyata bagi perdamaian dunia.",
+    "plain_en": "Indonesia's foundational foreign policy doctrine: remaining independent from great-power military blocs while actively taking initiatives to promote global peace."
+  },
+  {
+    "term": "Populism",
+    "category": "Diplomacy & FPA",
+    "scholars": "Mudde & Kaltwasser (Populism: A Very Short Introduction 2017), Müller (2016)",
+    "definition": "A political approach that juxtaposes the 'pure, virtuous people' against a 'corrupt, self-serving elite', often challenging internationalist institutions, free trade treaties, and multilateral cooperation.",
+    "module": "034",
+    "chapter_slug": "_chapters/034-Contemporary Issues In Global Politics/070-populism",
+    "plain_id": "Gaya politik yang membelah masyarakat menjadi dua: 'rakyat jelata yang jujur' melawan 'kaum elit penguasa yang korup'. Pemimpin populis sering menyalahkan orang asing, imigran, atau lembaga internasional atas masalah dalam negeri.",
+    "plain_en": "A political ideology framing politics as a struggle between the 'pure people' and the 'corrupt globalist elite', often resisting multilateral treaties."
+  },
+  {
+    "term": "Positivism",
+    "category": "Theory & Epistemology",
+    "scholars": "Auguste Comte, Karl Popper",
+    "definition": "An epistemology asserting that social science can discover objective causal laws governing human behavior through empirical observation, hypothesis falsification, and quantitative measurement.",
+    "module": "011",
+    "chapter_slug": "social-science-concept",
+    "plain_id": "Metode ilmiah yang meyakini bahwa fenomena politik internasional bisa diteliti secara objektif menggunakan angka, data statistik, dan hukum sebab-akibat layaknya ilmu pasti (ilmu alam).",
+    "plain_en": "The philosophy that human society can be studied like the natural sciences using objective data, testing, and universal causal laws."
+  },
+  {
+    "term": "Postcolonialism",
+    "category": "Theory & Epistemology",
+    "scholars": "Edward Said, Gayatri Spivak, Frantz Fanon",
+    "definition": "A critical perspective interrogating Eurocentric epistemologies and revealing how colonial power relations, racial hierarchies, and imperial legacies continue to structure the contemporary global order.",
+    "module": "023",
+    "chapter_slug": "postcolonial-approaches",
+    "plain_id": "Kajian yang menyoroti bagaimana warisan penjajahan masa lalu masih terus melanggengkan ketidakadilan politik, ekonomi, dan cara pandang Barat terhadap negara-negara berkembang di belahan bumi selatan.",
+    "plain_en": "An approach showing how historical colonial exploitation continues to shape modern global inequalities and biases against the Global South."
+  },
+  {
+    "term": "Prebisch-Singer Thesis",
+    "category": "Political Economy",
+    "scholars": "Raúl Prebisch, Hans Singer",
+    "definition": "The empirical observation that the terms of trade between primary agricultural/mineral commodities and manufactured capital goods systematically deteriorate over time against developing nations.",
+    "module": "043",
+    "chapter_slug": "study-of-development",
+    "plain_id": "Temuan ekonomi bahwa harga bahan mentah (hasil bumi/tambang negara berkembang) cenderung makin murah seiring waktu dibanding harga barang industri manufaktur (dari negara maju), sehingga negara miskin selalu rugi.",
+    "plain_en": "The economic observation that the price of primary commodities exported by developing nations declines over time relative to manufactured goods from wealthy nations."
+  },
+  {
+    "term": "Prisoner's Dilemma",
+    "category": "Theory & Epistemology",
+    "scholars": "Albert Tucker, Robert Axelrod",
+    "definition": "A fundamental game-theoretic model where two rational actors, unable to communicate or enforce contracts, find mutual defection to be the dominant Nash Equilibrium despite mutual cooperation yielding a Pareto-superior payoff.",
+    "module": "023",
+    "chapter_slug": "game-theory-ir",
+    "plain_id": "Teka-teki di mana dua pihak sebenarnya sama-sama untung jika bekerja sama, namun karena saling curiga dan takut dikhianati, mereka berdua memilih saling menjatuhkan sehingga hasilnya malah paling merugikan.",
+    "plain_en": "A classic game theory paradox where two players would benefit most from cooperating, but because they fear betrayal, both act selfishly and end up with a worse outcome."
+  },
+  {
+    "term": "Process Tracing",
+    "category": "Methods & Epistemology",
+    "scholars": "Bennett & Checkel (2015), Collier (2011)",
+    "definition": "A qualitative method that examines diagnostic pieces of evidence within a single case to unpack the step-by-step causal chain linking cause and effect.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/040-qualitative",
+    "plain_id": "Teknik kerja detektif dalam penelitian HI: melacak mata rantai peristiwa langkah demi langkah secara kronologis untuk membuktikan apakah keputusan A benar-benar yang menyebabkan terjadinya krisis B.",
+    "plain_en": "A forensic method tracing the step-by-step causal chain inside a case to prove exactly how an initial decision led to the final outcome."
+  },
+  {
+    "term": "Public Diplomacy",
+    "category": "Diplomacy & FPA",
+    "scholars": "Edward R. Murrow, Nicholas Cull",
+    "definition": "Government communications and cultural engagement targeted directly at foreign publics to shape public opinion, foster long-term goodwill, and build international understanding.",
+    "module": "032",
+    "chapter_slug": "public-diplomacy",
+    "plain_id": "Komunikasi langsung yang dilakukan suatu negara kepada masyarakat awam di negara lain (bukan ke pemerintahnya) melalui beasiswa, pertukaran pelajar, dan siaran budaya demi membangun simpati publik.",
+    "plain_en": "Government communications and cultural outreach aimed directly at the citizens of foreign countries to build goodwill and mutual understanding."
+  },
+  {
+    "term": "Qualitative Research",
+    "category": "Methods & Epistemology",
+    "scholars": "King, Keohane & Verba (1994), George & Bennett (2005)",
+    "definition": "A research strategy emphasizing non-numerical data such as texts, interviews, and historical archives to understand meanings, contexts, and causal mechanisms in international politics.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/040-qualitative",
+    "plain_id": "Metode penelitian yang fokus memahami alasan mendalam di balik suatu peristiwa (mengapa dan bagaimana), bukan menghitung angka. Caranya lewat wawancara, dokumen rahasia, atau analisis pidato para pemimpin.",
+    "plain_en": "Research focusing on non-numerical evidence—words, historical archives, and interviews—to understand why and how political events unfold."
+  },
+  {
+    "term": "Quantitative Research",
+    "category": "Methods & Epistemology",
+    "scholars": "Singer (Correlates of War 1963), Fearon (1995)",
+    "definition": "An empirical approach using statistical and mathematical models to analyze measurable numerical data across large sets of cases to test causal hypotheses.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/050-quantitative",
+    "plain_id": "Metode penelitian yang mengumpulkan data angka dan statistik dalam jumlah besar (seperti data anggaran militer ratusan negara selama 50 tahun) untuk membuktikan apakah ada pola sebab-akibat yang nyata.",
+    "plain_en": "An empirical approach using statistics and datasets across many countries to test hypotheses and discover mathematical patterns in world politics."
+  },
+  {
+    "term": "Rational Choice Theory",
+    "category": "Theory & Epistemology",
+    "scholars": "Bruce Bueno de Mesquita, James Morrow",
+    "definition": "A formal modeling paradigm assuming political actors have ordered preferences and select strategies calculated to maximize expected utility under institutional constraints.",
+    "module": "031",
+    "chapter_slug": "rational-choice",
+    "plain_id": "Pendekatan matematika dan logika yang mengasumsikan bahwa para pemimpin politik selalu bertindak rasional dengan menghitung untung-rugi secara cermat demi memaksimalkan hasil terbaik bagi kepentingan mereka.",
+    "plain_en": "A theoretical approach assuming political leaders act rationally by weighing costs and benefits to maximize their strategic interests under given constraints."
+  },
+  {
+    "term": "RCEP",
+    "category": "Political Economy",
+    "scholars": "ASEAN, China, Japan, Korea, Australia, New Zealand (2022)",
+    "definition": "Regional Comprehensive Economic Partnership: the world's largest mega-regional free trade agreement covering 30% of global population and GDP, harmonizing regional rules of origin across the Asia-Pacific.",
+    "module": "050",
+    "chapter_slug": "TPP-RCEP",
+    "plain_id": "Perjanjian Kemitraan Ekonomi Komprehensif Regional: pakta perdagangan bebas terbesar di dunia yang digagas ASEAN bersama Tiongkok, Jepang, Korsel, Australia, dan Selandia Baru, mencakup sepertiga populasi dan ekonomi bumi.",
+    "plain_en": "The Regional Comprehensive Economic Partnership: the world's largest free trade agreement, comprising the 10 ASEAN nations and 5 Indo-Pacific trading partners."
+  },
+  {
+    "term": "Reformasi (Indonesia 1998)",
+    "category": "Regionalism & Indonesia",
+    "scholars": "O'Donnell & Schmitter (1986), Mietzner (2009)",
+    "definition": "The democratic transition in Indonesia ignited in May 1998 following the collapse of Suharto's authoritarian New Order regime, leading to constitutional amendments, multi-party elections, and press freedom.",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/030-evolution-party",
+    "plain_id": "Gerakan perubahan besar pada Mei 1998 yang mengakhiri 32 tahun kekuasaan Orde Baru pimpinan Soeharto, membuka pintu kebebasan pers, pemilu multipartai yang demokratis, dan pembatasan masa jabatan presiden.",
+    "plain_en": "The 1998 political transition that ended Suharto's 32-year authoritarian New Order, ushering in multi-party democracy, freedom of speech, and institutional reform."
+  },
+  {
+    "term": "Relative Gains",
+    "category": "Theory & Epistemology",
+    "scholars": "Joseph Grieco, Kenneth Waltz",
+    "definition": "A realist perspective emphasizing how much a state gains in power or wealth in comparison to rivals ('Who will gain more?'), which frequently inhibits international cooperation.",
+    "module": "023",
+    "chapter_slug": "neorealism-structural-realism",
+    "plain_id": "Kekhawatiran negara bukan hanya pada 'apakah saya untung?', melainkan 'siapa yang untung LEBIH BANYAK daripada saya?'. Jika lawan untung lebih besar, kerja sama sering dibatalkan.",
+    "plain_en": "A realist concern where a state cares less about its own absolute gains and more about whether an adversary gains more power from cooperation, creating a future threat."
+  },
+  {
+    "term": "Responsibility to Protect (R2P)",
+    "category": "Security & Strategy",
+    "scholars": "Gareth Evans, Mohamed Sahnoun, ICISS (2001)",
+    "definition": "An international political commitment endorsed at the 2005 UN World Summit recognizing sovereign states' duty to protect populations from genocide, war crimes, ethnic cleansing, and crimes against humanity, with international community responsibility when states fail.",
+    "module": "042",
+    "chapter_slug": "humanitarian-intervention-r2p",
+    "plain_id": "Komitmen global bahwa jika suatu negara gagal melindungi rakyatnya sendiri dari genosida, kejahatan perang, atau pembersihan etnis, maka komunitas internasional berhak dan berkewajiban untuk turun tangan.",
+    "plain_en": "A global norm stating that if a government is unwilling or unable to protect its citizens from mass atrocities, the international community has a duty to intervene."
+  },
+  {
+    "term": "Revisionist State",
+    "category": "Theory & Epistemology",
+    "scholars": "E.H. Carr, Randall Schweller",
+    "definition": "A state dissatisfied with its current position, prestige, and territorial boundaries in the international system, actively seeking to alter the systemic status quo.",
+    "module": "023",
+    "chapter_slug": "realism-in-ir",
+    "plain_id": "Negara yang tidak puas dengan tatanan dunia yang ada saat ini dan bertekad mengubah batas wilayah, aturan hukum, atau pembagian kekuasaan global (kebalikan dari negara penjaga status quo).",
+    "plain_en": "A state that is deeply dissatisfied with the existing international order and actively seeks to overturn borders, power balances, or international rules."
+  },
+  {
+    "term": "Rome Statute",
+    "category": "International Law",
+    "scholars": "United Nations (1998)",
+    "definition": "The foundational multilateral treaty establishing the permanent International Criminal Court (ICC) at The Hague with jurisdiction over genocide, crimes against humanity, war crimes, and the crime of aggression.",
+    "module": "042",
+    "chapter_slug": "icc-dispute-settlement",
+    "plain_id": "Perjanjian internasional tahun 1998 yang mendirikan Mahkamah Pidana Internasional (ICC) di Den Haag untuk mengadili individu atas kejahatan genosida, kejahatan terhadap kemanusiaan, kejahatan perang, dan agresi.",
+    "plain_en": "The 1998 multilateral treaty establishing the permanent International Criminal Court (ICC) to prosecute individuals for the most serious international crimes."
+  },
+  {
+    "term": "Second-Strike Capability",
+    "category": "Security & Strategy",
+    "scholars": "Bernard Brodie, Thomas Schelling",
+    "definition": "A state's guaranteed ability to absorb a full-scale surprise nuclear first strike and still deliver a devastating, unacceptable retaliatory counter-strike (the cornerstone of MAD).",
+    "module": "022",
+    "chapter_slug": "nuclear-strategy",
+    "plain_id": "Kemampuan negara untuk tetap bisa membalas dengan serangan nuklir mematikan meskipun wilayahnya sudah terlebih dahulu dihantam bom nuklir lawan (biasanya berkat kapal selam nuklir tersembunyi).",
+    "plain_en": "A country's assured ability to absorb a surprise nuclear attack and still retaliate with devastating nuclear force (typically via submarines), guaranteeing deterrence."
+  },
+  {
+    "term": "Securitization",
+    "category": "Security & Strategy",
+    "scholars": "Barry Buzan, Ole Wæver, Jaap de Wilde (Copenhagen School)",
+    "definition": "A discursive speech act through which an actor frames an issue as an existential threat to a designated referent object, legitimizing emergency measures outside normal political procedures.",
+    "module": "022",
+    "chapter_slug": "securitization-theory",
+    "plain_id": "Proses ketika suatu isu biasa (seperti imigrasi atau perubahan iklim) dibingkai oleh elite politik sebagai 'ancaman luar biasa terhadap kelangsungan hidup bangsa', sehingga membenarkan penggunaan langkah-langkah darurat.",
+    "plain_en": "The political process where leaders frame an ordinary issue as an existential emergency to justify overriding normal democratic procedures and using emergency powers."
+  },
+  {
+    "term": "Security Community",
+    "category": "Security & Strategy",
+    "scholars": "Karl Deutsch (1957), Emanuel Adler, Michael Barnett",
+    "definition": "A group of sovereign states whose people and governments have developed a dependable expectation of peaceful change, ruling out the use of armed force against one another.",
+    "module": "022",
+    "chapter_slug": "security-community",
+    "plain_id": "Sekelompok negara (seperti sesama anggota ASEAN atau Uni Eropa) yang hubungan pertemanannya sudah begitu erat dan saling percaya sehingga perang antarsesama anggota menjadi hal yang mustahil dipikirkan.",
+    "plain_en": "A group of nations whose mutual trust and integrated institutions have grown so deep that war between them has become virtually unthinkable."
+  },
+  {
+    "term": "Security Dilemma",
+    "category": "Security & Strategy",
+    "scholars": "John Herz, Robert Jervis, Herbert Butterfield",
+    "definition": "A structural dynamic wherein one state's defensive efforts to enhance its security inadvertently make neighboring states feel less secure, prompting counter-measures that result in a mutual, heightened spiral of insecurity.",
+    "module": "022",
+    "chapter_slug": "realism-security",
+    "plain_id": "Situasi serba salah ketika satu negara memperkuat militernya murni untuk membela diri, namun tetangganya merasa terancam dan ikut memborong senjata, sehingga kedua negara justru semakin rawan perang.",
+    "plain_en": "A paradox where a nation builds up its military strictly for defense, but makes neighboring nations feel threatened, provoking an arms race that leaves all parties less secure."
+  },
+  {
+    "term": "Security Sector Reform (SSR)",
+    "category": "Indonesian Diplomacy",
+    "scholars": "UU TNI No. 34/2004, Reformasi 1998",
+    "definition": "The institutional transformation of national defense and police structures to ensure democratic civilian oversight, depoliticization of the armed forces, and human rights compliance.",
+    "module": "013",
+    "chapter_slug": "civil-military",
+    "plain_id": "Proses penataan kembali militer dan kepolisian di negara pasca-diktator (seperti Reformasi Indonesia 1998) agar militer keluar dari politik praktis dan tunduk di bawah kendali pengawasan pemerintah sipil yang demokratis.",
+    "plain_en": "The restructuring of a state's military, police, and intelligence services to ensure they operate under democratic civilian control and uphold human rights."
+  },
+  {
+    "term": "Shadow of the Future",
+    "category": "Theory & Epistemology",
+    "scholars": "Robert Axelrod, Robert Keohane",
+    "definition": "The expectation that players will interact repeatedly over time, which significantly increases the cost of short-term cheating and makes cooperation self-enforcing in iterated games.",
+    "module": "023",
+    "chapter_slug": "game-theory-ir",
+    "plain_id": "Konsep teori permainan di mana negara-negara memilih tidak berbuat curang hari ini karena mereka tahu mereka masih harus terus berurusan dan berdagang dengan pihak yang sama di masa depan.",
+    "plain_en": "The game-theoretic insight that actors cooperate today because they expect repeated interactions in the future, knowing that cheating will trigger punishment later."
+  },
+  {
+    "term": "Single Market (European Integration)",
+    "category": "Political Economy",
+    "scholars": "Moravcsik (The Choice for Europe 1998), Haas (1958)",
+    "definition": "A unified economic area within the European Union characterized by the free movement of goods, services, capital, and labor (the 'Four Freedoms') with zero internal tariffs and common external regulation.",
+    "module": "046",
+    "chapter_slug": "_chapters/046-global-economic-architecture/050-european-economic",
+    "plain_id": "Kawasan pasar terpadu Uni Eropa di mana barang, jasa, uang, dan tenaga kerja bisa berpindah antar negara anggota sebebas di dalam satu negara tanpa bea cukai atau paspor rumit ('Empat Kebebasan').",
+    "plain_en": "The EU's unified economic territory allowing goods, services, people, and money to move freely across member borders without tariffs or border checks."
+  },
+  {
+    "term": "Social Constructivism",
+    "category": "Theory & Epistemology",
+    "scholars": "Alexander Wendt, Nicholas Onuf, Martha Finnemore",
+    "definition": "A social theory of world politics emphasizing that fundamental aspects of international relations are socially constructed through shared ideas, intersubjective norms, and collective identities rather than material forces alone.",
+    "module": "023",
+    "chapter_slug": "constructivism-in-ir",
+    "plain_id": "Pandangan bahwa hubungan antarnegara dibentuk oleh ide, identitas, budaya, dan persepsi sosial, bukan hanya kalkulasi kekuatan senjata. Contoh: senjata nuklir Inggris tidak membuat AS takut karena mereka saling memandang sebagai sahabat.",
+    "plain_en": "The idea that world politics is shaped by shared ideas, identities, and social relationships rather than just guns and money. (e.g., 500 British nuclear weapons don't terrify the US, but 5 North Korean ones do)."
+  },
+  {
+    "term": "Soft Power",
+    "category": "Diplomacy & FPA",
+    "scholars": "Joseph Nye (1990)",
+    "definition": "The ability to influence the preferences and behavior of other states through co-optation and attraction—derived from a country's culture, political values, and perceived foreign policy legitimacy—rather than coercion or economic inducements.",
+    "module": "032",
+    "chapter_slug": "soft-power-diplomacy",
+    "plain_id": "Kemampuan suatu negara mempengaruhi negara lain bukan lewat ancaman senjata atau suap uang, melainkan lewat daya tarik budaya, film, musik, nilai demokrasi, dan reputasi moral yang memikat.",
+    "plain_en": "The ability to attract and co-opt rather than coerce, shaping preferences through cultural appeal, democratic values, and positive reputation."
+  },
+  {
+    "term": "Sovereign Wealth Fund (SWF)",
+    "category": "Political Economy",
+    "scholars": "IMF Santiago Principles (2008)",
+    "definition": "A state-owned investment fund composed of foreign exchange reserves, commodity revenues, or fiscal surpluses, invested globally in stocks, bonds, and real estate (e.g., Norway GPFG, GIC Singapore, INA Indonesia).",
+    "module": "046",
+    "chapter_slug": "sovereign-wealth-funds",
+    "plain_id": "Dana investasi milik negara yang dikumpulkan dari surplus devisa atau penjualan komoditas (seperti minyak) untuk diinvestasikan ke aset-aset bernilai tinggi di seluruh dunia demi kemakmuran generasi mendatang.",
+    "plain_en": "A state-owned investment fund that invests public wealth from budget surpluses or resource revenues in global financial assets for future generations."
+  },
+  {
+    "term": "Special Drawing Right (SDR)",
+    "category": "Political Economy",
+    "scholars": "International Monetary Fund (1969)",
+    "definition": "An international supplementary reserve asset created by the IMF whose value is defined by a weighted basket of five major currencies: US Dollar, Euro, Chinese Renminbi, Japanese Yen, and British Pound.",
+    "module": "046",
+    "chapter_slug": "imf-governance",
+    "plain_id": "Aset cadangan devisa buatan IMF yang nilainya dihitung dari keranjang lima mata uang utama dunia (Dolar AS, Euro, Yuan Tiongkok, Yen Jepang, dan Poundsterling Inggris) untuk membantu negara yang kekurangan likuiditas.",
+    "plain_en": "An international reserve asset created by the IMF based on a basket of five major currencies to supplement member countries' official foreign exchange reserves."
+  },
+  {
+    "term": "State Immunity",
+    "category": "International Law",
+    "scholars": "UN Convention on Jurisdictional Immunities (2004)",
+    "definition": "A core customary rule of international law providing that a sovereign state and its government property are shielded from the jurisdiction and lawsuits of foreign municipal courts (par in parem non habet imperium).",
+    "module": "042",
+    "chapter_slug": "state-immunity-jurisdiction",
+    "plain_id": "Kekebalan kedaulatan negara di mana pemerintah suatu negara berdaulat tidak bisa dituntut atau diseret ke pengadilan dalam negeri milik negara lain tanpa izinnya.",
+    "plain_en": "The legal principle that a sovereign state cannot be sued or brought before the domestic courts of another state without its consent."
+  },
+  {
+    "term": "Status Quo State",
+    "category": "Theory & Epistemology",
+    "scholars": "Hans Morgenthau, Randall Schweller",
+    "definition": "A state satisfied with the existing international distribution of power and territorial arrangements, seeking to defend and preserve established systemic rules.",
+    "module": "023",
+    "chapter_slug": "realism-in-ir",
+    "plain_id": "Negara yang merasa puas dan diuntungkan oleh tatanan dunia saat ini, sehingga berupaya keras mempertahankan aturan hukum dan pembagian kekuasaan yang sedang berlaku.",
+    "plain_en": "A state satisfied with the existing international distribution of power and rules, working to preserve stability and prevent systemic revision."
+  },
+  {
+    "term": "Strategic Chokepoint",
+    "category": "Security & Strategy",
+    "scholars": "Alfred Thayer Mahan, Julian Corbett",
+    "definition": "A congested geographic maritime passage (such as the Strait of Malacca, Strait of Hormuz, or Suez Canal) crucial for international commerce whose disruption paralyzes global supply chains.",
+    "module": "034",
+    "chapter_slug": "maritime-security",
+    "plain_id": "Jalur laut sempit yang sangat vital bagi perdagangan dunia atau kapal perang (seperti Selat Malaka, Terusan Suez, dan Selat Hormuz); jika tersumbat, ekonomi global bisa lumpuh seketika.",
+    "plain_en": "A narrow waterway essential for international maritime trade and military transit (like the Strait of Malacca or Suez Canal) that is vulnerable to blockade."
+  },
+  {
+    "term": "Strategic Culture",
+    "category": "Security & Strategy",
+    "scholars": "Jack Snyder, Colin Gray, Alastair Iain Johnston",
+    "definition": "An integrated system of symbols, historical narratives, and habitual predispositions that conditions a society's perceptions of threat and strategic choices regarding the use of force.",
+    "module": "022",
+    "chapter_slug": "strategic-culture",
+    "plain_id": "Kebiasaan, memori sejarah, dan nilai-nilai budaya turun-temurun suatu bangsa yang membentuk cara pandang militer dan para pemimpinnya dalam mengambil keputusan perang atau damai.",
+    "plain_en": "A nation's shared historical experiences, beliefs, and values that shape how its leaders and military think about the use of force."
+  },
+  {
+    "term": "Structural Adjustment Program (SAP)",
+    "category": "Political Economy",
+    "scholars": "Stiglitz (Globalization and Its Discontents 2002), Williamson (1990)",
+    "definition": "Economic policy conditionalities imposed by the IMF and World Bank on borrowing developing countries, mandating privatization, fiscal austerity, trade liberalization, and currency devaluation.",
+    "module": "021",
+    "chapter_slug": "_chapters/021-international-political-economy/095-neoliberalism-ipe",
+    "plain_id": "Paket syarat pinjaman ketat dari IMF/Bank Dunia yang mewajibkan negara peminjam memotong subsidi rakyat, memangkas anggaran belanja, dan membuka pasar untuk investasi asing agar utang bisa dibayar.",
+    "plain_en": "Tough loan conditions imposed by the IMF/World Bank forcing borrowing nations to cut social spending, privatize state assets, and open markets."
+  },
+  {
+    "term": "Structural Realism (Neorealism)",
+    "category": "Theory & Epistemology",
+    "scholars": "Kenneth Waltz, John Mearsheimer",
+    "definition": "A systemic theory asserting that the anarchic structure of the international system, rather than human nature, compels states to compete for power and prioritize survival.",
+    "module": "023",
+    "chapter_slug": "neorealism-structural-realism",
+    "plain_id": "Pandangan bahwa negara saling curiga dan bersaing bukan karena manusia jahat, melainkan karena sistem dunia tidak punya pemimpin (anarki), sehingga setiap negara terpaksa mementingkan pertahanan diri demi bertahan hidup.",
+    "plain_en": "The theory that states compete and fear each other not because humans are evil, but because the leaderless structure of world politics (anarchy) forces them to focus on self-preservation."
+  },
+  {
+    "term": "Subject of International Law",
+    "category": "International Law",
+    "scholars": "Reparation for Injuries Case (ICJ 1949), Shaw (2021)",
+    "definition": "An entity possessing international legal personality, capable of holding rights and duties under international law and having the capacity to bring international legal claims.",
+    "module": "042",
+    "chapter_slug": "_chapters/042-international-law-issues-and-international-dispute-settlement/030-subject-inter-law",
+    "plain_id": "Pihak yang diakui secara sah memiliki hak dan kewajiban di mata hukum internasional (contoh utamanya: negara berdaulat, organisasi internasional seperti PBB, dan Tahta Suci Vatikan).",
+    "plain_en": "An entity (such as a sovereign state or international organization) with legal standing to hold rights and make legal claims under international law."
+  },
+  {
+    "term": "Territorial Sea",
+    "category": "International Law",
+    "scholars": "UNCLOS 1982 Article 3",
+    "definition": "A maritime zone extending up to 12 nautical miles from a coastal state's baseline, over which the state exercises full territorial sovereignty subject only to the right of innocent passage for foreign vessels.",
+    "module": "042",
+    "chapter_slug": "law-of-the-sea",
+    "plain_id": "Wilayah perairan laut selebar hingga 12 mil laut dari garis pantai di mana negara pantai memiliki kedaulatan penuh, termasuk atas dasar laut, air, dan ruang udara di atasnya.",
+    "plain_en": "A belt of coastal waters extending up to 12 nautical miles from a coastal baseline, over which the state exercises sovereign territorial jurisdiction."
+  },
+  {
+    "term": "Track II Diplomacy",
+    "category": "Diplomacy & FPA",
+    "scholars": "Joseph Montville (1981)",
+    "definition": "Unofficial, non-governmental, and informal dialogue between non-state actors (academics, retired officials, civil society leaders) designed to develop creative ideas, build mutual trust, and resolve conflicts.",
+    "module": "032",
+    "chapter_slug": "track-two-diplomacy",
+    "plain_id": "Diplomasi informal jalur kedua yang dijalankan oleh para akademisi, LSM, atau mantan pejabat tanpa ikatan resmi pemerintah untuk mencari solusi kreatif atas konflik yang macet di jalur resmi.",
+    "plain_en": "Unofficial, informal dialogue conducted by academics, non-governmental figures, and retired diplomats to explore creative solutions to stalled disputes."
+  },
+  {
+    "term": "Transnational Advocacy Network (TAN)",
+    "category": "Theory & Epistemology",
+    "scholars": "Margaret Keck, Kathryn Sikkink (1998)",
+    "definition": "Relevant actors working internationally on an issue who are bound together by shared values, dense information exchanges, and common discourses, leveraging the 'boomerang pattern' to press domestic governments.",
+    "module": "010",
+    "chapter_slug": "non-state-actors-ir",
+    "plain_id": "Jaringan lintas negara yang terdiri dari aktivis, LSM, media, dan akademisi yang bekerja sama melintasi batas negara untuk mendesak perubahan norma hak asasi manusia atau lingkungan hidup.",
+    "plain_en": "Networks of activists, NGOs, and researchers who operate across borders to promote human rights, environmental norms, and policy change."
+  },
+  {
+    "term": "Transnational Organized Crime (TOC)",
+    "category": "Security & Strategy",
+    "scholars": "Shelley (Dirty Entanglements 2014), Williams (1994)",
+    "definition": "Self-perpetuating criminal associations operating across national borders, using violence, corruption, and illicit commercial supply chains (e.g., narcotics, arms, human trafficking) for economic gain.",
+    "module": "022",
+    "chapter_slug": "_chapters/022-introduction-to-security-studies/070-crime-terrorism-insurgency",
+    "plain_id": "Jaringan sindikat kejahatan yang beroperasi menembus batas-batas negara (seperti perdagangan narkoba internasional, penyelundupan manusia, atau pencucian uang) demi meraup keuntungan finansial raksasa.",
+    "plain_en": "Cross-border illicit crime networks (drug cartels, human trafficking, arms smuggling) exploiting globalization for financial profit."
+  },
+  {
+    "term": "Treaty of Amity and Cooperation (TAC)",
+    "category": "Regionalism & ASEAN",
+    "scholars": "ASEAN Bali Concord I (1976)",
+    "definition": "A foundational regional peace treaty legally binding signatories to mutual respect for sovereignty, non-interference, peaceful dispute settlement, and renunciation of the threat or use of force in Southeast Asia.",
+    "module": "044",
+    "chapter_slug": "zopfan-treaty-amity",
+    "plain_id": "Traktat persahabatan 1976 yang menjadi janji suci seluruh negara Asia Tenggara dan mitra luarnya untuk saling menghormati kemerdekaan dan tidak saling menyerang.",
+    "plain_en": "The foundational 1976 peace treaty binding ASEAN countries and external partners to peaceful dispute settlement, mutual respect, and non-aggression."
+  },
+  {
+    "term": "Triangulation",
+    "category": "Methods & Epistemology",
+    "scholars": "Denzin (1978), Patton (2002)",
+    "definition": "The practice of combining multiple independent methods, data sources, or theoretical perspectives to verify research findings and minimize investigative bias.",
+    "module": "031",
+    "chapter_slug": "_chapters/031-international-relations-research-method/090-survey",
+    "plain_id": "Teknik cek-silang kebenaran data dari beberapa sudut berbeda (misalnya mencocokkan dokumen resmi, wawancara diplomat, dan liputan media) agar analisis tidak mudah tertipu oleh satu sumber saja.",
+    "plain_en": "Cross-checking facts from multiple independent sources (documents, interviews, statistics) to ensure findings are bulletproof and unbiased."
+  },
+  {
+    "term": "Trias Politica",
+    "category": "Regionalism & Indonesia",
+    "scholars": "Montesquieu (The Spirit of the Laws 1748)",
+    "definition": "The constitutional doctrine separating state power into three independent branches—executive, legislative, and judicial—to prevent tyranny through a system of mutual checks and balances.",
+    "module": "013",
+    "chapter_slug": "_chapters/013-indonesia-political-perspective/020-political-institution",
+    "plain_id": "Prinsip pemisahan kekuasaan negara menjadi 3 cabang independen: Eksekutif (Presiden yang menjalankan undang-undang), Legislatif (DPR yang membuat undang-undang), dan Yudikatif (Mahkamah Agung/MK yang mengadili pelanggaran), agar tidak ada penguasa yang bertindak sewenang-wenang.",
+    "plain_en": "The separation of government into executive, legislative, and judicial branches to safeguard liberty through checks and balances."
+  },
+  {
+    "term": "Triffin Dilemma",
+    "category": "Political Economy",
+    "scholars": "Robert Triffin",
+    "definition": "The economic contradiction wherein a country whose national currency serves as the primary global reserve asset must run continuous balance-of-payments deficits to supply world liquidity, which over time erodes confidence in the currency.",
+    "module": "021",
+    "chapter_slug": "monetary-system",
+    "plain_id": "Dilema di mana negara yang mata uangnya dipakai sebagai cadangan dunia (seperti Dolar AS) terpaksa terus mencetak uang dan mengalami defisit demi mencukupi kebutuhan dunia, namun hal itu lama-lama merusak nilai mata uangnya sendiri.",
+    "plain_en": "The paradox where the country supplying the world's primary reserve currency (the US) must run chronic deficits to meet global liquidity needs, which eventually undermines confidence in that currency."
+  },
+  {
+    "term": "TRIPS Agreement",
+    "category": "Political Economy",
+    "scholars": "WTO (1994)",
+    "definition": "Trade-Related Aspects of Intellectual Property Rights: a comprehensive multilateral legal agreement establishing minimum standards for patents, copyrights, trademarks, and trade secrets.",
+    "module": "050",
+    "chapter_slug": "trips-wto-diplomacy",
+    "plain_id": "Perjanjian WTO yang menetapkan standar perlindungan hukum hak kekayaan intelektual global, termasuk paten obat-obatan, hak cipta software, dan merek dagang.",
+    "plain_en": "The WTO agreement setting minimum global standards for the legal protection and enforcement of intellectual property rights, including patents and copyrights."
+  },
+  {
+    "term": "Two-Level Games",
+    "category": "Diplomacy & FPA",
+    "scholars": "Robert Putnam (1988)",
+    "definition": "A conceptual model analyzing international bargaining as simultaneously operating at Level I (international negotiations among diplomats) and Level II (domestic political bargaining required for legislative ratification).",
+    "module": "033",
+    "chapter_slug": "domestic-politics-fpdm",
+    "plain_id": "Teori Robert Putnam bahwa dalam diplomasi internasional, seorang pemimpin harus bermain di dua papan catur sekaligus: bernegosiasi dengan negara lain di tingkat internasional dan membujuk parlemen/rakyat di dalam negerinya sendiri.",
+    "plain_en": "Robert Putnam's model showing that negotiators must simultaneously bargain with foreign counterparts internationally and persuade their domestic voters and legislatures."
+  },
+  {
+    "term": "Unipolarity",
+    "category": "Theory & Epistemology",
+    "scholars": "William Wohlforth, Nuno Monteiro",
+    "definition": "A systemic structure wherein a single state possesses an overwhelming preponderance of military, economic, and institutional power with no peer competitor (the post-1991 US 'unipolar moment').",
+    "module": "010",
+    "chapter_slug": "the-international-system",
+    "plain_id": "Sistem dunia di mana hanya ada satu negara adidaya tunggal yang tidak tertandingi kekuatan militer dan ekonominya di seluruh bumi (seperti Amerika Serikat pasca runtuhnya Uni Soviet dekade 1990-an).",
+    "plain_en": "An international system dominated by a single preeminent superpower whose power vastly exceeds that of any other state."
+  },
+  {
+    "term": "Universal Jurisdiction",
+    "category": "International Law",
+    "scholars": "Rome Statute, Geneva Conventions",
+    "definition": "A legal principle allowing national courts of any state to prosecute individuals accused of international crimes of universal concern (genocide, piracy, war crimes) regardless of where the crime occurred or the nationality of the perpetrator.",
+    "module": "042",
+    "chapter_slug": "international-criminal-law",
+    "plain_id": "Kewenangan pengadilan di negara mana pun untuk mengadili pelaku kejahatan kemanusiaan terberat (seperti genosida atau penyiksaan), di mana pun kejahatan itu terjadi dan apa pun kewarganegaraan pelakunya.",
+    "plain_en": "A legal principle allowing national courts to prosecute perpetrators of heinous international crimes (like genocide) regardless of where the crime occurred or who committed it."
+  },
+  {
+    "term": "Washington Consensus",
+    "category": "Political Economy",
+    "scholars": "John Williamson (1989)",
+    "definition": "A standard set of ten neoliberal policy prescriptions promoted by the IMF, World Bank, and US Treasury for developing nations, emphasizing fiscal discipline, privatization, trade liberalization, and deregulation.",
+    "module": "043",
+    "chapter_slug": "washington-consensus",
+    "plain_id": "Paket resep ekonomi pasar bebas dari IMF dan Bank Dunia untuk negara berkembang yang mengalami krisis, biasanya berupa pemotongan anggaran belanja publik, privatisasi BUMN, dan pembukaan keran investasi asing.",
+    "plain_en": "A standard package of free-market policies advocated by the IMF and World Bank for developing economies, emphasizing privatization, deregulation, and fiscal austerity."
+  },
+  {
+    "term": "Wawasan Nusantara",
+    "category": "Indonesian Diplomacy",
+    "scholars": "Mochtar Kusumaatmadja, Djuanda Kartawidjaja",
+    "definition": "Indonesia's geopolitical archipelagic doctrine conceiving the nation's land, inland seas, territorial waters, and airspace as an integrated, indivisible socio-political, economic, and defense entity.",
+    "module": "013",
+    "chapter_slug": "basic-political",
+    "plain_id": "Doktrin geopolitik Indonesia yang memandang seluruh daratan, kepulauan, dan perairan laut di antara pulau-pulau sebagai satu kesatuan wilayah kedaulatan, politik, ekonomi, dan pertahanan yang tidak terpisahkan.",
+    "plain_en": "Indonesia's overarching archipelagic geopolitical vision conceiving its land, islands, and connecting seas as one indivisible sovereign whole."
+  },
+  {
+    "term": "World-Systems Theory",
+    "category": "Political Economy",
+    "scholars": "Immanuel Wallerstein",
+    "definition": "A macro-historical perspective analyzing global capitalism as an integrated world-economy divided into an exploitative Core, a raw-material Periphery, and an intermediate stabilizing Semi-Periphery.",
+    "module": "021",
+    "chapter_slug": "marxism-world-systems",
+    "plain_id": "Pandangan Immanuel Wallerstein bahwa dunia terbagi menjadi tiga lapis ekonomi: Negara Pusat (kaya dan menguasai teknologi canggih), Negara Semi-Pinggiran (manufaktur menengah), dan Negara Pinggiran (pemasok buruh murah dan bahan baku).",
+    "plain_en": "Wallerstein's model dividing the global economy into wealthy core states, exploiting semi-periphery industrial states, and resource-producing periphery nations."
+  },
+  {
+    "term": "ZOPFAN",
+    "category": "Regionalism & ASEAN",
+    "scholars": "Kuala Lumpur Declaration (1971)",
+    "definition": "Zone of Peace, Freedom and Neutrality: an ASEAN initiative committing member states to keep Southeast Asia free from external great power interference, containment, and military rivalry.",
+    "module": "044",
+    "chapter_slug": "zopfan-treaty-amity",
+    "plain_id": "Deklarasi 1971 oleh ASEAN untuk menjadikan Asia Tenggara sebagai 'Zona Perdamaian, Kebebasan, dan Netralitas' yang bebas dari campur tangan pangkalan militer negara-negara adidaya.",
+    "plain_en": "The 1971 ASEAN declaration committing member states to keep Southeast Asia a Zone of Peace, Freedom, and Neutrality, free from interference by external superpowers."
+  }
+]

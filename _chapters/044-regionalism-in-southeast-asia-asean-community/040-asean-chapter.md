@@ -1,8 +1,8 @@
 ---
-title: Understanding ASEAN Chapter
+title: Understanding the ASEAN Charter
 slug: asean-chapter
 abstract: This chapter provides an overview of the ASEAN Charter, its rationale, and the process of its creation, highlighting its significance in institutionalizing ASEAN and codifying member state commitments.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "For forty years, ASEAN operated as a gentleman's club governed by unwritten norms and loose diplomatic handshakes. That informal era came to an end in 2007 with the historic ASEAN Charter, which endowed the association with formal international legal personality and a codifying constitution. Yet this transformation created an enduring institutional dilemma: while establishing human rights bodies (AICHR) and binding dispute frameworks to become a modern rules-based bloc, the Charter preserved the inviolable sanctity of non-interference and unanimous consensus, leaving enforcement permanently reliant on diplomatic persuasion."
 ---
 
 ## Introduction
@@ -123,7 +123,6 @@ Some key outcomes and significance of the ASEAN Charter include:
 
 In summary, the ASEAN Charter was a major milestone that reinvigorated regional integration efforts. By providing a rules-based foundation, it enhanced ASEAN's capacity to achieve its goals and strengthened its position as the central driving force in Southeast Asia. Moving forward, effective implementation of the Charter will be key to ensuring its principles translate into tangible results for the people of ASEAN.
 
----
 
 ---
 

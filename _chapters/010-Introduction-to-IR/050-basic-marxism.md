@@ -2,33 +2,29 @@
 title: Basic Explanation of Marxism in IR
 slug: basic-marxism
 abstract: The introduction of Marxism in International Relations 
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Marxists look beneath flags, national anthems, and treaties to ask one blunt question: Who owns the wealth? World politics isn't driven by national security, but by global capitalism. Rich 'Core' nations design the rules of the world economy to drain cheap raw materials and labor from poor 'Periphery' nations, turning international politics into an engine of global inequality where wars are fought to defend corporate investments."
 ---
 
 
 <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/3K0UU3YB0UA?si=z1yqzvJikCGuosIO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
-Notes: I suggest to watch this video first before reading the topic 😁
+<p class="text-muted text-center" style="font-size: 0.88rem; margin-top: 8px;"><em>Introductory Lecture: Marxist Perspectives and Socioeconomic Structures in World Politics.</em></p>
 
-<br>
 <br>
 
 ## Introduction to Analyzing World Politics through a Marxist Lens
 
-**Marxism** provides a comprehensive framework for analyzing **world** politics and global dynamics through a critical socioeconomic perspective. At its **core**, Marxism contends that **economic** factors are the primary driver of societal development and that class conflict stemming from unequal economic relationships is the main source of historical change.
+**Marxism** provides a comprehensive structural framework for analyzing world politics and global dynamics through a critical socioeconomic and historical-materialist perspective. Rejecting the realist premise that states are unitary, autonomous actors responding solely to external anarchy, Marxism contends that political actions reflect underlying modes of production and that global order is fundamentally structured by class exploitation and capital accumulation.
 
 Some key tenets of Marxism as applied to world politics include:
 
-- **Historical materialism** - The idea that economic development and progression through different modes of production propel societal change. The base (economics) shapes the superstructure (politics, law, culture).
-- **Class struggle** - Conflict between social classes, especially workers and capitalists, drives political and historical outcomes as each class pursues its interests.
-- **Capitalist exploitation** - Workers are exploited through capitalism's drive to maximize profits and accumulate wealth. The bourgeois ruling class benefits at the expense of the proletariat.
-- **Revolution** - Fundamental societal change is achieved through the revolutionary overthrow of the capitalist system and its replacement with socialism and eventually communism.
-
-**Marxist** analysis examines global economic systems, power dynamics between classes and states, and pathways to revolutionary change. It provides a moral imperative to analysts to not just study the world but to change it.
-
+- **Historical materialism** - The principle that societal evolution and international structures are driven by changes in the material base (economic production and distribution), which in turn shape the ideological and political superstructure (laws, treaties, state institutions, and military power).
+- **Class struggle** - The structural conflict between capital-owning classes (bourgeoisie) and wage-earning laborers (proletariat) operating across and within national boundaries.
+- **Capitalist exploitation and uneven development** - Global capitalism expands unevenly, subordinating developing regions into suppliers of cheap labor and raw materials for advanced industrialized centers.
+- **Emancipation and transformation** - Critical analysis serves not merely to explain or stabilize the existing global order, but to identify structural contradictions that enable revolutionary transformation toward an egalitarian society.
 
 ## Historical Materialism
 
-The materialist conception of history, a cornerstone of Marxist thought, asserts that historical processes reflect the economic development of society. According to this view, the continuous tension between the means of production and relations of production is the primary driver of societal transformation. As technological advancements lead to new means of production, the relations of production must adapt to accommodate these changes.
+The materialist conception of history forms the ontological foundation of Marxist analysis, asserting that historical progression reflects the evolving material relations of production. According to Karl Marx, the dialectical tension between the development of productive forces (technology, tools, labor capacity) and existing relations of production (property ownership, legal contracts) is the ultimate engine of systemic transformation. When existing social structures constrain the development of new productive forces, a period of social revolution occurs.
 
 Marx outlined his base-superstructure model to delineate the relationship between the economic base of society and the cultural, political, and legal superstructure. The base refers to the means of production and relations of production - the economic structure of society. The superstructure encompasses culture, institutions, political systems, roles, rituals, and state. Changes in the economic base lead to corresponding shifts in the superstructure, demonstrating how the realms of economy and society are intertwined.
 
@@ -82,48 +78,39 @@ By grasping the economic structure alone, Marxism failed to change society. But 
 
 ## Cox's Theory Critiques Objectivity and Capitalism
 
-Robert W. Cox's writings on critical theory represent an influential branch of neo-Marxist thought. Cox contends that theories of social science cannot be separated from the historical contexts in which they emerge. Facts and values are intrinsically linked, with prevailing power structures shaping notions of truth and objectivity.
+## Cox's Critical Theory and the Critique of Problem-Solving Hegemony
 
-Cox argues against the positivist view that social science theories simply uncover objective truths. Instead, he asserts that theories inherently contain normative assumptions reflective of the interests of dominant groups in society. The prevailing concepts of rationality and objectivity tend to reinforce the existing capitalist world order.
+The Canadian scholar Robert W. Cox (1981) introduced a decisive epistemological breakthrough to international political economy by challenging the value-free pretenses of orthodox positivism. Cox famously observed:
 
-In Cox's view, the capitalist world order relies on hegemony, or ideological consent, to sustain its dominance. Material capabilities alone are insufficient to preserve stability. Hegemony involves securing consent through cultural and ideological means. It establishes parameters for acceptable political discourse and policies.
+> *"Theory is always for someone and for some purpose. All theories have a perspective. Perspectives derive from a position in time and space, specifically social and political time and space."*
 
-Cox posits that the capitalist world order is inherently prone to crisis and instability due to the contradictory pressures of production and accumulation. Hegemonic powers continually need to manage these crises and reinvent hegemonic structures. This creates openings for emerging forces to challenge the existing order.
+Cox delineated two distinct orientations in social and international theory:
+1. **Problem-Solving Theory**: Takes the prevailing social, institutional, and power relationships as given framework and aims to make these relationships work smoothly by dealing effectively with particular sources of trouble (e.g., Neorealism stabilizing great-power balance).
+2. **Critical Theory**: Does not take existing power relations for granted, but calls them into question by asking how the current order came about, what historical forces sustain it, and how it may be transformed.
+
+In Cox's historical structures framework, global order is sustained through an interaction of three categories of forces: **material capabilities** (productive and destructive potentials), **ideas** (inter-subjective meanings and collective images of world order), and **institutions** (mechanisms that formalize and stabilize hegemonic consensus). Rather than relying solely on coercive military dominance, an international hegemony—such as Pax Britannica in the 19th century or Pax Americana in the post-WWII era—secures the consent of subordinate states and domestic classes through international organizations and universalized neoliberal norms.
 
 ## Critical Theory
 
-Critical theory emerged in the 1930s as a school of thought that sought to reexamine traditional Marxist propositions. While critical theorists maintained a similar goal of identifying the conditions to bring about a just society, they parted ways with orthodox Marxism in several respects.
-
-Most notably, critical theorists questioned Marx's contention that the working class would inevitably bring about revolutionary change. With the working class increasingly integrated into capitalist societies, critical theorists argued that the proletariat no longer uniformly held revolutionary potential. This led to a broader questioning of the transformative power of the working class central to Marxist thought.
-
-Critical theorists also diverged from Marxism in their approach to defining 'emancipation.' Rather than focusing narrowly on economic conditions, they explored emancipation across multiple realms of society including politics, culture and psychology. Their goal was to develop a notion of emancipation relevant to contemporary society.
-
-Jürgen Habermas made major contributions to critical theory by examining the role of communication in society. He argued that domination manifests in distorted communication, whereas undistorted communication provides the means to transform society. Habermas thus connected critical theory back to everyday language, interaction and understanding between people. His work remains influential for highlighting communication as vital to developing the consensus needed to reshape society.
+Critical theory in IR originates from the Frankfurt School (Max Horkheimer, Theodor Adorno, and later Jürgen Habermas), which sought to emancipate human beings from structural subjugation. While critical theorists maintained the classical Marxist objective of human emancipation, they parted ways with orthodox historical determinism in several key respects:
+- **Critique of Working-Class Inevitability**: Critical theorists observed that advanced welfare states, consumer culture, and mass media had integrated the Western industrial proletariat into capitalist stability, demonstrating that revolution was not an automatic economic inevitability.
+- **Broadening Emancipation**: Rather than defining liberation exclusively in economic terms, critical theory investigates cultural, communicative, and psychological domination.
+- **Communicative Action**: Jürgen Habermas highlighted that genuine emancipation requires undistorted communication and ideal speech situations, wherein legitimacy is generated through inclusive dialogue rather than coercive ideological hegemony.
 
 ## New Marxism
 
-New Marxism refers to the wave of Marxist-inspired thought that emerged in the late 20th century and represented a return to the original ideas of Marx. New Marxists sought to move away from the rigid orthodoxy of previous Marxist schools and reconnect with the open-ended and flexible mode of analysis found in Marx's own writings.
+New Marxism refers to the revitalization of Marxist political economy in the late 20th and early 21st centuries. Rejecting rigid Soviet-style economic determinism, New Marxists returned to the flexible, historically grounded categories of Marx's *Capital*.
 
-Central to the project of New Marxism was a critique of globalization theory. Whereas mainstream globalization theorists treated capitalist globalization as anobjective, inevitable process driven by technology, New Marxists rejected this technologically determinist view. They argued that globalization must be analyzed in terms of the underlying social relations of production, not as an abstract process removed from human agency.
+A core contribution of New Marxism is the critique of mainstream globalization discourse. Whereas orthodox economic globalization treats open financial flows and deregulation as an objective, inevitable process driven by technology, New Marxists demonstrate that globalization is a deliberate political project designed to dismantle organized labor and restore capitalist profit rates.
 
-One prominent New Marxist, Ellen Meiksins Wood, contended that each stage of capitalism has its own distinct unity of relations of production and made the case for analyzing globalization in this fashion. Other New Marxists like Robert Brenner carried out comparative analyses of property relations across history to trace the origins of capitalism. By returning to the categories found in Capital and earlier works, New Marxists aimed to theorize globalization using original Marxist concepts rather than succumbing to the prevailing globalization discourse.
-
-The New Marxism project thus represented a revitalization of Marxist social theory by shedding dogmatic rigidities and recovering the creative, questioning spirit of Marx's work. It reasserted historical materialism against theories that naturalized capitalist globalization and worked to develop an analysis of contemporary capitalism grounded in the Marxist tradition.
+Prominent scholars like Ellen Meiksins Wood (1995) emphasized the historical specificity of capitalism, demonstrating that market imperatives of competitiveness and profit maximization are social relations rather than natural human traits. Similarly, Robert Brenner analyzed how international trade competition and overcapacity generate chronic long-downturns in global capital. By re-centering historical materialism, New Marxism exposes how contemporary globalization intensifies uneven development across the global South.
 
 ## Conclusion
 
-The Marxist analysis of world politics remains deeply relevant today. While some core tenets have evolved over time, the framework continues to provide crucial insights into understanding global economic and political dynamics.
-
-Key Marxist concepts help illuminate issues like the growing concentration of wealth, the persistence of global inequality between the global North and South, and the periodic crises of capitalism. The notion of class conflict, and the role of ideology and hegemony in stabilizing an unequal social order, offer a lens for examining challenges from social movements seeking systemic change.
-
-World Systems Theory contributes the idea of core, peripheral and semi-peripheral nations, bound together in an exploitative economic relationship that channels wealth from developing to developed economies. Gramscian notions of cultural hegemony provide a framework for understanding how consent for an inherently unstable system is manufactured.
-
-Critical theory and New Marxism build on these concepts, questioning traditional tenets and updating the analysis for a changing world.
-
-Overall, the Marxist dialectical method continues to yield vital insights into the underlying forces shaping politics and society globally. This tradition of thought retains strong explanatory power despite the decline of traditional Marxist politics.
-
----
-
+The Marxist and critical traditions remain indispensable for diagnosing the structural inequalities of modern global politics. While orthodox teleological predictions of inevitable socialist revolution have been superseded, the critical toolkit continues to provide unrivaled analytical power:
+- **Political Economy Primacy**: Unmasks how foreign policy, trade agreements, and military interventions often serve capital accumulation and transnational corporate elites.
+- **Global Stratification**: Wallerstein's Core-Semiperiphery-Periphery framework clarifies why peripheral economies remain trapped in commodity dependence and debt cycles.
+- **Hegemonic Legitimation**: Gramsci and Cox explain how international institutions manufacture consent, framing particular great-power interests as universal global public goods.
 
 ---
 

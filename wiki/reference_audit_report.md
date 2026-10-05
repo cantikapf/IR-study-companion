@@ -23,7 +23,7 @@
 - ✅ **[OK]** simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
   
 
-### Introuduction to **International** Relations (6 references)
+### Introduction to International Relations (6 references)
 
 - ✅ **[OK]** Baylis, J., Smith, S., & Owens, P. (Eds.). (2017). The globalization of world politics: An introduction to international relations (Second international edition). Oxford University Press.
   
@@ -207,12 +207,12 @@
 - ✅ **[OK]** Roselle, L., & Spray, S. L. (2020). Research and writing in international relations (Third Edition). Routledge.
   
 
-### Diplomacy and International **Politics (1 references)
+### Diplomacy and International Politics (1 references)
 
 - ✅ **[OK]** Cooper, A. F., Heine, J., & Thakur, R. (Eds.). (2013). The Oxford handbook of modern diplomacy. Oxford University Press.
   
 
-### Foreign Policy** Analysis in International Relations (3 references)
+### Foreign Policy Analysis in International Relations (3 references)
 
 - ✅ **[OK]** Dugis, V. (2007). Analysing Foreign Policy. Masyarakat, Kebudayaan, Politik, 20, 41–52.
   

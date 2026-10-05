@@ -2,7 +2,7 @@
 title: International Courts and Tribunal
 slug: international-courts-and-tribunal
 abstract: International courts play a crucial role in settling disputes between states, enforcing international law, developing legal principles, and promoting justice in the international system.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "The global judicial architecture is not a single supreme pyramid, but a decentralized tapestry of specialized tribunals designed to enforce the international rule of law. Spanning global arbiters like the International Court of Justice, regional human rights courts, thematic maritime and criminal bodies, and hybrid post-conflict tribunals, these judicial benches turn abstract treaties into concrete case law. Even without standing enforcement marshals, international courts wield profound normative authority—peacefully dissolving volatile border conflicts and progressively defining the boundaries of global justice."
 ---
 
 ## Introduction to International Courts
@@ -89,7 +89,7 @@ The International Criminal Tribunal for the Former Yugoslavia (ICTY) was establi
 
 Some key details about the ICTY:
 
-- It was the first war crimes court created by the UN and helped pave the way for other international criminal tribunals.
+- It was the first war crimes court created by the UN and established essential jurisprudential foundations for subsequent international criminal tribunals.
 - The tribunal was based in The Hague, Netherlands. 
 - It indicted 161 individuals from all sides of the conflict in the former Yugoslavia. 
 - Proceedings concluded in 2017, with the ICTY's remaining functions being handled by the Mechanism for International Criminal Tribunals.
@@ -148,7 +148,6 @@ International courts face emerging issues and challenges that will shape their f
 
 To address these challenges and embrace new roles, international courts will likely need proactive reforms, strong leadership, and expanded cooperation with global governance institutions. With appropriate changes, they can increase their effectiveness and authority in the emerging multi-polar world order.
 
----
 
 ---
 

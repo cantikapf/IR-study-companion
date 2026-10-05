@@ -3,7 +3,7 @@ title: References
 slug: references
 disable_toc: true
 #class: references
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Comprehensive academic bibliography and source index for all 18 modules of the IR Study Companion, linking canonical literature, peer-reviewed articles, books, and institutional reports with verified DOIs and URLs."
 ---
 
 ## References

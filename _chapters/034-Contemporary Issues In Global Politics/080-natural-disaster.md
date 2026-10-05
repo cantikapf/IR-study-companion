@@ -1,11 +1,10 @@
 ---
 title: Natural Disaster And Global Politics
 slug: natural-disaster
-abstract: Understanding the connections between politics and natural disasters can help societies become more resilient and responsive when catastrophe strikes.
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "Tsunamis, earthquakes, and droughts do not strike in a political vacuum; they act as brutal stress tests that expose deep societal inequalities and regime vulnerabilities. Through 'disaster diplomacy,' a catastrophic exogenous shock can either tear fractured societies further apart or open an unexpected window for reconciliation. In 2004, the catastrophic Indian Ocean tsunami devastated Aceh, forcing the Indonesian government and separatist rebels to recognize the futility of war and sign the historic Helsinki peace accord."
 ---
 
-Natural **disasters** can have immense impacts on societies, causing catastrophic loss of life and economic damage. However, they can also act as catalysts for **political** change by disrupting the status quo and creating opportunities for new leaders and ideologies to emerge. This materials examines the complex relationship between **natural disasters** and politics, focusing on how disasters can activate civil societies, create political openings, accelerate or disrupt existing trajectories, and interact with the interests of domestic and international actors. Looking at real-world case studies like the 2004 Indian Ocean tsunami, we explore how pre-**disaster** conditions shape disaster response, and how natural disasters have triggered political transformations at the local and national level. While disasters bring devastation, they can also open possibilities for political rebuilding and progress that serves the interests of affected populations. 
+Natural **disasters** can have immense impacts on societies, causing catastrophic loss of life and economic damage. However, they can also act as catalysts for **political** change by disrupting the status quo and creating opportunities for new leaders and ideologies to emerge. This field of inquiry, formalized as "disaster diplomacy" by scholars like Ilan Kelman (*Disaster Diplomacy*, 2012), investigates how disaster response catalysts international cooperation or escalates political conflict. focusing on how disasters can activate civil societies, create political openings, accelerate or disrupt existing trajectories, and interact with the interests of domestic and international actors. Looking at real-world case studies like the 2004 Indian Ocean tsunami, we explore how pre-**disaster** conditions shape disaster response, and how natural disasters have triggered political transformations at the local and national level. While disasters bring devastation, they can also open possibilities for political rebuilding and progress that serves the interests of affected populations. 
 
 ## Post-Disaster Political Spaces
 
@@ -51,14 +50,16 @@ The post-tsunami reconstruction also aided Aceh's political rebuilding. Billions
 
 While global aid was vital, the Indonesian government insisted on leading the reconstruction to assert sovereignty over Aceh. Allowing foreign troops or peacekeepers was rejected. The outside aid let Jakarta take credit for rebuilding Aceh, while tempering separatist sentiments.
 
-Overall, the scale of devastation wrought by the tsunami gave impetus to end conflict and rebuild both physically and politically in Aceh. It opened a window of opportunity that Indonesia and GAM seized, with major assistance from global partners. The tsunami disaster became Aceh's road to peace and reconstruction.
+Overall, the scale of devastation wrought by the tsunami gave impetus to end conflict and rebuild both physically and politically in Aceh. It opened a window of opportunity that Indonesia and GAM seized, with major assistance from global partners. The tsunami disaster catalyzed the historic Helsinki Memorandum of Understanding (MoU) signed on August 15, 2005, between the Government of Indonesia and the Free Aceh Movement (GAM)—mediated by former Finnish President Martti Ahtisaari and the Crisis Management Initiative (CMI)—demonstrating how catastrophic exogenous shocks can create transformative windows of opportunity for conflict resolution.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Post-Disaster Political Spaces" def1="Moments when underlying issues and tensions are brought to the surface." term2="Disaster Politics" def2="The intersection of natural disasters and political conditions." term3="Critical Juncture" def3="A disaster as a catalyst for irreversible political change." term4="Accelerated Status Quo" def4="Disasters accelerate existing political tensions and trajectories." %}
 
 ### Knowledge Check
 {% include quiz.html id="quiz_080_natural_disaster" question="What can natural disasters do to the political landscape of a society?" opt1="Leave it unchanged" opt2="Create opportunities for political change and reform" opt3="Only exacerbate existing inequalities" opt4="Automatically lead to conflict and violence" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="034" %}

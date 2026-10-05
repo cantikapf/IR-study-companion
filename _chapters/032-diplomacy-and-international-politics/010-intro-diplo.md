@@ -1,8 +1,7 @@
 ---
 title: Introduction To Diplomacy And International Politics
 slug: intro-diplo
-abstract: What is the function of diplomacy? What is the role of diplomats? What is the difference between diplomacy and foreign policy? This chapter will introduce you to the field of diplomacy and international politics.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Foreign policy is the grand strategy a government decides in its capital; diplomacy is the delicate art of executing that strategy abroad without firing a shot. Through negotiation, intelligence gathering, and treaty-making, professional diplomats find overlapping interests between bitter rivals. It is civilization's oldest tool for resolving zero-sum conflicts with words rather than weapons."
 ---
 
 ## What is diplomacy?
@@ -59,9 +58,9 @@ In the 17th century, the term 'diploma' became associated specifically with trea
 
 However, the essence of diplomatic practice predates the terminology, as rulers engaged in activities such as exchanging messages, offering gifts, negotiating treaties, forming alliances, signing peace agreements, and mediating disputes. This fundamental diplomatic activity was observed in various regions outside Europe.
 
-Interestingly, the roots of diplomacy trace back even further in time, with the earliest known diplomatic document being a 2500 BC cuneiform tablet – a letter exchanged between the Mesopotamian kingdom of Ebla and the kingdom of Amazi.
+Interestingly, the roots of diplomacy trace back even further in time, with the earliest known diplomatic document being a 2500 BC cuneiform tablet – a letter exchanged between the Mesopotamian kingdom of Ebla and the kingdom of Hamazi.
 
-Furthermore, ancient Indian civilization, as outlined in the Arthashastra, detailed different classes of diplomatic representatives with varying levels of authority. This highlights that, while the term 'diplomacy' is relatively recent, the practice itself has a rich and diverse history spanning thousands of years across the globe.
+Furthermore, ancient Indian statecraft, as codified in Kautilya's *Arthashastra* (~3rd century BCE), systematically categorized diplomatic envoys into three distinct functional ranks: *nisrstartha* (plenipotentiary ambassadors), *parimitartha* (envoys with bounded negotiating mandates), and *sasanahara* (official messengers and conveyers of royal decrees). In modern diplomatic theory, scholars like Harold Nicolson (*Diplomacy*, 1939) and G.R. Berridge (*Diplomacy: Theory and Practice*, 2022) have reaffirmed this institutional distinction between high foreign policy decision-making and diplomatic execution. This highlights that, while the term 'diplomacy' is relatively recent, the practice itself has a rich and diverse history spanning thousands of years across the globe.
 
 ## Changes in Modern Diplomacy
 
@@ -73,9 +72,6 @@ Diplomacy has changed in several key ways in the modern era:
 - **Developments in foreign relations apparatus**: The infrastructure and processes of foreign relations have evolved, including new technologies, expanded bureaucracy, and more robust international institutions.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Diplomacy" def1="Communication and negotiation between countries to achieve foreign policy goals" term2="Negotiation" def2="Discussions to identify common interests and achieve mutually beneficial outcomes" term3="Foreign Policy" def3="Strategies and actions taken by governments to achieve objectives in the international arena" term4="International Law" def4="Rules and principles governing international conduct and relations between states" %}
 

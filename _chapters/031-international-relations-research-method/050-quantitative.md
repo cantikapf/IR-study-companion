@@ -2,7 +2,7 @@
 title: 'Research Method: Quantitative'
 slug: quantitative
 abstract: Quantitative research is a type of empirical research that uses numbers and statistics to express its findings.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Did democracy reduce wars in the 20th century, or was that just a lucky historical accident? Quantitative research answers big questions by turning messy global events into measurable variables and large-N datasets like the Correlates of War. By testing statistical correlations, controlling for GDP or military spending, and running regressions, researchers can determine whether a pattern is a genuine causal law or merely a coincidence."
 ---
 
 ## What is Quantitative Research?
@@ -152,7 +152,6 @@ External validity considers whether results can be generalized beyond the specif
 
 Statistical validity examines the appropriateness of statistical tests used, accuracy of analysis, and statistical power of the study. It looks at whether enough data is collected to support statistically valid conclusions. High statistical validity means appropriate tests are used and there is enough statistical power to avoid errors.
 
----
 
 ---
 

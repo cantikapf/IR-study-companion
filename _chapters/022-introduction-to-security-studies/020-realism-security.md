@@ -1,13 +1,12 @@
 ---
 title: Realism In Security Studies
 slug: realism-security
-abstract: Realism theory in security studies concept
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "Realism looks at the international arena and sees a dark, unpoliced alleyway where you can never truly trust your neighbor's intentions. Because there is no world police force to protect you, every defensive weapon you buy makes your neighbors terrified, forcing them to arm themselves in response—the inescapable 'security dilemma.' In this tragic view, survival is not about moral righteousness, but about having enough hard military power to deter aggression."
 ---
 
 ## Introduction to Realism
 
-Realism is one of the major theoretical perspectives in the study of **international** relations. It emphasizes the competitive and conflictual side of **international politics**, arguing that the fundamental nature of international politics is defined by **power** politics among **states** in an anarchic **international system**.
+Realism is one of the major theoretical perspectives in the study of **international relations**. It emphasizes the competitive and conflictual side of **international politics**, arguing that the fundamental nature of international politics is defined by **power** politics among **states** in an anarchic **international system**.
 
 According to realism, states are the most important actors in the international system. The key assumptions of realism include:
 
@@ -41,7 +40,7 @@ Realism highlights power and its distribution as the main currency of internatio
 
 ## Classical Realism 
 
-Classical realism emerged in response to the dominant liberal approaches to international relations in the 1930s-1940s. This perspective, as exemplified by Hans Morgenthau's 1948 book "Politics Among Nations," posits that the inherent flaws in human nature lead states to engage in a perpetual struggle for power in the international arena. 
+Classical realism emerged in response to the dominant liberal approaches to international relations in the 1930s-1940s. This perspective, as exemplified by Hans Morgenthau's 1948 book *Politics Among Nations: The Struggle for Power and Peace*, posits that the inherent flaws in human nature lead states to engage in a perpetual struggle for power in the international arena. 
 
 According to classical realists, the selfishness and lust for power that characterize human nature mean that international politics is ultimately driven by each state's desire to dominate others. This creates a constant competition for power and resources among states in an anarchic global system with no overarching authority to maintain order.
 
@@ -51,7 +50,7 @@ The classical realist perspective stands in stark contrast to liberalism by dism
 
 ## Structural Realism 
 
-Structural realism, also known as neorealism, was developed as a critique of classical realism by Kenneth Waltz in his book "Theory of International Politics". Waltz argued that the outcomes of international relations are shaped more by the structure of the international system than the internal characteristics of states. 
+Structural realism, also known as neorealism, was developed as a critique of classical realism by Kenneth Waltz in his seminal book *Theory of International Politics* (1979). Waltz argued that the outcomes of international relations are shaped more by the structure of the international system than the internal characteristics of states. 
 
 Unlike classical realists who emphasize human nature as a cause of conflict, neorealists focus on how the anarchic structure of the international system fosters competition and conflict between states. In an anarchic system with no overarching authority, states must rely on self-help to ensure their survival. This drives them to pursue power and engage in balancing behavior to prevent other states from achieving hegemony.
 
@@ -61,13 +60,13 @@ Overall, neorealism diverges from classical realism by explaining international 
 
 ## Defensive Realism 
 
-Defensive realism, as exemplified by Stephen Walt's "balance of threat" theory, asserts that states, driven by rational choice, seek to maintain the status quo, focusing on an offense-defense balance. States are primarily concerned with their own security and survival within the international system. According to defensive realists, the anarchic structure of the international system compels states to pursue defensive strategies aimed at preserving power and influence rather than maximizing power. 
+Defensive realism, as exemplified by Stephen Walt's balance of threat theory (*The Origins of Alliances*, 1987), asserts that states, driven by rational choice, seek to maintain the status quo, elaborating Robert Jervis's (1978) offense-defense balance. States are primarily concerned with their own security and survival within the international system. According to defensive realists, the anarchic structure of the international system compels states to pursue defensive strategies aimed at preserving power and influence rather than maximizing power. 
 
 Defensive realism diverges from offensive realism in viewing the international system as one of status quo rather than revisionist powers. States are inclined to maintain existing spheres of influence rather than expand. According to Walt's balance of threat theory, states ally to balance against threats rather than sheer power alone. Threats are determined based on factors like aggregate power, geographic proximity, offensive capabilities and perceived intentions. Defensive realism emphasizes that states balance against the most significant threats to their security through internal efforts or external alliances. The distribution of power alone does not predict outcomes. Defensive realists contend that the international system remains in equilibrium through this continuous process of balancing against threats.
 
 ## Offensive Realism 
 
-Offensive realism, represented by John Mearsheimer, contends that in an uncertain international environment, relative capabilities are paramount, advocating for the acquisition of power to enhance security.
+Offensive realism, advanced by John Mearsheimer in *The Tragedy of Great Power Politics* (2001), contends that in an uncertain international environment, relative capabilities are paramount, advocating for the acquisition of power to enhance security.
 
 Offensive realism diverges from defensive realism in its emphasis on power maximization over the status quo. In Mearsheimer's theory, the international system's anarchic structure compels states to seek as much power as possible to ensure their own survival. With no central authority to mediate disputes, states cannot be certain of each other's intentions. 
 
@@ -91,7 +90,7 @@ Rise and fall realism provides an alternative perspective to balance of power th
 
 ## Neoclassical Realism
 
-Neoclassical realism asserts that systemic pressures interact with domestic variables at the unit level to shape foreign policy decisions. While recognizing the anarchic structure of the international system and the distribution of capabilities as the primary drivers of state behavior, neoclassical realists argue that identifying threats and opportunities within the system can be complex. 
+Neoclassical realism, coined by Gideon Rose (1998), asserts that systemic pressures interact with domestic variables at the unit level to shape foreign policy decisions. While recognizing the anarchic structure of the international system and the distribution of capabilities as the primary drivers of state behavior, neoclassical realists argue that identifying threats and opportunities within the system can be complex. 
 
 As a result, domestic factors play a crucial intervening role between systemic incentives and foreign policy outcomes. These unit level variables include public opinion, strategic culture, perceptions of leaders, state-society relations, and government institutions. 
 
@@ -100,8 +99,8 @@ Neoclassical realism posits that foreign policy is not directly determined by th
 Leaders play a key role in this process by interpreting international threats and incentives based on their own perceptions and domestic considerations. However, their freedom of action is constrained by both international and domestic constraints. In this view, foreign policy is the result of strategic choice under the pressure of systemic forces filtered through domestic politics.
 
 ---
-    
 
+{% include sim_security_dilemma.html %}
 
 ---
 

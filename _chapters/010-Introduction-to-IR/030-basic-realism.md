@@ -2,7 +2,7 @@
 title: Basic Explanation of Realism in IR
 slug: basic-realism
 abstract: The introduction of Realism in International Relations
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Realists view world politics not as a cooperative community, but as a ruthless wilderness. Because there is no world police to protect the weak, states can rely only on themselves. Power—especially military strength—is the only real currency that guarantees survival. In this worldview, leaders who base foreign policy on moral ideals rather than hard calculations of national power are courting national disaster."
 ---
 
 
@@ -75,45 +75,19 @@ Realism makes several key assumptions about international relations:
 <br>
 
 
-## Criticisms
+Despite its prominence, realism has faced criticism over the years for its explanatory limits regarding peaceful systemic transformation. Realist theory struggled to anticipate the non-violent dissolution of the Soviet Union and the conclusion of the Cold War. Rather than culminating in direct superpower war, systemic change unfolded through internal structural exhaustion in the USSR and reciprocal diplomatic engagement. Realism also struggles to explain intra-state conflicts, ethnic insurgencies, and civil wars, where non-state grievances and transnational ideational forces challenge strictly state-centric structural models.
 
-Despite its prominence, realism has faced criticism over the years for its inability to fully explain complex international phenomena. One key criticism is realism's failure to anticipate the largely peaceful end of the Cold War. Realist theory predicted an eventual clash between the two superpowers, the United States and the Soviet Union, as they competed for power and influence. However, the Cold War ended not through military confrontation but through internal reforms in the Soviet Union and a resetting of relations between the two powers. Realism does not account for how cooperation, trust-building, and diplomacy helped avoid direct conflict and pave the way for a peaceful resolution.
+## The Neo-Neo Debate and Neorealist Divisions
 
-Additionally, realism struggles to explain conflicts within states rather than between states. Realist theory focuses on states as the key actors in an anarchic international system. However, in the post-World War II era, the majority of conflicts have been civil wars, insurgencies, and intra-state violence. Realism does not provide analytic tools to understand the complex ethnic, religious, and ideological factors fueling these internal conflicts. Power dynamics between states cannot fully capture the grievances, motivations, and goals of non-state actors fighting internally over resources, representation, and rights. Realism is state-centric and often discounts sub-state and transnational forces shaping world politics.
+The neo-neo debate emerged as a defining scholarly dialogue in international relations during the 1980s and 1990s, pitting neorealism against neoliberal institutionalism.
 
-## Neo-neo Debate
+On one side, neorealists emphasized international anarchy and the systemic distribution of material capabilities. Crucially, structural realism diverged into two distinct camps regarding state behavior:
+- **Defensive Realism (Kenneth Waltz, 1979)**: States are security-maximizers rather than power-maximizers. Anarchic pressure compels states to maintain their relative position and preserve the systemic balance of power. Unrelenting expansion is considered self-defeating because it inevitably triggers countervailing balancing coalitions.
+- **Offensive Realism (John Mearsheimer, 2001)**: Because states can never be certain of others' future intentions, the only ultimate guarantee of survival in an anarchic world is to maximize relative power and strive for regional hegemony.
 
-The neo-neo debate emerged as a central theme of international relations theory during the 1980s following significant geopolitical shifts. This schism represented a clash between neo-realist and neo-liberalist paradigms in interpreting global developments.
+In contrast, neoliberal institutionalists like Robert Keohane (*After Hegemony*, 1984) posited that international institutions mitigate the consequences of anarchy. By reducing transaction costs, providing verified information, and lengthening the "shadow of the future," regimes enable rational states to realize mutual absolute gains even in the absence of a hegemonic stabilizer.
 
-On one side, neo-realists emphasized structure and anarchy as the key drivers of state behavior. They questioned liberalism's ability to explain cooperation absent hegemonic stability. Neo-realists like Kenneth Waltz argued that the structure of the international system, defined by anarchy and the distribution of power, compelled states to maximize power and pursue self-help for survival.
-
-In contrast, neo-liberal institutionalists like Robert Keohane posited that institutions could facilitate cooperation even without hegemony. Neo-liberals highlighted the role of international regimes and norms in shaping state preferences and interests beyond structural factors. Complex interdependence, they argued, made conflict increasingly costly and cooperation mutually beneficial.
-
-This academic debate paralleled policy disagreements about engaging with the Soviet Union and China. The neo-neo divide framed analyses of major world events like the end of the Cold War, which neo-liberals viewed as showing the triumph of institutions over structure while neo-realists saw power dynamics as decisive.
-
-The neo-neo debate profoundly impacted international relations theory, forcing engagement between structural theories and models acknowledging ideational factors. Later approaches incorporated insights from both neo-realism and neo-liberalism in explaining state actions. However, divisions remain between rationalist paradigms prioritizing material structure and constructivist frameworks emphasizing identities, norms, and ideas.
-
-## Structural Realism
-
-Structural realists emphasize how the structure of the international system shapes foreign policy choices. Specifically, they focus on the anarchical nature of the international system and the distribution of capabilities between states as the key drivers of state behavior.
-
-Since there is no central authority above sovereign states, the international system is essentially anarchical. This creates inherent insecurity and uncertainty, as states cannot fully trust one another. Structural realists argue that this sense of insecurity encourages states to compete for power and influence as a means of survival.
-
-In addition, the distribution of capabilities (such as military and economic power) is critical. States are especially concerned with balances and imbalances of power. A balanced distribution makes war less likely, while an imbalance increases competition as weaker states ally to counter the dominant state.
-
-Structural realists diverge on whether states should pursue relative gains over competitors or focus on absolute gains. Those focused on relative gains see cooperation as difficult since states worry about losing ground to others. However others argue that states can cooperate for absolute gains as long as it does not produce relative losses. This debate continues to divide structural realists.
-
-Overall, structural realists provide a systemic level of analysis to explain state actions. The configuration of the international system sets limits and incentives for foreign policy, even as leaders retain ultimate decision-making power informed by their perceptions. As such, structural realism remains an influential theory in international relations.
-
-## Neoclassical Realism
-
-Neoclassical realism emerged in the late 1990s and early 2000s as an attempt to address some of the perceived shortcomings of structural realism. While structural realists emphasize how the distribution of power in the international system shapes state behavior, neoclassical realists argue that unit-level variables at the state level also need to be considered.
-
-Specifically, neoclassical realism looks at factors like perceptions and misperceptions of power, strategic culture, and domestic politics. While the structure of the international system is still the starting point, neoclassical realists contend that how leaders perceive the system and the internal characteristics of their state will impact how they formulate foreign policy.
-
-For example, different leaders may look at the same distribution of power but come to very different conclusions about the level of threat or opportunity it presents. Their unique perceptions, informed by history and culture, lead to different policy responses. Furthermore, even if leaders accurately perceive the international structure, domestic politics may constrain their available policy options.
-
-By incorporating unit-level variables, neoclassical realists seek to complement the structural emphasis of Kenneth Waltz and other neorealists. They argue that both system-level and unit-level factors are necessary to fully explain states' foreign policy choices. This provides a more contingent theoretical framework while still retaining core realist assumptions about anarchy and power politics.
+To bridge system-level pressures with unit-level domestic variables, **Neoclassical Realism** (Gideon Rose, 1998; Randall Schweller) emerged. It demonstrates that while systemic distribution of capabilities sets the broad parameters of foreign policy, domestic intervening variables—such as leadership perception, bureaucratic politics, and state extraction capacity—determine how systemic incentives are translated into actual statecraft.
 
 ## Case Study: U.S. Strategic Partnerships with 'Friendly' Dictators
 
@@ -140,8 +114,6 @@ The prevalence of realist principles, albeit adapted contextually, demonstrates 
 As long as the international system remains anarchic and states prioritize survival, realism will dominate theoretical discourse. Its nuanced evolution through neoclassical realism also strengthens its explanatory power. Realism provides a sober perspective on global affairs, beyond idealism, without negating cooperation. Its longevity testifies to the tradition's profound insights into the complex workings of world politics.
 
 <center> <img src="{{site.baseurl}}/static/modules/keypoints_realism_2.png" alt="Keypoints" width="90%" /> </center>
-
----
 
 
 ---

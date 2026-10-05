@@ -2,7 +2,7 @@
 title: Literature Review
 slug: literature-review
 abstract: Scholarly Literature and the Literature Review
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "A literature review is not a boring book report that summarizes articles one by one; it is your ticket into an ongoing global academic conversation. By reviewing what top scholars have already discovered and where they fiercely disagree, you uncover the crucial 'research gap'—the unanswered question that justifies your study and prevents you from spending months reinventing the wheel."
 ---
 
 ## Scholarly Literature and the Literature Review

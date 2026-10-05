@@ -2,7 +2,7 @@
 title: 'When Negotiations Fail: The Rise of Judicial Procedures in Trade Agreements'
 slug: judicial-procedure-wto
 abstract: The rise of judicial mechanisms in trade diplomacy has transformed how international trade issues are resolved, favoring rule-based adjudication over political deal-making. This chapter explores the importance of judicial mechanisms, the process for resolving disputes, and the impact of judicialization on diplomacy and trade relations.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "What happens when trade diplomats hit a complete deadlock and standard bilateral negotiations break down? Drawing inspiration from the European Court of Justice, the modern trade regime introduced binding legal adjudication to replace sheer political muscle. By empowering dispute panels whose rulings cannot be unilaterally blocked by the offending state, the WTO ensured that even smaller developing nations could legally compel economic superpowers to tear down protectionist trade barriers."
 ---
 
 ## Introduction
@@ -83,7 +83,6 @@ Specifically, when a trade dispute ruling is made against a member state, that c
 
 Similarly, under NAFTA's dispute settlement provisions, if a NAFTA tribunal decides a member state's policies or actions violated NAFTA and nullifies expected benefits, that member must comply by amending or repealing the inconsistent domestic measures. This controversial power to trump member states' domestic laws has been critical to enforcing freer trade under WTO and NAFTA rules.
 
----
 
 ---
 

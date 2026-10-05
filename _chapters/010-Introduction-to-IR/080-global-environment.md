@@ -2,7 +2,7 @@
 title: Global Environment As Agendas
 slug: global-environment-as-agendas
 abstract: Environment issue in International Relations context
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "Smog, plastic in the oceans, and greenhouse gases don't carry passports or stop at national border checkpoints. When the planet's atmosphere is a shared global commons, every sovereign nation faces a temptation to 'free-ride'—enjoying clean air while leaving the painful economic costs of cutting emissions to others. Solving ecological crises forces states to build international environmental regimes and treaties, proving that planetary survival requires collective action even in an anarchic world."
 ---
 
 
@@ -117,8 +117,6 @@ Meanwhile, impacts grow irreversible. Extreme weather, rising sea levels, and co
 With time running short, innovation offers hope. Rapid technology advances can accelerate decarbonization in transport, buildings, industry and energy. Carbon removal techniques may help extract historical emissions. Local initiatives demonstrate sustainability, while global information sharing spreads solutions.
 
 Yet greater commitment remains vital. Ambition must increase, or coming generations will pay the price. Visionary leadership can reframe climate action as an opportunity to reinvent economies, unite humanity, and secure our common future. The task is monumental, but the stakes are even greater. Our legacy depends on the road ahead.
-
----
 
 
 ---
