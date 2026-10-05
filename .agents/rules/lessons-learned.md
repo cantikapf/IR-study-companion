@@ -49,6 +49,10 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Learner-Centric Microcopy & Eradication of Developer Artifacts (2026-10-05)**:
+  1. *Developer Prompt Jargon Leakage*: Frasa seperti "Clean typography (~70ch measure)" atau "variable Inter typography" adalah artefak spesifikasi CSS/desain internal yang bocor ke microcopy antarmuka pengguna. Bagi pembaca awam, hal ini terdengar sangat robotik, pretensius, dan "sangat AI".
+  2. *Empathetic Learner Framing*: Pembaca materi edukasi tidak perlu tahu spesifikasi pengukuran karakter per baris CSS (`~70ch`). Mengganti istilah teknis pengembang menjadi nilai manfaat pembelajaran nyata (misal: *"Focused reading layout with live reading time estimates and an in-lesson outline for effortless navigation"*) menghasilkan narasi yang alami, elegan, dan berorientasi pada kenyamanan pembelajar.
+
 - **Git Large-Asset Isolation & Production Synchronization Mandate (2026-10-05)**:
   1. *Binary Model Quota Defense*: Eksperimen rendering multimedia lokal (seperti model Kokoro TTS ONNX 310 MB dan render video MP4 Remotion) berisiko fatal menggagalkan sinkronisasi remote jika tidak diisolasi secara deterministik pada `.gitignore`. GitHub menolak komit dengan berkas tunggal $>100$ MB secara absolut.
   2. *Pre-Commit Tree Hygiene*: Mengaudit ukuran berkas sebelum `git add .` dan mendaftarkan direktori pendukung besar (`simulation/`, `*.onnx`, `*.mp4`, `*.bin`) ke `.gitignore` menjamin branch `master` tetap ramping, cepat, dan hanya memuat kode sumber inti, naskah materi, serta aset JSON/CSS/JS produksi.
