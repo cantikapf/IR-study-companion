@@ -1,7 +1,7 @@
 ---
 slug: disclaimer
 title: Disclaimer
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Course title, curriculum overview, and institutional metadata for the IR Study Companion online learning platform."
 ---
 
 This study guide was made for **study purpose**. All the **materials** are from **personal document and AI generated**. The **author** does not claim any ownership of the materials. The author does not take any responsibility for any loss or damage caused by the use of the materials. But, all of the materials, whether it's from books or AI-generated are pre-checked by the author. If you find any mistakes, please contact the author through the website.

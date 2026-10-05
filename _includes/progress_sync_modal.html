@@ -1,0 +1,70 @@
+<!-- Progress Backup & Sync Modal (Zero-Backend Client-Side Persistence) -->
+<div class="lms-modal-backdrop" id="progress-sync-backdrop" aria-hidden="true"></div>
+
+<div class="lms-modal" id="progress-sync-modal" role="dialog" aria-labelledby="sync-modal-title" aria-modal="true" aria-hidden="true">
+  <div class="lms-modal-header">
+    <div>
+      <span class="lms-modal-tag">Student Data Portability</span>
+      <h3 class="lms-modal-title" id="sync-modal-title">Backup & Restore Progress</h3>
+    </div>
+    <button class="lms-modal-close" id="sync-modal-close" aria-label="Close sync modal">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="lms-modal-body">
+    <p class="lms-modal-desc">
+      IR Study Companion protects your privacy with <strong>zero cloud tracking</strong>. Your progress is stored directly in your browser. Use this tool to transfer your study history across devices or create a safety backup.
+    </p>
+
+    <div class="lms-sync-stats-box">
+      <div class="sync-stat-item">
+        <span class="sync-stat-val tabular-number" id="sync-stat-lessons">0</span>
+        <span class="sync-stat-lbl">Lessons Completed</span>
+      </div>
+      <div class="sync-stat-item">
+        <span class="sync-stat-val tabular-number" id="sync-stat-quizzes">0</span>
+        <span class="sync-stat-lbl">Checkpoints Verified</span>
+      </div>
+      <div class="sync-stat-item">
+        <span class="sync-stat-val tabular-number" id="sync-stat-exams">0</span>
+        <span class="sync-stat-lbl">Module Exams Passed</span>
+      </div>
+    </div>
+
+    <div class="lms-sync-actions-grid">
+      <!-- Export -->
+      <div class="sync-action-card">
+        <div class="sync-card-icon"><i class="fa fa-download" aria-hidden="true"></i></div>
+        <div class="sync-card-info">
+          <h4>Export Progress</h4>
+          <p>Download a single <code>.json</code> file containing all your completed lessons, quiz scores, and bookmarks.</p>
+        </div>
+        <button class="sync-btn sync-btn-primary" id="btn-export-progress">
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> Export Backup (.json)
+        </button>
+      </div>
+
+      <!-- Import -->
+      <div class="sync-action-card">
+        <div class="sync-card-icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
+        <div class="sync-card-info">
+          <h4>Restore Progress</h4>
+          <p>Import a previously saved backup file to restore your progress on this device or browser.</p>
+        </div>
+        <label for="input-import-progress" class="sync-btn sync-btn-secondary">
+          <i class="fa fa-folder-open-o" aria-hidden="true"></i> Choose File to Restore
+        </label>
+        <input type="file" id="input-import-progress" accept=".json" style="display: none;">
+      </div>
+    </div>
+
+    <div class="lms-sync-feedback" id="sync-feedback" style="display: none;" aria-live="polite"></div>
+
+    <div class="lms-sync-footer-actions">
+      <button class="sync-btn-text-danger" id="btn-reset-progress">
+        <i class="fa fa-trash-o" aria-hidden="true"></i> Reset All Progress
+      </button>
+    </div>
+  </div>
+</div>

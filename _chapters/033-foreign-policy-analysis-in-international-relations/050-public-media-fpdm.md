@@ -2,7 +2,7 @@
 title: Public Opinion, Media And Foreign Policy
 slug: public-opinion-media-fpdm
 abstract: The media plays an increasingly influential role in foreign policy around the world. 
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "In the digital age, foreign policy is no longer conducted exclusively in secretive palace halls; it plays out live on social media feeds and 24-hour news networks. The 'CNN Effect' can compel governments to intervene in distant humanitarian crises when heartbreaking footage goes viral, while state leaders aggressively spin narratives to manufacture domestic consent. The media is neither a passive mirror nor an all-powerful puppet master—it is a contested battleground that constantly constrains diplomatic strategy."
 ---
 
 As technology has enabled the widespread and rapid dissemination of information, the way governments make decisions on the global stage has fundamentally changed. No longer can foreign **policy** formation happen behind closed doors without scrutiny from the **public**. The **media** acts as a critical link between governments and their citizens, shaping **public opinion** on international affairs. 
@@ -107,7 +107,6 @@ Key takeaways:
 
 In conclusion, the media and public opinion have a complex, two-way dynamic with governments and their foreign policy decisions. Neither fully controls the other, but both exert influence.
 
----
 
 ---
 
@@ -116,3 +115,8 @@ In conclusion, the media and public opinion have a complex, two-way dynamic with
 
 ### Knowledge Check
 {% include quiz.html id="quiz_050_public_media_fpdm" question="What is the term for the overall system and structure for political communication in a given country or state?" opt1="Political Economy of Media" opt2="Political Communication Regime" opt3="Media Management" opt4="Agenda-Setting" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="033" %}

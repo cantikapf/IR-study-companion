@@ -2,7 +2,7 @@
 title: WTO Dispute Settlement Mechanism
 slug: wto-dispute-settlement
 abstract: The WTO dispute settlement system is a crucial component of the global trading system, providing a rules-based framework for resolving trade disputes and enforcing commitments. It aims to promote compliance through consultations and, if necessary, adjudication, ensuring stability and predictability in international trade.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Widely regarded as the 'crown jewel' of multilateral trade, the WTO dispute settlement mechanism transformed volatile commercial feuds into a rules-based legal trial. Through mandatory consultations, expert panel reviews, and the innovative 'reverse consensus' rule, losing governments can no longer block rulings handed down against them. This legal architecture protects global commerce from escalating into retaliatory trade wars—so long as its appellate machinery remains operational."
 ---
 
 
@@ -90,7 +90,6 @@ The multi-step process encourages members to find a mutually agreeable solution 
 
 Overall, the dispute settlement mechanism has proven to be one of the WTO's most active and successful endeavors. The ability for members to bring complaints, defend their interests, and resolve conflicts through an impartial, time-bound system has bolstered confidence in the multilateral trading process. Even with the challenges it continues to face, the WTO dispute settlement system remains an indispensable pillar supporting global economic cooperation.
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 title: The Use Of Force In International Law
 slug: the-use-of-force-in-international-law
 abstract: International law governs the use of force by states, providing legal frameworks and exceptions for self-defense, collective security, and humanitarian intervention.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "In modern international law, waging war is no longer a sovereign prerogative; it is an internationally prohibited act. Under Article 2(4) of the UN Charter, states are strictly forbidden from threatening or using force against another nation's sovereignty. The entire international security architecture recognizes only two lawful exceptions: explicit collective military authorization by the UN Security Council, or an immediate, proportional act of self-defense under Article 51 in response to an armed attack."
 ---
 
 ## Introduction
@@ -55,7 +55,7 @@ The issue of intervention by the United Nations in situations of extreme humanit
 
 ## The UN Charter
 
-Article 2(4) of the United Nations Charter prohibits the threat or use of force by states against the territorial integrity or political independence of any state. This prohibition is a cornerstone of the UN system and modern international law governing relations between states. 
+Article 2(4) of the United Nations Charter prohibits the threat or use of force by states against the territorial integrity or political independence of any state. This prohibition is a fundamental peremptory norm (jus cogens) of the UN Charter system and modern international law governing interstate relations. 
 
 Article 2(4) specifically states:
 
@@ -107,7 +107,6 @@ Customary international law has also recognized humanitarian intervention in ext
 
 While international law places limits on the recourse to force, its precise boundaries remain subject to interpretation and politics. This content has surveyed key principles, cases, and developments regarding the international legal framework on the use of force and armed conflicts between and within states. The complexities reflect an evolving attempt to restrict war and violence while maintaining state security.
 
----
 
 ---
 

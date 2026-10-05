@@ -1,8 +1,7 @@
 ---
 title: International Monetary System
 slug: monetary-system
-abstract: The history of International Monetary System
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Buying a foreign product requires trading currencies, making the international monetary system the invisible plumbing of the global economy. From the Victorian Gold Standard to the post-war Bretton Woods dollar-gold peg and today's volatile floating rates, the system must balance exchange rate stability with domestic economic autonomy. When monetary coordination fails, currency crashes and balance-of-payments crises can wipe out national savings overnight."
 ---
 
 ## Introduction
@@ -114,9 +113,6 @@ The aims of ERM II are:
 ERM II works through a fixed currency exchange rate with standard fluctuations bands. Central banks are required to intervene if the exchange rate approaches the limits. Countries also agree to coordinate economic policies closely to maintain exchange rate stability. 
 
 Joining ERM II is voluntary for non-euro EU members. Participating in the mechanism for at least two years without severe tensions is one of the convergence criteria for adopting the euro. As of January 2023, the Danish krone and the Bulgarian lev are the two currencies participating in ERM II.
-
----
-    
 
 
 ---

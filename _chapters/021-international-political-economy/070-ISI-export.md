@@ -1,8 +1,7 @@
 ---
 title: 'From ISI to Export Orientation: How Developing Countries Navigated Trade Strategy'
 slug: ISI-export
-abstract: The export strategies of developing countries
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Post-colonial developing nations faced a stark choice: should they shut their borders to manufacture everything at home, or open up to compete globally? Latin America chose Import Substitution Industrialization (ISI), hiding behind steep tariffs only to breed inefficient state monopolies, crippling debt, and inflation. In contrast, the East Asian Tigers used state guidance to push domestic firms into fiercely competitive export markets, transforming impoverished agrarian economies into high-tech manufacturing giants."
 ---
 
 ## Introduction to ISI
@@ -108,9 +107,6 @@ Recognizing ISI's limitations, developing countries initiated economic reforms i
 
 In summary, ISI yielded mixed results for developing countries. While some benefits materialized, ISI proved economically challenging long-term. However, its pursuit reflected developing countries' desire for self-sufficiency. ISI's struggles underline the intricacies of trade policy. Looking ahead, emerging economies seem poised to transform international trade patterns. But crafting equitable, sustainable policies remains complex. Though ISI faltered, its intentions may offer lessons for constructing collaborative global trade.
 
-
----
-    
 
 
 ---

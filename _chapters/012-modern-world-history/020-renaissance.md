@@ -1,8 +1,7 @@
 ---
 slug: rennaissance
 title: The Renaissance and the Reformation in Europe
-abstract: This chapter will cover the Renaissance and the Reformation in Europe
-simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
+simple_summary: "Before states had borders and embassies, Renaissance Europe broke the medieval monopoly of the Roman Catholic Church. As Italian city-states got rich from Mediterranean trade, merchant wealth funded humanism, gunpowder broke feudal knights, and Machiavelli separated politics from religious morality. This dramatic secular shift planted the seeds for modern sovereign statecraft."
 ---
 
 
@@ -114,12 +113,9 @@ The Renaissance era was characterized by profound transformations that impacted 
 
 - Greater emphasis on secularism, individualism, human emotion and worldly subjects like nature. Society moved beyond just spiritual preoccupations.
 
-- Advances in fields like astronomy, physics, engineering and anatomy through pioneering scientific studies. Thinkers sought to understand the empirical world.
+- Advances in fields like astronomy, physics, engineering and anatomy through pioneering empirical studies. Thinkers increasingly sought to interrogate the observable physical world.
 
-The Renaissance era proved foundational for Europe's transition to the Early Modern period. By reinvigorating art, scholarship and commerce, while catalyzing religious dissent and power shifts, the Renaissance paved the path for the Age of Discovery, the Scientific Revolution, and the Enlightenment. Its impact endures to this day.
-
-
----
+The Renaissance era proved foundational for Europe's transition to the Early Modern period. By reinvigorating classical philosophy, empirical inquiry, and commercial expansion, while catalyzing religious pluralism and state centralization, the Renaissance laid the intellectual and institutional foundations for the Scientific Revolution, maritime expansion, and the Westphalian sovereign state system.
 
 ---
 

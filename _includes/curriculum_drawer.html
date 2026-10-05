@@ -47,8 +47,11 @@
 
         <div class="drawer-module-group" data-module="{% if i_part_unnumbered %}{{ i_part_sort_index }}{% else %}{{ i_part_num }}{% endif %}">
           <div class="drawer-module-header">
-            <span class="drawer-module-tag">{% if i_part_unnumbered %}Resources{% else %}Module {{ i_part_num }}{% endif %}</span>
-            <h3 class="drawer-module-title">{% if i_part_sort_index == '000' %}Course Guide{% elsif i_part_sort_index == '999' %}Academic Bibliography{% else %}{{ i_part_label }}{% endif %}</h3>
+            <div>
+              <span class="drawer-module-tag">{% if i_part_unnumbered %}Resources{% else %}Module {{ i_part_num }}{% endif %}</span>
+              <h3 class="drawer-module-title">{% if i_part_sort_index == '000' %}Course Guide{% elsif i_part_sort_index == '999' %}Academic Bibliography{% else %}{{ i_part_label }}{% endif %}</h3>
+            </div>
+            <span class="drawer-module-progress-pill" data-mod-pill="{% if i_part_unnumbered %}{{ i_part_sort_index }}{% else %}{{ i_part_num }}{% endif %}">0%</span>
           </div>
           <ul class="drawer-lessons-list">
         {% assign drawer_group_open = true %}

@@ -1,8 +1,7 @@
 ---
 title: 'Neoliberalism Explained: The Ideology That Transformed Modern Capitalism'
 slug: neoliberalism-policy
-abstract: The policy of Neoliberalism in International Political Economy
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "When debt crises struck developing nations in the 1980s and 1990s, the IMF and World Bank codified neoliberal theory into a strict policy package: the 'Washington Consensus.' To receive emergency bailout loans, impoverished governments were forced to implement structural adjustment programs—cutting food subsidies, privatizing water and electricity, and opening borders to foreign capital. While intended to foster fiscal discipline, these shock therapy reforms often devastated local public health systems and triggered intense social unrest."
 ---
 
 ## Introduction
@@ -49,7 +48,7 @@ Neoliberalism posits that an international framework of open markets and minimal
 
 ## Minimal State Involvement
 
-A cornerstone of neoliberal thought is the minimal intervention of the state in economic affairs. Rather than direct involvement in managing or steering the economy, neoliberalism envisions the role of the state as providing the necessary legal framework for markets and private property to flourish. The state aims to establish and maintain the institutional conditions for competition and free trade.
+A foundational pillar of neoliberal thought is the minimal intervention of the state in economic affairs. Rather than direct involvement in managing or steering the economy, neoliberalism envisions the role of the state as providing the necessary legal framework for markets and private property to flourish. The state aims to establish and maintain the institutional conditions for competition and free trade.
 
 Specific policy measures associated with minimal state involvement include tax reductions, deregulation, and privatization. Tax cuts, particularly for high income earners and corporations, align with the neoliberal goal of limiting the economic functions of the state. Deregulation involves removing government-imposed rules and restrictions to allow for free and open markets. This can include deregulation of various industries such as airlines, telecommunications, and finance. Privatization entails transferring state-owned enterprises, assets or services to the private sector. These policies exemplify neoliberalism's emphasis on opening space for private enterprise, competition, and individual initiative rather than direct state management of economic affairs.
 
@@ -111,9 +110,6 @@ As the 20th century came to a close, neoliberal capitalism had established itsel
 
 In the 21st century, neoliberal globalization appears deeply entrenched but not free of discontents. While it has created opportunities for growth and development, critics argue it has also exacerbated inequality within and between nations. The neoliberal model's resilience has been tested by major crises like the Great Recession of 2008. Nevertheless, neoliberalism remains the prevailing global economic ideology, shaping policymaking worldwide. Its foundational principles and policy prescriptions continue to underpin the modern structure of global capitalism.
 
----
-    
-
 
 ---
 
@@ -122,3 +118,8 @@ In the 21st century, neoliberal globalization appears deeply entrenched but not 
 
 ### Knowledge Check
 {% include quiz.html id="quiz_099_neoliberalism_policy" question="What is the core idea of Neoliberalism regarding government intervention in economic affairs?" opt1="Maximum government control over economic activities" opt2="Limited government intervention to promote free markets" opt3="Government regulation of all economic sectors" opt4="State ownership of key industries" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="021" %}

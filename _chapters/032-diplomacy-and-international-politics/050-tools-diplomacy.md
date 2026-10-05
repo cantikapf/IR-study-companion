@@ -1,8 +1,7 @@
 ---
 title: Tools and Instruments Of Diplomacy
 slug: tools-diplomacy
-abstract: This chapter will introduce you to the tools and instruments of diplomacy.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Diplomats wield an expansive toolkit far beyond stiff handshakes: from trade sanctions and investment packages to 'ping-pong' cultural exchanges and viral digital messaging on social media. While economic carrots and sticks alter the financial calculus of rogue regimes, public diplomacy cultivates lasting soft power directly among foreign citizens. Mastering statecraft requires knowing when to deploy the hard leverage of sanctions versus the magnetic attraction of cultural appeal."
 ---
 
 
@@ -160,7 +159,7 @@ The Vienna Convention on Consular Relations is an international treaty that defi
 
 A consul operates outside of the embassy and performs two key functions. The first is to protect the interests of their fellow countrymen in the host nation. The second is to further the commercial and economic relations between the two states.
 
-The convention contains 79 articles with significant provisions including:
+The Vienna Convention on Consular Relations (VCCR, adopted 1963, entered into force 1967) codified consular relations into 79 formal articles, with landmark provisions including:
 
 - Article 5 outlines 13 functions of a consul such as furthering development of commercial, economic, cultural and scientific relations between the sending and receiving state.
 - Article 23 provides that a member of the consular staff may be declared persona non grata. 
@@ -169,6 +168,8 @@ The convention contains 79 articles with significant provisions including:
 The purpose of consuls is therefore to promote the interests of their home country and citizens abroad while also developing positive diplomatic and economic relationships with the host nation. Their privileges and immunities facilitate this important role within diplomacy between states.
 
 ---
+
+{% include sim_treaty_negotiation.html %}
 
 ---
 

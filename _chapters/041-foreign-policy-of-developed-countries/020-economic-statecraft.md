@@ -2,7 +2,7 @@
 title: Economic Statecraft
 slug: economic-statecraft
 abstract: Economic statecraft foreign policy tools like sanctions and incentives to influence the behavior of other states.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Economic statecraft is diplomacy conducted with wallets and trade embargoes rather than gunboats and missiles. By dangling lucrative market access or inflicting punitive financial sanctions, powerful states exploit asymmetric economic interdependence to bend foreign adversaries to their will without firing a shot. Yet wielding economic weapons is a delicate double-edged sword: aggressive sanctions often backfire by rallying domestic defiance in the target state while imposing heavy collateral damage on innocent civilians."
 ---
 
 ## What is Economic Statecraft
@@ -124,7 +124,6 @@ Finally, advancing technologies will enable more targeted economic actions in th
 
 Overall, the terrain of economic statecraft faces new complexities. While states will continue developing tools to exert economic leverage, global trends create new difficulties and opportunities for the effective use of economic statecraft. States will need adaptable, nuanced approaches to stay relevant in this evolving domain.
 
----
 
 ---
 

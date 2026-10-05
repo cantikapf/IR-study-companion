@@ -1,13 +1,12 @@
 ---
 title: Energy Security
 slug: energy-security
-abstract: This chapter will explain about Energy Security
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "Turn off the electrical grid and modern society collapses in hours—which makes fuel pipelines and tanker routes the most sensitive pressure points on Earth. From the 20% of global oil navigating the narrow Strait of Hormuz to pipeline sabotage by militants, energy security is a high-stakes balance of the '4As' (Availability, Accessibility, Affordability, and Acceptability). When a country relies on foreign dictators for its heat and electricity, its foreign policy is immediately held hostage."
 ---
 
 ## Introduction
 
-**Energy** security involves having access to reliable, affordable, and sustainable energy resources. It ensures that economies and societies have the energy they need to function properly. **Energy security** has become a growing concern in recent years. There are rising anxieties about meeting future energy needs driven by population growth, urbanization, industrialization, increased incomes, and proliferation of energy-consuming devices. Recent developments, especially regarding global petroleum output, contribute to these worries. Fears are intensifying over the slowing pace of new petroleum discoveries, the shift of production from safe regions to more dangerous areas, and attacks targeting facilities. This highlights the complexities and vulnerabilities inherent in the global **energy supply** system. Energy security is crucial for economic development, quality of life, and national security. However, ensuring uninterrupted, affordable energy flows is becoming increasingly difficult. Tackling this complex challenge requires coordinated action across economic, technological, geopolitical, and environmental spheres. With wise policies and prudent choices, it is possible to achieve a more secure energy future. But this depends on recognizing the fragilities within the system and taking steps to strengthen energy security.
+**Energy security**, as formulated by the International Energy Agency (IEA) and scholar Daniel Yergin (2006, "Ensuring Energy Security"), is defined as the uninterrupted availability of energy sources at an affordable price, encompassing the "4As" framework: Availability, Accessibility, Affordability, and Acceptability (environmental sustainability). **Energy security** has become a growing concern in recent years. There are rising anxieties about meeting future energy needs driven by population growth, urbanization, industrialization, increased incomes, and proliferation of energy-consuming devices. Recent developments, especially regarding global petroleum output, contribute to these worries. Fears are intensifying over the slowing pace of new petroleum discoveries, the shift of production from safe regions to more dangerous areas, and attacks targeting facilities. This highlights the complexities and vulnerabilities inherent in the global **energy supply** system. Energy security is crucial for economic development, quality of life, and national security. However, ensuring uninterrupted, affordable energy flows is becoming increasingly difficult. Tackling this complex challenge requires coordinated action across economic, technological, geopolitical, and environmental spheres. With wise policies and prudent choices, it is possible to achieve a more secure energy future. But this depends on recognizing the fragilities within the system and taking steps to strengthen energy security.
 
 ## Complex and Vulnerable Energy Supply System
 
@@ -45,7 +44,7 @@ The vulnerability of concentrated, high-value facilities that are critical nodes
 
 ## Strategies to Address Insecurity
 
-With rising concerns over energy security, states are pursuing various strategies to boost supply and mitigate risks. One approach is leveraging military force to gain control over energy-rich regions and protect overseas supply routes. This could involve invading oil-producing nations, providing security assistance to allied energy suppliers, or securing key maritime chokepoints. However, military interventions are costly, controversial, and risk unintended consequences like inspiring further anti-Western sentiment.
+With rising concerns over energy security, states are pursuing various strategies to boost supply and mitigate risks. One approach is leveraging military force to gain control over energy-rich regions and protect overseas supply routes. This could involve invading oil-producing nations, providing security assistance to allied energy suppliers, or securing critical maritime chokepoints such as the Strait of Hormuz (transiting ~20% of global petroleum liquids), the Strait of Malacca, Bab el-Mandeb, and the Suez Canal. However, military interventions are costly, controversial, and risk unintended consequences like inspiring further anti-Western sentiment.
 
 Developing renewable energy sources like solar, wind, hydro, geothermal, and advanced biofuels provides an alternative to insecure fossil fuels. Renewables are domestically produced, minimizing reliance on imports. But most renewables remain more expensive than conventional energy and face constraints like intermittency (for solar and wind) and limited suitable geography (for hydro and geothermal). Widespread adoption requires further technology advances and infrastructure investment.  
 
@@ -53,11 +52,6 @@ Reducing energy consumption is another strategy, given inelastic supply. This co
 
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Energy Security" def1="Access to reliable, affordable, and sustainable energy resources" term2="Renewable Energy" def2="Energy from sources like solar, wind, hydro, and geothermal" term3="Energy Insecurity" def3="Vulnerability to disruptions in energy supply and access" term4="Global Energy Supply System" def4="Complex network of energy production, transportation, and distribution" %}
 

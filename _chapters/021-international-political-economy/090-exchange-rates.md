@@ -1,8 +1,7 @@
 ---
 title: 'The Tug-of-War Over Exchange Rates: Political Interests vs. Economic Welfare'
 slug: exchange-rates
-abstract: The system of international exchange rates
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "A government cannot manipulate its currency without picking domestic winners and losers. A weak currency makes national exports cheap overseas and creates factory jobs, but punishes domestic consumers with soaring prices for imported food and medicine. Caught in the 'Impossible Trinity' (Mundell-Fleming trilemma), central banks must choose between fixed exchange rates, free capital mobility, and independent monetary policy—proving that exchange rates are always politically charged battlegrounds."
 ---
 
 ## Introduction 
@@ -95,9 +94,6 @@ Key points in summary:
 - However, this approach has limitations in quantifying the impact of factors and addressing potential endogeneity.
 
 In conclusion, the society-centered approach emphasizes that exchange rate policies reflect a complex political process rather than just intentional state interventions. This perspective enriches our understanding of the dynamics shaping monetary and exchange rate policy outcomes.
-
----
-    
 
 
 ---

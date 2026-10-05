@@ -2,7 +2,7 @@
 title: Research Method in International Relations Study
 slug: research-ir-study
 abstract: Examine the empirical-interpretive divide in IR and some of the key debates around theory, epistemology, and methodology that shape the field
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Can we study wars and diplomatic treaties with the same mathematical precision that physicists use to study gravity? In International Relations, this debate divides scholars into two camps: Empiricists, who treat global politics as an objective reality measured by hard data and falsifiable hypotheses, and Interpretivists, who argue that human affairs can never be reduced to lab experiments because language, historical trauma, and cultural meanings construct the reality we live in."
 ---
 
 **International Relations** (IR) is a relatively young field of academic study that emerged in the early 20th century. IR as a discipline is focused on the study of the international system, including relations between states, international institutions, non-state actors like NGOs and MNCs, global issues like climate change, and more. 
@@ -89,7 +89,6 @@ As findings emerge, students encounter additional choices in analyzing and inter
 
 In essence, research is a series of decisions at every juncture. The ability to scrutinize options and articulate justifications is paramount for crafting a coherent, robust, and relevant research essay. Beginning with a well-defined and focused research question lays a sturdy foundation, empowering students to navigate the complexities of research through thoughtful and strategic decision-making.
 
----
 
 ---
 

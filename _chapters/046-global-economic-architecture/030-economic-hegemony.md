@@ -2,7 +2,7 @@
 title: 'Global Economic Architecture: The View on Global Economic Hegemony'
 slug: economic-hegemony
 abstract: International politics and the global economy are closely linked to the idea of hegemonic stability, which argues that a dominant world power is critical in upholding international rules and providing public goods. This material examines the characteristics and responsibilities of a hegemonic power and evaluates China, the United States, and the European Union as contenders for global economic hegemony.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Does an open global marketplace require an undisputed economic superpower to prevent nations from retreating behind protectionist walls? Hegemonic stability theory posits that world commerce thrives only when a dominant power underwrites crucial global public goods—policing international sea lanes, absorbing foreign exports, and supplying a trusted reserve currency. While China's industrial output fiercely challenges American supremacy, true global hegemony demands institutional trust, deep geopolitical alliances, and structural monetary power that raw factory volume alone cannot buy."
 ---
 
 ## Introduction
@@ -95,7 +95,6 @@ Specifically, the US has the world's largest economy by purchasing power parity,
 
 China and the EU may someday contend for hegemony, but currently lack the full spectrum dominance the US exhibits. Though facing relative decline, America preserves its superpower position and remains the closest match to a hegemon according to the theory of hegemonic stability. Barring major changes in the distribution of global power, the US is poised to maintain its leadership role for the foreseeable future.
 
----
 
 ---
 

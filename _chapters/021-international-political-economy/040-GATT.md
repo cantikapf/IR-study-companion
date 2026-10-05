@@ -1,8 +1,7 @@
 ---
 title: 'The World Trade Organization: From GATT to Global Trade Guardian'
 slug: gatt
-abstract: This chapter will show you the history of the World Trade Organization (WTO) and how it has become the global trade guardian.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "After catastrophic 1930s tariff wars deepened the Great Depression, nations created GATT in 1947 to dismantle trade barriers through non-discrimination and Most Favored Nation (MFN) status. In 1995, GATT evolved into the World Trade Organization (WTO), adding intellectual property protections and a binding dispute court. However, because trade rules require a powerful hegemon willing to enforce them, the decline of American leadership has plunged the WTO dispute system into paralysis."
 ---
 
 ## Brief History
@@ -118,9 +117,6 @@ The Doha Development Round of negotiations launched in 2001 aimed to lower trade
 Several developing countries also view developed country policies on issues like intellectual property rights and services liberalization as detrimental to their interests. They claim the WTO favors rich country corporate interests over development priorities. Food security, affordable medicines, and industrialization are concerns for poorer nations. The WTO needs to balance further trade liberalization with policy space for development.
 
 The stalled Doha talks and tensions between the developed and developing world have diminished the negotiating function of the WTO. Its dispute settlement system remains active but is facing criticism. The future path of the organization remains uncertain until major players can bridge differences on development policies and synchronize their trade agendas.
-
----
-    
 
 
 ---

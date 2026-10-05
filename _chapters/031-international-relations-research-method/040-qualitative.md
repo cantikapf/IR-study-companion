@@ -2,7 +2,7 @@
 title: 'Research Method: Qualitative'
 slug: qualitative
 abstract: Qualitative research, commonly called “interpretive research”, is a method that relies heavily on “thick” verbal descriptions of a particular social context being studied. 
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Numbers and spreadsheets can tell you how many missiles were fired, but they cannot tell you what a president whispered to their top general behind closed doors. Qualitative research provides the 'thick description' of international politics: unlocking the motives, fears, and cultural symbols driving leaders through in-depth interviews, diplomatic archives, and detailed case studies that raw statistics inevitably miss."
 ---
 
 # What is qualitative research?
@@ -154,7 +154,6 @@ To enhance validity and reduce bias in qualitative research, researchers can uti
 - Carefully examine unusual results or contradictions for potential explanations. Thoroughly analyzing outliers may reveal meaningful insights rather than mere anomalies.
 - Use a variety of data sources to corroborate and confirm findings through triangulation. Comparing data from multiple collection methods highlights inconsistencies and minimizes the impact of biases.
 
----
 
 ---
 

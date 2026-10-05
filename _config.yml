@@ -112,6 +112,16 @@ tracker:
 exclude:
   - _drafts
   - tmp
+  - simulation
+  - prototype
+  - tests
+  - node_modules
+  - .agents
+  - wiki
+  - .obsidian
+  - inbox
+  - .raw
+  - build.log
 
 page_width: 800px
 

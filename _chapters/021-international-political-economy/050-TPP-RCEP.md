@@ -1,8 +1,7 @@
 ---
 title: 'Beyond Tariffs: The Deeper Impacts of the TPP and RCEP Agreements'
 slug: tpp-rcep
-abstract: The development of TPP and RCEP agreement
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "In the battle for Asian-Pacific trade supremacy, two competing mega-regional blueprints emerged: the US-led TPP and the China-backed RCEP. While the TPP set strict Western standards on state-owned enterprises, environmental protections, and labor rights to deliberately balance China, RCEP created the world's largest tariff-cutting bloc prioritizing pragmatic market access across ASEAN. When Washington withdrew from TPP, it surrendered economic leadership, allowing Beijing to anchor regional supply chains."
 ---
 
 ## Introduction
@@ -98,9 +97,6 @@ The key differences lie in their membership, with the TPP originally led by the 
 On the other hand, the RCEP resembles a more traditional free trade agreement focused on facilitating trade in goods, services, and investments. It provides a foundation of intellectual property protections and enforcement, as well as measures to support e-commerce, SMEs, government procurement, and competition regulation to improve the business environment.
 
 Following the U.S. withdrawal in 2017, the remaining 11 countries (led by Japan and Australia) successfully revived the pact as the **Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)**, which entered into force in December 2018. Meanwhile, the **RCEP** officially entered into force on January 1, 2022, solidifying its place as the world's largest free trade bloc. Both agreements continue to shape Asia-Pacific economic architecture, supply chain resilience, and the geopolitical balance between high-standard regulatory integration (CPTPP) and broad tariff reduction (RCEP).
-
----
-    
 
 
 ---

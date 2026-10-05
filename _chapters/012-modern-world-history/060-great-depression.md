@@ -1,8 +1,7 @@
 ---
 slug: great-depression
 title: The Great Depression
-abstract: This chapter will cover the Great Depression
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "When Wall Street crashed in October 1929, economic distress weaponized extremist politics across the globe. Countries rushed to protect their own factories by raising beggar-thy-neighbor tariffs like the Smoot-Hawley Act, causing global trade to collapse by two-thirds. In Germany and Japan, mass unemployment destroyed faith in parliamentary democracy and opened the door directly to aggressive fascist expansion."
 ---
 
 
@@ -100,11 +99,14 @@ Although FDR faced criticisms from both sides - with conservatives denouncing go
 
 While the New Deal did not cure the Great Depression, which persisted until the wartime boom, it demonstrated that government could positively intervene in the economy and daily lives. This paradigm shift away from strict laissez-faire policies provided a sense of security and hope that the worst days were behind, even if economic troubles lingered. The New Deal formed the foundation for modern American liberalism, social welfare, and Keynesian economic theories favoring an expanded federal role.
 
-## Global Impact
+## Global Political-Economic Repercussions
 
-The Great Depression's global impact stretched from 1929 to 1939, causing protectionism and the breakdown of international trade. It hit nations deeply indebted to the U.S., like Germany and Great Britain, contributing to the rise of militarist governments in Germany and Japan and welfare systems in the U.S. and Britain. The era redefined the role of government and the economy, leaving lasting changes.
+From an International Political Economy (IPE) perspective, the Great Depression serves as the canonical empirical foundation for **Hegemonic Stability Theory**, articulated by **Charles P. Kindleberger** in *The World in Depression, 1929–1939* (1973). Kindleberger argued that the systemic collapse was exceptionally severe and protracted because Great Britain was no longer capable of stabilizing the international economic system (maintaining an open market for distress goods, providing counter-cyclical lending, and maintaining currency stability), while the United States was not yet willing to assume global hegemonic responsibility.
 
----
+In the absence of a stabilizing hegemon, the international trading and monetary regimes fragmented into competing, exclusionary regional blocs:
+- **Beggar-Thy-Neighbor Protectionism**: The passage of the US **Smoot-Hawley Tariff Act (1930)** provoked immediate retaliatory tariff walls across Europe and Canada, causing world trade to contract by two-thirds between 1929 and 1934.
+- **Monetary Collapse & Autarky**: The abandonment of the Gold Standard triggered competitive currency devaluations and the division of the world into currency blocs (the Sterling Area, the Dollar bloc, and the Gold bloc).
+- **Geopolitical Repercussions**: In Weimar Germany and Imperial Japan, economic strangulation dismantled democratic governance, discredited internationalist liberal elites, and empowered militaristic, expansionist regimes pursuing territorial autarky (*Lebensraum* and the Greater East Asia Co-Prosperity Sphere), directly propelling the international system toward World War II.
 
 ---
 

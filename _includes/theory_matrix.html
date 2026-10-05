@@ -1,22 +1,21 @@
 <style>
 .matrix-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 32px 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: var(--lms-surface);
+    border-radius: var(--lms-radius-lg);
+    padding: 1.75rem;
+    margin: 2.5rem 0;
+    box-shadow: var(--lms-shadow-sm);
+    border: 1px solid var(--lms-hairline);
     overflow-x: auto;
 }
 .matrix-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: inherit;
-    border-bottom: 2px solid #4facfe;
+    font-size: 1.35rem;
+    font-weight: 750;
+    margin-bottom: 1.25rem;
+    color: var(--lms-ink-primary);
+    border-bottom: 2px solid var(--lms-ink-primary);
     display: inline-block;
-    padding-bottom: 4px;
+    padding-bottom: 0.25rem;
 }
 .theory-table {
     width: 100%;
@@ -28,40 +27,43 @@
     background-color: transparent !important;
 }
 .theory-table th {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
-    padding: 16px;
+    background: var(--lms-ink-primary);
+    color: var(--lms-canvas);
+    padding: 12px 16px;
     text-align: left;
-    font-weight: 600;
+    font-weight: 650;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+body.dark-theme .theory-table th {
+    background: #27272a;
+    color: #f4f4f5;
 }
 .theory-table th:first-child {
-    border-top-left-radius: 8px;
+    border-top-left-radius: var(--lms-radius-md);
 }
 .theory-table th:last-child {
-    border-top-right-radius: 8px;
+    border-top-right-radius: var(--lms-radius-md);
 }
 .theory-table td {
-    padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
-    transition: background 0.3s;
-    color: #333;
-}
-body.dark-theme .theory-table td {
-    color: #f3f4f6;
-    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 12px 16px;
+    background: var(--lms-surface) !important;
+    border-bottom: 1px solid var(--lms-hairline);
+    transition: background var(--lms-duration) var(--lms-ease);
+    color: var(--lms-ink-secondary);
+    font-size: 0.925rem;
+    line-height: 1.45;
 }
 .theory-table tr:last-child td {
     border-bottom: none;
 }
 .theory-table tr:hover td {
-    background: rgba(79, 172, 254, 0.1) !important;
+    background: var(--lms-hover) !important;
 }
 .theory-table td strong {
-    color: #4facfe;
-}
-body.dark-theme .theory-table td strong {
-    color: #60a5fa;
+    color: var(--lms-ink-primary);
+    font-weight: 700;
 }
 </style>
 

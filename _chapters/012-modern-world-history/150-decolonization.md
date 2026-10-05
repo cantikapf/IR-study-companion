@@ -1,8 +1,7 @@
 ---
 slug: decolonization
 title: Decolonization and Development
-abstract: This chapter will cover the Decolonization and Development
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Following World War II, exhausted European empires could no longer afford to hold onto their overseas colonies, sparking a tidal wave of liberation across Asia and Africa. Emerging leaders met at the historic 1955 Bandung Conference to forge the Non-Aligned Movement, demanding dignity and refusing to be pawns in the US-Soviet rivalry. Yet hasty imperial withdrawals left behind arbitrary borders that still spark ethnic and territorial conflicts today."
 ---
 
 
@@ -99,8 +98,6 @@ The transition was more turbulent in French-ruled African colonies like Algeria.
 Pan-Africanism, an influential force across much of Africa, encountered obstacles in the unique case of apartheid South Africa as well. The apartheid regime fiercely maintained white minority rule for decades before finally relenting in the 1990s. 
 
 So while most of Africa rapidly gained independence in the 1950s-60s post-WWII wave of decolonization, exceptions like apartheid South Africa and war-torn Algeria faced a more arduous road. But the spirit of pan-Africanism succeeded in helping dismantle formal empires across the continent.
-
----
 
 ---
 

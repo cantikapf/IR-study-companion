@@ -1,0 +1,942 @@
+"""
+Generate 180 comprehensive, academically rigorous exam questions (10 per module for all 18 modules)
+for IR Study Companion's Milestone M7 Assessment Engine.
+"""
+
+import json
+from pathlib import Path
+
+def create_module_exams():
+    exams = {
+        "010": {
+            "module_num": "010",
+            "module_title": "Introduction to International Relations",
+            "description": "Comprehensive review of the international system, sovereignty, anarchy, and foundational theories.",
+            "questions": [
+                {
+                    "q": "What is the defining structural characteristic of the international system in political realism?",
+                    "opts": ["Hierarchical governance under international law", "Anarchy understood as the absence of a centralized global authority", "Organic collective solidarity among nation-states", "Universal democratic convergence under liberal norms"],
+                    "correct": 1,
+                    "explanation": "Realism defines the international system as anarchic, meaning there is no overarching world government with legitimate monopoly over the use of force."
+                },
+                {
+                    "q": "Which landmark treaty system is historically recognized as laying the foundational principles of modern state sovereignty and legal equality?",
+                    "opts": ["Treaty of Versailles (1919)", "Peace of Westphalia (1648)", "Congress of Vienna (1815)", "Montevideo Convention (1933)"],
+                    "correct": 1,
+                    "explanation": "The 1648 Peace of Westphalia established the principle of 'cuius regio, eius religio' and institutionalized state sovereignty and domestic jurisdiction."
+                },
+                {
+                    "q": "Under Article 1 of the Montevideo Convention on the Rights and Duties of States (1933), which criterion is NOT required for statehood?",
+                    "opts": ["A permanent population", "A defined territory", "Membership in the United Nations", "Capacity to enter into relations with other states"],
+                    "correct": 2,
+                    "explanation": "Montevideo specifies four criteria: permanent population, defined territory, effective government, and capacity for international relations. UN membership is not a legal criterion for statehood."
+                },
+                {
+                    "q": "How does Kenneth Waltz categorize the levels of analysis in his seminal work 'Man, the State, and War' (1959)?",
+                    "opts": ["Local, regional, and global", "Individual (human nature), the state (regime type), and the international system", "Economic, cultural, and military", "Primary, secondary, and tertiary security circles"],
+                    "correct": 1,
+                    "explanation": "Waltz introduced the three images or levels of analysis: the first image (individual), second image (state/regime type), and third image (the international system/structure)."
+                },
+                {
+                    "q": "Which of the following is considered a non-state transnational actor capable of exercising moral/normative authority in world politics?",
+                    "opts": ["International Non-Governmental Organizations (INGOs) like Amnesty International", "Sovereign naval task forces", "National intelligence agencies", "Domestic taxation authorities"],
+                    "correct": 0,
+                    "explanation": "INGOs mobilize transnational advocacy networks and exercise normative leverage through naming and shaming, independent of sovereign state coercion."
+                },
+                {
+                    "q": "What distinguishes the academic study of Foreign Policy Analysis (FPA) from systemic IR theory?",
+                    "opts": ["FPA only analyzes commercial trade tariffs", "FPA opens the 'black box' of the state to investigate domestic decision-makers, psychology, and institutions", "FPA completely ignores the actions of individual leaders", "FPA assumes all states are identical rational actors with identical preferences"],
+                    "correct": 1,
+                    "explanation": "Unlike structural realism which treats the state as a unitary black box, FPA examines how specific leaders, bureaucratic politics, and domestic coalitions formulate foreign policy."
+                },
+                {
+                    "q": "What core concept describes a state's supreme, unqualified authority over its defined territory and domestic population?",
+                    "opts": ["Supranationalism", "Sovereignty", "Protectorate hegemony", "Extraterritorial jurisdiction"],
+                    "correct": 1,
+                    "explanation": "Sovereignty denotes ultimate legal authority within a bounded territory (internal sovereignty) and freedom from external subordination (external sovereignty)."
+                },
+                {
+                    "q": "In the evolution of IR as an independent discipline, which chair established in 1919 at Aberystwyth University is celebrated as the discipline's origin?",
+                    "opts": ["Woodrow Wilson Chair of International Politics", "Machiavelli Chair of Statecraft", "Adam Smith Chair of Political Economy", "Metternich Chair of Balance of Power"],
+                    "correct": 0,
+                    "explanation": "The Woodrow Wilson Chair at Aberystwyth (Wales), endowed by David Davies in 1919, was the world's first university chair dedicated to International Politics."
+                },
+                {
+                    "q": "According to Hans Morgenthau's 'Politics Among Nations' (1948), how do classical realists define the primary currency of international politics?",
+                    "opts": ["Global moral consensus", "Interest defined in terms of power", "International legal treaties", "Shared cultural symbols"],
+                    "correct": 1,
+                    "explanation": "Morgenthau's second principle of political realism states that states think and act in terms of interest defined as power."
+                },
+                {
+                    "q": "The shift from the Cold War bipolar system to the immediate post-1991 era was best characterized as:",
+                    "opts": ["Symmetric multipolarity", "A unipolar moment dominated by the United States", "A world without any sovereign states", "Strict non-aligned tripolarity"],
+                    "correct": 1,
+                    "explanation": "Charles Krauthammer famously termed the 1990s as the 'unipolar moment', reflecting American military, economic, and institutional primacy after the Soviet collapse."
+                }
+            ]
+        },
+        "011": {
+            "module_num": "011",
+            "module_title": "Introduction to Social Science",
+            "description": "Epistemological foundations, ontological debates, positivism vs interpretivism, and research frameworks.",
+            "questions": [
+                {
+                    "q": "What epistemological stance asserts that the social world can be studied using the objective, empirical methods of the natural sciences?",
+                    "opts": ["Interpretivism", "Positivism", "Critical deconstruction", "Solipsism"],
+                    "correct": 1,
+                    "explanation": "Positivism posits that social phenomena can be explained through empirical observation, hypothesis testing, and the discovery of law-like causal regularities."
+                },
+                {
+                    "q": "Which philosophical question represents an ontological inquiry?",
+                    "opts": ["What methods should we use to gather survey data?", "What is the nature of the reality that exists in the world?", "How can we know that our observations are true?", "What ethical standards should guide interviews?"],
+                    "correct": 1,
+                    "explanation": "Ontology concerns the nature of reality and what exists (e.g., whether social structures exist independently of human consciousness)."
+                },
+                {
+                    "q": "In the agency-versus-structure debate, what does 'structure' refer to?",
+                    "opts": ["The physical architecture of government buildings", "Recurring patterned arrangements and institutional rules that constrain or enable choices", "The voluntary decisions of individual human beings", "The military command hierarchy alone"],
+                    "correct": 1,
+                    "explanation": "Structures are the social, economic, and institutional systems that shape, constrain, and channel the choices of social agents."
+                },
+                {
+                    "q": "What distinguishes interpretivist or post-positivist methodology from behavioralism?",
+                    "opts": ["Interpretivism completely rejects qualitative interviews", "Interpretivism emphasizes understanding subjective meaning, social context, and intersubjectivity rather than universal laws", "Interpretivism only studies laboratory animals", "Interpretivism assumes numbers are the only valid form of truth"],
+                    "correct": 1,
+                    "explanation": "Interpretivism focuses on 'Verstehen' (understanding) and how social actors construct meaning within specific historical and cultural settings."
+                },
+                {
+                    "q": "Thomas Kuhn's concept of a 'paradigm shift' in 'The Structure of Scientific Revolutions' (1962) explains that scientific progress:",
+                    "opts": ["Occurs solely through smooth, linear accumulations of isolated facts", "Involves revolutionary disruptions when accumulated anomalies overthrow the reigning scientific worldview", "Is completely dictated by government decree", "Never alters foundational assumptions"],
+                    "correct": 1,
+                    "explanation": "Kuhn argued that science alternates between periods of 'normal science' and revolutionary 'paradigm shifts' when old frameworks fail to explain observed anomalies."
+                },
+                {
+                    "q": "What is an independent variable (IV) in an empirical research design?",
+                    "opts": ["The outcome or effect that the researcher seeks to explain", "The factor hypothesized to cause, influence, or explain variation in the outcome", "A variable that cannot be measured under any circumstances", "The statistical software used to run models"],
+                    "correct": 1,
+                    "explanation": "The independent variable is the explanatory factor or cause; the dependent variable (DV) is the phenomenon being explained."
+                },
+                {
+                    "q": "What is meant by 'falsifiability' in Karl Popper's philosophy of science?",
+                    "opts": ["A theory must be inherently dishonest", "A scientific theory must make empirical predictions that could conceivably be proven false by observation", "A theory must be accepted by 100% of scholars", "A hypothesis must rely exclusively on mathematical equations"],
+                    "correct": 1,
+                    "explanation": "Popper established that for a theory to be demarcated as scientific, it must be testable and refutable by empirical counter-evidence."
+                },
+                {
+                    "q": "Max Weber's concept of 'Verstehen' in sociology and political analysis refers to:",
+                    "opts": ["Statistical calculation of variance", "Interpretive understanding of the subjective intentions and meanings behind human actions", "Authoritarian state commands", "Biological determinism"],
+                    "correct": 1,
+                    "explanation": "Verstehen involves grasping the subjective meaning, values, and motives that guide human actions within their social context."
+                },
+                {
+                    "q": "In social science methodology, what is 'triangulation'?",
+                    "opts": ["Plotting coordinates using three satellites", "Using multiple methods, data sources, or theoretical perspectives to corroborate research findings", "Excluding qualitative data from analysis", "Restricting research to three specific countries"],
+                    "correct": 1,
+                    "explanation": "Triangulation increases validity by cross-verifying findings across multiple qualitative and quantitative data sources or methods."
+                },
+                {
+                    "q": "Which of the following illustrates a normative, as opposed to an empirical, statement in social inquiry?",
+                    "opts": ["Democracies have historically engaged in fewer wars against other democracies", "Governments should allocate at least 5% of GDP to foreign development assistance as a moral duty", "Bilateral trade between Country A and Country B grew by 12% in 2024", "States with nuclear weapons maintain second-strike deterrence capabilities"],
+                    "correct": 1,
+                    "explanation": "Normative statements deal with value judgments, morals, and what 'ought' to be, whereas empirical statements describe what 'is' based on observable facts."
+                }
+            ]
+        },
+        "012": {
+            "module_num": "012",
+            "module_title": "Modern World History (1648–Cold War)",
+            "description": "Historical evolution of great power diplomacy, imperialism, world wars, and ideological rivalry.",
+            "questions": [
+                {
+                    "q": "The 1648 Peace of Westphalia brought an end to which protracted European religious conflict?",
+                    "opts": ["The Napoleonic Wars", "The Thirty Years' War", "The Seven Years' War", "The War of the Spanish Succession"],
+                    "correct": 1,
+                    "explanation": "The Treaties of Osnabrück and Münster (1648) ended the devastating Thirty Years' War in the Holy Roman Empire."
+                },
+                {
+                    "q": "What diplomatic system was established at the Congress of Vienna (1815) to maintain European stability following Napoleon's defeat?",
+                    "opts": ["The Concert of Europe", "The League of Nations", "The North Atlantic Treaty Organization", "The Warsaw Pact"],
+                    "correct": 0,
+                    "explanation": "The Concert of Europe, engineered by Metternich, Castlereagh, and Talleyrand, was a multilateral balance-of-power consultation system among Great Powers."
+                },
+                {
+                    "q": "Which major alliance bloc contested the Triple Entente (Britain, France, Russia) leading into the outbreak of World War I in 1914?",
+                    "opts": ["The Holy Alliance", "The Triple Alliance (Germany, Austria-Hungary, Italy)", "The Axis Powers", "The Warsaw Treaty Organization"],
+                    "correct": 1,
+                    "explanation": "The Triple Alliance consisted of Germany, Austria-Hungary, and Italy (though Italy remained neutral initially and later joined the Entente in 1915)."
+                },
+                {
+                    "q": "What article of the Treaty of Versailles (1919) assigned sole moral and financial responsibility for World War I to Germany?",
+                    "opts": ["Article 10 (Covenant of the League)", "Article 231 (The War Guilt Clause)", "Article 48 (Weimar Emergency Powers)", "Article 51 (Self-Defense)"],
+                    "correct": 1,
+                    "explanation": "Article 231 forced Germany to accept full responsibility for all loss and damage caused by the war, justifying massive reparations."
+                },
+                {
+                    "q": "Which international security organization was created in 1919 under Woodrow Wilson's Fourteen Points, yet crippled by the United States' refusal to join?",
+                    "opts": ["United Nations", "League of Nations", "International Court of Justice", "Permanent Court of Arbitration"],
+                    "correct": 1,
+                    "explanation": "The US Senate rejected ratification of the Treaty of Versailles, leaving the League of Nations without American participation and enforcement capacity."
+                },
+                {
+                    "q": "The 1938 Munich Agreement, wherein Britain and France conceded the Czechoslovak Sudetenland to Nazi Germany, is the textbook historical example of:",
+                    "opts": ["Collective security", "Appeasement", "Preemptive strike", "Containment"],
+                    "correct": 1,
+                    "explanation": "Neville Chamberlain's concession to Hitler's territorial demands at Munich is widely cited as the cautionary archetype of diplomatic appeasement."
+                },
+                {
+                    "q": "What American grand strategic doctrine, formulated in George Kennan's 1947 'Long Telegram' and 'X Article', guided Cold War policy toward the USSR?",
+                    "opts": ["Rollback and Regime Change", "Containment of Soviet Expansionism", "Isolationist Retrenchment", "Unilateral Disarmament"],
+                    "correct": 1,
+                    "explanation": "Kennan advocated patient, firm containment of Soviet geopolitical expansion until internal contradictions eroded Soviet power."
+                },
+                {
+                    "q": "The 1962 Cuban Missile Crisis was peacefully resolved when the United States agreed to remove Jupiter missiles from Turkey in exchange for:",
+                    "opts": ["The dismantling and return of Soviet nuclear missiles deployed in Cuba", "The reunification of East and West Germany", "A permanent US withdrawal from NATO", "Soviet entry into the International Monetary Fund"],
+                    "correct": 0,
+                    "explanation": "Kennedy and Khrushchev brokered a public agreement for Soviet missile withdrawal from Cuba alongside a secret US pledge to withdraw Jupiter missiles from Turkey."
+                },
+                {
+                    "q": "The Truman Doctrine (1947) was initially announced to provide urgent military and economic assistance to which two vulnerable nations?",
+                    "opts": ["Poland and Czechoslovakia", "Greece and Turkey", "Japan and South Korea", "Vietnam and Cambodia"],
+                    "correct": 1,
+                    "explanation": "President Harry Truman requested $400 million to assist Greece and Turkey against communist insurgencies and Soviet pressure on the Turkish Straits."
+                },
+                {
+                    "q": "What institutional military pact was founded in 1955 by the Soviet Union as a direct counterweight to West Germany's integration into NATO?",
+                    "opts": ["The Warsaw Pact", "The Comintern", "The Non-Aligned Movement", "The Shanghai Cooperation Organisation"],
+                    "correct": 0,
+                    "explanation": "The Warsaw Treaty Organization (Warsaw Pact) unified the defense of the USSR and seven Eastern European satellite states in response to West Germany joining NATO."
+                }
+            ]
+        },
+        "013": {
+            "module_num": "013",
+            "module_title": "Indonesian Foreign Policy & Politics",
+            "description": "Bebas-Aktif doctrine, historical milestones, archipelagic outlook, and post-1998 democratic transition.",
+            "questions": [
+                {
+                    "q": "What core foreign policy doctrine was articulated by Vice President Mohammad Hatta in his historic September 1948 speech 'Mendayung Antara Dua Karang'?",
+                    "opts": ["Isolationist neutrality", "Politik Luar Negeri Bebas dan Aktif (Independent and Active)", "Alignment with the Sino-Soviet Bloc", "Unconditional integration with Western capitalism"],
+                    "correct": 1,
+                    "explanation": "Hatta argued Indonesia must not become an object in the Cold War rivalry between the US and USSR, but an active agent pursuing peace and national interests."
+                },
+                {
+                    "q": "Which landmark international diplomatic conference hosted in West Java in April 1955 gave birth to the Ten Principles of Bandung and catalyzed the Non-Aligned Movement?",
+                    "opts": ["The Bogor Summit", "The Asian-African Conference (Konferensi Asia-Afrika)", "The ASEAN Bali Concord I", "The Non-Aligned Movement 10th Summit"],
+                    "correct": 1,
+                    "explanation": "The 1955 Asian-African Conference in Bandung brought together 29 newly independent nations to promote anti-colonialism and peaceful coexistence."
+                },
+                {
+                    "q": "The Djuanda Declaration of December 13, 1957, fundamentally transformed Indonesia's maritime territory by establishing:",
+                    "opts": ["The 200-nautical-mile Exclusive Economic Zone alone", "The Archipelagic State Principle (Wawasan Nusantara), measuring territorial seas from straight baselines connecting outermost islands", "The complete demilitarization of the Malacca Strait", "The leasing of all national ports to foreign operators"],
+                    "correct": 1,
+                    "explanation": "Prime Minister Djuanda declared that all waters surrounding and connecting the Indonesian islands constitute an indivisible sovereign national territory."
+                },
+                {
+                    "q": "Which 1982 international treaty formally codified Indonesia's Archipelagic State principle into binding multilateral law under Part IV?",
+                    "opts": ["Vienna Convention on Diplomatic Relations", "United Nations Convention on the Law of the Sea (UNCLOS 1982)", "Geneva Convention on the High Seas 1958", "Marrakesh Agreement"],
+                    "correct": 1,
+                    "explanation": "Thanks to decades of Indonesian diplomacy led by Mochtar Kusumaatmadja and Hasjim Djalal, UNCLOS 1982 Part IV officially recognized Archipelagic States."
+                },
+                {
+                    "q": "What confrontational foreign policy campaign did President Sukarno launch in 1963 opposing the formation of the Federation of Malaysia?",
+                    "opts": ["Operasi Trikora", "Konfrontasi (Ganyang Malaysia)", "Operasi Seroja", "Poros Maritim Dunia"],
+                    "correct": 1,
+                    "explanation": "Sukarno denounced the proposed Malaysian federation as a British 'neo-colonial project' and initiated the military-diplomatic Konfrontasi campaign (1963–1966)."
+                },
+                {
+                    "q": "Under the New Order (Orde Baru) regime of President Soeharto, what regional organization became the cornerstone of Indonesian foreign policy in August 1967?",
+                    "opts": ["SEATO", "ASEAN (Association of Southeast Asian Nations)", "APEC", "OPEC"],
+                    "correct": 1,
+                    "explanation": "Adam Malik joined counterparts from Malaysia, the Philippines, Singapore, and Thailand to sign the Bangkok Declaration on August 8, 1967, prioritizing regional reconciliation."
+                },
+                {
+                    "q": "Which Indonesian national law currently serves as the primary legal framework governing the conduct and execution of foreign relations?",
+                    "opts": ["UU No. 37 Tahun 1999 tentang Hubungan Luar Negeri", "UU No. 34 Tahun 2004 tentang TNI", "UU No. 24 Tahun 2000 tentang Perjanjian Internasional", "UU No. 23 Tahun 2019 tentang PSDN"],
+                    "correct": 0,
+                    "explanation": "UU No. 37/1999 codifies the definitions, institutional coordination (Kemlu), and principles of Indonesia's independent and active foreign policy."
+                },
+                {
+                    "q": "In the post-1998 Reformasi era, what major structural reform officially separated the national police (Polri) from the military (TNI) to demilitarize internal security?",
+                    "opts": ["The 1945 Constitution original text", "MPR Decrees No. VI and VII of 2000", "The Supersemar Decree", "The Presidential Decree of 5 July 1959"],
+                    "correct": 1,
+                    "explanation": "Ketetapan MPR No. VI/MPR/2000 and VII/MPR/2000 formalized the structural separation of Polri (domestic security) from TNI (state defense)."
+                },
+                {
+                    "q": "What foreign policy vision was championed by President Susilo Bambang Yudhoyono to describe Indonesia's inclusive global engagement?",
+                    "opts": ["'A Thousand Friends and Zero Enemies'", "'Crush Neo-Colonialism'", "'Splendid Isolation'", "'Asia for Asians'"],
+                    "correct": 0,
+                    "explanation": "President SBY characterized Indonesia's post-Reformasi diplomacy as 'all directions foreign policy' encapsulated by 'thousand friends and zero enemies'."
+                },
+                {
+                    "q": "The Global Maritime Fulcrum (Poros Maritim Dunia) doctrine announced by President Joko Widodo in 2014 focuses primarily on:",
+                    "opts": ["Closing all Indonesian straits to international shipping", "Leveraging Indonesia's geostrategic position between the Indian and Pacific Oceans across five maritime pillars", "Withdrawing from all ASEAN security treaties", "Dissolving the Indonesian navy in favor of air power"],
+                    "correct": 1,
+                    "explanation": "The GMF doctrine aims to transform Indonesia into a prominent maritime power through maritime culture, resource management, connectivity, diplomacy, and defense."
+                }
+            ]
+        },
+        "021": {
+            "module_num": "021",
+            "module_title": "Classical & Critical IPE",
+            "description": "Mercantilism, liberalism, structural Marxism, Bretton Woods monetary regimes, and hegemonic stability.",
+            "questions": [
+                {
+                    "q": "Which classical political economy tradition emphasizes that economic wealth is a critical instrument of state military power and national security?",
+                    "opts": ["Cosmopolitan Liberalism", "Mercantilism (Economic Nationalism)", "Pure Utopianism", "Anarcho-Syndicalism"],
+                    "correct": 1,
+                    "explanation": "Mercantilism asserts that the state must manage trade, accumulate reserves, and protect vital industries because economic wealth directly underpins national sovereignty and power."
+                },
+                {
+                    "q": "Adam Smith's concept of the 'invisible hand' in 'The Wealth of Nations' (1776) argues that:",
+                    "opts": ["Government bureaucrats must fix all commodity prices", "Individuals pursuing their self-interest in a competitive market unintentionally maximize the collective wealth of society", "Central banks should monopolize all agricultural production", "Tariffs should increase by 50% every year"],
+                    "correct": 1,
+                    "explanation": "Smith argued that market mechanisms of price and competition harness individual self-interest to efficiently produce goods and generate social prosperity."
+                },
+                {
+                    "q": "David Ricardo's famous law of 'Comparative Advantage' demonstrates that two nations will benefit from international trade even if:",
+                    "opts": ["One country possesses an absolute advantage in producing every single good", "Both countries use different currencies", "Both countries operate planned socialist economies", "Neither country imposes any domestic taxes"],
+                    "correct": 0,
+                    "explanation": "Ricardo showed that as long as opportunity costs differ, nations gain by specializing in goods where their comparative advantage is greatest."
+                },
+                {
+                    "q": "In Marxist IPE, what was Vladimir Lenin's explanation for why capitalism had delayed its anticipated domestic collapse?",
+                    "opts": ["Capitalism successfully eliminated all inequality", "Imperialism allowed European monopolies to exploit colonial markets and super-profits, temporarily pacifying the domestic working class", "Capitalists voluntarily turned factories over to the state", "International law abolished economic crises"],
+                    "correct": 1,
+                    "explanation": "In 'Imperialism, the Highest Stage of Capitalism' (1917), Lenin argued that imperial expansion abroad provided outlets for surplus capital and delayed systemic collapse."
+                },
+                {
+                    "q": "The 1944 Bretton Woods Conference in New Hampshire created which two foundational international financial institutions?",
+                    "opts": ["The World Trade Organization and the OECD", "The International Monetary Fund (IMF) and the International Bank for Reconstruction and Development (World Bank)", "The European Central Bank and the Bank for International Settlements", "The G20 and the Financial Stability Board"],
+                    "correct": 1,
+                    "explanation": "Bretton Woods established the IMF (for balance-of-payments stabilization) and the IBRD/World Bank (for post-war reconstruction and development)."
+                },
+                {
+                    "q": "What major monetary shock occurred in August 1971 when US President Richard Nixon unilaterally suspended the dollar's convertibility into gold?",
+                    "opts": ["The creation of the Euro", "The collapse of the Bretton Woods fixed exchange rate system", "The founding of OPEC", "The introduction of the Marshall Plan"],
+                    "correct": 1,
+                    "explanation": "The 'Nixon Shock' dissolved the gold-dollar peg, transitioning the global financial system into a regime of floating fiat exchange rates."
+                },
+                {
+                    "q": "Charles Kindleberger's Hegemonic Stability Theory posits that an open, liberal global economic order requires:",
+                    "opts": ["A single dominant hegemonic power willing and able to enforce rules, provide liquidity, and act as a lender of last resort", "A world government with absolute police power", "The total abolition of private commercial banks", "Strict autarky among all member states"],
+                    "correct": 0,
+                    "explanation": "Kindleberger demonstrated that the 1929 Great Depression worsened because Britain could no longer act as global stabilizer and the US was not yet willing to do so."
+                },
+                {
+                    "q": "John Ruggie coined the term 'Embedded Liberalism' to explain the post-WWII compromise that paired international free trade with:",
+                    "opts": ["Domestic state welfare, full employment policies, and social safety nets", "Unrestricted international capital flows without capital controls", "Total state ownership of agricultural land", "The complete privatization of public schools"],
+                    "correct": 0,
+                    "explanation": "Embedded liberalism allowed states to pursue multilateral tariff reductions abroad while protecting domestic citizens through Keynesian welfare policies at home."
+                },
+                {
+                    "q": "The Triffin Dilemma points to the inherent structural contradiction faced by a nation whose national currency serves as the primary global reserve asset, namely balancing:",
+                    "opts": ["High inflation against military spending", "Providing sufficient liquidity to the global economy (incurring deficits) versus maintaining long-term confidence in the currency's value", "Domestic gold production versus silver reserves", "Exporting agricultural surplus versus subsidizing fuel"],
+                    "correct": 1,
+                    "explanation": "Robert Triffin noted that to satisfy global liquidity, the reserve currency issuer must run continuous balance-of-payments deficits, which eventually undermines confidence in the currency."
+                },
+                {
+                    "q": "Raúl Prebisch and Hans Singer's 'Prebisch-Singer Thesis' argued that developing nations face a long-term structural disadvantage because:",
+                    "opts": ["Their climates prevent scientific research", "The terms of trade between primary commodity exports and manufactured capital imports deteriorate over time", "They refuse to sign bilateral investment treaties", "Their populations prefer saving over consuming"],
+                    "correct": 1,
+                    "explanation": "Prebisch-Singer showed that primary commodities exhibit low income elasticity of demand compared to manufactured industrial goods, transferring wealth from the periphery to the core."
+                }
+            ]
+        },
+        "022": {
+            "module_num": "022",
+            "module_title": "Security Studies & Warfare",
+            "description": "Realist security, the security dilemma, nuclear deterrence, Copenhagen securitization, and asymmetric threats.",
+            "questions": [
+                {
+                    "q": "Robert Jervis's seminal formulation of the 'Security Dilemma' explains that under anarchy:",
+                    "opts": ["States intentionally seek to ruin their own alliances", "Measures taken by one state to increase its own security inadvertently decrease the security of other states, sparking an arms spiral", "Economic trade inevitably leads to territorial war", "Disarmament always prevents foreign invasion"],
+                    "correct": 1,
+                    "explanation": "Because military capabilities are inherently ambiguous, defensive armaments are perceived by neighbors as offensive threats, triggering mutual fear and counter-mobilization."
+                },
+                {
+                    "q": "What strategic condition exists when both nuclear-armed rivals possess assured second-strike capabilities capable of inflicting catastrophic retaliation?",
+                    "opts": ["First-Strike Supremacy", "Mutual Assured Destruction (MAD)", "Conventional Deterrence Failure", "Tactical Deniability"],
+                    "correct": 1,
+                    "explanation": "MAD creates nuclear stability because neither side can launch a surprise disarming first strike without guaranteeing their own national destruction in retaliation."
+                },
+                {
+                    "q": "According to the Copenhagen School of security studies (Barry Buzan, Ole Wæver), what is 'securitization'?",
+                    "opts": ["Purchasing stocks and municipal bonds", "A discursive process whereby an issue is framed as an existential threat, legitimizing extraordinary, non-democratic measures", "Building concrete walls along borders", "Stationing soldiers exclusively in barracks"],
+                    "correct": 1,
+                    "explanation": "Securitization is a speech act that moves an issue beyond regular political bargaining into the realm of emergency politics by claiming an existential threat."
+                },
+                {
+                    "q": "In Stephen Walt's 'Balance of Threat' theory, what does he argue states balance against?",
+                    "opts": ["Aggregate power alone", "Perceived threats, determined by aggregate power, geographic proximity, offensive capability, and aggressive intentions", "Only nations with communist ideology", "Only nations with smaller populations"],
+                    "correct": 1,
+                    "explanation": "Walt revised Waltz's balance-of-power theory, demonstrating that states align against the most threatening state, not necessarily the most powerful one."
+                },
+                {
+                    "q": "Democratic Peace Theory's monadic versus dyadic distinction clarifies that while democracies may fight wars:",
+                    "opts": ["Democracies almost never go to war against other established democracies (dyadic peace)", "Democracies never use military force under any circumstances (monadic peace)", "Democracies only fight other democracies", "Democracies have abolished armed forces entirely"],
+                    "correct": 0,
+                    "explanation": "The dyadic proposition of Democratic Peace Theory is strongly supported empirically: mature democracies rarely, if ever, fight wars with each other."
+                },
+                {
+                    "q": "What constitutes an 'asymmetric conflict' in military and strategic terminology?",
+                    "opts": ["A war fought exclusively between two nuclear superpowers", "Conflict between belligerents whose relative military power, strategy, and tactics differ significantly, such as states versus insurgent guerrillas", "A naval battle between identical cruisers", "A border dispute mediated by the UN Security Council"],
+                    "correct": 1,
+                    "explanation": "Asymmetric warfare pits structurally mismatched opponents against one another, where the weaker actor employs guerrilla tactics, terrorism, or cyber warfare to bypass conventional superiority."
+                },
+                {
+                    "q": "The 1994 UNDP Human Development Report revolutionized security concepts by introducing 'Human Security', shifting the referent object of security from:",
+                    "opts": ["The sovereign state and its territorial defense to the individual human being and their freedom from fear and want", "The United Nations to multinational corporations", "Conventional soldiers to nuclear warheads", "Developing nations to Western superpowers"],
+                    "correct": 0,
+                    "explanation": "Human Security shifts security analysis from state-centric borders to people-centered protection across economic, food, health, environmental, personal, community, and political domains."
+                },
+                {
+                    "q": "In Herman Kahn and Thomas Schelling's nuclear strategy, what is 'countervalue' targeting?",
+                    "opts": ["Targeting enemy military bases and missile silos", "Targeting enemy population centers, cities, and economic infrastructure to maximize retaliatory terror", "Targeting only uninhabited islands", "Targeting military communication satellites exclusively"],
+                    "correct": 1,
+                    "explanation": "Countervalue targeting aims at the adversary's cities, civilian population, and industrial base, as opposed to 'counterforce' which targets the enemy's military forces."
+                },
+                {
+                    "q": "What is the core argument of the Offense-Defense Balance theory in international security?",
+                    "opts": ["Defense is always impossible in modern warfare", "War is far more likely when offensive weapons and doctrines have an advantage over defensive technology and posture", "Armies should only purchase tanks and never artillery", "Air forces are irrelevant in conventional defense"],
+                    "correct": 1,
+                    "explanation": "When technology favors the offense, conquest is perceived as cheap and fast, making preemptive war, surprise attacks, and arms races much more likely."
+                },
+                {
+                    "q": "Which international norm, endorsed by all UN member states at the 2005 World Summit, asserts the international community's duty to protect populations from genocide, war crimes, ethnic cleansing, and crimes against humanity?",
+                    "opts": ["The Brezhnev Doctrine", "Responsibility to Protect (R2P)", "The Monroe Doctrine", "The Bush Doctrine of Preemption"],
+                    "correct": 1,
+                    "explanation": "R2P redefines sovereignty as a responsibility to protect citizens; if a state is unwilling or unable to halt mass atrocities, the international community has a secondary responsibility to intervene."
+                }
+            ]
+        }
+    }
+
+    # Add remaining modules 023 through 050 programmatically with high quality questions
+    # Let's inspect each module's academic questions
+    additional_modules = {
+        "023": {
+            "module_num": "023",
+            "module_title": "Theories of International Relations",
+            "description": "Great debates, structural realism, neoliberal institutionalism, constructivism, English school, and critical paradigms.",
+            "questions": [
+                {
+                    "q": "What is the core epistemological divide between Kenneth Waltz's Neorealism and Robert Keohane's Neoliberal Institutionalism?",
+                    "opts": ["Both accept anarchy and rational state actors, but Neoliberalism argues that international institutions can mitigate cheating and facilitate durable cooperation", "Realism rejects state rationality while Liberalism accepts it", "Neoliberalism believes states are altruistic saints", "Neorealism believes states only care about human rights"],
+                    "correct": 0,
+                    "explanation": "Neorealism and Neoliberalism share the rationalist, systemic paradigm (the 'Neo-Neo synthesis'), but disagree over whether institutions can solve collective action problems and overcome relative gains concerns."
+                },
+                {
+                    "q": "Alexander Wendt's famous aphorism 'Anarchy is what states make of it' (1992) encapsulates the core premise of:",
+                    "opts": ["Classical Realism", "Social Constructivism", "Biological Determinism", "Game Theoretic Rational Choice"],
+                    "correct": 1,
+                    "explanation": "Wendt demonstrated that anarchy does not have a single, self-evident logic of power politics; identities, social interaction, and intersubjective meanings construct the nature of anarchy (Hobbesian, Lockean, or Kantian)."
+                },
+                {
+                    "q": "John Mearsheimer's 'Offensive Realism' in 'The Tragedy of Great Power Politics' (2001) argues that great powers seek:",
+                    "opts": ["Only an adequate status-quo amount of power to ensure survival (defensive balance)", "To maximize their share of world power and achieve regional hegemony as the ultimate guarantor of survival", "Complete nuclear disarmament", "Total economic integration under the World Bank"],
+                    "correct": 1,
+                    "explanation": "Offensive realism contends that because states can never be sure of others' intentions and survival is paramount, rational great powers relentlessly maximize relative power towards regional hegemony."
+                },
+                {
+                    "q": "The 'English School' (Hedley Bull, Martin Wight) synthesizes realism and liberalism by arguing that states coexist in an:",
+                    "opts": ["International Society where shared norms, diplomatic conventions, and international law moderate brute anarchy", "Absolute world empire governed by London", "Ungovernable state of constant physical slaughter", "Atmosphere devoid of all treaties"],
+                    "correct": 0,
+                    "explanation": "Hedley Bull's 'The Anarchical Society' argued that states form an international society through shared institutions such as diplomacy, international law, balance of power, war, and great power management."
+                },
+                {
+                    "q": "Robert W. Cox's famous critical axiom states: 'Theory is always for someone and for some...'",
+                    "opts": ["Financial profit", "Purpose", "Political party", "Military victory"],
+                    "correct": 1,
+                    "explanation": "Cox argued in 1981 that theories are not politically neutral mirrors of reality; they serve specific purposes, distinguishing between 'problem-solving theory' (maintaining the status quo) and 'critical theory' (challenging existing power structures)."
+                },
+                {
+                    "q": "In feminist international relations theory (J. Ann Tickner, Cynthia Enloe), what key critique is made against traditional realism?",
+                    "opts": ["Realism does not spend enough money on submarines", "Realism naturalizes a hegemonic masculine ontology of autonomy, violence, and domination while rendering women's labor and perspectives invisible", "Realism is too focused on environmental sustainability", "Realism refuses to use computers"],
+                    "correct": 1,
+                    "explanation": "Feminist IR deconstructs mainstream concepts like security, sovereignty, and state interest as gendered, revealing how international relations relies upon and reproduces gender hierarchies."
+                },
+                {
+                    "q": "Immanuel Wallerstein's World-Systems Theory categorizes the global capitalist economy into which structural zones?",
+                    "opts": ["Democratic, autocratic, and hybrid", "Core, semi-periphery, and periphery", "North, East, and South poles", "Primary, secondary, and tertiary sectors"],
+                    "correct": 1,
+                    "explanation": "Wallerstein's world-systems analysis shows how the core extracts surplus value from the periphery through unequal exchange, stabilized by an intermediate semi-periphery."
+                },
+                {
+                    "q": "Post-colonial IR theorists like Gayatri Spivak and Edward Said highlight how Western IR scholarship has:",
+                    "opts": ["Only studied Latin America", "Constructed the Global South as an uncivilized, passive 'Other' (Orientalism) while projecting Western norms as universal truths", "Accurately represented all indigenous cultures without bias", "Ignored the existence of European empires"],
+                    "correct": 1,
+                    "explanation": "Postcolonialism reveals the eurocentric biases embedded in IR concepts and interrogates the ongoing structural legacies of colonial dominance in world politics."
+                },
+                {
+                    "q": "What is the primary difference between Kenneth Waltz's structural realism and Hans Morgenthau's classical realism?",
+                    "opts": ["Morgenthau locates the cause of conflict in human nature (animus dominandi), while Waltz locates it in the anarchic structure of the international system", "Waltz completely ignores the military", "Morgenthau argues that international law rules the world", "Waltz was a member of the Frankfurt School"],
+                    "correct": 0,
+                    "explanation": "Classical realism attributes the lust for power to flawed human nature, whereas neorealism (structural realism) demonstrates that anarchy forces even peaceful states to compete for security."
+                },
+                {
+                    "q": "In rational choice IR models, what game-theoretic scenario models two states in an arms race where mutual defection is the dominant Nash Equilibrium despite being Pareto-suboptimal?",
+                    "opts": ["Stag Hunt", "Prisoner's Dilemma", "Battle of the Sexes", "Chicken Game"],
+                    "correct": 1,
+                    "explanation": "In the Prisoner's Dilemma, mutual defection (DD) is the unique Nash equilibrium because each player has an incentive to defect regardless of the other's choice, resulting in a suboptimal outcome for both."
+                }
+            ]
+        },
+        "031": {
+            "module_num": "031",
+            "module_title": "IR Research Methodology",
+            "description": "Qualitative and quantitative methods, case selection, process tracing, discourse analysis, and QCA.",
+            "questions": [
+                {
+                    "q": "In qualitative methodology, what is 'process tracing' used for?",
+                    "opts": ["Tracing the physical delivery of survey questionnaires", "Uncovering the specific causal mechanisms and intermediate steps linking an independent variable to an outcome within a single case", "Calculating p-values in a linear regression model", "Measuring satellite orbital paths"],
+                    "correct": 1,
+                    "explanation": "Process tracing examines diagnostic evidence (documents, transcripts, meeting minutes) within a historical case to verify the observable implications of hypothesized causal mechanisms."
+                },
+                {
+                    "q": "Which case study selection strategy involves choosing cases that share identical independent variables but exhibit completely different outcomes?",
+                    "opts": ["Most Similar Systems Design (Mill's Method of Difference)", "Most Different Systems Design (Mill's Method of Agreement)", "Pure Random Sampling", "Convenience snowball sampling"],
+                    "correct": 0,
+                    "explanation": "In a Most Similar Systems Design, cases are similar in almost all background variables except for the key explanatory factor that accounts for the difference in outcome."
+                },
+                {
+                    "q": "What is 'selection bias' in international relations research?",
+                    "opts": ["Selecting fonts for a thesis", "Systematically selecting cases on the dependent variable (e.g., studying only wars when researching causes of war) which distorts causal inference", "Using multiple coders for content analysis", "Translating foreign documents into English"],
+                    "correct": 1,
+                    "explanation": "Selecting on the dependent variable biases results by ignoring cases where the cause was present but the outcome did not occur (e.g., crises that did not escalate to war)."
+                },
+                {
+                    "q": "In quantitative research, what does a statistically significant p-value of less than 0.05 typically indicate?",
+                    "opts": ["The hypothesis is 100% proven beyond any shadow of doubt", "There is less than a 5% probability that the observed relationship occurred by random chance under the null hypothesis", "The sample size was too small to analyze", "The research violates academic ethics"],
+                    "correct": 1,
+                    "explanation": "A p-value < 0.05 indicates statistical significance, meaning the observed correlation is unlikely to have arisen purely from random sampling error."
+                },
+                {
+                    "q": "Qualitative Comparative Analysis (QCA), developed by Charles Ragin, is based on which mathematical logic?",
+                    "opts": ["Boolean algebra and set theory", "Calculus of variations", "Linear matrix algebra alone", "Euclidean plane geometry"],
+                    "correct": 0,
+                    "explanation": "QCA uses Boolean algebra and fuzzy sets to identify combinations of conditions that are necessary or sufficient for producing an outcome across intermediate-N studies."
+                },
+                {
+                    "q": "In post-structuralist and constructivist research, 'discourse analysis' investigates:",
+                    "opts": ["How many words a politician speaks per minute", "How language, text, and narrative structures construct meaning, naturalize power relations, and define what is considered legitimate political action", "The typographical layout of government budget tables", "Microphone frequencies during press briefings"],
+                    "correct": 1,
+                    "explanation": "Discourse analysis treats language as performative and productive, analyzing how shared linguistic representations create political realities and boundaries."
+                },
+                {
+                    "q": "What is the crucial difference between 'internal validity' and 'external validity'?",
+                    "opts": ["Internal validity refers to statistical software; external validity refers to printer output", "Internal validity evaluates whether the observed causal relationship within the study is true; external validity evaluates whether findings can be generalized to other cases and contexts", "Internal validity applies only to domestic politics; external validity applies only to foreign policy", "There is no difference in research design"],
+                    "correct": 1,
+                    "explanation": "Internal validity ensures causal claims are sound for the specific study; external validity determines generalizability to other populations, time periods, and settings."
+                },
+                {
+                    "q": "What constitutes an 'endogeneity problem' (reverse causality) in social science modeling?",
+                    "opts": ["When the independent variable and dependent variable mutually influence one another, making it difficult to establish the true direction of causation", "When a survey runs out of funding", "When data is collected in a foreign currency", "When an interview transcript is lost"],
+                    "correct": 0,
+                    "explanation": "Endogeneity arises when X causes Y, but Y also simultaneously causes X (e.g., trade promotes peace, but peace also fosters higher bilateral trade)."
+                },
+                {
+                    "q": "What is an 'operational definition' in empirical research design?",
+                    "opts": ["The dictionary definition of a legal statute", "The clear, explicit specification of how an abstract theoretical concept will be measured or observed in empirical data", "The operating system of the research laboratory computer", "The budget allocated to field research"],
+                    "correct": 1,
+                    "explanation": "Operationalization bridges the gap between abstract concepts (e.g., 'democracy' or 'military power') and concrete, measurable indicators (e.g., Polity score or CINC index)."
+                },
+                {
+                    "q": "In academic research ethics, what does the principle of 'Informed Consent' mandate when conducting elite interviews or field research?",
+                    "opts": ["Participants must be paid cash prior to every conversation", "Participants must be fully informed about the study's scope, risks, and voluntary nature, and agree to participate without coercion", "Researchers must publish all private participant details online", "Government officials must approve all interview questions in advance"],
+                    "correct": 1,
+                    "explanation": "Informed consent requires that human subjects understand the purpose, procedures, potential risks, and their right to withdraw freely at any point."
+                }
+            ]
+        },
+        "032": {
+            "module_num": "032",
+            "module_title": "Diplomacy & International Politics",
+            "description": "Diplomatic history, Vienna Conventions, multilateral negotiation, coercive diplomacy, and soft power.",
+            "questions": [
+                {
+                    "q": "The 1961 Vienna Convention on Diplomatic Relations (VCDR) codifies which foundational diplomatic principle under Article 22?",
+                    "opts": ["The host state may enter an embassy without permission during protests", "The premises of a diplomatic mission are inviolable and host state agents may not enter without the consent of the head of mission", "Diplomats must pay domestic income taxes in the host state", "Embassies must be built exclusively of stone"],
+                    "correct": 1,
+                    "explanation": "Article 22 of the VCDR establishes the absolute inviolability of mission premises, requiring the host state to protect the embassy against all intrusion or damage."
+                },
+                {
+                    "q": "What legal declaration can a receiving state issue under Article 9 of the Vienna Convention to expel a foreign diplomat without having to provide any explanation?",
+                    "opts": ["Persona non grata", "Habeas corpus", "Subpoena ad testificandum", "Quid pro quo"],
+                    "correct": 0,
+                    "explanation": "A receiving state may at any time declare any diplomatic staff member 'persona non grata', obligating the sending state to recall or terminate their diplomatic functions."
+                },
+                {
+                    "q": "What distinguishes 'Track I' diplomacy from 'Track II' diplomacy?",
+                    "opts": ["Track I is official diplomacy between state representatives and diplomats; Track II involves non-governmental, academic, or civil society dialogues to build confidence", "Track I occurs exclusively via telegrams; Track II occurs in person", "Track I is conducted by business corporations; Track II is conducted by the military", "Track I has been abolished under modern international law"],
+                    "correct": 0,
+                    "explanation": "Track I consists of official government-to-government diplomacy; Track II refers to unofficial, informal interactions among non-officials to resolve conflicts creatively."
+                },
+                {
+                    "q": "Thomas Schelling's concept of 'Coercive Diplomacy' involves using threats of force combined with diplomatic bargaining to:",
+                    "opts": ["Completely exterminate the adversary's civilian population", "Persuade an adversary to stop or reverse an aggressive action already undertaken", "Surrender sovereign territory unconditionally", "Dismantle all diplomatic embassies"],
+                    "correct": 1,
+                    "explanation": "Coercive diplomacy employs the threat or limited demonstration of force to compel an opponent to undo or halt an encroachment, differing from pure brute destruction."
+                },
+                {
+                    "q": "Joseph Nye defined 'Soft Power' as the ability to achieve desired outcomes through:",
+                    "opts": ["Bribes, economic sanctions, and trade embargoes", "Attraction and persuasion, rooted in a country's culture, political values, and legitimate foreign policies", "Deploying mechanized infantry battalions", "Constructing aircraft carriers"],
+                    "correct": 1,
+                    "explanation": "Soft power co-opts rather than coerces; it arises when a nation's political values, cultural appeal, and moral legitimacy inspire others to desire what it desires."
+                },
+                {
+                    "q": "What constitutes 'Gunboat Diplomacy' in diplomatic history?",
+                    "opts": ["The formal gifting of merchant ships between monarchs", "The pursuit of foreign policy objectives through conspicuous, intimidating displays of naval power and implied threat of force", "Negotiating maritime fishing quotas in a hotel", "The complete disarmament of a state's coastline"],
+                    "correct": 1,
+                    "explanation": "Gunboat diplomacy historically refers to imperial powers deploying warships to foreign ports to intimidate weaker governments into trade concessions or treaty signatures."
+                },
+                {
+                    "q": "The 1963 Vienna Convention on Consular Relations (VCCR) differs from the 1961 VCDR primarily because consular functions focus on:",
+                    "opts": ["High-level geopolitical policy and treaty negotiation between sovereign states", "Administrative, commercial, and citizen welfare services (visas, passports, protecting nationals detained abroad)", "Secret military espionage operations", "Managing foreign exchange stock markets"],
+                    "correct": 1,
+                    "explanation": "Diplomatic missions represent the sovereign state at the political level in the capital; consulates provide civic, trade, and citizen protection services across regional cities."
+                },
+                {
+                    "q": "What is 'Shuttle Diplomacy' as popularized by US Secretary of State Henry Kissinger in the Middle East following the 1973 Yom Kippur War?",
+                    "opts": ["Traveling exclusively via supersonic spacecraft", "A mediator traveling back and forth between rival parties who refuse to meet face-to-face to broker an agreement", "Holding diplomatic meetings on airport runways", "Negotiating solely through automated radio transmissions"],
+                    "correct": 1,
+                    "explanation": "Kissinger pioneered shuttle diplomacy by flying repeatedly between Jerusalem, Cairo, and Damascus to facilitate disengagement agreements when parties refused direct talks."
+                },
+                {
+                    "q": "Robert Putnam's 'Two-Level Games' model explains that an international negotiator must simultaneously satisfy two games:",
+                    "opts": ["Chess and poker", "Level I (international negotiations with foreign counterparts) and Level II (domestic ratification by domestic constituents/parliaments)", "Military defense and foreign aid", "The United Nations and the World Bank"],
+                    "correct": 1,
+                    "explanation": "Putnam demonstrated that international agreements are only viable if they fall within the overlap of each state's domestic ratification 'win-sets' (Level II)."
+                },
+                {
+                    "q": "What is 'Public Diplomacy' in modern diplomatic statecraft?",
+                    "opts": ["Publishing secret diplomatic cables in tabloids", "Government-sponsored efforts to engage, inform, and influence foreign publics directly rather than merely speaking to their governments", "Holding cabinet meetings in public parks", "Broadcasting military drills on local television"],
+                    "correct": 1,
+                    "explanation": "Public diplomacy aims to shape public opinion in foreign societies through educational exchanges (Fulbright), cultural institutions (British Council), and strategic communications."
+                }
+            ]
+        }
+    }
+
+    # Add modules 033 to 050
+    for mod_code, mod_data in additional_modules.items():
+        exams[mod_code] = mod_data
+
+    # Now let's generate the rest: 033, 034, 041, 042, 043, 044, 045, 046, 050
+    more_modules = [
+        ("033", "Foreign Policy Analysis (FPA)", "Bureaucratic politics, psychological biases, Allison's models, and domestic determinants.", [
+            ("Graham Allison's seminal analysis of the 1962 Cuban Missile Crisis contrasted the Rational Actor Model with which two bureaucratic frameworks?",
+             ["The Anarchy Model and Hegemonic Model", "Organizational Behavior (Model II) and Governmental/Bureaucratic Politics (Model III)", "Constructivism and Critical Theory", "The Liberal Model and Realist Model"], 1,
+             "Allison demonstrated that outcomes are shaped not just by unitary rational calculation, but by organizational standard operating procedures (Model II) and political bargaining among bureaucratic players (Model III)."),
+            ("Miles's Law in bureaucratic politics famously encapsulates bureaucratic turf wars with the dictum:",
+             ["'To the victor belong the spoils'", "'Where you stand depends on where you sit'", "'Speak softly and carry a big stick'", "'War is the continuation of politics by other means'"], 1,
+             "Miles's Law reflects how officials prioritize the budgetary, institutional, and policy interests of their specific agency or ministry over a detached national interest."),
+            ("Irving Janis's concept of 'Groupthink' identifies which dangerous psychological dynamic in high-level decision-making bodies?",
+             ["Open and fierce debate between rival ministers", "A drive for consensus and conformity that suppresses dissenting views, critical scrutiny, and alternative options", "Complete reliance on statistical algorithms", "Immediate capitulation to foreign demands"], 1,
+             "Groupthink leads cohesive policy groups (like Kennedy's advisors in the Bay of Pigs) to overlook risks and ignore warnings due to pressures for internal unanimity."),
+            ("In foreign policy decision-making, what is 'Prospect Theory' (Kahneman and Tversky)?",
+             ["People are always completely risk-neutral in all scenarios", "Decision-makers evaluate outcomes relative to a reference point and are risk-averse regarding gains, but risk-acceptant regarding losses", "Economists always predict wars with 100% precision", "Democracies never calculate risk in wartime"], 1,
+             "Prospect Theory shows leaders take extreme gambles to avert perceived losses, explaining why states often double down on failing foreign interventions."),
+            ("Robert Jervis's 'Perception and Misperception in International Politics' (1976) demonstrates that leaders often suffer from:",
+             ["Infallible telepathic comprehension of rivals", "Cognitive consistency biases, interpreting incoming information to fit existing preconceptions while ignoring contradictory signals", "A complete refusal to read diplomatic cables", "Permanent amnesia regarding domestic elections"], 1,
+             "Jervis proved that decision-makers filter ambiguous signals through deeply entrenched belief systems, frequently misinterpreting defensive acts by rivals as offensive maneuvers."),
+            ("What is an 'Operational Code' in political psychology (Nathan Leites, Alexander George)?",
+             ["The secret encryption algorithm used for military communications", "A leader's core philosophical and instrumental belief system regarding the nature of politics, conflict, and effective statecraft", "The schedule of a president's daily public appearances", "The constitutional rules for declaring emergency rule"], 1,
+             "An operational code serves as a cognitive master prism through which a political leader perceives, diagnoses, and formulates strategic responses to world events."),
+            ("The 'CNN Effect' in foreign policy communication asserts that:",
+             ["Cable news networks are legally controlled by the Pentagon", "24-hour real-time broadcast media coverage of humanitarian suffering forces governments to react and prioritize crises they might otherwise ignore", "News anchors decide military troop deployments directly", "International journalism has completely replaced ambassadors"], 1,
+             "The CNN Effect describes how graphic, real-time broadcasts of atrocities elevate emotional public pressure, compelling policymakers to intervene in distant humanitarian crises."),
+            ("In FPA, what does 'satisficing' mean in Herbert Simon's theory of Bounded Rationality?",
+             ["Exhaustively analyzing every possible mathematical permutation before acting", "Choosing an option that is 'good enough' to meet a minimum acceptable threshold due to constraints on time, information, and cognitive capacity", "Deliberately choosing the worst possible option to sabotage a department", "Surrendering national sovereignty to a foreign power"], 1,
+             "Simon showed human rationality is bounded; leaders do not maximize optimal solutions, but satisfice by adopting the first option that meets satisfactory criteria."),
+            ("What role do domestic legislative bodies (such as the US Senate or Indonesian DPR) play in the execution of two-level games?",
+             ["They are purely ceremonial and have zero legal power", "They hold ratification, budgetary, and oversight veto power, setting the boundaries of what international treaties a head of state can ratify", "They deploy armed forces without presidential knowledge", "They represent foreign countries in multilateral conferences"], 1,
+             "Under Putnam's Two-Level Games, domestic legislative win-sets constrain negotiators at the international table, as any treaty negotiated abroad must survive domestic legislative approval."),
+            ("Which foreign policy analysis framework focuses on how leaders' personal childhoods, traumas, and psychological traits influence their crisis leadership?",
+             ["Psychobiography and Political Trait Analysis (Margaret Hermann)", "Balance of Power Matrix", "Structural Realism", "Input-Output Econometric Regression"], 0,
+             "Leadership trait analysis evaluates how individual personality traits (need for power, cognitive complexity, distrust of others) systematically shape foreign policy orientations.")
+        ]),
+        ("034", "Contemporary Issues in Global Politics", "Transnational terrorism, cyber warfare, climate diplomacy, and migration.", [
+            ("What distinguishes transnational terrorism from conventional state warfare?",
+             ["Terrorism only occurs between uniformed naval fleets", "Terrorism uses premeditated violence or the threat of violence by non-state actors against civilians to generate terror for political or ideological aims", "Terrorism is legally sanctioned under the Geneva Conventions", "Terrorism never crosses national borders"], 1,
+             "Transnational terrorism deliberately targets non-combatants across borders to generate psychological fear and extract concessions that the group lacks conventional military power to achieve."),
+            ("The 2015 Paris Agreement on climate change established which multilateral mechanism for state emissions reductions?",
+             ["Legally binding punitive trade tariffs enforced by military sanctions", "Nationally Determined Contributions (NDCs) with five-year 'ratchet' reviews and transparency mechanisms", "Mandatory immediate shutdown of all global manufacturing", "Assigning all global oil reserves to the United Nations"], 1,
+             "The Paris Agreement abandoned Kyoto's top-down targets in favor of bottom-up Nationally Determined Contributions (NDCs) combined with transparent reporting and periodic ambition ratchets."),
+            ("What is the legal status of an individual granted 'Refugee' status under the 1951 Refugee Convention?",
+             ["They can be forcibly returned to their country of origin at any time without legal consequence", "They have a well-founded fear of persecution based on race, religion, nationality, membership in a particular social group, or political opinion, protected by the principle of non-refoulement", "They are classified automatically as economic migrants with no special protections", "They lose all human rights upon crossing a border"], 1,
+             "The 1951 Convention grants refugees protection against 'refoulement' (forcible return to a country where their life or freedom is threatened) and guarantees basic human dignity."),
+            ("In cyber security and international law, what is the 'Tallinn Manual'?",
+             ["A commercial software coding textbook from Estonia", "An influential non-binding expert study analyzing how existing international law (including the law of armed conflict) applies to cyber operations and warfare", "A legally binding treaty signed by all 193 UN members", "A cyber hacking manual created by criminal syndicates"], 1,
+             "Prepared by the NATO Cooperative Cyber Defence Centre of Excellence, the Tallinn Manual examines how jus ad bellum and international humanitarian law apply to cyber conflict."),
+            ("What are the three pillars of the 1968 Treaty on the Non-Proliferation of Nuclear Weapons (NPT)?",
+             ["First strike, second strike, and tactical weapons", "Non-proliferation, disarmament, and the peaceful use of nuclear technology", "Sanctions, embargoes, and military invasions", "Production, stockpiling, and export of chemical arms"], 1,
+             "The NPT bargains that non-nuclear states forgo weapons (non-proliferation), recognized nuclear states work toward disarmament, and all have access to peaceful nuclear energy."),
+            ("What geopolitical concept describes a narrow strategic waterway where maritime passage can be easily disrupted or blocked, threatening global supply chains?",
+             ["Contiguous zone", "Strategic Chokepoint (e.g., Strait of Malacca, Hormuz, Bab el-Mandeb)", "High Seas Area", "Territorial Continental Shelf"], 1,
+             "Chokepoints are narrow channels connecting major oceans where disruptions (piracy, conflict, blockades) inflict catastrophic shocks on global maritime trade and energy transport."),
+            ("What is 'Stuxnet', discovered in 2010, significant for in the history of international conflict?",
+             ["It was the first email spam campaign", "It was the first publicly known cyber weapon designed specifically to bridge into the physical realm and sabotage industrial nuclear enrichment centrifuges (in Iran)", "It was an encrypted messaging tool for human rights activists", "It was a commercial satellite navigation software"], 1,
+             "Stuxnet proved that a sophisticated cyber strike could physically destroy physical industrial infrastructure (Natanz centrifuges) without dropping a single bomb."),
+            ("In global environmental politics, what is the 'Tragedy of the Commons' (Garrett Hardin)?",
+             ["A tragic theatrical play about medieval farmers", "A situation where individual rational users deplete a shared, non-excludable resource (like ocean fish stocks or the atmosphere), leading to collective ruin", "The collapse of private software companies", "The establishment of national parks"], 1,
+             "Hardin illustrated how open-access common pool resources are systematically overexploited because each individual captures 100% of the benefit of exploitation while the cost is shared by all."),
+            ("The concept of 'Hybrid Warfare' combines which array of state instruments?",
+             ["Exclusively traditional tank warfare in open desert", "Conventional military force, irregular militias, cyber operations, economic coercion, disinformation, and political subversion beneath the threshold of full-scale war", "Solely nuclear missile strikes", "Peaceful mediation through religious organizations"], 1,
+             "Hybrid warfare deliberately blends conventional, irregular, informational, and covert methods to exploit vulnerabilities while remaining ambiguous enough to paralyze collective defense responses."),
+            ("What international institution was established in 1948 as the specialized UN agency responsible for international public health surveillance and pandemic response?",
+             ["The World Trade Organization", "The World Health Organization (WHO)", "Doctors Without Borders", "The Red Cross"], 1,
+             "The WHO coordinates international public health policy, sets global sanitary standards, and declares Public Health Emergencies of International Concern (PHEIC).")
+        ]),
+        ("041", "Foreign Policy of Developed Countries", "Grand strategies of the US, EU, China, Japan, Russia, and major middle powers.", [
+            ("What grand strategy has historically underpinned US foreign policy since 1945?",
+             ["Strict hemispheric isolationism", "Liberal Hegemony / Internationalism: leading alliances (NATO), championing open markets, and maintaining forward global military presence", "Immediate surrender to all multilateral rulings", "Complete abolition of the US dollar"], 1,
+             "Liberal hegemony has seen the United States sustain a global network of bilateral and multilateral alliances, forward deployments, and international financial institutions."),
+            ("The European Union's Common Foreign and Security Policy (CFSP) is structurally governed by which decision-making dynamic?",
+             ["A single EU president has unilateral power to declare war", "Intergovernmentalism, largely requiring consensus/unanimity among member states in the European Council", "A computer algorithm in Luxembourg", "The United Nations General Assembly"], 1,
+             "Unlike internal single-market trade matters, EU foreign policy remains fundamentally intergovernmental, where sovereign member states retain veto power over major defense and diplomatic actions."),
+            ("What strategic concept describes post-Cold War Russia's determination to maintain a dominant sphere of influence over former Soviet republics?",
+             ["The Near Abroad (Blizhneye Zarubezhye)", "Manifest Destiny", "Splendid Isolation", "The Greater East Asia Co-Prosperity Sphere"], 0,
+             "Russia views the 'Near Abroad' (post-Soviet space) as vital to its security buffer and geopolitical sphere of privileged interest, resisting NATO and EU expansion there."),
+            ("What multi-trillion-dollar global connectivity and infrastructure development initiative did China launch in 2013 under Xi Jinping?",
+             ["The Marshall Plan", "The Belt and Road Initiative (BRI / One Belt One Road)", "The Trans-Pacific Partnership", "The ASEAN Free Trade Area"], 1,
+             "The BRI finances ports, railways, roads, and energy pipelines connecting China across Eurasia, Africa, and Latin America, expanding Chinese geo-economic influence."),
+            ("Article 9 of the post-WWII Constitution of Japan is famous for establishing:",
+             ["Japan's right to build intercontinental nuclear missiles", "Japan's renunciation of war as a sovereign right and the pledge to never maintain land, sea, and air forces with war potential", "Mandatory universal military conscription", "Japan's departure from the United Nations"], 1,
+             "Enacted in 1947, Article 9 renounced war, leading to the creation of the strictly defensive Japan Self-Defense Forces (JSDF), which have gradually evolved toward collective self-defense."),
+            ("What diplomatic framework links Australia, India, Japan, and the United States in the Indo-Pacific region?",
+             ["The Warsaw Pact", "The Quadrilateral Security Dialogue (The Quad)", "The European Union", "The Mercosur Trading Bloc"], 1,
+             "The Quad brings together four major Indo-Pacific democracies to coordinate on regional maritime security, supply chain resilience, emerging technology, and counter-coercion."),
+            ("The trilateral security partnership announced in September 2021 between Australia, the United Kingdom, and the United States is known as:",
+             ["ANZUS", "AUKUS", "Five Eyes", "SEATO"], 1,
+             "AUKUS focuses on equipping Australia with conventionally armed, nuclear-powered submarines (Pillar I) alongside advanced cyber, AI, and hypersonic capabilities (Pillar II)."),
+            ("What is the primary objective of the European Union's pursuit of 'Strategic Autonomy'?",
+             ["Completely dissolving the EU armed forces", "Enhancing Europe's independent technological, defense, and economic capacity to act without total reliance on third powers (such as the US)", "Invading the African continent", "Adopting the Russian Ruble as common currency"], 1,
+             "Strategic autonomy seeks to ensure Europe can safeguard its own security, secure critical supply chains, and project influence autonomously when allies cannot or will not act."),
+            ("Which foreign policy concept describes countries like Canada, Australia, and Norway that leverage multilateralism, mediation, and niche diplomacy to punch above their military weight?",
+             ["Superpowers", "Middle Powers", "Rogue States", "Client States"], 1,
+             "Middle powers lack superpower dominance but possess diplomatic capacity, economic resources, and multilateral legitimacy to act as effective coalition builders and mediators."),
+            ("China's diplomatic posture since the late 2010s, characterized by assertive, confrontational rhetoric by diplomats on social media and press conferences, is termed:",
+             ["Panda Diplomacy", "Wolf Warrior Diplomacy (Zhanlang Waijiao)", "Ping-Pong Diplomacy", "Shuttle Diplomacy"], 1,
+             "Named after a Chinese action movie, 'Wolf Warrior Diplomacy' marks a decisive departure from Deng Xiaoping's low-profile 'hide and bide' strategy toward vocal defense of Chinese interests.")
+        ]),
+        ("042", "International Law & Dispute Settlement", "ICJ, UNCLOS, VCLT, IHL, and mechanisms for peaceful dispute resolution.", [
+            ("Under Article 38(1) of the Statute of the International Court of Justice (ICJ), which of the following is NOT listed as a primary source of international law?",
+             ["International conventions (treaties)", "International custom, as evidence of a general practice accepted as law", "Resolutions of non-governmental organizations like the World Economic Forum", "The general principles of law recognized by civilized nations"], 2,
+             "Article 38(1) recognizes treaties, customary international law, general principles, and judicial decisions/scholarly teachings as subsidiary means; NGO resolutions have no formal legal standing."),
+            ("Customary international law (CIL) requires the simultaneous existence of two foundational elements:",
+             ["A written treaty and a UN resolution", "State practice (diuturnitas) and a belief that such practice is legally obligatory (opinio juris sive necessitatis)", "A domestic court verdict and a police escort", "A bilateral trade agreement and a currency peg"], 1,
+             "Custom requires widespread, consistent state practice over time accompanied by opinio juris—the psychological conviction that the act is required by binding international law."),
+            ("The 1969 Vienna Convention on the Law of Treaties (VCLT) codifies the fundamental principle 'Pacta sunt servanda' in Article 26, meaning:",
+             ["All treaties expire after five years", "Every treaty in force is binding upon the parties to it and must be performed by them in good faith", "States can break treaties whenever public opinion shifts", "Treaties only apply to islands"], 1,
+             "Pacta sunt servanda ('agreements must be kept') is the bedrock norm of treaty law, ensuring legal certainty and mutual obligation across the international community."),
+            ("What is a 'Jus Cogens' (peremptory norm) in public international law (VCLT Article 53)?",
+             ["A non-binding aspirational guideline", "A fundamental norm accepted by the international community from which no derogation is permitted (e.g., prohibitions against genocide, torture, and slavery)", "A commercial maritime contract", "A domestic municipal zoning regulation"], 1,
+             "Jus cogens norms override all contrary treaties; any treaty that conflicts with a peremptory norm of general international law is void ab initio."),
+            ("Under Article 33 of the UN Charter, what peaceful dispute settlement procedure involves a third party hearing both sides and issuing a legally binding arbitral award?",
+             ["Good offices", "Arbitration", "Mediation", "Conciliation"], 1,
+             "While mediation and conciliation offer non-binding recommendations, arbitration involves a panel chosen by the parties issuing a final, legally binding judgment."),
+            ("The International Court of Justice (ICJ) seated at The Hague exercises jurisdiction over states in contentious cases only on the basis of:",
+             ["Unilateral orders from the UN Secretary-General", "State consent (via special agreement, treaty compromissory clause, or optional clause declaration under Article 36(2))", "Mandatory summons issued by NATO", "The size of the applicant's navy"], 1,
+             "The ICJ has no compulsory universal jurisdiction; sovereign states must give consent to the Court's adjudication of contentious disputes."),
+            ("Under the 1982 UNCLOS, what is the maximum breadth of a coastal state's Territorial Sea, measured from baseline to seaward?",
+             ["3 nautical miles", "12 nautical miles", "24 nautical miles", "200 nautical miles"], 1,
+             "UNCLOS Article 3 establishes that coastal states have the right to establish the breadth of their territorial sea up to a limit not exceeding 12 nautical miles."),
+            ("What special maritime navigation right do foreign vessels (including warships) enjoy through another sovereign state's territorial sea under UNCLOS Article 17?",
+             ["Unrestricted military maneuvers", "Innocent Passage (continuous, expeditious, and not prejudicial to the peace and security of the coastal state)", "Right to fish without licensing", "Right to lay communication cables through coral reefs"], 1,
+             "Innocent passage allows foreign vessels to transit sovereign territorial waters without prior permission as long as the passage does not threaten the coastal state's security."),
+            ("What sovereign rights does a coastal state exercise within its 200-nautical-mile Exclusive Economic Zone (EEZ) under UNCLOS Article 56?",
+             ["Full territorial sovereignty over airspace and navigation identical to mainland landmass", "Sovereign rights for exploring, exploiting, conserving, and managing natural resources (living and non-living) in the waters, seabed, and subsoil", "The right to ban all foreign merchant shipping", "The power to tax international commercial flights flying overhead"], 1,
+             "The EEZ is not sovereign territory; the coastal state exercises functional sovereign rights over economic resources while all other states enjoy high-seas freedoms of navigation and overflight."),
+            ("Under the UN Charter, the general prohibition on the threat or use of force (Article 2(4)) has only two explicit legal exceptions:",
+             ["Commercial trade embargoes and media disinformation", "Individual or collective self-defense against armed attack (Article 51) and military enforcement authorized by the UN Security Council under Chapter VII", "Protecting investments by multinational corporations and preventing protests", "Unilateral annexation of historic cultural monuments"], 1,
+             "International law strictly prohibits interstate force except when authorized by the UNSC under Chapter VII or exercised in legitimate self-defense under Article 51.")
+        ]),
+        ("043", "IPE of Development", "Modernization, dependency, Washington Consensus, foreign aid, and sustainable development.", [
+            ("Walt Rostow's 'Stages of Economic Growth' (1960) exemplified which development theory that viewed development as a universal, linear transition from traditional society to high mass consumption?",
+             ["Dependency Theory", "Modernization Theory", "World-Systems Analysis", "Anarcho-Primitivism"], 1,
+             "Modernization theory posited that all developing societies can replicate Western industrialization through capital investment, modern technology, and rational secular institutions."),
+            ("Which Latin American structuralist development paradigm argued that the underdevelopment of the 'Periphery' is actively produced and perpetuated by its exploitative integration into the capitalist 'Core'?",
+             ["Neoclassical Economics", "Dependency Theory (Dependencia)", "Austrian School Economics", "Supply-Side Monetarism"], 1,
+             "Scholars like Fernando Henrique Cardoso and Andre Gunder Frank argued that peripheral nations suffer unequal exchange and resource drain that enriches core industrial powers."),
+            ("The policy package popularized in 1989 by John Williamson promoting fiscal discipline, deregulation, trade liberalization, privatization, and tax reform in developing nations is known as:",
+             ["The Beijing Consensus", "The Washington Consensus", "The Havana Charter", "The New International Economic Order (NIEO)"], 1,
+             "The Washington Consensus represented the neoliberal development orthodoxy promoted by the IMF, World Bank, and US Treasury for indebted developing economies."),
+            ("What industrial development strategy, adopted widely in Latin America during the mid-20th century, sought to reduce foreign dependency by shielding domestic infant industries with tariffs to manufacture goods locally?",
+             ["Export-Oriented Industrialization (EOI)", "Import Substitution Industrialization (ISI)", "Universal Free Trade Zone", "Agricultural Feudalism"], 1,
+             "ISI protected domestic manufacturers from foreign competition with high tariffs and subsidies to build a national industrial base, but often ran into efficiency and balance-of-payments bottlenecks."),
+            ("The high-speed economic growth achieved by the 'East Asian Tigers' (South Korea, Taiwan, Singapore, Hong Kong) was primarily driven by:",
+             ["Export-Oriented Industrialization (EOI) combined with strategic state intervention and industrial policy", "Complete autarkic isolation from world markets", "Relying exclusively on foreign agricultural aid", "Banning all domestic manufacturing"], 0,
+             "East Asian development blended state guidance (subsidies, education, infrastructure) with disciplined competition in global export markets, validating EOI over pure ISI."),
+            ("What was a major criticism of the IMF's Structural Adjustment Programs (SAPs) implemented during the 1980s and 1990s Debt Crises in Africa and Latin America?",
+             ["They spent too much money building public universities", "They mandated drastic cuts to public health, education, and social spending alongside rapid privatization, exacerbating poverty and inequality", "They forced countries to buy gold from Switzerland", "They prohibited exports of oil"], 1,
+             "SAPs imposed painful austerity and social spending cutbacks as loan conditionalities, prompting widespread criticism that the poorest citizens bore the brunt of macroeconomic stabilization."),
+            ("In international development finance, what is Official Development Assistance (ODA)?",
+             ["Military weapons shipments between NATO members", "Government aid designed specifically to promote the economic development and welfare of developing countries, containing a grant element of at least 25%", "Commercial bank loans at high market interest rates", "Remittances sent home by migrant workers"], 1,
+             "The OECD Development Assistance Committee defines ODA as government-provided concessional flows targeted at economic development and humanitarian welfare."),
+            ("In September 2015, the United Nations General Assembly adopted the 2030 Agenda for Sustainable Development, establishing how many Sustainable Development Goals (SDGs)?",
+             ["8 goals", "17 goals", "25 goals", "50 goals"], 1,
+             "The 17 SDGs succeeded the 8 Millennium Development Goals (MDGs), broadening the development agenda to include climate action, reduced inequality, peace, and institutional justice."),
+            ("What does the 'Resource Curse' (Paradox of Plenty) describe in developing economies?",
+             ["Countries with rich natural resource endowments (oil, minerals) often experience slower economic growth, authoritarian governance, corruption, and higher risk of civil conflict", "Countries that plant too many trees lose agricultural yield", "Countries that build solar panels run out of clean water", "Countries that have no resources are always the wealthiest"], 0,
+             "The resource curse (and Dutch Disease) illustrates how resource wealth distorts exchange rates, crowds out manufacturing, fosters rent-seeking elites, and breeds corruption."),
+            ("What alternative development model, often contrasted with the Washington Consensus, emphasizes pragmatic experimentation, state-guided capitalism, massive infrastructure investments, and non-interference in political regimes?",
+             ["The Paris Charter", "The Beijing Consensus", "The Kyoto Protocol", "The Geneva Convention"], 1,
+             "Coined by Joshua Cooper Ramo, the Beijing Consensus describes China's state-led developmental model that achieves rapid growth without requiring Western political or neoliberal conditionalities.")
+        ]),
+        ("044", "ASEAN Regionalism & Community", "The ASEAN Way, Community pillars, South China Sea, and regional security architecture.", [
+            ("On August 8, 1967, foreign ministers from Indonesia, Malaysia, the Philippines, Singapore, and Thailand signed which document to establish ASEAN?",
+             ["The Treaty of Amity and Cooperation", "The Bangkok Declaration", "The ASEAN Charter", "The Bali Concord I"], 1,
+             "The Bangkok Declaration founded ASEAN with the primary aim of accelerating economic growth, social progress, and regional peace through joint endeavor."),
+            ("What diplomatic norms constitute the hallmark of the 'ASEAN Way'?",
+             ["Majority voting and military sanctions against non-compliant members", "Consensus decision-making (Musyawarah-Mufakat), non-interference in internal affairs, and quiet, informal diplomacy", "Supranational directives enforced by an ASEAN Court of Justice", "Unilateral vetoes by the most populous member state"], 1,
+             "The ASEAN Way prioritizes sovereign equality, non-interference, consultation, and consensus, favoring incremental compromise over confrontational legalistic adjudication."),
+            ("Which 2007 legal instrument conferred legal personality upon ASEAN and established a formal institutional structure?",
+             ["The ASEAN Charter", "The ZOPFAN Declaration", "The Declaration on the Conduct of Parties (DOC)", "The ASEAN Free Trade Agreement"], 0,
+             "Adopted in 2007, the ASEAN Charter institutionalized the grouping as an intergovernmental legal entity with codification of summits, councils, and human rights bodies."),
+            ("What are the three pillars of the ASEAN Community formally established at the 27th ASEAN Summit in 2015?",
+             ["Military, Naval, and Air Force Pillars", "ASEAN Political-Security Community (APSC), ASEAN Economic Community (AEC), and ASEAN Socio-Cultural Community (ASCC)", "Agriculture, Mining, and Oil Pillars", "North, Central, and South Pillars"], 1,
+             "The ASEAN Community rests on three interrelated pillars: Political-Security (APSC), Economic integration (AEC), and Socio-Cultural cooperation (ASCC)."),
+            ("The 1971 Kuala Lumpur Declaration proclaimed Southeast Asia as a ZOPFAN, an acronym for:",
+             ["Zone of Permanent Financial and Agricultural Neutrality", "Zone of Peace, Freedom and Neutrality", "Zone of Protected Fisheries and Navigation", "Zone of Petroleum, Fuel and Nuclear Development"], 1,
+             "ZOPFAN sought to keep Southeast Asia free from interference by external great powers during the height of the Cold War and Vietnam War."),
+            ("The 1976 Treaty of Amity and Cooperation in Southeast Asia (TAC) serves as the region's code of conduct and requires all acceding states (including the US, China, and Russia) to pledge:",
+             ["Mutual non-aggression, peaceful settlement of disputes, and non-interference in internal affairs", "To adopt a single ASEAN currency", "To provide troops to an ASEAN standing army", "To eliminate all national flags"], 0,
+             "The TAC is ASEAN's foundational peace treaty; external partners must formally accede to it as a prerequisite for participating in the East Asia Summit (EAS)."),
+            ("In the South China Sea disputes, what 2002 political document was signed between ASEAN and China as a confidence-building measure preceding a binding Code of Conduct (COC)?",
+             ["Declaration on the Conduct of Parties in the South China Sea (DOC)", "The Marrakesh Trade Treaty", "The UNCLOS Baseline Agreement", "The Spratly Islands Demilitarization Treaty"], 0,
+             "The 2002 DOC committed parties to exercise self-restraint and settle disputes peacefully, serving as the transitional benchmark while negotiations continue for a binding Code of Conduct."),
+            ("What diplomatic concept captures ASEAN's position at the organizational center and driver of Asia-Pacific multilateral architectures (ARF, ADMM-Plus, EAS, RCEP)?",
+             ["ASEAN Hegemony", "ASEAN Centrality", "ASEAN Protectorate", "ASEAN Isolationism"], 1,
+             "ASEAN Centrality means ASEAN acts as the convenor and primary institutional forum around which great powers engage in regional dialogue and security consultations."),
+            ("In response to the February 2021 military coup in Myanmar, what agreement did ASEAN leaders broker at the Special ASEAN Leaders' Meeting in Jakarta?",
+             ["The Five-Point Consensus", "The Ten Principles of Yangon", "The Naypyidaw Disarmament Pact", "The ASEAN Expeditionary Force Directive"], 0,
+             "The Five-Point Consensus demanded an immediate cessation of violence, constructive dialogue among all parties, a special envoy, and humanitarian assistance."),
+            ("What is the institutional body established by ASEAN in 2009 to promote human rights across the region, albeit operating under strict non-interference limits?",
+             ["The ASEAN Human Rights Court", "The ASEAN Intergovernmental Commission on Human Rights (AICHR)", "The Southeast Asian Peace Corps", "The ASEAN Commission on Military Law"], 1,
+             "AICHR is ASEAN's consultative human rights mechanism, focusing on awareness, education, and declaration of regional human rights standards.")
+        ]),
+        ("045", "International Organizations in IR", "UN system, General Assembly, Security Council, peace operations, and IO autonomy.", [
+            ("Under Chapter VII of the United Nations Charter, what unique power does the UN Security Council (UNSC) possess?",
+             ["It can dissolve the parliaments of member states", "It can adopt legally binding decisions imposing economic sanctions or authorizing military enforcement to restore international peace and security", "It can rewrite the domestic criminal codes of member nations", "It manages commercial airlines globally"], 1,
+             "Unlike the General Assembly whose resolutions are recommendatory, UNSC resolutions adopted under Chapter VII carry binding international legal authority under Article 25."),
+            ("Which five sovereign nations hold permanent seats and veto power on the UN Security Council (the P5)?",
+             ["United States, United Kingdom, France, Germany, Japan", "United States, United Kingdom, France, Russia, China", "United States, Canada, Australia, France, Germany", "Russia, China, India, Brazil, South Africa"], 1,
+             "The P5 reflects the victorious great powers of 1945: the United States, United Kingdom, France, the Russian Federation (succeeding the USSR), and the People's Republic of China."),
+            ("In the Principal-Agent theory of international organizations, what is 'bureaucratic drift' or 'agency slack'?",
+             ["When the UN Secretary-General takes a leave of absence", "When an international bureaucracy develops its own organizational culture, autonomy, and preferences, pursuing policies distinct from the directives of its state principals", "When a treaty's translation contains typographical errors", "When staff members arrive late to conference sessions"], 1,
+             "Michael Barnett and Martha Finnemore demonstrated that IO secretariats are not neutral transmission belts; they exercise independent normative and bureaucratic authority."),
+            ("What foundational principle distinguishes 'First-Generation' (traditional) UN Peacekeeping (e.g., UNEF I in the Sinai)?",
+             ["Combat enforcement without local consent", "Deployment with consent of belligerent parties, strict impartiality, and the non-use of force except in self-defense", "Imposing regime change and organizing elections", "Unilateral airstrikes against hostile leaders"], 1,
+             "Formulated by Dag Hammarskjöld and Lester Pearson, traditional Chapter VI-and-a-half peacekeeping required consent, neutrality, and light defensive weaponry."),
+            ("How did 'Second-Generation' (multidimensional) UN Peacekeeping operations evolve during the 1990s in places like Namibia, Cambodia, and Mozambique?",
+             ["They focused exclusively on border patrols", "They integrated military peacekeepers with civilian experts to oversee ceasefires, demobilize combatants (DDR), organize democratic elections, and reform police", "They replaced all local civil courts with military tribunals", "They annexed sovereign territory permanently"], 1,
+             "Multidimensional peacekeeping tackles root causes of conflict through disarmament, human rights monitoring, judicial capacity-building, and democratic transition management."),
+            ("What procedural voting mechanism in the UN General Assembly requires a two-thirds majority of members present and voting under Article 18(2)?",
+             ["Approval of lunch menus in the delegates' lounge", "Important questions, including recommendations on peace and security, election of non-permanent UNSC members, and budgetary matters", "Routine procedural adjournment", "Acceptance of photographic gifts"], 1,
+             "Article 18(2) specifies that decisions on 'important questions' require a two-thirds majority, whereas ordinary procedural matters require a simple majority."),
+            ("The 'Uniting for Peace' Resolution (UNGA Res 377A), adopted in 1950 during the Korean War, establishes that if the Security Council is paralyzed by a P5 veto:",
+             ["The United Nations must be completely dissolved immediately", "The General Assembly may immediately consider the matter and make collective recommendations, including the use of armed force, to maintain peace", "Individual states may declare world war", "The International Court of Justice takes command of armed forces"], 1,
+             "Resolution 377A empowers the General Assembly to convene an Emergency Special Session and recommend collective measures when the Security Council fails to exercise its primary responsibility due to a veto."),
+            ("Which international organization founded in 2002 represents all 55 nations on the African continent, succeeding the Organization of African Unity (OAU)?",
+             ["ECOWAS", "The African Union (AU)", "SADC", "COMESA"], 1,
+             "Headquartered in Addis Ababa, the African Union replaced the non-interventionist OAU with a mandate for regional integration, conflict resolution, and peer review."),
+            ("Under Article 99 of the UN Charter, what unique political power does the UN Secretary-General hold?",
+             ["The right to command national armed forces in combat", "The authority to bring to the attention of the Security Council any matter which in his opinion may threaten the maintenance of international peace and security", "The power to unilaterally expel any permanent member", "The power to print United Nations currency"], 1,
+             "Article 99 gives the Secretary-General an independent political initiative, elevating the post from a mere administrative chief into an active diplomatic mediator."),
+            ("The 'G4 Nations' (Brazil, Germany, India, and Japan) represent a diplomatic coalition advocating for:",
+             ["The complete abolition of the United Nations", "Reform of the UN Security Council, specifically permanent seats for themselves alongside African representation", "Replacing the dollar with regional gold coins", "Withdrawing from all peacekeeping operations"], 1,
+             "The G4 group mutually supports their bids for permanent seats on an expanded UN Security Council to reflect 21st-century geopolitical realities.")
+        ]),
+        ("046", "Global Economic Architecture", "G20, IMF, World Bank, regional development banks, and financial governance.", [
+            ("What triggered the elevation of the G20 from a meeting of finance ministers and central bank governors into a premier Leaders' Summit in November 2008?",
+             ["The fall of the Berlin Wall", "The 2008 Global Financial Crisis sparked by the US subprime mortgage meltdown", "The launch of the Euro", "The Asian Tsunami disaster"], 1,
+             "President George W. Bush convened the first G20 Leaders' Summit in Washington in 2008, recognizing that managing the systemic crisis required direct heads-of-state coordination with rising emerging markets like China, India, and Indonesia."),
+            ("In the governance structure of the International Monetary Fund (IMF), a member country's voting power is primarily determined by its:",
+             ["Geographic surface area", "Quota subscription, which reflects its relative size in the world economy", "Military defense budget", "Total literacy rate"], 1,
+             "IMF voting shares are tied directly to financial quota contributions, meaning advanced Western economies (specifically the US with over 16% of votes) retain disproportionate voting power and effective veto over major constitutional decisions."),
+            ("What is a 'Special Drawing Right' (SDR) created by the IMF in 1969?",
+             ["A military flight permit through international airspace", "An international supplementary reserve asset, based on a basket of five major currencies (USD, EUR, CNY, JPY, GBP)", "A commercial loan to private real estate developers", "A digital cryptocurrency created by central banks"], 1,
+             "SDRs are not a currency, but a claim on freely usable currencies of IMF members, allocated to supplement member states' official foreign exchange reserves."),
+            ("What is the primary operational distinction between the World Bank and the International Monetary Fund?",
+             ["The World Bank focuses on short-term balance-of-payments emergencies; the IMF builds roads and bridges", "The IMF provides short-to-medium-term balance-of-payments stabilization loans; the World Bank finances long-term economic development, infrastructure, and poverty reduction", "The World Bank only lends to Europe; the IMF only lends to Africa", "There is no functional distinction"], 1,
+             "The IMF operates as a monetary firefighter for liquidity and currency crises; the World Bank is a development bank financing schools, sanitation, energy, and governance projects."),
+            ("The Asian Infrastructure Investment Bank (AIIB), initiated by China and founded in Beijing in 2015, was created primarily to:",
+             ["Replace the United Nations Security Council", "Finance regional infrastructure connectivity across Asia, supplementing established lenders like the World Bank and ADB while reflecting the Global South's rising weight", "Issue an independent digital currency to dismantle all banks", "Fund military defense weapons in Latin America"], 1,
+             "The AIIB provides multilateral infrastructure lending without political conditionalities, demonstrating China's institutional innovation alongside the traditional Bretton Woods system."),
+            ("The Basel Committee on Banking Supervision (BCBS), hosted at the Bank for International Settlements (BIS), sets international standards primarily for:",
+             ["Sovereign maritime boundaries", "Commercial bank capital adequacy, liquidity buffers, and stress-testing requirements (e.g., Basel III)", "United Nations diplomatic salaries", "International copyright laws"], 1,
+             "The Basel Accords set prudential capital ratios to ensure private banks hold adequate capital to absorb unexpected financial shocks without requiring taxpayer bailouts."),
+            ("What is the Financial Action Task Force (FATF) responsible for in the global financial architecture?",
+             ["Managing currency exchange rates in airports", "Setting international standards and monitoring compliance to combat money laundering, terrorist financing, and proliferation financing (Grey/Black Lists)", "Printing banknotes for developing nations", "Regulating international tourism visas"], 1,
+             "The FATF evaluates state jurisdictions; being placed on the FATF Grey List or Black List severely restricts a country's access to international banking and foreign direct investment."),
+            ("The 'New Development Bank' (NDB), commonly referred to as the BRICS Bank, was founded in 2014 by Brazil, Russia, India, China, and South Africa to:",
+             ["Provide alternative multilateral financing for infrastructure and sustainable development projects in BRICS and other emerging market economies", "Coordinate military naval drills in the Baltic Sea", "Print a common paper currency for South America", "Manage agricultural subsidies in Europe"], 0,
+             "Headquartered in Shanghai, the NDB was created to mobilize resources for infrastructure in emerging markets, utilizing equal shareholding among founding members."),
+            ("What informal group of sovereign bilateral creditor nations meets in the French Ministry of Economy to negotiate debt rescheduling or relief for heavily indebted countries?",
+             ["The London Club (commercial bank creditors)", "The Paris Club", "The Davos Circle", "The Bilderberg Group"], 1,
+             "The Paris Club coordinates coordinated debt treatment among major official bilateral creditors, ensuring debt restructuring conditions are fair and shared equitably."),
+            ("What structural trend is increasingly reshaping the global financial architecture in response to the weaponization of the US dollar through SWIFT financial sanctions?",
+             ["A return to the 19th-century British gold sovereign coin", "De-dollarization initiatives, local currency settlement arrangements (LCS), and bilateral central bank currency swaps among emerging economies", "The complete elimination of international trade", "Switching all global commerce to direct bartering of cattle"], 1,
+             "Concerns over dollar weaponization have driven nations (China, Russia, India, ASEAN) to develop alternative cross-border payment mechanisms and trade in national currencies.")
+        ]),
+        ("050", "WTO & Trade Diplomacy", "GATT principles, MFN, Dispute Settlement Body, and mega-regional agreements.", [
+            ("What foundational principle of the multilateral trading system, codified in GATT Article I, requires that any trade advantage granted to one nation must immediately be extended to all other WTO members?",
+             ["National Treatment", "Most-Favoured-Nation (MFN) Principle", "Reciprocity Reservation", "Antidumping Countervailing"], 1,
+             "MFN guarantees non-discrimination between trading partners: once a country grants a tariff cut to one trade partner, it must extend that same concession to all WTO members."),
+            ("GATT Article III codifies the principle of 'National Treatment', which prohibits WTO member states from:",
+             ["Charging tariffs at the maritime border", "Treating imported foreign goods less favorably than domestically produced goods once they have cleared customs and entered the internal market", "Allowing foreign tourists to visit museums", "Signing bilateral defense treaties"], 1,
+             "National treatment prohibits discriminatory domestic taxes or regulations that protect local products over imported foreign goods once inside the country."),
+            ("What exceptions under GATT Article XX permit WTO members to adopt trade-restrictive measures that would otherwise violate GATT rules?",
+             ["Protection of national monopolies and bank bailouts", "General Exceptions: protecting public morals, human, animal or plant life or health, and the conservation of exhaustible natural resources (subject to the Chapeau test)", "Increasing domestic employment before general elections", "Subsidizing national soccer stadiums"], 1,
+             "Article XX allows environmental, health, and moral restrictions, provided they are not applied in an arbitrary or unjustifiably discriminatory manner or as a disguised restriction on trade."),
+            ("What is the primary crisis paralyzing the WTO Dispute Settlement Mechanism's Appellate Body since December 2019?",
+             ["The Appellate Body ran out of paper and computers", "The United States blocked the appointment and reappointment of Appellate Body judges, leaving it without the requisite three-judge quorum to hear appeals", "All member states unanimously voted to abolish trade disputes", "The International Court of Justice absorbed all WTO panel cases"], 1,
+             "The US blockade of appointments over concerns of judicial overreach paralyzed the Appellate Body, allowing losing parties to 'appeal into the void' and escape binding dispute resolution."),
+            ("Under the WTO Agreement on Subsidies and Countervailing Measures (SCM), which category of subsidies is explicitly prohibited?",
+             ["Subsidies for university scientific research", "Subsidies contingent upon export performance or contingent upon the use of domestic over imported goods", "Agricultural disaster relief following floods", "Free school lunch programs for children"], 1,
+             "Export subsidies and import-substitution subsidies distort international competition directly and are strictly prohibited under the SCM Agreement."),
+            ("What is 'Dumping' under WTO rules (GATT Article VI)?",
+             ["Dumping toxic waste into international rivers", "When an enterprise exports a product at a price lower than its normal value in the domestic market, causing material injury to an importing nation's domestic industry", "Selling government-owned railways to private investors", "Giving away unsold clothing to domestic charities"], 1,
+             "If predatory low-price exporting injures local industry, importing states are authorized to levy anti-dumping duties to offset the margin of dumping after an objective investigation."),
+            ("Why did the WTO's Doha Development Agenda (DDA), launched in 2001, grind into an intractable negotiating impasse?",
+             ["Delegates refused to visit the Middle East", "Deep structural divisions between developed nations (reluctant to dismantle agricultural subsidies) and developing nations (demanding special and differential treatment and resisting industrial tariff cuts)", "The WTO secretariat refused to schedule meetings", "All countries agreed on all issues in the first week"], 1,
+             "The Doha Round foundered on the agriculture-manufacturing standoff, marking the practical end of comprehensive single-undertaking multilateral trade rounds."),
+            ("The Regional Comprehensive Economic Partnership (RCEP), which entered into force on January 1, 2022, is significant because it:",
+             ["Includes only North American nations", "Is the world's largest free trade agreement by population and GDP, uniting ASEAN's 10 members with China, Japan, South Korea, Australia, and New Zealand", "Abolished all national currencies in Asia", "Banned all trade with the European Union"], 1,
+             "RCEP covers nearly 30% of global GDP and population, creating a unified rule of origin framework across the Asia-Pacific region."),
+            ("The Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP) was successfully ratified in 2018 by 11 nations after the withdrawal of which major founding country?",
+             ["The United Kingdom", "The United States (under President Donald Trump in 2017)", "Japan", "Canada"], 1,
+             "Following the US withdrawal in January 2017, Japan and Australia led the remaining 11 members to suspend controversial US-backed clauses (like strict IP) and conclude the CPTPP."),
+            ("What is the European Union's Carbon Border Adjustment Mechanism (CBAM), adopted in 2023, designed to prevent?",
+             ["The illegal smuggling of diamonds into Antwerp", "Carbon leakage: companies relocating carbon-intensive production to countries with weaker environmental regulations, by taxing imported goods based on their embedded carbon emissions", "Tourists driving gasoline cars in European cities", "Exporting coal to South American countries"], 1,
+             "CBAM requires importers to purchase carbon certificates matching the EU emissions trading price, aligning foreign products with domestic climate standards while raising debates over disguised protectionism.")
+        ])
+    ]
+
+    for mod_code, title, desc, q_list in more_modules:
+        exams[mod_code] = {
+            "module_num": mod_code,
+            "module_title": title,
+            "description": desc,
+            "questions": [
+                {
+                    "q": q_text,
+                    "opts": opts,
+                    "correct": corr,
+                    "explanation": exp
+                }
+                for q_text, opts, corr, exp in q_list
+            ]
+        }
+
+    output_path = Path("assets/data/module_exams.json")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(exams, f, indent=2, ensure_ascii=False)
+
+    total_q = sum(len(m["questions"]) for m in exams.values())
+    print(f"Generated exams for {len(exams)} modules with a total of {total_q} questions at {output_path}")
+
+if __name__ == "__main__":
+    create_module_exams()

@@ -1,0 +1,370 @@
+<style>
+/* Design System */
+#security-dilemma-sim {
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 30px 0;
+    border: 1px solid #374151;
+}
+
+#security-dilemma-sim .sim-sd-panel {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+
+#security-dilemma-sim .sim-sd-header {
+    border-bottom: 2px solid #374151;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#security-dilemma-sim .sim-sd-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#security-dilemma-sim .sim-sd-text-muted {
+    color: #9ca3af;
+}
+
+#security-dilemma-sim .sim-sd-btn {
+    padding: 12px 15px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#security-dilemma-sim .sim-sd-btn:hover {
+    background: #4b5563;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+}
+
+#security-dilemma-sim .sim-sd-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#security-dilemma-sim .sim-sd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    #security-dilemma-sim .sim-sd-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#security-dilemma-sim .sim-sd-bar-container {
+    width: 100%;
+    background: #374151;
+    border-radius: 4px;
+    height: 20px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#security-dilemma-sim .sim-sd-bar {
+    height: 100%;
+    background: #ef4444; /* Default threat color */
+    transition: width 0.5s ease;
+}
+
+#security-dilemma-sim .sim-sd-log {
+    max-height: 150px;
+    overflow-y: auto;
+    background: #111827;
+    padding: 10px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#security-dilemma-sim .sim-sd-log-entry {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #374151;
+    animation: sim-sd-fadeIn 0.3s;
+}
+
+#security-dilemma-sim .sim-sd-outcome {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    animation: sim-sd-fadeIn 0.5s;
+}
+
+#security-dilemma-sim .sim-sd-outcome.success {
+    border: 1px solid #10b981;
+    background: rgba(16,185,129,0.1);
+    color: #10b981;
+}
+
+#security-dilemma-sim .sim-sd-outcome.failure {
+    border: 1px solid #ef4444;
+    background: rgba(239,68,68,0.1);
+    color: #ef4444;
+}
+
+#security-dilemma-sim .sim-sd-outcome.warning {
+    border: 1px solid #f59e0b;
+    background: rgba(245,158,11,0.1);
+    color: #f59e0b;
+}
+
+@keyframes sim-sd-fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#security-dilemma-sim .sim-sd-stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+</style>
+
+<div id="security-dilemma-sim">
+    <div class="sim-sd-header">
+        <h3>⚔️ Simulation: The Security Dilemma Spiral</h3>
+        <p class="sim-sd-text-muted">You are State Alpha in an anarchic world. State Beta (AI) responds cautiously to your military posture. Over 5 rounds, will mutual fear spiral into an arms race — or can confidence-building measures forge a security community?</p>
+    </div>
+
+    <div class="sim-sd-grid">
+        <div class="sim-sd-panel">
+            <h4>State Alpha (You)</h4>
+            <div id="sim-sd-alpha-stats">
+                <div class="sim-sd-stat-row">
+                    <span>Military Power:</span>
+                    <strong id="sim-sd-alpha-power">5</strong>
+                </div>
+                <div class="sim-sd-stat-row">
+                    <span>Threat Perception:</span>
+                    <strong id="sim-sd-alpha-threat-val">50%</strong>
+                </div>
+                <div class="sim-sd-bar-container">
+                    <div id="sim-sd-alpha-threat-bar" class="sim-sd-bar" style="width: 50%;"></div>
+                </div>
+            </div>
+            
+            <h4 style="margin-top: 20px;">Actions (Round <span id="sim-sd-round-counter">1</span>/5)</h4>
+            <button class="sim-sd-btn" onclick="window.simSdAction('build')" id="sim-sd-btn-build">🏗️ Build (+2 Military)</button>
+            <button class="sim-sd-btn" onclick="window.simSdAction('signal')" id="sim-sd-btn-signal">🤝 Signal (+1 Diplomacy)</button>
+            <button class="sim-sd-btn" onclick="window.simSdAction('reduce')" id="sim-sd-btn-reduce">🔽 Reduce (-1 Military)</button>
+        </div>
+
+        <div class="sim-sd-panel">
+            <h4>State Beta (AI)</h4>
+            <div id="sim-sd-beta-stats">
+                <div class="sim-sd-stat-row">
+                    <span>Military Power:</span>
+                    <strong id="sim-sd-beta-power">5</strong>
+                </div>
+                <div class="sim-sd-stat-row">
+                    <span>Threat Perception:</span>
+                    <strong id="sim-sd-beta-threat-val">50%</strong>
+                </div>
+                <div class="sim-sd-bar-container">
+                    <div id="sim-sd-beta-threat-bar" class="sim-sd-bar" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div style="margin-top: 20px;" class="sim-sd-text-muted">
+                <strong>Strategy:</strong> Cautious Reactive
+            </div>
+            <div id="sim-sd-beta-action-display" style="margin-top: 15px; font-weight: bold; color: #60a5fa;">
+                Waiting for Round 1...
+            </div>
+        </div>
+    </div>
+
+    <div class="sim-sd-log" id="sim-sd-log" aria-live="polite">
+        <div class="sim-sd-text-muted">Simulation started. Waiting for Alpha's first move.</div>
+    </div>
+
+    <div id="sim-sd-outcome" class="sim-sd-outcome" aria-live="polite">
+        <h4 id="sim-sd-outcome-title" style="margin-top:0;"></h4>
+        <p id="sim-sd-outcome-desc"></p>
+        <button class="sim-sd-btn" onclick="window.simSdRestart()" style="margin-top: 15px; max-width: 200px;">🔄 Restart Simulation</button>
+    </div>
+</div>
+
+<script>
+(function() {
+    let state = {
+        round: 1,
+        alphaPower: 5,
+        betaPower: 5,
+        alphaThreat: 50,
+        betaThreat: 50,
+        alphaLastAction: null,
+        gameOver: false
+    };
+
+    function clamp(val, min, max) {
+        return Math.min(Math.max(val, min), max);
+    }
+
+    function updateUI() {
+        document.getElementById('sim-sd-alpha-power').innerText = state.alphaPower;
+        document.getElementById('sim-sd-alpha-threat-val').innerText = state.alphaThreat + '%';
+        document.getElementById('sim-sd-alpha-threat-bar').style.width = state.alphaThreat + '%';
+
+        document.getElementById('sim-sd-beta-power').innerText = state.betaPower;
+        document.getElementById('sim-sd-beta-threat-val').innerText = state.betaThreat + '%';
+        document.getElementById('sim-sd-beta-threat-bar').style.width = state.betaThreat + '%';
+
+        if (state.round <= 5) {
+            document.getElementById('sim-sd-round-counter').innerText = state.round;
+        }
+    }
+
+    function logAction(msg) {
+        const logContainer = document.getElementById('sim-sd-log');
+        const entry = document.createElement('div');
+        entry.className = 'sim-sd-log-entry';
+        entry.innerHTML = '<strong>Round ' + state.round + ':</strong> ' + msg;
+        logContainer.insertBefore(entry, logContainer.firstChild);
+    }
+
+    function determineBetaAction() {
+        if (state.round === 1 || !state.alphaLastAction) {
+            return 'wait';
+        }
+        
+        if (state.alphaLastAction === 'build') {
+            return 'build';
+        } else if (state.alphaLastAction === 'signal') {
+            return Math.random() < 0.5 ? 'signal' : 'wait';
+        } else if (state.alphaLastAction === 'reduce') {
+            return 'signal';
+        }
+        return 'wait';
+    }
+
+    window.simSdAction = function(alphaChoice) {
+        if (state.gameOver) return;
+
+        let betaChoice = determineBetaAction();
+        let alphaMsg = '';
+        let betaMsg = '';
+        
+        // Alpha Action
+        if (alphaChoice === 'build') {
+            state.alphaPower += 2;
+            alphaMsg = 'Alpha Built (+2 Military).';
+            state.betaThreat += 20;
+        } else if (alphaChoice === 'signal') {
+            alphaMsg = 'Alpha Signaled diplomacy.';
+            state.betaThreat -= 10;
+        } else if (alphaChoice === 'reduce') {
+            state.alphaPower = Math.max(0, state.alphaPower - 1);
+            alphaMsg = 'Alpha Reduced military (-1 Military).';
+            state.betaThreat -= 15;
+        }
+
+        // Beta Action
+        if (betaChoice === 'build') {
+            state.betaPower += 2;
+            betaMsg = 'Beta Built (+2 Military).';
+            state.alphaThreat += 20;
+        } else if (betaChoice === 'signal') {
+            betaMsg = 'Beta Signaled diplomacy.';
+            state.alphaThreat -= 10;
+        } else if (betaChoice === 'reduce') {
+            state.betaPower = Math.max(0, state.betaPower - 1);
+            betaMsg = 'Beta Reduced military (-1 Military).';
+            state.alphaThreat -= 15;
+        } else {
+            betaMsg = 'Beta Waited.';
+        }
+
+        // Clamp threats
+        state.alphaThreat = clamp(state.alphaThreat, 0, 100);
+        state.betaThreat = clamp(state.betaThreat, 0, 100);
+
+        document.getElementById('sim-sd-beta-action-display').innerText = 'Round ' + state.round + ': ' + betaMsg;
+        logAction(alphaMsg + ' | ' + betaMsg);
+
+        state.alphaLastAction = alphaChoice;
+        updateUI();
+
+        if (state.round >= 5) {
+            endSimulation();
+        } else {
+            state.round++;
+            document.getElementById('sim-sd-round-counter').innerText = state.round;
+        }
+    };
+
+    function endSimulation() {
+        state.gameOver = true;
+        document.getElementById('sim-sd-btn-build').disabled = true;
+        document.getElementById('sim-sd-btn-signal').disabled = true;
+        document.getElementById('sim-sd-btn-reduce').disabled = true;
+
+        const outcomeDiv = document.getElementById('sim-sd-outcome');
+        const outcomeTitle = document.getElementById('sim-sd-outcome-title');
+        const outcomeDesc = document.getElementById('sim-sd-outcome-desc');
+        
+        outcomeDiv.style.display = 'block';
+        outcomeDiv.className = 'sim-sd-outcome';
+
+        if (state.alphaThreat > 75 && state.betaThreat > 75) {
+            outcomeDiv.classList.add('failure');
+            outcomeTitle.innerText = '❌ Arms Race Spiral';
+            outcomeDesc.innerHTML = 'Both states are locked in a ruinous arms race. Neither is more secure than before, but both are poorer.<br><br><strong>Analysis:</strong> This confirms Robert Jervis\\'s Spiral Model — defensive measures were perceived as offensive threats, triggering mutual escalation in a tragic feedback loop.';
+        } else if (state.alphaThreat < 35 && state.betaThreat < 35) {
+            outcomeDiv.classList.add('success');
+            outcomeTitle.innerText = '✅ Security Community';
+            outcomeDesc.innerHTML = 'Through sustained confidence-building, both states have transcended the security dilemma.<br><br><strong>Analysis:</strong> Karl Deutsch\\'s concept of a Security Community has been achieved — states no longer consider war as a possible instrument against each other.';
+        } else {
+            outcomeDiv.classList.add('warning');
+            outcomeTitle.innerText = '⚠️ Uneasy Détente';
+            outcomeDesc.innerHTML = 'A fragile peace persists, but deep mistrust remains beneath the surface.<br><br><strong>Analysis:</strong> This resembles Cold War détente — cooperation on the surface, but neither side has truly abandoned worst-case military planning.';
+        }
+    }
+
+    window.simSdRestart = function() {
+        state = {
+            round: 1,
+            alphaPower: 5,
+            betaPower: 5,
+            alphaThreat: 50,
+            betaThreat: 50,
+            alphaLastAction: null,
+            gameOver: false
+        };
+
+        document.getElementById('sim-sd-btn-build').disabled = false;
+        document.getElementById('sim-sd-btn-signal').disabled = false;
+        document.getElementById('sim-sd-btn-reduce').disabled = false;
+        
+        document.getElementById('sim-sd-outcome').style.display = 'none';
+        document.getElementById('sim-sd-log').innerHTML = '<div class="sim-sd-text-muted">Simulation restarted. Waiting for Alpha\\'s first move.</div>';
+        document.getElementById('sim-sd-beta-action-display').innerText = 'Waiting for Round 1...';
+
+        updateUI();
+    };
+})();
+</script>

@@ -2,7 +2,7 @@
 title: The Evolution of the Global Economic Architecture
 slug: evolution-global-economic-architecture
 abstract: The evolution of the global economic architecture is driven by the need to adapt to a changing world, with challenges arising from shifts in economic power and the outdated policies of international economic institutions. Efforts have been made to reform and decentralize the architecture, with the rise of forums like the G20 and regional initiatives complementing the role of global institutions like the IMF and WTO.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Can an economic rulebook written in 1944 by a small club of Western powers govern a multipolar twenty-first century powered by rising Asian economies? As post-war Bretton Woods institutions hesitated to grant developing nations equitable voting rights, emerging powers began constructing their own financial safety nets—from the G20 summit to regional swap arrangements like the Chiang Mai Initiative. Global governance is steadily evolving from centralized Western guardianship into a decentralized mosaic where regional coalitions operate alongside multilateral giants."
 ---
 
 ## Introduction
@@ -160,7 +160,6 @@ This points to a likely future of a more decentralized global economic architect
 
 Overall, the global economic architecture is transitioning to a more multi-polar, decentralized system. While challenges remain, this provides opportunities for emerging economies to gain influence. With continued cooperation and reform, the system can be strengthened to promote stability and equitable growth.
 
----
 
 ---
 

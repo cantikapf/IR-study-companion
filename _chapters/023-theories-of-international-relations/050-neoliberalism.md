@@ -2,7 +2,7 @@
 title: Neoliberalism
 slug: neoliberalism-ir
 abstract: The theory of neoliberalism in International Relations.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Neoliberals accept the realist starting point—that the world is anarchic and states are selfish—yet reach a far more hopeful conclusion. Why? Because international institutions act as cheating-detectors and dispute-settlers. By providing reliable information, lowering transaction costs, and creating repeated interactions where cheaters get caught and punished, institutions like the WTO and UN allow rational states to trust one another and capture mutual 'absolute gains' without needing a world government."
 ---
 
 **Neoliberalism** is a theory in **international** relations that focuses on the role of **international institutions** in facilitating **cooperation** between **states**. It emerged in the 1970s and 1980s as a response to realism, challenging the view that the anarchic structure of the international system prevents cooperation. 
@@ -83,7 +83,6 @@ Neoliberalism seeks to understand how this cooperation is initiated and maintain
 The study of how institutions support cooperation - while imperfect - provides insight into building a more stable international order. Neoliberalism accepts the problems and conflicts inherent to global politics. Yet it ultimately asserts cooperation is achievable if institutional designs evolve to promote state interests. Anarchy did not mean the end of collaboration.
 
 
----
 
 ---
 

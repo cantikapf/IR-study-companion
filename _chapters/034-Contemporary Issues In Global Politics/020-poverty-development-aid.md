@@ -1,15 +1,14 @@
 ---
 title: Poverty, Development, and International Aid
 slug: poverty-development-aid
-abstract: Definitions and theory about development and international aid
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Underdevelopment is not a cultural defect or a streak of bad luck; it is a structural trap carved by colonial resource extraction and self-reinforcing poverty cycles. As Amartya Sen argued, true development is not simply boosting GDP numbers on a chart, but expanding real human freedoms—ensuring people have education, healthcare, and civil agency. Without dismantling unequal global trade terms, foreign aid functions merely as a temporary band-aid on a gaping structural wound."
 ---
 
 ## Definitions of Development
 
 Defining **development** is complex as the concept takes on different meanings for various thinkers and theorists. At its core, development refers to positive change or the process of improving people's lives. However, perspectives differ on how development should be defined, measured, and achieved.
 
-For some, development is primarily about **economic** growth and increasing GDP per capita. For others, human development factors like health, education, political freedom, and environmental sustainability are central. Development can also be understood as modernization, whereby traditional social structures are reorganized to increase productivity.
+For some, development is primarily about **economic** growth and increasing GDP per capita. For others, as formulated by Amartya Sen in *Development as Freedom* (1999), development is defined as the expansion of real human capabilities and substantial freedoms, rather than merely income growth. Michael Todaro and Stephen Smith (*Economic Development*, 2020) synthesize this as a multidimensional process involving major changes in social structures, popular attitudes, and national institutions, alongside economic acceleration. Development can also be understood as modernization, whereby traditional social structures are reorganized to increase productivity.
 
 Some approaches critique dominant economic models, instead prioritizing redistributive justice and meeting basic human needs. There are also many theories examining the historical, political, and sociological drivers behind **underdevelopment**, like colonialism. How development is defined has implications for policy, as different definitions point to alternative goals and strategies for promoting societal advancement.
 
@@ -133,9 +132,6 @@ Neoliberalism has had a significant influence on international aid programs and 
 In essence, neoliberal aid agendas emphasize individualistic remedies to poverty and inequality rather than empowering collective action. They aim to maintain an orderly free market system rather than addressing deeper structural causes in the global economic system.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Development" def1="Positive change or improvement in people's lives" term2="Underdevelopment" def2="State of low economic, social, and human development" term3="Vicious Circles" def3="Interlocking cause-and-effect relationships causing underdevelopment" term4="Neoliberalism" def4="Economic ideology emphasizing free markets and deregulation" %}
 

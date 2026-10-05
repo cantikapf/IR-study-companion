@@ -1,8 +1,7 @@
 ---
 title: Institution In International Security
 slug: institution-security
-abstract: This chapter will explain the institution in international security.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "Can a piece of paper stop a military invasion? Security institutions bridge the gap between anarchy and cooperation by providing mutual defense shields like NATO or collective security referees like the UN. While military alliances deter specific external rivals under the principle of 'an attack on one is an attack on all,' collective security frameworks attempt something much harder: punishing any rule-breaker anywhere to protect global stability."
 ---
 
 
@@ -21,7 +20,7 @@ simple_summary: "Why do countries sometimes fight? Imagine two kids who don't tr
 
 ## Alliances
 
-Alliances is a formal or informal relationship of security cooperation between two or more sovereign states in form of bilateral or multilateral agreements to provide some element of security to the signatories
+An alliance is a formal or informal relationship of security cooperation between two or more sovereign states in form of bilateral or multilateral agreements to provide some element of security to the signatories
 
 Example:
 1. NATO (North Atlantic Treaty Organization)
@@ -73,7 +72,7 @@ Example:
 
 ## United Nations Security Role
 
-The United Nations was founded in 1945 with the aim of maintaining international peace and security. Its founding charter outlines principles such as resolving disputes peacefully, refraining from the use of force in international relations, and promoting human rights and social progress.
+The United Nations was founded in 1945 as a global collective security organization under its Charter, distinguishing itself from balance-of-power alliances (Inis Claude, *Swords into Plowshares*, 1962). Its founding charter outlines principles such as resolving disputes peacefully, refraining from the use of force in international relations, and promoting human rights and social progress.
 
 The UN's main security roles are carried out by the Security Council, which is charged with maintaining peace, authorizing military action, enacting economic sanctions, and admitting new members. The Security Council has faced challenges in recent decades as the nature of conflicts has changed. During the Cold War, it was often paralyzed by vetoes from the US and USSR. In the post-Cold War era, most conflicts have been intrastate rather than between countries. This poses difficulties for traditional UN peacekeeping operations, which rely on host state consent.
 
@@ -93,7 +92,7 @@ Nuclear security also faces threats from non-state actors seeking nuclear materi
 
 ## Private Security Industry
 
-The private security industry has grown substantially since its emergence in the 1960s, with companies like Blackwater gaining notoriety for controversial incidents in Iraq and elsewhere. This proliferation of private companies providing security services internationally has raised important questions about the state's traditional monopoly over violence and the implications of outsourcing security functions to private actors.
+The private military and security industry has grown substantially since the end of the Cold War, prompting international regulatory initiatives such as the 2008 Montreux Document on pertinent international legal obligations for private military and security companies (PMSCs). since its emergence in the 1960s, with companies like Blackwater gaining notoriety for controversial incidents in Iraq and elsewhere. This proliferation of private companies providing security services internationally has raised important questions about the state's traditional monopoly over violence and the implications of outsourcing security functions to private actors.
 
 The rise of private military and security companies (PMSCs) like Blackwater stems from states seeking to fill gaps in capacity during foreign interventions. By hiring private contractors for security, states can avoid potential domestic political blowback from military casualties. However, this reliance on PMSCs has drawn criticism when contractors have engaged in human rights abuses or escalated conflicts while evading accountability. The lack of transparency and oversight associated with private security exports poses risks of undermining foreign policy and empowering non-state groups.
 
@@ -102,11 +101,6 @@ The global private security industry exhibits the characteristics of a transnati
 As private security continues to expand into spheres traditionally dominated by states, important normative and practical questions persist around regulating its export, prosecuting contractor crimes, and balancing public and private interests. The proliferation of PMSCs represent a shift in how violence and security are provided globally, with complex repercussions for international relations and governance.
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Alliance" def1="Formal or informal security cooperation between sovereign states" term2="Collective Security" def2="Responding to unspecified aggressor in support of unknown victim" term3="Regional Security Structures" def3="Institutions for security cooperation among regional actors" term4="United Nations Security Role" def4="Maintaining international peace and security through Security Council" %}
 

@@ -1,7 +1,7 @@
 ---
 title: Table of Contents
 slug: contents
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Complete syllabus and curriculum directory of all 18 modules spanning theory, security, IPE, diplomacy, international law, and regional studies."
 ---
 
 {% include chapterbook-toc.html %}

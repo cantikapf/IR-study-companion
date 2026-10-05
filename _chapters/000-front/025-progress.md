@@ -1,7 +1,7 @@
 ---
 title: My Progress
 slug: progress
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Student learning dashboard and curriculum completion tracker monitoring progress across all modules, quizzes, and simulations."
 ---
 
 <style>

@@ -1,0 +1,191 @@
+{% assign mod_data = site.data.module_exams[include.module_id] %}
+{% if mod_data %}
+<section class="module-exam-card" id="module-exam-{{ include.module_id }}" aria-label="Module Summative Assessment">
+  <div class="exam-header">
+    <div>
+      <div class="exam-title-badge">Module {{ include.module_id }} Summative Assessment</div>
+      <h2 class="exam-title">{{ mod_data.module_title }}</h2>
+      <p style="color: var(--lms-ink-secondary); font-size: 0.95rem; margin: 0.4rem 0 0; line-height: 1.5;">
+        {{ mod_data.description }}
+      </p>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem;">
+      <span class="exam-meta-pill">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> 10 Questions &bull; 70% to Pass
+      </span>
+      <span id="exam-status-badge-{{ include.module_id }}" class="exam-meta-pill" style="display: none; background: rgba(16, 185, 129, 0.12); color: rgb(5, 150, 105); border-color: rgba(16, 185, 129, 0.35);">
+        <i class="fa fa-check-circle" aria-hidden="true"></i> Mastered &bull; Passed
+      </span>
+    </div>
+  </div>
+
+  <form id="form-exam-{{ include.module_id }}" onsubmit="return false;">
+    <div class="exam-questions-list">
+      {% for question in mod_data.questions %}
+        {% assign q_idx = forloop.index %}
+        <div class="exam-question-item" id="exam-q-{{ include.module_id }}-{{ q_idx }}" data-correct="{{ question.correct }}">
+          <div class="exam-q-number">Question {{ q_idx }} of 10</div>
+          <div class="exam-q-text">{{ question.q }}</div>
+
+          <div class="exam-options-stack" role="radiogroup">
+            {% for opt in question.opts %}
+              {% assign opt_idx = forloop.index0 %}
+              <label class="exam-option-label" for="opt-{{ include.module_id }}-{{ q_idx }}-{{ opt_idx }}">
+                <input type="radio" 
+                       name="q_{{ q_idx }}" 
+                       id="opt-{{ include.module_id }}-{{ q_idx }}-{{ opt_idx }}" 
+                       value="{{ opt_idx }}">
+                <span>{{ opt }}</span>
+              </label>
+            {% endfor %}
+          </div>
+
+          <div class="quiz-explanation-box" id="exam-exp-{{ include.module_id }}-{{ q_idx }}" style="display: none;">
+            <div class="quiz-explanation-title"><i class="fa fa-info-circle"></i> Scholarly Context & Rationale</div>
+            <div>{{ question.explanation }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="exam-action-bar">
+      <button type="button" class="exam-submit-btn" id="btn-submit-exam-{{ include.module_id }}">
+        Submit Assessment for Evaluation
+      </button>
+      <div id="exam-live-error-{{ include.module_id }}" style="color: rgb(220, 38, 38); font-size: 0.875rem; font-weight: 600; display: none;">
+        Please answer all 10 questions before submitting.
+      </div>
+    </div>
+  </form>
+
+  <div class="exam-result-summary" id="exam-result-{{ include.module_id }}" style="display: none;"></div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const moduleId = "{{ include.module_id }}";
+    const container = document.getElementById('module-exam-' + moduleId);
+    if (!container) return;
+
+    const storageKey = 'exam_module_' + moduleId + '_passed';
+    const scoreKey = 'exam_module_' + moduleId + '_score';
+    const statusBadge = document.getElementById('exam-status-badge-' + moduleId);
+    const resultBox = document.getElementById('exam-result-' + moduleId);
+    const submitBtn = document.getElementById('btn-submit-exam-' + moduleId);
+
+    if (localStorage.getItem(storageKey) === 'true') {
+        const savedScore = localStorage.getItem(scoreKey) || '100';
+        if (statusBadge) {
+            statusBadge.style.display = 'inline-flex';
+            statusBadge.innerHTML = '<i class="fa fa-check-circle"></i> Mastered (' + savedScore + '%)';
+        }
+    }
+
+    // Option selection styling
+    const labels = container.querySelectorAll('.exam-option-label');
+    labels.forEach(label => {
+        const input = label.querySelector('input[type="radio"]');
+        if (!input) return;
+        input.addEventListener('change', () => {
+            const name = input.getAttribute('name');
+            container.querySelectorAll('input[name="' + name + '"]').forEach(r => {
+                r.closest('.exam-option-label').classList.remove('is-selected');
+            });
+            if (input.checked) {
+                label.classList.add('is-selected');
+            }
+        });
+    });
+
+    // Handle submit
+    if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+            const errorEl = document.getElementById('exam-live-error-' + moduleId);
+            const questionItems = container.querySelectorAll('.exam-question-item');
+            let answered = 0;
+            let correctCount = 0;
+
+            questionItems.forEach(item => {
+                const checked = item.querySelector('input[type="radio"]:checked');
+                if (checked) answered++;
+            });
+
+            if (answered < questionItems.length) {
+                if (errorEl) {
+                    errorEl.textContent = 'Please answer all 10 questions (' + answered + '/10 completed).';
+                    errorEl.style.display = 'block';
+                }
+                return;
+            }
+            if (errorEl) errorEl.style.display = 'none';
+
+            questionItems.forEach(item => {
+                const correctIdx = parseInt(item.getAttribute('data-correct'), 10);
+                const checked = item.querySelector('input[type="radio"]:checked');
+                const selectedIdx = checked ? parseInt(checked.value, 10) : -1;
+                const options = item.querySelectorAll('.exam-option-label');
+
+                options.forEach((optLabel, idx) => {
+                    optLabel.classList.remove('is-selected', 'is-correct', 'is-wrong');
+                    if (idx === correctIdx) {
+                        optLabel.classList.add('is-correct');
+                    } else if (idx === selectedIdx) {
+                        optLabel.classList.add('is-wrong');
+                    }
+                });
+
+                if (selectedIdx === correctIdx) {
+                    correctCount++;
+                }
+
+                // Show rationale
+                const expBox = item.querySelector('.quiz-explanation-box');
+                if (expBox) expBox.style.display = 'block';
+            });
+
+            const score = Math.round((correctCount / questionItems.length) * 100);
+            const isPass = score >= 70;
+
+            localStorage.setItem(scoreKey, score);
+            if (isPass) {
+                localStorage.setItem(storageKey, 'true');
+                if (statusBadge) {
+                    statusBadge.style.display = 'inline-flex';
+                    statusBadge.innerHTML = '<i class="fa fa-check-circle"></i> Mastered (' + score + '%)';
+                }
+                window.dispatchEvent(new Event('exam_passed'));
+                window.dispatchEvent(new Event('chapter_read'));
+            }
+
+            if (resultBox) {
+                resultBox.style.display = 'block';
+                resultBox.className = 'exam-result-summary ' + (isPass ? 'is-pass' : 'is-fail');
+                if (isPass) {
+                    resultBox.innerHTML = `
+                      <h3 style="margin: 0 0 0.5rem; color: rgb(5, 150, 105); font-size: 1.25rem;">
+                        <i class="fa fa-check-circle"></i> Examination Passed (${score}%)
+                      </h3>
+                      <p style="margin: 0; line-height: 1.5; color: var(--lms-ink-secondary);">
+                        Outstanding performance! You answered <strong>${correctCount} of 10</strong> questions correctly, satisfying the 70% mastery threshold. This module is officially recorded as completed toward your academic certificate.
+                      </p>
+                    `;
+                } else {
+                    resultBox.innerHTML = `
+                      <h3 style="margin: 0 0 0.5rem; color: rgb(220, 38, 38); font-size: 1.25rem;">
+                        <i class="fa fa-times-circle"></i> Mastery Threshold Not Reached (${score}%)
+                      </h3>
+                      <p style="margin: 0 0 1rem; line-height: 1.5; color: var(--lms-ink-secondary);">
+                        You answered <strong>${correctCount} of 10</strong> questions correctly. A minimum score of 70% is required to earn module certification. Review the scholarly explanations above and try again.
+                      </p>
+                      <button type="button" class="sync-btn sync-btn-secondary" onclick="location.reload();">
+                        <i class="fa fa-refresh"></i> Reset and Retry Examination
+                      </button>
+                    `;
+                }
+                resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    }
+});
+</script>
+{% endif %}

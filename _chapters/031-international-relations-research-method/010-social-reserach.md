@@ -1,20 +1,20 @@
 ---
-title: Social Research Method
+title: Social Research Methods in International Relations
 slug: social-reserach-method
-abstract: Social research involves the systematic collection and analysis of data related to the social world. 
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+abstract: Systematic methodologies, research designs, and analytical units in international relations and political science.
+simple_summary: "Anyone can share an emotional opinion about international politics on social media, but social science requires disciplined proof. Research methodology gives scholars the compass to move past armchair commentary: whether exploring uncharted territory like AI warfare, systematically describing shifts in global trade flows, testing the causal roots of armed conflict, or evaluating whether peace treaties actually work."
 ---
 
-## Introduction
+## Introduction: The Logic of Social Inquiry
 
-**Social** **research** involves the systematic collection and analysis of data related to the social world. The goal of **social research** is to develop an understanding of social phenomena, uncover new insights, test theories, assess social interventions, and inform policy decisions. 
+**Social research** in international relations and political science constitutes the disciplined, empirical, and systematic investigation of social and political phenomena (Earl Babbie, 2020; Ranjit Kumar, 2019). Rather than relying on ungrounded intuition, partisan rhetoric, or anecdotal impressions, social research applies rigorous epistemological rules to generate evidence-based inferences about war, peace, international treaties, foreign policy, and transnational movements.
 
-Social research serves four primary purposes:
+Methodologically, research designs in social inquiry are broadly categorized into four foundational purposes:
 
-- **Exploratory research** aims to generate new ideas and hypotheses. It focuses on discovering insights and familiarizing researchers with basic details. 
-- **Descriptive research** presents a detailed profile of a group, process or relationship. It aims to describe social characteristics, contexts, trends, and changes over time.
-- **Explanatory research** goes beyond description to analyze and test theories about causal mechanisms and underlying processes. The goal is to understand why and how social phenomena occur.  
-- **Evaluative research** collects data to evaluate a policy, program, or intervention. It assesses whether something is achieving its intended effects and outcomes.
+- **Exploratory Research**: Conducted when a phenomenon is novel, under-theorized, or rapidly emerging (such as the foreign policy implications of generative AI or space militarization). It aims to uncover initial patterns, clarify conceptual definitions, and formulate inductive hypotheses.
+- **Descriptive Research**: Systematically maps and documents the precise characteristics of a population, institution, or historical process (e.g., measuring global nuclear arsenals, tracking democratic backsliding indices, or documenting UN voting alignments).
+- **Explanatory Research**: Goes beyond description to isolate causal mechanisms and test theoretical hypotheses. It seeks to answer *why* and *how* specific outcomes occur (e.g., why do nuclear-armed states engage in low-level proxy wars rather than direct conflict?).
+- **Evaluative Research**: Assesses the empirical effectiveness and unintended consequences of specific policies, treaties, or international interventions (e.g., evaluating whether economic sanctions against target regimes achieve stated compliance objectives).
 
 These four purposes shape the methodology and approach taken in a social research project. While projects may incorporate multiple goals, one purpose tends to dominate the research questions, design, data collection, and analysis methods.
 
@@ -188,8 +188,6 @@ Social interactions and actions are also units of analysis. Examples are friends
 
 ### Characteristics
 Attributes that can be measured are key focal points. Demographics like age, gender, income, education are commonly studied. Psychological traits like attitudes, personalities, prejudices, and beliefs are also analyzed.
-
----
 
 ---
 

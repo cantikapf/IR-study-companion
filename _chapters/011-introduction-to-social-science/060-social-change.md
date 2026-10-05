@@ -2,7 +2,7 @@
 slug: understanding-social-change
 title: Understanding Social Change
 abstract: Key concepts, factors, and theories of social change in social science.
-simple_summary: "Societies are never completely still. Over time, culture, technologies, and rules transform how we live together. This chapter explains why and how social change happens."
+simple_summary: "No society remains frozen in time; whether sparked by demographic shifts, technological inventions like the steam engine, or ideological revolutions, social orders continuously transform. While early thinkers assumed societies always marched forward toward higher progress, modern sociology demonstrates that change is non-linear and contested—often swinging through cycles of rise, breakdown, and renewal as new economic forces clash with entrenched institutions."
 ---
 
 **Social** **change** refers to the transformation in social relationships, customs, societal structures, and cultural patterns over time. As a dynamic, continuous, universal, and essential process, social change exhibits distinct characteristics:
@@ -126,11 +126,13 @@ In essence, technology serves as a profound catalyst for social change. Through 
 
 ---
 
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Social Change" def1="The transformation in social relationships, customs, societal structures, and cultural patterns over time." term2="Evolutionary Theories" def2="View social change as a sequential progression, moving from simple to complex forms." term3="Cyclical Theories" def3="Emphasize a rhythmic pattern of growth, maturity, decline, and renewal in societies." term4="Functionalism" def4="Interprets social change as society's effort to maintain stability and equilibrium in the face of external jolts." %}
 
 ### Knowledge Check
-{% include quiz.html id="quiz_050_politics_social" question="According to Marxist Theory, what is the primary driving force behind radical social change?" opt1="Technological advancements and innovations" opt2="Class struggle and economic conflicts between the bourgeoisie and the proletariat" opt3="The natural evolution from primitive to advanced stages" opt4="The cyclical pattern of societal growth and decline" correct="2" %}
+{% include quiz.html id="quiz_060_social_change" question="According to Marxist Theory, what is the primary driving force behind radical social change?" opt1="Technological advancements and innovations" opt2="Class struggle and economic conflicts between the bourgeoisie and the proletariat" opt3="The natural evolution from primitive to advanced stages" opt4="The cyclical pattern of societal growth and decline" correct="2" %}
 
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="011" %}

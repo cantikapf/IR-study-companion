@@ -2,7 +2,7 @@
 title: Theory And Methods of International Organization
 slug: theory-international-organizaton
 abstract: This page explores the impact of international organizations (IOs) on state sovereignty and global politics. It discusses various perspectives, including the realist view of IOs as tools of powerful states, the internationalist perspective on cooperation and sovereignty, and the neo-functionalists' emphasis on regional integration.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "Do international organizations truly possess autonomous power, or are they mere puppets dancing to the tune of great powers? Realists argue that global bodies simply reflect the underlying distribution of military power, while neoliberal institutionalists show how institutions drastically slash transaction costs and prevent mutual cheating. Constructivists and universalists reveal an even deeper reality: international organizations are not neutral referees—their professional bureaucracies define what is considered legitimate, subtly reshaping the sovereign identities of the states that created them."
 ---
 
 ## Introduction
@@ -117,7 +117,6 @@ Some elements inherent in the structure of international organizations give cert
 
 International organizations derive power through other means as well, like their moral authority to shame countries into action, or their privileged access to important information. Overall, IOs have significant leverage over states, though ultimately major powers still dominate decision-making.
 
----
 
 ---
 

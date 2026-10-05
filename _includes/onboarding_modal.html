@@ -1,0 +1,189 @@
+<!-- Guided Onboarding Welcome Modal & Track Recommender -->
+<div class="lms-modal-backdrop" id="onboarding-backdrop" aria-hidden="true"></div>
+
+<div class="lms-modal" id="onboarding-modal" role="dialog" aria-labelledby="onboarding-title" aria-modal="true" aria-hidden="true" style="max-width: 680px;">
+  <div class="lms-modal-header">
+    <div>
+      <span class="lms-modal-tag">Platform Orientation</span>
+      <h3 class="lms-modal-title" id="onboarding-title">Welcome to IR Study Companion</h3>
+    </div>
+    <button class="lms-modal-close" id="onboarding-modal-close" aria-label="Close onboarding modal">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="lms-modal-body">
+    <!-- Step Dots -->
+    <div class="onboarding-steps-indicator">
+      <div class="onboarding-step-dot is-active" id="dot-step-1"></div>
+      <div class="onboarding-step-dot" id="dot-step-2"></div>
+      <div class="onboarding-step-dot" id="dot-step-3"></div>
+    </div>
+
+    <!-- Step 1: Welcome -->
+    <div class="onboarding-step-view" id="onboarding-step-1">
+      <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--lms-ink-primary); margin: 0 0 0.5rem;">
+        An Academically Rigorous Self-Study Academy
+      </h4>
+      <p style="font-size: 0.95rem; line-height: 1.6; color: var(--lms-ink-secondary); margin-bottom: 1.25rem;">
+        IR Study Companion is designed for university students, policy analysts, and curious minds. Unlike passive blog articles, every lesson is paired with <strong>knowledge checkpoints</strong>, <strong>active recall flashcards</strong>, and <strong>10 interactive diplomatic labs</strong>.
+      </p>
+      <div class="lms-sync-stats-box" style="margin-bottom: 1.5rem;">
+        <div class="sync-stat-item">
+          <span class="sync-stat-val">18</span>
+          <span class="sync-stat-lbl">Core Disciplines</span>
+        </div>
+        <div class="sync-stat-item">
+          <span class="sync-stat-val">157</span>
+          <span class="sync-stat-lbl">Structured Lessons</span>
+        </div>
+        <div class="sync-stat-item">
+          <span class="sync-stat-val">10</span>
+          <span class="sync-stat-lbl">Diplomatic Labs</span>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: flex-end;">
+        <button class="sync-btn sync-btn-primary" id="btn-onboarding-next-1">
+          Next: How Learning Works &rarr;
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: How It Works -->
+    <div class="onboarding-step-view" id="onboarding-step-2" style="display: none;">
+      <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--lms-ink-primary); margin: 0 0 0.5rem;">
+        Study Tools at Your Fingertips
+      </h4>
+      <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.85rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.925rem; line-height: 1.5; color: var(--lms-ink-secondary);">
+          <i class="fa fa-book" style="color: var(--lms-ink-primary); margin-top: 0.2rem;"></i>
+          <span><strong>Distraction-Free Course Player:</strong> Clean typography (~70ch measure), live reading timers, and an outline sidebar for focused study.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.925rem; line-height: 1.5; color: var(--lms-ink-secondary);">
+          <i class="fa fa-check-square-o" style="color: rgb(16 185 129); margin-top: 0.2rem;"></i>
+          <span><strong>Checkpoints & 10-Question Exams:</strong> Verify concepts immediately. Passing module exams (70%+) awards official completion credit.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.925rem; line-height: 1.5; color: var(--lms-ink-secondary);">
+          <i class="fa fa-gamepad" style="color: #6366f1; margin-top: 0.2rem;"></i>
+          <span><strong>10 Simulation Labs:</strong> Put theory to the test in simulated crisis decisions, veto negotiations, and maritime mapping.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.925rem; line-height: 1.5; color: var(--lms-ink-secondary);">
+          <i class="fa fa-keyboard-o" style="color: var(--lms-ink-tertiary); margin-top: 0.2rem;"></i>
+          <span><strong>Keyboard Shortcut:</strong> Press <kbd style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.8rem;">S</kbd> anywhere to open the curriculum drawer.</span>
+        </li>
+      </ul>
+      <div style="display: flex; justify-content: space-between;">
+        <button class="sync-btn sync-btn-secondary" id="btn-onboarding-back-2">&larr; Back</button>
+        <button class="sync-btn sync-btn-primary" id="btn-onboarding-next-2">Next: Choose Your Pathway &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Choose Track -->
+    <div class="onboarding-step-view" id="onboarding-step-3" style="display: none;">
+      <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--lms-ink-primary); margin: 0 0 0.5rem;">
+        Choose Your Recommended Pathway
+      </h4>
+      <p style="font-size: 0.925rem; color: var(--lms-ink-secondary); margin-bottom: 1rem;">
+        Select your primary learning goal to navigate directly to the most relevant curriculum track:
+      </p>
+
+      <div class="onboarding-card-grid">
+        <a href="{{ site.baseurl }}/study-of-international-relations.html" class="onboarding-choice-card js-select-track" style="text-decoration: none;">
+          <h5>Track 01: Foundations</h5>
+          <p>Ideal for beginners and S1 students. Realism, Liberalism, Marxism, and FPA.</p>
+        </a>
+        <a href="{{ site.baseurl }}/history-matters.html" class="onboarding-choice-card js-select-track" style="text-decoration: none;">
+          <h5>Track 02: Security & Warfare</h5>
+          <p>Strategic deterrence, causes of war, diplomatic history, and hybrid threats.</p>
+        </a>
+        <a href="{{ site.baseurl }}/introduction-ipe.html" class="onboarding-choice-card js-select-track" style="text-decoration: none;">
+          <h5>Track 03: Global Economy (IPE)</h5>
+          <p>Bretton Woods, WTO, development models, IMF, and currency regimes.</p>
+        </a>
+        <a href="{{ site.baseurl }}/basic-inter-law.html" class="onboarding-choice-card js-select-track" style="text-decoration: none;">
+          <h5>Track 04: Law & Indonesia</h5>
+          <p>Public international law, UNCLOS, ASEAN architecture, and Bebas-Aktif.</p>
+        </a>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+        <button class="sync-btn sync-btn-secondary" id="btn-onboarding-back-3">&larr; Back</button>
+        <button class="sync-btn sync-btn-primary" id="btn-onboarding-finish">
+          Explore Academy Homepage &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('onboarding-modal');
+    const backdrop = document.getElementById('onboarding-backdrop');
+    const closeBtn = document.getElementById('onboarding-modal-close');
+    const finishBtn = document.getElementById('btn-onboarding-finish');
+
+    if (!modal) return;
+
+    function openOnboarding() {
+        modal.classList.add('is-open');
+        if (backdrop) backdrop.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeOnboarding() {
+        modal.classList.remove('is-open');
+        if (backdrop) backdrop.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        localStorage.setItem('ir_onboarded_v1', 'true');
+    }
+
+    // Auto trigger on homepage if not onboarded
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('/');
+    if (isHomePage && !localStorage.getItem('ir_onboarded_v1')) {
+        setTimeout(openOnboarding, 600);
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeOnboarding);
+    if (finishBtn) finishBtn.addEventListener('click', closeOnboarding);
+    if (backdrop) backdrop.addEventListener('click', closeOnboarding);
+
+    // Track selector links also mark onboarded
+    const trackLinks = modal.querySelectorAll('.js-select-track');
+    trackLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            localStorage.setItem('ir_onboarded_v1', 'true');
+        });
+    });
+
+    // Step Navigation
+    const step1 = document.getElementById('onboarding-step-1');
+    const step2 = document.getElementById('onboarding-step-2');
+    const step3 = document.getElementById('onboarding-step-3');
+    const dot1 = document.getElementById('dot-step-1');
+    const dot2 = document.getElementById('dot-step-2');
+    const dot3 = document.getElementById('dot-step-3');
+
+    const next1 = document.getElementById('btn-onboarding-next-1');
+    const next2 = document.getElementById('btn-onboarding-next-2');
+    const back2 = document.getElementById('btn-onboarding-back-2');
+    const back3 = document.getElementById('btn-onboarding-back-3');
+
+    function showStep(s) {
+        step1.style.display = s === 1 ? 'block' : 'none';
+        step2.style.display = s === 2 ? 'block' : 'none';
+        step3.style.display = s === 3 ? 'block' : 'none';
+        dot1.className = 'onboarding-step-dot' + (s === 1 ? ' is-active' : '');
+        dot2.className = 'onboarding-step-dot' + (s === 2 ? ' is-active' : '');
+        dot3.className = 'onboarding-step-dot' + (s === 3 ? ' is-active' : '');
+    }
+
+    if (next1) next1.addEventListener('click', () => showStep(2));
+    if (next2) next2.addEventListener('click', () => showStep(3));
+    if (back2) back2.addEventListener('click', () => showStep(1));
+    if (back3) back3.addEventListener('click', () => showStep(2));
+
+    // Expose open helper globally
+    window.lmsOpenOnboarding = openOnboarding;
+});
+</script>

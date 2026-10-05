@@ -2,7 +2,7 @@
 title: 'The United Nations: Maintaining International Peace And Security'
 slug: un-security
 abstract: The United Nations (UN) is an intergovernmental organization established in 1945 to maintain international peace and security. This material explores the role of the UN Security Council, the need for expanding its membership, and the implementation of the UN Charter in preventing and resolving conflicts.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "The UN Security Council was forged in 1945 with a supreme mandate: ensuring humanity never suffered another world war. Armed with exclusive authority under Chapter VII to impose biting sanctions or deploy military force, it represents the ultimate enforcement arm of international law. Yet its greatest strength—granting veto power to the five victorious powers to prevent great-power conflict—is also its tragic Achilles' heel, frequently leaving the Council politically paralyzed when permanent members' own geopolitical ambitions collide."
 ---
 
 ## Introduction
@@ -106,6 +106,8 @@ UN peacekeeping missions now encompass broader goals beyond truce monitoring, li
 In summary, the UN Security Council continues to evolve to address new challenges, while pursuing its founding mission of preserving world peace through collective security. Its success relies on cooperation between member states to implement the UN Charter in a changing global landscape.
 
 ---
+
+{% include sim_unsc_veto.html %}
 
 ---
 

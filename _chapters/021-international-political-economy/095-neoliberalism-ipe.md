@@ -1,8 +1,7 @@
 ---
 title: 'Neoliberalism 101: Understanding the Ideology That Dominates Global Trade'
 slug: neoliberalism-ipe
-abstract: The introduction of Neoliberalism in International Political Economy context
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Since the 1980s, neoliberalism has reigned as the dominant philosophy of global capitalism, preaching that unfettered free markets allocate resources far better than any government bureaucrat. By slashing regulations, privatizing public utilities, and cutting social welfare, neoliberal policies sought to unleash corporate competition and cross-border investment. However, critics like David Harvey and Joseph Stiglitz warn that hyper-deregulation dismantles public safety nets, creates catastrophic financial crashes, and concentrates wealth in oligarchic hands."
 ---
 
 ## Introduction
@@ -116,9 +115,6 @@ Key points:
 
 In conclusion, neoliberalism has reshaped economies and politics over the past fifty years. But its record remains contested, with reasonable debates on both sides. Further analysis is needed to fully assess its costs, benefits, and long-term sustainability.
 
-
----
-    
 
 
 ---

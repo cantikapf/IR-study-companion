@@ -1,8 +1,8 @@
 ---
 title: Study Of Development
 slug: study-of-development
-abstract: This chapter explores the study of development, starting with the history of development and the Industrial Revolution in Britain. It discusses the impact of colonialism on development, economic growth in Western nations, global inequality, post-WW2 aid, the Millennium Development Goals (MDGs), and the Sustainable Development Goals (SDGs). The chapter also delves into development thought and how it shapes societies and policies. 
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+abstract: This chapter explores the study of development, starting with the history of development and the Industrial Revolution in Britain. It discusses the impact of colonialism on development, economic growth in Western nations, global inequality, post-WW2 aid, the Millennium Development Goals (MDGs), and the Sustainable Development Goals (SDGs). The chapter also critically examines developmental theory and its role in shaping governance institutions and socioeconomic policies.
+simple_summary: "Is economic development just about boosting gross national output, or about expanding what real people can actually achieve? While early economic theories viewed growth as a mechanical march into factories, pioneers like Amartya Sen revealed that genuine development is about dismantling poverty, tyranny, and illiteracy. Real progress is not measured by aggregate GDP, but by whether ordinary citizens have the substantive freedom and capability to live flourishing lives."
 ---
 
 ## The History of Development
@@ -139,7 +139,6 @@ Some key themes in the evolution of development thought include:
 
 Overall, the study of development has advanced by overcoming these tensions and incorporating a wider range of perspectives and approaches. This has led to a more comprehensive and nuanced understanding of development, which is essential for addressing the complex challenges faced by the world today.
 
----
 
 ---
 

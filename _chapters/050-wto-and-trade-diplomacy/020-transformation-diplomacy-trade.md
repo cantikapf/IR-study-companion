@@ -2,7 +2,7 @@
 title: Three Transformation of Diplomacy and International Trade
 slug: transformation-diplomacy-trade
 abstract: International trade and diplomacy are intertwined, with diplomacy playing a crucial role in facilitating and governing trade relationships. This chapter explores the transformation of diplomacy and its impact on international trade, highlighting the emergence of non-state actors and the challenges and opportunities they bring to trade diplomacy.
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Trade diplomacy has transformed from secretive bilateral handshakes between royal envoys into a high-stakes, 24/7 public arena. Where diplomats once quietly bargained behind velvet curtains, today's negotiators operate under the constant scrutiny of global digital media, vocal labor unions, and activist coalitions. Striking modern commercial treaties demands not just backroom leverage, but the public diplomacy skill to build consensus among diverse democratic societies."
 ---
 
 ## Introduction
@@ -89,7 +89,6 @@ Additionally, the ubiquity of real-time communication channels enables non-state
 
 Diplomats undertaking trade diplomacy must balance a wider array of considerations from a more vocal set of participants. Effectively facilitating international trade growth relies on envoys adept at building consensus across a diverse spectrum of voices. Adaptability, inclusion, and nuance represent key diplomatic skills for enabling trade expansion in the 21 st century.
 
----
 
 ---
 

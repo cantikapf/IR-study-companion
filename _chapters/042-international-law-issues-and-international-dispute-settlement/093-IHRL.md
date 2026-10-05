@@ -2,7 +2,7 @@
 title: International Human Right Law
 slug: international-human-right-law
 abstract: International human rights law (IHRL) is a body of international laws designed to protect and promote the rights and freedoms of all individuals, regardless of their nationality or status.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Historically, what a government did to its own citizens behind its borders was considered an untouchable sovereign privilege. The birth of International Human Rights Law after World War II dismantled that wall, proclaiming that every individual possesses inherent dignity that transcends national boundaries. Through landmark covenants and regional monitoring bodies, human rights law holds states accountable to global standards, balancing sovereign emergency flexibility against non-derogable core rights that can never be suspended."
 ---
 
 ## Introduction to IHRL  
@@ -38,7 +38,7 @@ IHRL pronounces common standards for the treatment of individuals by all states.
 
 Given the rise of influential non-state actors in international relations, such as multinational corporations, some question whether the state-focused nature of IHRL is still relevant. However, states remain the sole parties to IHRL treaties and the primary entities responsible for protecting human rights. The challenge is ensuring states better regulate non-state entities to prevent human rights abuses.
 
-Overall, IHRL continues to have relevance in international relations by setting standards of conduct, requiring states to respect human rights within their borders, and adapting to new actors, even as state sovereignty remains a cornerstone principle. Adherence to IHRL treaties and principles remains an important measure of a state's standing within the international community.
+Overall, IHRL continues to have relevance in international relations by setting standards of conduct, requiring states to respect human rights within their borders, and adapting to new actors, even as state sovereignty remains a foundational principle. Adherence to IHRL treaties and principles remains an important measure of a state's standing within the international community.
 
 ## IHRL and Intervention in the Internal Affairs of Other States
 
@@ -46,7 +46,7 @@ One key issue in international relations is whether states have a right or even 
 
 The prohibition of slavery is considered a peremptory norm that all states must uphold. Any state that engages in slavery could potentially face consequences for breaching this fundamental principle of international law. Human rights norms like prohibition of slavery are also considered erga omnes - creating obligations toward all states. This suggests that states have an interest in ensuring the prohibition of slavery is respected globally.  
 
-Some human rights treaties like the International Covenant on Civil and Political Rights, the Convention against Torture, and the European Convention on Human Rights allow for third party complaints against states for human rights violations. For example, several European states have brought cases against other states in the European Court of Human Rights system. However, states have rarely used third party complaints under UN human rights treaties, partly due to the principle of non-intervention in the domestic affairs of states being a cornerstone of the international system.  
+Some human rights treaties like the International Covenant on Civil and Political Rights, the Convention against Torture, and the European Convention on Human Rights allow for third party complaints against states for human rights violations. For example, several European states have brought cases against other states in the European Court of Human Rights system. However, states have rarely used third party complaints under UN human rights treaties, partly due to the principle of non-intervention in the domestic affairs of states serving as a structural pillar of the international system.  
 
 Thus, tensions remain between the universal nature of human rights norms, and the sovereignty and equality of states that necessitates non-intervention. States must balance their interest in upholding human rights globally with respecting the domestic authority of other nations.
 
@@ -126,7 +126,6 @@ Key topics covered include the complex relationship between IHRL and state sover
 
 Overall, IHRL has made substantial progress in establishing universal human rights norms and scrutinizing state behavior. However, significant challenges remain when it comes to consistent compliance, balancing state sovereignty with intervention, and adapting to new global actors. As IHRL continues to evolve, focus areas for the future likely include increased accountability for non-state entities, strengthened implementation and enforcement mechanisms, and addressing complex new human rights issues arising from technology, climate change, migration, and more. With persistence and ingenuity, the international community can work to make IHRL an ever more effective force for protecting human dignity worldwide.
 
----
 
 ---
 

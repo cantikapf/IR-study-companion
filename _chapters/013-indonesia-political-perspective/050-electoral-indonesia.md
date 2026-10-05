@@ -2,13 +2,13 @@
 slug: electoral-indonesia
 title: Indonesia's Electoral Landscape
 abstract: This chapter will explore the electoral landscape in Indonesia.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Organizing free and fair general elections for over 278 million citizens scattered across seventeen thousand islands is a monumental democratic undertaking. To balance local geographic representation with ideological fairness, Indonesia engineered a hybrid electoral framework: open-list proportional representation for parliament and single-member provincial districts for regional senators. The genius of this architecture is preventing any single region from monopolizing power without building sweeping national multi-ethnic coalitions."
 ---
 
 
 ## Introduction
 
-Indonesia is the world's third largest democracy, with a population of over 260 million people across over 17,000 islands. Since the end of authoritarian rule in 1998, the country has held regular democratic elections, making it a regional model for democratic consolidation. General elections serve as a barometer of the health and maturity of Indonesia's democracy. They provide opportunities for citizens to choose their representatives and hold them accountable. 
+Indonesia is the world's third largest democracy, with a population of over 278 million people across an archipelago of more than 17,000 islands. Since the end of authoritarian rule in 1998, the country has held regular democratic elections, making it a regional model for democratic consolidation. General elections serve as a barometer of the health and maturity of Indonesia's democracy. They provide opportunities for citizens to choose their representatives and hold them accountable. 
 
 Elections also compel parties and politicians to organize and communicate their platforms to the public. Successive elections have seen high voter turnout and participation across the archipelago. This highlights the population's embrace of electoral democracy and peaceful transfer of power. However, past elections have also exposed deep political and societal divides based on ethnicity, religion and class. Managing free and fair elections across thousands of islands and hundreds of ethnic groups remains an ongoing challenge. As the world's largest Muslim democracy, Indonesia's elections are also closely watched by the global community as a harbinger for Islam's compatibility with democracy.
 
@@ -80,7 +80,6 @@ Overall, Indonesia's experience highlights the importance of balancing represent
 
 While no system is perfect, Indonesia's efforts illustrate an electoral evolution seeking representativeness within a fragmented society and stability amidst decentralized governance. As the nation moves forward, harnessing the benefits of both plurality and proportional mechanisms can strengthen its democracy. Most importantly, elections should not be seen as an endpoint, but as part of broader participatory processes enabling citizen voice and oversight between polls.
 
----
 
 ---
 

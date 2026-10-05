@@ -1,8 +1,7 @@
 ---
 title: The Politics of Trade
 slug: trade-politics
-abstract: This chapter will explain about the models of trade policy preferences
-simple_summary: "Imagine the world as a giant marketplace where everyone is buying and trading snacks. This chapter explains how countries make money, trade their 'snacks' (goods and services), and why some countries end up with more snacks than others."
+simple_summary: "Free trade makes countries richer overall, but it always produces painful domestic casualties. According to the Factor Model (Stolper-Samuelson), trade enriches abundant capital owners while slashing wages for scarce domestic workers, fueling class battles. Meanwhile, the Sector Model shows that entire import-competing industries lobby furiously for protective tariffs to survive foreign competition. Trade policy is never purely about economic theory—it is about which domestic interest groups have the political clout to demand government protection."
 ---
 
 ## Society-Centered Approach to Trade Politics 
@@ -103,9 +102,6 @@ The society-centered approach underscores the political interplay between organi
 Politicians, in turn, respond to the demands of these competing groups in an effort to maximize political support. Interest groups that stand to benefit from trade liberalization will pressure policymakers to lower trade barriers and expand market access. Groups that risk losing from greater foreign competition will push for import restrictions and other protectionist measures. The policy preferences and relative influence of domestic interest groups are thus critical in shaping government trade policy.
 
 Through lobbying, campaign contributions, and grassroots advocacy, interest groups leverage their political power to meet their goals. They galvanize member participation, cultivate relationships with sympathetic legislators, and seek direct meetings with key officials to make their voices heard. Groups threatened by liberalization often defend the status quo by emphasizing trade's distributional consequences and the plight of affected industries. This complex interplay between societal interests and the political system drives the direction of trade policy in democracies.
-
----
-    
 
 
 ---

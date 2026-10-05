@@ -1,7 +1,7 @@
 ---
 title: Introduction
 slug: introduction
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Pedagogical introduction to the IR Study Companion, detailing course learning objectives, study methodology, and interactive learning features."
 ---
 
 # Welcome to the World of International Relations! 🌍

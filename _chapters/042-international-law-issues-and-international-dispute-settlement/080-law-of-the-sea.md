@@ -2,7 +2,7 @@
 title: The Law Of The Sea
 slug: law-of-the-sea
 abstract: The law of the sea governs the use of oceans and seas, establishing guidelines for territorial waters, economic zones, fishing rights, navigation, and environmental protection.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Covering over seventy percent of the globe, the oceans are governed by the 1982 UN Convention on the Law of the Sea (UNCLOS)—widely revered as the constitution for the oceans. UNCLOS delicately balances coastal state sovereignty with global maritime freedom by carving the waters into precise zones: from full coastal control over the 12-nautical-mile territorial sea to exclusive economic rights across the 200-nautical-mile Exclusive Economic Zone. Beyond those boundaries lie the high seas, an unowned global commons where every nation enjoys unfettered freedom of navigation and shared stewardship."
 ---
 
 ## Introduction
@@ -144,6 +144,8 @@ UNCLOS makes dispute resolution mechanisms compulsory through Article 286, which
 The compulsory dispute settlement mechanisms under UNCLOS have strengthened the international rule of law and helped resolve maritime disputes between states. UNCLOS dispute settlement has played an important role in clarifying the law of the sea and preventing and resolving conflicts.
 
 ---
+
+{% include sim_unclos_zones.html %}
 
 ---
 

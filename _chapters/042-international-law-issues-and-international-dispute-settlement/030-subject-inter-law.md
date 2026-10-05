@@ -2,7 +2,7 @@
 title: The Subjects Of International Law
 slug: subjects-of-international-law
 abstract: Explain the subjects of international law.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "Not every political movement, rebel militia, or multinational corporation can claim sovereign standing on the world stage. Under the 1933 Montevideo Convention, true statehood requires four objective pillars: a permanent population, a defined territory, an effective governing authority, and the autonomous capacity to conduct foreign relations. Possessing international legal personality is the ultimate diplomatic passport, granting states the unique right to conclude binding treaties, claim sovereign immunity, and bring claims before global tribunals."
 ---
 
 ## Introduction
@@ -87,7 +87,7 @@ Some key elements that comprise sovereignty are:
 - **Full and exclusive authority**: The sovereign has absolute, non-divisible authority within its territory. No other authority is above it or has power within its borders. 
 - **Equality**: All sovereign states are juridically equal despite differences in size, power, wealth, etc.
 
-The modern conception of sovereignty is often traced to the 1648 Treaty of Westphalia, which established sovereignty as the right of states to manage their own affairs internally and externally without outside interference. It remains a cornerstone of international law and diplomacy.
+The modern conception of sovereignty is often traced to the 1648 Treaty of Westphalia, which established sovereignty as the right of states to manage their own affairs internally and externally without outside interference. It remains a foundational constitutional principle of international law and diplomacy (Croxton, 1999; Osiander, 2001).
 
 ## Self-Determination
 
@@ -140,7 +140,6 @@ The principle of self-determination gained increasing prominence through the Ame
 
 Overall, statehood and self-determination remain complex and evolving areas of international law and relations. This examination provides a high-level overview of major principles and debates involved. Further analysis could explore specific case studies and implications for contemporary global affairs. At minimum, it is clear these foundational concepts continue to shape interactions between peoples, territories, and sovereign states in the international system.
 
----
 
 ---
 

@@ -2,7 +2,7 @@
 title: Introduction To Foreign Policy Analysis And Foreign Policy In International Relations
 slug: intro-fpa
 abstract: What is FPA? What is foreign policy? What is the difference between FPA and IR? This chapter will introduce you to the field of foreign policy analysis (FPA) and foreign policy in international relations (IR).
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Traditional IR theories treat states like identical black boxes colliding on a billiard table, but Foreign Policy Analysis cracks that black box wide open. FPA reminds us that 'countries' do not make decisions—fallible human leaders, rival bureaucratic agencies, and domestic interest groups do. By studying the cognitive biases of presidents, cabinet power struggles, and public pressures, FPA reveals how internal human politics dictates external statecraft."
 ---
 
 

@@ -2,7 +2,7 @@
 title: Critical Theory
 slug: critical-theory
 abstract: This chapter will introduce you to the field of critical theory.
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Most IR theories act like repair manuals for great powers: accepting world politics as an arena of competition and helping leaders manage crises smoothly. Robert W. Cox demolished this pretence of neutrality with one famous sentence: 'Theory is always for someone and for some purpose.' Critical theorists look past diplomatic rituals to reveal how current global institutions quietly protect Western and capitalist privileges, asking how ordinary people can break free from structural injustice."
 ---
 
 **Critical** **theory** emerged as an influential perspective within **international relations** (IR) theory in the late 1980s and 1990s. The origins of critical theory in IR lie in thought associated with the **Frankfurt School**. Frankfurt School thinking was inspired by Marxist and Western Marxist theorizing, but sought to revise and reformulate many key understandings of these strands of thought. 
@@ -97,7 +97,6 @@ Globalization provides an important context for critical IR theory today. Critic
 
 Overall, critical theory furnishes international relations with imaginative and reflective tools to critique oppressive structures and work towards a more ethical global community. Its emphasis on reflexivity, discourse ethics, and emancipation ensure critical theory will continue illuminating new possibilities in world politics.
 
----
 
 ---
 
@@ -106,3 +105,8 @@ Overall, critical theory furnishes international relations with imaginative and 
 
 ### Knowledge Check
 {% include quiz.html id="quiz_093_critical_theory" question="What is the primary goal of critical theory in international relations?" opt1="To describe objective reality" opt2="To critique society and promote social change" opt3="To analyze global political economy" opt4="To develop a theory of communicative ethics" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="023" %}

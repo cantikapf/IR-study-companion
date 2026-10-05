@@ -2,7 +2,7 @@
 title: Regionalism In International Affairs
 slug: regionalism-in-international-affairs
 abstract: Introduction to regionalism in International Relations
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "Global governance at the UN level is often too slow and fractured, while individual medium-sized countries lack the muscle to negotiate alone against superpowers. By forming regional blocs—from the deep legal integration of the European Union to the consensus-driven diplomacy of ASEAN—neighboring states pool their sovereignty. Regionalism creates a collective diplomatic shield, allowing countries to solve neighborhood crises locally and punch above their weight on the global stage."
 ---
 
 ## Introduction to Regional Cooperation and Integration
@@ -175,8 +175,6 @@ Looking ahead, regional cooperation and integration will likely expand and deepe
 
 Ultimately, the future contours of regionalism remain contingent, not inevitable. With thoughtful leadership and institution-building, regions can harness interdependence for mutual gain. But integration projects require managing diversity, sacrificing some autonomy, and investing for the long-term. The coming decades will test whether enough regions are prepared to meet these challenges.
 
----
-
 
 ---
 
@@ -185,3 +183,8 @@ Ultimately, the future contours of regionalism remain contingent, not inevitable
 
 ### Knowledge Check
 {% include quiz.html id="quiz_100_regionalism_affairs" question="According to the chapter, what is a key defining characteristic of regional integration that distinguishes it from more basic regional cooperation?" opt1="Focusing solely on shared cultural heritage and social cohesion between nations." opt2="Establishing limited, functional arrangements for collaboration in specific sectors like energy." opt3="Countries voluntarily pooling sovereignty and harmonizing policies, often with supranational institutions." opt4="Primarily forming military alliances for collective defense against external threats." correct="3" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="010" %}

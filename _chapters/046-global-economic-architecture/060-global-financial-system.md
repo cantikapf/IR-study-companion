@@ -2,7 +2,7 @@
 title: Global Financial System In The 20th Century And Beyond
 slug: global-financial-system
 abstract: The global financial system has evolved significantly since the establishment of the Bretton Woods system in the 20th century. This page explores the history, challenges, and impact of the fixed exchange rate system, financial globalization, and integrated markets.
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "For a quarter-century after World War II, global commerce ran on an ironclad guarantee: thirty-five American dollars bought exactly one ounce of gold. But as the US printed far more paper money than its bullion reserves could back, President Nixon severed the gold link in 1971, ushering in the unpredictable realm of floating exchange rates. Liberated capital now races across borders in milliseconds, unlocking limitless global liquidity while perpetually exposing countries to sudden, devastating contagion when market confidence shatters."
 ---
 
 ## Introduction
@@ -37,7 +37,7 @@ The United States dollar played a pivotal role in the postwar Bretton Woods mone
 
 Being the reserve currency provided economic and political advantages to the United States, known as seigniorage privileges. As other nations held significant dollar reserves for international transactions, they were essentially providing an interest-free loan to the US. This allowed America to run persistent deficits and export inflation abroad via other central banks absorbing excess dollars.
 
-The dollar's reserve status also gave the United States power to impact other economies via exchange rate policies. With the dollar acting as an anchor currency, countries had limited policy options if they wanted to maintain their dollar peg. Overall, the supreme position of the dollar was a cornerstone of American hegemony in the postwar era.
+The dollar's reserve status also gave the United States power to impact other economies via exchange rate policies. With the dollar acting as an anchor currency, countries had limited policy options if they wanted to maintain their dollar peg. Overall, the supreme reserve position of the dollar constituted an indispensable structural pillar of American hegemony in the postwar era (Gilpin, 1987; Strange, 1988).
 
 ## Breakdown of Fixed Exchange Rates  
 
@@ -101,7 +101,6 @@ The end of fixed exchange rates led to a new era of financial globalization and 
 
 Looking ahead, the challenges are complex. Technical reforms are needed to ensure smooth adjustments between currencies and sufficient global liquidity. But political challenges are equally daunting, as coordination and cooperation between nations remain difficult. The role of the dollar as a reserve currency grants the US unique privileges and responsibilities. Leadership from major economies and multilateral forums like the IMF will be critical in building a resilient monetary system for the 21 st century.
 
----
 
 ---
 
@@ -110,3 +109,8 @@ Looking ahead, the challenges are complex. Technical reforms are needed to ensur
 
 ### Knowledge Check
 {% include quiz.html id="quiz_060_global_financial_system" question="What was the primary outcome of the Bretton Woods Conference in 1944?" opt1="Establishment of the European Union" opt2="Creation of the International Monetary Fund (IMF) and fixed exchange rates" opt3="Introduction of the Euro as a global reserve currency" opt4="Implementation of capital controls on international transactions" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="046" %}

@@ -2,7 +2,7 @@
 slug: politics-and-power
 title: Politics, Power, and Authority
 abstract: Understand power, authority, legitimacy, and governmentality in the perspective of social science.
-simple_summary: "Who is in charge, and why do people listen to them? This chapter explores what power really is—from rules and kings to laws and respect—and how societies govern themselves."
+simple_summary: "Brute force can force people to obey temporarily, but enduring political rule requires legitimacy—the widespread belief that leaders have a rightful title to govern. Max Weber showed that societies accept authority through ancient tradition, magnetic charisma, or rational-legal constitutional laws. Looking even deeper, Michel Foucault revealed that modern power is rarely just a top-down police baton; it operates through schools, clinics, and bureaucratic routines that subtly guide human conduct every day."
 ---
 
 ## Defining Power
@@ -130,11 +130,9 @@ The intricacies of human relations, organizational behavior and political struct
 
 ---
 
----
-
 ### Interactive Learning 
-{% include flashcards.html term1="Power" def1="The capacity of individuals or groups to exert their will over others, even against resistance." term2="Legitimacy" def2="The belief that an individual or institution has a valid right to wield power." term3="Governmentality" def3="Managing human conduct through dispersed yet coordinated efforts across society (Foucault)." term4="Pluralism" def4="The theory that power is dispersed among competing groups and forces in society." %}
+{% include flashcards.html term1="Power" def1="The capacity of individuals or groups to exert their will over others, even against resistance (Max Weber)." term2="Legitimacy" def2="The belief that an individual or institution has a valid right to wield power." term3="Governmentality" def3="Managing human conduct through dispersed yet coordinated efforts across society (Michel Foucault)." term4="Pluralism vs Elite Theory" def4="Pluralism sees power dispersed among interest groups; Elite theory sees power concentrated in ruling minorities." %}
 
 ### Knowledge Check
-{% include quiz.html id="quiz_050_social_change" question="According to Max Weber, which type of authority derives its legitimacy from impartial, codified rules and expertise?" opt1="Traditional authority" opt2="Charismatic authority" opt3="Rational-legal authority" opt4="Elite authority" correct="3" %}
+{% include quiz.html id="quiz_050_politics_social" question="According to Max Weber, which type of authority derives its legitimacy from impartial, codified rules and legal-bureaucratic procedures?" opt1="Traditional authority" opt2="Charismatic authority" opt3="Rational-legal authority" opt4="Coercive authority" correct="3" %}
 

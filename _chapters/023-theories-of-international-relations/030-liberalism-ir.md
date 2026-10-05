@@ -2,7 +2,7 @@
 title: Liberalism
 slug: liberalism-ir
 abstract: Liberalism in International Relations context
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Realists believe war is an inevitable tragedy, but Liberals insist that conflict is a problem humanity can solve. Grounded in the ideas of Immanuel Kant, liberalism rests on a three-legged stool: democratic institutions where leaders answer to voters, deep trade ties that make military conflict financially ruinous, and international organizations where diplomats negotiate binding rules. When all three legs reinforce one another, states discover that cooperation yields far greater prosperity than conquest."
 ---
 
 ## Liberalism Summary
@@ -61,7 +61,6 @@ The third pillar is taking part in **international organizations (IO)**. Groups 
 
 When these three forces work together, they make beneficial **feedback loops**. Trade and international organizations work better when there is more democracy. This makes democratic systems stronger. Growing global markets are a reason to make international institutions stronger. When institutions set shared rules and norms, democracies feel safe growing their economic and political ties. All of these factors work together to make the world a more peaceful place.
 
----
 
 ---
 

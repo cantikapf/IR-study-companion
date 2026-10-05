@@ -1,8 +1,7 @@
 ---
 slug: road-to-ww1
 title: The Road to the First World War
-abstract: This chapter will explain the background of the First World War
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "World War I proved how a web of rigid mutual-defense alliances can turn a localized crisis into global suicide. Rigid military timetables, intense imperial rivalry in Africa, and a spiraling naval arms race left European leaders with zero diplomatic margin for error. When Archduke Franz Ferdinand was assassinated in Sarajevo, the dominoes fell automatically because every state feared mobilizing second."
 ---
 
 
@@ -118,10 +117,12 @@ Within weeks, the major powers of Europe were drawn into a massive conflict as a
 
 ---
 
+{% include sim_balance_of_power.html %}
+
 ---
 
 ### Interactive Learning 
-{% include flashcards.html term1="Alliances" def1="Mutual defense pacts between nations, creating rival blocs like the Triple Entente and Triple Alliance." term2="Imperialism" def2="Aggressive pursuit and acquisition of colonies by powerful nations, creating competition and rivalry." term3="Militarism" def3="Nations building strong militaries and readiness for war, fueling an an arms race and tensions." term4="Nationalism" def4="Strong pride in one's country and desire for independence, fueling ethnic self-determination." %}
+{% include flashcards.html term1="Alliances" def1="Mutual defense pacts between nations, creating rival blocs like the Triple Entente and Triple Alliance." term2="Imperialism" def2="Aggressive pursuit and acquisition of colonies by powerful nations, creating competition and rivalry." term3="Militarism" def3="Nations building strong militaries and readiness for war, fueling an arms race and tensions." term4="Nationalism" def4="Strong pride in one's country and desire for independence, fueling ethnic self-determination." %}
 
 ### Knowledge Check
 {% include quiz.html id="quiz_040_road_to_ww1" question="Which combination of factors is identified as the primary underlying causes contributing to the outbreak of World War I?" opt1="Global economic depression, widespread famine, and the rise of democratic movements." opt2="Alliances, imperialism, militarism, and nationalism." opt3="The immediate assassination of Archduke Franz Ferdinand and rapid technological advancements." opt4="Religious conflicts, a series of failed peace treaties, and international trade disputes." correct="2" %}

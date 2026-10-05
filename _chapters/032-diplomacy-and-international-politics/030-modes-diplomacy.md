@@ -1,8 +1,7 @@
 ---
 title: Modes of Diplomacy
 slug: modes-diplomacy
-abstract: Few modes of diplomaces are discussed in this chapter.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Diplomacy is not one-size-fits-all: it spans quiet, face-to-face bilateral talks between two ambassadors, high-stakes multilateral marathons at the UN, and coercive diplomacy backed by the threat of gunboats. While bilateral deals offer speed and secrecy, complex planetary crises like climate change require conference diplomacy and multilateral compromise. Choosing the right diplomatic mode determines whether negotiations produce a historic breakthrough or a deadlocked stalemate."
 ---
 
 ## Bilateral Diplomacy
@@ -169,14 +168,14 @@ Overall, negotiation requires a blend of interpersonal skills, strategic thinkin
 - **Power Imbalances** - Unequal power dynamics between parties can hinder progress and compromise fairness.
 - **Lack of Trust and Good Faith** - Deep-rooted distrust can make it difficult for parties to engage meaningfully.
 - **Political Interference** - External pressures can complicate the mediation process and undermine its legitimacy.
-- **Intractable Conflicts** - Some conflicts may be so complex or deeply rooted that finding a solution seems impossible.
+- **Intractable Conflicts** - Conflict resolution scholars like I. William Zartman (2000) demonstrate that mediation success often hinges on conflict "ripeness"—a perceptual moment where adversaries perceive a "mutually hurting stalemate" and recognize that unilateral victory is unattainable.
 
 Despite these challenges, mediation offers several opportunities:
 
-- **De-escalation and Conflict Resolution** - Mediation can prevent escalation of violence and pave the way for peaceful resolution of conflicts.
+- **De-escalation and Conflict Resolution** - Mediation can prevent the escalation of hostilities and establish structural preconditions for the peaceful resolution of conflicts.
 - **Empowerment and Ownership** - Parties directly involved in the process can feel empowered and take ownership of the solution.
 - **Sustainable Peacebuilding** - Mediation can contribute to long-term peacebuilding efforts by addressing underlying causes of conflict.
-- **Building Trust and Reconciliation** - The process can foster trust and understanding between conflicting parties, paving the way for reconciliation.
+- **Building Trust and Reconciliation** - The process can foster trust and mutual understanding between conflicting parties, laying institutional foundations for durable reconciliation.
 
 ## Humanitarian Diplomacy
 

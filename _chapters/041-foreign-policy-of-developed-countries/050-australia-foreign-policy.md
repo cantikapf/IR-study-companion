@@ -2,7 +2,7 @@
 title: Australia Foreign Policy and Current Issues
 slug: australia-foreign-policy
 abstract: Demonstrate how Australia's political institutions shape the country's priorities, positions and engagement on the international stage.
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Australia's strategic existence is defined by a fundamental geographic and political paradox: a Western democracy anchored at the edge of the Indo-Pacific. Canberra perpetually balances its foundational security alliance with the United States against its overwhelming economic interdependence with Asian trading giants like China. Navigating this razor-thin tightrope requires agile domestic consensus-building among cabinet, parliament, and business lobbies to safeguard sovereign security without sacrificing national prosperity."
 
 ---
 
@@ -100,7 +100,6 @@ Climate change poses a major threat to Australia due to the country's vulnerabil
 
 The U.S. alliance has been the bedrock of Australia's foreign policy since World War 2. However, changes in relative U.S. power and the rise of China have led to debates about whether Australia should balance its alliance with greater engagement in Asia. Managing tensions between the U.S. and China will be a key challenge. The treatment of the U.S. alliance impacts domestic politics.
 
----
 
 ---
 

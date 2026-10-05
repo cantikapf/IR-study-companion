@@ -1,0 +1,362 @@
+<style>
+.sim-nd-container {
+    background: #1f2937;
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 30px 0;
+    border: 1px solid #374151;
+}
+.sim-nd-panel {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+.sim-nd-header {
+    border-bottom: 2px solid #374151;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.sim-nd-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sim-nd-header p {
+    color: #d1d5db;
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.sim-nd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .sim-nd-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.sim-nd-form-group {
+    margin-bottom: 15px;
+}
+.sim-nd-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+.sim-nd-form-group select {
+    width: 100%;
+    padding: 10px;
+    background: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.sim-nd-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.sim-nd-btn {
+    padding: 12px 15px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.sim-nd-btn:hover {
+    background: #4b5563;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+}
+.sim-nd-metric {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    background: #1f2937;
+    border: 1px solid #374151;
+}
+.sim-nd-metric-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #d1d5db;
+}
+.sim-nd-metric-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.sim-nd-success {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+.sim-nd-warning {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+.sim-nd-danger {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+.sim-nd-analysis {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #374151;
+    color: #d1d5db;
+    line-height: 1.6;
+}
+.sim-nd-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.sim-nd-fade {
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div id="nuclear-deterrence-sim" class="sim-nd-container">
+    <div class="sim-nd-header">
+        <h3>☢️ Simulation: Nuclear Deterrence Calculator</h3>
+        <p>Configure the nuclear posture of superpower 'Arcticus' to deter rival 'Pyresia.' How many warheads are enough? Does missile defense stabilize or destabilize? Explore the paradoxes of Mutual Assured Destruction.</p>
+    </div>
+
+    <div class="sim-nd-grid">
+        <div class="sim-nd-panel">
+            <h4 style="margin-top: 0; color: #f9fafb; margin-bottom: 15px;">Configuration</h4>
+            
+            <div class="sim-nd-form-group">
+                <label for="sim-nd-arsenal">Arsenal Size</label>
+                <select id="sim-nd-arsenal">
+                    <option value="50">50 warheads (Minimum)</option>
+                    <option value="500" selected>500 warheads (Moderate)</option>
+                    <option value="1500">1,500 warheads (Parity)</option>
+                    <option value="5000">5,000 warheads (Overkill)</option>
+                </select>
+            </div>
+
+            <div class="sim-nd-form-group">
+                <label for="sim-nd-delivery">Delivery System</label>
+                <select id="sim-nd-delivery">
+                    <option value="icbm" selected>Land-based ICBMs only (vulnerable)</option>
+                    <option value="slbm">+ Submarine SLBMs (survivable)</option>
+                    <option value="triad">Full Triad: ICBMs + SLBMs + Bombers (most survivable)</option>
+                </select>
+            </div>
+
+            <div class="sim-nd-form-group">
+                <label for="sim-nd-doctrine">Launch Doctrine</label>
+                <select id="sim-nd-doctrine">
+                    <option value="low">Launch-on-Warning (fast but accident-prone)</option>
+                    <option value="lua" selected>Launch-Under-Attack (balanced)</option>
+                    <option value="nfu">No-First-Use (restrained but risky)</option>
+                </select>
+            </div>
+
+            <div class="sim-nd-form-group">
+                <label for="sim-nd-defense">Missile Defense</label>
+                <select id="sim-nd-defense">
+                    <option value="none" selected>None</option>
+                    <option value="limited">Limited (protects capital/leadership)</option>
+                    <option value="comprehensive">Comprehensive (Star Wars SDI-style)</option>
+                </select>
+            </div>
+
+            <div class="sim-nd-presets">
+                <button class="sim-nd-btn" onclick="simNdApplyPreset('us')">🇺🇸 US Cold War</button>
+                <button class="sim-nd-btn" onclick="simNdApplyPreset('soviet')">☠️ Soviet Cold War</button>
+                <button class="sim-nd-btn" onclick="simNdApplyPreset('china')">🇨🇳 China Minimum</button>
+                <button class="sim-nd-btn" onclick="simNdApplyPreset('israel')">🇮🇱 Israel Opacity</button>
+            </div>
+        </div>
+
+        <div class="sim-nd-panel" aria-live="polite" id="sim-nd-outputs">
+            <h4 style="margin-top: 0; color: #f9fafb; margin-bottom: 15px;">Dashboard Metrics</h4>
+            
+            <div class="sim-nd-metric" id="sim-nd-metric-survival">
+                <div class="sim-nd-metric-label">First-Strike Survivability</div>
+                <div class="sim-nd-metric-value" id="sim-nd-val-survival">--</div>
+            </div>
+
+            <div class="sim-nd-metric" id="sim-nd-metric-second">
+                <div class="sim-nd-metric-label">Second-Strike Warheads</div>
+                <div class="sim-nd-metric-value" id="sim-nd-val-second">--</div>
+                <div style="font-size: 0.9rem; margin-top: 5px;" id="sim-nd-desc-second"></div>
+            </div>
+
+            <div class="sim-nd-metric" id="sim-nd-metric-det">
+                <div class="sim-nd-metric-label">Deterrence Stability</div>
+                <div class="sim-nd-metric-value" id="sim-nd-val-det">--</div>
+            </div>
+
+            <div class="sim-nd-metric" id="sim-nd-metric-crisis">
+                <div class="sim-nd-metric-label">Crisis Stability</div>
+                <div class="sim-nd-metric-value" id="sim-nd-val-crisis">--</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sim-nd-actions">
+        <button class="sim-nd-btn" onclick="simNdReset()">Restart / Reset Defaults</button>
+    </div>
+
+    <div class="sim-nd-analysis">
+        <strong>Analysis:</strong><br><br>
+        Mutual Assured Destruction (MAD) requires both sides to maintain credible second-strike capability — the ability to absorb a first strike and still inflict unacceptable damage. Paradoxically:<br>
+        • Too few warheads invite a disarming first strike (instability)<br>
+        • Too many warheads waste resources without improving security (overkill)<br>
+        • Missile defense can be destabilizing: if one side believes it can intercept a retaliatory strike, it may be emboldened to strike first<br>
+        • Launch-on-Warning reduces response time but increases the risk of accidental nuclear war from false alarms (cf. 1983 Soviet satellite incident, Stanislav Petrov)<br><br>
+        The stable equilibrium requires both sides to be vulnerable to retaliation — a grim logic that kept the Cold War cold.
+    </div>
+</div>
+
+<script>
+(function() {
+    const arsenalEl = document.getElementById('sim-nd-arsenal');
+    const deliveryEl = document.getElementById('sim-nd-delivery');
+    const doctrineEl = document.getElementById('sim-nd-doctrine');
+    const defenseEl = document.getElementById('sim-nd-defense');
+
+    const valSurvival = document.getElementById('sim-nd-val-survival');
+    
+    const metricSecond = document.getElementById('sim-nd-metric-second');
+    const valSecond = document.getElementById('sim-nd-val-second');
+    const descSecond = document.getElementById('sim-nd-desc-second');
+
+    const metricDet = document.getElementById('sim-nd-metric-det');
+    const valDet = document.getElementById('sim-nd-val-det');
+
+    const metricCrisis = document.getElementById('sim-nd-metric-crisis');
+    const valCrisis = document.getElementById('sim-nd-val-crisis');
+
+    const outputsEl = document.getElementById('sim-nd-outputs');
+
+    function calculate() {
+        const arsenal = parseInt(arsenalEl.value, 10);
+        const delivery = deliveryEl.value;
+        const doctrine = doctrineEl.value;
+        const defense = defenseEl.value;
+
+        // Calculate Survivability
+        let survivability = 0;
+        if (delivery === 'icbm') survivability = 20;
+        else if (delivery === 'slbm') survivability = 55;
+        else if (delivery === 'triad') survivability = 75;
+
+        if (defense === 'comprehensive') {
+            survivability += 10;
+        }
+
+        valSurvival.textContent = `${survivability}%`;
+
+        // Calculate Second-Strike Warheads
+        const secondStrike = Math.floor(arsenal * (survivability / 100));
+        valSecond.textContent = secondStrike;
+        
+        metricSecond.className = 'sim-nd-metric sim-nd-fade';
+        if (secondStrike >= 100) {
+            metricSecond.classList.add('sim-nd-success');
+            descSecond.textContent = "Assured Destruction Capability";
+        } else if (secondStrike >= 20) {
+            metricSecond.classList.add('sim-nd-warning');
+            descSecond.textContent = "Minimal Deterrence";
+        } else {
+            metricSecond.classList.add('sim-nd-danger');
+            descSecond.textContent = "Deterrence Failure";
+        }
+
+        // Calculate Deterrence Stability
+        metricDet.className = 'sim-nd-metric sim-nd-fade';
+        if (secondStrike >= 100 && doctrine !== 'low' && defense !== 'comprehensive') {
+            valDet.textContent = "HIGH";
+            metricDet.classList.add('sim-nd-success');
+        } else if (secondStrike >= 100 && (doctrine === 'low' || defense === 'comprehensive')) {
+            valDet.textContent = "MEDIUM";
+            metricDet.classList.add('sim-nd-warning');
+        } else {
+            valDet.textContent = "LOW";
+            metricDet.classList.add('sim-nd-danger');
+        }
+
+        // Calculate Crisis Stability
+        metricCrisis.className = 'sim-nd-metric sim-nd-fade';
+        if (doctrine === 'nfu' && secondStrike >= 100) {
+            valCrisis.textContent = "STABLE (No use-it-or-lose-it pressure)";
+            metricCrisis.classList.add('sim-nd-success');
+        } else if (doctrine === 'low' || (delivery === 'icbm' && secondStrike < 50)) {
+            valCrisis.textContent = "UNSTABLE (Preemptive incentives / Hair-trigger)";
+            metricCrisis.classList.add('sim-nd-danger');
+        } else {
+            valCrisis.textContent = "MODERATE";
+            metricCrisis.classList.add('sim-nd-warning');
+        }
+
+        // Retrigger animation
+        outputsEl.classList.remove('sim-nd-fade');
+        void outputsEl.offsetWidth; // trigger reflow
+        outputsEl.classList.add('sim-nd-fade');
+    }
+
+    // Attach listeners
+    arsenalEl.addEventListener('change', calculate);
+    deliveryEl.addEventListener('change', calculate);
+    doctrineEl.addEventListener('change', calculate);
+    defenseEl.addEventListener('change', calculate);
+
+    window.simNdApplyPreset = function(preset) {
+        if (preset === 'us') {
+            arsenalEl.value = '5000';
+            deliveryEl.value = 'triad';
+            doctrineEl.value = 'lua';
+            defenseEl.value = 'limited';
+        } else if (preset === 'soviet') {
+            arsenalEl.value = '5000';
+            deliveryEl.value = 'triad';
+            doctrineEl.value = 'low';
+            defenseEl.value = 'limited';
+        } else if (preset === 'china') {
+            arsenalEl.value = '500';
+            deliveryEl.value = 'slbm';
+            doctrineEl.value = 'nfu';
+            defenseEl.value = 'none';
+        } else if (preset === 'israel') {
+            arsenalEl.value = '50';
+            deliveryEl.value = 'slbm';
+            doctrineEl.value = 'lua';
+            defenseEl.value = 'limited';
+        }
+        calculate();
+    };
+
+    window.simNdReset = function() {
+        arsenalEl.value = '500';
+        deliveryEl.value = 'icbm';
+        doctrineEl.value = 'lua';
+        defenseEl.value = 'none';
+        calculate();
+    };
+
+    // Initial calculation
+    calculate();
+})();
+</script>

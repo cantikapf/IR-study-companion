@@ -2,7 +2,7 @@
 slug: religion-society
 title: Religion, Society And Politics
 abstract: This chapter will explore the relationship between religion, society, and politics in Indonesia.
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "In a nation as spiritually vibrant as Indonesia, can democracy flourish without faith pulling society apart? While political elites often exploit sectarian symbols during contentious campaigns, community realities on the ground are strikingly resilient: voters regularly transcend religious and ethnic divides when candidates demonstrate moral character and tangible public service. Indonesian democracy endures because its mainstream civic fabric treats faith as an ethical anchor for justice, rather than an instrument of division."
 ---
 
 
@@ -58,7 +58,6 @@ This phenomenon reveals the need for nuanced examination of identity issues in d
 
 Moving forward, the intertwining of religion and politics in Indonesia requires thoughtful analysis that avoids polarization. Nuanced understanding of the country's diverse identities and their role in the political arena will be crucial. Medan provides one glimpse into these intricate dynamics, but much more examination is needed of the complex relationship between identity politics and democracy across Indonesia. Most importantly, the diverse voices within each identity group must be heard in order to develop holistic solutions that serve the shared interests of all communities.
 
----
 
 ---
 
@@ -67,3 +66,8 @@ Moving forward, the intertwining of religion and politics in Indonesia requires 
 
 ### Knowledge Check
 {% include quiz.html id="quiz_080_religion_society" question="What phenomenon was observed in Medan's mayoral election?" opt1="Ethnic coalitions dominating the election" opt2="Identity switching and communal solidarity" opt3="Rigid adherence to ethnic voting patterns" opt4="No impact of identity on voting behavior" correct="2" %}
+
+---
+
+## Module Review & Summative Examination
+{% include module_exam.html module_id="013" %}

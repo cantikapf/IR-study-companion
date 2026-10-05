@@ -1,8 +1,7 @@
 ---
 slug: end-cold-war
 title: The End of the Cold War
-abstract: This chapter will cover the ending of the Cold War
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "Unlike every previous imperial rivalry, the Cold War ended without a single NATO tank entering Moscow or a single nuclear missile being launched. Crushed by a stagnant centrally-planned economy and Reagan's military spending pressure, Mikhail Gorbachev introduced *glasnost* (openness) and *perestroika* (restructuring) to save communism. Instead, lifting state censorship unleashed dormant nationalist movements and popular revolutions, causing the Soviet empire to collapse peacefully from within."
 ---
 
 
@@ -111,9 +110,7 @@ Alternatively, the **Liberal theory** credits the Cold War's end to the power of
 
 ### Great Man Theory 
 
-Finally, the **Great Man theory** focuses on the pivotal leadership and cooperation between Reagan and Soviet leader Mikhail Gorbachev. This view emphasizes the role that these prominent leaders played in jointly realizing the unnecessary and futile nature of continuing the Cold War. Their willingness to negotiate arms reductions and reforms is credited with bringing a peaceful end to the conflict.
-
----
+Finally, the **Great Man theory** focuses on the pivotal leadership and cooperation between Reagan and Soviet leader Mikhail Gorbachev. This view emphasizes the role that these prominent leaders played in jointly realizing the unnecessary and futile nature of continuing the Cold War. Their willingness to negotiate unprecedented intermediate-range arms reductions (the 1987 INF Treaty) and abandon the Brezhnev Doctrine in Eastern Europe is credited with bringing a peaceful conclusion to the systemic confrontation.
 
 ---
 

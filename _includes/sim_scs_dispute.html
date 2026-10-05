@@ -1,0 +1,304 @@
+<style>
+  .sim-scs-container {
+    background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; 
+    font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    margin: 30px 0; border: 1px solid #374151;
+  }
+  .sim-scs-panel {
+    background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151;
+    margin-bottom: 20px;
+  }
+  .sim-scs-header {
+    border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px;
+  }
+  .sim-scs-header h3 {
+    margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;
+  }
+  .sim-scs-text-primary { color: #f9fafb; }
+  .sim-scs-text-muted { color: #9ca3af; }
+  .sim-scs-success { border: 1px solid #10b981; color: #10b981; background: rgba(16,185,129,0.1); }
+  .sim-scs-failure { border: 1px solid #ef4444; color: #ef4444; background: rgba(239,68,68,0.1); }
+  .sim-scs-warning { border: 1px solid #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.1); }
+  .sim-scs-btn {
+    padding: 12px 15px; background: #374151; color: white; border: 1px solid #4b5563; 
+    border-radius: 6px; font-size: 1rem; cursor: pointer; transition: all 0.2s;
+    width: 100%; text-align: left; margin-bottom: 10px;
+  }
+  .sim-scs-btn:hover {
+    background: #4b5563; border-color: #9ca3af; transform: translateX(5px);
+  }
+  .sim-scs-btn-primary {
+    background: #3b82f6; border-color: #60a5fa; text-align: center;
+  }
+  .sim-scs-btn-primary:hover {
+    background: #2563eb; transform: translateY(-2px);
+  }
+  @keyframes sim-scs-fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  .sim-scs-fade { animation: sim-scs-fadeIn 0.4s ease-out forwards; }
+  .sim-scs-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .sim-scs-grid-4 {
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;
+  }
+  @media (max-width: 768px) { 
+    .sim-scs-grid, .sim-scs-grid-4 { grid-template-columns: 1fr; } 
+  }
+  .sim-scs-select {
+    width: 100%; padding: 10px; background: #374151; color: white; 
+    border: 1px solid #4b5563; border-radius: 6px; font-size: 1rem; margin-bottom: 15px;
+  }
+  .sim-scs-party-card {
+    background: #1f2937; padding: 15px; border-radius: 6px; border: 1px solid #374151;
+  }
+  .sim-scs-score {
+    font-size: 1.25rem; font-weight: bold; color: #60a5fa; margin-bottom: 15px;
+  }
+  .sim-scs-hidden { display: none; }
+</style>
+
+<div id="scs-dispute-sim" class="sim-scs-container">
+  <div class="sim-scs-header">
+    <h3>🌏 Simulation: South China Sea — The ASEAN Chair's Dilemma</h3>
+    <p class="sim-scs-text-muted" style="margin-top:10px;">You are the ASEAN Chair tasked with brokering a Code of Conduct (COC) in the South China Sea. Navigate between China's assertiveness, claimant states' legal demands, and the fragile ASEAN consensus. Can you deliver a meaningful agreement?</p>
+  </div>
+  
+  <div class="sim-scs-panel">
+    <div class="sim-scs-score" aria-live="polite">Consensus Score: <span id="sim-scs-score-val">50</span></div>
+    
+    <div id="sim-scs-round1" class="sim-scs-fade">
+      <h4>Round 1: Choose Your Approach</h4>
+      <p class="sim-scs-text-muted">How will you initiate negotiations?</p>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR1('asean')">🤝 ASEAN Way — Quiet diplomacy, informal consultation, emphasis on consensus</button>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR1('legal')">⚖️ Legalistic — Invoke the 2016 UNCLOS Arbitral Tribunal ruling (Philippines v. China)</button>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR1('bilateral')">🔄 Bilateral Shuttle — Mediate between each claimant individually</button>
+    </div>
+    
+    <div id="sim-scs-r1-feedback" class="sim-scs-hidden sim-scs-fade" style="margin-top: 20px;">
+      <h4>Reactions:</h4>
+      <div class="sim-scs-grid-4" id="sim-scs-reactions">
+        <!-- populated by js -->
+      </div>
+      <button class="sim-scs-btn sim-scs-btn-primary" style="margin-top: 20px;" onclick="window.simScsStartR2()">Proceed to Round 2</button>
+    </div>
+
+    <div id="sim-scs-round2" class="sim-scs-hidden sim-scs-fade">
+      <h4>Round 2: Draft COC Substance</h4>
+      <p class="sim-scs-text-muted">Select the terms for the Code of Conduct:</p>
+      
+      <label class="sim-scs-text-primary">Binding Status:</label>
+      <select id="sim-scs-r2-binding" class="sim-scs-select">
+        <option value="binding">Legally Binding Treaty</option>
+        <option value="nonbinding">Non-binding Declaration</option>
+      </select>
+      
+      <label class="sim-scs-text-primary">Geographic Scope:</label>
+      <select id="sim-scs-r2-scope" class="sim-scs-select">
+        <option value="all">All disputed features</option>
+        <option value="spratly">Spratly Islands only</option>
+        <option value="paracel">Paracel Islands only</option>
+      </select>
+      
+      <label class="sim-scs-text-primary">Enforcement:</label>
+      <select id="sim-scs-r2-enforcement" class="sim-scs-select">
+        <option value="self">Self-policing by parties</option>
+        <option value="asean">ASEAN-led monitoring</option>
+        <option value="un">Third-party (UN) monitoring</option>
+      </select>
+      
+      <button class="sim-scs-btn sim-scs-btn-primary" onclick="window.simScsSubmitR2()">Propose Draft</button>
+    </div>
+
+    <div id="sim-scs-round3" class="sim-scs-hidden sim-scs-fade">
+      <h4>Round 3: China's Counter-Proposal</h4>
+      <p class="sim-scs-text-muted">China offers: "Non-binding guidelines, bilateral negotiations with each claimant, no reference to the 2016 ruling."</p>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR3('accept')">✅ Accept — Quick agreement but critics say it's meaningless</button>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR3('modify')">✏️ Modify — Accept framework but insist on ASEAN-wide scope</button>
+      <button class="sim-scs-btn" onclick="window.simScsSelectR3('reject')">❌ Reject — Stand firm on your original draft</button>
+    </div>
+
+    <div id="sim-scs-result" class="sim-scs-hidden sim-scs-fade" aria-live="polite">
+      <h4 id="sim-scs-outcome-title"></h4>
+      <p id="sim-scs-outcome-desc" class="sim-scs-text-muted"></p>
+      <div id="sim-scs-analysis" class="sim-scs-panel" style="margin-top:20px; border-color: #60a5fa;">
+        <strong>Analysis:</strong> <span id="sim-scs-analysis-text"></span>
+      </div>
+      <button class="sim-scs-btn sim-scs-btn-primary" onclick="window.simScsRestart()">Restart Simulation</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  let state = {
+    consensus: 50,
+    chinaScore: 0,
+    substanceQuality: 0
+  };
+
+  const updateScore = () => {
+    document.getElementById('sim-scs-score-val').innerText = state.consensus;
+  };
+
+  window.simScsSelectR1 = function(choice) {
+    let reactions = [];
+    if (choice === 'asean') {
+      // ASEAN Way: China +10, Philippines -15, Vietnam -5, Malaysia +10 → net 0
+      state.consensus += 0;
+      state.chinaScore += 10;
+      reactions = [
+        { name: '🇨🇳 China', text: 'Open to dialogue', type: 'success' },
+        { name: '🇵🇭 Philippines', text: 'Frustrated — demands legal accountability', type: 'failure' },
+        { name: '🇻🇳 Vietnam', text: 'Skeptical but willing', type: 'warning' },
+        { name: '🇲🇾 Malaysia', text: 'Supports ASEAN unity', type: 'success' }
+      ];
+    } else if (choice === 'legal') {
+      // Legalistic: China -25, Philippines +15, Vietnam +10, Malaysia 0 → net 0
+      state.consensus += 0;
+      state.chinaScore -= 25;
+      reactions = [
+        { name: '🇨🇳 China', text: 'Strongly opposes — threatens withdrawal', type: 'failure' },
+        { name: '🇵🇭 Philippines', text: 'Strongly supports', type: 'success' },
+        { name: '🇻🇳 Vietnam', text: 'Supports in principle', type: 'success' },
+        { name: '🇲🇾 Malaysia', text: 'Neutral — prefers quiet approach', type: 'warning' }
+      ];
+    } else {
+      // Bilateral: China +5, Philippines -10, Vietnam -10, Malaysia +5 → net -10
+      state.consensus -= 10;
+      state.chinaScore += 5;
+      reactions = [
+        { name: '🇨🇳 China', text: 'Prefers bilateral — divide and conquer', type: 'success' },
+        { name: '🇵🇭 Philippines', text: 'Suspicious of Chinese pressure tactics', type: 'warning' },
+        { name: '🇻🇳 Vietnam', text: 'Concerns about being isolated', type: 'warning' },
+        { name: '🇲🇾 Malaysia', text: 'Open to joint development', type: 'success' }
+      ];
+    }
+    updateScore();
+    
+    let reactionsHtml = reactions.map(r => `
+      <div class="sim-scs-party-card sim-scs-${r.type}">
+        <strong>${r.name}</strong><br/>
+        <span style="font-size: 0.9rem;">${r.text}</span>
+      </div>
+    `).join('');
+    
+    document.getElementById('sim-scs-reactions').innerHTML = reactionsHtml;
+    
+    // Hide buttons, show feedback
+    document.querySelectorAll('#sim-scs-round1 .sim-scs-btn').forEach(b => b.style.display = 'none');
+    document.getElementById('sim-scs-r1-feedback').classList.remove('sim-scs-hidden');
+  };
+
+  window.simScsStartR2 = function() {
+    document.getElementById('sim-scs-round1').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-r1-feedback').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-round2').classList.remove('sim-scs-hidden');
+  };
+
+  window.simScsSubmitR2 = function() {
+    let binding = document.getElementById('sim-scs-r2-binding').value;
+    let scope = document.getElementById('sim-scs-r2-scope').value;
+    let enforcement = document.getElementById('sim-scs-r2-enforcement').value;
+    
+    let c = 0, ch = 0;
+    
+    if (binding === 'binding') {
+      ch -= 20; c += (15 + 10 + 5 - 20); // Ph+15, Vn+10, My+5, Ch-20 = 10
+    } else {
+      ch += 10; c += (-10 - 5 + 0 + 10); // Ph-10, Vn-5, My0, Ch+10 = -5
+    }
+    
+    if (scope === 'all') {
+      ch -= 15; c += (5 + 5 + 5 - 15); // others +5 each = 15, Ch-15 = 0
+    } else if (scope === 'spratly') {
+      ch -= 5; 
+      c += 0;
+    } else {
+      ch += 5; c += (-15 + 5); // Vn-15, Ch+5 = -10
+    }
+    
+    if (enforcement === 'un') {
+      ch -= 20; c -= 20; 
+    } else if (enforcement === 'asean') {
+      ch -= 5; c -= 5;
+    } else {
+      ch += 10; c += (10 - 10); // Ph-10, Ch+10 = 0
+    }
+    
+    state.chinaScore += ch;
+    state.consensus += c;
+    updateScore();
+    
+    document.getElementById('sim-scs-round2').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-round3').classList.remove('sim-scs-hidden');
+  };
+
+  window.simScsSelectR3 = function(choice) {
+    if (choice === 'accept') {
+      state.consensus += 15;
+      state.substanceQuality -= 20;
+    } else if (choice === 'modify') {
+      state.consensus += 5;
+      state.substanceQuality += 0;
+    } else {
+      state.consensus -= 15;
+      state.substanceQuality += 10;
+    }
+    updateScore();
+    
+    document.getElementById('sim-scs-round3').classList.add('sim-scs-hidden');
+    showResult();
+  };
+
+  function showResult() {
+    const resDiv = document.getElementById('sim-scs-result');
+    const title = document.getElementById('sim-scs-outcome-title');
+    const desc = document.getElementById('sim-scs-outcome-desc');
+    const analysis = document.getElementById('sim-scs-analysis-text');
+    
+    resDiv.classList.remove('sim-scs-hidden');
+    resDiv.className = 'sim-scs-fade sim-scs-panel';
+    
+    if (state.consensus >= 65 && state.chinaScore >= -30) {
+      resDiv.classList.add('sim-scs-success');
+      title.innerText = '✅ COC Agreed — Diplomatic Breakthrough!';
+      desc.innerText = 'You achieved what decades of negotiation could not.';
+      analysis.innerText = "By carefully balancing ASEAN centrality with pragmatic engagement of China, you demonstrated the strength (and necessity) of the ASEAN Way's patient consensus-building.";
+    } else if (state.consensus >= 40) {
+      resDiv.classList.add('sim-scs-warning');
+      title.innerText = '⚠️ Watered-Down Declaration';
+      desc.innerText = 'An agreement was reached, but it lacks teeth.';
+      analysis.innerText = "This mirrors the 2002 Declaration on the Conduct of Parties (DOC) — a non-binding political commitment that failed to prevent continued Chinese reclamation activities. The ASEAN Way's emphasis on non-confrontation sometimes produces agreements too vague to enforce.";
+    } else {
+      resDiv.classList.add('sim-scs-failure');
+      title.innerText = '❌ Deadlock — No Agreement';
+      desc.innerText = 'ASEAN unity fractured under great power pressure.';
+      analysis.innerText = "This echoes the 2012 ASEAN Ministerial Meeting in Phnom Penh, where for the first time in ASEAN's 45-year history, foreign ministers failed to issue a joint communiqué. Cambodia, as Chair and close Chinese ally, blocked references to the South China Sea. The episode exposed the limits of consensus when member states' strategic alignments diverge sharply.";
+    }
+  }
+
+  window.simScsRestart = function() {
+    state = { consensus: 50, chinaScore: 0, substanceQuality: 0 };
+    updateScore();
+    
+    // Reset views
+    document.getElementById('sim-scs-result').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-result').className = 'sim-scs-hidden sim-scs-fade';
+    
+    document.getElementById('sim-scs-round1').classList.remove('sim-scs-hidden');
+    document.querySelectorAll('#sim-scs-round1 .sim-scs-btn').forEach(b => b.style.display = 'block');
+    
+    document.getElementById('sim-scs-r1-feedback').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-round2').classList.add('sim-scs-hidden');
+    document.getElementById('sim-scs-round3').classList.add('sim-scs-hidden');
+    
+    // Reset dropdowns
+    document.getElementById('sim-scs-r2-binding').selectedIndex = 0;
+    document.getElementById('sim-scs-r2-scope').selectedIndex = 0;
+    document.getElementById('sim-scs-r2-enforcement').selectedIndex = 0;
+  };
+})();
+</script>

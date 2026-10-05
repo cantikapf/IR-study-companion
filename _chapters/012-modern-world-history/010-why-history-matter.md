@@ -1,14 +1,14 @@
 ---
 slug: history-matters
 title: Why History Matters?
-abstract: Why we should study international history?
-simple_summary: "To understand why the world is the way it is today, we have to hop in a time machine. This chapter tells the story of how old kings, past wars, and ancient empires shaped the borders and the rules we use right now."
+simple_summary: "Studying international relations without history is like diagnosing an illness without looking at a patient's medical chart. Today's borders, global hierarchies, and international institutions did not appear overnight—they are scars and compromises carved by centuries of wars, treaties, and colonial extraction. Understanding history frees you from assuming the current world order is natural or permanent."
 ---
 
+## The Indispensability of History in International Relations
 
-**History**, with all its intricacies and nuances, serves as an indispensable foundation for comprehending the complex dynamics of international relations in today's interconnected world. As the repository of humanity's experiences, triumphs, and tribulations throughout the ages, the study of history provides crucial context and insights that shape our understanding of modern diplomacy, politics, conflicts, and global affairs.  
+The study of **history** provides the empirical baseline for International Relations. Rather than treating the contemporary global architecture as an immutable constant, historical analysis reveals that state sovereignty, diplomatic practices, and balance-of-power systems are path-dependent evolutions shaped by past conflicts, institutional innovations, and intellectual revolutions. As E.H. Carr observed in *What is History?* (1961), historical inquiry is an "unending dialogue between the present and the past," where contemporary concerns inevitably frame how past archives are interrogated.
 
-Although examining **historical** narratives inevitably involves grappling with subjectivity and inherent biases, the wealth of information on **past** interactions and events equips us with the perspective and knowledge needed to better navigate the present. Beyond just understanding the current global landscape, history also influences foreign policy, economic relations between **nations**, and the power balances that emerge on the international stage. Ultimately, historical analysis fosters greater dialogue and cooperation globally by revealing shared challenges and experiences that unite societies across borders and cultures. For these reasons, history remains essential to unraveling and engaging with the intricacies of the modern world order.
+Although examining historical narratives inevitably involves grappling with subjectivity and interpretive frameworks, rigorous knowledge of past state interactions equips scholars to test theoretical models, discern recurring systemic patterns, and avoid historical amnesia in strategic decision-making. Beyond illuminating the origins of contemporary borders and treaties, history uncovers the structural legacies of imperialism, the path-dependence of economic regimes, and the recurrent dynamics of hegemonic rise and decline.
 
 ## Subjectivity of History 
 
@@ -87,17 +87,7 @@ In particular, a nuanced understanding of history allows countries to move beyon
 
 Moreover, studying history reveals that all nations have experienced both tribulations and triumphs over time. This promotes cultural humility and empathy, as countries recognize that no society is perfect or has all the answers. Awareness of universal human flaws and foibles connects people across national divides. No country is immune from mistakes, yet all nations possess proud moments worthy of respect.
 
-This mature historical understanding sets the stage for mutual learning and growth through international cooperation. By sharing knowledge and working collaboratively, nations can build on their collective strengths while avoiding the repetition of past failures. In this way, history provides a strong foundation for building bridges between countries to pave the way for a more just, prosperous and peaceful global community.
-
-## Conclusion
-
-History is indeed a crucial tool for understanding the interconnectedness of our global community. By studying the past, we gain perspective on how modern nations, cultures, and peoples have come to interact on the world stage. More importantly, analyzing history allows us to comprehend the complex dynamics between societies that have unfolded over centuries of contact, conflict, and cooperation. 
-
-In today's world marked by rapid globalization, understanding these historical intersections is more vital than ever. Whether tracing the emergence of international alliances, the legacies of colonialism, or the origins of cultural exchange, history provides context for deciphering why our world works the way it does. It illuminates past actions that have shaped modern relations between peoples and informed the worldviews we hold today.
-
-Ultimately, history is an invaluable lens for realizing just how interconnected our human community truly is. While the present world seems infinitely complex, the study of the past helps demonstrate that many of today's challenges have roots and parallels in earlier eras. By mining history for insights, we gain perspective on how patterns of human civilization have unfolded over time and space. With this enhanced frame of reference, we can better cooperate as an international society to build a more just, peaceful and equitable world order. History is a guidebook for understanding global interconnectedness in all its forms.
-
----
+This mature historical understanding sets the stage for mutual learning and institutionalized collaboration. By examining empirical precedents and path-dependent institutional trajectories, states can build on their collective strengths while mitigating the risk of repeating systemic crises. In this way, historical inquiry provides the indispensable empirical foundation for designing durable diplomatic mechanisms and navigating the recurrent dilemmas of international order.
 
 ---
 

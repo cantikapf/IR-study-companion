@@ -95,7 +95,7 @@
 }
 .quiz-feedback {
     margin-top: 1rem;
-    padding: 0.85rem 1rem;
+    padding: 0.95rem 1.15rem;
     border-radius: var(--radius-inner, 8px);
     font-size: 0.875rem;
     display: none;
@@ -112,6 +112,37 @@
     background: var(--semantic-error-bg, rgba(239, 68, 68, 0.08));
     border: 1px solid var(--semantic-error-border, rgba(239, 68, 68, 0.25));
     color: var(--semantic-error-ink, rgb(220, 38, 38));
+}
+.quiz-explanation-box {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.15);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--lms-ink-secondary, #333333);
+}
+body.dark-theme .quiz-explanation-box {
+    border-top-color: rgba(255, 255, 255, 0.15);
+    color: var(--lms-ink-secondary, #e0e0e0);
+}
+.quiz-explanation-title {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+    color: var(--lms-ink-primary, #000);
+}
+body.dark-theme .quiz-explanation-title {
+    color: var(--lms-ink-primary, #ffffff);
+}
+.quiz-ref-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: underline;
+    font-size: 0.825rem;
 }
 </style>
 
@@ -134,6 +165,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('quiz-' + quizId);
     if(!container) return;
     
+    const explanationText = {{ include.explanation | default: "" | jsonify }};
+    const refSection = {{ include.ref_section | default: "" | jsonify }};
+
+    function renderExplanation(isCorrect) {
+        if (!explanationText) return "";
+        let html = '<div class="quiz-explanation-box">';
+        html += '<div class="quiz-explanation-title"><i class="fa fa-info-circle"></i> Scholarly Context & Rationale</div>';
+        html += '<div>' + explanationText + '</div>';
+        if (refSection) {
+            html += '<a href="#' + refSection + '" class="quiz-ref-link">Jump to referenced lesson passage &uarr;</a>';
+        }
+        html += '</div>';
+        return html;
+    }
+    
     // Check local storage
     const isCompleted = localStorage.getItem('quiz_' + quizId + '_completed');
     if(isCompleted) {
@@ -146,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(btn) btn.style.display = 'none';
         const feedback = document.getElementById('feedback-' + quizId);
         if(feedback) {
-            feedback.textContent = "Completed! You have already verified this question correctly. ✓";
+            feedback.innerHTML = "Completed! You have already verified this question correctly. &check;" + renderExplanation(true);
             feedback.className = 'quiz-feedback show-correct';
         }
     }
@@ -170,6 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Expose explanation helper to submitQuiz
+    container._renderExplanation = renderExplanation;
 });
 
 function submitQuiz(id, correctIdx) {
@@ -183,11 +232,12 @@ function submitQuiz(id, correctIdx) {
         return;
     }
     
+    const explanationHtml = typeof container._renderExplanation === 'function' ? container._renderExplanation(true) : '';
     const selectedIdx = selected.getAttribute('data-idx');
     if(selectedIdx === correctIdx) {
         selected.classList.add('correct');
         selected.classList.remove('selected');
-        feedback.textContent = "Correct! You have successfully mastered this core concept. ✓";
+        feedback.innerHTML = "<strong>Correct!</strong> You have successfully mastered this core concept. &check;" + explanationHtml;
         feedback.className = 'quiz-feedback show-correct';
         
         // Save to local storage
@@ -200,9 +250,8 @@ function submitQuiz(id, correctIdx) {
     } else {
         selected.classList.add('wrong');
         setTimeout(() => selected.classList.remove('wrong'), 800);
-        feedback.textContent = "Incorrect. Review the passage above and try again.";
+        feedback.innerHTML = "<strong>Incorrect.</strong> Review the core reading and try again." + (explanationHtml ? '<br><small>Tip: Re-read the relevant section to verify why this answer differs.</small>' : '');
         feedback.className = 'quiz-feedback show-wrong';
     }
 }
 </script>
-

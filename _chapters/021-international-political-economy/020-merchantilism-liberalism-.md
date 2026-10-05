@@ -1,9 +1,7 @@
 ---
 title: 'Approaches to IPE: Mercantilism vs. Liberalism'
 slug: merchantilism-liberalism
-abstract: 'This chapter will  introduce you to the two main approaches to IPE: mercantilism and liberalism.'
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
-
+simple_summary: "Is world trade a cutthroat zero-sum battle or an engine of mutual prosperity? Mercantilism views trade as economic warfare, arguing that states must hoard gold, protect strategic factories, and run export surpluses to build military power. Liberalism counters that trade creates win-win wealth: through comparative advantage, countries gain far more by specializing in what they produce best and trading peacefully with others. This classic tug-of-war between state power and market efficiency defines modern trade politics."
 ---
 
 
@@ -122,9 +120,6 @@ Liberalism prioritizes individual freedom and welfare in economic decision makin
 
 Source: Oatley, T. H. (2012). _International political economy_ (5th ed). Longman. 
 
-
----
-    
 
 
 ---

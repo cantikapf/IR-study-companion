@@ -1,8 +1,7 @@
 ---
 slug: detente
 title: Détente of the 1970-1990
-abstract: This chapter will cover the Détente of the 1970-1990
-simple_summary: "Think of this chapter as an important puzzle piece. It explains a special part of how countries interact, make decisions, and affect your daily life, even if you don't realize it yet!"
+simple_summary: "Realizing that an unchecked nuclear arms race would bankrupt both economies and invite catastrophe, Washington and Moscow hit the pause button in the 1970s. Through détente, Nixon, Brezhnev, and Kissinger negotiated the SALT arms control treaties and signed the 1975 Helsinki Accords. Rather than ending the Cold War, détente created institutional guardrails to manage competition safely without blowing up the planet."
 ---
 
 
@@ -114,8 +113,6 @@ President Ronald Reagan's approach marked a significant departure from the previ
 Reagan believed the Soviet Union exploited détente in order to gain strategic advantages. He labeled the Soviet system an "evil empire" and argued for actively confronting the spread of communism worldwide. Reagan pursued a massive buildup of US military forces, aiming to pressure the Soviets into negotiations by engaging them in an unsustainable arms race. Major defense programs included the B-1 bomber, the MX missile, and expanded fleets for the Navy. He also initiated the Strategic Defense Initiative (SDI) program, which proposed developing a space-based anti-missile system dubbed "Star Wars."
 
 In addition to military pressure, Reagan looked to stress the Soviet economy through sanctions and by driving down oil prices. He restricted technology exports and prevented Soviet access to Western financial markets. The administration provided aid to irregular anti-communist forces in the developing world, a policy known as the Reagan Doctrine. This multi-pronged strategy of confronting the Soviets militarily, economically, and in the Third World marked a clear departure from previous efforts at reducing tensions between the two superpowers. The aggressive posture contributed to escalating an already dangerous nuclear standoff.
-
----
 
 ---
 

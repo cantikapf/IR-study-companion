@@ -1,8 +1,7 @@
 ---
 title: Alternative Media and International Politics
 slug: media-politics
-abstract: Case studies of alternative media and their impact on international politics.
-simple_summary: "The world is shrinking! Because of the internet, airplanes, and trade, a problem in one side of the world (like a sick person or a polluted river) can quickly become everyone's problem. This chapter shows how everything is connected like a giant spider web."
+simple_summary: "During the 2009 Iranian protests and the 2011 Arab Spring, techno-utopians celebrated Twitter and Facebook as unstoppable tools of democratic liberation. But as cyber-skeptics quickly proved, online virality does not replace street-level logistical organizing—and authoritarian regimes rapidly adapted digital tools for mass surveillance, algorithmic censorship, and state propaganda. Technology merely amplifies political struggles; it cannot manufacture courage or substitute for institutional political change."
 ---
 
 ## Introduction
@@ -11,7 +10,7 @@ simple_summary: "The world is shrinking! Because of the internet, airplanes, and
 
 Perhaps the first major "**Twitter revolution**" occurred during the 2009 Iranian election protests. Activists used Twitter and Facebook to spread their message and organize demonstrations after the re-election of Iranian President Mahmoud Ahmadinejad, which many suspected was rigged. This showed how social media could provide powerful, speedy, and relatively low-cost tools for political activism.
 
-However, experts debate the actual impact of social media on these protests. While social media helps spread information rapidly, some argue it played a minor role compared to on-the-ground organizing. The political context also affects how useful social media tools are, and the willingness of citizens to take to the streets. 
+However, scholarly debate divides sharply between proponents of "liberation technology" (Larry Diamond, 2010) who argue networked tools democratize collective action, and cyber-skeptics (Evgeny Morozov in *The Net Delusion*, 2011; Malcolm Gladwell, 2010) who argue digital tools foster slacktivism while empowering authoritarian regimes with advanced surveillance and propaganda capabilities. While social media helps spread information rapidly, some argue it played a minor role compared to on-the-ground organizing. The political context also affects how useful social media tools are, and the willingness of citizens to take to the streets. 
 
 ## Twitter Revolution in Iran
 
@@ -21,7 +20,7 @@ While Twitter provided a powerful, speedy tool for Iranians to spread their mess
 
 So while Twitter gave protestors an unprecedented ability to tell their stories and get their message out from behind Iran's internet censorship, it played a comparably small and indirect role in the actual protest activities on the ground. The organizing and mobilization was driven more by traditional formats like word of mouth, mobile phones, email, and websites.
 
-## Cyber-enthusiasts vs Skeptics
+## Liberation Technology vs Cyber-Skepticism
 
 The role of social media in protest movements has sparked debate between two camps of thinkers - the cyber-enthusiasts and the cyber-skeptics. 
 

@@ -1,8 +1,7 @@
 ---
 slug: post-ww
 title: 'The Post-War World Order'
-abstract: How the Marshall Plan and UN Reshaped Global Politics
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "To prevent another slide into war and economic depression, the victors of 1945 built an unprecedented network of global governance institutions. The United Nations created a Security Council where major powers held vetoes to maintain collective security, while the Nuremberg trials established that leaders could be hung for crimes against humanity. For the first time, peace was actively managed through multilateral machinery rather than shifting secret treaties."
 ---
 
 
@@ -114,9 +113,7 @@ Japan's postwar transformation under American occupation was emblematic of the U
 
 The Soviet occupation of Eastern Europe birthed a divided continent. Western European nations closely aligned with the US while Eastern bloc countries fell under communist control. This East-West split came to characterize geopolitics for over four decades until the fall of the Berlin Wall and collapse of the Soviet Union.
 
-The post-WWII order was defined by America's economic and military dominance alongside Soviet communism's ideological challenge. The US-Soviet rivalry dominated geopolitics, culminating in the Cold War. America's ascendance to superpower status,ushered in Pax Americana that has endured despite the reemergence of rival powers.
-
----
+The post-WWII order was defined by America's economic and military dominance alongside Soviet communism's ideological challenge. The US-Soviet rivalry dominated geopolitics, culminating in the Cold War. America's ascendance to superpower status ushered in Pax Americana that has endured despite the reemergence of rival powers.
 
 ---
 

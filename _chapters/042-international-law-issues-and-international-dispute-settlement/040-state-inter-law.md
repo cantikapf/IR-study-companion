@@ -2,7 +2,7 @@
 title: State And International Law
 slug: state-and-international-law
 abstract: This page explores the complex issue of secession under international law, discussing the challenges faced by secessionist movements, the role of recognition, and the principles of state responsibility and diplomatic protection.
-simple_summary: "Think of this chapter like the rules of a playground. Without rules, kids might fight or take each other's toys. In the world, countries need rules (called International Law) so they know how to trade, travel, and solve arguments without going to war!"
+simple_summary: "When a breakaway region seeks independence, international law faces an intense clash between the right to self-determination and the sanctity of territorial integrity. Whether a new entity becomes a state depends on the fierce legal tug-of-war between declaratory theory (meeting physical facts on the ground) and constitutive theory (gaining formal recognition from other powers). But once sovereign, statehood brings strict accountability: any internationally wrongful act triggers state responsibility, legally compelling the offender to cease unlawful actions and pay full reparations."
 ---
 
 ## Introduction
@@ -136,7 +136,6 @@ Secession is a complex issue in international law. To summarize the key points:
 - State responsibility principles establish that states are obligated to cease unlawful acts and provide reparations for injuries caused by such acts. This applies to acts related to secession and independence struggles.
 - Overall, secession remains a controversial and complex matter in international law, with many competing principles and perspectives involved.
 
----
 
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Cyber Warfare
 slug: cyber-warfare
-abstract: Cyberwar in the context of international relations and the impact of cyberwarfare on the global political landscape.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "In cyberspace, a single line of malicious code can sabotage a uranium centrifuge or shut down an entire city's power grid without firing a bullet. Because digital strikes exploit plausible deniability—making forensic attribution excruciatingly difficult—the traditional logic of nuclear deterrence breaks down. Operating in a permanent gray zone between peace and open war, states race to infiltrate critical infrastructure while leaving rivals paranoid and constantly off-balance."
 ---
 
 Cyberwar refers to the use of computational technologies in the military or diplomatic contexts of international affairs and interactions between nation **states**. It involves direct battles using information technology capabilities. Cybersecurity, on the other hand, refers to a state's defensive (and sometimes offensive) capabilities within the domain of cyberspace. 
@@ -92,16 +91,13 @@ The future of cyber warfare between rival states remains uncertain. We have yet 
 
 Much depends on how rival states react to actual cyber conflict initiated by their adversaries. Will retaliations spiral out of control into all-out cyber war? Or will there be a tacit understanding of limits? 
 
-No one knows the potential targets and scale of infrastructure attacks possible in an unrestrained cyberwar. Power grids, financial systems, communications networks, military defenses and more could be fair game. The lack of ethical norms and rules of engagement in cyberspace makes the damage from cyber wars unpredictable.
+No one knows the potential targets and scale of infrastructure attacks possible in an unrestrained cyberwar. Power grids, financial systems, communications networks, military defenses and more could be fair game. To establish normative and legal boundaries in this contested domain, international legal scholars formulated the *Tallinn Manual 2.0 on the International Law Applicable to Cyber Operations* (Schmitt, 2017), analyzing how existing international law (including the UN Charter Article 2(4) and international humanitarian law) governs state-sponsored cyber operations.
 
 The predictions that states with advanced cyber capabilities will inevitably use them against rivals in times of heightened tensions has not definitively come to pass. Perhaps there are certain limits and offline consequences that deter unrestrained cyber campaigns, even between bitter rivals. Or the cyber powers of the day have not yet felt desperate or threatened enough to fully unleash their capabilities. 
 
 Either way, the future of cyber war between rivals remains ambiguous. States must strategize and prepare for the widest range of possibilities, while hoping restraint and detente prevail. The use of cyber tactics in rivalry represents a critical test of their impact on international stability in the 21st century.
 
 ---
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Cyberwar" def1="Use of computational technologies in military or diplomatic contexts" term2="Cybersecurity" def2="Defensive and sometimes offensive capabilities in cyberspace" term3="Plausible Deniability" def3="Disguising the source of cyber attacks" term4="Cyber Deterrence" def4="Preventing large-scale cyber attacks through resilience and power projection" %}
 

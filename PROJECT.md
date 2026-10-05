@@ -19,6 +19,8 @@
 | 6 | Dark/Light Mode | Dukungan tema kontras tinggi dan aksesibel | M1 | DONE |
 | 7 | Quality Assurance (QA) | Suite pengujian otomatis via pytest dan Playwright | M1 | DONE |
 | 8 | Content & Reference Verification | Audit keaslian sitasi akademik via CrossRef & fact-check AI | M2 | IN PROGRESS |
+| 9 | Interactive Diplomatic Labs Expansion | 10 simulasi interaktif mandiri (zero external dependencies) | M6 | DONE |
+| 10 | Final Stage Online Course Transformation | Backup/Sync, Deep Search, 18-Module Exams (180 soal), Curated Glossary (122 konsep), Elaborate Certificate, Onboarding Tour | M7 | DONE |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
@@ -29,6 +31,8 @@
 | M3 | Scandinavian Course Prototype | Interactive LMS harness + Utilitarian Home Academy | M2 | DONE |
 | M4 | Production Theme Upgrade | Migrasi layout Jekyll ke Utilitarian Course Player & Home | M3 | DONE |
 | M5 | Bespoke Native LMS Engine | Eliminasi GitBook & implementasi Full LMS Player + Drawer | M4 | DONE |
+| M6 | Interactive Diplomatic Labs | 7 simulasi baru (total 10 labs) + homepage showcase update | M5 | DONE |
+| M7 | Online Course Transformation | 180-Soal Exam System, Backup/Restore JSON, 122-Term Glossary, Elaborate Certificate Generator, Onboarding Tour | M6 | DONE |
 
 
 

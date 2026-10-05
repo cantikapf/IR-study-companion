@@ -2,23 +2,23 @@
 title: Classical Realism
 slug: classical-realism
 abstract: This chapter explains the theory of classical realism in International Relations
-simple_summary: "This chapter gives you a pair of 'magic glasses' to look at the world. Different glasses (theories) make you see things differently. Some glasses make you see the world as a scary place where everyone is fighting, while others make you see it as a place where people love to cooperate!"
+simple_summary: "Classical realists argue that wars do not occur simply because of poor communication or faulty treaties, but because of an inescapable flaw in human nature: the endless lust to dominate (*animus dominandi*). From Thucydides' ancient Athens to Hans Morgenthau's postwar diplomacy, leaders must navigate an unforgiving arena where moral preaching cannot stop tanks. In this tragic view of history, a statesman's highest moral duty is not saintly idealism, but cold prudence and the sober management of national power."
 ---
 
 ## Realism Summary
 
-- Analytical units: states as principal actor
-- View of actors: states as unitary actors
-- Behavioral dynamics: state is rational actors seeking to maximize its interest or national objectives in foreign policy
-- Issues: national security issues are most important
+- Analytical units: states as principal actors in world politics.
+- View of actors: states as unitary, rational actors calculating national interests.
+- Behavioral dynamics: states pursue interest defined in terms of power to ensure survival.
+- Issues: national security and survival constitute 'high politics'.
 
-**Classical Realism** tend to:
-1. Advocate holistic understanding of politics
-2. Recognize the close relationship of domestic and **international**
-3. Acknowledge the role of ethnics and community
-4. Regard history as cyclical
+**Classical Realism** is characterized by:
+1. Advocating a holistic understanding of politics rooted in human nature (*animus dominandi*).
+2. Recognizing the continuous interaction between domestic political institutions and foreign policy.
+3. Acknowledging the vital role of ethics, prudence, and moral restraint in preventing imperial hubris.
+4. Regarding history as cyclical rather than teleologically progressive.
 
-Keyword: Groupism (alliance), Egoism (self-interest), **Power**-centrism (hegemony)
+Keywords: Groupism (cohesion and alliances), Egoism (self-interest and survival), Power-centrism (structural hierarchy).
 
 ---
 ## Classical Realism Core Concepts
@@ -92,28 +92,21 @@ For example, the spread of digital technology and social media has rapidly conne
 
 Classical realists caution that rapid modernization can outpace the ability of institutions and communities to adapt. This is why they advocate judiciously blending old and new values during periods of change, in order to maintain stability and order. Core values around justice and restraint help check leaders' ambitions and build unity.
 
-At the international level, classical realists warn that shifting identities and interests during modernization can exacerbate tensions between states. As relative power changes, status quo powers may cling to old notions of security and attempt to suppress emerging powers. Wise statecraft requires carefully balancing continuity and change across both domestic and international realms.
+## Justice, Prudence, and Moral Restraint
 
-## Justice in International Relations
+Classical realists view justice and moral restraint not as idealistic distractions, but as indispensable strategic safeguards against catastrophic overreach. While neorealists treat morality as epiphenomenal under structural anarchy, classical realism (from Thucydides to Hans Morgenthau) insists that sustainable power requires ethical self-limitation:
 
-For classical realists, justice plays a crucial role in shaping how other states understand and respond to a country. While contemporary realists prioritize power over justice in international affairs, classical realists emphasize justice as essential for maintaining order and restraint both domestically and internationally.
+- **Thucydides and the Melian Dialogue**: In *History of the Peloponnesian War*, the Athenians notoriously declare to the Melians that *"the strong do what they can and the weak suffer what they must."* Far from endorsing this brutal realpolitik as normative wisdom, Thucydides structures his narrative to show that Athens' arrogant dismissal of justice led directly to imperial hubris, the disastrous Sicilian Expedition, and ultimate defeat.
+- **Hans Morgenthau's Prudence**: In *Politics Among Nations* (1948), Morgenthau identified **prudence**—the weighing of the political consequences of seemingly moral actions—as the supreme virtue in politics. A statesman must judge foreign policy not by abstract universal moralizing, but by the prudent defense of the national interest while recognizing the legitimate interests of other nations.
 
-Classical realists like Thucydides appreciate the cohesiveness of community in maintaining order and promoting self-restraint. According to this view, justice enables order by aligning the means and ends of foreign policy with community values. Morgenthau similarly highlights justice as foundational for a stable international system built on order and restraint.
+## Case Study: The 2003 Iraq War and Imperial Overreach
 
-The absence of morality and ethics in the international arena is a core tenet of structural realism. However, classical realists diverge on this point, underscoring justice and morality as ensuring prudent foreign policy aligned with the community's interests. Unjust means often lead to disorder and blowback effects that undermine the ends being pursued.
+The 2003 invasion of Iraq serves as a textbook demonstration of classical realist warnings regarding hubris, ideological crusades, and the disregard of prudence:
 
-## Iraq War Case Study
+1. **Ideological Hubris vs. Realist Skepticism**: Leading classical and offensive realists (including 33 top IR scholars who published a joint advertisement in the *New York Times* in 2002) vehemently opposed the Iraq War. They correctly warned that attempting to forcibly transform a complex Middle Eastern society into a liberal democracy was an exercise in dangerous neoconservative utopianism.
+2. **Disregard of Prudence and Legitimate Means**: By invading without a clear UN Security Council authorization, relying on manipulated intelligence regarding weapons of mass destruction, and dismantling the Iraqi state apparatus (de-Ba'athification and disbanding the army), policymakers created a catastrophic security vacuum that empowered sectarian militias, facilitated the rise of ISIS, and decisively strengthened Iran's regional influence.
 
-A classical realist perspective provides insight into the tragic outcome of the Iraq War, underscoring the dangers of hubris and the contradiction between a state's proclaimed values and the means used to achieve them.
-
-In the lead-up to the invasion in 2003, the Bush administration displayed tremendous overconfidence, making misplaced assumptions about the Iraqi people's reception of American forces as liberators. This hubris blinded policymakers to the reality that most Iraqis would view the unprovoked invasion of their country as an act of imperialist aggression, not one of liberation.
-
-Furthermore, the ideals behind the war - spreading democracy, protecting human rights - stood in stark contradiction to the means used - an unprovoked invasion justified with manipulated intelligence, the use of torture, the flouting of international law. As classical realists emphasize, justice and community values are crucial for how a state's actions are perceived abroad. By contradicting its own principles, the United States damaged its legitimacy and moral authority.
-
-The tragic aftermath of the Iraq War underscores key warnings from classical realists about the dangers of hubris and the exercise of unrestrained power. Prudence and wisdom are vital to prevent outcomes like Iraq, where the world's most powerful state unleashed horrific devastation in pursuit of idealistic goals using unjust means. The restraint born of caution, humility and respect for shared values serves as an antidote to reckless exercises of power divorced from moral considerations.
-
-
----
+As classical realism cautions, power decoupled from prudence, legitimacy, and an awareness of human fallibility inexorably generates systemic blowback.
 
 ---
 

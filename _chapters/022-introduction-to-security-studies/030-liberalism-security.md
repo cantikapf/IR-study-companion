@@ -1,8 +1,7 @@
 ---
 title: Liberalism In Security Studies
 slug:  liberalism-security
-abstract: Liberalism concept in security studies.
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "If realism argues that war is permanent, liberalism asks why democracies almost never go to war with one another. The answer lies in Immanuel Kant's peace tripod: democratic institutions hold leaders accountable to the citizens who would die in battle, deep commercial trade makes conflict economically suicidal, and international organizations create rules that punish cheating. Peace is not an accident of nature, but an institutional machine engineered to make cooperation more profitable than conquest."
 ---
 
 ## Introduction
@@ -17,7 +16,7 @@ Various strands of liberal thought contribute to our understanding of how to con
 
 ## Traditional Liberalism
 
-Traditional liberalism emerged in the 17th and 18th centuries during the Age of Enlightenment. Key thinkers such as John Locke, Adam Smith, and Immanuel Kant developed foundational ideas about human nature, political systems, economics, and morality.
+Traditional liberalism in security studies traces its philosophical foundation to the Enlightenment, notably Immanuel Kant's 1795 philosophical sketch *Perpetual Peace: A Philosophical Sketch* (*Zum ewigen Frieden*), alongside the political and economic writings of John Locke and Adam Smith developed foundational ideas about human nature, political systems, economics, and morality.
 
 A core tenet of traditional liberalism is an optimistic view of human nature. Liberals believe that human beings are inherently reasonable and capable of benevolence. While humans may act selfishly at times, their nature is not necessarily evil or vicious. With the proper social and political institutions, liberalism holds that humans can be compelled to act for the greater good.
 
@@ -44,18 +43,18 @@ Later thinkers like James Mill and Joseph Schumpeter built on these ideas, notin
 
 ## Democratic Peace Theory
 
-The Democratic Peace Theory posits that democratic regimes are less likely to initiate violent conflicts against other democracies. This theory emphasizes how democratic processes, institutions, and norms promote compromise and discussion over aggression when dealing with other democracies.  
+The Democratic Peace Theory—systematized empirically by Michael Doyle (1983) and Bruce Russett (1993)—posits that democratic regimes are less likely to initiate violent conflicts against other democracies. This theory emphasizes how democratic processes, institutions, and norms promote compromise and discussion over aggression when dealing with other democracies.  
 
 Some key aspects of the Democratic Peace Theory are:
 
 - Democracies tend to avoid wars with each other due to shared norms and compromise through institutions like legislatures and elections. 
 - The public nature of decision-making in democracies facilitates signaling and credibility between democratic leaders. This increases trust and resolve in negotiations compared to more opaque autocratic regimes.
 - Liberal states tend to trust other liberal states and expect to resolves conflict through discussion and compromise
-- Liberal democratic states do not fight war against other liberal democratic states. that's why democratic states spread democratic liberal ideology to other states
+- Dyadic Democratic Peace: While democracies are historically just as war-prone as non-democracies in general, they exhibit an exceptionally robust empirical record of mutual non-belligerence toward other established constitutional democracies (Doyle, 1983).
 
 ## Neoliberal Institutionalism Promotes Peace Through International Cooperation
 
-Neoliberal institutionalism argues that international institutions play a vital role in reducing conflicts among democratic states. According to this theory, institutions help guarantee trust between countries by redefining state roles and acting as arbitrators. 
+Neoliberal institutionalism, formulated by Robert Keohane in *After Hegemony* (1984) and extended to security by Celeste Wallander and Robert Keohane (1999), play a vital role in reducing conflicts among democratic states. According to this theory, institutions help guarantee trust between countries by redefining state roles and acting as arbitrators. 
 
 Institutions allow for more cooperation by providing highly institutionalized settings that reduce transaction costs and alter payoffs for peaceful interactions versus conflict. States can more easily find mutually beneficial solutions through the framework of international institutions.
 
@@ -82,11 +81,6 @@ Waltz's analysis argues that the causes of conflict and cooperation exist at thr
 - Two ideal type security system: alliance and community of law
 
 ---
-    
-
-
----
-
 ### Interactive Learning 
 {% include flashcards.html term1="Liberalism" def1="A political ideology promoting individual freedom and peace between states" term2="Commercial Liberalism" def2="Theory that economic interdependence reduces the likelihood of war" term3="Democratic Peace Theory" def3="Democracies are less likely to initiate conflicts against other democracies" term4="Neoliberal Institutionalism" def4="International institutions promote peace through cooperation and trust-building" %}
 

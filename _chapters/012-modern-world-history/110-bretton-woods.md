@@ -1,8 +1,7 @@
 ---
 slug: bretton-woods
 title: The Rise of the Bretton Woods Institutions
-abstract: This chapter will cover the rise of the Bretton Woods Institutions
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "In 1944, delegates gathered in a New Hampshire resort to design a financial system that would stop countries from currency wars and trade collapse. They anchored the global economy to the US dollar, which was backed by physical gold, and established the IMF to rescue bankrupt nations and the World Bank to finance reconstruction. Bretton Woods turned American financial supremacy into the operating system of global capitalism."
 ---
 
 
@@ -130,19 +129,10 @@ Some key legacies of Bretton Woods include:
 
 - Creating institutional support for international finance. The IMF and World Bank evolved into key organizations for financial assistance and development.
 
-- Catalyzing European integration. Bretton Woods pushed European nations to coordinate monetary policies, paving the way for the EU.
+- **Institutionalizing "Embedded Liberalism"**: As conceptualized by political scientist **John Gerard Ruggie** (1982), the Bretton Woods architecture forged a compromise between international open trade and domestic social protection. Unlike the unyielding pre-1914 gold standard, member states were permitted to deploy capital controls and social welfare safety nets while progressively dismantling trade tariffs.
+- **The Triffin Dilemma and Systemic Demise**: Formulated by Belgian-American economist **Robert Triffin** in *Gold and the Dollar Crisis* (1960), the gold-dollar standard contained an inherent structural contradiction. To supply global trade liquidity, the United States had to run continuous balance-of-payments deficits; however, accumulating foreign dollar liabilities inevitably undermined confidence in gold convertibility ($35 per ounce). By 1971, amidst mounting inflation and Vietnam War expenditure, President Richard Nixon unilaterally suspended gold convertibility ("the Nixon Shock"), transitioning the international economy into a post-Bretton Woods system of floating fiat currencies.
 
-So in many ways, the original Bretton Woods framework shaped international economic relations for decades. It drove globalization and interdependency between economies. Most experts agree that Bretton Woods was a milestone in modern economic history, despite its eventual demise.
-
-## Summary
-
-The Bretton Woods conference in 1944 sought to rebuild the international monetary system following World War II. It established the International Monetary Fund and the World Bank to promote stability and economic cooperation. A system of fixed exchange rates pegged to the U.S. dollar was introduced, reflecting the dollar's new status as the dominant global reserve currency. 
-
-This "Bretton Woods system" remained in place for over 25 years. However, the costs of the Vietnam War and other strains ultimately led to its collapse in 1971. The major currencies began floating against each other, and this new era saw the rise of high inflation and unstable exchange rates.
-
-In the 2000s, some called for a "Bretton Woods II" system to restore stability to currency markets in the wake of the global financial crisis. While this did not come to pass, the original Bretton Woods institutions continue to play important roles today. The conference was a defining moment that shaped global economics and governance for decades to come.
-
----
+Despite the collapse of the fixed-exchange parity mechanism, the institutional core of Bretton Woods—the IMF and the World Bank Group—continues to anchor the global financial architecture and macroeconomic crisis management.
 
 ---
 

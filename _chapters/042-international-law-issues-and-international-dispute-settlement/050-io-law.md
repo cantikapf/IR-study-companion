@@ -2,7 +2,7 @@
 title: International Organization
 slug: io-law
 abstract: The page provides an introduction to international organizations, focusing on the United Nations (UN). It discusses the establishment, structure, and key principles of the UN, as well as the roles and functions of its main organs.
-simple_summary: "Have you ever been in a school club where everyone has to vote on what to do? International Organizations are exactly like that, but for countries! They join big clubs like the UN or ASEAN so they can sit at a round table and work together to fix big problems."
+simple_summary: "International organizations are not supreme global governments; they are created by sovereign states to solve problems no single nation can handle alone. Guided by the UN Charter, the system balances universal democracy in the 193-member General Assembly against hard power realities in the 15-member Security Council, where five permanent members hold decisive vetoes. As the landmark 1949 Reparation for Injuries case established, international organizations possess distinct legal personality and implied powers, allowing them to operate autonomously across borders rather than serving as mere puppets of their creators."
 ---
 
 ## Introduction to the UN
@@ -176,7 +176,6 @@ The UN Charter established new institutions and procedures for peaceful dispute 
 
 While submission to the ICJ is voluntary, the Security Council can legally enforce ICJ decisions under Chapter VII of the UN Charter if international peace and security are threatened. Overall, the UN dispute settlement mechanisms aim to provide peaceful alternatives to the use of force. When combined with collective security, they form a core part of the UN's mission to maintain international peace.
 
----
 
 ---
 

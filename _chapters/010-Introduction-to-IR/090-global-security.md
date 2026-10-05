@@ -2,7 +2,7 @@
 title: Global Security Issues
 slug: global-security-issues
 abstract: The concept of security in International Relations context
-simple_summary: "Why do countries sometimes fight? Imagine two kids who don't trust each other and start building pillow forts to protect themselves. This chapter explores why countries build armies, how they feel threatened, and what they do to stay safe from bullies."
+simple_summary: "For centuries, security simply meant armies guarding physical borders against foreign invasion. But if a citizen dies from a pandemic, an environmental collapse, or state oppression, tanks and missiles offer zero protection. Understanding global security requires asking two crucial questions: whose security are we actually defending (the ruling regime or individual human beings?), and what counts as an existential threat in an interconnected world."
 ---
 
 ## Introduction
@@ -96,8 +96,6 @@ North Korea and Iran represent two different challenges to the non-proliferation
 **North Korea** initially signed the 1994 Agreed Framework, shutting down its plutonium reactor in exchange for aid and concessions. However, North Korea later withdrew from the Nuclear Non-Proliferation Treaty (NPT) in 2003. Since then, it has tested multiple nuclear devices, the first in 2006. Negotiations have aimed at denuclearizing the Korean peninsula, but have achieved limited success. North Korea's nuclear weapons program remains a key concern despite diplomatic efforts.
 
 **Iran** has faced accusations of failing to declare uranium enrichment and other nuclear activities, despite remaining a signatory to the NPT. Iran argues it needs enrichment capability for civilian energy and research reactors, but has faced suspicions it may be pursuing nuclear weapons. The International Atomic Energy Agency (IAEA) has identified potential military dimensions to Iran's program. Ongoing negotiations have aimed to limit enrichment and impose verification measures in exchange for sanctions relief, but a comprehensive resolution remains elusive. Iran's nuclear program is seen as a potential proliferation threat.
-
----
 
 
 ---

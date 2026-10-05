@@ -1,8 +1,7 @@
 ---
 title: History Of Diplomacy
 slug: history-diplomacy
-abstract: A review of the history of diplomacy highlights
-simple_summary: "Diplomacy is basically the art of talking things out instead of fighting. Think of diplomats as the 'peacemakers' or 'messengers' who travel to other schools (countries) to make friends, trade things, and say 'please' and 'thank you'."
+simple_summary: "Diplomacy was not invented in European palaces; it stretches from the cuneiform Amarna Letters of 14th-century BCE pharaohs to Greek *proxenoi* enjoying the first recorded diplomatic immunity. The true revolution occurred in 15th-century Renaissance Italy, where rival city-states replaced temporary messengers with permanent resident embassies. Codified globally in the 1961 Vienna Convention, diplomacy evolved into an institutional shield that allows rival nations to talk even during the bitterest disputes."
 ---
 
 **Diplomacy** has played an instrumental role throughout history in facilitating communication and relations between distinct groups, entities, and nations. At its core, diplomacy entails the management of relationships and affairs between different international actors. It involves the use of dialogue, negotiation, compromise, and other non-violent means to resolve disputes, while advancing a country's interests.

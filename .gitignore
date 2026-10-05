@@ -35,4 +35,11 @@ __pycache__/
 .venv/
 
 # Obsidian local cache/workspace
-.obsidian/workspace*
+.obsidian/workspace*
+
+# Video rendering & large model artifacts
+simulation/
+*.mp4
+*.onnx
+*.bin
+
