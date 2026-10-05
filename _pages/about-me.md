@@ -41,7 +41,7 @@ permalink: /about-me.html
       Unlike passive reading websites, IR Study Companion employs an active-learning architecture:
     </p>
     <ol>
-      <li><strong>Focus-Mode Reading:</strong> Standardized typography capped at 70 characters per line, variable Inter typography, and calculated reading times to maximize comprehension.</li>
+      <li><strong>Focus-Mode Reading:</strong> A clean, distraction-free reading experience with chapter outlines and estimated reading times to maximize focus and retention.</li>
       <li><strong>Knowledge Checkpoints:</strong> Formative multiple-choice questions at the end of each lesson provide immediate scholarly rationale and direct links back to cited passages.</li>
       <li><strong>Summative Module Examinations:</strong> 18 rigorous 10-question exams (180 questions total) requiring a 70% mastery threshold to earn academic certification credit.</li>
       <li><strong>Interactive Diplomatic Labs:</strong> 10 bespoke simulation engines built in vanilla ES6—including the Cuban Missile Crisis, UN Security Council P5 Veto, UNCLOS Maritime Zoning, and ASEAN South China Sea negotiations.</li>
