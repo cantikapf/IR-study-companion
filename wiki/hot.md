@@ -13,7 +13,7 @@ tags:
 
 ## Last Updated
 
-2026-10-05 - Audit Keterbacaan Bahasa Repositori & Peluncuran "Global Plain-Language Terminology Engine" (161 Istilah Terkurasi, Berlaku ke 100% Halaman Materi): Audit kuantitatif Flesch-Kincaid mengungkap tingkat kesulitan bahasa akademik setara pascasarjana (FRE 22.8, FKGL Grade 14.6, 27% polisilabel). Diatasi secara menyeluruh melalui mesin catatan istilah dwibahasa otomatis (Indonesia/Inggris), popover tooltip interaktif ramah pemula, digest box "📖 Catatan Istilah Kunci dalam Bab Ini" di seluruh 180 halaman materi, pembaruan master glosarium 161 konsep dengan pencarian dwibahasa, 369/369 pytest lulus, dan build Jekyll sukses tanpa eror.
+2026-10-05 - Production Push to GitHub Selesai (Commit 57cb2e4): Seluruh pembaruan Milestone M7, 10 Simulation Labs, audit anti-halusinasi 5 klaster, personalisasi 161 ringkasan bab, dan Global Plain-Language Terminology Engine (161 istilah) telah berhasil di-stage, di-commit, dan di-push ke origin/master (https://github.com/cantikapf/IR-study-companion.git). Repositori lokal bersih (working tree clean) dan sinkron 100%. Lolos 369/369 pytest dan build Jekyll produksi bersih.
 
 ## Key Recent Facts
 
