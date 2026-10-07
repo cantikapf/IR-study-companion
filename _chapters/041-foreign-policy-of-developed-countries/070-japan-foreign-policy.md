@@ -97,9 +97,6 @@ During the Kan Naoto administration, the EAC initiative faced further challenges
 
 In summary, the EAC initiative faced challenges during the Kan Naoto administration, which ultimately led to its end. The initiative faced opposition from some members of the Japanese government, concerns about the potential impact on existing alliances and security arrangements, and the lack of a clear roadmap for implementation. Additionally, the global financial crisis and the Fukushima nuclear disaster diverted attention and resources away from the initiative, and there were concerns about its potential impact on Japan's existing alliances and partnerships.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Kantei" def1="Japanese Prime Minister's office and closest entourage" term2="MOFA" def2="Ministry of Foreign Affairs, Japan's foreign policy department" term3="Yasukuni Shrine" def3="Shinto shrine in Japan honoring war dead, controversy surrounds visits" term4="East Asian Community" def4="Proposed regional community for Japan, China, and South Korea" %}
 
 ### Knowledge Check

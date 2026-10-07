@@ -114,10 +114,6 @@ By the 1980s, the success of export-led growth in East Asia along with stagnatio
 
 Looking forward, developing nations need balanced, context-specific strategies that empower citizens, regulate markets, and build capable institutions. The terrain has shifted from a focus on national economic growth to reducing spatial and socioeconomic disparities. With global integration, nations must also consider cross-border impacts and coordinate on providing international public goods. By learning from past extremes, integrating local and global perspectives, and leveraging the strengths of states, markets and civil society - developing countries can forge inclusive, sustainable growth trajectories.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Growth Ideology" def1="Rapid industrialization and economic growth led by a strong state" term2="Market Failure" def2="Situation where market forces fail to allocate resources efficiently" term3="Human Capital" def3="Education and skills driving inclusive growth and productivity" term4="Washington Consensus" def4="Set of market-oriented policies adopted by developing countries" %}
 
 ### Knowledge Check

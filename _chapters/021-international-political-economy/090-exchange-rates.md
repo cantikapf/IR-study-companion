@@ -95,10 +95,6 @@ Key points in summary:
 
 In conclusion, the society-centered approach emphasizes that exchange rate policies reflect a complex political process rather than just intentional state interventions. This perspective enriches our understanding of the dynamics shaping monetary and exchange rate policy outcomes.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Monetary Policy" def1="Central bank actions to control interest rates and money supply" term2="Exchange Rate Policy" def2="Government management of currency value relative to other currencies" term3="Society-Centered Approach" def3="Emphasizes interplay between interest groups and political institutions" term4="Partisan Model" def4="Highlights influence of political parties and ideologies on monetary policy" %}
 
 ### Knowledge Check

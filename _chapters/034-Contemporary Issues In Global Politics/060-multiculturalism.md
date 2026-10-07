@@ -132,8 +132,6 @@ Critics argue differentialism can promote divisions between cultural groups and 
 
 Debates continue over whether multiculturalism should promote fixed group identities or embrace hybridity and cultural flux. Both differentialist and hybridist positions have shortcomings. The differentialist view risks cultural rigidity and intergroup tensions. The hybridist stance threatens loss of community belonging and cultural dissolution. In practice, multicultural societies likely require a balance between respect for traditional identity and openness to organic cultural evolution.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Clash of Civilizations" def1="Theory that conflicts occur along cultural fault lines between civilizations" term2="Multiculturalism" def2="Platform promoting equal appearance of all cultural groups in public and private institutions" term3="Cultural Relativism" def3="Treating all cultural values as equally valid and not ranked or judged" term4="Differentialism" def4="View of identity as fixed and unchanging with clear cultural boundaries" %}
 
 ### Knowledge Check

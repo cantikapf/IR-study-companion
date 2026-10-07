@@ -109,9 +109,6 @@ Key discussions centered around the possibility of a New World Order marked by i
 
 In this context, defining security beyond inter-state conflict and examining the legitimacy and accountability of global institutions proved critical. While the post-Cold War order initially enabled multilateral cooperation, contemporary geopolitical frictions demonstrate that history did not end; rather, ideological, civilizational, and material rivalries continue to reconfigure 21st-century global governance.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Fukuyama's 'End of History'" def1="Thesis: liberal democracy is humanity's final ideological stage, leading to global peace." term2="Huntington's 'Clash of Civilizations'" def2="Theory predicting post-Cold War conflicts along cultural and religious fault lines between civilizations." term3="New World Order" def3="President Bush Sr.'s vision for post-Cold War international cooperation and promotion of democratic values." term4="Multipolar System" def4="International order where power is distributed among several major global powers, replacing bipolarity." %}
 
 ### Knowledge Check

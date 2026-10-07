@@ -126,9 +126,6 @@ The simultaneous rise of China and resurgence of Russia challenge the core premi
 
 These dual challenges signify that global politics has moved decisively beyond uncontested Western hegemony, requiring rigorous diplomatic statecraft to manage great-power competition without systemic military confrontation.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Unipolar World" def1="A world dominated by a single superpower" term2="State-Led Capitalism" def2="Economic system where state directs economic development" term3="Soft Power" def3="Influence through attraction and persuasion, not coercion" term4="Geopolitical Influence" def4="A country's ability to affect other countries' policies and decisions" %}
 
 ### Knowledge Check

@@ -52,9 +52,6 @@ Schimmelfennig demonstrated that NATO's expansion was driven by **rhetorical act
 
 Thus, international socialization and the politics of legitimacy—rather than material utility alone—explain why NATO expanded into post-communist Europe.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Constructivism" def1="Theory that international relations are socially constructed" term2="Socially Constructed Reality" def2="Reality shaped by social interaction and interpretation" term3="Mutual Constitution" def3="Structures and agents influence each other" term4="International Socialization" def4="Countries adopt community values and norms" %}
 
 ### Knowledge Check

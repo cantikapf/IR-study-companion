@@ -104,10 +104,6 @@ However, the IMF faces criticism that its neoliberal and interventionist approac
 
 Looking forward, the IMF must continue adapting to fulfill its purpose of ensuring international financial stability during crises, while balancing country ownership and mitigating side effects of its policies. Its governance structure may need reforms to reflect the multifaceted needs of developing economies. But the joint commitment of member states will be crucial in enabling the IMF to equitably meet financing needs during global shocks like the pandemic.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="IMF" def1="International Monetary Fund, promotes global economic cooperation" term2="Balance of Payments" def2="A country's total international transactions" term3="Conditionality" def3="IMF loan conditions requiring policy adjustments" term4="Quota System" def4="IMF system determining member state financial commitment" %}
 
 ### Knowledge Check

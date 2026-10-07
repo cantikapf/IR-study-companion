@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-07 - Milestone M9: Simulation Divider & Redundant "Interactive Learning" Elimination Across 145 Chapters:
+Merespons temuan pengguna mengenai adanya garis pembatas (`<hr>`) dan teks "Interactive Learning" di Bab 2 yang tidak memiliki simulasi:
+1. `Root Cause Diagnosis`: Skrip ekstraksi fitur masa lalu (`generate_features.py`) menyuntikkan template markdown `\n---\n### Interactive Learning\n{% include flashcards.html ... %}` ke akhir naskah bab materi. Sintaks `---` merender pembatas `<hr>`, sementara heading `### Interactive Learning` terindeks ke Table of Contents bab dan bertengger tepat di atas komponen flashcard (`Active Recall Cards`). Di bab-bab tanpa simulasi, pembatas dan judul ini membingungkan karena mengindikasikan seolah-olah ada simulasi yang hilang/rusak.
+2. `Deterministic Site-Wide Elimination`: Mengeliminasi `---` dan `### Interactive Learning` di seluruh 145 bab kurikulum yang tidak memiliki simulasi (`sim_`). Alur bab kini mengalir bersih dari teks naskah langsung ke kartu konsep Active Recall, lalu kuis Knowledge Check.
+3. `Preservation of 10 Diplomatic Labs`: Mempertahankan secara utuh pembatas dan markup pada 10 bab yang memang memiliki laboratorium simulasi diplomasi interaktif (`sim_balance_of_power.html`, `sim_security_dilemma.html`, `sim_unclos_zones.html`, dll.).
+4. `Comprehensive Verification`: 369/369 pengujian unit pytest lolos 100%. Kompilasi Jekyll build (`bundle exec jekyll build`) sukses bersih dalam 69.4 detik. Audit berkas build `_site/` mengonfirmasi bahwa id `interactive-learning` kini hanya ada di 10 bab simulasi dan 0 di 151 bab lainnya.
+
 2026-10-07 - Milestone M9: Site-Wide Concept Tooltip & Wikipedia Popover Universal Rollout:
 Merespons pertanyaan pengguna mengenai popup keyword yang sebelumnya hanya muncul di Chapter 1 dan mengaudit seluruh halaman web:
 1. `Root Cause Diagnosis & Elimination`: Mengidentifikasi bahwa inisialisasi Tippy.js di `_includes/footer.html` masih menargetkan selector GitBook usang `.markdown-section strong, .markdown-section b, mark.nice-mark`. Karena layout Bespoke LMS menggunakan `.course-prose-body`, dan tag `mark.nice-mark` hanya ada secara manual di Bab 1 (`010-ir-study.md`), tooltip sebelumnya tidak terpicu di 160 bab lainnya.

@@ -115,10 +115,6 @@ As long as the international system remains anarchic and states prioritize survi
 
 <center> <img src="{{site.baseurl}}/static/modules/keypoints_realism_2.png" alt="Keypoints" width="90%" /> </center>
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Realism (IR)" def1="IR theory emphasizing states, survival, and self-help in an anarchic system, driven by power." term2="Anarchic System" def2="Absence of a central authority above sovereign states in international relations, fostering self-help." term3="Statism" def3="Core realist tenet: states are primary actors, pursuing national interests and maximizing power." term4="Self-help" def4="States' reliance on their own capabilities for security and survival due to international anarchy." %}
 
 ### Knowledge Check

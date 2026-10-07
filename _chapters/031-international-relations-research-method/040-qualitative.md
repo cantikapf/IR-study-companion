@@ -154,10 +154,6 @@ To enhance validity and reduce bias in qualitative research, researchers can uti
 - Carefully examine unusual results or contradictions for potential explanations. Thoroughly analyzing outliers may reveal meaningful insights rather than mere anomalies.
 - Use a variety of data sources to corroborate and confirm findings through triangulation. Comparing data from multiple collection methods highlights inconsistencies and minimizes the impact of biases.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Qualitative Research" def1="Method relying on verbal descriptions of a social context" term2="Inductive Analysis" def2="Approach to identify themes and patterns from data" term3="Holistic Approach" def3="Understanding the whole picture, including processes and relationships" term4="Thick Descriptions" def4="Detailed verbal descriptions of a social context" %}
 
 ### Knowledge Check

@@ -115,9 +115,6 @@ Despite aspirations for rapid industrialization and agricultural collectivizatio
 
 The events that transpired between the 1920s and 1970s profoundly shaped China's national identity and developmental trajectory. This period marked the birth of Communist China while demonstrating the devastating human and economic costs of ideological campaigns divorced from institutional pragmatism. Following Mao's death in 1976, Deng Xiaoping redirected the PRC toward state-led capitalism and global trade integration, laying the structural groundwork for China's 21st-century rise as a peer competitor to the United States.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Chinese Civil War" def1="Conflict (1920s-1949) between Nationalists (KMT) and Communists (CCP), resulting in Communist victory." term2="People's Republic of China (PRC)" def2="Communist state founded October 1, 1949, by Mao Zedong after their victory in the Civil War." term3="Great Leap Forward" def3="Mao's 1958-1961 economic campaign for rapid industrialization and collectivization, causing widespread famine." term4="Cultural Revolution" def4="Mao's 1966-1976 movement to renew communist ideology, leading to social chaos and violence." %}
 
 ### Knowledge Check

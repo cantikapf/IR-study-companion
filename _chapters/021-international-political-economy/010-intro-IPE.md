@@ -150,10 +150,6 @@ Globalization enabled by international business provides competitive advantages 
 
 For individuals, working for multinationals or starting international ventures provides diverse experiences, expands perspectives, and creates unique career opportunities. The confidence gained from bridging different cultures helps develop cosmopolitan worldviews. But connecting people globally also enables rapid spread of harmful or unethical business practices across borders. Overall, international business integrates the world economically but raises important societal questions around shared responsibilities.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="International Political Economy (IPE)" def1="Multidisciplinary field studying interactions between politics and economics globally" term2="Globalization" def2="Increasing interconnectedness of the world's economies and societies" term3="Economic Liberalism" def3="Perspective advocating free market capitalism with minimal government intervention" term4="Multinational Corporations" def4="Companies operating business activities in multiple countries" %}
 
 ### Knowledge Check

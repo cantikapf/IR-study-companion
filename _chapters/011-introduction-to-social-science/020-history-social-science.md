@@ -28,9 +28,6 @@ In contemporary international relations, the subfield of historical sociology (e
 
 By analyzing how fiscal extraction, military competition, and domestic revolutions co-evolved over half a millennium, historical social science equips analysts with the critical tools necessary to deconstruct contemporary global crises, evaluate the rise and decline of great powers, and assess the enduring legacy of imperialism.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Historical Sociology" def1="Examines how social structures, states, and global systems evolve through deep historical processes." term2="Longue Durée (Braudel)" def2="Historical approach focusing on long-term, slow-moving structural and geographical patterns." term3="E.H. Carr's Dialectic" def3="History as an unending dialogue between the present and the past, mediated by theory." term4="Idiographic vs Nomothetic" def4="Contrasting unique, specific event narratives against generalizable, recurring structural patterns." %}
 
 ### Knowledge Check

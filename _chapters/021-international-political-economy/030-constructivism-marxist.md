@@ -115,10 +115,6 @@ In summary, constructivism grants causal power to immaterial factors like ideas,
 
 Source: Oatley, T. H. (2012). _International political economy_ (5th ed). Longman. 
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Constructivism" def1="Theory emphasizing ideas, values, norms in shaping international relations" term2="Marxism" def2="Theory critiquing capitalism, highlighting class conflict and exploitation" term3="Social Construct" def3="Concept or reality created through social interaction and interpretation" term4="Surplus Value" def4="Value created by workers beyond their subsistence wages, kept by capitalists as profit" %}
 
 ### Knowledge Check

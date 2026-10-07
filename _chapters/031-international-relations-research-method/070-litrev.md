@@ -170,15 +170,6 @@ When conducting a literature review, there are some key best practices to keep i
 - Evaluate not just abstracts but full studies to determine relevance and quality.
 - Organize sources and notes systematically from the start. Tracking key information will save time later.
 
-
-
-
-
-
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Scholarly Literature" def1="Research published by experts in academic journals and books." term2="Peer Review" def2="Process verifying validity and importance of research before publication." term3="Literature Review" def3="Review of prior scholarly work to refine research questions and context." term4="Theoretical Framework" def4="Key theories and concepts informing research in a topic area." %}
 
 ### Knowledge Check

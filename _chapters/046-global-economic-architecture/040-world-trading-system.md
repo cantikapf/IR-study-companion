@@ -187,10 +187,6 @@ The political economy of trade examines how political pressures and institutions
 
 In summary, the political economy of trade examines how political factors like lobbying, public opinion, and democratic institutions shape trade policy and outcomes. It provides insights into trends like protectionism and fluctuations in support for liberalization.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Comparative Advantage" def1="Ability to produce goods at lower opportunity cost" term2="Protectionism" def2="Policies shielding domestic industries from foreign competition" term3="Free Trade" def3="Unrestricted international trade with no barriers or intervention" term4="Trade Liberalization" def4="Policies reducing barriers to trade and increasing market openness" %}
 
 ### Knowledge Check

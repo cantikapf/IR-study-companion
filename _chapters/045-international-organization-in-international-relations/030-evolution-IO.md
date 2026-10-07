@@ -109,10 +109,6 @@ Neorealists further contend that international organizations have little indepen
 
 In summary, realist and neorealist scholars in the 1970s emphasized state centrality and minimized the independent role of international organizations in global politics. This differed from more liberal institutional perspectives emerging in the 1980s.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="League of Nations" def1="Intl org established in 1919 to maintain peace" term2="International Labor Organization (ILO)" def2="UN agency for labor rights and standards" term3="Concert of Europe" def3="19th-century diplomacy framework" term4="Neofunctionalism" def4="Theory of regional integration" %}
 
 ### Knowledge Check

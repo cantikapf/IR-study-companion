@@ -189,9 +189,6 @@ Social interactions and actions are also units of analysis. Examples are friends
 ### Characteristics
 Attributes that can be measured are key focal points. Demographics like age, gender, income, education are commonly studied. Psychological traits like attitudes, personalities, prejudices, and beliefs are also analyzed.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Exploratory Research" def1="Research to generate new ideas and hypotheses" term2="Descriptive Research" def2="Research to describe social characteristics and trends" term3="Explanatory Research" def3="Research to analyze and test theories about causal mechanisms" term4="Evaluative Research" def4="Research to assess the effects of a policy or intervention" %}
 
 ### Knowledge Check

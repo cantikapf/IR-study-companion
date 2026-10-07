@@ -116,9 +116,6 @@ In Europe, the United States enacted the European Recovery Program (the **Marsha
 
 In Asia, under the Supreme Commander for the Allied Powers (SCAP, General Douglas MacArthur), Japan enacted land reforms, adopted the pacifist Article 9 "Peace Constitution" in 1947, and shifted from demilitarization to rapid industrial modernization (the "Reverse Course"). Spurred by US procurement contracts during the Korean War (1950–1953), Japan embarked on export-oriented manufacturing that laid the groundwork for its postwar economic miracle.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="VE Day" def1="May 8, 1945: Nazi Germany surrendered, marking the end of World War II in Europe." term2="VJ Day" def2="September 2, 1945: Japan formally surrendered, marking the global end of World War II." term3="Manhattan Project" def3="Secret WWII project by US, UK, Canada to develop the first atomic bombs." term4="United Nations (UN)" def4="Established Oct 24, 1945, to maintain international peace and security post-WWII." %}
 
 ### Knowledge Check

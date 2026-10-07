@@ -172,10 +172,6 @@ Key points:
 - Non-state actors like NGOs and corporations are playing more influential roles in environmental governance and must be engaged.
 - Ongoing international cooperation and strengthened global governance are essential to address our shared environmental challenges. We must work together across borders to protect the planetary systems on which our collective future depends.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Precautionary Principle" def1="Taking measures to prevent harm even if cause and effect is not fully established" term2="Environmental Treaties" def2="Legally binding international agreements to address ecological problems" term3="Polluter Pays Principle" def3="Polluters are responsible for environmental damage and mitigation costs" term4="Integration Principle" def4="Incorporating environmental considerations into economic and other policies" %}
 
 ### Knowledge Check

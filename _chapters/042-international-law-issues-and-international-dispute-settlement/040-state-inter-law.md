@@ -136,10 +136,6 @@ Secession is a complex issue in international law. To summarize the key points:
 - State responsibility principles establish that states are obligated to cease unlawful acts and provide reparations for injuries caused by such acts. This applies to acts related to secession and independence struggles.
 - Overall, secession remains a controversial and complex matter in international law, with many competing principles and perspectives involved.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Secession" def1="Separation of part of a state's territory to form a new state" term2="Self-Determination" def2="Right to internal self-determination; meaningful participation within a state" term3="State Responsibility" def3="Obligations of states and consequences for breaching international law" term4="Diplomatic Protection" def4="Link between individuals and states regarding rights and duties abroad" %}
 
 ### Knowledge Check

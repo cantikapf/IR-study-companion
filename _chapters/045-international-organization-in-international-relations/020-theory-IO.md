@@ -117,10 +117,6 @@ Some elements inherent in the structure of international organizations give cert
 
 International organizations derive power through other means as well, like their moral authority to shame countries into action, or their privileged access to important information. Overall, IOs have significant leverage over states, though ultimately major powers still dominate decision-making.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Realist Perspective" def1="IOs seen as tools of powerful states, no impact on sovereignty" term2="Neofunctionalism" def2="Regional integration through cooperation, leading to spillover effects" term3="Sovereignty" def3="State's authority within borders and in international relations" term4="International Organization (IO)" def4="Intergovernmental organization with formal structure and decision-making processes" %}
 
 ### Knowledge Check

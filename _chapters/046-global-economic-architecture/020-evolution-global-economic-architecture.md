@@ -160,10 +160,6 @@ This points to a likely future of a more decentralized global economic architect
 
 Overall, the global economic architecture is transitioning to a more multi-polar, decentralized system. While challenges remain, this provides opportunities for emerging economies to gain influence. With continued cooperation and reform, the system can be strengthened to promote stability and equitable growth.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Bretton Woods" def1="1944 conference establishing IMF, World Bank, and GATT" term2="G20" def2="Forum for international economic cooperation among 19 countries and EU" term3="Decentralized global economic architecture" def3="System with national, regional, and global institutions cooperating closely" term4="Regional financial safety nets" def4="Arrangements like CMIM providing liquidity support to countries" %}
 
 ### Knowledge Check

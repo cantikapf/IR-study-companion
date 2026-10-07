@@ -93,9 +93,6 @@ Anderson argued that nations are:
 
 Conflating the state (the administrative monopoly of force) with the nation (the imagined collective identity) creates analytical confusion. While **nation-states** exist where borders of political authority correspond neatly with national identity (e.g., post-war Japan), modern world politics is dominated by **multinational states** (e.g., the United Kingdom, Canada, Indonesia) and **stateless nations** (e.g., the Kurds, Palestinians), generating systemic domestic and regional geopolitical contestation.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="The State" def1="Represents the institutions and structures that enable governance over a population within a defined geographic area." term2="Sovereignty" def2="Supreme authority within borders, without answering to any higher external authority." term3="The Government" def3="The concrete, temporary organizational structures and mechanisms put in place to exercise state authority." term4="The Nation" def4="A large group of people linked by common elements like language, ethnicity, culture, religion, or history." %}
 
 ### Knowledge Check

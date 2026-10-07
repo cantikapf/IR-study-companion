@@ -117,9 +117,6 @@ The Renaissance era was characterized by profound transformations that impacted 
 
 The Renaissance era proved foundational for Europe's transition to the Early Modern period. By reinvigorating classical philosophy, empirical inquiry, and commercial expansion, while catalyzing religious pluralism and state centralization, the Renaissance laid the intellectual and institutional foundations for the Scientific Revolution, maritime expansion, and the Westphalian sovereign state system.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Renaissance" def1="Cultural rebirth and intellectual advancement (1330-1530), bridging the Middle Ages and early modern period." term2="Renaissance Humanism" def2="Intellectual movement emphasizing classical studies, civic virtue, and individual dignity over scholasticism." term3="Merchant Capitalism" def3="Economic system driven by merchants and bankers, accumulating wealth through trade; declined feudalism." term4="Protestant Reformation" def4="Religious movement challenging Catholic Church authority, sparked by abuses like indulgences, establishing Protestantism." %}
 
 ### Knowledge Check

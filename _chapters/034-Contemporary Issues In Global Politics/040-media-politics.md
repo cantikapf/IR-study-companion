@@ -86,10 +86,6 @@ For example, protests emerged in the Arab Spring because of deep political and e
 
 In summary, the political context shapes how social media gets used. Technology alone does not ignite activism where none previously existed. It interacts with established political divides, organizations, and protest capacities to accelerate ongoing mobilization.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Cyber-enthusiasts" def1="Supporters of social media's role in protests" term2="Cyber-skeptics" def2="Critics of social media's impact on protests" term3="Contextualism" def3="The role of social media depends on local context" term4="Twitter Revolution" def4="2009 Iranian protests using social media" %}
 
 ### Knowledge Check

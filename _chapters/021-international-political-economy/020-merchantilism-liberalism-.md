@@ -120,11 +120,6 @@ Liberalism prioritizes individual freedom and welfare in economic decision makin
 
 Source: Oatley, T. H. (2012). _International political economy_ (5th ed). Longman. 
 
-
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Mercantilism" def1="School of thought linking economic activity and state power" term2="Liberalism" def2="Economic theory advocating free markets and individual welfare" term3="Comparative Advantage" def3="Theory that countries benefit from trade based on relative efficiency" term4="Zero-Sum Game" def4="Game where one side's gain equals another side's loss" %}
 
 ### Knowledge Check

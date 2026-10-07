@@ -63,8 +63,6 @@ Overall, the post-Cold War era necessitated an evolution in thinking from nation
 
 **Post-structuralist** views challenge dominant security discourses that privilege the nation-state and military responses. Changing the discourse around security may fundamentally alter international politics. Post-structuralists contend that security should focus on emancipating individuals rather than empowering states. This involves critically examining the language and social structures that contribute to conflict and instability. Post-structuralism opens space for diverse voices and perspectives largely marginalized in traditional security studies. It encourages questioning underlying assumptions and power dynamics inherent in mainstream security paradigms.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="National Security" def1="State-centric defense prioritizing survival against external and internal military threats" term2="Global Security" def2="Cooperative frameworks addressing planetary threats to the global commons" term3="Human Security" def3="People-centered approach prioritizing individual freedom from fear and freedom from want" term4="Realism" def4="Theoretical paradigm emphasizing state survival, self-help, and military power" %}
 
 ### Knowledge Check

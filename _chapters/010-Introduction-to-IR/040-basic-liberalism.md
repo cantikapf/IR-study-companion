@@ -112,10 +112,6 @@ In contrast, neo-realists contend that international cooperation is inherently d
 
 In the neo-neo debate, neo-liberalists express greater faith in international institutions, norms, and regimes to promote cooperation between rational state actors. Neo-realists remain more skeptical, arguing that power dynamics between states are the primary determinants of cooperation. Ultimately, both theories provide valuable insights into the possibilities and limits of cooperation in global politics.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Liberalism (IR)" def1="Emphasizes cooperation, institutions, democracy, and interdependence as paths to international peace." term2="Democratic Peace Theory" def2="States that democratic nations are less likely to engage in war with each other." term3="Collective Security" def3="A system where states jointly deter aggression, agreeing to collectively respond to attacks." term4="Neo-Neo Debate" def4="Scholarly discussion between neo-realists and neo-liberalists on international cooperation's feasibility." %}
 
 ### Knowledge Check

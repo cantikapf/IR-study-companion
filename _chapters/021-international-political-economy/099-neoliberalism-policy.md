@@ -110,10 +110,6 @@ As the 20th century came to a close, neoliberal capitalism had established itsel
 
 In the 21st century, neoliberal globalization appears deeply entrenched but not free of discontents. While it has created opportunities for growth and development, critics argue it has also exacerbated inequality within and between nations. The neoliberal model's resilience has been tested by major crises like the Great Recession of 2008. Nevertheless, neoliberalism remains the prevailing global economic ideology, shaping policymaking worldwide. Its foundational principles and policy prescriptions continue to underpin the modern structure of global capitalism.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Neoliberalism" def1="Economic ideology emphasizing free markets and limited government intervention" term2="Free Markets" def2="Markets operating freely with minimal government regulation and oversight" term3="Property Rights" def3="Legal protections ensuring ownership and control of assets and resources" term4="Deregulation" def4="Removal of government rules and regulations to promote market freedom" %}
 
 ### Knowledge Check

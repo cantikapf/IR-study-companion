@@ -61,10 +61,6 @@ The third pillar is taking part in **international organizations (IO)**. Groups 
 
 When these three forces work together, they make beneficial **feedback loops**. Trade and international organizations work better when there is more democracy. This makes democratic systems stronger. Growing global markets are a reason to make international institutions stronger. When institutions set shared rules and norms, democracies feel safe growing their economic and political ties. All of these factors work together to make the world a more peaceful place.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Liberalism" def1="International Relations theory emphasizing rational individuals and progress" term2="Kantian Triangle" def2="Interdependent system of democracy, trade, and international organizations" term3="Democratic Peace" def3="Theory that democracies are less likely to go to war with each other" term4="Economic Interdependence" def4="Mutual economic reliance making war costly and less likely" %}
 
 ### Knowledge Check

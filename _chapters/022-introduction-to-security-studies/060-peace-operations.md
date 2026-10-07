@@ -65,8 +65,6 @@ The Responsibility to Protect (R2P), formulated by the International Commission 
 
 R2P has been applied in various crises, including Darfur in 2006, Libya in 2011, Côte d’Ivoire in 2011, South Sudan in 2011, Yemen in 2011, Syria in 2012, and the Central African Republic in 2013, with corresponding UN resolutions and peacekeeping operations.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Genocide" def1="Acts to destroy a national, ethnic, racial, or religious group" term2="Peace Operations" def2="Conflict prevention, peacemaking, peacekeeping, peace enforcement, and peacebuilding" term3="Ethnic Conflict" def3="Clashes between contending ethnic groups" term4="Responsibility to Protect" def4="Global commitment to prevent genocide, war crimes, and ethnic cleansing" %}
 
 ### Knowledge Check

@@ -137,9 +137,6 @@ Japan's decision making style emphasizes collective responsibility, consensus, a
 
 Cultural values clearly influence how leaders in different societies approach important decisions. Understanding these differences allows for more effective cross-cultural relations and international collaboration. Flexibility to bridge the cultural divides can lead to better informed choices.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Cognitive Consistency" def1="Reliance on information consistent with pre-existing images and beliefs" term2="Evoked Set" def2="Pre-existing set of information influencing decision-makers' initial thoughts" term3="Leadership Style" def3="Leaders' approach to decision-making and interaction with constraints" term4="Belief Systems" def4="Influential frameworks shaping leaders' foreign policy preferences" %}
 
 ### Knowledge Check

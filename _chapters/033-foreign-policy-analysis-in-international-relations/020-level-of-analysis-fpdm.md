@@ -54,9 +54,6 @@ The American intervention and escalation in Vietnam provides a classic empirical
 
 Analyzing foreign policy through Waltz's and Singer's multi-level architecture clarifies that state conduct is rarely explained by a single variable; rather, strategic choices reflect the interaction between structural pressures from above, institutional constraints from below, and cognitive processing at the core.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="First Image (Individual Level)" def1="Analyzes cognitive schemas, operational codes, and psychological biases of decision-makers (Waltz 1959, Jervis 1976)" term2="Second Image (State Level)" def2="Examines domestic institutions, bureaucratic politics, and regime type constraints (Allison 1971, Doyle 1983)" term3="Third Image (Systemic Level)" def3="Focuses on structural anarchy, polarity, and distribution of material capabilities (Waltz 1979)" term4="Operational Code" def4="A leader's core philosophical and instrumental beliefs regarding political conflict and strategic action (George 1969)" %}
 
 ### Knowledge Check

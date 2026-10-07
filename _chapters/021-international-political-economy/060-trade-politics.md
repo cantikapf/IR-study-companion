@@ -103,10 +103,6 @@ Politicians, in turn, respond to the demands of these competing groups in an eff
 
 Through lobbying, campaign contributions, and grassroots advocacy, interest groups leverage their political power to meet their goals. They galvanize member participation, cultivate relationships with sympathetic legislators, and seek direct meetings with key officials to make their voices heard. Groups threatened by liberalization often defend the status quo by emphasizing trade's distributional consequences and the plight of affected industries. This complex interplay between societal interests and the political system drives the direction of trade policy in democracies.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Factor Model" def1="Trade politics driven by competition between factors of production" term2="Sector Model" def2="Trade divides society along industry lines due to factor immobility" term3="Trade Liberalization" def3="Efforts to lower barriers to trade and increase market freedom" term4="Distributional Consequences" def4="Uneven economic impacts of trade policy across society" %}
 
 ### Knowledge Check

@@ -147,10 +147,6 @@ Some key social factors that are associated with a high level of development inc
 
 Improving these social indicators helps create an environment that supports economic growth and improves quality of life. Therefore, investments in healthcare, education, poverty alleviation and social inclusion are important elements in the development process. This underscores the multidimensional nature of development that goes beyond just economic factors.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Developed Country" def1="A country with high economic growth, industrialization, and standard of living" term2="Foreign Policy Analysis" def2="Study of state conduct and sources of foreign policy decisions" term3="Globalization" def3="Increased economic and political interdependence among countries" term4="Industrialization" def4="Process of developing a country's manufacturing and service sectors" %}
 
 ### Knowledge Check

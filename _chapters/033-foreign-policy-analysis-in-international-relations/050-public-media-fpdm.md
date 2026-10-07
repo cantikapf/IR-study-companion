@@ -107,10 +107,6 @@ Key takeaways:
 
 In conclusion, the media and public opinion have a complex, two-way dynamic with governments and their foreign policy decisions. Neither fully controls the other, but both exert influence.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Political Communication Regime" def1="System and structure for political communication in a country or state" term2="Media Management" def2="Techniques used by governments to influence the media environment" term3="Political Economy of Media" def3="Ownership structures, funding models, and market forces influencing mass media" term4="Agenda-Setting" def4="Media's ability to influence public opinion by selecting and prioritizing issues" %}
 
 ### Knowledge Check

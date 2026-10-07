@@ -100,8 +100,6 @@ The global private security industry exhibits the characteristics of a transnati
 
 As private security continues to expand into spheres traditionally dominated by states, important normative and practical questions persist around regulating its export, prosecuting contractor crimes, and balancing public and private interests. The proliferation of PMSCs represent a shift in how violence and security are provided globally, with complex repercussions for international relations and governance.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Alliance" def1="Formal or informal security cooperation between sovereign states" term2="Collective Security" def2="Responding to unspecified aggressor in support of unknown victim" term3="Regional Security Structures" def3="Institutions for security cooperation among regional actors" term4="United Nations Security Role" def4="Maintaining international peace and security through Security Council" %}
 
 ### Knowledge Check

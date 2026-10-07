@@ -94,8 +94,6 @@ Feminist scholars emphasize the need to include women in security policymaking i
 
 The feminist critique has enriched understandings of security by revealing typically overlooked assumptions. It demonstrates how factors like gender norms and identities construct the meaning of security in global politics and society. Feminist approaches continue to provide vital alternative frameworks for rethinking security.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Constructivism" def1="Theoretical approach emphasizing social construction of international relations" term2="Intersubjectivity" def2="Shared understandings and meanings emerging through social interactions" term3="Securitization" def3="Process of turning an issue into a security threat requiring emergency action" term4="Critical Theory" def4="Philosophical critique of traditional international relations theory and security" %}
 
 ### Knowledge Check
