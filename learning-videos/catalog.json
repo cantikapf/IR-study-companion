@@ -1,0 +1,40 @@
+{
+  "$schema": "./catalog.schema.json",
+  "version": "1.0.0",
+  "project": "IR Study Companion (@IRinANutshell)",
+  "channel_url": "https://www.youtube.com/@IRinANutshell",
+  "naming_convention": {
+    "pattern": "IR_M{module:02d}_CH{chapter:03d}_{title}_{format}_{resolution}.mp4",
+    "example": "IR_M01_CH010_Foundations_of_International_Relations_MindMap_1080p.mp4"
+  },
+  "videos": [
+    {
+      "id": "IR-M01-CH010",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "010",
+      "chapter_slug": "010-ir-study",
+      "title": "Foundations of International Relations",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 316.69,
+      "frames": 9501,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Rendered",
+      "file_size_bytes": 41214410,
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH010_Foundations_of_International_Relations_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH010_Foundations_of_International_Relations_Poster.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "youtube_id": "Sa0PnnZLn0w",
+        "status": "Ready for Re-upload / Sync"
+      },
+      "last_updated": "2026-10-06"
+    }
+  ]
+}

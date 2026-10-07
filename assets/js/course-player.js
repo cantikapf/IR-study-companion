@@ -652,16 +652,16 @@
           <h4 class="ir-popover-title">${item.term}</h4>
           <span class="ir-popover-badge">${item.category}</span>
         </div>
-        ${item.plain_id ? `
+        ${(item.plain_en || item.plain_id) ? `
           <div class="ir-popover-plain-box">
-            <span class="ir-popover-plain-label"><i class="fa fa-lightbulb-o"></i> Maksud Sederhana</span>
-            <p class="ir-popover-plain-text">${item.plain_id}</p>
+            <span class="ir-popover-plain-label"><i class="fa fa-lightbulb-o"></i> In Simple Terms</span>
+            <p class="ir-popover-plain-text">${item.plain_en || item.plain_id}</p>
           </div>
         ` : ''}
-        <p class="ir-popover-academic-text"><strong>Definisi:</strong> ${item.definition}</p>
+        <p class="ir-popover-academic-text"><strong>Definition:</strong> ${item.definition}</p>
         <div class="ir-popover-footer">
           <span class="ir-popover-scholars" title="${item.scholars || ''}">${item.scholars || ''}</span>
-          <a href="${base}/glossary.html" class="ir-popover-link">Glosarium <i class="fa fa-arrow-right"></i></a>
+          <a href="${base}/glossary.html" class="ir-popover-link">Glossary <i class="fa fa-arrow-right"></i></a>
         </div>
       `;
 
@@ -732,23 +732,23 @@
                 <h4 class="lesson-term-card-name">${item.term}</h4>
                 <span class="lesson-term-card-category">${item.category}</span>
               </div>
-              ${item.plain_id ? `
+              ${(item.plain_en || item.plain_id) ? `
                 <div class="lesson-term-card-plain">
-                  <span class="lesson-term-card-plain-title"><i class="fa fa-lightbulb-o"></i> Maksud Sederhana:</span>
-                  <p class="lesson-term-card-plain-text">${item.plain_id}</p>
+                  <span class="lesson-term-card-plain-title"><i class="fa fa-lightbulb-o"></i> In Simple Terms:</span>
+                  <p class="lesson-term-card-plain-text">${item.plain_en || item.plain_id}</p>
                 </div>
               ` : ''}
-              <p class="lesson-term-card-academic"><strong>Definisi:</strong> ${item.definition}</p>
+              <p class="lesson-term-card-academic"><strong>Definition:</strong> ${item.definition}</p>
             </div>
             <div class="lesson-term-card-footer">
               <span class="lesson-term-card-scholars">${item.scholars || ''}</span>
-              <a href="${base}/glossary.html" class="lesson-term-card-link">Kamus Lengkap <i class="fa fa-arrow-right"></i></a>
+              <a href="${base}/glossary.html" class="lesson-term-card-link">Full Glossary <i class="fa fa-arrow-right"></i></a>
             </div>
           `;
           digestGrid.appendChild(card);
         });
 
-        if (countBadge) countBadge.textContent = matchedList.length + ' Istilah Kunci';
+        if (countBadge) countBadge.textContent = matchedList.length + ' Key Terms';
         digestSection.style.display = 'block';
       }
     }

@@ -21,6 +21,9 @@
 | 8 | Content & Reference Verification | Audit keaslian sitasi akademik via CrossRef & fact-check AI | M2 | IN PROGRESS |
 | 9 | Interactive Diplomatic Labs Expansion | 10 simulasi interaktif mandiri (zero external dependencies) | M6 | DONE |
 | 10 | Final Stage Online Course Transformation | Backup/Sync, Deep Search, 18-Module Exams (180 soal), Curated Glossary (122 konsep), Elaborate Certificate, Onboarding Tour | M7 | DONE |
+| 11 | IR Motion Graphics Library | Kurzgesagt-style Remotion component library (World Map, Timeline, Concept Diagram) + Pilot Chapter 010 dataset | M8 | DONE |
+| 12 | Mind Map Explanatory Video Engine | Produksi video kanonik 1080p Mind Map & Flowchart Remotion (@IRinANutshell, Kokoro TTS, Deep Zoom 2.05x, Stationary Hold, RoughJS) | M9 | DONE |
+| 13 | Learning Videos Vault & Registry | Direktori khusus learning-videos/ (exports, posters, catalog.json, README registry matrix) dengan standar penamaan deterministik | M9 | DONE |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
@@ -33,6 +36,10 @@
 | M5 | Bespoke Native LMS Engine | Eliminasi GitBook & implementasi Full LMS Player + Drawer | M4 | DONE |
 | M6 | Interactive Diplomatic Labs | 7 simulasi baru (total 10 labs) + homepage showcase update | M5 | DONE |
 | M7 | Online Course Transformation | 180-Soal Exam System, Backup/Restore JSON, 122-Term Glossary, Elaborate Certificate Generator, Onboarding Tour | M6 | DONE |
+| M8 | IR Motion Graphics Library | Arsitektur grafis gerak modular Kurzgesagt: AnimatedWorldMap, TimelineBar, ConceptDiagram, data JSON Module 010 | M7 | DONE |
+| M9 | Mind Map Explanatory Engine | Standarisasi alur kerja video kanonik Mind Map Explanatory (Decluttering spotlight dimming 0.35, warna semantik akademis, dual-font captioning, pre-reading gateway card, 34 node graf, Deep Zoom 2.05x, Stationary Hold, eliminasi ~3,35 GB berkas usang) | M8 | DONE |
+
+
 
 
 

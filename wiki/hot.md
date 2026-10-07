@@ -13,9 +13,95 @@ tags:
 
 ## Last Updated
 
-2026-10-05 - Production Push to GitHub Selesai (Commit 57cb2e4): Seluruh pembaruan Milestone M7, 10 Simulation Labs, audit anti-halusinasi 5 klaster, personalisasi 161 ringkasan bab, dan Global Plain-Language Terminology Engine (161 istilah) telah berhasil di-stage, di-commit, dan di-push ke origin/master (https://github.com/cantikapf/IR-study-companion.git). Repositori lokal bersih (working tree clean) dan sinkron 100%. Lolos 369/369 pytest dan build Jekyll produksi bersih.
+2026-10-07 - Milestone M9: Site-Wide Concept Tooltip & Wikipedia Popover Universal Rollout:
+Merespons pertanyaan pengguna mengenai popup keyword yang sebelumnya hanya muncul di Chapter 1 dan mengaudit seluruh halaman web:
+1. `Root Cause Diagnosis & Elimination`: Mengidentifikasi bahwa inisialisasi Tippy.js di `_includes/footer.html` masih menargetkan selector GitBook usang `.markdown-section strong, .markdown-section b, mark.nice-mark`. Karena layout Bespoke LMS menggunakan `.course-prose-body`, dan tag `mark.nice-mark` hanya ada secara manual di Bab 1 (`010-ir-study.md`), tooltip sebelumnya tidak terpicu di 160 bab lainnya.
+2. `Universal Chapter Rollout Across 161 Chapters`: Memperbarui selector ke `.course-prose-body strong, .course-prose-body b, .course-prose-body mark.nice-mark`, menambahkan filter pengecualian UI (kuis, flashcard, ujian modul, simulasi diplomasi, digest box, header/tabel), membatasi panjang teks <= 5 kata, dan menghindari tabrakan dengan `.ir-term-mention`.
+3. `Interactive Styling & Tippy Light/Dark Tokens`: Menambahkan kelas `.keyword-interactive` di `assets/css/course-player.css` dengan garis bawah bertitik halus, hover state aksen, elevated shadow card Tippy, spinner animasi `.loader-spinner`, serta token tema gelap (`body.dark-theme`).
+4. `Full English Microcopy & Production Verification`: Seluruh teks kartu popover Wikipedia dan AI fallback diselaraskan 100% ke bahasa Inggris akademik ("Searching Wikipedia...", "📚 Academic Concept"). Terverifikasi aktif di 186 dari 187 halaman HTML build Jekyll (`_site/`) dengan total 4.601 keyword bold interaktif. 369/369 pytest lolos 100%.
+
+2026-10-07 - Milestone M9: Comprehensive Platform English-Only Standardization:
+Merespons temuan pengguna mengenai bagian catatan istilah kunci dan popover yang masih berbahasa Indonesia:
+1. `In-Lesson Terminology Digest English Overhaul`: Mengubah template kartu istilah di `assets/js/course-player.js` dan `_layouts/chapter.html` agar menampilkan penjelasan bahasa Inggris (`item.plain_en`), label `"In Simple Terms:"`, `"Definition:"`, `"Full Glossary"`, dan badge count `"{N} Key Terms"`.
+2. `Floating Term Popover English Overhaul`: Memperbarui tooltip popover inline di `course-player.js` agar menggunakan `item.plain_en`, `"In Simple Terms"`, `"Definition:"`, dan tautan `"Glossary"`.
+3. `Curated Glossary (/glossary.html) English Standardization`: Menyelaraskan seluruh teks intro, placeholder pencarian, filter, dan kartu glosarium di `_pages/glossary.md` ke dalam bahasa Inggris akademik (`"In Simple Terms (Plain-Language Note)"`, `"Academic Definition"`).
+4. `Global Repository Scan & Verification`: Memindai seluruh 161 bab kurikulum, 18 ujian modul (180 soal), 10 simulasi diplomasi, dan seluruh komponen include/layout, memastikan 0 teks antarmuka berbahasa Indonesia yang tersisa di seluruh platform. 369 unit test pytest lolos 100%.
+
+2026-10-06 - Milestone M9: Learning Videos Vault Architecture & Deterministic Naming System:
+Merespons arahan pengguna untuk merender video penjelasan ke dalam folder khusus video pembelajaran dan merancang sistem penamaan yang rapi dan mudah dipantau:
+1. `Struktur Direktori learning-videos/`: Membentuk repositori video terpusat di root project dengan pemisahan subfolder: `learning-videos/exports/` (master berkas MP4 1080p), `learning-videos/posters/` (poster/thumbnail PNG), `learning-videos/catalog.json` (metadata katalog untuk integrasi LMS/web), dan `learning-videos/README.md` (dasbor inventarisasi dan status publikasi).
+2. `Standar Penamaan Deterministik`: Mengadopsi konvensi `IR_M{Module:02d}_CH{Chapter:03d}_{Title}_{Format}_{Resolution}.{ext}`, contoh konkret: `IR_M01_CH010_Foundations_of_International_Relations_MindMap_1080p.mp4`.
+3. `Isolasi Git & Jekyll Build Hygiene`: Menambahkan `learning-videos/exports/*.mp4` ke `.gitignore` untuk melindungi kuota komit GitHub (>100 MB hard limit) dan mendaftarkan `learning-videos` ke daftar `exclude:` di `_config.yml` agar tidak membebani kompilasi statis Jekyll.
+4. `Eksekusi Render FlowchartVideo`: Meluncurkan rendering 9.501 frame (5m 16s @ 30 FPS, 1920x1080) komposisi `FlowchartVideo` langsung ke target direktori ekspor.
+
+2026-10-06 - Milestone M9: Mind Map Explanatory English-Only Standardization & Pre-Reading Gateway:
+Merespons koreksi pengguna mengenai konsistensi bahasa di seluruh antarmuka web dan materi video:
+1. `Strict English-Only Mandate`: Seluruh teks antarmuka, badge, gateway card, dan microcopy web wajib 100% berbahasa Inggris akademik. Mengoreksi badge video menjadi *"🎬 WATCH BEFORE READING (5 MIN)"*, label status *"CONCEPTUAL GATEWAY"*, dan judul default *"Mind Map Explanatory: Core Conceptual Framework"*.
+2. `Decluttering via Dynamic Spotlight Dimming`: Kartu fokus aktif berdiri pada kecerahan 100% dengan bayangan fokus, sementara kartu sekitar yang sedang tidak dibahas diredupkan halus ke `opacity: 0.35` (mengeliminasi split-attention effect). Panah yang tidak aktif memudar ke `opacity: 0.20`. Pada panorama overview, seluruh 34 node kembali ke 100%.
+3. `Semantic Academic Color Hierarchy`: Menghapus warna pastel acak dan mengadopsi taksonomi teoretis HI yang ketat: Kuning (#FEFCBF - Hub/Pertanyaan Inti), Biru Langit (#BEE3F8 - Aktor Negara & Sistem), Soft Coral (#FED7D7 - Realisme, Anarki, Chokepoints), Mint Green (#C6F6D5 - Liberalisme, Institusi, Kerjasama), Soft Lavender (#E9D8FD - Konstruktivisme, Norma, Wendt), dan Paper White (#FFFFFF - Detail & Kasus).
+4. `Dual-Font Captioning Hygiene`: Pemisahan peran kognitif antara font tulisan tangan papan tulis *Patrick Hand* (diagram) dan sans-serif modern *Plus Jakarta Sans* (kapsul subtitle bawah dengan margin aman >280px).
+5. `Pre-Reading Explanatory Gateway Card`: Mengintegrasikan kartu video resmi di template master `_layouts/chapter.html` bertanda *"🎬 WATCH BEFORE READING (5 MIN)"* dengan dukungan responsive embed YouTube `@IRinANutshell` dan poster kanvas panorama.
+
+2026-10-06 - Milestone M9: Neural TTS Phonetic Normalization & "911" Audio Fix:
+Merespons koreksi pengguna mengenai pelafalan "911" yang terbaca sebagai "nine hundred eleven":
+1. `Phonetic Normalization Pipeline`: Mengintegrasikan normalisasi regex pada teks narasi audio di `generate_natural_audio_and_subtitles.py` (`re.sub(r'\b911\b', 'nine-one-one', text)`). Terverifikasi empiris pada fonem Kokoro: '911' (/naɪn hʌndɹɪd ɪlɛvən/) -> 'nine-one-one' (/naɪn wʌn wʌn/).
+2. `Clean Display Subtitles`: Mempertahankan teks string "911" dan "No Global 911 Service" pada kartu diagram visual dan caption subtitle bawah untuk estetika dan kenyamanan baca viewer.
+3. `Regenerasi Audio & Sinkronisasi`: Berhasil menyintesis ulang `public/voiceover.mp3` (316,69 detik / 9.501 frame @ 30 FPS) dan `public/subtitles.json`. Still render preview frame 2450 sukses terverifikasi sempurna.
+
+2026-10-06 - Milestone M9: Mind Map Explanatory Workflow Standardization & Simulation Cleanup:
+Merespons persetujuan resmi pengguna atas rencana implementasi:
+1. `Standarisasi Mind Map Explanatory`: Mengkodifikasi format resmi video edukasi ke `.agents/skills/ir-video-director/SKILL.md`, `GEMINI.md` (Pedoman #7), dan `PROJECT.md` (Feature #12 & Milestone M9). Menetapkan kanvas putih 4800x3200, roughjs, font Patrick Hand, dan Hukum Tiga Pilar Kamera (Deep Zoom 2.05x, Stationary Hold v=0, Contextual Zoom-Out 1.15x).
+2. `Pembersihan Direktori simulation/`: Menghapus permanen ~3,35 GB data eksperimen usang (openmontage_repo, frames_hybrid, remotion_app, vox-director, dll.). Melestarikan secara eksklusif engine produksi aktif `simulation/ir-motion-library/` dan menyusun `simulation/README.md`.
+3. `Verifikasi Sistem`: TypeScript check lulus 0 error (`tsc --noEmit`), smoke render still Remotion sukses dalam 5 detik.
+
+2026-10-06 - Milestone M9: Deep Zoom-In & Contextual Zoom-Out Architecture in Remotion:
+Merespons koreksi pengguna terkait perlunya zoom-in nyata saat menjelaskan detail konsep agar teks tidak terlihat kecil:
+1. `Deep Zoom-In (1.95x – 2.05x)`: Kamera melakukan zoom-in mendalam saat menjelaskan kartu konsep individual. Kartu mengisi ~42% lebar layar 1080p, ukuran font membesar 200%+ (~44px), teks tulisan tangan sangat tegas dan terbaca tanpa squinting, dengan margin >320px di atas subtitle.
+2. `Contextual Zoom-Out (1.15x – 1.20x)`: Saat pengenalan babak/paradigma makro (misal Realisme vs Liberalisme), kamera melakukan zoom-out untuk memperlihatkan struktur percabangan dan kontras antar-teori sebelum menyelam kembali ke detail kartu.
+3. `Discrete Travel & Stationary Hold`: Kamera tetap mempertahankan kecepatan nol ($v = 0$) selama 3–10 detik penuh saat narasi berlangsung, memberi waktu membaca yang tenang.
+4. `Verifikasi Visual 8 Still Frames`: Preview still terverifikasi 100% di artefak `flowchart-targeted-zoom-gallery.md` memperlihatkan kontras tajam antara zoom-in detail dan zoom-out makro.
+
+2026-10-06 - Milestone M9: Replicated Hand-Drawn Flowchart Video Engine in Remotion:
+Merespons arahan langsung pengguna untuk mereplikasi format video orisinal buatannya di YouTube (https://www.youtube.com/watch?v=Sa0PnnZLn0w&t=130s):
+1. `Inspeksi Real-Time Viewport YouTube Ground-Truth`: Menganalisis frame $t=25s$, $35s$, $60s$, $110s$, $130s$, $150s$, $180s$, $240s$ via Chrome DevTools MCP: kanvas putih murni `#FFFFFF`, rounded rectangle sketsa tangan organik (double-stroke rough line), isian warna pastel lembut (biru muda `#BEE3F8`, kuning `#FEFCBF`, hijau mint `#C6F6D5`, merah muda `#FED7D7`, putih `#FFFFFF`), font tulisan tangan komik ramah, dan panah sketsa berarah.
+2. `Arsitektur Mesin Flowchart Remotion Baru (simulation/ir-motion-library/src/flowchart/)`:
+   - *Deterministic RoughJS*: Membangun generator kurva rounded rectangle dan panah konektor dengan seed tetap untuk mencegah flickering antar-frame.
+   - *Typography*: Mengintegrasikan `@remotion/google-fonts/PatrickHand` untuk tipografi tulisan tangan alami.
+   - *CameraRig 2D Fluid Glide*: Kamera melayang halus (*cosine ease-in-out*) melintasi kanvas 4800x3200 mengikuti koordinat 33 node materi sesuai timeline suara narasi Kokoro-82M.
+   - *Pull-Back Panorama (Frame 9200)*: Pada akhir video, kamera mundur berskala `zoom: 0.39` menampilkan pemandangan utuh seluruh peta konsep HI dengan jarak margin yang terkalibrasi presisi.
+   - *Subtitle Overlay Bebas Tabrakan*: Kapsul gelap semi-transparan di bagian bawah (`bottom: 28px`) menyajikan subtitle per-kalimat tanpa menghalangi node flowchart.
+3. `Verifikasi & Preview Stills`: Kompilasi TypeScript 0 error (`tsc --noEmit`). 9 still frame preview (Frame 1 s.d. 9) berhasil dirender dan didokumentasikan di artefak untuk ditinjau langsung oleh pengguna sebelum eksekusi render final MP4.
+   - *The Analyst* (4,8M views): Menggunakan vektor arah kekuasaan dan kompas spasial polimorfik tanpa membaca definisi teks.
+   - *BBC Learning English* (280k & 56k views): Metafora ruang sidang (hakim + polisi) vs meja bundar anarki (kursi kosong tanpa penegak hukum) untuk hukum domestik vs internasional.
+   - *TED-Ed* (757k views): Animasi rantai kausalitas ekonomi (stempel tarif -> perubahan label harga -> perpindahan massa konsumen -> penumpukan kargo).
+   - *CrashCourse* (1M+ & 6,2M views): Mekanika "Thought Bubble" dengan analogi fisik (rig timbangan wortel & tongkat, radar silo rudal).
+   - *Heinrich-Böll-Stiftung* (2,65M views): Infografis peta dinamis Asia Tenggara dan animasi palu/sirkulasi konsensus "The ASEAN Way".
+   - *One Minute Economics* (965k views): Animasi Prisoner's Dilemma berbasis dua sel penjara dan tombol timer pengakuan, bukan matriks angka 2x2 pasif.
+   - *Soomo Learning & Korczyk's Class* (788k & 187k views): Model tabrakan bola biliar Waltz vs jaring benang interdependensi bersinar Liberalisme.
+2. `Sintesis Paradigma Video Course Sejati (Anti-Slide Laws)`:
+   - *Law 1 (Show the Mechanism, Not the Definition)*: Visual bertugas memperlihatkan mesin kausalitas dan dinamika interaksi, bukan mencatat rangkuman suara.
+   - *Law 2 (3-Word On-Screen Rule)*: Teks layar dibatasi ketat hanya untuk label entitas, angka kunci, atau status sistem (nol paragraf, nol bullet point).
+   - *Law 3 (Event-Driven State Changes)*: Pergantian state visual dinamis terjadi setiap 4-7 detik mengikuti artikulasi narasi.
+   - *Law 4 (Full-Canvas Stage vs Bounded Cards)*: Menghapus batas kontainer kartu/slide; seluruh kanvas 1080p difungsikan sebagai panggung simulasi bebas hambatan.
 
 ## Key Recent Facts
+
+- **Milestone M9: 5-Minute Slide Video Course Option A Radical Overhaul (`simulation/ir-motion-library/`)**:
+  - *Polymorphic Scene Architecture (`src/course/scenes/`)*: Menggantikan layout 2-kolom statis dengan 8 modul panggung spesifik (`Scene01RadarDock` s.d. `Scene08AcademyCommandCenter`), mendistribusikan visual panggung sebesar 70-80% layar.
+  - *Mayer's Cognitive Signaling Alignment*: Menghilangkan dinding teks berbutir (1, 2, 3), menggantinya dengan kartu kaca melayang (*glassmorphic cards*), tag status bertenaga tinggi, dan kutipan kanonik tokoh pendiri disiplin ilmu HI.
+  - *TypeScript & Static Inspection*: Kompilasi bersih 0 error (`tsc --noEmit`). 8 still frame preview Option A berhasil di-render dan diverifikasi tanpa distorsi atau overflow. Sesuai komitmen instruksi pengguna, proses render MP4 master final ditahan sampai pengguna memberikan konfirmasi akhir.
+
+
+
+- **Milestone M8: IR Motion Graphics Library (`simulation/ir-motion-library/`)**:
+  - *Clean-Slate Remotion Architecture*: Diisolasi di `simulation/ir-motion-library/`, diproteksi oleh `.gitignore` dan `_config.yml exclude:` sehingga tidak membebani proses build SSG Jekyll maupun repositori Git.
+  - *Kurzgesagt Visual Token System (`src/themes/kurzgesagt.ts`)*: Menyediakan token warna semantik (`deepSpace`, `electricCyan`, `warmAmber`), palet khusus paradigma HI (Realisme: Merah `#FF5252`, Liberalisme: Hijau `#4CAF50`, Konstruktivisme: Lavender `#B388FF`), tipografi proporsional, serta kurva easing frame-level (`snapIn`, `bounce`, `easeOut`).
+  - *Phase 1 MVP Components*:
+    1. `<AnimatedWorldMap />`: Peta dunia vektor SVG flat dengan animasi pulsing radar markers, kurva kuadratik bezier koneksi traktat/rivalitas, highlight regional, dan focal zoom kamera dinamis.
+    2. `<TimelineBar />`: Garis waktu kronologis horizontal dengan auto-calibration tahun, pin milestone bounce-in, dan kartu deskripsi pop-up berlatar blur.
+    3. `<ConceptDiagram />`: Diagram teoretis swarakit dengan glowing node cards, vektor relasi berarah, dan pemaparan poin argumentasi bertahap.
+  - *Decoupled JSON Data Pipeline*: Modul 010 (Introduction to IR) dimodelkan secara deklaratif di `data/010-intro-ir-assets.json`, memetakan 8 situs sejarah (Aberystwyth 1919, LSE 1924, Westphalia 1648, PBB 1945), 9 tonggak evolusi disiplin ilmu (Thucydides 430 SM s.d. Finnemore-Sikkink 1998), serta triad komparasi paradigma Realisme, Liberalisme, dan Konstruktivisme.
+  - *Zero Hallucination & High Rigor*: Seluruh nama tokoh, buku babon, traktat, dan asumsi teori diverifikasi langsung dari kurikulum naskah bab materi asli. Kompilasi TypeScript lulus 100% (`tsc --noEmit`).
 
 - **Global Plain-Language Terminology Note Engine & Readability Audit (ALL PAGES COMPLETED 100%)**:
   - *Empirical Readability Audit*: Skrip `scripts/audit_readability_and_jargon.py` membedah 161 bab materi: rata-rata Flesch Reading Ease berada di angka 22.8 / 100 (*Very Difficult / Post-Graduate Level*), Flesch-Kincaid Grade Level 14.6 (mahasiswa tingkat akhir/S2), 27% kata bersuku kata 3+, dan rata-rata kalimat 18.0 kata. Menunjukkan adanya hambatan ganda (bahasa Inggris ilmiah + jargon teoritis pekat) bagi pembelajar umum.

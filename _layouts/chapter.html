@@ -61,22 +61,74 @@ layout: default
       </details>
     {% endif %}
 
+    {% if page.explanatory_video or page.youtube_id %}
+      <section class="mindmap-explanatory-gateway" aria-label="Mind Map Explanatory Video" style="margin-bottom: 2.5rem; background: var(--lms-surface); border: 1px solid var(--lms-border); border-radius: var(--lms-radius-lg, 12px); overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);">
+        <div style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
+            <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8;">CONCEPTUAL GATEWAY</span>
+          </div>
+          <span style="background: rgba(255, 255, 255, 0.12); color: #F1F5F9; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 20px;">
+            🎬 WATCH BEFORE READING (5 MIN)
+          </span>
+        </div>
+
+        <div style="padding: 1.25rem;">
+          <h3 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 700; color: var(--lms-ink-primary);">
+            {{ page.explanatory_video.title | default: "Mind Map Explanatory: Core Conceptual Framework" }}
+          </h3>
+          <p style="margin: 0 0 1rem 0; font-size: 0.9rem; line-height: 1.55; color: var(--lms-ink-secondary);">
+            {{ page.explanatory_video.desc | default: "Watch this animated concept map first to establish a solid mental schema of key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text." }}
+          </p>
+
+          {% if page.youtube_id %}
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #0F172A; margin-bottom: 0.75rem; border: 1px solid var(--lms-border);">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?rel=0" 
+                title="Mind Map Explanatory Video"
+                loading="lazy"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          {% elsif page.explanatory_video.poster %}
+            <div style="position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--lms-border); background: #FFFFFF; margin-bottom: 0.75rem;">
+              <img src="{{ page.explanatory_video.poster | relative_url }}" alt="Mind Map Flowchart Architecture" style="width: 100%; height: auto; display: block;" loading="lazy">
+            </div>
+          {% endif %}
+
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: var(--lms-ink-muted);">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <span><i class="fa fa-sitemap" style="color: var(--lms-ink-primary);"></i> Mind Map Flowchart</span>
+              <span><i class="fa fa-headphones" style="color: var(--lms-ink-primary);"></i> Neural Audio Explainer</span>
+            </div>
+            {% if page.youtube_id %}
+              <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" rel="noopener noreferrer" style="color: #EF4444; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <i class="fa fa-youtube-play"></i> Watch on YouTube @IRinANutshell
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
     <!-- Article Content -->
     <article class="course-prose-body" id="course-article-body">
       {{ content }}
     </article>
 
     <!-- In-Lesson Terminology Digest Box (Automatic Specialized Term Notes) -->
-    <section class="lesson-terms-digest" id="lesson-terms-digest" style="display: none;" aria-label="Catatan Istilah Kunci dalam Bab Ini">
+    <section class="lesson-terms-digest" id="lesson-terms-digest" style="display: none;" aria-label="Key Specialized Terms in this Lesson">
       <div class="lesson-terms-header">
         <div class="lesson-terms-title-group">
           <div class="lesson-terms-title">
-            <i class="fa fa-book" aria-hidden="true"></i> <span>Catatan Istilah Kunci dalam Bab Ini</span>
+            <i class="fa fa-book" aria-hidden="true"></i> <span>Key Specialized Terms in this Lesson</span>
           </div>
-          <span class="lesson-terms-badge" id="lesson-terms-count-badge">0 Istilah</span>
+          <span class="lesson-terms-badge" id="lesson-terms-count-badge">0 Terms</span>
         </div>
         <p class="lesson-terms-subtitle">
-          Maksud sederhana dan intuitif dari istilah-istilah khusus hubungan internasional yang muncul pada materi ini agar mudah dipahami siapa saja tanpa bahasa yang rumit.
+          Intuitive conceptual breakdowns and foundational context for key International Relations concepts appearing in this lesson.
         </p>
       </div>
       <div class="lesson-terms-grid" id="lesson-terms-grid"></div>

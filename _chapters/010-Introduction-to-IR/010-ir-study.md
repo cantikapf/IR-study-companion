@@ -3,15 +3,13 @@ title: Study Of International Relations
 slug: study-of-international-relations
 abstract:  Understand the foundational principles and key theories shaping the field of international relations, including realism, liberalism, Marxism, and constructivism, as well as their applications in analyzing global politics, economics, and security issues.
 simple_summary: "Watching the evening news only shows you the daily drama of world politics; studying International Relations gives you the script and the stage rules. Because there is no world government or global 911 service, countries are trapped in an anarchic 'self-help' system. Understanding IR means looking past sensational headlines to uncover the hidden rules of power, survival, and competition that drive state behavior."
+youtube_id: "Sa0PnnZLn0w"
+explanatory_video:
+  title: "Mind Map Explanatory: Foundations of International Relations"
+  desc: "Watch this animated concept map first to establish a solid mental schema of sovereign actors, international anarchy, and core theoretical paradigms before reading this lesson."
+  duration: "5 min"
+  poster: "/assets/images/mindmap_chapter_010_poster.png"
 ---
-
-## Video Summary
-
-<br>
-
-<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/Sa0PnnZLn0w?si=WMduPYThz5YN5GCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
-
-<br>
 
 ## Introduction 
 

@@ -42,4 +42,5 @@ simulation/
 *.mp4
 *.onnx
 *.bin
+learning-videos/exports/*.mp4
 
