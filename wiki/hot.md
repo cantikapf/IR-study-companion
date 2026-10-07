@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-07 - Milestone M9: Chapter 2 Conceptual Gateway Card & Dynamic Video Badge Integration:
+Merespons observasi pengguna mengenai kartu border Conceptual Gateway yang sebelumnya hanya ada di Bab 1, padahal Bab 2 juga memiliki video ringkasan (3 menit):
+1. `Root Cause Diagnosis`: Video ringkasan Bab 2 (`7K4preE-EBY`, 3 menit) sebelumnya disematkan secara manual via tag raw HTML `<center><iframe ...>` di badan teks markdown bab di bawah judul `## Summary Video`, sehingga tidak mengaktifkan kartu resmi `mindmap-explanatory-gateway` yang dikontrol oleh frontmatter layout.
+2. `Declarative Frontmatter Standardization`: Mengangkat video ringkasan Bab 2 ke dalam frontmatter (`youtube_id: "7K4preE-EBY"`, `explanatory_video: { title: "Summary Video: Globalization and Global Politics", duration: "3 min", format: "Video Summary" }`), serta membersihkan raw iframe dari badan teks.
+3. `Dynamic Duration Badge (`_layouts/chapter.html`)`: Memperbarui badge template dari nilai statis "5 MIN" menjadi ekspresi dinamis `🎬 WATCH BEFORE READING ({{ page.explanatory_video.duration | upcase }})`, merender secara presisi `(3 MIN)` untuk Bab 2 dan `(5 MIN)` untuk Bab 1.
+4. `Empirical Verification`: Kompilasi build Jekyll selesai dalam 55.1 detik. Inspeksi output HTML `_site/globalization-and-global-politics.html` mengonfirmasi kartu Conceptual Gateway tampil sempurna dengan badge `WATCH BEFORE READING (3 MIN)`, video embed YouTube `7K4preE-EBY`, dan layout responsif bebas distorsi. 369/369 pytest lolos.
+
 2026-10-07 - Milestone M9: Simulation Divider & Redundant "Interactive Learning" Elimination Across 145 Chapters:
 Merespons temuan pengguna mengenai adanya garis pembatas (`<hr>`) dan teks "Interactive Learning" di Bab 2 yang tidak memiliki simulasi:
 1. `Root Cause Diagnosis`: Skrip ekstraksi fitur masa lalu (`generate_features.py`) menyuntikkan template markdown `\n---\n### Interactive Learning\n{% include flashcards.html ... %}` ke akhir naskah bab materi. Sintaks `---` merender pembatas `<hr>`, sementara heading `### Interactive Learning` terindeks ke Table of Contents bab dan bertengger tepat di atas komponen flashcard (`Active Recall Cards`). Di bab-bab tanpa simulasi, pembatas dan judul ini membingungkan karena mengindikasikan seolah-olah ada simulasi yang hilang/rusak.

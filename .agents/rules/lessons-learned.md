@@ -49,6 +49,11 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Dynamic Conceptual Gateway Card & Pre-Reading Video Architecture (2026-10-07)**:
+  1. *From Raw Embeds to Conceptual Gateway Standard*: Meletakkan iframe video mentah di dalam tubuh teks markdown menghasilkan tampilan tidak konsisten dan merusak ritme pedagogis. Mengangkat video ringkasan bab ke dalam skema frontmatter deklaratif (`youtube_id`, `explanatory_video: { title, desc, duration, format }`) mengaktifkan kartu *CONCEPTUAL GATEWAY* resmi di atas naskah dengan bingkai elegan dan responsif.
+  2. *Dynamic Duration Badge in LMS Layout (`_layouts/chapter.html`)*: Mengganti badge durasi statis ("5 MIN") menjadi token dinamis `🎬 WATCH BEFORE READING ({{ page.explanatory_video.duration | upcase }})` memungkinkan penyajian durasi yang akurat (misal: "3 MIN" untuk video ringkasan Chapter 2 `7K4preE-EBY`, "5 MIN" untuk mind map Chapter 1 `Sa0PnnZLn0w`).
+  3. *Polymorphic Video Format Labeling*: Mendukung penanda format fleksibel (`format: "Video Summary"` vs default `"Mind Map Flowchart"`), memberikan kejelasan pedagogis bagi siswa mengenai tipe media pengantar yang disajikan.
+
 - **Simulation Divider & Redundant Interactive Learning Purge in Non-Simulation Chapters (2026-10-07)**:
   1. *Legacy Feature Injection Artifacts*: Pada fase awal otomatisasi konten kurikulum, skrip ekstraksi menyuntikkan template markdown `\n---\n### Interactive Learning\n{% include flashcards.html ... %}` ke akhir naskah bab materi. Sintaks pemisah `---` merender elemen `<hr>` (garis pembatas horizontal), sedangkan heading `### Interactive Learning` terindeks ke dalam Table of Contents (TOC) sticky drawer dan bertengger tepat di atas kartu konsep flashcards.
   2. *False Simulation Affordance Elimination*: Di 10 bab yang memiliki laboratorium diplomasi interaktif (`{% include sim_*.html %}`), pembatas dan konteks simulasi memang relevan. Namun, pada 145 bab kurikulum lainnya yang tidak memiliki simulasi, keberadaan garis `<hr>` dan judul `Interactive Learning` menimbulkan kebingungan bagi pembelajar (mengindikasikan adanya simulasi yang hilang/rusak). Komponen flashcard sendiri telah memiliki header berdedikasi `Active Recall Cards` dengan microcopy instruktif `Click card to reveal definition`.

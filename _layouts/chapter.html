@@ -69,7 +69,7 @@ layout: default
             <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8;">CONCEPTUAL GATEWAY</span>
           </div>
           <span style="background: rgba(255, 255, 255, 0.12); color: #F1F5F9; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 20px;">
-            🎬 WATCH BEFORE READING (5 MIN)
+            🎬 WATCH BEFORE READING ({% if page.explanatory_video.duration %}{{ page.explanatory_video.duration | upcase }}{% else %}5 MIN{% endif %})
           </span>
         </div>
 
@@ -100,7 +100,7 @@ layout: default
 
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: var(--lms-ink-muted);">
             <div style="display: flex; gap: 1rem; align-items: center;">
-              <span><i class="fa fa-sitemap" style="color: var(--lms-ink-primary);"></i> Mind Map Flowchart</span>
+              <span><i class="fa fa-sitemap" style="color: var(--lms-ink-primary);"></i> {{ page.explanatory_video.format | default: "Mind Map Flowchart" }}</span>
               <span><i class="fa fa-headphones" style="color: var(--lms-ink-primary);"></i> Neural Audio Explainer</span>
             </div>
             {% if page.youtube_id %}

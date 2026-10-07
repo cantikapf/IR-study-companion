@@ -3,15 +3,15 @@ title: Globalization And Global Politics
 slug: globalization-and-global-politics
 abstract: The explanation of globalization and global politics in the International Relations context
 simple_summary: "Pick up your smartphone: its chip was designed in California, its memory made in South Korea, and its case assembled in China. Globalization means borders no longer stop the flow of goods, money, or cultural ideas. While this creates massive wealth and lightning-fast communication, it also leaves national governments struggling to regulate global giants and leaves citizens wondering who is truly in charge when local factories close down."
+youtube_id: "7K4preE-EBY"
+explanatory_video:
+  title: "Summary Video: Globalization and Global Politics"
+  desc: "Watch this video summary first to understand how cross-border economic integration, transnational governance, and time-space compression transform state sovereignty before exploring the lesson text."
+  duration: "3 min"
+  format: "Video Summary"
 ---
 
-## Summary Video
-
-<center> <iframe width="560" height="315" src="https://www.youtube.com/embed/7K4preE-EBY?si=FqMXKz3epygik4ie" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
-
-<br>
-
-## Material's recommendation before reading the study guide
+## Recommended Supplementary Video
 
 <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/wLNp3kgBuuQ?si=SjPwSULlXcfajHgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
 
