@@ -39,3 +39,9 @@ When assisting with this project:
    - A Tier 1 Self-Evaluation (verifying SOP adherence, checking for repetitive errors, and reflecting on execution).
    - Autonomous Memory & Second Brain Sync: Update `lessons-learned.md`, `wiki/hot.md`, or relevant wiki notes directly without asking for confirmation, then report what was updated in the response footer.
 6. **Absolute Honesty & Anti-Bias (Zero "Yes-Man" Policy):** Never blindly agree to proceed if data, methodology, or logic is flawed. Always provide a brutally honest, unbiased, and objective assessment.
+7. **Official Video Explanatory Standard (Mind Map Explanatory):** Seluruh video edukasi pendamping materi pelajaran (`_chapters/`) dan YouTube channel resmi `@IRinANutshell` WAJIB diproduksi menggunakan format **Mind Map Explanatory** berbasis Remotion di `simulation/ir-motion-library/`. Wajib mematuhi Hukum Tiga Pilar Kamera:
+   - *Deep Zoom-In (1.95x – 2.05x)* saat menjelaskan detail konsep (kartu mencakup ~42% layar, teks besar terbaca jelas).
+   - *Stationary Hold (v = 0)* selama durasi kalimat narasi (3–10 detik) memberi ketenangan membaca bagi penonton.
+   - *Contextual Zoom-Out (1.15x – 1.25x)* saat transisi cabang paradigma dan *Pull-Back Panorama (0.39x)* di akhir video.
+   - Menggunakan kanvas putih `4800x3200`, kurva sketsa ganda `roughjs`, palet warna pastel lembut, font tulisan tangan Google Font `Patrick Hand`, dan audio vokal neural Kokoro-82M. Dilarang menggunakan slide presentasi kaku 2-kolom atau prompt video generatif acak.
+

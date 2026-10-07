@@ -67,19 +67,63 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const keywords = document.querySelectorAll('.markdown-section strong, .markdown-section b, mark.nice-mark');
+    // Delay slightly to allow course-player.js to annotate any priority glossary terms first
+    setTimeout(() => {
+      initWikipediaTooltips();
+    }, 60);
+  });
+
+  function initWikipediaTooltips() {
+    const selector = [
+      '.course-prose-body strong',
+      '.course-prose-body b',
+      '.course-prose-body mark.nice-mark',
+      '.markdown-section strong',
+      '.markdown-section b',
+      'mark.nice-mark'
+    ].join(', ');
+
+    const candidates = document.querySelectorAll(selector);
     const wikiCache = {};
     let aiDictionary = {};
 
     // Fetch the AI Fallback Dictionary on page load
-    fetch('{{site.baseurl}}/assets/data/ai_dictionary.json')
+    const base = window.__siteBaseurl || '';
+    fetch(base + '/assets/data/ai_dictionary.json')
       .then(res => res.json())
       .then(data => { aiDictionary = data; })
       .catch(err => console.log('Failed to load AI dictionary', err));
 
-    keywords.forEach(el => {
-      const rawText = el.innerText.trim();
-      if(rawText.length < 2 || rawText.length > 35) return;
+    candidates.forEach(el => {
+      // Exclude interactive / UI widgets and containers
+      if (el.closest('.quiz-container, .flashcards-container, .sim-container, .lesson-terms-digest, .mindmap-explanatory-gateway, .module-exam-card, .simple-words-box, .lms-action-dock, .lesson-header-card, .drawer-content, nav, footer, header, table, thead')) {
+        return;
+      }
+      if (el.closest('h1, h2, h3, h4, h5, h6, button, a')) {
+        return;
+      }
+      // If element is already handled by IR glossary popover, skip to avoid double popover
+      if (el.classList.contains('ir-term-mention') || el.closest('.ir-term-mention') || el.querySelector('.ir-term-mention')) {
+        return;
+      }
+
+      let rawText = el.innerText.trim();
+      if (rawText.length < 2 || rawText.length > 45) return;
+
+      // Skip common markdown formatting artifacts and label prefixes
+      if (/^(note|warning|tip|caution|step \d+|part \d+|chapter \d+|module \d+|definition|learning objective):?$/i.test(rawText)) {
+        return;
+      }
+
+      // Max word count for a conceptual keyword
+      const words = rawText.split(/\s+/);
+      if (words.length > 5) return;
+
+      const cleanText = rawText.replace(/[:.,;!?]+$/, '').trim();
+      if (!cleanText) return;
+
+      // Add visual keyword styling
+      el.classList.add('keyword-interactive');
 
       tippy(el, {
         theme: 'light-border',
@@ -92,10 +136,10 @@
         onShow(instance) {
           if (instance.state.ajaxLoaded) return;
 
-          const searchTerm = encodeURIComponent(rawText);
+          const searchTerm = encodeURIComponent(cleanText);
           
-          if (wikiCache[rawText]) {
-            instance.setContent(wikiCache[rawText]);
+          if (wikiCache[cleanText]) {
+            instance.setContent(wikiCache[cleanText]);
             instance.state.ajaxLoaded = true;
             return;
           }
@@ -106,44 +150,46 @@
               return response.json();
             })
             .then(data => {
-              let html = `<div style="text-align: left; padding: 5px;">`;
+              if (!data.extract || data.type === 'disambiguation') {
+                throw new Error('Ambiguous or empty');
+              }
+
+              let html = `<div style="text-align: left; padding: 6px;">`;
               if (data.thumbnail && data.thumbnail.source) {
                 html += `<img src="${data.thumbnail.source}" style="float: right; margin-left: 10px; margin-bottom: 5px; width: 80px; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" alt="${data.title}">`;
               }
-              html += `<strong style="font-size: 1.1em; color: #1f2937; display:block; margin-bottom: 5px;">${data.title}</strong>`;
-              html += `<p style="font-size: 0.9em; line-height: 1.5; color: #4b5563; margin: 0;">${data.extract}</p>`;
+              html += `<strong style="font-size: 1.05em; color: var(--lms-ink-primary, #1f2937); display:block; margin-bottom: 5px;">${data.title}</strong>`;
+              html += `<p style="font-size: 0.88em; line-height: 1.5; color: var(--lms-ink-secondary, #4b5563); margin: 0;">${data.extract}</p>`;
               html += `<div style="clear: both;"></div></div>`;
               
-              wikiCache[rawText] = html;
+              wikiCache[cleanText] = html;
               instance.setContent(html);
               instance.state.ajaxLoaded = true;
             })
             .catch(error => {
-              // AI FALLBACK LOGIC
+              // AI / Fallback Dictionary Logic
               let fallbackText = "";
-              // Check if we specifically wrote a definition for it
-              const exactMatchKey = Object.keys(aiDictionary).find(k => k.toLowerCase() === rawText.toLowerCase());
+              const exactMatchKey = Object.keys(aiDictionary).find(k => k.toLowerCase() === cleanText.toLowerCase());
               
               if (exactMatchKey) {
                 fallbackText = aiDictionary[exactMatchKey];
               } else {
-                // Generic AI response for terms we missed
-                fallbackText = `In the context of this study material, <b>${rawText}</b> represents a key component of the broader academic discourse in global politics and international relations.`;
+                fallbackText = `In the context of this study material, <b>${cleanText}</b> represents a foundational concept in global politics and international relations.`;
               }
 
               const html = `
-                <div style="text-align: left; padding: 5px;">
-                  <strong style="font-size: 1.1em; color: #1f2937; display:block; margin-bottom: 5px;">${rawText}</strong>
-                  <p style="font-size: 0.9em; line-height: 1.5; color: #4b5563; margin: 0; margin-bottom: 10px;">${fallbackText}</p>
-                  <div style="font-size: 0.75em; color: #3b82f6; font-weight: bold; background: rgba(59,130,246,0.1); display: inline-block; padding: 3px 8px; border-radius: 12px;">✨ AI Generated</div>
+                <div style="text-align: left; padding: 6px;">
+                  <strong style="font-size: 1.05em; color: var(--lms-ink-primary, #1f2937); display:block; margin-bottom: 5px;">${cleanText}</strong>
+                  <p style="font-size: 0.88em; line-height: 1.5; color: var(--lms-ink-secondary, #4b5563); margin: 0 0 8px;">${fallbackText}</p>
+                  <div style="font-size: 0.72em; color: var(--lms-ink-tertiary, #64748b); font-weight: 600; background: var(--lms-subtle, rgba(0,0,0,0.05)); display: inline-block; padding: 2px 7px; border-radius: 6px;">📚 Academic Concept</div>
                 </div>`;
                 
-              wikiCache[rawText] = html;
+              wikiCache[cleanText] = html;
               instance.setContent(html);
               instance.state.ajaxLoaded = true;
             });
         }
       });
     });
-  });
+  }
 </script>
