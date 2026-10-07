@@ -43,9 +43,6 @@ When an international agreement fails to be implemented, Putnam distinguishes be
 
 Recognizing involuntary defection is critical for diplomatic strategy: what appears as duplicitous bad faith from the outside is often the structural consequence of domestic political gridlock.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Two-Level Game" def1="Theoretical approach to state's foreign policy negotiations" term2="Win-Set" def2="Set of Level I agreements with majority support among constituents" term3="Level I" def3="Bargaining between international negotiators" term4="Level II" def4="Domestic discussions on ratifying Level I agreements" %}
 
 ### Knowledge Check

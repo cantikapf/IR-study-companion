@@ -47,9 +47,6 @@ In their influential critique *Pathologies of Rational Choice Theory: A Critique
 
 Despite these critiques, when combined with game theory and constrained by empirical rigor, rational choice remains an indispensable tool for analyzing crisis escalation, deterrence, and treaty design.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Rational Choice" def1="Approach assuming actors make rational choices based on preferences and info" term2="Utility-Maximizer" def2="Actor making decisions based on cost-benefit analysis to maximize utility" term3="Anarchy" def3="Absence of a central authority in international relations" term4="Cooperation" def4="Interaction where actors work together to achieve common goals" %}
 
 ### Knowledge Check

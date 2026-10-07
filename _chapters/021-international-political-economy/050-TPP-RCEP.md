@@ -98,10 +98,6 @@ On the other hand, the RCEP resembles a more traditional free trade agreement fo
 
 Following the U.S. withdrawal in 2017, the remaining 11 countries (led by Japan and Australia) successfully revived the pact as the **Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)**, which entered into force in December 2018. Meanwhile, the **RCEP** officially entered into force on January 1, 2022, solidifying its place as the world's largest free trade bloc. Both agreements continue to shape Asia-Pacific economic architecture, supply chain resilience, and the geopolitical balance between high-standard regulatory integration (CPTPP) and broad tariff reduction (RCEP).
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="TPP" def1="Trans-Pacific Partnership, a regional trade agreement" term2="RCEP" def2="Regional Comprehensive Economic Partnership, a mega regional trade agreement" term3="Trade Liberalization" def3="Reducing or eliminating trade barriers to promote economic growth" term4="Free Trade Area" def4="A region with minimal or no trade barriers among member countries" %}
 
 ### Knowledge Check

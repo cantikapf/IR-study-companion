@@ -104,8 +104,6 @@ In today's media environment, perception management is also crucial. Counterinsu
 
 Overall, counterinsurgency is not a pre-set strategy but rather an evolving response. It requires continuous assessment and adaptation based on insurgent actions. Rigid, inflexible approaches will fail against flexible, dynamic insurgents. On-the-ground flexibility informed by local conditions is essential. Counterinsurgency forces must also manage public perception through media spin, given the reach insurgents now have. Adaptability and evolution are key for successful counterinsurgency efforts in the modern era.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Transnational Organized Crime" def1="Illegal activities coordinated across national borders" term2="Terrorism" def2="Use of violence or fear to coerce and gain public attention" term3="Insurgency" def3="Organized movement to overthrow an established government or occupying power" term4="Illicit Political Economy" def4="Transactions and activities outside government regulation and taxation" %}
 
 ### Knowledge Check

@@ -47,9 +47,6 @@ Modern social theory is broadly organized around three foundational theoretical 
 
 Understanding these foundational epistemologies is essential for international relations, as paradigms like Realism, Liberalism, and Constructivism directly reflect structural conflict, institutional functionalism, and symbolic intersubjectivity on the global stage.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Empirical Research" def1="Investigating phenomena drawn from actual experiences rather than theoretical speculation." term2="Functionalism" def2="Views society as a complex system of interacting parts with shared values and norms." term3="Conflict Theory" def3="Perceives society as a struggle for resources and power." term4="Symbolic Interactionism" def4="Studies society through individual interactions, exploring shared symbols and communications." %}
 
 ### Knowledge Check

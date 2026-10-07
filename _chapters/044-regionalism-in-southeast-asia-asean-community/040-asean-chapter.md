@@ -123,10 +123,6 @@ Some key outcomes and significance of the ASEAN Charter include:
 
 In summary, the ASEAN Charter was a major milestone that reinvigorated regional integration efforts. By providing a rules-based foundation, it enhanced ASEAN's capacity to achieve its goals and strengthened its position as the central driving force in Southeast Asia. Moving forward, effective implementation of the Charter will be key to ensuring its principles translate into tangible results for the people of ASEAN.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="ASEAN Charter" def1="A formal constitution establishing ASEAN as a legal entity" term2="Eminent Persons Group" def2="A panel advising on ASEAN Charter's content and framework" term3="Institutionalization" def3="Establishing formal structures and rules in an organization" term4="Rules-Based Organization" def4="An organization governed by clear, established rules and principles" %}
 
 ### Knowledge Check

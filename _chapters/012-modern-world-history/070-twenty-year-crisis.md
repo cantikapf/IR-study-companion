@@ -147,9 +147,6 @@ While noble in vision, the League of Nations could not overcome the harsh realit
 
 E.H. Carr's *The Twenty Years' Crisis* remains a foundational text of Classical Realism. By unmasking how universalist moral doctrines and the "harmony of interests" functioned as the rhetorical ideology of satisfied status-quo empires (Britain and France) to preserve their hegemony, Carr inaugurated a critical, power-conscious tradition in International Relations. The failure of the interwar collective security architecture demonstrated that international institutions cannot maintain peace when divorced from the underlying distribution of material power, a lesson that directly dictated the realist institutional design of the 1945 UN Security Council veto system.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Twenty-Year Crisis" def1="The interwar period (1919-1939) marked by geopolitical instability and the clash of ideologies." term2="League of Nations" def2="An intergovernmental organization formed post-WWI to promote collective security and world peace." term3="Idealism (IR Theory)" def3="Belief in international cooperation and institutions to achieve peace through reason and shared values." term4="Realism (IR Theory)" def4="States pursue power and self-interest; conflict is inherent in international politics." %}
 
 ### Knowledge Check

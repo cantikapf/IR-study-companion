@@ -97,10 +97,6 @@ The EU's economic might also gives it significant influence in international fin
 
 In summary, through the creation of a common market and shared currency, the nations of Europe have successfully forged one of the largest economic entities in the world. The European Union today stands alongside the US and China as one of the three pillars of the global economy, giving it substantial influence in economic affairs. Its trade dominance and financial power ensure the EU will remain an impactful force shaping the global economic landscape for years to come.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Globalization" def1="Increasing interdependence of the world's economies" term2="Economic Union" def2="Cooperation and integration of national economies" term3="European Economic Community (EEC)" def3="Aims to eliminate trade barriers and promote free movement" term4="Global Economic Landscape" def4="The global distribution of economic power and influence" %}
 
 ### Knowledge Check

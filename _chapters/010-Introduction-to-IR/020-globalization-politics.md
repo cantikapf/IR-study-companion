@@ -88,10 +88,6 @@ While global governance provides mechanisms for collective action in an anarchic
 
 <center> <img src="{{site.baseurl}}/static/modules/global_governance.png" alt="Global Governance" width="90%" /> </center>
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Globalization" def1="Increased worldwide interconnectedness and interdependence across economic, political, and cultural spheres." term2="Time-space compression" def2="Technological advancements reducing distances and accelerating global interactions, information, and flows." term3="Deterritorialization" def3="Weakening of ties between social/economic activities, culture, and specific geographical locations or states." term4="Global Governance" def4="Complex of multilateral institutions and actors addressing worldwide issues, challenging state sovereignty." %}
 
 ### Knowledge Check

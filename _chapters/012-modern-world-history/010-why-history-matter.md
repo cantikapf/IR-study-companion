@@ -89,9 +89,6 @@ Moreover, studying history reveals that all nations have experienced both tribul
 
 This mature historical understanding sets the stage for mutual learning and institutionalized collaboration. By examining empirical precedents and path-dependent institutional trajectories, states can build on their collective strengths while mitigating the risk of repeating systemic crises. In this way, historical inquiry provides the indispensable empirical foundation for designing durable diplomatic mechanisms and navigating the recurrent dilemmas of international order.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="History in IR" def1="Indispensable foundation for understanding complex international relations, providing context and insights." term2="Subjectivity of History" def2="Narratives are inherently biased, reflecting perspectives of those in power or dominant cultures." term3="Eurocentrism" def3="Historical bias placing Europe at the center, viewing it as culturally superior; justifies colonialism." term4="Foreign Policy Influence" def4="History informs diplomatic strategies, threat assessments, alliance building, and avoids past mistakes." %}
 
 ### Knowledge Check

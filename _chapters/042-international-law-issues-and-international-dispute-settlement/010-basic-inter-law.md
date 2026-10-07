@@ -128,10 +128,6 @@ The ICJ is composed of 15 judges elected by the UN General Assembly and Security
 
 While ICJ decisions legally bind only the states involved in each case, its interpretations of international law carry persuasive authority and influence. The Court's decisions often clarify aspects of customary international law and the meaning of treaties. By helping resolve disputes peacefully, the ICJ contributes to the development and evolution of international law.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="International Law" def1="Rules and principles governing state conduct and international relations" term2="Customary International Law" def2="International obligations from established state practice and opinio juris" term3="Treaty" def3="Binding agreement between states, a primary source of international law" term4="Opinio Juris" def4="Sense of legal obligation required for customary international law to form" %}
 
 ### Knowledge Check

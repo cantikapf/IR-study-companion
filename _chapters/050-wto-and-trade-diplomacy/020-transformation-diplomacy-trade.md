@@ -89,10 +89,6 @@ Additionally, the ubiquity of real-time communication channels enables non-state
 
 Diplomats undertaking trade diplomacy must balance a wider array of considerations from a more vocal set of participants. Effectively facilitating international trade growth relies on envoys adept at building consensus across a diverse spectrum of voices. Adaptability, inclusion, and nuance represent key diplomatic skills for enabling trade expansion in the 21 st century.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Diplomacy" def1="Facilitates communication and negotiation between nations" term2="International Trade" def2="Exchange of goods, services, and capital across national borders" term3="Non-State Actors" def3="Entities influencing trade diplomacy beyond national governments" term4="Trade Diplomacy" def4="Ongoing diplomatic engagement to foster strong trading relationships" %}
 
 ### Knowledge Check

@@ -107,11 +107,6 @@ Recognizing ISI's limitations, developing countries initiated economic reforms i
 
 In summary, ISI yielded mixed results for developing countries. While some benefits materialized, ISI proved economically challenging long-term. However, its pursuit reflected developing countries' desire for self-sufficiency. ISI's struggles underline the intricacies of trade policy. Looking ahead, emerging economies seem poised to transform international trade patterns. But crafting equitable, sustainable policies remains complex. Though ISI faltered, its intentions may offer lessons for constructing collaborative global trade.
 
-
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Import Substitution Industrialization" def1="Economic policy to foster domestic industry growth and reduce foreign dependency" term2="Export Orientation" def2="Economic strategy focusing on producing goods for international trade" term3="Infant Industry Argument" def3="Theory supporting temporary trade barriers to protect new industries" term4="Structural Adjustment Programs" def4="IMF and World Bank loans for economic reforms in developing countries" %}
 
 ### Knowledge Check

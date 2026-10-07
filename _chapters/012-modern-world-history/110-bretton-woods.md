@@ -134,9 +134,6 @@ Some key legacies of Bretton Woods include:
 
 Despite the collapse of the fixed-exchange parity mechanism, the institutional core of Bretton Woods—the IMF and the World Bank Group—continues to anchor the global financial architecture and macroeconomic crisis management.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Bretton Woods Conference" def1="Post-WWII meeting (1944) establishing a new international monetary system, IMF, and World Bank." term2="Bretton Woods Institutions" def2="The IMF and World Bank, created to foster global financial stability and post-war reconstruction." term3="Adjustable Peg System" def3="Fixed exchange rates pegged to the US dollar, allowing limited fluctuations, with IMF approval for parity changes." term4="Dollar Hegemony" def4="The US dollar's dominance as the global reserve currency post-WWII, backed by US economic power." %}
 
 ### Knowledge Check

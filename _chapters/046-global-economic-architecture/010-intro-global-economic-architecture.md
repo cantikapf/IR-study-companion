@@ -115,10 +115,6 @@ Economic globalization was driven by economic, technological and political devel
 
 In summary, the period since the end of the Cold War has seen dramatic economic globalization and integration, with both benefits and costs. States have less control while markets and multinationals have gained power. Managing the rapid pace of change and tackling negative impacts will be key challenges going forward.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Economic Globalization" def1="Increasing interconnectedness of national economies through trade and finance" term2="Multinational Corporations (MNCs)" def2="Companies operating in multiple countries, driving global economic integration" term3="Financial Integration" def3="Increased mobility of capital across borders, driven by deregulation and new instruments" term4="Global Supply Chains" def4="International networks of production and distribution, facilitated by globalization" %}
 
 ### Knowledge Check

@@ -161,9 +161,6 @@ The diplomatic failures of the interwar architecture directly influenced the ins
 
 The catastrophic carnage shattered Enlightenment narratives of linear historical progress. Disillusioned modernist literature—epitomized by Siegfried Sassoon, Wilfred Owen, and Erich Maria Remarque (*All Quiet on the Western Front*)—along with the visceral anti-war paintings of Otto Dix, documented the alienation of the "Lost Generation," permanently altering aesthetic, philosophical, and moral conceptions of organized violence.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Militarism" def1="European powers heavily armed, building militaries before 1914, creating distrust and tension." term2="Trench Warfare" def2="Stalemate combat from fortified ditches, characterized by high casualties and harsh battlefield conditions." term3="Unrestricted Submarine Warfare" def3="German policy of sinking merchant ships without warning, prompting US entry into WWI." term4="Treaty of Versailles" def4="Post-WWI treaty imposing harsh terms on Germany, fueling resentment and contributing to WWII." %}
 
 ### Knowledge Check

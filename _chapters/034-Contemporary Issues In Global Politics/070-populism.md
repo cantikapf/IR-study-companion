@@ -131,8 +131,6 @@ Community organizing and civic participation can mobilize people power as a coun
 
 Dialogue, education, and awareness campaigns can reinforce shared values of diversity, tolerance, cooperation across differences, and respect for minority rights. Populism thrives on division, so initiatives that bring people together and highlight similarities rather than differences are important. Platforms for marginalized voices and efforts to increase understanding across groups counters the divisive 'us vs them' rhetoric of populists.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Populism" def1="A range of political stances emphasizing the interests of 'the people' against 'the elite'" term2="Charismatic Leadership" def2="A strong, personalistic leadership style often used by populist leaders" term3="Majoritarianism" def3="A political approach prioritizing the will of the majority over minority rights" term4="Demagoguery" def4="Using emotional appeals and simple language to gain mass support" %}
 
 ### Knowledge Check

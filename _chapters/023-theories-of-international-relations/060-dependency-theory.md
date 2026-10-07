@@ -103,11 +103,6 @@ Dependency theory has some critics who say it oversimplifies the reasons why Thi
 
 Even with these problems, dependency theory has given us new ways to look at the real world of international political economy. It has also helped us understand why some Third World countries aren't developing as much as they could, and it has raised the question of who is responsible for that.
 
-
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Dependency Theory" def1="Explains underdevelopment through external factors and global inequality" term2="Center-Periphery Structure" def2="Global capitalist economy division between developed and underdeveloped countries" term3="Unequal Exchange" def3="Periphery's raw materials for center's high-value manufactured goods" term4="Modernization Theory" def4="Focuses on internal factors as causes of underdevelopment" %}
 
 ### Knowledge Check

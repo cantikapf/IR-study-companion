@@ -85,10 +85,6 @@ There are divergent conceptions of what constitutes a theory in international re
 
 There are divergent views on issues like objectivity, theory testing, and the relationship between theory and practice. This underscores the importance of considering meta-theoretical issues and assumptions in evaluating IR theories. Different conceptions of theory play crucial roles in shaping the IR discipline.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Ontology" def1="Nature of reality and social world building blocks" term2="Epistemology" def2="Study of knowledge and objective reality" term3="Positivism" def3="Philosophy assuming objective reality and empirical knowledge" term4="Post-positivism" def4="Approach questioning objective reality and empirical knowledge" %}
 
 ### Knowledge Check

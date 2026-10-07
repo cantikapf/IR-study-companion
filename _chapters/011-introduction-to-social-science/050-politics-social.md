@@ -127,10 +127,6 @@ Within democracies, challenges remain in balancing majority interests with minor
 
 The intricacies of human relations, organizational behavior and political structures underline the importance of ongoing study. With thoughtful analysis, we can work toward more just, equitable and responsive forms of leadership and governance at all levels of society.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Power" def1="The capacity of individuals or groups to exert their will over others, even against resistance (Max Weber)." term2="Legitimacy" def2="The belief that an individual or institution has a valid right to wield power." term3="Governmentality" def3="Managing human conduct through dispersed yet coordinated efforts across society (Michel Foucault)." term4="Pluralism vs Elite Theory" def4="Pluralism sees power dispersed among interest groups; Elite theory sees power concentrated in ruling minorities." %}
 
 ### Knowledge Check

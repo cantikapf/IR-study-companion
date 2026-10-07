@@ -122,10 +122,6 @@ Over time, ASEAN evolved from a forum for cooperation to an engine for regional 
 
 Realizing the ASEAN Community vision requires commitment from all member states as well as engagement with stakeholders across sectors. ASEAN has become an important platform for member states to manage relations, pursue shared interests, and elevate the region’s voice in global affairs. While challenges remain, ASEAN has and will continue to play a vital role in Southeast Asia's development story.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="ASEAN" def1="Association of Southeast Asian Nations regional cooperation organization" term2="Bangkok Declaration" def2="Founding document establishing ASEAN in 1967" term3="ASEAN Community" def3="Integrated regional bloc of ASEAN member states" term4="Non-interference" def4="ASEAN principle of not interfering in member states' internal affairs" %}
 
 ### Knowledge Check

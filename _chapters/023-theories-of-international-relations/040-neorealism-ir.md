@@ -65,9 +65,6 @@ The rapid economic growth and naval expansion of the People's Republic of China 
 2. **The Defensive Realist View**: Suggests that nuclear deterrence (second-strike capabilities) and the massive economic costs of disrupted maritime commerce create powerful disincentives against great-power war. Balancing coalitions will naturally constrain Chinese adventurism without requiring catastrophic military confrontation.
 3. **Thucydides's Trap (Graham Allison, 2017)**: Analyzing 16 historical cases over 500 years where a rising power threatened to displace an established ruling hegemon, Allison found that 12 resulted in war. The structural dynamic is driven by the rising power's growing entitlement and the incumbent's mounting fear of displacement.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Anarchic System" def1="International system with no central authority" term2="Neorealism" def2="Theory emphasizing competitive nature of international system" term3="Power Politics" def3="States' pursuit of material capabilities for security" term4="Self-Help Environment" def4="States' reliance on own capabilities for survival" %}
 
 ### Knowledge Check

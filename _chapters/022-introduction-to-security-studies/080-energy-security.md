@@ -50,9 +50,6 @@ Developing renewable energy sources like solar, wind, hydro, geothermal, and adv
 
 Reducing energy consumption is another strategy, given inelastic supply. This could involve improving efficiency, limiting activities that consume fossil fuels, or implementing expensive carbon capture and filtering technologies. But curbing consumption presents economic and political hurdles, as societies resist conserving energy. Citizens accustomed to abundant, cheap energy may oppose measures that alter lifestyles or reduce economic growth.
 
-
----
-### Interactive Learning 
 {% include flashcards.html term1="Energy Security" def1="Access to reliable, affordable, and sustainable energy resources" term2="Renewable Energy" def2="Energy from sources like solar, wind, hydro, and geothermal" term3="Energy Insecurity" def3="Vulnerability to disruptions in energy supply and access" term4="Global Energy Supply System" def4="Complex network of energy production, transportation, and distribution" %}
 
 ### Knowledge Check

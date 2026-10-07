@@ -118,10 +118,6 @@ Several developing countries also view developed country policies on issues like
 
 The stalled Doha talks and tensions between the developed and developing world have diminished the negotiating function of the WTO. Its dispute settlement system remains active but is facing criticism. The future path of the organization remains uncertain until major players can bridge differences on development policies and synchronize their trade agendas.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Hegemonic Stability Theory" def1="Explains shifts in open and closed trade periods based on power distribution" term2="Market Liberalism" def2="Open, liberal trade leads to greater prosperity and improved living standards" term3="Non-Discrimination" def3="Provides equal trading opportunities for WTO members" term4="Intergovernmental Bargaining" def4="Primary decision-making process through negotiations between member governments" %}
 
 ### Knowledge Check

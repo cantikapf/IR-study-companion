@@ -52,8 +52,6 @@ While global aid was vital, the Indonesian government insisted on leading the re
 
 Overall, the scale of devastation wrought by the tsunami gave impetus to end conflict and rebuild both physically and politically in Aceh. It opened a window of opportunity that Indonesia and GAM seized, with major assistance from global partners. The tsunami disaster catalyzed the historic Helsinki Memorandum of Understanding (MoU) signed on August 15, 2005, between the Government of Indonesia and the Free Aceh Movement (GAM)—mediated by former Finnish President Martti Ahtisaari and the Crisis Management Initiative (CMI)—demonstrating how catastrophic exogenous shocks can create transformative windows of opportunity for conflict resolution.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Post-Disaster Political Spaces" def1="Moments when underlying issues and tensions are brought to the surface." term2="Disaster Politics" def2="The intersection of natural disasters and political conditions." term3="Critical Juncture" def3="A disaster as a catalyst for irreversible political change." term4="Accelerated Status Quo" def4="Disasters accelerate existing political tensions and trajectories." %}
 
 ### Knowledge Check

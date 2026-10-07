@@ -232,9 +232,6 @@ Parliamentary diplomacy refers to international activities undertaken by parliam
 
 It is a growing phenomenon worldwide, with over 130 International Parliamentary Institutions (IPIs) and numerous parliamentary entities involved in international relations. Initially, the term was used to denote a specific form of diplomacy, conference diplomacy, but it has evolved to encompass a wide range of diplomatic activities. The concept of parliamentary diplomacy is still evolving, and there are numerous important and problematic issues that need to be addressed.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Bilateral Diplomacy" def1="Conduct of relations between two sovereign states" term2="Multilateral Diplomacy" def2="Coordinating diplomatic activities between multiple countries" term3="Negotiation" def3="Process by which parties with different interests reach agreements" term4="Mediation" def4="Impartial third party facilitates communication and negotiation" %}
 
 ### Knowledge Check

@@ -117,10 +117,6 @@ However, there are some limitations to this principle:
 
 So while Pacta Sunt Servanda upholds the sanctity of treaties, states still have ways to limit, change or end treaty commitments under specific circumstances allowed by international law. The principles of good faith and pacta sunt servanda work together to promote a rules-based international order.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Jus Cogens" def1="Peremptory norm of general international law" term2="Pacta Sunt Servanda" def2="Agreements must be obeyed, binding on consenting states" term3="Treaty" def3="Binding agreement between states governed by international law" term4="Ratification" def4="State's consent to be bound by a treaty" %}
 
 ### Knowledge Check

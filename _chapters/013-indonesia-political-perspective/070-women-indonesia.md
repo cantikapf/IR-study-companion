@@ -133,10 +133,6 @@ While Indonesian women have made important strides, more work remains to foster 
 
 The path forward requires a comprehensive, coordinated effort across all levels of society. From grassroots advocacy to policy reforms, impactful change hinges on a collective commitment to gender equity as a core value. With ongoing persistence and unity, Indonesian women can achieve equal representation and voice in the political realm.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Patriarchal Norms" def1="Societal norms that prioritize male dominance and limit female roles" term2="Quota System" def2="Policy requiring a minimum percentage of female candidates or leaders" term3="Political Awareness" def3="Understanding of political issues and processes among citizens" term4="Internal Party Dynamics" def4="Power structures and biases within political parties that affect women" %}
 
 ### Knowledge Check

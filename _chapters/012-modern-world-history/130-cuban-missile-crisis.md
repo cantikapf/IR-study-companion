@@ -97,9 +97,6 @@ While the Cuban Missile Crisis highlighted the dangers of uncontrolled nuclear p
 
 Despite recurrent attempts at diplomacy and arms control, neither side was ready to concede their nuclear arsenals or abandon their core ideologies. Consequently, the nuclear arms race persisted as an ever-dangerous fixture of the Cold War landscape, casting a shadow over global politics for decades. Its legacy of proliferation and mutually ensured destruction would linger long after the Cold War ended.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Nuclear Arms Race" def1="Fierce competition between the US and USSR for nuclear supremacy during the Cold War." term2="US Nuclear Monopoly" def2="Period after WWII when the United States was the sole possessor of nuclear weapons." term3="Mutual Assured Destruction (MAD)" def3="Deterrent theory where a nuclear attack results in catastrophic consequences for both sides." term4="Cuban Missile Crisis" def4="1962 confrontation over Soviet missiles in Cuba, bringing the world to the brink of nuclear war." %}
 
 ### Knowledge Check

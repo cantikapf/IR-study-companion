@@ -127,9 +127,6 @@ Diplomatic immunity also became an important ethical and legal concept. The Vien
 
 The rank system and immunity uphold diplomatic ethics by facilitating diplomacy between countries. By protecting the ability of diplomats to conduct their duties, these norms aim to encourage open communication and mediation of conflicts. Adhering to diplomatic ethics has been crucial in the history of diplomacy.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Diplomacy" def1="Management of relationships and affairs between international actors" term2="Proxenos" def2="Representative of a city-state in ancient Greece with diplomatic immunity" term3="Diplomatic Immunity" def3="Protection for diplomats from local law while carrying out duties" term4="Foreign Ministry" def4="Institution devoted to managing a country's foreign affairs" %}
 
 ### Knowledge Check

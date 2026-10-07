@@ -143,9 +143,6 @@ The outbreak of World War II represented the systemic breakdown of the interwar 
 
 The catastrophe of 1939 established the enduring IR paradigm of "the Munich Analogy," warning that unilateral concessions to aggressive revisionist powers erode deterrence and guarantee larger-scale systemic war.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Treaty of Versailles" def1="Post-WWI treaty imposing punitive terms on Germany, fueling resentment and instability." term2="Authoritarian Regimes" def2="Governments like Nazi Germany and Fascist Italy emphasizing extreme nationalism, militarism, and expansion." term3="Policy of Appeasement" def3="Concessions made to aggressive regimes (e.g., Hitler) to avoid war, which emboldened further aggression." term4="Blitzkrieg" def4="German 'lightning war' strategy using fast-moving tanks, ground troops, and air support for rapid invasions." %}
 
 ### Knowledge Check

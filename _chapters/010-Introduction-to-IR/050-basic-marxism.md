@@ -112,9 +112,6 @@ The Marxist and critical traditions remain indispensable for diagnosing the stru
 - **Global Stratification**: Wallerstein's Core-Semiperiphery-Periphery framework clarifies why peripheral economies remain trapped in commodity dependence and debt cycles.
 - **Hegemonic Legitimation**: Gramsci and Cox explain how international institutions manufacture consent, framing particular great-power interests as universal global public goods.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Marxism in IR" def1="Economic factors and class conflict are the primary drivers of societal development and world politics." term2="Historical Materialism" def2="Economic development (base) fundamentally shapes societal change, including politics, law, and culture (superstructure)." term3="Cultural Hegemony" def3="Ruling class imposes its worldview to gain consent from masses, normalizing its values and interests." term4="World Systems Theory" def4="Divides the global economy into exploitative core, periphery, and semi-periphery zones." %}
 
 ### Knowledge Check

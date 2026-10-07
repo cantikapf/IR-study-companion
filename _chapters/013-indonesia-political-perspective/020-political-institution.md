@@ -319,10 +319,6 @@ The judicial system in Indonesia underwent significant reforms following the end
 
 These post-reformation judicial institutions have played important oversight, anti-corruption and public advocacy roles in the years since democratic reforms began in Indonesia.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Snouck Hurgronje system" def1="Dutch policy co-opting indigenous elite" term2="Patronage systems" def2="Exchange of favors for political support" term3="Guided Democracy" def3="Sukarno's system of controlled democracy" term4="Pancasila" def4="Indonesia's national philosophical foundation" %}
 
 ### Knowledge Check

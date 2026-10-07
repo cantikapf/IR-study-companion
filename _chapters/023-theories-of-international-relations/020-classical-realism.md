@@ -108,9 +108,6 @@ The 2003 invasion of Iraq serves as a textbook demonstration of classical realis
 
 As classical realism cautions, power decoupled from prudence, legitimacy, and an awareness of human fallibility inexorably generates systemic blowback.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Groupism" def1="Significance of human groups, especially nation-states, for survival" term2="Egoism" def2="Self-interest as driving motivator behind political behavior" term3="Power-centrism" def3="Power inequalities as fundamental feature of politics and human affairs" term4="Anarchy" def4="Lack of overarching authority in international system" %}
 
 ### Knowledge Check

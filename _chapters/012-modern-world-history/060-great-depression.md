@@ -108,9 +108,6 @@ In the absence of a stabilizing hegemon, the international trading and monetary 
 - **Monetary Collapse & Autarky**: The abandonment of the Gold Standard triggered competitive currency devaluations and the division of the world into currency blocs (the Sterling Area, the Dollar bloc, and the Gold bloc).
 - **Geopolitical Repercussions**: In Weimar Germany and Imperial Japan, economic strangulation dismantled democratic governance, discredited internationalist liberal elites, and empowered militaristic, expansionist regimes pursuing territorial autarky (*Lebensraum* and the Greater East Asia Co-Prosperity Sphere), directly propelling the international system toward World War II.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Great Depression" def1="Severe global economic downturn (1929-1939) characterized by mass unemployment, poverty, and corporate failures." term2="Stock Market Crash of 1929" def2="Pivotal event; sudden collapse of U.S. stock prices, triggering panic selling and economic instability." term3="New Deal" def3="FDR's series of federal programs and reforms providing relief, recovery, and reform during the Depression." term4="Federal Deposit Insurance Corporation (FDIC)" def4="New Deal agency insuring bank deposits, restoring public trust in the U.S. banking system." %}
 
 ### Knowledge Check

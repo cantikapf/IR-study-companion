@@ -121,10 +121,6 @@ However, there are still areas needing improvement when it comes to development 
 - Improving collection of sex-disaggregated data. Better gender statistics are essential for evidence-based policymaking.
 - Increasing accountability and monitoring & evaluation of gender impacts. This can help identify what works and what doesn't in advancing women economically.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Feminization of Poverty" def1="Increasing prevalence of women among the world's poor" term2="Gender Pay Gap" def2="Difference in earnings between men and women" term3="Unpaid Care Work" def3="Uncompensated domestic and care work, mainly done by women" term4="Women's Economic Empowerment" def4="Enabling women to participate fully in the economy" %}
 
 ### Knowledge Check

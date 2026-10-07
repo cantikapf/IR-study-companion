@@ -114,10 +114,6 @@ ERM II works through a fixed currency exchange rate with standard fluctuations b
 
 Joining ERM II is voluntary for non-euro EU members. Participating in the mechanism for at least two years without severe tensions is one of the convergence criteria for adopting the euro. As of January 2023, the Danish krone and the Bulgarian lev are the two currencies participating in ERM II.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="International Monetary System" def1="Facilitates economic transactions between countries using national currencies" term2="Exchange Rate" def2="Relative price of one currency in terms of another" term3="Balance of Payments" def3="Tracks international transactions between a country and the rest of the world" term4="Bretton Woods System" def4="Fixed exchange rate system established in 1944 for global economic stability" %}
 
 ### Knowledge Check

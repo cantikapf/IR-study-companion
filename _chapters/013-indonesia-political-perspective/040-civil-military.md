@@ -112,10 +112,6 @@ However, challenges remain due to the military's vast economic interests, suspic
 
 The post-authoritarian period has seen gradual improvements in civil-military balance under leaders like Megawati, though more progress is needed to consolidate democratic norms. As Indonesia evolves politically, managing the military's role in an increasingly pluralistic landscape will be an ongoing task requiring deft leadership and negotiation. Ultimately, a constructive civil-military dynamic that respects democratic values will be key to Indonesia's future as a mature democracy.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Dwifungsi" def1="Indonesian military's dual role in politics and security" term2="Civil-Military Relations" def2="Interactions between military, political, and civilian actors" term3="Secular Nationalism" def3="Ideology prioritizing national unity over religious or ethnic ties" term4="Democratic Reforms" def4="Changes to increase accountability and civilian oversight of military" %}
 
 ### Knowledge Check

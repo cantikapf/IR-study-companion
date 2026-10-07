@@ -105,9 +105,6 @@ In their seminal framework, Martha Finnemore and Kathryn Sikkink (1998) demonstr
 
 By elucidating this cycle, constructivism explains how revolutionary changes in world politics—such as the anti-apartheid movement, the global ban on anti-personnel landmines (the 1997 Ottawa Treaty), and the Responsibility to Protect (R2P)—reshaped state interests through normative socialization rather than great-power coercion.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Constructivism" def1="IR theory: international politics shaped by ideas, norms, knowledge, and shared meanings." term2="Social Construction" def2="Process by which shared ideas, norms, and meanings create and define social reality in IR." term3="Agent-Structure Co-constitution" def3="Agents shape structures, which in turn shape agents, in a dynamic, mutually influential relationship." term4="Logic of Appropriateness" def4="Actors behave based on internalized identities, rules, and norms, seeking socially legitimate actions." %}
 
 ### Knowledge Check

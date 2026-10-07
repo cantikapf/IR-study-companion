@@ -89,10 +89,6 @@ As findings emerge, students encounter additional choices in analyzing and inter
 
 In essence, research is a series of decisions at every juncture. The ability to scrutinize options and articulate justifications is paramount for crafting a coherent, robust, and relevant research essay. Beginning with a well-defined and focused research question lays a sturdy foundation, empowering students to navigate the complexities of research through thoughtful and strategic decision-making.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Empiricism" def1="Research approach using scientific methods and evidence-based analysis" term2="Interpretivism" def2="Research approach focusing on understanding meanings and subjective experiences" term3="Epistemology" def3="Study of the nature, sources, and limits of knowledge" term4="Positivism" def4="Philosophy emphasizing scientific method and objective reality" %}
 
 ### Knowledge Check

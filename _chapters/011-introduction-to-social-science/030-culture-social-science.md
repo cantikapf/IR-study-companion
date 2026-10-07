@@ -30,9 +30,6 @@ Analyzing diverse societies requires navigating profound methodological and ethi
 
 In international relations, this debate directly informs global discussions on universal human rights versus regional sovereign autonomy (such as the 'Asian Values' debate in post-colonial diplomacy).
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Social Contract" def1="An agreement among community members or between the community and the Sovereign." term2="Multiculturalism" def2="The tolerance of different cultures within a political unit." term3="Ethnocentrism" def3="The tendency to judge other cultures by ones own standards." term4="Cultural Relativism" def4="Asserts the equal validity of cultures and avoids judgment based on external standards." %}
 
 ### Knowledge Check

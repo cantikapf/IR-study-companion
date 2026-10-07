@@ -89,10 +89,6 @@ Focus groups serve various research purposes, including:
 - Implementation
 - Assessment
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Observation" def1="Systematic method of watching and recording behavior in natural settings" term2="Participant Observation" def2="Researcher participates in group activities to gain insight" term3="Focus Group" def3="Small group discussion guided by a facilitator to gather perspectives" term4="Non-participant Observation" def4="Researcher observes from an outsider's perspective without involvement" %}
 
 ### Knowledge Check

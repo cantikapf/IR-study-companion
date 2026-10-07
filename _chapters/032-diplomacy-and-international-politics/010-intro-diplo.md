@@ -71,8 +71,6 @@ Diplomacy has changed in several key ways in the modern era:
 - **More levels of engagement**: Diplomatic activity now takes place at the local, domestic, bilateral, regional, and global levels. Globalization has reduced the divisions between these levels.
 - **Developments in foreign relations apparatus**: The infrastructure and processes of foreign relations have evolved, including new technologies, expanded bureaucracy, and more robust international institutions.
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Diplomacy" def1="Communication and negotiation between countries to achieve foreign policy goals" term2="Negotiation" def2="Discussions to identify common interests and achieve mutually beneficial outcomes" term3="Foreign Policy" def3="Strategies and actions taken by governments to achieve objectives in the international arena" term4="International Law" def4="Rules and principles governing international conduct and relations between states" %}
 
 ### Knowledge Check

@@ -72,10 +72,6 @@ Syria provides an example of the immense challenges faced in establishing govern
 
 Additionally, there is debate over whether Western countries have the commitment required for long-term state-building efforts. The experiences in Iraq and Afghanistan demonstrated that establishing security, governance, and rule of law requires an extended presence and investment over many years, if not decades. However, fatigue over those long wars has made Western countries wary of another open-ended commitment. Syrian reconstruction will depend on a political settlement between warring parties, after which state-building can begin in earnest. But it remains to be seen whether outside powers will dedicate adequate resources and time for governance to take root. The risk is that inability to establish order leads to future cycles of conflict and state failure in Syria.
 
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="State Failure" def1="A state unable to perform basic duties and responsibilities" term2="State-Building Interventions" def2="Programs to build or strengthen state institutions and capacity" term3="Liberal View" def3="Perspective that state failure is due to lack of functioning institutions" term4="Failed State" def4="A state that has lost control over territory, economy, and citizens" %}
 
 ### Knowledge Check

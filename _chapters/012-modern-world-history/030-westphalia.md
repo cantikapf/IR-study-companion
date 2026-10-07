@@ -119,9 +119,6 @@ In the 21st century, the Westphalian principle of inviolable domestic jurisdicti
 
 Despite these evolving normative and material challenges, the territorial sovereign state remains the primary legal subject of international law, the exclusive holder of lawful coercive power, and the foundational building block of the global multilateral architecture.
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Westphalian System" def1="Global system of sovereign states controlling domestic affairs and territory." term2="Sovereignty" def2="States have full legal authority and autonomy over their citizens and territory." term3="Territoriality" def3="States have defined borders and jurisdiction; external actors cannot intervene domestically." term4="Peace of Westphalia" def4="1648 treaties ending the Thirty Years War, establishing principles of state sovereignty." %}
 
 ### Knowledge Check

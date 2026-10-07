@@ -82,11 +82,6 @@ Neoliberalism seeks to understand how this cooperation is initiated and maintain
 
 The study of how institutions support cooperation - while imperfect - provides insight into building a more stable international order. Neoliberalism accepts the problems and conflicts inherent to global politics. Yet it ultimately asserts cooperation is achievable if institutional designs evolve to promote state interests. Anarchy did not mean the end of collaboration.
 
-
-
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Neoliberalism" def1="Theory focusing on international institutions facilitating cooperation between states" term2="Anarchy" def2="Decentralized nature of international system with no overarching authority" term3="Defection" def3="Failure of states to uphold their end of an agreement" term4="Free-riding" def4="States benefiting from cooperative efforts without sharing costs" %}
 
 ### Knowledge Check

@@ -80,8 +80,6 @@ Waltz's analysis argues that the causes of conflict and cooperation exist at thr
 - Distinction between alliance and security institution is for example, NATO persisted after the end of the Cold War because it was not a simple alliance; rather it was a security institution
 - Two ideal type security system: alliance and community of law
 
----
-### Interactive Learning 
 {% include flashcards.html term1="Liberalism" def1="A political ideology promoting individual freedom and peace between states" term2="Commercial Liberalism" def2="Theory that economic interdependence reduces the likelihood of war" term3="Democratic Peace Theory" def3="Democracies are less likely to initiate conflicts against other democracies" term4="Neoliberal Institutionalism" def4="International institutions promote peace through cooperation and trust-building" %}
 
 ### Knowledge Check
