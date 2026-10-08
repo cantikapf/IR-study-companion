@@ -1,287 +1,513 @@
 <style>
-.sim-tn-container {
-    background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151;
-}
-.sim-tn-panel {
-    background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151;
-}
-.sim-tn-header {
-    border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px;
-}
-.sim-tn-header h3 {
-    margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;
-}
-.sim-tn-header p {
-    margin: 10px 0 0 0; color: #d1d5db; font-size: 0.95rem; line-height: 1.5;
-}
-.sim-tn-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;
+/* Lab 06 — Two-Table Pressure: Putnam's Ratification Maze */
+#treaty-negotiation-sim .sim-tn-dual-track {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
 }
 @media (max-width: 768px) {
-    .sim-tn-grid { grid-template-columns: 1fr; }
+  #treaty-negotiation-sim .sim-tn-dual-track { grid-template-columns: 1fr; }
 }
-.sim-tn-form-group {
-    margin-bottom: 15px;
+#treaty-negotiation-sim .sim-tn-track-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  padding: 14px 16px;
 }
-.sim-tn-form-group label {
-    display: block; margin-bottom: 5px; color: #d1d5db; font-weight: bold;
+#treaty-negotiation-sim .sim-tn-track-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.sim-tn-select {
-    width: 100%; padding: 10px; border-radius: 6px; background: #1f2937; border: 1px solid #4b5563; color: white; font-family: inherit;
+#treaty-negotiation-sim .sim-tn-track-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--lms-ink-primary);
 }
-.sim-tn-constituent {
-    display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #374151;
+#treaty-negotiation-sim .sim-tn-alloc-box {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md, 8px);
+  padding: 16px 20px;
+  margin-bottom: 16px;
 }
-.sim-tn-constituent:last-child {
-    border-bottom: none;
+#treaty-negotiation-sim .sim-tn-alloc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
 }
-.sim-tn-constituent-name {
-    display: flex; align-items: center; gap: 8px; font-weight: 500;
+@media (max-width: 600px) {
+  #treaty-negotiation-sim .sim-tn-alloc-grid { grid-template-columns: 1fr; }
 }
-.sim-tn-badge {
-    padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; text-transform: uppercase;
+#treaty-negotiation-sim .sim-tn-alloc-btn {
+  padding: 12px 10px;
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  color: var(--lms-ink-primary);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.sim-tn-badge.success { border: 1px solid #10b981; color: #10b981; background: rgba(16,185,129,0.1); }
-.sim-tn-badge.failure { border: 1px solid #ef4444; color: #ef4444; background: rgba(239,68,68,0.1); }
-.sim-tn-badge.warning { border: 1px solid #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.1); }
-
-.sim-tn-btn {
-    padding: 12px 15px; background: #374151; color: white; border: 1px solid #4b5563; border-radius: 6px; font-size: 1rem; cursor: pointer; transition: all 0.2s; width: 100%; font-weight: bold; margin-bottom: 10px;
+#treaty-negotiation-sim .sim-tn-alloc-btn:hover:not(:disabled) {
+  border-color: var(--lab-accent);
+  background: var(--lab-accent-soft);
+  transform: translateY(-2px);
 }
-.sim-tn-btn:hover {
-    background: #4b5563; border-color: #9ca3af; transform: translateY(-2px);
+#treaty-negotiation-sim .sim-tn-alloc-label {
+  font-weight: 700;
+  font-size: 0.84rem;
 }
-.sim-tn-btn-primary {
-    background: #3b82f6; border-color: #60a5fa;
+#treaty-negotiation-sim .sim-tn-alloc-sub {
+  font-size: 0.74rem;
+  color: var(--lms-ink-secondary);
 }
-.sim-tn-btn-primary:hover {
-    background: #2563eb; border-color: #93c5fd;
-}
-
-.sim-tn-result {
-    margin-top: 20px; padding: 20px; border-radius: 8px; display: none; animation: simTnFadeIn 0.5s;
-}
-.sim-tn-result.success { border: 1px solid #10b981; background: rgba(16,185,129,0.1); }
-.sim-tn-result.failure { border: 1px solid #ef4444; background: rgba(239,68,68,0.1); }
-.sim-tn-result h4 { margin: 0 0 10px 0; font-size: 1.2rem; }
-.sim-tn-result p { margin: 0 0 15px 0; line-height: 1.5; color: #d1d5db; }
-
-.sim-tn-zopa-vis {
-    margin-top: 15px; height: 30px; background: #1f2937; border-radius: 15px; position: relative; overflow: hidden; border: 1px solid #374151;
-}
-.sim-tn-zopa-label {
-    position: absolute; font-size: 0.75rem; color: #9ca3af; top: 7px; z-index: 10;
-}
-.sim-tn-zopa-you {
-    position: absolute; top: 0; bottom: 50%; background: rgba(96,165,250,0.5); border-bottom: 1px solid #1f2937; width: 40%; left: 10%;
-}
-.sim-tn-zopa-coalton {
-    position: absolute; top: 50%; bottom: 0; background: rgba(245,158,11,0.5); width: 60%; left: 30%;
-}
-.sim-tn-zopa-overlap {
-    position: absolute; top: 0; bottom: 0; background: rgba(16,185,129,0.6); width: 20%; left: 30%; display: none;
-}
-
-@keyframes simTnFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
-<div class="sim-tn-container" id="treaty-negotiation-sim">
-    <div class="sim-tn-header">
-        <h3>📜 Simulation: The Two-Level Game Negotiator</h3>
-        <p>You are the Lead Negotiator for 'Riverland,' negotiating a bilateral climate treaty with 'Coalton.' But beware — any deal you sign at the international table must also survive ratification by your own domestic constituents. Can you find the elusive Zone of Possible Agreement?</p>
+<div class="lab-shell" id="treaty-negotiation-sim" data-cat="strategy">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 06</span>
+      <span class="lab-kicker-track">CASE FILE · DIPLOMATIC STRATEGY</span>
+    </div>
+    <h3 class="lab-title">Two-Table Pressure: Putnam's Ratification Maze</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> 6 negotiation turns</span>
+      <span class="lab-meta-chip"><i class="fa fa-sliders" aria-hidden="true"></i> 2 AP twin-track budget</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
+    </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-tn-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>International diplomacy is never played on a single board. Under Robert Putnam's Two-Level Game model, a state leader must negotiate simultaneously with foreign counterparts at <strong>Level I</strong> (international table) and with domestic legislators, party factions, and lobbies at <strong>Level II</strong> (domestic ratification).</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are the Chief Diplomatic Envoy negotiating a high-stakes bilateral climate and trade accord over 6 turns. Each turn, you hold 2 Action Points (AP) to distribute across international bargaining and domestic constituency briefings.</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Master Negotiator:</strong> Ratify treaty with Zone of Possible Agreement (ZOPA) ≥ 70%.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Seasoned Diplomat:</strong> Ratify treaty with ZOPA between 45% and 69%.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0–1★ Involuntary Defection:</strong> Ratification defeated in domestic parliament or foreign walkout (ZOPA &lt; 45%).</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-balance-scale" aria-hidden="true"></i><span><strong>Twin-Track Skew Constraint:</strong> The Win-Set expands only when both tracks advance in balance (max 1-point skew). If Level I outpaces Level II, backbenchers revolt; if Level II outpaces Level I, foreign envoys walk out.</span></li>
+            <li><i class="fa fa-bolt" aria-hidden="true"></i><span><strong>6 Resource Turns:</strong> Allocate [2 Int / 0 Dom], [1 Int / 1 Dom], or [0 Int / 2 Dom] each turn.</span></li>
+            <li><i class="fa fa-eye" aria-hidden="true"></i><span><strong>Turn 4 SIGINT:</strong> Intercept overnight congressional poll data.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-tn-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Begin Two-Table Talks
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-tn-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-tn-hud-round">Turn 1 / 6</span>
+      <span class="lab-hud-chip" id="sim-tn-hud-zopa">Win-Set (ZOPA): <b id="sim-tn-val-zopa">0</b>%</span>
+      <span class="lab-hud-chip" id="sim-tn-hud-skew">Table Skew: Balanced (0)</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-tn-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-tn-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
     </div>
 
-    <div class="sim-tn-grid">
-        <!-- Left Panel: International Negotiation -->
-        <div class="sim-tn-panel">
-            <h4 style="margin-top:0; margin-bottom: 15px; color:#60a5fa;">International Negotiation Table</h4>
-            
-            <div class="sim-tn-form-group">
-                <label for="sim-tn-emissions">Emission Reduction Target</label>
-                <select id="sim-tn-emissions" class="sim-tn-select">
-                    <option value="10">10%</option>
-                    <option value="25">25%</option>
-                    <option value="40">40%</option>
-                    <option value="50">50%</option>
-                </select>
-            </div>
-            
-            <div class="sim-tn-form-group">
-                <label for="sim-tn-fund">Green Fund Contribution</label>
-                <select id="sim-tn-fund" class="sim-tn-select">
-                    <option value="1">$1B</option>
-                    <option value="5">$5B</option>
-                    <option value="10">$10B</option>
-                    <option value="20">$20B</option>
-                </select>
-            </div>
-            
-            <div class="sim-tn-form-group">
-                <label for="sim-tn-compliance">Compliance Mechanism</label>
-                <select id="sim-tn-compliance" class="sim-tn-select">
-                    <option value="voluntary">Voluntary Reporting</option>
-                    <option value="review">Independent Review</option>
-                    <option value="binding">Binding with Penalties</option>
-                </select>
-            </div>
-            
-            <button class="sim-tn-btn sim-tn-btn-primary" onclick="simTnProposeTreaty()">Propose Treaty</button>
+    <div class="lab-stage" style="padding: 18px 22px;">
+
+      <!-- Win-Set Meter -->
+      <div style="margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 4px;">
+          <span>Ratification Overlap (Win-Set Size)</span>
+          <span style="font-weight: 700; color: var(--lab-accent);" id="sim-tn-zopa-text">0% Overlap</span>
+        </div>
+        <div class="lab-meter">
+          <div class="lab-meter-fill" id="sim-tn-meter-zopa" style="width: 0%;"></div>
+          <span class="lab-meter-tick" style="left: 45%;"></span>
+          <span class="lab-meter-tick lab-meter-tick--high" style="left: 70%;"></span>
+        </div>
+      </div>
+
+      <!-- Dual Tracks Display -->
+      <div class="sim-tn-dual-track">
+        <div class="sim-tn-track-card" id="sim-tn-card-int">
+          <div class="sim-tn-track-header">
+            <span class="sim-tn-track-title"><i class="fa fa-globe" aria-hidden="true" style="color: #3b82f6;"></i> Level I: International Table</span>
+            <span class="lab-meta-chip" id="sim-tn-val-lvl1" style="font-weight: 700;">0 pts</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--lms-ink-secondary); margin-bottom: 8px;">
+            Bilateral draft commitments, emission reduction schedules, and compliance arbitration.
+          </div>
+          <div class="lab-meter">
+            <div class="lab-meter-fill" id="sim-tn-bar-lvl1" style="width: 0%; background: #3b82f6;"></div>
+          </div>
         </div>
 
-        <!-- Right Panel: Domestic Win-Set Monitor -->
-        <div class="sim-tn-panel">
-            <h4 style="margin-top:0; margin-bottom: 15px; color:#f59e0b;">Domestic Win-Set Monitor</h4>
-            
-            <div class="sim-tn-constituent">
-                <div class="sim-tn-constituent-name">🏭 Industry Lobby</div>
-                <div id="sim-tn-status-industry" class="sim-tn-badge success">SUPPORTS</div>
-            </div>
-            
-            <div class="sim-tn-constituent">
-                <div class="sim-tn-constituent-name">🌿 Environmental NGOs</div>
-                <div id="sim-tn-status-env" class="sim-tn-badge failure">OPPOSES</div>
-            </div>
-            
-            <div class="sim-tn-constituent">
-                <div class="sim-tn-constituent-name">📊 Finance Ministry</div>
-                <div id="sim-tn-status-fin" class="sim-tn-badge success">SUPPORTS</div>
-            </div>
+        <div class="sim-tn-track-card" id="sim-tn-card-dom">
+          <div class="sim-tn-track-header">
+            <span class="sim-tn-track-title"><i class="fa fa-building" aria-hidden="true" style="color: #10b981;"></i> Level II: Domestic Ratification</span>
+            <span class="lab-meta-chip" id="sim-tn-val-lvl2" style="font-weight: 700;">0 pts</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--lms-ink-secondary); margin-bottom: 8px;">
+            Parliamentary committee hearings, industrial trade lobbies, and swing-district concessions.
+          </div>
+          <div class="lab-meter">
+            <div class="lab-meter-fill" id="sim-tn-bar-lvl2" style="width: 0%; background: #10b981;"></div>
+          </div>
         </div>
+      </div>
+
+      <!-- Action Points Allocator -->
+      <div class="sim-tn-alloc-box">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="margin: 0; font-size: 0.95rem; color: var(--lms-ink-primary);">
+            <i class="fa fa-sliders" aria-hidden="true"></i> Allocate Turn <span id="sim-tn-turn-number">1</span> Action Points (2 AP Total)
+          </h4>
+          <span class="lab-meta-chip" style="color: var(--lab-accent);">Available: 2 AP</span>
+        </div>
+
+        <div class="sim-tn-alloc-grid">
+          <button type="button" class="sim-tn-alloc-btn" onclick="window.simTnAction(2, 0)">
+            <span class="sim-tn-alloc-label">Level I Priority</span>
+            <span class="sim-tn-alloc-sub">2 AP International · 0 AP Domestic</span>
+          </button>
+          <button type="button" class="sim-tn-alloc-btn" onclick="window.simTnAction(1, 1)" style="border-color: var(--lab-accent);">
+            <span class="sim-tn-alloc-label">Balanced Diplomacy</span>
+            <span class="sim-tn-alloc-sub">1 AP International · 1 AP Domestic</span>
+          </button>
+          <button type="button" class="sim-tn-alloc-btn" onclick="window.simTnAction(0, 2)">
+            <span class="sim-tn-alloc-label">Level II Priority</span>
+            <span class="sim-tn-alloc-sub">0 AP International · 2 AP Domestic</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lab-log" id="sim-tn-log" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Envoy credentials accepted. Two-table session opened.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-tn-outcome" hidden>
+    <div class="lab-stars" id="sim-tn-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-tn-rank">Assessing Parliamentary Floor...</div>
+    <h3 class="lab-debrief-title" id="sim-tn-debrief-heading">Ratification Assessment</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Final Win-Set (ZOPA)</div>
+        <div class="lab-stat-val" id="sim-tn-stat-zopa">0%</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Level I Progress</div>
+        <div class="lab-stat-val" id="sim-tn-stat-lvl1">0 / 6</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Level II Progress</div>
+        <div class="lab-stat-val" id="sim-tn-stat-lvl2">0 / 6</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-tn-stat-best">0%</div>
+      </div>
     </div>
 
-    <!-- Results Container -->
-    <div id="sim-tn-result" class="sim-tn-result" aria-live="polite">
-        <h4 id="sim-tn-result-title"></h4>
-        <p id="sim-tn-result-text"></p>
-        
-        <div style="margin-bottom: 10px; font-weight: bold; font-size: 0.9em; color:#d1d5db;">Zone of Possible Agreement (ZOPA)</div>
-        <div class="sim-tn-zopa-vis">
-            <div class="sim-tn-zopa-label" style="left: 10px;">Your Win-Set</div>
-            <div class="sim-tn-zopa-you" id="sim-tn-zopa-you"></div>
-            <div class="sim-tn-zopa-label" style="right: 10px;">Coalton's Win-Set</div>
-            <div class="sim-tn-zopa-coalton" id="sim-tn-zopa-coalton"></div>
-            <div class="sim-tn-zopa-overlap" id="sim-tn-zopa-overlap"></div>
-        </div>
-        
-        <button class="sim-tn-btn" style="margin-top: 20px;" onclick="simTnRestart()">Restart Negotiation</button>
+    <div class="lab-reveal" id="sim-tn-reveal-body"></div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-tn-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Restart Negotiations
+      </button>
     </div>
+  </div>
+
 </div>
 
 <script>
 (function() {
-    const emissionsEl = document.getElementById('sim-tn-emissions');
-    const fundEl = document.getElementById('sim-tn-fund');
-    const complianceEl = document.getElementById('sim-tn-compliance');
-    
-    const indStatusEl = document.getElementById('sim-tn-status-industry');
-    const envStatusEl = document.getElementById('sim-tn-status-env');
-    const finStatusEl = document.getElementById('sim-tn-status-fin');
-    
-    const resultBox = document.getElementById('sim-tn-result');
-    const resultTitle = document.getElementById('sim-tn-result-title');
-    const resultText = document.getElementById('sim-tn-result-text');
-    
-    const zopaYou = document.getElementById('sim-tn-zopa-you');
-    const zopaCoalton = document.getElementById('sim-tn-zopa-coalton');
-    const zopaOverlap = document.getElementById('sim-tn-zopa-overlap');
+  'use strict';
 
-    function updateDomesticStatus() {
-        const e = parseInt(emissionsEl.value);
-        const f = parseInt(fundEl.value);
-        const c = complianceEl.value;
+  var state = {
+    turn: 1,
+    maxTurns: 6,
+    lvl1: 0,
+    lvl2: 0,
+    zopa: 0,
+    over: false
+  };
 
-        // Industry: opposes if e > 25 or c == binding
-        let indSupports = !(e > 25 || c === 'binding');
-        indStatusEl.textContent = indSupports ? 'SUPPORTS' : 'OPPOSES';
-        indStatusEl.className = 'sim-tn-badge ' + (indSupports ? 'success' : 'failure');
+  function $(id) { return document.getElementById(id); }
 
-        // Env NGOs: opposes if e < 40 or c == voluntary
-        let envSupports = !(e < 40 || c === 'voluntary');
-        envStatusEl.textContent = envSupports ? 'SUPPORTS' : 'OPPOSES';
-        envStatusEl.className = 'sim-tn-badge ' + (envSupports ? 'success' : 'failure');
+  function updateHUD() {
+    var turnVal = $('sim-tn-hud-round');
+    if (turnVal) turnVal.textContent = 'Turn ' + state.turn + ' / ' + state.maxTurns;
 
-        // Finance: opposes if f > 10
-        let finSupports = !(f > 10);
-        finStatusEl.textContent = finSupports ? 'SUPPORTS' : 'OPPOSES';
-        finStatusEl.className = 'sim-tn-badge ' + (finSupports ? 'success' : 'failure');
-        
-        return { indSupports, envSupports, finSupports };
+    var turnNum = $('sim-tn-turn-number');
+    if (turnNum) turnNum.textContent = state.turn;
+
+    var zopaVal = $('sim-tn-val-zopa');
+    if (zopaVal) zopaVal.textContent = state.zopa;
+
+    var zopaText = $('sim-tn-zopa-text');
+    if (zopaText) zopaText.textContent = state.zopa + '% Overlap';
+
+    var zopaMeter = $('sim-tn-meter-zopa');
+    if (zopaMeter) {
+      zopaMeter.style.width = Math.min(100, state.zopa) + '%';
+      if (state.zopa >= 70) zopaMeter.className = 'lab-meter-fill is-calm';
+      else if (state.zopa >= 45) zopaMeter.className = 'lab-meter-fill is-alert';
+      else zopaMeter.className = 'lab-meter-fill is-danger';
     }
 
-    function init() {
-        emissionsEl.addEventListener('change', updateDomesticStatus);
-        fundEl.addEventListener('change', updateDomesticStatus);
-        complianceEl.addEventListener('change', updateDomesticStatus);
-        updateDomesticStatus();
+    var skewVal = $('sim-tn-hud-skew');
+    var skew = state.lvl1 - state.lvl2;
+    if (skewVal) {
+      if (Math.abs(skew) <= 1) {
+        skewVal.textContent = 'Table Skew: Balanced (' + skew + ')';
+        skewVal.className = 'lab-hud-chip is-win';
+      } else if (skew > 1) {
+        skewVal.textContent = 'Skew: Over-Extended Abroad (+' + skew + ')';
+        skewVal.className = 'lab-hud-chip is-lose';
+      } else {
+        skewVal.textContent = 'Skew: Domestic Gridlock (' + skew + ')';
+        skewVal.className = 'lab-hud-chip is-lose';
+      }
     }
 
-    window.simTnProposeTreaty = function() {
-        const e = parseInt(emissionsEl.value);
-        const f = parseInt(fundEl.value);
-        const c = complianceEl.value;
+    var val1 = $('sim-tn-val-lvl1');
+    if (val1) val1.textContent = state.lvl1 + ' pts';
+    var bar1 = $('sim-tn-bar-lvl1');
+    if (bar1) bar1.style.width = Math.min(100, (state.lvl1 / 6) * 100) + '%';
 
-        const domestic = updateDomesticStatus();
-        const domesticAllSupport = domestic.indSupports && domestic.envSupports && domestic.finSupports;
-        
-        // Coalton logic: requires e >= 25, f <= 10, c != binding
-        const coaltonAccepts = (e >= 25) && (f <= 10) && (c !== 'binding');
+    var val2 = $('sim-tn-val-lvl2');
+    if (val2) val2.textContent = state.lvl2 + ' pts';
+    var bar2 = $('sim-tn-bar-lvl2');
+    if (bar2) bar2.style.width = Math.min(100, (state.lvl2 / 6) * 100) + '%';
+  }
 
-        resultBox.style.display = 'block';
-        resultBox.className = 'sim-tn-result'; // reset class
-        
-        zopaYou.style.left = '10%'; zopaYou.style.width = '40%';
-        zopaCoalton.style.left = '40%'; zopaCoalton.style.width = '50%';
-        zopaOverlap.style.display = 'none';
+  window.simTnAction = function(ap1, ap2) {
+    if (state.over) return;
 
-        if (domesticAllSupport && coaltonAccepts) {
-            resultBox.classList.add('success');
-            resultTitle.textContent = '✅ Treaty Ratified at Both Levels!';
-            resultTitle.style.color = '#10b981';
-            resultText.textContent = "Analysis: You found Putnam's Zone of Possible Agreement (ZOPA) — the overlap between your domestic Level II win-set and Coalton's Level II win-set. Robert Putnam (1988) demonstrated that successful international agreements require simultaneous acceptability at both the international and domestic levels.";
-            
-            zopaYou.style.left = '20%'; zopaYou.style.width = '50%';
-            zopaCoalton.style.left = '40%'; zopaCoalton.style.width = '50%';
-            zopaOverlap.style.display = 'block';
-            zopaOverlap.style.left = '40%'; zopaOverlap.style.width = '30%';
-        } else if (!domesticAllSupport && coaltonAccepts) {
-            resultBox.classList.add('failure');
-            resultTitle.textContent = '❌ Involuntary Defection!';
-            resultTitle.style.color = '#ef4444';
-            resultText.textContent = "Your delegation signed the treaty in Geneva, but Parliament rejected ratification. Analysis: This echoes Woodrow Wilson's Treaty of Versailles tragedy (1919) — the U.S. Senate refused to ratify despite Wilson's personal commitment. Your domestic win-set was too narrow.";
-            
-            zopaYou.style.left = '10%'; zopaYou.style.width = '20%';
-            zopaCoalton.style.left = '50%'; zopaCoalton.style.width = '40%';
-        } else if (domesticAllSupport && !coaltonAccepts) {
-            resultBox.classList.add('failure');
-            resultTitle.textContent = '❌ Negotiations Collapsed!';
-            resultTitle.style.color = '#ef4444';
-            resultText.textContent = "Coalton's delegation walked away from the table. Analysis: Your proposal fell outside Coalton's win-set. A skilled negotiator must estimate the other side's constraints. Consider Schelling's strategy of 'tying your own hands' — publicly committing to a position to shift the bargaining range.";
-            
-            zopaYou.style.left = '60%'; zopaYou.style.width = '30%';
-            zopaCoalton.style.left = '10%'; zopaCoalton.style.width = '30%';
-        } else {
-            resultBox.classList.add('failure');
-            resultTitle.textContent = '❌ Double Rejection!';
-            resultTitle.style.color = '#ef4444';
-            resultText.textContent = "Neither side can accept this deal. The treaty is dead on arrival. Analysis: The distance between the win-sets is too large, indicating no overlapping ZOPA exists for this specific combination of terms.";
-            
-            zopaYou.style.left = '10%'; zopaYou.style.width = '20%';
-            zopaCoalton.style.left = '70%'; zopaCoalton.style.width = '20%';
+    state.lvl1 += ap1;
+    state.lvl2 += ap2;
+
+    var skew = Math.abs(state.lvl1 - state.lvl2);
+    var deltaZopa = 0;
+    var msg = '';
+
+    if (skew <= 1) {
+      // Balanced growth expands ZOPA
+      deltaZopa = 18;
+      state.zopa = Math.min(100, state.zopa + deltaZopa);
+      msg = 'Turn ' + state.turn + ': Synchronized progress! International commitments match domestic buy-in (+18% Win-Set).';
+      if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.good();
+    } else {
+      // Skewed allocations contract or slow ZOPA
+      deltaZopa = 4;
+      state.zopa = Math.min(100, state.zopa + deltaZopa);
+      msg = 'Turn ' + state.turn + ': Skewed focus! ' +
+        (state.lvl1 > state.lvl2 ?
+          'Level I outpaces domestic ratification; backbench lawmakers threaten revolt (+4% only).' :
+          'Domestic demands exceed foreign counterpart flexibility; talks stall (+4% only).');
+      if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.bad();
+    }
+
+    var log = $('sim-tn-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry ' + (skew <= 1 ? 'is-good' : 'is-warn');
+      entry.innerHTML = '<strong>' + msg + '</strong>';
+      log.insertBefore(entry, log.firstChild);
+    }
+
+    // SIGINT Intercept in Turn 4
+    if (state.turn === 3) {
+      setTimeout(function() {
+        if (log) {
+          var sigint = document.createElement('div');
+          sigint.className = 'lab-log-entry is-intel';
+          sigint.innerHTML = '<strong><i class="fa fa-shield"></i> SIGINT INTERCEPT · TURN 4:</strong> Overnight parliamentary whip poll: domestic swing caucuses will waver if agriculture carve-outs appear in the final draft. Maintain balanced domestic consultations to preserve your win-set.';
+          log.insertBefore(sigint, log.firstChild);
         }
-        
-        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    };
+      }, 300);
+    }
 
-    window.simTnRestart = function() {
-        emissionsEl.value = '10';
-        fundEl.value = '1';
-        complianceEl.value = 'voluntary';
-        updateDomesticStatus();
-        resultBox.style.display = 'none';
-        window.scrollTo({ top: document.getElementById('treaty-negotiation-sim').offsetTop - 20, behavior: 'smooth' });
-    };
+    state.turn++;
+    updateHUD();
 
-    // Initialize the module
-    init();
+    if (state.turn > state.maxTurns) {
+      setTimeout(endNegotiation, 600);
+    }
+  };
+
+  function endNegotiation() {
+    state.over = true;
+    $('sim-tn-play').hidden = true;
+    var debrief = $('sim-tn-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var zopa = state.zopa;
+    var ratified = (zopa >= 45) && (state.lvl1 >= 4) && (state.lvl2 >= 4);
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (ratified && zopa >= 70) {
+      stars = 3;
+      rank = 'Master Negotiator';
+      outcomeTitle = 'Bilateral Accord Ratified with Resounding Supermajority';
+    } else if (ratified) {
+      stars = 2;
+      rank = 'Seasoned Diplomat';
+      outcomeTitle = 'Treaty Ratified with Narrow Margin';
+    } else {
+      stars = zopa >= 30 ? 1 : 0;
+      rank = 'Involuntary Defection Casualty';
+      outcomeTitle = 'Ratification Defeated / Talks Collapsed';
+    }
+
+    var starContainer = $('sim-tn-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-tn-rank').textContent = rank;
+    $('sim-tn-stat-zopa').textContent = zopa + '%';
+    $('sim-tn-stat-lvl1').textContent = state.lvl1 + ' / 6';
+    $('sim-tn-stat-lvl2').textContent = state.lvl2 + ' / 6';
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        window.LabGame.best.submit('treaty_negotiation', zopa);
+        var best = window.LabGame.best.get('treaty_negotiation');
+        $('sim-tn-stat-best').textContent = best + '%';
+      }
+      if (window.LabGame.flags && ratified) {
+        window.LabGame.flags.complete('treaty_negotiation');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.good();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-tn-reveal-body');
+    if (revealEl) {
+      var html = '<p><strong>Diplomatic Theory Declassification: Robert Putnam (1988) — <em>The Logic of Two-Level Games</em></strong></p>' +
+        '<p>International negotiations are fundamentally constrained by domestic politics. Putnam formulated the dual-table framework to explain why international accords frequently unravel at home:</p>' +
+        '<ul>' +
+        '<li><strong>Level I vs. Level II:</strong> At Level I, international negotiators bargain across the table seeking a tentative agreement. At Level II, separate discussions occur within each constituent domestic group regarding ratification.</li>' +
+        '<li><strong>The Win-Set (ZOPA):</strong> The "Win-Set" is the set of all possible Level I agreements that would gain the majority required for ratification at Level II. Agreement is possible only when the win-sets of both states overlap.</li>' +
+        '<li><strong>Involuntary Defection:</strong> A negotiator may sincerely sign an agreement at Level I, only to have domestic parliament refuse ratification (as when the US Senate rejected Woodrow Wilson\'s Treaty of Versailles and the League of Nations Covenant). Keeping table skew within 1 point prevents involuntary defection.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
+    }
+  }
+
+  function attachListeners() {
+    var beginBtn = $('sim-tn-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-tn-briefing').hidden = true;
+        $('sim-tn-play').hidden = false;
+        updateHUD();
+      });
+    }
+
+    var replayBtn = $('sim-tn-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.turn = 1;
+        state.lvl1 = 0;
+        state.lvl2 = 0;
+        state.zopa = 0;
+        state.over = false;
+
+        $('sim-tn-outcome').hidden = true;
+        $('sim-tn-briefing').hidden = true;
+        $('sim-tn-play').hidden = false;
+
+        var log = $('sim-tn-log');
+        if (log) log.innerHTML = '<div class="lab-log-entry is-muted">&gt; Envoy credentials accepted. Two-table session opened.</div>';
+
+        updateHUD();
+      });
+    }
+
+    var muteBtn = $('sim-tn-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-tn-help-btn',
+        objectiveHtml: '<p>Navigate 6 turns of resource allocation. Ratify the treaty with ZOPA ≥ 70% for ★★★ Master Negotiator. Avoid involuntary defection by keeping international and domestic tracks balanced (max 1 point skew).</p>',
+        howtoHtml: '<p>1. Each turn, distribute 2 Action Points across Level I (International) and Level II (Domestic).<br>2. Watch the Win-Set meter expand with balanced turns.<br>3. Inspect the Turn 4 SIGINT poll.<br>4. Reach Turn 6 to trigger parliamentary ratification vote.</p>',
+        payoffHtml: '<p>Ratify + ZOPA ≥ 70%: ★★★ | Ratify + ZOPA 45–69%: ★★ | Defeat in Ratification: 0–1★.</p>'
+      });
+    }
+  }
+
+  // State exposure
+  window.getSimTnState = function() { return state; };
+  Object.defineProperty(window, 'simTnState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
 })();
 </script>

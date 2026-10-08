@@ -1,150 +1,634 @@
 <style>
-.sim-wto-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
-.sim-wto-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
-.sim-wto-header h3 { margin: 0; color: #60a5fa !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
-.sim-wto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-@media (max-width: 768px) { .sim-wto-grid { grid-template-columns: 1fr; } }
-.wto-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; }
-.wto-control { margin-bottom: 15px; }
-.wto-control label { display: block; margin-bottom: 5px; color: #9ca3af; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-.wto-select { width: 100%; padding: 10px; background: #1f2937; color: white; border: 1px solid #3b82f6; border-radius: 6px; font-size: 1rem; cursor: pointer; outline: none; }
-.wto-select:focus { border-color: #60a5fa; box-shadow: 0 0 0 2px rgba(59,130,246,0.3); }
-.wto-blocs { list-style: none; padding: 0; margin: 0; }
-.wto-bloc { padding: 12px; margin-bottom: 10px; border-radius: 6px; background: #1f2937; border-left: 4px solid #6b7280; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
-.wto-bloc.agree { border-left-color: #10b981; background: rgba(16,185,129,0.05); }
-.wto-bloc.veto { border-left-color: #ef4444; background: rgba(239,68,68,0.05); }
-.wto-status-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; transition: all 0.3s; }
-.wto-status-badge.waiting { background: rgba(107,114,128,0.2); color: #9ca3af; }
-.wto-status-badge.agree { background: rgba(16,185,129,0.2); color: #10b981; }
-.wto-status-badge.veto { background: rgba(239,68,68,0.2); color: #ef4444; }
-.wto-btn { width: 100%; padding: 12px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background 0.2s; }
-.wto-btn:hover { background: #2563eb; transform: translateY(-2px); }
-.wto-result { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; display: none; animation: fadeIn 0.5s ease-in-out; }
-.wto-result.success { display: block; background: rgba(16,185,129,0.1); border: 1px solid #10b981; color: #10b981; }
-.wto-result.fail { display: block; background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #ef4444; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+/* Lab 03 — Consensus Market: The Doha Round Trap */
+#wto-sim .sim-wto-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+@media (max-width: 820px) {
+  #wto-sim .sim-wto-layout { grid-template-columns: 1fr; }
+}
+#wto-sim .sim-wto-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md, 8px);
+  padding: 18px 20px;
+}
+#wto-sim .sim-wto-item {
+  margin-bottom: 14px;
+}
+#wto-sim .sim-wto-item label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--lms-ink-primary);
+  margin-bottom: 6px;
+}
+#wto-sim .sim-wto-select {
+  width: 100%;
+  padding: 9px 12px;
+  background: var(--lms-surface);
+  color: var(--lms-ink-primary);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+#wto-sim .sim-wto-select:focus {
+  border-color: var(--lab-accent);
+}
+#wto-sim .sim-wto-bloc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#wto-sim .sim-wto-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+#wto-sim .sim-wto-bloc.is-agree {
+  border-left: 3px solid var(--lab-win);
+  background: rgba(5, 150, 105, 0.05);
+}
+#wto-sim .sim-wto-bloc.is-veto {
+  border-left: 3px solid var(--lab-lose);
+  background: rgba(220, 38, 38, 0.07);
+}
+#wto-sim .sim-wto-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+#wto-sim .sim-wto-badge.is-waiting { background: var(--lms-hairline); color: var(--lms-ink-secondary); }
+#wto-sim .sim-wto-badge.is-agree   { background: var(--lab-win); color: #fff; }
+#wto-sim .sim-wto-badge.is-veto    { background: var(--lab-lose); color: #fff; }
 </style>
 
-<div class="sim-wto-container" id="wto-sim">
-    <div class="sim-wto-header">
-        <h3><i class="fa fa-globe"></i> Simulation: The Consensus Builder</h3>
-        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are the WTO Director-General trying to pass a global trade treaty. Because the WTO requires <strong>absolute consensus</strong>, a single veto will kill the deal. Find the perfect compromise!</p>
+<div class="lab-shell" id="wto-sim" data-cat="governance">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 03</span>
+      <span class="lab-kicker-track">CASE FILE · GLOBAL TRADE &amp; GOVERNANCE</span>
     </div>
-    <div class="sim-wto-grid">
-        <div class="wto-panel">
-            <h4 style="margin-top:0; margin-bottom: 20px; color:#d1d5db; border-bottom: 1px solid #374151; padding-bottom: 10px;">Draft Proposal</h4>
-            <div class="wto-control">
-                <label>Agricultural Subsidies</label>
-                <select id="wto-subsidies" class="wto-select">
-                    <option value="high">Maintain High Subsidies</option>
-                    <option value="low">Reduce Subsidies (Compromise)</option>
-                    <option value="removed">Remove Entirely</option>
-                </select>
-            </div>
-            <div class="wto-control">
-                <label>Intellectual Property (IP)</label>
-                <select id="wto-ip" class="wto-select">
-                    <option value="strict">Strict Enforcement</option>
-                    <option value="relaxed">Relaxed Enforcement</option>
-                </select>
-            </div>
-            <div class="wto-control">
-                <label>LDC Trade Exemptions</label>
-                <select id="wto-exemptions" class="wto-select">
-                    <option value="denied">Denied</option>
-                    <option value="granted">Granted</option>
-                </select>
-            </div>
-            <button class="wto-btn" onclick="checkWTOConsensus()">Submit Draft for Voting</button>
-        </div>
-        <div class="wto-panel">
-            <h4 style="margin-top:0; margin-bottom: 20px; color:#d1d5db; border-bottom: 1px solid #374151; padding-bottom: 10px;">Member Blocs</h4>
-            <ul class="wto-blocs">
-                <li class="wto-bloc" id="bloc-developed">
-                    <div>
-                        <strong>Developed Nations</strong><br>
-                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Strict IP, Lower Subsidies</span>
-                    </div>
-                    <span class="wto-status-badge waiting" id="status-developed">WAITING</span>
-                </li>
-                <li class="wto-bloc" id="bloc-developing">
-                    <div>
-                        <strong>Developing Nations</strong><br>
-                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Wants Subsidies. Hates Strict IP unless Exempted.</span>
-                    </div>
-                    <span class="wto-status-badge waiting" id="status-developing">WAITING</span>
-                </li>
-                <li class="wto-bloc" id="bloc-ldc">
-                    <div>
-                        <strong>Least Developed (LDCs)</strong><br>
-                        <span style="font-size:0.8rem; color:#9ca3af;">Demands: Must have Exemptions.</span>
-                    </div>
-                    <span class="wto-status-badge waiting" id="status-ldc">WAITING</span>
-                </li>
-            </ul>
-            <div id="wto-result" class="wto-result"></div>
-        </div>
+    <h3 class="lab-title">Consensus Market: The Doha Round Trap</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-users" aria-hidden="true"></i> 8 voting blocs</span>
+      <span class="lab-meta-chip"><i class="fa fa-balance-scale" aria-hidden="true"></i> 10 Capital Points</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Strategy level</span>
     </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-wto-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>The World Trade Organization (WTO) operates under the principle of <strong>absolute consensus</strong>: unlike majority-voting bodies, any single member can veto a multilateral treaty. Under the <em>Single Undertaking</em> doctrine, "nothing is agreed until everything is agreed."</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are the WTO Director-General brokering a comprehensive package deal among 8 contentious member coalitions with conflicting national red lines. You hold 10 Diplomatic Capital points to fund concessions.</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Master Facilitator:</strong> Pass consensus treaty with ≥4 Diplomatic Capital remaining.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Diplomatic Broker:</strong> Pass consensus treaty with 1–3 Capital remaining.</span></li>
+            <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>★ Exhausted Signatory:</strong> Pass consensus with exactly 0 Capital left.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0★ Ministerial Collapse:</strong> Any single member bloc exercises its veto.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-diamond" aria-hidden="true"></i><span><strong>Budgeted Concessions:</strong> Allocate 10 Diplomatic Capital across 5 treaty pillars (costs 0–3 each).</span></li>
+            <li><i class="fa fa-bullhorn" aria-hidden="true"></i><span><strong>Hidden Red Lines:</strong> Blocs conceal their true reservation prices. Over-conceding wastes capital; under-conceding triggers vetoes.</span></li>
+            <li><i class="fa fa-eye" aria-hidden="true"></i><span><strong>SIGINT Leak:</strong> An intelligence report reveals whether a pivotal agricultural bloc is bluffing.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-wto-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Enter Ministerial Chamber
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-wto-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-wto-hud-budget">Diplomatic Capital: <b id="sim-wto-val-capital">10</b> / 10</span>
+      <span class="lab-hud-chip" id="sim-wto-hud-status">Consensus Status: Formulating Draft</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-wto-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-wto-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
+    </div>
+
+    <div class="lab-stage" style="padding: 18px 22px;">
+      <div class="sim-wto-layout">
+
+        <!-- Left: Proposal Controls -->
+        <div class="sim-wto-card">
+          <h4 style="margin: 0 0 14px; font-size: 1.05rem; color: var(--lab-accent);">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> Draft Ministerial Package
+          </h4>
+
+          <div class="sim-wto-item">
+            <label for="wto-pillar-agri">
+              <span>Agricultural Export Subsidies</span>
+              <span id="wto-cost-agri" style="color: var(--lab-gold);">Cost: 0 pts</span>
+            </label>
+            <select id="wto-pillar-agri" class="sim-wto-select">
+              <option value="none">No Reduction (Status Quo) — 0 pts</option>
+              <option value="moderate" selected>30% Disciplined Reduction — 2 pts</option>
+              <option value="elimination">Complete Subsidy Elimination — 4 pts</option>
+            </select>
+          </div>
+
+          <div class="sim-wto-item">
+            <label for="wto-pillar-trips">
+              <span>TRIPS Intellectual Property Flexibilities</span>
+              <span id="wto-cost-trips" style="color: var(--lab-gold);">Cost: 1 pt</span>
+            </label>
+            <select id="wto-pillar-trips" class="sim-wto-select">
+              <option value="strict">Strict IP Enforcement — 0 pts</option>
+              <option value="health" selected>Public Health &amp; Generic Medicine Waiver — 1 pt</option>
+              <option value="broad">Broad Technology Transfer Mandate — 3 pts</option>
+            </select>
+          </div>
+
+          <div class="sim-wto-item">
+            <label for="wto-pillar-sdt">
+              <span>Special &amp; Differential Treatment (S&amp;DT)</span>
+              <span id="wto-cost-sdt" style="color: var(--lab-gold);">Cost: 2 pts</span>
+            </label>
+            <select id="wto-pillar-sdt" class="sim-wto-select">
+              <option value="denied">Denied (Universal Commitments) — 0 pts</option>
+              <option value="granted" selected>Granted LDC Full Exemption — 2 pts</option>
+            </select>
+          </div>
+
+          <div class="sim-wto-item">
+            <label for="wto-pillar-fish">
+              <span>Fisheries &amp; Environmental Disciplines</span>
+              <span id="wto-cost-fish" style="color: var(--lab-gold);">Cost: 1 pt</span>
+            </label>
+            <select id="wto-pillar-fish" class="sim-wto-select">
+              <option value="none">Omitted from Package — 0 pts</option>
+              <option value="voluntary" selected>Voluntary Sustainable Guidelines — 1 pt</option>
+              <option value="binding">Binding Ban on Illegal (IUU) Subsidies — 2 pts</option>
+            </select>
+          </div>
+
+          <div class="sim-wto-item">
+            <label for="wto-pillar-tariff">
+              <span>Industrial Non-Agri Tariffs (NAMA)</span>
+              <span id="wto-cost-tariff" style="color: var(--lab-gold);">Cost: 0 pts</span>
+            </label>
+            <select id="wto-pillar-tariff" class="sim-wto-select">
+              <option value="none" selected>National Flexibilities Preserved — 0 pts</option>
+              <option value="moderate">Swiss Formula Harmonization — 2 pts</option>
+            </select>
+          </div>
+
+          <button type="button" class="lab-btn lab-btn-primary" id="sim-wto-btn-vote" style="width: 100%; margin-top: 10px;">
+            <i class="fa fa-gavel" aria-hidden="true"></i> Call for Consensus Vote
+          </button>
+        </div>
+
+        <!-- Right: 8 Blocs Stand -->
+        <div class="sim-wto-card">
+          <h4 style="margin: 0 0 14px; font-size: 1.05rem; color: var(--lms-ink-primary);">
+            <i class="fa fa-users" aria-hidden="true"></i> 8 Member Coalitions
+          </h4>
+          <ul class="sim-wto-bloc-list" id="sim-wto-bloc-list">
+            <!-- Injected via JS -->
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="lab-log" id="sim-wto-log" style="margin-top: 16px;" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Ministerial plenary open. 8 delegations seated. Reviewing proposal balance.</div>
+        <div class="lab-log-entry is-intel">
+          <strong><i class="fa fa-shield"></i> SIGINT LEAK · GENEVA DELEGATION:</strong>
+          Intelligence confirms the Agriculture Cairns bloc is bluffing regarding total subsidy elimination — their ministers are instructed to accept a <strong>30% reduction</strong> rather than collapse the conference.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-wto-outcome" hidden>
+    <div class="lab-stars" id="sim-wto-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-wto-rank">Assessing Ministerial Result...</div>
+    <h3 class="lab-debrief-title" id="sim-wto-debrief-heading">Ministerial Outcome Report</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Capital Remaining</div>
+        <div class="lab-stat-val" id="sim-wto-stat-capital">4 / 10</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Consensus Result</div>
+        <div class="lab-stat-val" id="sim-wto-stat-outcome" style="font-size: 1rem;">Consensus Adopted</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Veto Count</div>
+        <div class="lab-stat-val" id="sim-wto-stat-vetoes">0 Blocs</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-wto-stat-best">4 pts (★3)</div>
+      </div>
+    </div>
+
+    <div class="lab-reveal" id="sim-wto-reveal-body"></div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-wto-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Convene New Ministerial Round
+      </button>
+    </div>
+  </div>
+
 </div>
 
 <script>
-function checkWTOConsensus() {
-    const subsidies = document.getElementById('wto-subsidies').value;
-    const ip = document.getElementById('wto-ip').value;
-    const exemptions = document.getElementById('wto-exemptions').value;
-    
-    let devVeto = false;
-    let devgVeto = false;
-    let ldcVeto = false;
-    
-    // Developed logic
-    if (ip === 'relaxed' || subsidies === 'high') {
-        devVeto = true;
-    }
-    
-    // Developing logic
-    if (subsidies === 'removed') {
-        devgVeto = true;
-    }
-    if (ip === 'strict' && exemptions === 'denied') {
-        devgVeto = true;
-    }
-    
-    // LDC logic
-    if (exemptions === 'denied') {
-        ldcVeto = true;
-    }
-    
-    updateBloc('developed', devVeto);
-    updateBloc('developing', devgVeto);
-    updateBloc('ldc', ldcVeto);
-    
-    const resultBox = document.getElementById('wto-result');
-    // small reset hack for animation
-    resultBox.className = 'wto-result'; 
-    void resultBox.offsetWidth; 
-    
-    if (!devVeto && !devgVeto && !ldcVeto) {
-        resultBox.className = 'wto-result success';
-        resultBox.innerHTML = '🎉 CONSENSUS REACHED!<br><span style="font-size:0.9rem; font-weight:normal; color:#d1d5db; display:block; margin-top:5px;">You successfully negotiated a complex multilateral trade agreement!</span>';
-    } else {
-        resultBox.className = 'wto-result fail';
-        resultBox.innerHTML = '❌ NEGOTIATIONS COLLAPSED!<br><span style="font-size:0.9rem; font-weight:normal; color:#d1d5db; display:block; margin-top:5px;">One or more blocs exercised their veto power. Try a different compromise.</span>';
-    }
-}
+(function() {
+  'use strict';
 
-function updateBloc(id, isVeto) {
-    const li = document.getElementById('bloc-' + id);
-    const badge = document.getElementById('status-' + id);
-    
-    if (isVeto) {
-        li.className = 'wto-bloc veto';
-        badge.className = 'wto-status-badge veto';
-        badge.innerText = 'VETOED';
-    } else {
-        li.className = 'wto-bloc agree';
-        badge.className = 'wto-status-badge agree';
-        badge.innerText = 'AGREES';
+  var BLOCS = [
+    { id: 'us_eu', name: 'US & EU Agri-Industrial Bloc', desc: 'Demands strict IP; vetoes complete agriculture subsidy elimination.' },
+    { id: 'cairns', name: 'Cairns Group (Agri-Exporters)', desc: 'Demands agriculture subsidy reductions (at least moderate 30%).' },
+    { id: 'g20', name: 'G20 Developing Coalition', desc: 'Vetoes broad mandatory NAMA tariff cuts without S&DT flexibilities.' },
+    { id: 'ldc', name: 'LDC Group (Least Developed)', desc: 'Absolute red line: requires Special & Differential Treatment (S&DT).' },
+    { id: 'tigers', name: 'Asian Industrial Tigers', desc: 'Demands predictable industrial rules; accepts moderate tariff compromises.' },
+    { id: 'latam', name: 'Latin American Diversified', desc: 'Demands agricultural discipline and public health IP access.' },
+    { id: 'africa', name: 'African Group', desc: 'Requires TRIPS public health waiver for medicines; demands S&DT.' },
+    { id: 'islands', name: 'Small Island Economies', desc: 'Demands fisheries subsidies disciplines to curb maritime overfishing.' }
+  ];
+
+  var COSTS = {
+    agri: { none: 0, moderate: 2, elimination: 4 },
+    trips: { strict: 0, health: 1, broad: 3 },
+    sdt: { denied: 0, granted: 2 },
+    fish: { none: 0, voluntary: 1, binding: 2 },
+    tariff: { none: 0, moderate: 2 }
+  };
+
+  var state = {
+    capital: 10,
+    concessions: {
+      agri: 'moderate',
+      trips: 'health',
+      sdt: 'granted',
+      fish: 'voluntary',
+      tariff: 'none'
+    },
+    blocStatus: {},
+    over: false
+  };
+
+  function $(id) { return document.getElementById(id); }
+
+  function calculateCost() {
+    var total = 0;
+    total += COSTS.agri[state.concessions.agri] || 0;
+    total += COSTS.trips[state.concessions.trips] || 0;
+    total += COSTS.sdt[state.concessions.sdt] || 0;
+    total += COSTS.fish[state.concessions.fish] || 0;
+    total += COSTS.tariff[state.concessions.tariff] || 0;
+    return total;
+  }
+
+  function updateBudgetUI() {
+    var spent = calculateCost();
+    var remaining = 10 - spent;
+    state.capital = remaining;
+
+    var valCap = $('sim-wto-val-capital');
+    if (valCap) {
+      valCap.textContent = remaining;
+      valCap.style.color = remaining < 0 ? 'var(--lab-lose)' : 'var(--lab-gold)';
     }
-}
+
+    var costAgri = $('wto-cost-agri');
+    if (costAgri) costAgri.textContent = 'Cost: ' + COSTS.agri[state.concessions.agri] + ' pts';
+
+    var costTrips = $('wto-cost-trips');
+    if (costTrips) costTrips.textContent = 'Cost: ' + COSTS.trips[state.concessions.trips] + ' pts';
+
+    var costSdt = $('wto-cost-sdt');
+    if (costSdt) costSdt.textContent = 'Cost: ' + COSTS.sdt[state.concessions.sdt] + ' pts';
+
+    var costFish = $('wto-cost-fish');
+    if (costFish) costFish.textContent = 'Cost: ' + COSTS.fish[state.concessions.fish] + ' pts';
+
+    var costTariff = $('wto-cost-tariff');
+    if (costTariff) costTariff.textContent = 'Cost: ' + COSTS.tariff[state.concessions.tariff] + ' pts';
+
+    var voteBtn = $('sim-wto-btn-vote');
+    if (voteBtn) {
+      voteBtn.disabled = remaining < 0;
+      voteBtn.innerHTML = remaining < 0 ?
+        '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Budget Deficit! Reduce Concessions' :
+        '<i class="fa fa-gavel" aria-hidden="true"></i> Call for Consensus Vote (' + remaining + ' pts left)';
+    }
+  }
+
+  function renderBlocs() {
+    var list = $('sim-wto-bloc-list');
+    if (!list) return;
+    list.innerHTML = '';
+
+    BLOCS.forEach(function(b) {
+      var li = document.createElement('li');
+      li.className = 'sim-wto-bloc';
+      li.id = 'wto-bloc-' + b.id;
+
+      var st = state.blocStatus[b.id] || 'waiting';
+      var badgeClass = 'is-waiting';
+      var badgeText = 'WAITING';
+
+      if (st === 'agree') {
+        li.classList.add('is-agree');
+        badgeClass = 'is-agree';
+        badgeText = 'AGREES';
+      } else if (st === 'veto') {
+        li.classList.add('is-veto');
+        badgeClass = 'is-veto';
+        badgeText = 'VETO';
+      }
+
+      li.innerHTML = '<div><strong>' + b.name + '</strong><br><span style="font-size:0.75rem; color:var(--lms-ink-secondary);">' + b.desc + '</span></div>' +
+                     '<span class="sim-wto-badge ' + badgeClass + '">' + badgeText + '</span>';
+      list.appendChild(li);
+    });
+  }
+
+  function evaluateConsensus() {
+    var c = state.concessions;
+    var res = {};
+    var vetoCount = 0;
+
+    // US/EU: Vetoes if agriculture eliminated, or if broad tech mandate forced
+    if (c.agri === 'elimination' || c.trips === 'broad') {
+      res['us_eu'] = 'veto';
+      vetoCount++;
+    } else {
+      res['us_eu'] = 'agree';
+    }
+
+    // Cairns Group: Demands at least moderate agriculture cuts
+    if (c.agri === 'none') {
+      res['cairns'] = 'veto';
+      vetoCount++;
+    } else {
+      res['cairns'] = 'agree';
+    }
+
+    // G20: Vetoes if Swiss formula tariffs forced without S&DT
+    if (c.tariff === 'moderate' && c.sdt === 'denied') {
+      res['g20'] = 'veto';
+      vetoCount++;
+    } else {
+      res['g20'] = 'agree';
+    }
+
+    // LDC Group: Non-negotiable S&DT
+    if (c.sdt === 'denied') {
+      res['ldc'] = 'veto';
+      vetoCount++;
+    } else {
+      res['ldc'] = 'agree';
+    }
+
+    // Asian Industrial Tigers: Accepts unless zero fish and zero tariffs
+    res['tigers'] = 'agree';
+
+    // Latin America: Requires some agricultural reform
+    if (c.agri === 'none') {
+      res['latam'] = 'veto';
+      vetoCount++;
+    } else {
+      res['latam'] = 'agree';
+    }
+
+    // African Group: Requires public health IP waiver and S&DT
+    if (c.trips === 'strict' || c.sdt === 'denied') {
+      res['africa'] = 'veto';
+      vetoCount++;
+    } else {
+      res['africa'] = 'agree';
+    }
+
+    // Small Island States: Requires at least voluntary fisheries disciplines
+    if (c.fish === 'none') {
+      res['islands'] = 'veto';
+      vetoCount++;
+    } else {
+      res['islands'] = 'agree';
+    }
+
+    state.blocStatus = res;
+    return vetoCount;
+  }
+
+  function handleVote() {
+    if (state.capital < 0) return;
+    var vetoes = evaluateConsensus();
+    renderBlocs();
+
+    if (window.LabGame && window.LabGame.sfx) {
+      if (vetoes === 0) window.LabGame.sfx.good();
+      else window.LabGame.sfx.bad();
+    }
+
+    setTimeout(function() {
+      endMinisterial(vetoes);
+    }, 700);
+  }
+
+  function endMinisterial(vetoes) {
+    state.over = true;
+    $('sim-wto-play').hidden = true;
+    var debrief = $('sim-wto-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var passed = vetoes === 0;
+    var capitalLeft = state.capital;
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (!passed) {
+      stars = 0;
+      rank = 'Doha Impasse Casualty';
+      outcomeTitle = 'Consensus Vetoed';
+    } else if (capitalLeft >= 4) {
+      stars = 3;
+      rank = 'Master Facilitator';
+      outcomeTitle = 'Consensus Treaty Adopted';
+    } else if (capitalLeft >= 1) {
+      stars = 2;
+      rank = 'Diplomatic Broker';
+      outcomeTitle = 'Consensus Treaty Adopted';
+    } else {
+      stars = 1;
+      rank = 'Exhausted Signatory';
+      outcomeTitle = 'Consensus Treaty Adopted';
+    }
+
+    var starContainer = $('sim-wto-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-wto-rank').textContent = rank;
+    $('sim-wto-stat-capital').textContent = capitalLeft + ' / 10';
+    $('sim-wto-stat-outcome').textContent = outcomeTitle;
+    $('sim-wto-stat-vetoes').textContent = vetoes + ' Bloc' + (vetoes === 1 ? '' : 's');
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        var scoreVal = passed ? capitalLeft : -10;
+        window.LabGame.best.submit('wto', scoreVal);
+        var best = window.LabGame.best.get('wto');
+        $('sim-wto-stat-best').textContent = best + ' pts';
+      }
+      if (window.LabGame.flags && passed) {
+        window.LabGame.flags.complete('wto');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.reveal();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-wto-reveal-body');
+    if (revealEl) {
+      var html = '<p><strong>Institutional Declassification: Multilateral Consensus &amp; The Single Undertaking</strong></p>' +
+        '<p>Under Article IX:1 of the <em>Marrakesh Agreement Establishing the WTO</em>, decisions continue the GATT practice of consensus: a decision is adopted if no member present at the meeting formally objects. While designed to protect sovereign equality, consensus produces distinct structural dynamics:</p>' +
+        '<ul>' +
+        '<li><strong>The Single Undertaking Paradox:</strong> The doctrine that "nothing is agreed until everything is agreed" ties disparate negotiation tracks (agriculture, IP, tariffs) into one massive package deal. While enabling cross-sector trade-offs, it multiplies the number of potential vetopoints.</li>' +
+        '<li><strong>The Vetopoint Dilemma:</strong> Any single member can hold the global economy hostage to protect domestic constituencies (e.g. US cotton subsidies or Indian food security reserves). Over-conceding dissipates capital; under-conceding triggers instant collapse.</li>' +
+        '<li><strong>The Plurilateral Shift:</strong> The systemic gridlock of the Doha Round led major powers to bypass the WTO in favor of regional mega-agreements (CPTPP, RCEP) and plurilateral sector deals, weakening universal multilateral governance.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
+    }
+  }
+
+  function attachListeners() {
+    ['agri', 'trips', 'sdt', 'fish', 'tariff'].forEach(function(key) {
+      var sel = $('wto-pillar-' + key);
+      if (sel) {
+        sel.addEventListener('change', function() {
+          state.concessions[key] = sel.value;
+          updateBudgetUI();
+          if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.click();
+        });
+      }
+    });
+
+    var voteBtn = $('sim-wto-btn-vote');
+    if (voteBtn) voteBtn.addEventListener('click', handleVote);
+
+    var beginBtn = $('sim-wto-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-wto-briefing').hidden = true;
+        $('sim-wto-play').hidden = false;
+        renderBlocs();
+        updateBudgetUI();
+      });
+    }
+
+    var replayBtn = $('sim-wto-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.over = false;
+        state.capital = 10;
+        state.blocStatus = {};
+        $('sim-wto-outcome').hidden = true;
+        $('sim-wto-briefing').hidden = true;
+        $('sim-wto-play').hidden = false;
+        renderBlocs();
+        updateBudgetUI();
+      });
+    }
+
+    var muteBtn = $('sim-wto-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-wto-help-btn',
+        objectiveHtml: '<p>Achieve unanimous consensus among all 8 member blocs without exhausting your 10 Diplomatic Capital points. Pass with ≥4 pts left for ★★★ Master Facilitator. Any single veto collapses the entire negotiation.</p>',
+        howtoHtml: '<p>1. Adjust draft concession options across 5 treaty pillars.<br>2. Watch your Diplomatic Capital budget bar.<br>3. Review the SIGINT leak regarding the Agriculture bloc\'s true reservation point.<br>4. Submit the package for a consensus vote.<br>5. Inspect final voting alignment.</p>',
+        payoffHtml: '<p>Pass + ≥4 Capital: ★★★ | Pass + 1–3 Capital: ★★ | Pass + 0 Capital: ★ | Any Veto: 0★ Failure.</p>'
+      });
+    }
+  }
+
+  // State exposure
+  window.getSimWtoState = function() { return state; };
+  Object.defineProperty(window, 'simWtoState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
+})();
 </script>

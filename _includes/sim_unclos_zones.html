@@ -1,309 +1,671 @@
 <style>
-#unclos-zones-sim {
-    background: #1f2937;
-    color: #f9fafb;
-    border-radius: 12px;
-    padding: 25px;
-    font-family: 'Inter', sans-serif;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    margin: 30px 0;
-    border: 1px solid #374151;
+/* Lab 07 — Zone Runner: The UNCLOS 1982 Gauntlet */
+#unclos-zones-sim .sim-uz-ladder {
+  display: flex;
+  height: 28px;
+  border-radius: var(--lms-radius-sm, 6px);
+  overflow: hidden;
+  border: 1px solid var(--lms-hairline);
+  margin-bottom: 16px;
+  background: var(--lms-surface);
 }
-.sim-uz-panel {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
+#unclos-zones-sim .sim-uz-step {
+  flex: 1;
+  border-right: 1px solid var(--lms-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--lms-ink-secondary);
+  transition: all 0.25s ease;
 }
-.sim-uz-header {
-    border-bottom: 2px solid #374151;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+#unclos-zones-sim .sim-uz-step:last-child { border-right: none; }
+#unclos-zones-sim .sim-uz-step.is-cleared {
+  background: var(--lab-accent);
+  color: #fff;
 }
-.sim-uz-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+#unclos-zones-sim .sim-uz-step.is-current {
+  background: var(--lab-accent-soft);
+  color: var(--lab-accent-ink);
+  box-shadow: inset 0 0 0 2px var(--lab-accent);
 }
-.sim-uz-header p {
-    color: #9ca3af;
-    margin: 10px 0 0 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+#unclos-zones-sim .sim-uz-scenario-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md, 8px);
+  padding: 18px 20px;
+  margin-bottom: 16px;
 }
-.sim-uz-text-primary { color: #f9fafb; }
-.sim-uz-text-muted { color: #9ca3af; }
-.sim-uz-success { border: 1px solid #10b981; color: #10b981; background: rgba(16,185,129,0.1); padding: 15px; border-radius: 6px; }
-.sim-uz-failure { border: 1px solid #ef4444; color: #ef4444; background: rgba(239,68,68,0.1); padding: 15px; border-radius: 6px; }
-.sim-uz-warning { border: 1px solid #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.1); padding: 15px; border-radius: 6px; }
-.sim-uz-btn {
-    padding: 12px 15px;
-    background: #374151;
-    color: white;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: inherit;
+#unclos-zones-sim .sim-uz-choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
 }
-.sim-uz-btn:hover {
-    background: #4b5563;
-    border-color: #9ca3af;
-    transform: translateY(-2px);
+#unclos-zones-sim .sim-uz-choice-btn {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: var(--lms-radius-sm, 6px);
+  border: 1px solid var(--lms-hairline);
+  background: var(--lms-surface);
+  color: var(--lms-ink-primary);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.4;
 }
-.sim-uz-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
+#unclos-zones-sim .sim-uz-choice-btn:hover:not(:disabled) {
+  border-color: var(--lab-accent);
+  background: var(--lab-accent-soft);
+  transform: translateX(4px);
 }
-.sim-uz-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+#unclos-zones-sim .sim-uz-choice-btn.is-correct {
+  border-color: var(--lab-win);
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--lab-win);
+  font-weight: 700;
 }
-@media (max-width: 768px) {
-    .sim-uz-grid {
-        grid-template-columns: 1fr;
-    }
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.sim-uz-fade {
-    animation: fadeIn 0.4s ease-out forwards;
-}
-.sim-uz-diagram {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #374151;
-}
-.sim-uz-diagram-surface {
-    display: flex;
-    height: 80px;
-}
-.sim-uz-diagram-seabed {
-    display: flex;
-    height: 40px;
-}
-.sim-uz-zone-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #fff;
-    border-right: 1px solid rgba(255,255,255,0.2);
-}
-.sim-uz-zone-block span {
-    font-size: 0.65rem;
-    opacity: 0.8;
-    margin-top: 4px;
-}
-.sim-uz-zone-block:last-child {
-    border-right: none;
-}
-.sim-uz-zone-iw { background: #1e3a5f; flex: 1; }
-.sim-uz-zone-ts { background: #1e40af; flex: 1; }
-.sim-uz-zone-cz { background: #2563eb; flex: 1; }
-.sim-uz-zone-eez { background: #3b82f6; flex: 2; }
-.sim-uz-zone-hs { background: #93c5fd; flex: 3; color: #111827; }
-.sim-uz-zone-cs { background: #60a5fa; flex: 5; }
-.sim-uz-zone-ta { background: #374151; flex: 3; }
-
-.sim-uz-choices {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-.sim-uz-choices .sim-uz-btn {
-    flex: 1 1 calc(33.333% - 10px);
-    min-width: 120px;
-}
-.sim-uz-progress {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #9ca3af;
-}
-.sim-uz-feedback {
-    margin-top: 20px;
-    display: none;
+#unclos-zones-sim .sim-uz-choice-btn.is-wrong {
+  border-color: var(--lab-lose);
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--lab-lose);
 }
 </style>
 
-<div id="unclos-zones-sim">
-    <div class="sim-uz-header">
-        <h3>🌊 Simulation: UNCLOS Maritime Zone Mapper</h3>
-        <p>Master the maritime zones defined by the 1982 UN Convention on the Law of the Sea. Classify each scenario by clicking the correct maritime zone where it applies.</p>
+<div class="lab-shell" id="unclos-zones-sim" data-cat="governance">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 07</span>
+      <span class="lab-kicker-track">CASE FILE · INTERNATIONAL LAW</span>
+    </div>
+    <h3 class="lab-title">Zone Runner: The UNCLOS 1982 Gauntlet</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-compass" aria-hidden="true"></i> 10 maritime incidents</span>
+      <span class="lab-meta-chip"><i class="fa fa-shield" aria-hidden="true"></i> 3 Incident Tokens</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
+    </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-uz-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>The 1982 UN Convention on the Law of the Sea (UNCLOS) divides the world's oceans into distinct legal maritime zones, radiating outward from coastal baselines to the High Seas and the international Area. Sovereign rights attenuate with distance.</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are Legal Counsel to the Naval Maritime Command. You must classify 10 rapid jurisdictional incidents correctly to enforce law without causing international diplomatic ruptures.</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Maritime Admiral:</strong> Clear all 10 zones with all 3 Incident Tokens intact.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Fleet Commander:</strong> Clear all 10 zones with 2 Tokens remaining.</span></li>
+            <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>★ Coastal Patrolman:</strong> Clear all 10 zones with 1 Token remaining.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0★ Navigational Rupture:</strong> Exhaust all 3 tokens before finishing.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-shield" aria-hidden="true"></i><span><strong>3 Incident Tokens:</strong> Every misclassification burns 1 Token and breaks your combo.</span></li>
+            <li><i class="fa fa-bolt" aria-hidden="true"></i><span><strong>×1.5 Combo Multiplier:</strong> Consecutive correct answers stack a multiplier on difficulty points.</span></li>
+            <li><i class="fa fa-crosshairs" aria-hidden="true"></i><span><strong>SIGINT Satellite Pass:</strong> Use your one-time Satellite Tactical Advisory pass to safely bypass any single hard incident.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-uz-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Begin Maritime Patrol
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-uz-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-uz-hud-zone">Incident 1 / 10</span>
+      <span class="lab-hud-chip" id="sim-uz-hud-tokens">Integrity: <b id="sim-uz-val-tokens">3</b> / 3 Tokens</span>
+      <span class="lab-hud-chip" id="sim-uz-hud-score">Score: <b id="sim-uz-val-score">0</b></span>
+      <span class="lab-hud-chip is-streak" id="sim-uz-hud-streak" hidden>Combo ×<b id="sim-uz-val-mult">1.5</b></span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-uz-sigint-btn" title="Use 1-time satellite tactical pass">
+          <i class="fa fa-satellite" aria-hidden="true"></i> SIGINT Pass
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-uz-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-uz-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
     </div>
 
-    <div class="sim-uz-diagram">
-        <div class="sim-uz-diagram-surface">
-            <div class="sim-uz-zone-block sim-uz-zone-iw" title="Internal Waters">🏠 IW<span>0nm</span></div>
-            <div class="sim-uz-zone-block sim-uz-zone-ts" title="Territorial Sea">🚢 TS<span>12nm</span></div>
-            <div class="sim-uz-zone-block sim-uz-zone-cz" title="Contiguous Zone">🛡️ CZ<span>24nm</span></div>
-            <div class="sim-uz-zone-block sim-uz-zone-eez" title="Exclusive Economic Zone">🐟 EEZ<span>200nm</span></div>
-            <div class="sim-uz-zone-block sim-uz-zone-hs" title="High Seas">🌊 HS<span>>200nm</span></div>
+    <div class="lab-stage" style="padding: 18px 22px;">
+
+      <!-- Maritime Zone Ladder -->
+      <div class="sim-uz-ladder" id="sim-uz-ladder">
+        <div class="sim-uz-step is-current" id="uz-step-1">1</div>
+        <div class="sim-uz-step" id="uz-step-2">2</div>
+        <div class="sim-uz-step" id="uz-step-3">3</div>
+        <div class="sim-uz-step" id="uz-step-4">4</div>
+        <div class="sim-uz-step" id="uz-step-5">5</div>
+        <div class="sim-uz-step" id="uz-step-6">6</div>
+        <div class="sim-uz-step" id="uz-step-7">7</div>
+        <div class="sim-uz-step" id="uz-step-8">8</div>
+        <div class="sim-uz-step" id="uz-step-9">9</div>
+        <div class="sim-uz-step" id="uz-step-10">10</div>
+      </div>
+
+      <!-- Incident Card -->
+      <div class="sim-uz-scenario-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h4 id="sim-uz-incident-title" style="margin: 0; color: var(--lab-accent); font-size: 1.05rem;">
+            Incident 1: Coastal Discharges
+          </h4>
+          <span class="lab-meta-chip" id="sim-uz-distance-chip">8 nm offshore</span>
         </div>
-        <div class="sim-uz-diagram-seabed">
-            <div class="sim-uz-zone-block sim-uz-zone-cs" title="Continental Shelf">🗺️ Continental Shelf<span>up to 350nm</span></div>
-            <div class="sim-uz-zone-block sim-uz-zone-ta" title="The Area">⚓ The Area<span>Seabed</span></div>
+        <p id="sim-uz-incident-desc" style="font-size: 0.9rem; line-height: 1.5; color: var(--lms-ink-primary); margin: 0 0 12px;">
+          A foreign merchant ship dumps toxic bilge wastewater 8 nautical miles from your baseline. Does the coastal state have full sovereign enforcement power to halt and sanction the vessel?
+        </p>
+
+        <div class="sim-uz-choice-list" id="sim-uz-choices">
+          <!-- Choices injected via JS -->
         </div>
+      </div>
+
+      <div class="lab-log" id="sim-uz-log" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Patrol underway. Maritime navigation feeds active.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-uz-outcome" hidden>
+    <div class="lab-stars" id="sim-uz-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-uz-rank">Evaluating Admiralty Record...</div>
+    <h3 class="lab-debrief-title" id="sim-uz-debrief-heading">Maritime Patrol Assessment</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Final Score</div>
+        <div class="lab-stat-val" id="sim-uz-stat-score">0 pts</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Tokens Retained</div>
+        <div class="lab-stat-val" id="sim-uz-stat-tokens">3 / 3</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Zones Cleared</div>
+        <div class="lab-stat-val" id="sim-uz-stat-zones">10 / 10</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-uz-stat-best">0 pts</div>
+      </div>
     </div>
 
-    <div id="sim-uz-game-container" class="sim-uz-panel">
-        <div class="sim-uz-progress">
-            <span id="sim-uz-q-counter">Question 1 of 6</span>
-            <span id="sim-uz-score-counter">Score: 0</span>
-        </div>
-        
-        <h4 id="sim-uz-scenario-text" style="font-size: 1.1rem; line-height: 1.5; margin-top: 0;"></h4>
+    <div class="lab-reveal" id="sim-uz-reveal-body"></div>
 
-        <div class="sim-uz-choices" id="sim-uz-choices-container">
-            <button class="sim-uz-btn" onclick="simUzAnswer('Internal Waters')">Internal Waters</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('Territorial Sea')">Territorial Sea</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('Contiguous Zone')">Contiguous Zone</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('EEZ')">EEZ</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('Continental Shelf')">Continental Shelf</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('High Seas')">High Seas</button>
-            <button class="sim-uz-btn" onclick="simUzAnswer('The Area')">The Area</button>
-        </div>
-
-        <div id="sim-uz-feedback" class="sim-uz-feedback sim-uz-fade" aria-live="polite">
-            <div id="sim-uz-feedback-content"></div>
-            <button class="sim-uz-btn" style="margin-top: 15px;" onclick="simUzNext()">Next Scenario &rarr;</button>
-        </div>
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-uz-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Launch New Patrol
+      </button>
     </div>
+  </div>
 
-    <div id="sim-uz-end-container" class="sim-uz-panel sim-uz-fade" style="display: none; text-align: center;">
-        <h3 style="margin-top: 0;">Simulation Complete</h3>
-        <p style="font-size: 1.2rem; margin: 20px 0;">Your Final Score: <strong id="sim-uz-final-score"></strong></p>
-        <div class="sim-uz-success" style="margin-bottom: 20px; text-align: left;">
-            <strong>Analysis:</strong> UNCLOS successfully established a comprehensive legal framework for the oceans, balancing the security and economic interests of coastal states (through extended sovereignty like EEZ and Continental Shelf) with the traditional freedoms of maritime powers (like innocent passage and high seas freedoms).
-        </div>
-        <button class="sim-uz-btn" onclick="simUzRestart()">Restart Simulation</button>
-    </div>
 </div>
 
 <script>
 (function() {
-    const scenarios = [
-        {
-            text: "A foreign warship transits through coastal waters without stopping, in what the coastal state considers 'innocent passage.'",
-            correct: "Territorial Sea",
-            feedback: "Correct! Under UNCLOS Articles 17-19, foreign ships enjoy the right of innocent passage through the territorial sea (0-12nm), provided they do not engage in any threat or use of force."
-        },
-        {
-            text: "A coastal state arrests a foreign fishing vessel operating without a license 150 nautical miles from shore.",
-            correct: "EEZ",
-            feedback: "Correct! Under UNCLOS Article 56, the coastal state has sovereign rights for the purpose of exploring, exploiting, conserving and managing natural resources within its 200nm Exclusive Economic Zone."
-        },
-        {
-            text: "An oil company drills on the seabed 300nm from shore under a coastal state license, based on geological continental shelf extension.",
-            correct: "Continental Shelf",
-            feedback: "Correct! Under UNCLOS Article 76, coastal states may claim extended continental shelf rights up to 350nm if they can prove the natural prolongation of their land mass to the Commission on the Limits of the Continental Shelf (CLCS)."
-        },
-        {
-            text: "A foreign university research vessel conducts marine scientific research 100nm from shore without notifying the coastal state.",
-            correct: "EEZ",
-            feedback: "Correct zone (EEZ), but this constitutes a violation! Under UNCLOS Article 246, marine scientific research in the EEZ requires the express consent of the coastal state. The research vessel should have obtained prior authorization."
-        },
-        {
-            text: "An international naval coalition conducts an anti-piracy patrol in open ocean 500nm from any coast.",
-            correct: "High Seas",
-            feedback: "Correct! Under UNCLOS Article 87, the high seas are open to all states. Article 100 establishes a duty for all states to cooperate in the repression of piracy — this is one of the few bases for universal jurisdiction at sea."
-        },
-        {
-            text: "A deep-sea mining company extracts polymetallic nodules from the ocean floor 4000m deep, under license from the International Seabed Authority.",
-            correct: "The Area",
-            feedback: "Correct! Under UNCLOS Part XI, the deep seabed beyond national jurisdiction is designated 'The Area' and declared the Common Heritage of Mankind. All mineral resources are administered by the International Seabed Authority (ISA)."
-        }
-    ];
+  'use strict';
 
-    let currentIdx = 0;
-    let score = 0;
+  var SCENARIOS = [
+    {
+      id: 1,
+      title: 'Incident 1: Coastal Pollution Dump',
+      dist: '8 nm offshore',
+      desc: 'A foreign merchant vessel discharges toxic oily bilge waste 8 nautical miles from the baseline. Under UNCLOS, what is the legal regime?',
+      choices: [
+        { text: 'Territorial Sea (Art. 2 & 3): Full coastal state sovereignty; direct arrest and prosecution authorized.', correct: true },
+        { text: 'Contiguous Zone: Only customs and fiscal laws apply; cannot arrest for pollution.', correct: false },
+        { text: 'High Seas: Complete freedom of the seas prevents coastal interference.', correct: false }
+      ],
+      article: 'UNCLOS Art. 2 & 3: Coastal state sovereignty extends up to 12 nautical miles.'
+    },
+    {
+      id: 2,
+      title: 'Incident 2: Hovering Smuggler',
+      dist: '18 nm offshore',
+      desc: 'An unflagged cargo craft suspected of major tobacco and currency smuggling anchors 18 nautical miles from the coast. Which zone governs enforcement?',
+      choices: [
+        { text: 'Exclusive Economic Zone: Strictly limited to fish and mineral regulations.', correct: false },
+        { text: 'Contiguous Zone (Art. 33): Coastal state may exercise control to prevent and punish customs, fiscal, immigration, and sanitary violations.', correct: true },
+        { text: 'Internal Waters: Coastal port authorities have unconditional plenary rights.', correct: false }
+      ],
+      article: 'UNCLOS Art. 33: Contiguous Zone extends up to 24 nm for customs, fiscal, immigration, and sanitary enforcement.'
+    },
+    {
+      id: 3,
+      title: 'Incident 3: Unauthorized Commercial Trawler',
+      dist: '110 nm offshore',
+      desc: 'A foreign industrial fishing vessel deploys commercial drift nets 110 nautical miles off your coast without obtaining a fishing license.',
+      choices: [
+        { text: 'High Seas: Marine fisheries are open to all nations without restriction.', correct: false },
+        { text: 'Territorial Sea: Vessel is guilty of violating sovereignty directly.', correct: false },
+        { text: 'Exclusive Economic Zone (Art. 56): Coastal state has sovereign rights for exploring and exploiting living natural resources.', correct: true }
+      ],
+      article: 'UNCLOS Art. 56: Coastal states possess sovereign rights over living resources up to 200 nm.'
+    },
+    {
+      id: 4,
+      title: 'Incident 4: Submarine Internet Cables',
+      dist: '140 nm offshore',
+      desc: 'A foreign multinational consortium lays a transoceanic fiber-optic telecommunications cable along your continental shelf 140 nautical miles offshore.',
+      choices: [
+        { text: 'Lawful: Under Art. 79, all states enjoy freedom to lay submarine cables and pipelines on the continental shelf.', correct: true },
+        { text: 'Unlawful: Any seabed installation requires total coastal state ownership.', correct: false },
+        { text: 'Piracy: Damaging the seabed without military escort violates international law.', correct: false }
+      ],
+      article: 'UNCLOS Art. 79: States have the right to lay submarine cables and pipelines on the continental shelf.'
+    },
+    {
+      id: 5,
+      title: 'Incident 5: Transiting Foreign Warship',
+      dist: '6 nm offshore',
+      desc: 'A foreign destroyer transits expeditiously through your 12 nm Territorial Sea with weapons stowed, radars in peacetime mode, and helicopters grounded.',
+      choices: [
+        { text: 'Unlawful Armed Incursion: Warships are strictly forbidden from entering territorial seas under any circumstance.', correct: false },
+        { text: 'Lawful Innocent Passage (Art. 17 & 19): Passage is innocent so long as it is not prejudicial to peace, good order, or security.', correct: true },
+        { text: 'High Seas Freedom: Complete military operational freedom exists inside 12 nm.', correct: false }
+      ],
+      article: 'UNCLOS Art. 17 & 19: All ships, including warships, enjoy innocent passage through the territorial sea.'
+    },
+    {
+      id: 6,
+      title: 'Incident 6: Marine Scientific Research',
+      dist: '75 nm offshore',
+      desc: 'A foreign oceanographic research vessel conducts seabed core drilling and geochemical profiling 75 nautical miles offshore without prior notification.',
+      choices: [
+        { text: 'Lawful: Scientific inquiry on the high seas cannot be restricted by any coastal state.', correct: false },
+        { text: 'Requires Consent (Art. 246): Coastal states possess the right to regulate and authorize Marine Scientific Research in their EEZ.', correct: true },
+        { text: 'Hostile Act of War: Immediate warning shots authorized.', correct: false }
+      ],
+      article: 'UNCLOS Art. 246: Marine Scientific Research in the EEZ requires coastal state consent.'
+    },
+    {
+      id: 7,
+      title: 'Incident 7: High Seas Pirate Attack',
+      dist: '260 nm offshore',
+      desc: 'Armed skiffs attack an oil tanker 260 nautical miles from any coastline. A passing naval frigate from another continent intercepts the pirates.',
+      choices: [
+        { text: 'Universal Jurisdiction (Art. 100 & 105): Any state warship on the high seas may seize a pirate ship and arrest the perpetrators.', correct: true },
+        { text: 'Unlawful: Only the flag state of the victim tanker has jurisdiction.', correct: false },
+        { text: 'Coastal State Only: The closest land mass retains sole policing rights.', correct: false }
+      ],
+      article: 'UNCLOS Art. 100 & 105: All states have universal duty and jurisdiction to repress piracy on the high seas.'
+    },
+    {
+      id: 8,
+      title: 'Incident 8: Deep Seabed Polymetallic Mining',
+      dist: '350 nm offshore',
+      desc: 'A private mining corporation begins dredging manganese and cobalt nodules at 4,000 meters depth beyond national jurisdiction.',
+      choices: [
+        { text: 'First-come, first-served open ocean property rights.', correct: false },
+        { text: 'Common Heritage of Mankind (Part XI, Art. 136): Managed exclusively by the International Seabed Authority (ISA).', correct: true },
+        { text: 'Nearest coastal state automatically owns the abyssal plain.', correct: false }
+      ],
+      article: 'UNCLOS Part XI & Art. 136: The international seabed Area is the Common Heritage of Mankind.'
+    },
+    {
+      id: 9,
+      title: 'Incident 9: Military Freedom of Navigation',
+      dist: '130 nm offshore',
+      desc: 'A coastal state demands that a foreign naval task force cease military surveillance flights over international waters in its EEZ.',
+      choices: [
+        { text: 'Coastal State is correct: Military aircraft are forbidden inside 200 nm without coastal cabinet approval.', correct: false },
+        { text: 'Freedom of Navigation (Art. 58 & 87): Other states enjoy High Seas freedoms of navigation and overflight in the EEZ.', correct: true },
+        { text: 'UN Security Council must vote on each individual flight.', correct: false }
+      ],
+      article: 'UNCLOS Art. 58: High Seas freedoms of navigation and overflight apply within the EEZ.'
+    },
+    {
+      id: 10,
+      title: 'Incident 10: Artificial Islands & Zone Generation',
+      dist: '45 nm offshore',
+      desc: 'A state dredges sand onto a submerged coral reef to construct an artificial island housing an airstrip. Does it generate a 12 nm Territorial Sea?',
+      choices: [
+        { text: 'No (Art. 60): Artificial islands do not possess the status of islands and possess no territorial sea of their own (500m safety zone only).', correct: true },
+        { text: 'Yes: Any sovereign territory generates a 12 nm territorial sea and a 200 nm EEZ.', correct: false },
+        { text: 'Yes, but only if armed soldiers reside there continuously.', correct: false }
+      ],
+      article: 'UNCLOS Art. 60(8): Artificial islands do not generate territorial sea or EEZ.'
+    }
+  ];
 
-    const gameContainer = document.getElementById('sim-uz-game-container');
-    const endContainer = document.getElementById('sim-uz-end-container');
-    const qCounter = document.getElementById('sim-uz-q-counter');
-    const scoreCounter = document.getElementById('sim-uz-score-counter');
-    const scenarioText = document.getElementById('sim-uz-scenario-text');
-    const choicesContainer = document.getElementById('sim-uz-choices-container');
-    const feedbackBox = document.getElementById('sim-uz-feedback');
-    const feedbackContent = document.getElementById('sim-uz-feedback-content');
-    const finalScore = document.getElementById('sim-uz-final-score');
+  var state = {
+    index: 0,
+    tokens: 3,
+    score: 0,
+    streak: 0,
+    sigintUsed: false,
+    incorrectZones: [],
+    over: false
+  };
 
-    function loadScenario() {
-        if (currentIdx >= scenarios.length) {
-            showEndScreen();
-            return;
-        }
+  function $(id) { return document.getElementById(id); }
 
-        const sc = scenarios[currentIdx];
-        qCounter.textContent = `Question ${currentIdx + 1} of ${scenarios.length}`;
-        scenarioText.textContent = sc.text;
-        
-        feedbackBox.style.display = 'none';
-        
-        const buttons = choicesContainer.querySelectorAll('button');
-        buttons.forEach(btn => {
-            btn.disabled = false;
-            btn.style.opacity = '1';
-        });
+  function updateHUD() {
+    var zoneVal = $('sim-uz-hud-zone');
+    if (zoneVal) zoneVal.textContent = 'Incident ' + (state.index + 1) + ' / 10';
+
+    var tokVal = $('sim-uz-val-tokens');
+    if (tokVal) tokVal.textContent = state.tokens;
+
+    var scVal = $('sim-uz-val-score');
+    if (scVal) scVal.textContent = state.score;
+
+    var streakChip = $('sim-uz-hud-streak');
+    var multVal = $('sim-uz-val-mult');
+    if (streakChip && multVal) {
+      if (state.streak >= 2) {
+        streakChip.hidden = false;
+        multVal.textContent = state.streak >= 4 ? '2.0' : '1.5';
+      } else {
+        streakChip.hidden = true;
+      }
     }
 
-    window.simUzAnswer = function(chosenZone) {
-        const sc = scenarios[currentIdx];
-        const isCorrect = chosenZone === sc.correct;
+    // Update ladder step classes
+    for (var i = 1; i <= 10; i++) {
+      var step = $('uz-step-' + i);
+      if (step) {
+        step.classList.remove('is-cleared', 'is-current');
+        if (i < state.index + 1) step.classList.add('is-cleared');
+        else if (i === state.index + 1) step.classList.add('is-current');
+      }
+    }
+  }
 
-        const buttons = choicesContainer.querySelectorAll('button');
-        buttons.forEach(btn => {
-            btn.disabled = true;
-            if (btn.textContent !== chosenZone && btn.textContent !== sc.correct) {
-                btn.style.opacity = '0.4';
-            }
+  function renderScenario() {
+    if (state.index >= SCENARIOS.length || state.tokens <= 0) {
+      endGauntlet();
+      return;
+    }
+
+    var sc = SCENARIOS[state.index];
+    $('sim-uz-incident-title').textContent = sc.title;
+    $('sim-uz-distance-chip').textContent = sc.dist;
+    $('sim-uz-incident-desc').textContent = sc.desc;
+
+    var choiceBox = $('sim-uz-choices');
+    choiceBox.innerHTML = '';
+
+    sc.choices.forEach(function(c, idx) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sim-uz-choice-btn';
+      btn.innerHTML = '<strong>' + String.fromCharCode(65 + idx) + '.</strong> ' + c.text;
+      btn.addEventListener('click', function() {
+        handleChoice(c, sc, btn);
+      });
+      choiceBox.appendChild(btn);
+    });
+
+    updateHUD();
+  }
+
+  function handleChoice(choice, sc, clickedBtn) {
+    if (state.over) return;
+    var allBtns = document.querySelectorAll('.sim-uz-choice-btn');
+    allBtns.forEach(function(b) { b.disabled = true; });
+
+    var log = $('sim-uz-log');
+
+    if (choice.correct) {
+      clickedBtn.classList.add('is-correct');
+      state.streak++;
+      var mult = state.streak >= 4 ? 2.0 : (state.streak >= 2 ? 1.5 : 1.0);
+      var pts = Math.round(100 * mult);
+      state.score += pts;
+
+      if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.good();
+
+      if (log) {
+        var entry = document.createElement('div');
+        entry.className = 'lab-log-entry is-good';
+        entry.innerHTML = '<strong>CORRECT (+' + pts + ' pts):</strong> ' + sc.article;
+        log.insertBefore(entry, log.firstChild);
+      }
+    } else {
+      clickedBtn.classList.add('is-wrong');
+      state.tokens--;
+      state.streak = 0;
+      state.incorrectZones.push(sc);
+
+      if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.bad();
+
+      if (log) {
+        var errEntry = document.createElement('div');
+        errEntry.className = 'lab-log-entry is-warn';
+        errEntry.innerHTML = '<strong><i class="fa fa-exclamation-triangle"></i> JURISDICTIONAL INCIDENT:</strong> ' + sc.article + ' (Token lost!)';
+        log.insertBefore(errEntry, log.firstChild);
+      }
+    }
+
+    state.index++;
+    updateHUD();
+
+    if (state.tokens <= 0 || state.index >= SCENARIOS.length) {
+      setTimeout(endGauntlet, 700);
+    } else {
+      setTimeout(renderScenario, 600);
+    }
+  }
+
+  function handleSigintPass() {
+    if (state.sigintUsed || state.over || state.index >= SCENARIOS.length) return;
+    state.sigintUsed = true;
+    var sigBtn = $('sim-uz-sigint-btn');
+    if (sigBtn) {
+      sigBtn.disabled = true;
+      sigBtn.style.opacity = '0.5';
+    }
+
+    var sc = SCENARIOS[state.index];
+    state.score += 100;
+    state.streak++;
+
+    var log = $('sim-uz-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry is-intel';
+      entry.innerHTML = '<strong><i class="fa fa-shield"></i> SIGINT SATELLITE PASS USED:</strong> Navigational satellite decrypt cleared Incident ' + (state.index + 1) + ' automatically (' + sc.article + ').';
+      log.insertBefore(entry, log.firstChild);
+    }
+
+    if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.reveal();
+
+    state.index++;
+    updateHUD();
+
+    if (state.index >= SCENARIOS.length) {
+      setTimeout(endGauntlet, 600);
+    } else {
+      setTimeout(renderScenario, 400);
+    }
+  }
+
+  function endGauntlet() {
+    state.over = true;
+    $('sim-uz-play').hidden = true;
+    var debrief = $('sim-uz-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var cleared = state.index >= SCENARIOS.length;
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (!cleared && state.tokens <= 0) {
+      stars = 0;
+      rank = 'Maritime Rupture';
+      outcomeTitle = 'Patrol Terminated: Tokens Depleted';
+    } else if (state.tokens === 3) {
+      stars = 3;
+      rank = 'Maritime Admiral';
+      outcomeTitle = 'Flawless Jurisdictional Patrol (3/3 Tokens)';
+    } else if (state.tokens === 2) {
+      stars = 2;
+      rank = 'Fleet Commander';
+      outcomeTitle = 'Successful Patrol (2/3 Tokens)';
+    } else {
+      stars = 1;
+      rank = 'Coastal Patrolman';
+      outcomeTitle = 'Narrow Patrol Clearance (1/3 Tokens)';
+    }
+
+    var starContainer = $('sim-uz-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-uz-rank').textContent = rank;
+    $('sim-uz-stat-score').textContent = state.score + ' pts';
+    $('sim-uz-stat-tokens').textContent = state.tokens + ' / 3';
+    $('sim-uz-stat-zones').textContent = state.index + ' / 10';
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        window.LabGame.best.submit('unclos_zones', state.score);
+        var best = window.LabGame.best.get('unclos_zones');
+        $('sim-uz-stat-best').textContent = best + ' pts';
+      }
+      if (window.LabGame.flags && cleared) {
+        window.LabGame.flags.complete('unclos_zones');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.good();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-uz-reveal-body');
+    if (revealEl) {
+      var weakZoneNotes = '';
+      if (state.incorrectZones.length > 0) {
+        weakZoneNotes = '<p><strong>Post-Patrol Advisory on Missed Incidents:</strong></p><ul>';
+        state.incorrectZones.slice(0, 2).forEach(function(item) {
+          weakZoneNotes += '<li><strong>' + item.title + ':</strong> ' + item.article + '</li>';
         });
+        weakZoneNotes += '</ul>';
+      }
 
-        feedbackBox.style.display = 'block';
-        
-        if (isCorrect) {
-            score++;
-            scoreCounter.textContent = `Score: ${score}`;
-            feedbackContent.className = 'sim-uz-success';
-            feedbackContent.innerHTML = `<strong>Correct (${chosenZone})!</strong><br><br>${sc.feedback}`;
-        } else {
-            feedbackContent.className = 'sim-uz-failure';
-            feedbackContent.innerHTML = `<strong>Incorrect.</strong> You chose ${chosenZone}, but the correct zone is <strong>${sc.correct}</strong>.<br><br>${sc.feedback}`;
+      var html = '<p><strong>Legal Declassification: The UNCLOS 1982 Maritime Architecture</strong></p>' +
+        '<p>The United Nations Convention on the Law of the Sea (UNCLOS, signed in Montego Bay, 1982) serves as the "constitution for the oceans," calibrating coastal state security against global freedom of navigation:</p>' +
+        '<ul>' +
+        '<li><strong>Zonal Attenuation of Sovereignty:</strong> Coastal authority diminishes as distance from baselines increases: full sovereignty in the <em>Territorial Sea</em> (12 nm, subject to innocent passage), functional policing in the <em>Contiguous Zone</em> (24 nm), resource sovereign rights in the <em>EEZ</em> (200 nm), and non-sovereign seabed exploitation on the <em>Continental Shelf</em>.</li>' +
+        '<li><strong>High Seas Freedoms:</strong> Under Article 87, high seas navigation, overflight, and laying submarine cables remain open to all states. No state may validly purport to subject any part of the high seas to its sovereignty.</li>' +
+        '<li><strong>The Common Heritage of Mankind:</strong> Under Part XI and Article 136, the deep seabed beyond national jurisdiction ("The Area") belongs to all humanity and is regulated by the International Seabed Authority.</li>' +
+        '</ul>' +
+        weakZoneNotes +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
+    }
+  }
+
+  function attachListeners() {
+    var beginBtn = $('sim-uz-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-uz-briefing').hidden = true;
+        $('sim-uz-play').hidden = false;
+        renderScenario();
+      });
+    }
+
+    var sigBtn = $('sim-uz-sigint-btn');
+    if (sigBtn) sigBtn.addEventListener('click', handleSigintPass);
+
+    var replayBtn = $('sim-uz-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.index = 0;
+        state.tokens = 3;
+        state.score = 0;
+        state.streak = 0;
+        state.sigintUsed = false;
+        state.incorrectZones = [];
+        state.over = false;
+
+        if (sigBtn) {
+          sigBtn.disabled = false;
+          sigBtn.style.opacity = '1';
         }
-    };
 
-    window.simUzNext = function() {
-        currentIdx++;
-        loadScenario();
-    };
+        $('sim-uz-outcome').hidden = true;
+        $('sim-uz-briefing').hidden = true;
+        $('sim-uz-play').hidden = false;
 
-    window.simUzRestart = function() {
-        currentIdx = 0;
-        score = 0;
-        scoreCounter.textContent = `Score: 0`;
-        endContainer.style.display = 'none';
-        gameContainer.style.display = 'block';
-        loadScenario();
-    };
+        var log = $('sim-uz-log');
+        if (log) log.innerHTML = '<div class="lab-log-entry is-muted">&gt; Patrol underway. Maritime navigation feeds active.</div>';
 
-    // Initialize
-    loadScenario();
+        renderScenario();
+      });
+    }
+
+    var muteBtn = $('sim-uz-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-uz-help-btn',
+        objectiveHtml: '<p>Navigate through 10 maritime scenarios. Keep all 3 Incident Tokens for ★★★ Maritime Admiral. Wrong classifications lose 1 Token and reset combos. Use your 1-time SIGINT Satellite Pass on the hardest scenario.</p>',
+        howtoHtml: '<p>1. Read the incident scenario and distance offshore.<br>2. Select the correct UNCLOS legal regime.<br>3. Stack consecutive correct answers for ×1.5 combo.<br>4. Use the SIGINT Satellite Pass button when uncertain.<br>5. Clear all 10 zones to reach debrief.</p>',
+        payoffHtml: '<p>Clear + 3 Tokens: ★★★ | Clear + 2 Tokens: ★★ | Clear + 1 Token: ★ | 0 Tokens: 0★ Failure.</p>'
+      });
+    }
+  }
+
+  // State exposure
+  window.getSimUzState = function() { return state; };
+  Object.defineProperty(window, 'simUzState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
 })();
 </script>

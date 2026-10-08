@@ -1,5 +1,5 @@
 <style>
-/* Lab 04 — Security Dilemma. Shell styles: assets/css/lab-shell.css */
+/* Lab 04 — Spiral Watch: Security Dilemma. Shell styles: assets/css/lab-shell.css */
 #security-dilemma-sim .sim-sd-legend { display: flex; justify-content: space-between; }
 #security-dilemma-sim .sim-sd-strategy {
     margin-top: 12px;
@@ -18,12 +18,13 @@
     <div class="lab-head">
         <div class="lab-kicker">
             <span class="lab-kicker-chip">Lab 04</span>
-            <span class="lab-kicker-track">Security Studies · Realism</span>
+            <span class="lab-kicker-track">CASE FILE · SECURITY STUDIES</span>
         </div>
-        <h3 class="lab-title">The Security Dilemma Spiral</h3>
+        <h3 class="lab-title">Spiral Watch: The Security Dilemma</h3>
         <div class="lab-meta">
             <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
             <span class="lab-meta-chip"><i class="fa fa-crosshairs" aria-hidden="true"></i> 5 decisions</span>
+            <span class="lab-meta-chip"><i class="fa fa-shield" aria-hidden="true"></i> CBM Restraint Streak</span>
             <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
         </div>
     </div>
@@ -34,34 +35,34 @@
             <div>
                 <div class="lab-brief-card" style="margin-bottom: 14px;">
                     <p class="lab-brief-label">Situation</p>
-                    <p>Two states — Alpha and Beta — live in anarchy: there is no world police above them. Both start with equal militaries (power 5 each) and moderate distrust (threat perception 50% on both sides).</p>
+                    <p>Two states — Alpha and Beta — live in international anarchy without a supreme authority. Both start with equal militaries (power 5 each) and moderate mutual distrust (threat perception 50% each).</p>
                 </div>
                 <div class="lab-brief-card">
                     <p class="lab-brief-label">Your Role</p>
-                    <p>You direct State Alpha's grand strategy for 5 rounds. State Beta is an AI government reacting cautiously to every move you make.</p>
+                    <p>You direct State Alpha's grand strategy across 5 rounds. State Beta is an AI opponent with a secret doctrinal posture: <em>Cautious Reactive</em> or <em>Opportunistic</em>.</p>
                 </div>
             </div>
             <div>
                 <div class="lab-brief-card" style="margin-bottom: 14px;">
                     <p class="lab-brief-label">Objectives</p>
                     <ul class="lab-obj-list">
-                        <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>Security Community:</strong> end the simulation with <em>both</em> threat perceptions below 35%.</span></li>
-                        <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>Uneasy Détente:</strong> both perceptions stay between 35% and 75%.</span></li>
-                        <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>Arms Race Spiral:</strong> either perception rises above 75%. Avoid this.</span></li>
+                        <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Security Community:</strong> End with <em>both</em> threat perceptions below 35%.</span></li>
+                        <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★ Uneasy Détente:</strong> Both perceptions stay between 35% and 75%.</span></li>
+                        <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0★ Arms Race Spiral:</strong> Either perception rises above 75%.</span></li>
                     </ul>
                 </div>
                 <div class="lab-brief-card">
                     <p class="lab-brief-label">How It Works</p>
                     <ul class="lab-mech-list">
-                        <li><i class="fa fa-arrow-up" aria-hidden="true"></i><span><strong>Build</strong> adds +2 to your military — and raises Beta's threat perception by 20.</span></li>
-                        <li><i class="fa fa-comments" aria-hidden="true"></i><span><strong>Signal</strong> offers diplomacy (Beta's threat −10); <strong>Reduce</strong> cuts your military by 1 (Beta's threat −15).</span></li>
-                        <li><i class="fa fa-eye" aria-hidden="true"></i><span>Beta reacts to your <em>last</em> move each round. Watch its response pattern before committing.</span></li>
+                        <li><i class="fa fa-arrow-up" aria-hidden="true"></i><span><strong>Build:</strong> +2 Military — triggers +20 Beta threat.</span></li>
+                        <li><i class="fa fa-comments" aria-hidden="true"></i><span><strong>Signal &amp; Reduce:</strong> Signal cuts Beta threat by 10; Reduce cuts your power by 1 and threat by 15.</span></li>
+                        <li><i class="fa fa-chain" aria-hidden="true"></i><span><strong>CBM Restraint Momentum:</strong> Chaining non-Build rounds unleashes bonus threat reduction (−5 from Round 3).</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="lab-brief-actions">
-            <button class="lab-btn lab-btn-primary" id="sim-sd-btn-begin">
+            <button type="button" class="lab-btn lab-btn-primary" id="sim-sd-btn-begin">
                 <i class="fa fa-play" aria-hidden="true"></i> Begin Simulation
             </button>
         </div>
@@ -73,12 +74,21 @@
         <div class="lab-hud" aria-live="polite">
             <span class="lab-hud-chip" id="sim-sd-hud-round">Round 1 / 5</span>
             <span class="lab-hud-chip" id="sim-sd-hud-objective">Target: both threats &lt; 35%</span>
+            <span class="lab-hud-chip is-streak" id="sim-sd-hud-streak" hidden>CBM Momentum Active</span>
+            <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+                <button type="button" class="lab-btn lab-btn-ghost" id="sim-sd-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="lab-btn lab-btn-ghost" id="sim-sd-help-btn" title="Mission Help" aria-label="Open mission help">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+                </button>
+            </div>
         </div>
 
         <div class="lab-stage" id="sim-sd-stage">
             <div class="lab-board">
 
-                <div class="lab-tile">
+                <div class="lab-tile" id="sim-sd-tile-alpha">
                     <h4><i class="fa fa-shield" aria-hidden="true" style="color: var(--lab-accent); margin-right: 6px;"></i>State Alpha — You</h4>
                     <div class="lab-stat-row"><span>Military Power</span><strong id="sim-sd-alpha-power">5</strong></div>
                     <div class="lab-stat-row"><span>Threat Perception (Beta's view of you)</span><strong id="sim-sd-alpha-threat-val">50%</strong></div>
@@ -93,13 +103,13 @@
 
                     <h4 style="margin-top: 16px;">Actions — Round <span id="sim-sd-round-counter">1</span>/5</h4>
                     <div class="lab-actions" style="padding: 0;">
-                        <button class="lab-btn" onclick="window.simSdAction('build')" id="sim-sd-btn-build"><i class="fa fa-arrow-up" aria-hidden="true"></i> Build (+2 Military)</button>
-                        <button class="lab-btn" onclick="window.simSdAction('signal')" id="sim-sd-btn-signal"><i class="fa fa-comments" aria-hidden="true"></i> Signal (+1 Diplomacy)</button>
-                        <button class="lab-btn" onclick="window.simSdAction('reduce')" id="sim-sd-btn-reduce"><i class="fa fa-arrow-down" aria-hidden="true"></i> Reduce (−1 Military)</button>
+                        <button type="button" class="lab-btn" onclick="window.simSdAction('build')" id="sim-sd-btn-build"><i class="fa fa-arrow-up" aria-hidden="true"></i> Build (+2 Military)</button>
+                        <button type="button" class="lab-btn" onclick="window.simSdAction('signal')" id="sim-sd-btn-signal"><i class="fa fa-comments" aria-hidden="true"></i> Signal (+1 Diplomacy)</button>
+                        <button type="button" class="lab-btn" onclick="window.simSdAction('reduce')" id="sim-sd-btn-reduce"><i class="fa fa-arrow-down" aria-hidden="true"></i> Reduce (−1 Military)</button>
                     </div>
                 </div>
 
-                <div class="lab-tile">
+                <div class="lab-tile" id="sim-sd-tile-beta">
                     <h4><i class="fa fa-shield" aria-hidden="true" style="color: var(--lms-ink-tertiary); margin-right: 6px;"></i>State Beta — AI</h4>
                     <div class="lab-stat-row"><span>Military Power</span><strong id="sim-sd-beta-power">5</strong></div>
                     <div class="lab-stat-row"><span>Threat Perception (Alpha's view of it)</span><strong id="sim-sd-beta-threat-val">50%</strong></div>
@@ -112,7 +122,7 @@
                         <span>0 calm</span><span>35 détente zone</span><span>75 spiral zone</span>
                     </div>
 
-                    <div class="sim-sd-strategy">Declared strategy: Cautious Reactive</div>
+                    <div class="sim-sd-strategy">Posture: <strong id="sim-sd-beta-posture">CLASSIFIED</strong></div>
                     <div class="lab-opp-status sim-sd-beta-status" id="sim-sd-beta-action-display">Waiting for your Round 1 decision…</div>
                 </div>
 
@@ -122,25 +132,51 @@
 
         <div class="lab-tip" id="sim-sd-tip" hidden>
             <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-            <span>Notice Beta's pattern: it answers a Build with a Build, and rewards diplomacy. Escalation is self-reinforcing — so is restraint.</span>
-            <button class="lab-tip-close" id="sim-sd-tip-close" aria-label="Dismiss tip"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <span>Notice Beta's posture: escalation feeds escalation, but consistent restraint can unlock confidence-building momentum.</span>
+            <button type="button" class="lab-tip-close" id="sim-sd-tip-close" aria-label="Dismiss tip"><i class="fa fa-times" aria-hidden="true"></i></button>
         </div>
 
         <div class="lab-log" id="sim-sd-log" aria-live="polite">
             <div class="lab-log-entry is-muted">Simulation started. Waiting for Alpha's first move.</div>
         </div>
 
+        <!-- ======================= DEBRIEF ======================= -->
         <div id="sim-sd-outcome" class="lab-debrief" aria-live="polite" hidden>
-            <span class="lab-debrief-tag">Debrief</span>
-            <h4 id="sim-sd-outcome-title"></h4>
+            <div class="lab-stars" id="sim-sd-stars">
+                <i class="fa fa-star is-off" aria-hidden="true"></i>
+                <i class="fa fa-star is-off" aria-hidden="true"></i>
+                <i class="fa fa-star is-off" aria-hidden="true"></i>
+            </div>
+            <div class="lab-rank" id="sim-sd-rank">Evaluating Security Regimes...</div>
+            <h4 id="sim-sd-outcome-title" style="margin-top: 8px;"></h4>
             <p id="sim-sd-outcome-desc"></p>
+
+            <div class="lab-stats">
+                <div class="lab-stat-cell">
+                    <div class="lab-stat-label">Alpha Threat</div>
+                    <div class="lab-stat-val" id="sim-sd-stat-alpha-threat">50%</div>
+                </div>
+                <div class="lab-stat-cell">
+                    <div class="lab-stat-label">Beta Threat</div>
+                    <div class="lab-stat-val" id="sim-sd-stat-beta-threat">50%</div>
+                </div>
+                <div class="lab-stat-cell">
+                    <div class="lab-stat-label">Restraint Streak</div>
+                    <div class="lab-stat-val" id="sim-sd-stat-streak">0</div>
+                </div>
+                <div class="lab-stat-cell">
+                    <div class="lab-stat-label">Best Outcome</div>
+                    <div class="lab-stat-val" id="sim-sd-stat-best">Security Community</div>
+                </div>
+            </div>
+
             <div class="lab-recap" id="sim-sd-recap">
                 <div class="lab-recap-title">Your round-by-round trajectory</div>
                 <ul id="sim-sd-recap-list"></ul>
             </div>
-            <div class="lab-mech-reveal" id="sim-sd-mech-reveal"></div>
-            <div class="lab-debrief-actions">
-                <button class="lab-btn" onclick="window.simSdRestart()"><i class="fa fa-refresh" aria-hidden="true"></i> Restart Simulation</button>
+            <div class="lab-reveal" id="sim-sd-mech-reveal"></div>
+            <div class="lab-debrief-actions" style="margin-top: 20px; text-align: center;">
+                <button type="button" class="lab-btn lab-btn-primary" onclick="window.simSdRestart()"><i class="fa fa-refresh" aria-hidden="true"></i> Restart Simulation</button>
             </div>
         </div>
     </div>
@@ -148,15 +184,33 @@
 
 <script>
 (function() {
-    var INITIAL = { round: 1, alphaPower: 5, betaPower: 5, alphaThreat: 50, betaThreat: 50, alphaLastAction: null, gameOver: false };
+    'use strict';
+
+    var POSTURES = ['cautious', 'opportunistic'];
+    var INITIAL = {
+        round: 1,
+        alphaPower: 5,
+        betaPower: 5,
+        alphaThreat: 50,
+        betaThreat: 50,
+        alphaLastAction: null,
+        restraintStreak: 0,
+        betaPosture: 'cautious',
+        gameOver: false
+    };
+
     var state = JSON.parse(JSON.stringify(INITIAL));
     var history = [];
     var tipShown = false;
 
     function $(id) { return document.getElementById(id); }
     function clamp(val, min, max) { return Math.min(Math.max(val, min), max); }
-
     function threatClass(t) { return t >= 75 ? 'is-danger' : (t >= 35 ? 'is-alert' : 'is-calm'); }
+
+    function drawPosture() {
+        var seed = (window.LabGame && window.LabGame.rng) ? window.LabGame.rng() : Math.random();
+        return seed < 0.5 ? 'cautious' : 'opportunistic';
+    }
 
     function updateUI() {
         $('sim-sd-alpha-power').innerText = state.alphaPower;
@@ -176,6 +230,11 @@
             $('sim-sd-hud-round').innerText = 'Round ' + state.round + ' / 5';
         }
 
+        var streakChip = $('sim-sd-hud-streak');
+        if (streakChip) {
+            streakChip.hidden = state.restraintStreak < 2;
+        }
+
         var obj = $('sim-sd-hud-objective');
         if (state.alphaThreat < 35 && state.betaThreat < 35) {
             obj.textContent = 'On trajectory: Security Community';
@@ -189,21 +248,31 @@
         }
     }
 
-    function logAction(msg) {
+    function logAction(msg, isIntel) {
         history.push({ round: state.round, msg: msg });
         var logContainer = $('sim-sd-log');
         var entry = document.createElement('div');
-        entry.className = 'lab-log-entry';
-        entry.innerHTML = '<strong>Round ' + state.round + ':</strong> ' + msg;
+        entry.className = 'lab-log-entry' + (isIntel ? ' is-intel' : '');
+        entry.innerHTML = (isIntel ? '' : '<strong>Round ' + state.round + ':</strong> ') + msg;
         logContainer.insertBefore(entry, logContainer.firstChild);
     }
 
     function determineBetaAction() {
         if (state.round === 1 || !state.alphaLastAction) { return 'wait'; }
-        if (state.alphaLastAction === 'build') { return 'build'; }
-        if (state.alphaLastAction === 'signal') { return Math.random() < 0.5 ? 'signal' : 'wait'; }
-        if (state.alphaLastAction === 'reduce') { return 'signal'; }
-        return 'wait';
+
+        if (state.betaPosture === 'opportunistic') {
+            // Opportunistic posture: mirrors Build, exploits Reduce by Building!
+            if (state.alphaLastAction === 'build') { return 'build'; }
+            if (state.alphaLastAction === 'signal') { return Math.random() < 0.4 ? 'signal' : 'build'; }
+            if (state.alphaLastAction === 'reduce') { return 'build'; }
+            return 'wait';
+        } else {
+            // Cautious Reactive (standard):
+            if (state.alphaLastAction === 'build') { return 'build'; }
+            if (state.alphaLastAction === 'signal') { return Math.random() < 0.5 ? 'signal' : 'wait'; }
+            if (state.alphaLastAction === 'reduce') { return 'signal'; }
+            return 'wait';
+        }
     }
 
     window.simSdAction = function(alphaChoice) {
@@ -213,21 +282,37 @@
         var alphaMsg = '';
         var betaMsg = '';
 
-        // Alpha action (mechanics preserved)
+        // Restraint streak calculation
+        if (alphaChoice !== 'build') {
+            state.restraintStreak++;
+        } else {
+            state.restraintStreak = 0;
+        }
+
+        // Alpha action
         if (alphaChoice === 'build') {
             state.alphaPower += 2;
             alphaMsg = 'Alpha Built (+2 Military).';
             state.betaThreat += 20;
+            if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.bad();
         } else if (alphaChoice === 'signal') {
             alphaMsg = 'Alpha Signaled diplomacy.';
             state.betaThreat -= 10;
+            if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.good();
         } else if (alphaChoice === 'reduce') {
             state.alphaPower = Math.max(0, state.alphaPower - 1);
             alphaMsg = 'Alpha Reduced military (−1 Military).';
             state.betaThreat -= 15;
+            if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.good();
         }
 
-        // Beta action (mechanics preserved)
+        // CBM Momentum Bonus (from round 3 if non-build streak >= 2)
+        if (state.round >= 3 && state.restraintStreak >= 2) {
+            state.betaThreat -= 5;
+            alphaMsg += ' [CBM Bonus −5 Threat]';
+        }
+
+        // Beta action
         if (betaChoice === 'build') {
             state.betaPower += 2;
             betaMsg = 'Beta Built (+2 Military).';
@@ -249,6 +334,12 @@
         var opp = $('sim-sd-beta-action-display');
         opp.innerHTML = 'Round ' + state.round + ' response: <strong>' + betaMsg.replace('Beta ', '') + '</strong>';
         logAction(alphaMsg + ' | ' + betaMsg);
+
+        // SIGINT Intercept after Round 2
+        if (state.round === 2) {
+            var postureDesc = state.betaPosture === 'cautious' ? 'Cautious Reactive (responsive to reciprocal de-escalation)' : 'Opportunistic (predatory response to unilateral concessions)';
+            logAction('<strong><i class="fa fa-shield"></i> SIGINT INTERCEPT · ROUND 3:</strong> Decrypt: Beta\'s planning posture this season is <strong>' + postureDesc + '</strong>.', true);
+        }
 
         state.alphaLastAction = alphaChoice;
         updateUI();
@@ -273,26 +364,62 @@
         $('sim-sd-btn-signal').disabled = true;
         $('sim-sd-btn-reduce').disabled = true;
 
-        try { localStorage.setItem('labs_completed_security_dilemma', 'true'); } catch (e) {}
-
         var outcomeDiv = $('sim-sd-outcome');
         outcomeDiv.hidden = false;
-        outcomeDiv.className = 'lab-debrief';
+        outcomeDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         var outcomeTitle = $('sim-sd-outcome-title');
         var outcomeDesc = $('sim-sd-outcome-desc');
+        var stars = 0;
+        var rank = '';
 
-        if (state.alphaThreat > 75 && state.betaThreat > 75) {
-            outcomeDiv.classList.add('is-lose');
+        if (state.alphaThreat > 75 || state.betaThreat > 75) {
+            stars = 0;
+            rank = 'Escalation Casualty';
             outcomeTitle.innerText = '❌ Arms Race Spiral';
-            outcomeDesc.innerHTML = 'Both states are locked in a ruinous arms race. Neither is more secure than before, but both are poorer.<br><br><strong>Analysis:</strong> This confirms Robert Jervis\'s Spiral Model — defensive measures were perceived as offensive threats, triggering mutual escalation in a tragic feedback loop.';
+            outcomeDesc.innerHTML = 'Both states crossed the dangerous 75% threat threshold into an uncontrollable escalation spiral.<br><br><strong>Analysis:</strong> Defensive measures were perceived as offensive preparations, verifying Robert Jervis\'s Spiral Model.';
         } else if (state.alphaThreat < 35 && state.betaThreat < 35) {
-            outcomeDiv.classList.add('is-win');
+            stars = 3;
+            rank = 'Architect of Peace';
             outcomeTitle.innerText = '✅ Security Community';
-            outcomeDesc.innerHTML = 'Through sustained confidence-building, both states have transcended the security dilemma.<br><br><strong>Analysis:</strong> Karl Deutsch\'s concept of a Security Community has been achieved — states no longer consider war as a possible instrument against each other.';
+            outcomeDesc.innerHTML = 'Through sustained confidence-building measures and restraint streaks, both threat perceptions dropped below 35%.<br><br><strong>Analysis:</strong> Karl Deutsch\'s Security Community achieved — military conflict is no longer conceived as an option.';
         } else {
+            stars = 1;
+            rank = 'Cautious Diplomat';
             outcomeTitle.innerText = '⚠️ Uneasy Détente';
-            outcomeDesc.innerHTML = 'A fragile peace persists, but deep mistrust remains beneath the surface.<br><br><strong>Analysis:</strong> This resembles Cold War détente — cooperation on the surface, but neither side has truly abandoned worst-case military planning.';
+            outcomeDesc.innerHTML = 'A fragile truce persists, but threat perceptions remain suspended in the 35%–75% band.<br><br><strong>Analysis:</strong> Mimics Cold War détente — surface restraint without resolving structural distrust.';
+        }
+
+        var starContainer = $('sim-sd-stars');
+        if (starContainer) {
+            starContainer.innerHTML = '';
+            for (var i = 0; i < 3; i++) {
+                var s = document.createElement('i');
+                s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+                s.setAttribute('aria-hidden', 'true');
+                starContainer.appendChild(s);
+            }
+        }
+
+        $('sim-sd-rank').innerText = rank;
+        $('sim-sd-stat-alpha-threat').innerText = state.alphaThreat + '%';
+        $('sim-sd-stat-beta-threat').innerText = state.betaThreat + '%';
+        $('sim-sd-stat-streak').innerText = state.restraintStreak;
+
+        if (window.LabGame) {
+            if (window.LabGame.flags && stars >= 1) {
+                window.LabGame.flags.complete('security_dilemma');
+            }
+            if (window.LabGame.best) {
+                var scoreVal = stars === 3 ? 100 : (stars === 1 ? 50 : 0);
+                window.LabGame.best.submit('security_dilemma', scoreVal);
+                $('sim-sd-stat-best').innerText = stars === 3 ? 'Security Community (★3)' : (stars === 1 ? 'Détente (★1)' : 'Spiral (0★)');
+            }
+            if (window.LabGame.sfx) {
+                if (stars === 3) window.LabGame.sfx.fanfare();
+                else if (stars === 1) window.LabGame.sfx.good();
+                else window.LabGame.sfx.bad();
+            }
         }
 
         var recap = $('sim-sd-recap-list');
@@ -303,11 +430,16 @@
             recap.appendChild(li);
         });
 
-        $('sim-sd-mech-reveal').innerHTML = '<strong>Mechanics revealed:</strong> State Beta ran a <em>Cautious Reactive</em> strategy — it mirrored your Build immediately, half-responded to Signals, and answered Reduction with diplomacy. Because intentions are private under anarchy, restraint is cheap to fake and costly to trust. That is precisely why the security dilemma persists even when both sides prefer peace (Jervis, 1976).<br><br>Continue to the <strong>Knowledge Check</strong> below to test the concept.';
+        var postureName = state.betaPosture === 'cautious' ? 'Cautious Reactive' : 'Opportunistic';
+        $('sim-sd-mech-reveal').innerHTML = '<strong>Doctrine Declassified:</strong> State Beta operated under a <strong>' + postureName + '</strong> doctrine this session.<br><br>' +
+            '<strong>Academic Context — Robert Jervis (1976), <em>Perception and Misperception in International Politics</em>:</strong><br>' +
+            'In an anarchic international system, states cannot peer into each other\'s minds. Because defensive preparations resemble offensive preparations, one state\'s quest for security unavoidably diminishes the security of its neighbor. The tragic dilemma is driven by <em>type uncertainty</em> — you never know whether the other side is a fearful status-quo state seeking reassurance or an opportunistic revisionist seeking advantage until you test their reaction across iterated interactions.<br><br>' +
+            '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
     }
 
     window.simSdRestart = function() {
         state = JSON.parse(JSON.stringify(INITIAL));
+        state.betaPosture = drawPosture();
         history = [];
 
         $('sim-sd-btn-build').disabled = false;
@@ -321,8 +453,16 @@
         updateUI();
     };
 
-    // Drag-to-rotate CSS-3D board + briefing gate + tip close
+    // State exposure
+    window.getSimSdState = function() { return state; };
+    Object.defineProperty(window, 'simSdState', {
+        get: function() { return state; },
+        set: function(v) { state = v; }
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
+        state.betaPosture = drawPosture();
+
         var stage = $('sim-sd-stage');
         var board = stage ? stage.querySelector('.lab-board') : null;
 
@@ -361,6 +501,28 @@
                 $('sim-sd-briefing').hidden = true;
                 $('sim-sd-play').hidden = false;
                 updateUI();
+            });
+        }
+
+        var muteBtn = $('sim-sd-mute-btn');
+        if (muteBtn && window.LabGame && window.LabGame.sfx) {
+            var updateMute = function() {
+                var m = window.LabGame.sfx.muted();
+                muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+            };
+            updateMute();
+            muteBtn.addEventListener('click', function() {
+                window.LabGame.sfx.toggleMute();
+                updateMute();
+            });
+        }
+
+        if (window.LabGame && window.LabGame.help) {
+            window.LabGame.help.mount({
+                triggerEl: '#sim-sd-help-btn',
+                objectiveHtml: '<p>Navigate 5 rounds of arms competition without crossing into the spiral zone (threat > 75%). Reach Security Community (&lt; 35% on both sides) for ★★★. Build raises threat (+20); Signal (−10) and Reduce (−15) de-escalate. Chaining non-Build moves unlocks CBM bonus (−5).</p>',
+                howtoHtml: '<p>1. Check both military powers and threat levels.<br>2. Select Build, Signal, or Reduce each round.<br>3. Read Beta\'s response pattern.<br>4. Note Round 3 SIGINT decrypt regarding Beta\'s secret posture.<br>5. Conclude 5 rounds to evaluate outcome.</p>',
+                payoffHtml: '<p>Build: +2 Power, +20 Opponent Threat<br>Signal: Diplomacy, −10 Opponent Threat<br>Reduce: −1 Power, −15 Opponent Threat<br>CBM Bonus: extra −5 Opponent Threat from Round 3 on restraint streak.</p>'
             });
         }
     });

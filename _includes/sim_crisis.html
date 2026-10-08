@@ -1,64 +1,566 @@
 <style>
-.sim-crisis-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
-.sim-crisis-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
-.sim-crisis-header h3 { margin: 0; color: #ef4444 !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
-.crisis-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; }
-.crisis-scene { font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; color: #d1d5db; }
-.crisis-options { display: flex; flex-direction: column; gap: 10px; }
-.crisis-btn { padding: 12px 15px; background: #374151; color: white; border: 1px solid #4b5563; border-radius: 6px; font-size: 1rem; cursor: pointer; text-align: left; transition: all 0.2s; display: flex; align-items: center; gap: 10px; outline: none; }
-.crisis-btn:hover { background: #4b5563; border-color: #9ca3af; transform: translateX(5px); }
-.crisis-btn.military:hover { background: #7f1d1d; border-color: #ef4444; }
-.crisis-btn.diplomat:hover { background: #1e3a8a; border-color: #3b82f6; }
-.crisis-result { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: normal; display: none; animation: fadeIn 0.5s ease-in-out; line-height: 1.5; }
-.crisis-result.bad { background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #fca5a5; }
-.crisis-result.good { background: rgba(16,185,129,0.1); border: 1px solid #10b981; color: #6ee7b7; }
+/* Lab 01 — Crisis Command: Thirteen Days */
+#crisis-sim .sim-crisis-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+#crisis-sim .sim-crisis-opt-btn {
+  text-align: left;
+  padding: 14px 16px;
+  line-height: 1.45;
+  border-radius: var(--lms-radius-sm, 6px);
+  border: 1px solid var(--lms-hairline);
+  background: var(--lms-surface);
+  color: var(--lms-ink-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#crisis-sim .sim-crisis-opt-btn:hover:not(:disabled) {
+  border-color: var(--lab-accent);
+  background: var(--lab-accent-soft);
+  transform: translateX(4px);
+}
+#crisis-sim .sim-crisis-opt-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--lms-ink-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#crisis-sim .sim-crisis-opt-desc {
+  font-size: 0.82rem;
+  color: var(--lms-ink-secondary);
+}
+#crisis-sim .sim-crisis-timer-bar {
+  height: 6px;
+  background: var(--lms-hairline);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+#crisis-sim .sim-crisis-timer-fill {
+  height: 100%;
+  width: 100%;
+  background: var(--lab-accent);
+  transition: width 0.1s linear;
+}
 </style>
 
-<div class="sim-crisis-container" id="crisis-sim">
-    <div class="sim-crisis-header">
-        <h3><i class="fa fa-warning"></i> Simulation: The Cuban Missile Crisis</h3>
-        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are US President JFK. Soviet nuclear missiles have been spotted in Cuba. Your advisors are sharply divided (Bureaucratic Politics Model). How do you respond?</p>
+<div class="lab-shell" id="crisis-sim" data-cat="security">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 01</span>
+      <span class="lab-kicker-track">CASE FILE · FOREIGN POLICY ANALYSIS</span>
     </div>
-    <div class="crisis-panel">
-        <div id="crisis-scene" class="crisis-scene">
-            <strong>Day 1:</strong> The CIA shows you spy plane photos of Soviet nuclear missile sites under construction in Cuba. The Joint Chiefs of Staff (Military) urge an immediate airstrike. The State Department (Diplomats) suggests secret negotiations. What is your first move?
-        </div>
-        <div id="crisis-options" class="crisis-options">
-            <button class="crisis-btn military" onclick="playCrisis(1)">🚀 1. Launch a preemptive airstrike on the missile sites.</button>
-            <button class="crisis-btn diplomat" onclick="playCrisis(2)">🤫 2. Open secret diplomatic backchannels with the Soviets.</button>
-            <button class="crisis-btn" onclick="playCrisis(3)" style="background:#047857; border-color:#10b981;">🚢 3. Impose a naval "quarantine" (blockade) around Cuba.</button>
-        </div>
-        <div id="crisis-result" class="crisis-result"></div>
-        <button id="crisis-restart" class="wto-btn" style="display:none; margin-top:20px; width:auto; padding:8px 20px; background:#374151; border:1px solid #4b5563;" onclick="resetCrisis()">🔄 Restart Simulation</button>
+    <h3 class="lab-title">Crisis Command: Thirteen Days</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 4 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-crosshairs" aria-hidden="true"></i> 3 acts under pressure</span>
+      <span class="lab-meta-chip"><i class="fa fa-hourglass-half" aria-hidden="true"></i> 12s DEFCON clock</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
     </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-crisis-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>October 1962: U-2 spy plane reconnaissance reveals Soviet medium-range nuclear ballistic missiles under construction in Cuba, 90 miles from Florida. The missiles could strike Washington D.C. in three minutes.</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are US President John F. Kennedy directing the Executive Committee of the National Security Council (ExComm). You must make 3 high-stakes decisions to defuse the standoff without triggering nuclear war.</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Master Strategist (85+ Stability):</strong> Reach a peaceful compromise deal while preserving alliance credibility.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Crisis Manager (70–84 Stability):</strong> Avert war with significant diplomatic friction or concessions.</span></li>
+            <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>★ Beleaguered President (40–69 Stability):</strong> Avoid nuclear exchange but suffer severe geopolitical loss.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0★ Catastrophe (Stability &lt; 40 or War):</strong> Full nuclear exchange or humiliating capitulation.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-tachometer" aria-hidden="true"></i><span><strong>Stability starts at 100:</strong> Escalatory actions and military missteps deplete stability rapidly.</span></li>
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i><span><strong>12s DEFCON Clock:</strong> Each act grants 12 seconds to decide before panic indecision penalizes Stability by −10.</span></li>
+            <li><i class="fa fa-shield" aria-hidden="true"></i><span><strong>Intelligence Intercepts:</strong> Intercept tactical SIGINT reports between acts to expose Soviet red lines.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-crisis-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Begin Crisis Command
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-crisis-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-crisis-hud-act">Act 1 / 3 · October 16</span>
+      <span class="lab-hud-chip" id="sim-crisis-hud-stability">Stability: <b id="sim-crisis-val-stability">100</b>%</span>
+      <span class="lab-hud-chip is-warn" id="sim-crisis-hud-timer">DEFCON: <b id="sim-crisis-val-timer">12</b>s</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-crisis-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-crisis-help-btn" title="Mission Help" aria-label="Open mission briefing help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
+    </div>
+
+    <div class="sim-crisis-timer-bar">
+      <div class="sim-crisis-timer-fill" id="sim-crisis-timer-fill"></div>
+    </div>
+
+    <div class="lab-stage" style="padding: 18px 22px;">
+      <div class="lab-tile" style="margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h4 id="sim-crisis-act-title" style="margin: 0; color: var(--lab-accent);">Act 1: Initial Discovery</h4>
+          <span class="lab-meta-chip" id="sim-crisis-date-chip">October 16, 1962</span>
+        </div>
+        <p id="sim-crisis-act-desc" style="font-size: 0.92rem; line-height: 1.55; color: var(--lms-ink-primary); margin: 0 0 12px;">
+          The CIA confirms operational SS-4 nuclear launch pads in San Cristóbal. The Joint Chiefs of Staff demand an immediate full airstrike. The State Department warns of Soviet counterattacks in Berlin. What is your directive?
+        </p>
+        <div class="sim-crisis-options" id="sim-crisis-options">
+          <!-- Options injected via JS -->
+        </div>
+      </div>
+
+      <div class="lab-log" id="sim-crisis-log" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; ExComm convened. Surveillance film verified. Decision clock active.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-crisis-outcome" hidden>
+    <div class="lab-stars" id="sim-crisis-stars" aria-label="Mission performance stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-crisis-rank">Evaluating Command...</div>
+    <h3 class="lab-debrief-title" id="sim-crisis-debrief-heading">After-Action Intelligence Assessment</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Final Stability</div>
+        <div class="lab-stat-val" id="sim-crisis-stat-stability">100%</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">End State</div>
+        <div class="lab-stat-val" id="sim-crisis-stat-outcome" style="font-size: 1rem;">Compromise Deal</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Best Record</div>
+        <div class="lab-stat-val" id="sim-crisis-stat-best">100%</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Dominant Model</div>
+        <div class="lab-stat-val" id="sim-crisis-stat-model" style="font-size: 0.95rem;">Model I</div>
+      </div>
+    </div>
+
+    <div class="lab-reveal" id="sim-crisis-reveal-body">
+      <!-- Theoretical breakdown injected via JS -->
+    </div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-crisis-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Replay Crisis Command
+      </button>
+    </div>
+  </div>
+
 </div>
 
 <script>
-function playCrisis(choice) {
-    const scene = document.getElementById('crisis-scene');
-    const options = document.getElementById('crisis-options');
-    const result = document.getElementById('crisis-result');
-    const restartBtn = document.getElementById('crisis-restart');
-    
-    options.style.display = 'none';
-    result.style.display = 'block';
-    restartBtn.style.display = 'inline-block';
-    
-    if (choice === 1) {
-        result.className = 'crisis-result bad';
-        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">💥 Nuclear Escalation!</span><br><br>The airstrike killed Soviet personnel. The USSR retaliates by launching a tactical nuclear strike on US forces, triggering full-scale World War III. <br><br><span style="color:#f87171;"><em>Analysis: This represents a failure of the Rational Actor Model due to incomplete information about Soviet trigger-happiness.</em></span>';
-    } else if (choice === 2) {
-        result.className = 'crisis-result bad';
-        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">🕒 Too Slow!</span><br><br>Secret negotiations drag on for weeks. The Soviets use the time to make the missiles operational. The US loses its strategic advantage and must concede to Soviet demands in Europe.<br><br><span style="color:#f87171;"><em>Analysis: Diplomacy without leverage failed in this high-stakes Chicken Game.</em></span>';
-    } else if (choice === 3) {
-        result.className = 'crisis-result good';
-        result.innerHTML = '<span style="font-size:1.2rem; color:white; font-weight:bold;">✅ Brinkmanship Success!</span><br><br>The naval quarantine prevents more missiles from arriving while giving Soviet Premier Khrushchev time to back down gracefully. A secret deal is struck to remove US missiles in Turkey in exchange for Soviet withdrawal in Cuba.<br><br><span style="color:#34d399;"><em>Analysis: A perfect example of calibrated brinkmanship and rational decision-making!</em></span>';
-    }
-}
+(function() {
+  'use strict';
 
-function resetCrisis() {
-    document.getElementById('crisis-options').style.display = 'flex';
-    document.getElementById('crisis-result').style.display = 'none';
-    document.getElementById('crisis-restart').style.display = 'none';
-}
+  var ACTS = [
+    {
+      id: 1,
+      title: 'Act 1: Initial Discovery',
+      date: 'October 16, 1962',
+      desc: 'The CIA shows ExComm high-altitude U-2 photos of Soviet ballistic missile installations in San Cristóbal. The Joint Chiefs demand an immediate surprise airstrike. The State Department urges quiet diplomacy. How do you respond?',
+      options: [
+        {
+          id: 'airstrike',
+          title: 'Option A: Immediate Preemptive Airstrike',
+          desc: 'Order tactical strikes across all Cuban missile sites to eliminate the threat before completion.',
+          cost: 40,
+          model: 'Model II (Organizational SOP / Military Routine)',
+          log: 'Airstrike hits Cuban and Soviet personnel. Soviet garrisons enter full combat alert. Escalation surges.'
+        },
+        {
+          id: 'blockade',
+          title: 'Option B: Naval Quarantine (Blockade)',
+          desc: 'Impose a selective naval blockade around Cuba. Halts military shipments while giving Khrushchev time to negotiate.',
+          cost: 15,
+          model: 'Model I (Rational Actor / Calibrated Brinkmanship)',
+          log: 'Naval quarantine established. The world holds its breath, but direct shooting is averted.'
+        },
+        {
+          id: 'backchannel',
+          title: 'Option C: Secret Unilateral Backchannel',
+          desc: 'Dispatch private envoys without military signaling or alert mobilization.',
+          cost: 25,
+          model: 'Model III (Bureaucratic Diplomacy / Weak Deterrence)',
+          log: 'Soviets perceive irresolution and accelerate construction around the clock.'
+        }
+      ]
+    },
+    {
+      id: 2,
+      title: 'Act 2: The Second Letter & U-2 Shootdown',
+      date: 'October 27, 1962 ("Black Saturday")',
+      desc: 'A US U-2 spy plane is shot down by a Soviet SAM over Cuba; pilot Major Anderson is killed. Meanwhile, Khrushchev sends two contradictory letters: an emotional plea offering withdrawal for a non-invasion pledge, followed by a harsh letter demanding the removal of US Jupiter missiles in Turkey. Military advisors demand immediate retaliation.',
+      options: [
+        {
+          id: 'retaliate',
+          title: 'Option A: Retaliatory Air Assault on Cuban SAMs',
+          desc: 'Execute contingency OPLAN 312: destroy the anti-aircraft battery that downed the U-2.',
+          cost: 45,
+          model: 'Model II (Standard Military Contingency)',
+          log: 'Combat escalation spiraling out of central command control. DEFCON 2 mobilized.'
+        },
+        {
+          id: 'trollope',
+          title: 'Option B: The Trollope Ploy',
+          desc: 'Publicly ignore the second harsh letter; accept the terms of Khrushchev\'s first conciliatory letter (non-invasion pledge).',
+          cost: 10,
+          model: 'Model III (Bureaucratic Craft: RFK & Sorensen)',
+          log: 'Trollope Ploy delivered. Diplomatic pressure shifts back onto Moscow without escalation.'
+        },
+        {
+          id: 'capitulate',
+          title: 'Option C: Full Public Concession',
+          desc: 'Broadcast public agreement to remove NATO missiles in Turkey immediately without Soviet reciprocal guarantees.',
+          cost: 35,
+          model: 'Model I (Asymmetric Concession)',
+          log: 'NATO allies erupt in protest over unilateral abandonment. US credibility collapses.'
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: 'Act 3: Final Resolution',
+      date: 'October 27 Evening',
+      desc: 'Attorney General Robert Kennedy meets Soviet Ambassador Anatoly Dobrynin in secret. The naval quarantine line is tightening. Khrushchev requires an honorable exit before Soviet hardliners force his hand.',
+      options: [
+        {
+          id: 'quidproquo',
+          title: 'Option A: Secret Jupiter Quid-Pro-Quo via Dobrynin',
+          desc: 'Pledge public non-invasion of Cuba, coupled with a secret unwritten promise to dismantle Jupiter missiles in Turkey within months.',
+          cost: -5,
+          model: 'Model I (Pareto-Optimal Diplomatic Settlement)',
+          log: 'Secret protocol sealed. Moscow broadcasts order to dismantle Cuban missile installations!'
+        },
+        {
+          id: 'ultimatum',
+          title: 'Option B: 24-Hour Ultimatum & Invasion Warning',
+          desc: 'Demand unconditional withdrawal within 24 hours or launch a full airborne and amphibious invasion of Cuba.',
+          cost: 50,
+          model: 'Model I (Maximalist Brinkmanship Failure)',
+          log: 'Soviet tactical nuclear commanders in Cuba order pre-delegated nuclear defense. Catastrophe ensues.'
+        },
+        {
+          id: 'un_stall',
+          title: 'Option C: Postpone Decisions for UN General Assembly Debate',
+          desc: 'Refer the entire crisis to open UN debate, pausing all naval blockade activities.',
+          cost: 30,
+          model: 'Model III (Multilateral Stall)',
+          log: 'Soviets complete warhead installation. Missiles become fully operational.'
+        }
+      ]
+    }
+  ];
+
+  var state = {
+    actIndex: 0,
+    stability: 100,
+    decisions: [],
+    over: false
+  };
+
+  function $(id) { return document.getElementById(id); }
+
+  function updateHUD() {
+    var stabVal = $('sim-crisis-val-stability');
+    if (stabVal) stabVal.textContent = state.stability;
+    var actHud = $('sim-crisis-hud-act');
+    if (actHud && state.actIndex < ACTS.length) {
+      actHud.textContent = 'Act ' + (state.actIndex + 1) + ' / 3 · ' + ACTS[state.actIndex].date;
+    }
+  }
+
+  function renderAct() {
+    if (state.actIndex >= ACTS.length || state.stability <= 0) {
+      endCrisis();
+      return;
+    }
+    var act = ACTS[state.actIndex];
+    $('sim-crisis-act-title').textContent = act.title;
+    $('sim-crisis-date-chip').textContent = act.date;
+    $('sim-crisis-act-desc').textContent = act.desc;
+
+    // SIGINT Intercept insertion at Act 2
+    if (state.actIndex === 1) {
+      var log = $('sim-crisis-log');
+      if (log) {
+        var sigint = document.createElement('div');
+        sigint.className = 'lab-log-entry is-intel';
+        sigint.innerHTML = '<strong><i class="fa fa-shield"></i> SIGINT INTERCEPT · ACT 2:</strong> U-2 photo analysis confirms missile launchers not yet operational — you have one quiet week before warheads marry airframes.';
+        log.appendChild(sigint);
+        sigint.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    var optsContainer = $('sim-crisis-options');
+    optsContainer.innerHTML = '';
+
+    act.options.forEach(function(opt) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sim-crisis-opt-btn';
+      btn.innerHTML = '<span class="sim-crisis-opt-title"><i class="fa fa-crosshairs" aria-hidden="true"></i> ' + opt.title + '</span>' +
+                       '<span class="sim-crisis-opt-desc">' + opt.desc + '</span>';
+      btn.addEventListener('click', function() {
+        chooseOption(opt);
+      });
+      optsContainer.appendChild(btn);
+    });
+
+    updateHUD();
+    startActTimer();
+  }
+
+  function startActTimer() {
+    if (!window.LabGame || !window.LabGame.timer) return;
+    var timerFill = $('sim-crisis-timer-fill');
+    var timerVal = $('sim-crisis-val-timer');
+
+    window.LabGame.timer.start(12000, function(rem, total) {
+      var sec = Math.ceil(rem / 1000);
+      if (timerVal) timerVal.textContent = sec > 0 ? sec : '0';
+      if (timerFill && total > 0) {
+        var pct = Math.max(0, Math.min(100, (rem / total) * 100));
+        timerFill.style.width = pct + '%';
+      }
+    }, function() {
+      handleTimeout();
+    });
+  }
+
+  function handleTimeout() {
+    if (state.over) return;
+    state.stability = Math.max(0, state.stability - 10);
+    if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.bad();
+
+    var log = $('sim-crisis-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry is-warn';
+      entry.innerHTML = '<strong><i class="fa fa-clock-o"></i> DEFCON TIMEOUT:</strong> Indecision in the Cabinet! Soviet momentum surges (−10 Stability).';
+      log.appendChild(entry);
+    }
+    // Default to option 1 (cautious/middle)
+    var curAct = ACTS[state.actIndex];
+    if (curAct && curAct.options[1]) {
+      chooseOption(curAct.options[1], true);
+    }
+  }
+
+  function chooseOption(opt, wasTimeout) {
+    if (state.over) return;
+    if (window.LabGame && window.LabGame.timer) window.LabGame.timer.stop();
+
+    state.stability = Math.max(0, Math.min(100, state.stability - opt.cost));
+    state.decisions.push({ act: state.actIndex + 1, opt: opt, timeout: wasTimeout });
+
+    if (window.LabGame && window.LabGame.sfx) {
+      if (opt.cost <= 15) {
+        window.LabGame.sfx.good();
+      } else {
+        window.LabGame.sfx.bad();
+      }
+    }
+
+    var log = $('sim-crisis-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry ' + (opt.cost <= 15 ? 'is-good' : 'is-warn');
+      entry.innerHTML = '<strong>' + ACTS[state.actIndex].title + ':</strong> ' + opt.log + ' (Stability: ' + state.stability + '%)';
+      log.appendChild(entry);
+      entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    state.actIndex++;
+    updateHUD();
+
+    if (state.stability <= 0 || state.actIndex >= ACTS.length) {
+      setTimeout(endCrisis, 600);
+    } else {
+      setTimeout(renderAct, 400);
+    }
+  }
+
+  function endCrisis() {
+    state.over = true;
+    if (window.LabGame && window.LabGame.timer) window.LabGame.timer.stop();
+
+    $('sim-crisis-play').hidden = true;
+    var debrief = $('sim-crisis-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var finalScore = state.stability;
+    var starCount = 0;
+    var rankText = '';
+    var outcomeText = '';
+
+    if (finalScore <= 0) {
+      starCount = 0;
+      rankText = 'Doomsday Architect';
+      outcomeText = 'Nuclear War (WWIII)';
+    } else if (finalScore >= 85) {
+      starCount = 3;
+      rankText = 'Master Strategist';
+      outcomeText = 'Compromise Deal';
+    } else if (finalScore >= 70) {
+      starCount = 2;
+      rankText = 'Crisis Manager';
+      outcomeText = 'Compromise Deal';
+    } else if (finalScore >= 40) {
+      starCount = 1;
+      rankText = 'Beleaguered President';
+      outcomeText = 'Compromise Deal';
+    } else {
+      starCount = 0;
+      rankText = 'Exploited Leader';
+      outcomeText = 'Humiliating Backdown';
+    }
+
+    // Stars render
+    var starContainer = $('sim-crisis-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < starCount ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-crisis-rank').textContent = rankText;
+    $('sim-crisis-stat-stability').textContent = finalScore + '%';
+    $('sim-crisis-stat-outcome').textContent = outcomeText;
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        window.LabGame.best.submit('crisis', finalScore);
+        var best = window.LabGame.best.get('crisis');
+        $('sim-crisis-stat-best').textContent = best + '%';
+      }
+      if (window.LabGame.flags && finalScore >= 40) {
+        window.LabGame.flags.complete('crisis');
+      }
+      if (window.LabGame.sfx) {
+        if (starCount >= 2) window.LabGame.sfx.fanfare();
+        else if (starCount === 1) window.LabGame.sfx.reveal();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    // Reveal theory
+    var revealEl = $('sim-crisis-reveal-body');
+    if (revealEl) {
+      var revealHtml = '<p><strong>Declassified Case File Analysis: Graham Allison (1971) — <em>Essence of Decision</em></strong></p>' +
+        '<p>The Cuban Missile Crisis demonstrates why state decisions cannot be understood solely as unitary strategic calculations. Allison proposed three distinct conceptual lenses:</p>' +
+        '<ul>' +
+        '<li><strong>Model I (Rational Actor Model):</strong> Nations act as single value-maximizing entities weighing costs and benefits. Your naval quarantine calibrated risk while keeping escalation dominance.</li>' +
+        '<li><strong>Model II (Organizational Behavior Model):</strong> Government outputs are standard operating procedures (SOPs). The US military pushed for airstrikes because their pre-scripted plans only envisioned offensive counter-force strikes.</li>' +
+        '<li><strong>Model III (Governmental/Bureaucratic Politics Model):</strong> Decisions emerge from political bargaining between competing cabinet figures ("Where you stand depends on where you sit" — Miles\'s Law). The Trollope Ploy and secret Turkey missile trade were engineered through backchannel politicking.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = revealHtml;
+    }
+  }
+
+  function startSession() {
+    state.actIndex = 0;
+    state.stability = 100;
+    state.decisions = [];
+    state.over = false;
+
+    $('sim-crisis-briefing').hidden = true;
+    $('sim-crisis-outcome').hidden = true;
+    $('sim-crisis-play').hidden = false;
+
+    var log = $('sim-crisis-log');
+    if (log) {
+      log.innerHTML = '<div class="lab-log-entry is-muted">&gt; ExComm convened. Surveillance film verified. Decision clock active.</div>';
+    }
+
+    updateHUD();
+    renderAct();
+  }
+
+  // --- Mount Help & Controls ---
+  var beginBtn = $('sim-crisis-btn-begin');
+  if (beginBtn) beginBtn.addEventListener('click', startSession);
+
+  var replayBtn = $('sim-crisis-btn-replay');
+  if (replayBtn) replayBtn.addEventListener('click', startSession);
+
+  var muteBtn = $('sim-crisis-mute-btn');
+  if (muteBtn && window.LabGame && window.LabGame.sfx) {
+    var updateMuteIcon = function() {
+      var muted = window.LabGame.sfx.muted();
+      muteBtn.innerHTML = muted ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      muteBtn.title = muted ? 'Unmute SFX' : 'Mute SFX';
+    };
+    updateMuteIcon();
+    muteBtn.addEventListener('click', function() {
+      window.LabGame.sfx.toggleMute();
+      updateMuteIcon();
+    });
+  }
+
+  if (window.LabGame && window.LabGame.help) {
+    window.LabGame.help.mount({
+      triggerEl: '#sim-crisis-help-btn',
+      objectiveHtml: '<p>Preserve national security and avert thermonuclear war across 3 critical acts. ★1+ Beleaguered President (40+ Stability) · ★★ Crisis Manager (70+ Stability) · ★★★ Master Strategist (85+ Stability). Balance deterrence, alliances, and secret diplomacy.</p>',
+      howtoHtml: '<p>1. Review intelligence briefing.<br>2. Select operational directive within 12 seconds.<br>3. Monitor stability drain from military escalation.<br>4. Intercept SIGINT decrypts.<br>5. Seal after-action compromise settlement.</p>',
+      payoffHtml: '<p>Airstrike: −40 Stability | Quarantine: −15 Stability | Trollope Ploy: −10 Stability | Turkey Quid-Pro-Quo: +5 Stability | 24-hr Ultimatum: −50 Stability.</p>'
+    });
+  }
+
+  // State exposure for tests
+  window.getSimCrisisState = function() { return state; };
+  Object.defineProperty(window, 'simCrisisState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+})();
 </script>

@@ -612,9 +612,9 @@
 
         if (move === 'C' && oppMove === 'C') {
             key = 'cc';
-            state.streak++;
+            state.streak = (window.LabGame && window.LabGame.streak) ? window.LabGame.streak.hit() : (state.streak + 1);
             state.coopCount++;
-            var mult = state.streak >= 5 ? 2 : (state.streak >= 3 ? 1.5 : 1);
+            var mult = (window.LabGame && window.LabGame.streak) ? window.LabGame.streak.mult() : (state.streak >= 5 ? 2 : (state.streak >= 3 ? 1.5 : 1));
             changeP = Math.round(5 * mult);
             changeO = 5;
             isStreakCoop = mult > 1;
@@ -627,6 +627,7 @@
             key = 'dc';
             changeP = 10;
             changeO = -10;
+            if (window.LabGame && window.LabGame.streak) window.LabGame.streak.break();
             state.streak = 0;
             state.exploitCount++;
 
@@ -638,6 +639,7 @@
             key = 'cd';
             changeP = -10;
             changeO = 10;
+            if (window.LabGame && window.LabGame.streak) window.LabGame.streak.break();
             state.streak = 0;
             state.betrayCount++;
             state.coopCount++;
@@ -656,6 +658,7 @@
             key = 'dd';
             changeP = -2;
             changeO = -2;
+            if (window.LabGame && window.LabGame.streak) window.LabGame.streak.break();
             state.streak = 0;
 
             setFlash('MUTUAL DEFECTION — −2 each', 'is-lose');

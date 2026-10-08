@@ -1,362 +1,597 @@
 <style>
-.sim-nd-container {
-    background: #1f2937;
-    color: #f9fafb;
-    border-radius: 12px;
-    padding: 25px;
-    font-family: 'Inter', sans-serif;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    margin: 30px 0;
-    border: 1px solid #374151;
+/* Lab 10 — Second-Strike Ledger: The Nuclear Triad Trial */
+#nuclear-deterrence-sim .sim-nd-alloc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
 }
-.sim-nd-panel {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
+@media (max-width: 720px) {
+  #nuclear-deterrence-sim .sim-nd-alloc-grid { grid-template-columns: 1fr; }
 }
-.sim-nd-header {
-    border-bottom: 2px solid #374151;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+#nuclear-deterrence-sim .sim-nd-alloc-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  padding: 12px 14px;
 }
-.sim-nd-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+#nuclear-deterrence-sim .sim-nd-alloc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--lms-ink-primary);
 }
-.sim-nd-header p {
-    color: #d1d5db;
-    margin-top: 10px;
-    margin-bottom: 0;
-    line-height: 1.5;
+#nuclear-deterrence-sim .sim-nd-slider {
+  width: 100%;
+  accent-color: var(--lab-accent);
+  cursor: pointer;
 }
-.sim-nd-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+#nuclear-deterrence-sim .sim-nd-legs-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
 }
-@media (max-width: 768px) {
-    .sim-nd-grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 600px) {
+  #nuclear-deterrence-sim .sim-nd-legs-strip { grid-template-columns: 1fr; }
 }
-.sim-nd-form-group {
-    margin-bottom: 15px;
+#nuclear-deterrence-sim .sim-nd-leg-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  padding: 10px 12px;
+  text-align: center;
 }
-.sim-nd-form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #60a5fa;
+#nuclear-deterrence-sim .sim-nd-leg-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: inline-block;
 }
-.sim-nd-form-group select {
-    width: 100%;
-    padding: 10px;
-    background: #374151;
-    color: #f9fafb;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-.sim-nd-presets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-}
-.sim-nd-btn {
-    padding: 12px 15px;
-    background: #374151;
-    color: white;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.sim-nd-btn:hover {
-    background: #4b5563;
-    border-color: #9ca3af;
-    transform: translateY(-2px);
-}
-.sim-nd-metric {
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 6px;
-    background: #1f2937;
-    border: 1px solid #374151;
-}
-.sim-nd-metric-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #d1d5db;
-}
-.sim-nd-metric-value {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-.sim-nd-success {
-    border-color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
-}
-.sim-nd-warning {
-    border-color: #f59e0b;
-    background: rgba(245, 158, 11, 0.1);
-    color: #f59e0b;
-}
-.sim-nd-danger {
-    border-color: #ef4444;
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
-}
-.sim-nd-analysis {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #374151;
-    color: #d1d5db;
-    line-height: 1.6;
-}
-.sim-nd-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-.sim-nd-fade {
-    animation: fadeIn 0.3s ease-out;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+#nuclear-deterrence-sim .sim-nd-leg-status.is-survivable { background: var(--lab-win); color: #fff; }
+#nuclear-deterrence-sim .sim-nd-leg-status.is-vulnerable  { background: var(--lab-lose); color: #fff; }
 </style>
 
-<div id="nuclear-deterrence-sim" class="sim-nd-container">
-    <div class="sim-nd-header">
-        <h3>☢️ Simulation: Nuclear Deterrence Calculator</h3>
-        <p>Configure the nuclear posture of superpower 'Arcticus' to deter rival 'Pyresia.' How many warheads are enough? Does missile defense stabilize or destabilize? Explore the paradoxes of Mutual Assured Destruction.</p>
+<div class="lab-shell" id="nuclear-deterrence-sim" data-cat="security">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 10</span>
+      <span class="lab-kicker-track">CASE FILE · STRATEGIC STUDIES</span>
+    </div>
+    <h3 class="lab-title">Second-Strike Ledger: The Nuclear Triad Trial</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-calendar" aria-hidden="true"></i> 4 Fiscal Years</span>
+      <span class="lab-meta-chip"><i class="fa fa-shield" aria-hidden="true"></i> Triad Survivability Stress-Test</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Strategy level</span>
+    </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-nd-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>Under nuclear deterrence theory and Mutually Assured Destruction (MAD), strategic stability does not depend on the number of warheads you possess, but on whether your retaliatory force can survive an adversary's surprise first strike.</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are Director of Strategic Deterrence Planning. Across 4 Fiscal Years (FY1–FY4), you must allocate 100 strategic budget units across the nuclear triad and missile defense to withstand adversary counterforce stress-tests.</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Triad Architect:</strong> Maintain strategic stability across all 4 fiscal years with ≥2 triad legs survivable.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Deterrence Caretaker:</strong> Maintain stability across 4 years with 1 survivable leg.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0–1★ Preemptive Rupture:</strong> Stability collapses below 25%, opening a first-strike window.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-sliders" aria-hidden="true"></i><span><strong>Triad Procurement:</strong> Balance land-based ICBMs (readiness), submarine SLBMs (stealth survivability), bombers (recallable signaling), and missile defense.</span></li>
+            <li><i class="fa fa-bolt" aria-hidden="true"></i><span><strong>Counterforce Stress-Tests:</strong> Each fiscal year ends with an adversarial crisis probing your weakest leg.</span></li>
+            <li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>The Defense Paradox:</strong> Excessive investment in Ballistic Missile Defense (BMD) alarms the adversary, accelerating offensive arms spirals.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-nd-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Open Strategic Defense Ledger
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-nd-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-nd-hud-fy">Fiscal Year 1 / 4</span>
+      <span class="lab-hud-chip" id="sim-nd-hud-stability">Crisis Stability: <b id="sim-nd-val-stability">75</b>%</span>
+      <span class="lab-hud-chip" id="sim-nd-hud-budget">Budget Remaining: <b id="sim-nd-val-budget">0</b> / 100</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-nd-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-nd-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
     </div>
 
-    <div class="sim-nd-grid">
-        <div class="sim-nd-panel">
-            <h4 style="margin-top: 0; color: #f9fafb; margin-bottom: 15px;">Configuration</h4>
-            
-            <div class="sim-nd-form-group">
-                <label for="sim-nd-arsenal">Arsenal Size</label>
-                <select id="sim-nd-arsenal">
-                    <option value="50">50 warheads (Minimum)</option>
-                    <option value="500" selected>500 warheads (Moderate)</option>
-                    <option value="1500">1,500 warheads (Parity)</option>
-                    <option value="5000">5,000 warheads (Overkill)</option>
-                </select>
-            </div>
+    <div class="lab-stage" style="padding: 18px 22px;">
 
-            <div class="sim-nd-form-group">
-                <label for="sim-nd-delivery">Delivery System</label>
-                <select id="sim-nd-delivery">
-                    <option value="icbm" selected>Land-based ICBMs only (vulnerable)</option>
-                    <option value="slbm">+ Submarine SLBMs (survivable)</option>
-                    <option value="triad">Full Triad: ICBMs + SLBMs + Bombers (most survivable)</option>
-                </select>
-            </div>
+      <!-- Triad Legs Survivability Strip -->
+      <div class="sim-nd-legs-strip">
+        <div class="sim-nd-leg-card" id="sim-nd-card-icbm">
+          <div style="font-weight: 700; font-size: 0.85rem;"><i class="fa fa-rocket" aria-hidden="true"></i> Land ICBMs</div>
+          <div style="font-size: 0.74rem; color: var(--lms-ink-secondary);">Silo / Mobile</div>
+          <span class="sim-nd-leg-status is-survivable" id="sim-nd-status-icbm">Survivable</span>
+        </div>
+        <div class="sim-nd-leg-card" id="sim-nd-card-slbm">
+          <div style="font-weight: 700; font-size: 0.85rem;"><i class="fa fa-ship" aria-hidden="true"></i> Sea SLBMs</div>
+          <div style="font-size: 0.74rem; color: var(--lms-ink-secondary);">SSBN Submarines</div>
+          <span class="sim-nd-leg-status is-survivable" id="sim-nd-status-slbm">Invulnerable</span>
+        </div>
+        <div class="sim-nd-leg-card" id="sim-nd-card-bombers">
+          <div style="font-weight: 700; font-size: 0.85rem;"><i class="fa fa-plane" aria-hidden="true"></i> Heavy Bombers</div>
+          <div style="font-size: 0.74rem; color: var(--lms-ink-secondary);">Stealth / Standoff</div>
+          <span class="sim-nd-leg-status is-survivable" id="sim-nd-status-bombers">Survivable</span>
+        </div>
+      </div>
 
-            <div class="sim-nd-form-group">
-                <label for="sim-nd-doctrine">Launch Doctrine</label>
-                <select id="sim-nd-doctrine">
-                    <option value="low">Launch-on-Warning (fast but accident-prone)</option>
-                    <option value="lua" selected>Launch-Under-Attack (balanced)</option>
-                    <option value="nfu">No-First-Use (restrained but risky)</option>
-                </select>
-            </div>
+      <!-- Budget Allocation Sliders -->
+      <div style="background: var(--lms-surface); border: 1px solid var(--lms-hairline); border-radius: var(--lms-radius-md, 8px); padding: 18px 20px; margin-bottom: 16px;">
+        <h4 style="margin: 0 0 12px; font-size: 0.98rem; color: var(--lab-accent);">
+          <i class="fa fa-pie-chart" aria-hidden="true"></i> FY <span id="sim-nd-fy-num">1</span> Strategic Procurement Allocation (100 Total)
+        </h4>
 
-            <div class="sim-nd-form-group">
-                <label for="sim-nd-defense">Missile Defense</label>
-                <select id="sim-nd-defense">
-                    <option value="none" selected>None</option>
-                    <option value="limited">Limited (protects capital/leadership)</option>
-                    <option value="comprehensive">Comprehensive (Star Wars SDI-style)</option>
-                </select>
+        <div class="sim-nd-alloc-grid">
+          <div class="sim-nd-alloc-card">
+            <div class="sim-nd-alloc-head">
+              <span>Land-Based ICBMs</span>
+              <span id="nd-val-icbm" style="color: var(--lab-accent);">30 pts</span>
             </div>
+            <input type="range" class="sim-nd-slider" id="nd-slider-icbm" min="0" max="60" value="30">
+          </div>
 
-            <div class="sim-nd-presets">
-                <button class="sim-nd-btn" onclick="simNdApplyPreset('us')">🇺🇸 US Cold War</button>
-                <button class="sim-nd-btn" onclick="simNdApplyPreset('soviet')">☠️ Soviet Cold War</button>
-                <button class="sim-nd-btn" onclick="simNdApplyPreset('china')">🇨🇳 China Minimum</button>
-                <button class="sim-nd-btn" onclick="simNdApplyPreset('israel')">🇮🇱 Israel Opacity</button>
+          <div class="sim-nd-alloc-card">
+            <div class="sim-nd-alloc-head">
+              <span>Submarine SLBMs (SSBNs)</span>
+              <span id="nd-val-slbm" style="color: var(--lab-accent);">40 pts</span>
             </div>
+            <input type="range" class="sim-nd-slider" id="nd-slider-slbm" min="0" max="60" value="40">
+          </div>
+
+          <div class="sim-nd-alloc-card">
+            <div class="sim-nd-alloc-head">
+              <span>Strategic Heavy Bombers</span>
+              <span id="nd-val-bombers" style="color: var(--lab-accent);">20 pts</span>
+            </div>
+            <input type="range" class="sim-nd-slider" id="nd-slider-bombers" min="0" max="60" value="20">
+          </div>
+
+          <div class="sim-nd-alloc-card">
+            <div class="sim-nd-alloc-head">
+              <span>Missile Defense (BMD)</span>
+              <span id="nd-val-bmd" style="color: var(--lab-gold);">10 pts</span>
+            </div>
+            <input type="range" class="sim-nd-slider" id="nd-slider-bmd" min="0" max="40" value="10">
+          </div>
         </div>
 
-        <div class="sim-nd-panel" aria-live="polite" id="sim-nd-outputs">
-            <h4 style="margin-top: 0; color: #f9fafb; margin-bottom: 15px;">Dashboard Metrics</h4>
-            
-            <div class="sim-nd-metric" id="sim-nd-metric-survival">
-                <div class="sim-nd-metric-label">First-Strike Survivability</div>
-                <div class="sim-nd-metric-value" id="sim-nd-val-survival">--</div>
-            </div>
+        <button type="button" class="lab-btn lab-btn-primary" id="sim-nd-btn-submit" style="width: 100%;">
+          <i class="fa fa-check" aria-hidden="true"></i> Lock Fiscal Year Budget &amp; Face Crisis Stress-Test
+        </button>
+      </div>
 
-            <div class="sim-nd-metric" id="sim-nd-metric-second">
-                <div class="sim-nd-metric-label">Second-Strike Warheads</div>
-                <div class="sim-nd-metric-value" id="sim-nd-val-second">--</div>
-                <div style="font-size: 0.9rem; margin-top: 5px;" id="sim-nd-desc-second"></div>
-            </div>
+      <div class="lab-log" id="sim-nd-log" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Strategic triad ledger initialized. Early-warning satellite network operational.</div>
+      </div>
 
-            <div class="sim-nd-metric" id="sim-nd-metric-det">
-                <div class="sim-nd-metric-label">Deterrence Stability</div>
-                <div class="sim-nd-metric-value" id="sim-nd-val-det">--</div>
-            </div>
+    </div>
+  </div>
 
-            <div class="sim-nd-metric" id="sim-nd-metric-crisis">
-                <div class="sim-nd-metric-label">Crisis Stability</div>
-                <div class="sim-nd-metric-value" id="sim-nd-val-crisis">--</div>
-            </div>
-        </div>
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-nd-outcome" hidden>
+    <div class="lab-stars" id="sim-nd-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-nd-rank">Evaluating Strategic Stability...</div>
+    <h3 class="lab-debrief-title" id="sim-nd-debrief-heading">Strategic Deterrence Assessment</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Final Stability</div>
+        <div class="lab-stat-val" id="sim-nd-stat-stability">75%</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Survivable Legs</div>
+        <div class="lab-stat-val" id="sim-nd-stat-legs">3 / 3</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Strategic Posture</div>
+        <div class="lab-stat-val" id="sim-nd-stat-posture" style="font-size: 0.95rem;">Robust Second-Strike</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-nd-stat-best">75% (★3)</div>
+      </div>
     </div>
 
-    <div class="sim-nd-actions">
-        <button class="sim-nd-btn" onclick="simNdReset()">Restart / Reset Defaults</button>
-    </div>
+    <div class="lab-reveal" id="sim-nd-reveal-body"></div>
 
-    <div class="sim-nd-analysis">
-        <strong>Analysis:</strong><br><br>
-        Mutual Assured Destruction (MAD) requires both sides to maintain credible second-strike capability — the ability to absorb a first strike and still inflict unacceptable damage. Paradoxically:<br>
-        • Too few warheads invite a disarming first strike (instability)<br>
-        • Too many warheads waste resources without improving security (overkill)<br>
-        • Missile defense can be destabilizing: if one side believes it can intercept a retaliatory strike, it may be emboldened to strike first<br>
-        • Launch-on-Warning reduces response time but increases the risk of accidental nuclear war from false alarms (cf. 1983 Soviet satellite incident, Stanislav Petrov)<br><br>
-        The stable equilibrium requires both sides to be vulnerable to retaliation — a grim logic that kept the Cold War cold.
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-nd-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Re-test Strategic Deterrence
+      </button>
     </div>
+  </div>
+
 </div>
 
 <script>
 (function() {
-    const arsenalEl = document.getElementById('sim-nd-arsenal');
-    const deliveryEl = document.getElementById('sim-nd-delivery');
-    const doctrineEl = document.getElementById('sim-nd-doctrine');
-    const defenseEl = document.getElementById('sim-nd-defense');
+  'use strict';
 
-    const valSurvival = document.getElementById('sim-nd-val-survival');
-    
-    const metricSecond = document.getElementById('sim-nd-metric-second');
-    const valSecond = document.getElementById('sim-nd-val-second');
-    const descSecond = document.getElementById('sim-nd-desc-second');
+  var SCENARIOS = [
+    {
+      fy: 1,
+      title: 'FY1 Stress-Test: Surprise Counterforce Preemption',
+      desc: 'Adversary executes high-accuracy counterforce missile strikes targeted at fixed launch coordinates.',
+      eval: function(alloc) {
+        // Silos vulnerable if ICBMs lack submarine dispersal
+        var slbmSafe = alloc.slbm >= 30;
+        var icbmSafe = alloc.icbm >= 25;
+        var survCount = (slbmSafe ? 1 : 0) + (icbmSafe ? 1 : 0) + (alloc.bombers >= 20 ? 1 : 0);
+        return {
+          passed: slbmSafe || survCount >= 2,
+          deltaStability: slbmSafe ? +5 : -25,
+          log: slbmSafe ?
+            'Submerged SSBN patrol undetected. Guaranteed second-strike retaliatory capability deters escalation.' :
+            'Adversary surprise strike neutralized fixed ICBM silos; retaliatory capacity severely compromised!'
+        };
+      }
+    },
+    {
+      fy: 2,
+      title: 'FY2 Stress-Test: Anti-Submarine Warfare (ASW) Surge',
+      desc: 'Adversary deploys advanced underwater sensor arrays and nuclear attack submarines in maritime choke points.',
+      eval: function(alloc) {
+        // ASW tests whether you have diversified beyond pure submarines
+        var diversified = (alloc.icbm >= 20) || (alloc.bombers >= 20);
+        return {
+          passed: diversified,
+          deltaStability: diversified ? +5 : -20,
+          log: diversified ?
+            'Adversary ASW pressure absorbed by agile strategic bomber dispersion and mobile land-based forces.' :
+            'Over-reliance on submarines exposed by adversary ASW breakthroughs; strategic paralysis ensued.'
+        };
+      }
+    },
+    {
+      fy: 3,
+      title: 'FY3 Stress-Test: Geopolitical Flashpoint & Signaling Crisis',
+      desc: 'Regional conflict erupts on the periphery. Adversary mobilizes theater nuclear divisions.',
+      eval: function(alloc) {
+        // Bombers provide visible recallable signaling
+        var hasSignaling = alloc.bombers >= 15;
+        var bmdDestabilizing = alloc.bmd >= 25;
+        var delta = (hasSignaling ? 5 : -15) + (bmdDestabilizing ? -15 : 0);
+        return {
+          passed: hasSignaling && !bmdDestabilizing,
+          deltaStability: delta,
+          log: hasSignaling && !bmdDestabilizing ?
+            'Strategic bombers placed on airborne alert signaled firm resolve without irreversible launch commitments.' :
+            (bmdDestabilizing ?
+              'Excessive missile defense installations provoked adversary into launch-on-warning hair-trigger doctrine!' :
+              'Lack of recallable bomber force forced an all-or-nothing choice between capitulation and missile launch.')
+        };
+      }
+    },
+    {
+      fy: 4,
+      title: 'FY4 Stress-Test: Hypersonic Breakthrough & Technological Shift',
+      desc: 'Adversary tests hypersonic glide vehicles designed to evade regional defense radars.',
+      eval: function(alloc) {
+        var robustTriad = (alloc.slbm >= 25) && (alloc.icbm >= 20) && (alloc.bombers >= 15);
+        return {
+          passed: robustTriad,
+          deltaStability: robustTriad ? +10 : -20,
+          log: robustTriad ?
+            'Triad redundancy rendered adversarial technological breakthroughs strategically obsolete. Stability preserved.' :
+            'Triad asymmetry created an exploitable gap; crisis stability fractured under high alert.'
+        };
+      }
+    }
+  ];
 
-    const metricDet = document.getElementById('sim-nd-metric-det');
-    const valDet = document.getElementById('sim-nd-val-det');
+  var state = {
+    fy: 1,
+    stability: 75,
+    alloc: { icbm: 30, slbm: 40, bombers: 20, bmd: 10 },
+    survivableLegs: 3,
+    over: false
+  };
 
-    const metricCrisis = document.getElementById('sim-nd-metric-crisis');
-    const valCrisis = document.getElementById('sim-nd-val-crisis');
+  function $(id) { return document.getElementById(id); }
+  function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
 
-    const outputsEl = document.getElementById('sim-nd-outputs');
+  function getTotal() {
+    return state.alloc.icbm + state.alloc.slbm + state.alloc.bombers + state.alloc.bmd;
+  }
 
-    function calculate() {
-        const arsenal = parseInt(arsenalEl.value, 10);
-        const delivery = deliveryEl.value;
-        const doctrine = doctrineEl.value;
-        const defense = defenseEl.value;
+  function updateHUD() {
+    var fyHud = $('sim-nd-hud-fy');
+    if (fyHud) fyHud.textContent = 'Fiscal Year ' + state.fy + ' / 4';
 
-        // Calculate Survivability
-        let survivability = 0;
-        if (delivery === 'icbm') survivability = 20;
-        else if (delivery === 'slbm') survivability = 55;
-        else if (delivery === 'triad') survivability = 75;
+    var fyNum = $('sim-nd-fy-num');
+    if (fyNum) fyNum.textContent = state.fy;
 
-        if (defense === 'comprehensive') {
-            survivability += 10;
-        }
+    var stabVal = $('sim-nd-val-stability');
+    if (stabVal) stabVal.textContent = state.stability;
 
-        valSurvival.textContent = `${survivability}%`;
-
-        // Calculate Second-Strike Warheads
-        const secondStrike = Math.floor(arsenal * (survivability / 100));
-        valSecond.textContent = secondStrike;
-        
-        metricSecond.className = 'sim-nd-metric sim-nd-fade';
-        if (secondStrike >= 100) {
-            metricSecond.classList.add('sim-nd-success');
-            descSecond.textContent = "Assured Destruction Capability";
-        } else if (secondStrike >= 20) {
-            metricSecond.classList.add('sim-nd-warning');
-            descSecond.textContent = "Minimal Deterrence";
-        } else {
-            metricSecond.classList.add('sim-nd-danger');
-            descSecond.textContent = "Deterrence Failure";
-        }
-
-        // Calculate Deterrence Stability
-        metricDet.className = 'sim-nd-metric sim-nd-fade';
-        if (secondStrike >= 100 && doctrine !== 'low' && defense !== 'comprehensive') {
-            valDet.textContent = "HIGH";
-            metricDet.classList.add('sim-nd-success');
-        } else if (secondStrike >= 100 && (doctrine === 'low' || defense === 'comprehensive')) {
-            valDet.textContent = "MEDIUM";
-            metricDet.classList.add('sim-nd-warning');
-        } else {
-            valDet.textContent = "LOW";
-            metricDet.classList.add('sim-nd-danger');
-        }
-
-        // Calculate Crisis Stability
-        metricCrisis.className = 'sim-nd-metric sim-nd-fade';
-        if (doctrine === 'nfu' && secondStrike >= 100) {
-            valCrisis.textContent = "STABLE (No use-it-or-lose-it pressure)";
-            metricCrisis.classList.add('sim-nd-success');
-        } else if (doctrine === 'low' || (delivery === 'icbm' && secondStrike < 50)) {
-            valCrisis.textContent = "UNSTABLE (Preemptive incentives / Hair-trigger)";
-            metricCrisis.classList.add('sim-nd-danger');
-        } else {
-            valCrisis.textContent = "MODERATE";
-            metricCrisis.classList.add('sim-nd-warning');
-        }
-
-        // Retrigger animation
-        outputsEl.classList.remove('sim-nd-fade');
-        void outputsEl.offsetWidth; // trigger reflow
-        outputsEl.classList.add('sim-nd-fade');
+    var stabHud = $('sim-nd-hud-stability');
+    if (stabHud) {
+      if (state.stability >= 70) stabHud.className = 'lab-hud-chip is-win';
+      else if (state.stability >= 40) stabHud.className = 'lab-hud-chip is-warn';
+      else stabHud.className = 'lab-hud-chip is-lose';
     }
 
-    // Attach listeners
-    arsenalEl.addEventListener('change', calculate);
-    deliveryEl.addEventListener('change', calculate);
-    doctrineEl.addEventListener('change', calculate);
-    defenseEl.addEventListener('change', calculate);
+    var total = getTotal();
+    var rem = 100 - total;
+    var bVal = $('sim-nd-val-budget');
+    if (bVal) {
+      bVal.textContent = rem;
+      bVal.style.color = rem === 0 ? 'var(--lab-win)' : (rem < 0 ? 'var(--lab-lose)' : 'var(--lab-gold)');
+    }
 
-    window.simNdApplyPreset = function(preset) {
-        if (preset === 'us') {
-            arsenalEl.value = '5000';
-            deliveryEl.value = 'triad';
-            doctrineEl.value = 'lua';
-            defenseEl.value = 'limited';
-        } else if (preset === 'soviet') {
-            arsenalEl.value = '5000';
-            deliveryEl.value = 'triad';
-            doctrineEl.value = 'low';
-            defenseEl.value = 'limited';
-        } else if (preset === 'china') {
-            arsenalEl.value = '500';
-            deliveryEl.value = 'slbm';
-            doctrineEl.value = 'nfu';
-            defenseEl.value = 'none';
-        } else if (preset === 'israel') {
-            arsenalEl.value = '50';
-            deliveryEl.value = 'slbm';
-            doctrineEl.value = 'lua';
-            defenseEl.value = 'limited';
+    var submitBtn = $('sim-nd-btn-submit');
+    if (submitBtn) {
+      submitBtn.disabled = rem !== 0;
+      submitBtn.innerHTML = rem === 0 ?
+        '<i class="fa fa-check" aria-hidden="true"></i> Lock FY' + state.fy + ' Budget &amp; Face Crisis Stress-Test' :
+        '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Adjust Allocation to Total Exactly 100 (' + (rem > 0 ? rem + ' remaining' : Math.abs(rem) + ' over') + ')';
+    }
+
+    // Update leg cards
+    var icbmStat = $('sim-nd-status-icbm');
+    if (icbmStat) {
+      var icbmOk = state.alloc.icbm >= 20;
+      icbmStat.className = 'sim-nd-leg-status ' + (icbmOk ? 'is-survivable' : 'is-vulnerable');
+      icbmStat.textContent = icbmOk ? 'Survivable' : 'Vulnerable';
+    }
+
+    var slbmStat = $('sim-nd-status-slbm');
+    if (slbmStat) {
+      var slbmOk = state.alloc.slbm >= 25;
+      slbmStat.className = 'sim-nd-leg-status ' + (slbmOk ? 'is-survivable' : 'is-vulnerable');
+      slbmStat.textContent = slbmOk ? 'Invulnerable' : 'Depleted';
+    }
+
+    var bmbStat = $('sim-nd-status-bombers');
+    if (bmbStat) {
+      var bmbOk = state.alloc.bombers >= 15;
+      bmbStat.className = 'sim-nd-leg-status ' + (bmbOk ? 'is-survivable' : 'is-vulnerable');
+      bmbStat.textContent = bmbOk ? 'Operational' : 'Grounded';
+    }
+  }
+
+  function handleStressTest() {
+    if (getTotal() !== 100 || state.over) return;
+
+    var sc = SCENARIOS[state.fy - 1];
+    var res = sc.eval(state.alloc);
+
+    state.stability = clamp(state.stability + res.deltaStability, 0, 100);
+
+    var log = $('sim-nd-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry ' + (res.passed ? 'is-good' : 'is-warn');
+      entry.innerHTML = '<strong>' + sc.title + ':</strong> ' + res.log + ' (Stability: ' + state.stability + '%)';
+      log.insertBefore(entry, log.firstChild);
+    }
+
+    if (window.LabGame && window.LabGame.sfx) {
+      if (res.passed) window.LabGame.sfx.good();
+      else window.LabGame.sfx.bad();
+    }
+
+    // SIGINT Intercept at FY 2
+    if (state.fy === 2) {
+      setTimeout(function() {
+        if (log) {
+          var sigint = document.createElement('div');
+          sigint.className = 'lab-log-entry is-intel';
+          sigint.innerHTML = '<strong><i class="fa fa-shield"></i> SIGINT INTERCEPT · SATELLITE RECONNAISSANCE:</strong> Orbital reconnaissance confirms adversary is hardening subterranean silo lids and dispersing SSBNs, not massing rapid-strike MIRVs. Heavy domestic investment in Ballistic Missile Defense (BMD) will trigger an offensive missile breakout.';
+          log.insertBefore(sigint, log.firstChild);
         }
-        calculate();
-    };
+      }, 300);
+    }
 
-    window.simNdReset = function() {
-        arsenalEl.value = '500';
-        deliveryEl.value = 'icbm';
-        doctrineEl.value = 'lua';
-        defenseEl.value = 'none';
-        calculate();
-    };
+    state.fy++;
+    updateHUD();
 
-    // Initial calculation
-    calculate();
+    if (state.stability <= 20 || state.fy > 4) {
+      setTimeout(endSimulation, 600);
+    }
+  }
+
+  function endSimulation() {
+    state.over = true;
+    $('sim-nd-play').hidden = true;
+    var debrief = $('sim-nd-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var survLegs = (state.alloc.icbm >= 20 ? 1 : 0) +
+                   (state.alloc.slbm >= 25 ? 1 : 0) +
+                   (state.alloc.bombers >= 15 ? 1 : 0);
+    state.survivableLegs = survLegs;
+
+    var stable = state.stability >= 50;
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (state.stability <= 25) {
+      stars = 0;
+      rank = 'Preemptive Rupture';
+      outcomeTitle = 'Strategic Stability Collapsed: First-Strike Preemption';
+    } else if (stable && survLegs >= 2) {
+      stars = 3;
+      rank = 'Triad Architect';
+      outcomeTitle = 'Robust Second-Strike Triad Maintained Across 4 Years';
+    } else if (stable) {
+      stars = 2;
+      rank = 'Deterrence Caretaker';
+      outcomeTitle = 'Fragile Single-Leg Deterrence Sustained';
+    } else {
+      stars = 1;
+      rank = 'Crisis Staggerer';
+      outcomeTitle = 'Crisis Instability Averted with Heavy Geopolitical Friction';
+    }
+
+    var starContainer = $('sim-nd-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-nd-rank').textContent = rank;
+    $('sim-nd-stat-stability').textContent = state.stability + '%';
+    $('sim-nd-stat-legs').textContent = survLegs + ' / 3 Legs';
+    $('sim-nd-stat-posture').textContent = outcomeTitle;
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        window.LabGame.best.submit('nuclear_deterrence', state.stability);
+        var best = window.LabGame.best.get('nuclear_deterrence');
+        $('sim-nd-stat-best').textContent = best + '%';
+      }
+      if (window.LabGame.flags && stable) {
+        window.LabGame.flags.complete('nuclear_deterrence');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.good();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-nd-reveal-body');
+    if (revealEl) {
+      var html = '<p><strong>Strategic Studies Declassification: Mutually Assured Destruction &amp; The Schelling Commitment Problem</strong></p>' +
+        '<p>Nuclear deterrence fundamentally upended classical military strategy. As Bernard Brodie famously wrote in 1946 (<em>The Absolute Weapon</em>): "Thus far the chief purpose of our military establishment has been to win wars. From now on its chief purpose must be to avert them."</p>' +
+        '<ul>' +
+        '<li><strong>Second-Strike Survivability:</strong> Deterrence stability requires that even after absorbing an adversary\'s all-out surprise counterforce attack, a state retains enough survivable nuclear retaliatory power (the second strike) to inflict unacceptable damage on the attacker. Submarine SLBMs (SSBNs) provide the ultimate second-strike backbone due to their underwater stealth.</li>' +
+        '<li><strong>Thomas Schelling (1960) &amp; Crisis Stability:</strong> In <em>The Strategy of Conflict</em>, Schelling analyzed the "reciprocal fear of surprise attack." When retaliatory forces are vulnerable, both sides experience an overwhelming temptation to strike first during a crisis, generating catastrophic instability. A redundant triad eliminates this first-strike temptation.</li>' +
+        '<li><strong>The Ballistic Missile Defense (BMD) Paradox:</strong> While intuitively protective, expansive missile defense destabilizes MAD. An adversary fears that your missile defense is designed to mop up their weakened retaliatory strike after you launch a first strike, incentivizing them to expand offensive MIRVs and adopt launch-on-warning postures.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
+    }
+  }
+
+  function attachListeners() {
+    ['icbm', 'slbm', 'bombers', 'bmd'].forEach(function(k) {
+      var s = $('nd-slider-' + k);
+      var v = $('nd-val-' + k);
+      if (s) {
+        s.addEventListener('input', function() {
+          state.alloc[k] = parseInt(s.value, 10) || 0;
+          if (v) v.textContent = state.alloc[k] + ' pts';
+          updateHUD();
+        });
+      }
+    });
+
+    var subBtn = $('sim-nd-btn-submit');
+    if (subBtn) subBtn.addEventListener('click', handleStressTest);
+
+    var beginBtn = $('sim-nd-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-nd-briefing').hidden = true;
+        $('sim-nd-play').hidden = false;
+        updateHUD();
+      });
+    }
+
+    var replayBtn = $('sim-nd-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.fy = 1;
+        state.stability = 75;
+        state.alloc = { icbm: 30, slbm: 40, bombers: 20, bmd: 10 };
+        state.over = false;
+
+        ['icbm', 'slbm', 'bombers', 'bmd'].forEach(function(k) {
+          var s = $('nd-slider-' + k);
+          var v = $('nd-val-' + k);
+          if (s) s.value = state.alloc[k];
+          if (v) v.textContent = state.alloc[k] + ' pts';
+        });
+
+        $('sim-nd-outcome').hidden = true;
+        $('sim-nd-briefing').hidden = true;
+        $('sim-nd-play').hidden = false;
+
+        var log = $('sim-nd-log');
+        if (log) log.innerHTML = '<div class="lab-log-entry is-muted">&gt; Strategic triad ledger initialized. Early-warning satellite network operational.</div>';
+
+        updateHUD();
+      });
+    }
+
+    var muteBtn = $('sim-nd-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-nd-help-btn',
+        objectiveHtml: '<p>Survive 4 Fiscal Years of geopolitical counterforce stress-tests with stability ≥ 50% and ≥2 triad legs survivable for ★★★ Triad Architect.</p>',
+        howtoHtml: '<p>1. Adjust sliders across ICBM, SLBM, Bombers, and BMD to total exactly 100.<br>2. Submit allocation to trigger the year-end stress-test.<br>3. Check Crisis Stability and leg survival.<br>4. Inspect FY2 SIGINT satellite decrypt.<br>5. Complete all 4 fiscal years to assess deterrence.</p>',
+        payoffHtml: '<p>Stable 4 Years + ≥2 Legs: ★★★ | Stable 4 Years + 1 Leg: ★★ | First-Strike Rupture: 0–1★.</p>'
+      });
+    }
+  }
+
+  // State exposure
+  window.getSimNdState = function() { return state; };
+  Object.defineProperty(window, 'simNdState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
 })();
 </script>

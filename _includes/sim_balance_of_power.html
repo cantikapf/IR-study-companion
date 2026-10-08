@@ -1,428 +1,552 @@
 <style>
-  #balance-power-sim {
-    background: #1f2937;
-    color: #f9fafb;
-    border-radius: 12px;
-    padding: 25px;
-    font-family: 'Inter', sans-serif;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    margin: 30px 0;
-    border: 1px solid #374151;
-  }
-  .sim-bop-header {
-    border-bottom: 2px solid #374151;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-  }
-  .sim-bop-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .sim-bop-header-desc {
-    color: #d1d5db;
-    margin-top: 10px;
-    line-height: 1.5;
-  }
-  .sim-bop-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 768px) {
-    .sim-bop-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .sim-bop-card {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-  }
-  .sim-bop-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-  .sim-bop-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    color: #9ca3af;
-  }
-  .sim-bop-stats-total {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #374151;
-    font-weight: bold;
-    color: #f9fafb;
-  }
-  .sim-bop-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background: #374151;
-    color: white;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 0.95rem;
-  }
-  .sim-bop-select:focus {
-    outline: none;
-    border-color: #60a5fa;
-  }
-  .sim-bop-select option {
-    background: #1f2937;
-  }
-  .sim-bop-results {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-    margin-bottom: 20px;
-  }
-  .sim-bop-results-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  @media (max-width: 768px) {
-    .sim-bop-results-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .sim-bop-alliance-stat {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-  }
-  .sim-bop-alliance-a {
-    background: rgba(96, 165, 250, 0.1);
-    border-color: #3b82f6;
-  }
-  .sim-bop-alliance-b {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: #ef4444;
-  }
-  .sim-bop-meter {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-    background: #1f2937;
-    transition: all 0.3s ease;
-  }
-  .sim-bop-status-success {
-    color: #10b981;
-    border-color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-  }
-  .sim-bop-status-warning {
-    color: #f59e0b;
-    border-color: #f59e0b;
-    background: rgba(245, 158, 11, 0.1);
-  }
-  .sim-bop-status-failure {
-    color: #ef4444;
-    border-color: #ef4444;
-    background: rgba(239, 68, 68, 0.1);
-  }
-  .sim-bop-status-neutral {
-    color: #9ca3af;
-    border-color: #374151;
-    background: #111827;
-  }
-  .sim-bop-meter-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-  }
-  .sim-bop-meter-desc {
-    color: #d1d5db;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-  .sim-bop-controls {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  .sim-bop-btn {
-    padding: 12px 15px;
-    background: #374151;
-    color: white;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .sim-bop-btn:hover {
-    background: #4b5563;
-    border-color: #9ca3af;
-    transform: translateY(-2px);
-  }
-  .sim-bop-btn-primary {
-    background: #3b82f6;
-    border-color: #2563eb;
-  }
-  .sim-bop-btn-primary:hover {
-    background: #2563eb;
-    border-color: #60a5fa;
-  }
-  .sim-bop-analysis {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-  }
-  .sim-bop-analysis h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #60a5fa;
-  }
-  .sim-bop-historical {
-    display: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-    background: rgba(96, 165, 250, 0.05);
-    animation: fadeIn 0.3s ease-out;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* Lab 08 — Equilibrium Keeper: The July 1914 Tightrope */
+#balance-power-sim .sim-bop-scale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+@media (max-width: 768px) {
+  #balance-power-sim .sim-bop-scale { grid-template-columns: 1fr; }
+}
+#balance-power-sim .sim-bop-pan {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+#balance-power-sim .sim-bop-pan.is-entente { border-top: 3px solid #3b82f6; }
+#balance-power-sim .sim-bop-pan.is-central { border-top: 3px solid #ef4444; }
+#balance-power-sim .sim-bop-crisis-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md, 8px);
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+#balance-power-sim .sim-bop-actions-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+@media (max-width: 650px) {
+  #balance-power-sim .sim-bop-actions-row { grid-template-columns: 1fr; }
+}
+#balance-power-sim .sim-bop-act-btn {
+  padding: 12px 14px;
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  color: var(--lms-ink-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+#balance-power-sim .sim-bop-act-btn:hover:not(:disabled) {
+  border-color: var(--lab-accent);
+  background: var(--lab-accent-soft);
+  transform: translateY(-2px);
+}
 </style>
 
-<div id="balance-power-sim">
-  <div class="sim-bop-header">
-    <h3>⚖️ Simulation: The Balance of Power Configurator</h3>
-    <div class="sim-bop-header-desc">
-      It's 1914. As a European statesman, construct alliance blocs among the Great Powers. Can you build a stable balance — or will your alliances drag the continent into catastrophic war?
+<div class="lab-shell" id="balance-power-sim" data-cat="security">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 08</span>
+      <span class="lab-kicker-track">CASE FILE · CLASSICAL REALISM</span>
+    </div>
+    <h3 class="lab-title">Equilibrium Keeper: The July 1914 Tightrope</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-balance-scale" aria-hidden="true"></i> 4 crisis shocks</span>
+      <span class="lab-meta-chip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Max margin: 20 pts</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Strategy level</span>
     </div>
   </div>
 
-  <div class="sim-bop-grid" id="sim-bop-powers">
-    <!-- Powers injected via JS -->
-  </div>
-
-  <div class="sim-bop-results" aria-live="polite">
-    <div class="sim-bop-results-grid">
-      <div class="sim-bop-alliance-stat sim-bop-alliance-a">
-        <h4 style="margin:0 0 10px 0; color: #60a5fa;">Alliance A (Blue)</h4>
-        <div style="font-size: 1.5rem; font-weight: bold;" id="sim-bop-score-a">0</div>
-        <div style="color: #d1d5db; font-size: 0.9rem; margin-top: 5px;" id="sim-bop-members-a">None</div>
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-bop-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>Summer 1914: Europe's balance of power rests on a knife-edge between two rigid alliance blocs: the Triple Entente (Britain, France, Russia) and the Central Powers (Germany, Austria-Hungary). Under realist theory, systemic stability requires rough power equilibrium.</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are the Great Power Equilibrium Coordinator. Across 4 sequential crisis shocks in July 1914, you must reallocate diplomatic counterweights to prevent the power imbalance from exceeding the critical 20-point rupture threshold.</p>
+        </div>
       </div>
-      <div class="sim-bop-alliance-stat sim-bop-alliance-b">
-        <h4 style="margin:0 0 10px 0; color: #ef4444;">Alliance B (Red)</h4>
-        <div style="font-size: 1.5rem; font-weight: bold;" id="sim-bop-score-b">0</div>
-        <div style="color: #d1d5db; font-size: 0.9rem; margin-top: 5px;" id="sim-bop-members-b">None</div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Equilibrium Keeper:</strong> Survive all 4 crises with final power margin ≤ 10.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Armed Stabilizer:</strong> Survive all 4 crises with margin between 11 and 20.</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0–1★ July 1914 Cascade:</strong> Power margin exceeds 20 points twice, triggering chain-ganging World War I.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-bolt" aria-hidden="true"></i><span><strong>4 Historical Crisis Shocks:</strong> Sarajevo Assassination → Blank Check → Russian Mobilization → Belgian Neutrality.</span></li>
+            <li><i class="fa fa-sliders" aria-hidden="true"></i><span><strong>2 Reallocation Points:</strong> After each shock, counterweight either bloc (+6 pts) or deploy neutralizing diplomacy (−6 margin).</span></li>
+            <li><i class="fa fa-shield" aria-hidden="true"></i><span><strong>SIGINT Cable:</strong> Confidential embassy decrypt in Crisis 2 hints at Italian bloc realignment.</span></li>
+          </ul>
+        </div>
       </div>
     </div>
-    
-    <div style="margin-top: 15px; color: #9ca3af; text-align: center; font-size: 0.95rem;">
-      Neutral Power: <span id="sim-bop-score-n" style="font-weight: bold; color: #f9fafb;">0</span>
-    </div>
-
-    <div id="sim-bop-meter-container" class="sim-bop-meter sim-bop-status-neutral">
-      <div class="sim-bop-meter-title" id="sim-bop-meter-title">Select alliances to analyze balance</div>
-      <div class="sim-bop-meter-desc" id="sim-bop-meter-desc">Power imbalance and stability will be displayed here.</div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-bop-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Enter 1914 Chancellery
+      </button>
     </div>
   </div>
 
-  <div class="sim-bop-controls">
-    <button class="sim-bop-btn sim-bop-btn-primary" id="sim-bop-btn-1914">Compare with 1914</button>
-    <button class="sim-bop-btn" id="sim-bop-btn-reset">Reset Alliances</button>
-  </div>
-  
-  <div id="sim-bop-historical-analysis" class="sim-bop-historical">
-    <h4 style="margin-top:0; color:#f9fafb;">Historical Analysis: 1914</h4>
-    <p>In 1914, the Triple Entente (Britain + France + Russia = 42) faced the Triple Alliance (Germany + Austria-Hungary + Italy = 34). The 10.5% imbalance might suggest stability, but several factors destabilized the balance:</p>
-    <ol style="margin-bottom:0;">
-      <li style="margin-bottom:8px;"><strong>Chain-Ganging</strong> (Christensen & Snyder): Rigid alliance commitments meant a local Balkan crisis automatically activated the entire alliance system.</li>
-      <li style="margin-bottom:8px;"><strong>Cult of the Offensive</strong> (Van Evera): Military planners on all sides believed offense had the advantage, creating pressure for preemptive mobilization.</li>
-      <li><strong>Italy's Defection</strong>: Italy actually left the Triple Alliance in 1914, further destabilizing the system.</li>
-    </ol>
-    <p style="margin-bottom:0; margin-top:12px; font-weight:bold; color:#60a5fa;">The lesson: raw power calculations alone don't predict war. Perceptions, alliance credibility, and military doctrine matter just as much.</p>
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-bop-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-bop-hud-crisis">Crisis 1 / 4 · June 28</span>
+      <span class="lab-hud-chip" id="sim-bop-hud-margin">Power Margin: <b id="sim-bop-val-margin">5</b> pts</span>
+      <span class="lab-hud-chip is-win" id="sim-bop-hud-breaches">Breaches: <b id="sim-bop-val-breaches">0</b> / 2</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-bop-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-bop-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
+    </div>
+
+    <div class="lab-stage" style="padding: 18px 22px;">
+
+      <!-- Power Scale Dual Pans -->
+      <div class="sim-bop-scale">
+        <div class="sim-bop-pan is-entente">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="color: #3b82f6; font-size: 0.95rem;">🇬🇧 🇫🇷 🇷🇺 Triple Entente</strong>
+            <span class="lab-meta-chip" id="sim-bop-power-entente" style="font-weight: 700;">110 Power</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--lms-ink-secondary); margin-bottom: 8px;">
+            Britain (Naval Hegemony), France (Standing Army), Russia (Continental Mass).
+          </div>
+          <div class="lab-meter">
+            <div class="lab-meter-fill" id="sim-bop-bar-entente" style="width: 52%; background: #3b82f6;"></div>
+          </div>
+        </div>
+
+        <div class="sim-bop-pan is-central">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="color: #ef4444; font-size: 0.95rem;">🇩🇪 🇦🇹 🇮🇹 Central Powers</strong>
+            <span class="lab-meta-chip" id="sim-bop-power-central" style="font-weight: 700;">105 Power</span>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--lms-ink-secondary); margin-bottom: 8px;">
+            Germany (Industrial Military Core), Austria-Hungary (Dual Monarchy), Italy (Triple Alliance).
+          </div>
+          <div class="lab-meter">
+            <div class="lab-meter-fill" id="sim-bop-bar-central" style="width: 48%; background: #ef4444;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Crisis Shock Card -->
+      <div class="sim-bop-crisis-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h4 id="sim-bop-crisis-title" style="margin: 0; color: var(--lab-accent); font-size: 1.05rem;">
+            Crisis 1: Sarajevo Assassination
+          </h4>
+          <span class="lab-meta-chip" id="sim-bop-date-chip">June 28, 1914</span>
+        </div>
+        <p id="sim-bop-crisis-desc" style="font-size: 0.9rem; line-height: 1.5; color: var(--lms-ink-primary); margin: 0 0 14px;">
+          Archduke Franz Ferdinand is assassinated by Gavrilo Princip in Sarajevo. Austro-Hungarian hardliners demand an armed reckoning against Serbia. Weight shock shifts +15 military alert toward the Central Powers.
+        </p>
+
+        <h5 style="margin: 0 0 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--lms-ink-secondary);">
+          <i class="fa fa-sliders" aria-hidden="true"></i> Reallocate Counterweights (Choose 1 Directive)
+        </h5>
+
+        <div class="sim-bop-actions-row">
+          <button type="button" class="sim-bop-act-btn" onclick="window.simBopAction('entente')">
+            <strong style="color: #3b82f6; display: block; font-size: 0.88rem;">Counterweight Entente</strong>
+            <span style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Reinforce Franco-Russian lines (+6 Entente Power)</span>
+          </button>
+          <button type="button" class="sim-bop-act-btn" onclick="window.simBopAction('neutralize')">
+            <strong style="color: var(--lab-win); display: block; font-size: 0.88rem;">Bilateral Mediation</strong>
+            <span style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Convene four-power ambassadorial mediation (−6 Margin)</span>
+          </button>
+          <button type="button" class="sim-bop-act-btn" onclick="window.simBopAction('central')">
+            <strong style="color: #ef4444; display: block; font-size: 0.88rem;">Counterweight Central</strong>
+            <span style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Offer diplomatic guarantees to Berlin (+6 Central Power)</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lab-log" id="sim-bop-log" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Concert of Europe session open. Alliance scales calibrated.</div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="sim-bop-analysis">
-    <h4>Theory Analysis: Balance of Power</h4>
-    <p style="margin-bottom:0; color:#d1d5db; line-height:1.5;">According to neorealist scholars like Kenneth Waltz, stability in the international system depends on the distribution of power (polarity). Bipolar systems (two balanced blocs) are historically more stable than multipolar systems because miscalculation is less likely and powers balance internally rather than through complex chain-ganging. Classical realists like Hans Morgenthau argue that statesmen must actively craft balances through alliances to prevent hegemony.</p>
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-bop-outcome" hidden>
+    <div class="lab-stars" id="sim-bop-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-bop-rank">Analyzing Systemic Balance...</div>
+    <h3 class="lab-debrief-title" id="sim-bop-debrief-heading">Systemic Polarity Assessment</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Final Margin</div>
+        <div class="lab-stat-val" id="sim-bop-stat-margin">5 pts</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Threshold Breaches</div>
+        <div class="lab-stat-val" id="sim-bop-stat-breaches">0 / 2</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Systemic State</div>
+        <div class="lab-stat-val" id="sim-bop-stat-state" style="font-size: 0.95rem;">Equilibrium Preserved</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-bop-stat-best">5 pts (★3)</div>
+      </div>
+    </div>
+
+    <div class="lab-reveal" id="sim-bop-reveal-body"></div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-bop-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Re-test July 1914 Crisis
+      </button>
+    </div>
   </div>
+
 </div>
 
 <script>
 (function() {
-  const powers = [
-    { id: 'gb', name: 'Britain', flag: '🇬🇧', naval: 10, land: 5 },
-    { id: 'fr', name: 'France', flag: '🇫🇷', naval: 6, land: 8 },
-    { id: 'de', name: 'Germany', flag: '🇩🇪', naval: 7, land: 9 },
-    { id: 'ru', name: 'Russia', flag: '🇷🇺', naval: 3, land: 10 },
-    { id: 'ah', name: 'Austria-Hungary', flag: '🇦🇹', naval: 2, land: 7 },
-    { id: 'it', name: 'Italy', flag: '🇮🇹', naval: 4, land: 5 }
+  'use strict';
+
+  var CRISES = [
+    {
+      id: 1,
+      title: 'Crisis 1: Sarajevo Assassination',
+      date: 'June 28, 1914',
+      desc: 'Archduke Franz Ferdinand assassinated in Sarajevo by Bosnian-Serb nationalist Gavrilo Princip. Austro-Hungarian military chief Conrad von Hötzendorf urges mobilization against Serbia. Central Powers gain +15 weight shock.',
+      shockA: 0,
+      shockB: 15
+    },
+    {
+      id: 2,
+      title: 'Crisis 2: The Blank Check & The Ultimatum',
+      date: 'July 5–23, 1914',
+      desc: 'Kaiser Wilhelm II pledges unconditional German backing ("The Blank Check") to Vienna. Austria issues an impossible 48-hour ultimatum to Belgrade. Central Powers gain +20 military momentum.',
+      shockA: 0,
+      shockB: 20
+    },
+    {
+      id: 3,
+      title: 'Crisis 3: Russian General Mobilization & French Guarantee',
+      date: 'July 25–30, 1914',
+      desc: 'Tsar Nicholas II orders Russian partial mobilization to protect Serbia; French Premier Viviani assures Russia of full treaty commitments. Triple Entente surges by +25 power weight.',
+      shockA: 25,
+      shockB: 0
+    },
+    {
+      id: 4,
+      title: 'Crisis 4: Schlieffen Deployment & Belgian Incursion',
+      date: 'August 1–4, 1914',
+      desc: 'German armies activate rigid railway mobilization schedules through neutral Belgium. British Foreign Secretary Sir Edward Grey delivers an ultimatum over the 1839 Treaty of London. Both blocs gain massive weights.',
+      shockA: 15,
+      shockB: 18
+    }
   ];
 
-  let state = {};
+  var state = {
+    index: 0,
+    entente: 110,
+    central: 105,
+    breaches: 0,
+    over: false
+  };
 
-  const gridEl = document.getElementById('sim-bop-powers');
-  const scoreAEl = document.getElementById('sim-bop-score-a');
-  const scoreBEl = document.getElementById('sim-bop-score-b');
-  const scoreNEl = document.getElementById('sim-bop-score-n');
-  const memAEl = document.getElementById('sim-bop-members-a');
-  const memBEl = document.getElementById('sim-bop-members-b');
-  const meterContainer = document.getElementById('sim-bop-meter-container');
-  const meterTitle = document.getElementById('sim-bop-meter-title');
-  const meterDesc = document.getElementById('sim-bop-meter-desc');
-  const historicalAnalysis = document.getElementById('sim-bop-historical-analysis');
+  function $(id) { return document.getElementById(id); }
 
-  function init() {
-    state = {};
-    gridEl.innerHTML = '';
-    
-    powers.forEach(p => {
-      p.total = p.naval + p.land;
-      state[p.id] = 'neutral';
-      
-      const card = document.createElement('div');
-      card.className = 'sim-bop-card';
-      
-      card.innerHTML = `
-        <div class="sim-bop-card-header">
-          <span style="font-size:1.3rem;">${p.flag}</span>
-          <span>${p.name}</span>
-        </div>
-        <div class="sim-bop-stats">
-          <span>Naval Power:</span>
-          <span>${p.naval}</span>
-        </div>
-        <div class="sim-bop-stats">
-          <span>Land Power:</span>
-          <span>${p.land}</span>
-        </div>
-        <div class="sim-bop-stats-total">
-          <span>Total Power:</span>
-          <span>${p.total}</span>
-        </div>
-        <select class="sim-bop-select" id="sim-bop-sel-${p.id}" aria-label="Alliance selection for ${p.name}">
-          <option value="neutral">Neutral</option>
-          <option value="a">Alliance A (Blue)</option>
-          <option value="b">Alliance B (Red)</option>
-        </select>
-      `;
-      gridEl.appendChild(card);
-
-      const sel = document.getElementById(`sim-bop-sel-${p.id}`);
-      sel.addEventListener('change', (e) => {
-        state[p.id] = e.target.value;
-        historicalAnalysis.style.display = 'none';
-        update();
-      });
-    });
-
-    document.getElementById('sim-bop-btn-reset').addEventListener('click', () => {
-      powers.forEach(p => {
-        state[p.id] = 'neutral';
-        document.getElementById(`sim-bop-sel-${p.id}`).value = 'neutral';
-      });
-      historicalAnalysis.style.display = 'none';
-      update();
-    });
-
-    document.getElementById('sim-bop-btn-1914').addEventListener('click', () => {
-      const hist = {
-        'gb': 'a', 'fr': 'a', 'ru': 'a',
-        'de': 'b', 'ah': 'b', 'it': 'b'
-      };
-      powers.forEach(p => {
-        state[p.id] = hist[p.id];
-        document.getElementById(`sim-bop-sel-${p.id}`).value = hist[p.id];
-      });
-      historicalAnalysis.style.display = 'block';
-      update();
-    });
-
-    update();
+  function getMargin() {
+    return Math.abs(state.entente - state.central);
   }
 
-  function update() {
-    let scoreA = 0;
-    let scoreB = 0;
-    let scoreN = 0;
-    let memA = [];
-    let memB = [];
+  function updateHUD() {
+    var margin = getMargin();
+    var hudCrisis = $('sim-bop-hud-crisis');
+    if (hudCrisis && state.index < CRISES.length) {
+      hudCrisis.textContent = 'Crisis ' + (state.index + 1) + ' / 4 · ' + CRISES[state.index].date;
+    }
 
-    powers.forEach(p => {
-      if (state[p.id] === 'a') {
-        scoreA += p.total;
-        memA.push(p.name);
-      } else if (state[p.id] === 'b') {
-        scoreB += p.total;
-        memB.push(p.name);
-      } else {
-        scoreN += p.total;
-      }
-    });
+    var valMargin = $('sim-bop-val-margin');
+    if (valMargin) valMargin.textContent = margin;
 
-    scoreAEl.innerText = scoreA;
-    scoreBEl.innerText = scoreB;
-    scoreNEl.innerText = scoreN;
+    var hudMargin = $('sim-bop-hud-margin');
+    if (hudMargin) {
+      if (margin > 20) hudMargin.className = 'lab-hud-chip is-lose';
+      else if (margin > 10) hudMargin.className = 'lab-hud-chip is-warn';
+      else hudMargin.className = 'lab-hud-chip is-win';
+    }
 
-    memAEl.innerText = memA.length > 0 ? memA.join(', ') : 'None';
-    memBEl.innerText = memB.length > 0 ? memB.join(', ') : 'None';
+    var valBreaches = $('sim-bop-val-breaches');
+    if (valBreaches) valBreaches.textContent = state.breaches;
 
-    meterContainer.className = 'sim-bop-meter';
+    var hudBreaches = $('sim-bop-hud-breaches');
+    if (hudBreaches) {
+      hudBreaches.className = state.breaches >= 1 ? 'lab-hud-chip is-lose' : 'lab-hud-chip is-win';
+    }
 
-    if (scoreA === 0 && scoreB === 0) {
-      meterContainer.classList.add('sim-bop-status-neutral');
-      meterTitle.innerText = "Select alliances to analyze balance";
-      meterDesc.innerText = "Power imbalance and stability will be displayed here.";
+    var pEntente = $('sim-bop-power-entente');
+    if (pEntente) pEntente.textContent = state.entente + ' Power';
+
+    var pCentral = $('sim-bop-power-central');
+    if (pCentral) pCentral.textContent = state.central + ' Power';
+
+    var total = state.entente + state.central;
+    var barA = $('sim-bop-bar-entente');
+    var barB = $('sim-bop-bar-central');
+    if (barA && total > 0) barA.style.width = ((state.entente / total) * 100) + '%';
+    if (barB && total > 0) barB.style.width = ((state.central / total) * 100) + '%';
+  }
+
+  function renderCrisis() {
+    if (state.index >= CRISES.length || state.breaches >= 2) {
+      endSimulation();
       return;
     }
 
-    if ((scoreA > 0 && scoreB === 0) || (scoreB > 0 && scoreA === 0)) {
-      meterContainer.classList.add('sim-bop-status-failure');
-      meterTitle.innerText = "Unipolar — Hegemony";
-      meterDesc.innerText = "No balancing coalition exists. Hegemony is unchecked.";
-      return;
+    var c = CRISES[state.index];
+    $('sim-bop-crisis-title').textContent = c.title;
+    $('sim-bop-date-chip').textContent = c.date;
+    $('sim-bop-crisis-desc').textContent = c.desc;
+
+    // Apply historical shock
+    state.entente += c.shockA;
+    state.central += c.shockB;
+
+    var margin = getMargin();
+    if (margin > 20) {
+      state.breaches++;
     }
 
-    const imbalance = Math.abs(scoreA - scoreB) / (scoreA + scoreB) * 100;
-    const imbFormatted = imbalance.toFixed(1) + "%";
+    var log = $('sim-bop-log');
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry ' + (margin > 20 ? 'is-warn' : 'is-muted');
+      entry.innerHTML = '<strong>' + c.title + ':</strong> Entente +' + c.shockA + ' | Central +' + c.shockB + ' (Current Margin: ' + margin + ' pts' + (margin > 20 ? ' — THRESHOLD BREACHED!' : '') + ')';
+      log.insertBefore(entry, log.firstChild);
+    }
 
-    if (imbalance < 10) {
-      meterContainer.classList.add('sim-bop-status-success');
-      meterTitle.innerText = `✅ Stable Balance (Imbalance: ${imbFormatted})`;
-      meterDesc.innerText = "Neither bloc has sufficient advantage to risk war. Deterrence holds.";
-    } else if (imbalance <= 30) {
-      meterContainer.classList.add('sim-bop-status-warning');
-      meterTitle.innerText = `⚠️ Uneasy Equilibrium (Imbalance: ${imbFormatted})`;
-      meterDesc.innerText = "A dangerous gap exists. The stronger bloc may be tempted by preventive war.";
+    // SIGINT Intercept in Crisis 2
+    if (state.index === 1) {
+      setTimeout(function() {
+        if (log) {
+          var sigint = document.createElement('div');
+          sigint.className = 'lab-log-entry is-intel';
+          sigint.innerHTML = '<strong><i class="fa fa-shield"></i> SIGINT INTERCEPT · EMBASSY CABLE (ROME):</strong> Italian diplomats privately inform London that Rome regards the Austro-German Blank Check as offensive aggression; Italy will refuse combat mobilization and realign toward neutrality after the next shock.';
+          log.insertBefore(sigint, log.firstChild);
+        }
+      }, 300);
+    }
+
+    updateHUD();
+
+    if (state.breaches >= 2) {
+      setTimeout(endSimulation, 600);
+    }
+  }
+
+  window.simBopAction = function(type) {
+    if (state.over) return;
+
+    var log = $('sim-bop-log');
+    var msg = '';
+
+    if (type === 'entente') {
+      state.entente += 6;
+      msg = 'Reallocated counterweights: Anglo-French naval and land guarantees mobilized (+6 Entente).';
+    } else if (type === 'central') {
+      state.central += 6;
+      msg = 'Reallocated counterweights: Berlin-Vienna diplomatic reassurance deployed (+6 Central Powers).';
     } else {
-      meterContainer.classList.add('sim-bop-status-failure');
-      meterTitle.innerText = `❌ Hegemonic Threat (Imbalance: ${imbFormatted})`;
-      meterDesc.innerText = "One bloc dominates. History shows this level of asymmetry often leads to war or capitulation.";
+      // Neutralize / bilateral mediation pulls higher side toward lower
+      if (state.entente > state.central) {
+        state.entente = Math.max(state.central, state.entente - 6);
+      } else {
+        state.central = Math.max(state.entente, state.central - 6);
+      }
+      msg = 'Bilateral ambassadorial conference damped systemic tension (−6 Margin).';
+    }
+
+    if (log) {
+      var entry = document.createElement('div');
+      entry.className = 'lab-log-entry is-good';
+      entry.innerHTML = '<strong>Directive Executed:</strong> ' + msg;
+      log.insertBefore(entry, log.firstChild);
+    }
+
+    if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.good();
+
+    state.index++;
+    updateHUD();
+
+    if (state.index >= CRISES.length || state.breaches >= 2) {
+      setTimeout(endSimulation, 600);
+    } else {
+      setTimeout(renderCrisis, 400);
+    }
+  };
+
+  function endSimulation() {
+    state.over = true;
+    $('sim-bop-play').hidden = true;
+    var debrief = $('sim-bop-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var finalMargin = getMargin();
+    var survived = state.breaches < 2 && state.index >= CRISES.length;
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (!survived || state.breaches >= 2) {
+      stars = 0;
+      rank = 'July 1914 Cascade';
+      outcomeTitle = 'Systemic Equilibrium Ruptured: World War I Triggered';
+    } else if (finalMargin <= 10) {
+      stars = 3;
+      rank = 'Equilibrium Keeper';
+      outcomeTitle = 'European Balance of Power Preserved';
+    } else {
+      stars = 2;
+      rank = 'Armed Stabilizer';
+      outcomeTitle = 'Precarious Armed Truce Maintained';
+    }
+
+    var starContainer = $('sim-bop-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-bop-rank').textContent = rank;
+    $('sim-bop-stat-margin').textContent = finalMargin + ' pts';
+    $('sim-bop-stat-breaches').textContent = state.breaches + ' / 2';
+    $('sim-bop-stat-state').textContent = survived ? 'Equilibrium Preserved' : 'War Cascade';
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        var scoreVal = survived ? Math.max(0, 100 - (finalMargin * 3)) : 0;
+        window.LabGame.best.submit('balance_of_power', scoreVal);
+        var best = window.LabGame.best.get('balance_of_power');
+        $('sim-bop-stat-best').textContent = best + ' pts';
+      }
+      if (window.LabGame.flags && survived) {
+        window.LabGame.flags.complete('balance_of_power');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.good();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-bop-reveal-body');
+    if (revealEl) {
+      var html = '<p><strong>Classical Realist Declassification: Kenneth Waltz (1979) &amp; Hans Morgenthau (1948) — <em>The Balance of Power</em></strong></p>' +
+        '<p>Realist theory posits that in an anarchic state system, peace depends on a distribution of power where no single state or alliance can achieve preponderance:</p>' +
+        '<ul>' +
+        '<li><strong>Balancing vs. Bandwagoning:</strong> In multipolar systems, states naturally form balancing coalitions to deter aspiring hegemons. When Germany emerged as an industrial superpower after 1871, former rivals Britain, France, and Russia balanced against it.</li>' +
+        '<li><strong>The Chain-Ganging Trap:</strong> The tragic vulnerability of the 1914 system was alliance rigidity. As Waltz noted, multipolar alliances suffer from "chain-ganging" — unconditional mutual defense commitments meant that Austrian adventurism in Serbia dragged Germany, Russia, France, and Britain into systemic total war.</li>' +
+        '<li><strong>Equilibrium Margin:</strong> When shocks shift power margins beyond compensatory diplomatic capacity, the security dilemma transforms local crises into uncontrollable systemic catastrophes.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  function attachListeners() {
+    var beginBtn = $('sim-bop-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-bop-briefing').hidden = true;
+        $('sim-bop-play').hidden = false;
+        renderCrisis();
+      });
+    }
+
+    var replayBtn = $('sim-bop-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.index = 0;
+        state.entente = 110;
+        state.central = 105;
+        state.breaches = 0;
+        state.over = false;
+
+        $('sim-bop-outcome').hidden = true;
+        $('sim-bop-briefing').hidden = true;
+        $('sim-bop-play').hidden = false;
+
+        var log = $('sim-bop-log');
+        if (log) log.innerHTML = '<div class="lab-log-entry is-muted">&gt; Concert of Europe session open. Alliance scales calibrated.</div>';
+
+        renderCrisis();
+      });
+    }
+
+    var muteBtn = $('sim-bop-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-bop-help-btn',
+        objectiveHtml: '<p>Absorb 4 historical July 1914 shocks without letting the alliance power margin exceed 20 points twice. Finish with margin ≤ 10 for ★★★ Equilibrium Keeper.</p>',
+        howtoHtml: '<p>1. Observe the historical shock shift power to either the Entente or Central Powers.<br>2. Select 1 reallocation directive to adjust weights.<br>3. Keep margin ≤ 20 points.<br>4. Review Crisis 2 SIGINT intercept.<br>5. Complete all 4 crises to evaluate systemic stability.</p>',
+        payoffHtml: '<p>Survive + Margin ≤ 10: ★★★ | Survive + Margin 11–20: ★★ | 2 Breaches / War Cascade: 0–1★.</p>'
+      });
+    }
   }
+
+  // State exposure
+  window.getSimBopState = function() { return state; };
+  Object.defineProperty(window, 'simBopState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
 })();
 </script>
