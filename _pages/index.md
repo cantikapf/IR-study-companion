@@ -1255,7 +1255,7 @@ permalink: /
     <div class="home-section-header">
       <div>
         <h2 class="home-section-title">Official Video Course Companion</h2>
-        <div class="home-section-subtitle">Visual explainers, 10-minute master episodes, and animated concept deep-dives</div>
+        <div class="home-section-subtitle">Visual mind map explainers and animated concept breakdowns</div>
       </div>
     </div>
     <div style="background: var(--lms-surface); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-lg); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; box-shadow: var(--lms-shadow-md);">
@@ -1263,7 +1263,7 @@ permalink: /
         <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lms-ink-tertiary);">YouTube Channel</span>
         <h3 style="font-size: 1.4rem; font-weight: 750; color: var(--lms-ink-primary); margin: 0.35rem 0 0.5rem;">@IRinANutshell</h3>
         <p style="font-size: 0.95rem; color: var(--lms-ink-secondary); line-height: 1.6; margin: 0 0 1.25rem;">
-          Produced with concise academic narration and rapid-fire visual breakdowns. Watch our flagship 10-minute master episode: <em>"The Anarchy Problem — Who's in Charge of the Planet?"</em>, or explore mini-documentaries accompanying each core module.
+          Curriculum-aligned animated mind maps and visual explainers accompanying core International Relations modules. Watch our video breakdown of Realism in Global Politics, or explore our growing library of concept deep-dives.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <a href="https://www.youtube.com/@IRinANutshell" target="_blank" rel="noopener noreferrer" class="sync-btn sync-btn-primary" style="text-decoration: none;">
