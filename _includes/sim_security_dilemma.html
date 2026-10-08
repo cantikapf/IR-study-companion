@@ -407,7 +407,7 @@
         $('sim-sd-stat-streak').innerText = state.restraintStreak;
 
         if (window.LabGame) {
-            if (window.LabGame.flags && stars >= 1) {
+            if (window.LabGame.flags) {
                 window.LabGame.flags.complete('security_dilemma');
             }
             if (window.LabGame.best) {
