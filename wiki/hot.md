@@ -13,6 +13,17 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 Fase 1: Lab Shell "Mission Console" + Pilot Lab 04 & Lab 02 (MENUNGGU ACC GERBANG REVIEW):
+Merespons temuan pengguna bahwa 10 Interactive Diplomatic Labs kurang menarik secara visual dan tidak ada onboarding/tutorial:
+1. `Root Cause`: 10 lab memakai 10 gaya berbeda dengan kotak gelap hardcoded (#1f2937) yang menjadi "pulau gelap" di halaman LMS terang; satu paragraf intro lalu langsung tombol tanpa briefing/objective/mechanics; ada utang teknis CSS (sim_crisis meminjam .wto-btn milik lab WTO, keyframes fadeIn tak terdefinisi).
+2. `Implementasi Fase 1 (pilot 2 lab)`:
+   - `assets/css/lab-shell.css` (BARU): design system Mission Console theme-aware (konsumsi token --lms-*, dukung body.dark-theme), aksen kategori Security/Strategy/Governance selaras filter homepage, header kicker+chip meta, briefing stage 4 kartu (Situation/Role/Objectives/How It Works), HUD chips, meter dengan tick ambang + legenda, coach tip, log, debrief (recap + mechanics reveal), modul CSS-3D (.lab-stage/.lab-board/.lab-tile dengan drag-to-rotate, prefers-reduced-motion dihormati).
+   - `_includes/head.html`: +1 baris load lab-shell.css; `sw.js`: cache v3→v4 + lab-shell.css.
+   - Lab 04 Security Dilemma: briefing terkunci → Begin Simulation → 5 ronde → debrief terstruktur; logika game TIDAK diubah (build +2/threat +20, signal −10, reduce −15, ambang 75/35); tambahan: objective tracker live, recap per ronde, pengungkapan strategi Beta (Cautious Reactive, Jervis 1976), localStorage labs_completed_security_dilemma.
+   - Lab 02 Prisoner's Dilemma: matriks payoff di briefing, sesi terbatas 8 ronde (baru), ringkasan statistik akhir, reveal Tit-for-Tat (Axelrod 1984); payoff asli dipertahankan (+5/+5, +10/−10, −2/−2).
+3. `Verifikasi`: pytest 369/369 PASS; Jekyll build PASS; Playwright E2E (msedge) 20/20 checks PASS (briefing gate, alur main, debrief, recap count, localStorage, 0 console error, skor all-coop = 40); inspeksi visual vision_analyze 4/4 PASS setelah perbaikan keseimbangan kolom briefing dan clipping kotak trajectory.
+4. `Status`: Fase 1 SELESAI dan di-commit sebagai gerbang review — Fase 2 (migrasi 8 lab lain), Fase 3 (pilot WebGL lab peta), dan Fase 4 (homepage + QA akhir) HANYA dieksekusi setelah ACC pengguna atas pilot visual ini.
+
 2026-10-08 - Diplomatic Decision Labs Homepage Showcase Expansion (Option B: Full 10-Lab Scrollable Catalog & Category Filters):
 Merespons pertanyaan pengguna ("diplomatic labs kita kan ada 10, tapi kenapa yang tampil di homepage cuman segini?"):
 1. `Root Cause`: Pada redesain split view homepage sebelumnya, kolom kanan hanya menampilkan 3 kartu statis pilihan (Lab 01, 07, 05) sementara Lab 02 menjadi live sandbox di kiri, meninggalkan 6 lab lainnya tersembunyi.

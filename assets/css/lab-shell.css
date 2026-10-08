@@ -1,0 +1,614 @@
+/* ==========================================================================
+   IR Study Companion — Diplomatic Lab Shell ("Mission Console")
+   Shared design system for the 10 Diplomatic Decision Labs (M10).
+   Theme-aware: consumes the platform's --lms-* tokens, so light/dark mode
+   flips automatically via body.dark-theme. Every selector is prefixed
+   .lab- / .lab-shell to avoid leaking into course-player styles.
+   Includes a small CSS-3D module (.lab-stage / .lab-board / .lab-tile)
+   used by spatially-oriented labs. No external dependencies.
+   ========================================================================== */
+
+.lab-shell {
+  /* Category accent (overridden per data-cat below) */
+  --lab-accent: #2563eb;
+  --lab-accent-ink: #1d4ed8;
+  --lab-accent-soft: rgb(37 99 235 / 8%);
+  --lab-win: #059669;
+  --lab-warn: #d97706;
+  --lab-lose: #dc2626;
+
+  margin: 36px 0;
+  border: 1px solid var(--lms-hairline);
+  border-left: 3px solid var(--lab-accent);
+  border-radius: var(--lms-radius-lg);
+  background: var(--lms-surface);
+  box-shadow: var(--lms-shadow-md);
+  overflow: hidden;
+  color: var(--lms-ink-primary);
+}
+
+.lab-shell[data-cat="security"]  { --lab-accent: #dc2626; --lab-accent-ink: #b91c1c; --lab-accent-soft: rgb(220 38 38 / 7%); }
+.lab-shell[data-cat="strategy"]  { --lab-accent: #2563eb; --lab-accent-ink: #1d4ed8; --lab-accent-soft: rgb(37 99 235 / 7%); }
+.lab-shell[data-cat="governance"]{ --lab-accent: #7c3aed; --lab-accent-ink: #6d28d9; --lab-accent-soft: rgb(124 58 237 / 7%); }
+
+body.dark-theme .lab-shell {
+  --lab-win: #34d399;
+  --lab-warn: #fbbf24;
+  --lab-lose: #f87171;
+}
+
+.lab-shell [hidden] { display: none !important; }
+
+/* --------------------------------------------------------------------------
+   Header: kicker, title, meta chips
+   -------------------------------------------------------------------------- */
+
+.lab-head {
+  padding: 20px 26px 16px;
+  border-bottom: 1px solid var(--lms-hairline);
+  background: var(--lab-accent-soft);
+}
+
+.lab-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.lab-kicker-chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--lab-accent);
+  padding: 3px 9px;
+  border-radius: var(--lms-radius-pill);
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-kicker-track {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lms-ink-tertiary);
+}
+
+.lab-title {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--lms-ink-primary);
+}
+
+.lab-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lab-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--lms-ink-secondary);
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-pill);
+  padding: 3px 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-meta-chip .fa { color: var(--lab-accent); }
+
+/* --------------------------------------------------------------------------
+   Briefing stage (pre-simulation)
+   -------------------------------------------------------------------------- */
+
+.lab-briefing { padding: 22px 26px 24px; }
+
+.lab-brief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Balance both columns: cards stretch to fill, so left/right always end level */
+.lab-brief-grid > div { display: flex; flex-direction: column; }
+.lab-brief-grid .lab-brief-card { flex: 1; }
+
+.lab-brief-card {
+  background: var(--lms-canvas);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  padding: 14px 16px;
+}
+
+.lab-brief-label {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--lab-accent-ink);
+}
+
+.lab-brief-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-obj-list,
+.lab-mech-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.lab-obj-list li,
+.lab-mech-list li {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--lms-ink-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+.lab-obj-list .fa,
+.lab-mech-list .fa {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 0.8rem;
+}
+
+.lab-obj-list .is-win  .fa { color: var(--lab-win); }
+.lab-obj-list .is-lose .fa { color: var(--lab-lose); }
+.lab-obj-list .is-warn .fa { color: var(--lab-warn); }
+.lab-mech-list .fa { color: var(--lab-accent); }
+
+.lab-brief-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Payoff matrix (briefing table, Lab 02 pattern) */
+.lab-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+}
+
+.lab-matrix th,
+.lab-matrix td {
+  border: 1px solid var(--lms-hairline);
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.lab-matrix th {
+  background: var(--lms-subtle);
+  font-weight: 600;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-matrix td.is-cc { color: var(--lab-win); font-weight: 700; }
+.lab-matrix td.is-dd { color: var(--lab-lose); font-weight: 700; }
+.lab-matrix td.is-sucker { color: var(--lab-lose); }
+.lab-matrix td.is-tempt { color: var(--lab-win); }
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.lab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--lms-radius-md);
+  border: 1px solid var(--lms-hairline);
+  background: var(--lms-subtle);
+  color: var(--lms-ink-primary);
+  cursor: pointer;
+  transition: background var(--lms-duration) var(--lms-ease),
+              border-color var(--lms-duration) var(--lms-ease),
+              transform var(--lms-duration) var(--lms-ease);
+}
+
+.lab-btn:hover { background: var(--lms-hover); border-color: var(--lms-border-strong); }
+.lab-btn:active { transform: translateY(1px); }
+
+.lab-btn:focus-visible {
+  outline: 2px solid var(--lab-accent);
+  outline-offset: 2px;
+}
+
+.lab-btn-primary {
+  background: var(--lab-accent);
+  border-color: var(--lab-accent);
+  color: #fff;
+}
+
+.lab-btn-primary:hover { background: var(--lab-accent-ink); border-color: var(--lab-accent-ink); }
+
+.lab-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.lab-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 4px 26px 0;
+}
+
+.lab-actions .lab-btn { flex: 1 1 160px; }
+
+/* --------------------------------------------------------------------------
+   HUD (live status chips)
+   -------------------------------------------------------------------------- */
+
+.lab-hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 26px 0;
+}
+
+.lab-hud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 11px;
+  border-radius: var(--lms-radius-pill);
+  border: 1px solid var(--lms-hairline);
+  background: var(--lms-canvas);
+  color: var(--lms-ink-secondary);
+}
+
+.lab-hud-chip.is-win  { color: var(--lab-win);  border-color: var(--lab-win);  background: rgb(5 150 105 / 8%); }
+.lab-hud-chip.is-warn { color: var(--lab-warn); border-color: var(--lab-warn); background: rgb(217 119 6 / 8%); }
+.lab-hud-chip.is-lose { color: var(--lab-lose); border-color: var(--lab-lose); background: rgb(220 38 38 / 8%); }
+
+/* --------------------------------------------------------------------------
+   CSS-3D stage module (spatial labs)
+   -------------------------------------------------------------------------- */
+
+.lab-stage {
+  perspective: 1100px;
+  padding: 18px 26px 4px;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.lab-board {
+  --lab-rx: 14deg;
+  --lab-ry: 0deg;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  transform: rotateX(var(--lab-rx)) rotateY(var(--lab-ry));
+  transform-style: preserve-3d;
+  transition: transform 0.5s var(--lms-ease);
+}
+
+.lab-board.is-grabbing { transition: none; }
+
+.lab-tile {
+  transform: translateZ(24px);
+  background: var(--lms-canvas);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  padding: 14px 16px;
+  box-shadow: 0 20px 32px -20px rgb(0 0 0 / 35%);
+}
+
+.lab-tile h4 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lms-ink-primary);
+}
+
+.lab-stage-hint {
+  margin: 6px 26px 0;
+  font-size: 0.74rem;
+  color: var(--lms-ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-stage { perspective: none; }
+  .lab-board { transform: none; transition: none; }
+  .lab-tile { transform: none; }
+}
+
+@media (max-width: 720px) {
+  .lab-board { grid-template-columns: 1fr; --lab-rx: 6deg; }
+}
+
+/* --------------------------------------------------------------------------
+   Stats & meters
+   -------------------------------------------------------------------------- */
+
+.lab-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+  color: var(--lms-ink-secondary);
+  margin-bottom: 6px;
+}
+
+.lab-stat-row strong {
+  font-variant-numeric: tabular-nums;
+  color: var(--lms-ink-primary);
+  font-size: 0.95rem;
+}
+
+.lab-meter {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: var(--lms-radius-pill);
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.lab-meter-fill {
+  height: 100%;
+  background: var(--lab-accent);
+  border-radius: var(--lms-radius-pill);
+  transition: width 0.5s var(--lms-ease), background 0.3s;
+}
+
+.lab-meter-fill.is-calm  { background: var(--lab-win); }
+.lab-meter-fill.is-alert { background: var(--lab-warn); }
+.lab-meter-fill.is-danger{ background: var(--lab-lose); }
+
+.lab-meter-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--lms-ink-muted);
+  opacity: 0.55;
+}
+
+.lab-meter-tick--high { background: var(--lab-lose); }
+
+.lab-meter-legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--lms-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-score-big {
+  font-size: 2.4rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+  color: var(--lab-accent);
+}
+
+.lab-score-big.is-negative { color: var(--lab-lose); }
+
+/* --------------------------------------------------------------------------
+   Coach tip, log, debrief
+   -------------------------------------------------------------------------- */
+
+.lab-tip {
+  margin: 14px 26px 0;
+  padding: 10px 14px;
+  border: 1px solid var(--lab-accent);
+  border-left-width: 3px;
+  border-radius: var(--lms-radius-md);
+  background: var(--lab-accent-soft);
+  font-size: 0.85rem;
+  color: var(--lms-ink-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  animation: lab-fade-in 0.35s var(--lms-ease);
+}
+
+.lab-tip .fa { color: var(--lab-accent); margin-top: 2px; }
+.lab-tip span { flex: 1; }
+
+.lab-tip-close {
+  border: none;
+  background: none;
+  color: var(--lms-ink-tertiary);
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px;
+}
+
+.lab-log {
+  margin: 16px 26px 20px;
+  max-height: 220px;
+  overflow-y: auto;
+  background: var(--lms-canvas);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  scrollbar-width: thin;
+}
+
+.lab-log-entry {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--lms-hairline);
+  color: var(--lms-ink-secondary);
+  animation: lab-fade-in 0.3s var(--lms-ease);
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-log-entry:last-child { border-bottom: none; }
+.lab-log-entry.is-muted { color: var(--lms-ink-muted); font-style: italic; }
+.lab-log-entry strong { color: var(--lms-ink-primary); }
+
+.lab-opp-status {
+  margin-top: 8px;
+  font-size: 0.84rem;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-opp-status strong.is-coop { color: var(--lab-win); }
+.lab-opp-status strong.is-defect { color: var(--lab-lose); }
+
+.lab-debrief {
+  margin: 20px 26px 24px;
+  padding: 18px 20px;
+  border: 1px solid var(--lms-hairline);
+  border-left: 3px solid var(--lab-warn);
+  border-radius: var(--lms-radius-md);
+  background: var(--lms-canvas);
+  animation: lab-fade-in 0.5s var(--lms-ease);
+}
+
+.lab-debrief.is-win  { border-left-color: var(--lab-win); }
+.lab-debrief.is-lose { border-left-color: var(--lab-lose); }
+
+.lab-debrief-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--lms-ink-tertiary);
+  margin-bottom: 6px;
+}
+
+.lab-debrief h4 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+  color: var(--lms-ink-primary);
+}
+
+.lab-debrief p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-recap {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  background: var(--lms-subtle);
+  border-radius: var(--lms-radius-md);
+  font-size: 0.82rem;
+  color: var(--lms-ink-secondary);
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.lab-recap-title {
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lms-ink-tertiary);
+  margin-bottom: 6px;
+}
+
+.lab-recap ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; font-variant-numeric: tabular-nums; }
+
+.lab-mech-reveal {
+  border-top: 1px dashed var(--lms-hairline);
+  padding-top: 12px;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-mech-reveal strong { color: var(--lms-ink-primary); }
+
+.lab-debrief-actions { margin-top: 14px; display: flex; gap: 10px; }
+
+/* Session summary stat pills (Lab 02 pattern) */
+.lab-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.lab-summary-pill {
+  flex: 1 1 110px;
+  text-align: center;
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md);
+  padding: 10px 8px;
+}
+
+.lab-summary-pill .val {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--lms-ink-primary);
+}
+
+.lab-summary-pill .lbl {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lms-ink-tertiary);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes & responsive
+   -------------------------------------------------------------------------- */
+
+@keyframes lab-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  .lab-brief-grid { grid-template-columns: 1fr; }
+  .lab-head { padding: 18px 18px 14px; }
+  .lab-briefing { padding: 18px 18px 20px; }
+  .lab-hud, .lab-actions, .lab-stage { padding-left: 18px; padding-right: 18px; }
+  .lab-log, .lab-tip, .lab-debrief { margin-left: 18px; margin-right: 18px; }
+  .lab-stage-hint { margin-left: 18px; }
+}

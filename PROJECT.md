@@ -24,6 +24,7 @@
 | 11 | IR Motion Graphics Library | Kurzgesagt-style Remotion component library (World Map, Timeline, Concept Diagram) + Pilot Chapter 010 dataset | M8 | DONE |
 | 12 | Mind Map Explanatory Video Engine | Produksi video kanonik 1080p Mind Map & Flowchart Remotion (@IRinANutshell, Kokoro TTS, Deep Zoom 2.05x, Stationary Hold, RoughJS) | M9 | DONE |
 | 13 | Learning Videos Vault & Registry | Direktori khusus learning-videos/ (exports, posters, catalog.json, README registry matrix) dengan standar penamaan deterministik | M9 | DONE |
+| 14 | Diplomatic Lab Experience Overhaul | Lab Shell "Mission Console" + lapisan onboarding Briefing/Play/Debrief + panggung CSS-3D + pilot WebGL lab peta + integrasi homepage | M10 | IN PROGRESS |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
@@ -38,6 +39,7 @@
 | M7 | Online Course Transformation | 180-Soal Exam System, Backup/Restore JSON, 122-Term Glossary, Elaborate Certificate Generator, Onboarding Tour | M6 | DONE |
 | M8 | IR Motion Graphics Library | Arsitektur grafis gerak modular Kurzgesagt: AnimatedWorldMap, TimelineBar, ConceptDiagram, data JSON Module 010 | M7 | DONE |
 | M9 | Mind Map Explanatory Engine | Standarisasi alur kerja video kanonik Mind Map Explanatory (Decluttering spotlight dimming 0.35, warna semantik akademis, dual-font captioning, pre-reading gateway card, 34 node graf, Deep Zoom 2.05x, Stationary Hold, eliminasi ~3,35 GB berkas usang) | M8 | DONE |
+| M10 | Diplomatic Lab Experience Overhaul | Lab Shell Mission Console theme-aware, briefing terkunci + objective tracker + debrief terstruktur di 10 lab, panggung CSS-3D spasial, pilot WebGL (three.js vendored) di lab peta, integrasi homepage + status Completed | M9 | IN PROGRESS |
 
 
 
