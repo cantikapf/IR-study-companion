@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 780" role="img" aria-label="IR Study Companion online course illustration">
+<defs>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="1.5" cy="1.5" r="1.5" fill="#111827" opacity="0.05"/>
+  </pattern>
+  <clipPath id="globeClip"><circle cx="360" cy="400" r="270"/></clipPath>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.10"/>
+  </filter>
+  <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1080" height="780" fill="url(#dots)"/>
+<text x="60" y="340" font-family="Georgia, 'Newsreader', serif" font-size="270" font-weight="600" fill="#111827" opacity="0.05">IR</text>
+<g clip-path="url(#globeClip)" fill="none" stroke="#1e3a8a" stroke-width="1.3" opacity="0.20"><ellipse cx="360" cy="212.9" rx="135.0" ry="40.5"/><ellipse cx="360" cy="292.0" rx="233.8" ry="70.1"/><ellipse cx="360" cy="400.0" rx="270.0" ry="81.0"/><ellipse cx="360" cy="508.0" rx="233.8" ry="70.1"/><ellipse cx="360" cy="587.1" rx="135.0" ry="40.5"/><ellipse cx="360" cy="400" rx="48.6" ry="270"/><ellipse cx="360" cy="400" rx="121.5" ry="270"/><ellipse cx="360" cy="400" rx="202.5" ry="270"/><ellipse cx="360" cy="400" rx="270.0" ry="270"/></g>
+<circle cx="360" cy="400" r="270" fill="none" stroke="#1e3a8a" stroke-width="2.2" opacity="0.55"/>
+<g fill="none" stroke-linecap="round"><path d="M190,380 Q340,150 495,300" stroke="#e11d48" stroke-width="2" stroke-dasharray="1 7" opacity="0.75"/><path d="M300,225 Q240,360 255,540" stroke="#d97706" stroke-width="2" stroke-dasharray="1 7" opacity="0.75"/><path d="M495,300 Q500,415 430,505" stroke="#e11d48" stroke-width="2" stroke-dasharray="1 7" opacity="0.50"/><path d="M255,540 Q320,470 370,390" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="1 7" opacity="0.55"/></g>
+<g><circle cx="190" cy="380" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/><circle cx="300" cy="225" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/><circle cx="495" cy="300" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/><circle cx="430" cy="505" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/><circle cx="255" cy="540" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/><circle cx="370" cy="390" r="5.5" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/></g>
+<g filter="url(#soft)">
+<rect x="520" y="120" width="440" height="310" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<rect x="540" y="140" width="400" height="225" rx="8" fill="#eef1f8" stroke="#e5e7eb"/>
+<g stroke="#6b7280" stroke-width="1.5" fill="none">
+<path d="M760,200 L615,256" marker-end="url(#arr)"/>
+<path d="M760,200 L745,256" marker-end="url(#arr)"/>
+<path d="M760,200 L884,256" marker-end="url(#arr)"/>
+</g>
+<rect x="698" y="166" width="124" height="32" rx="6" fill="#fef3c7" stroke="#92400e"/>
+<text x="760" y="187" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="11" font-weight="600" letter-spacing="1" fill="#92400e">PARADIGMS</text>
+<rect x="560" y="292" width="110" height="34" rx="6" fill="#fff1f2" stroke="#e11d48"/>
+<text x="615" y="313" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.5" fill="#e11d48">REALISM</text>
+<rect x="690" y="292" width="110" height="34" rx="6" fill="#ecfdf5" stroke="#059669"/>
+<text x="745" y="313" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="11" font-weight="600" letter-spacing="0.5" fill="#059669">LIBERALISM</text>
+<rect x="832" y="292" width="104" height="34" rx="6" fill="#f5f3ff" stroke="#7c3aed"/>
+<text x="884" y="313" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="10.5" font-weight="600" letter-spacing="0" fill="#7c3aed">CONSTRUCTIVISM</text>
+<circle cx="600" cy="212" r="26" fill="#ef4444" opacity="0.95"/>
+<path d="M593,198 L593,226 L616,212 Z" fill="#ffffff"/>
+<rect x="540" y="388" width="400" height="6" rx="3" fill="#e5e7eb"/>
+<rect x="540" y="388" width="248" height="6" rx="3" fill="#1e3a8a"/>
+<text x="540" y="416" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="13" font-weight="600" fill="#111827">CH 030 &#183; Basic Explanation of Realism in IR</text>
+<text x="940" y="416" text-anchor="end" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="12" fill="#6b7280">05:16</text>
+</g>
+<rect x="536" y="94" width="158" height="26" rx="13" fill="#111827"/>
+<circle cx="554" cy="107" r="4" fill="#ef4444"/>
+<text x="568" y="111" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="10.5" letter-spacing="1.5" fill="#ffffff">MIND MAP LESSON</text>
+<g filter="url(#soft)">
+<rect x="590" y="470" width="370" height="170" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="610" y="500" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#1e3a8a">ACTIVE RECALL &#183; CH 030</text>
+<text x="610" y="528" font-family="Georgia,'Newsreader',serif" font-style="italic" font-size="14" fill="#374151">Arming for security leaves rivals feeling threatened,</text>
+<text x="610" y="548" font-family="Georgia,'Newsreader',serif" font-style="italic" font-size="14" fill="#374151">so they arm in return. This spiral is known as</text>
+<rect x="610" y="576" width="160" height="34" rx="8" fill="#1e3a8a"/>
+<text x="690" y="597" text-anchor="middle" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#ffffff">Security Dilemma</text>
+<rect x="796" y="576" width="148" height="34" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+<text x="870" y="597" text-anchor="middle" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="12.5" font-weight="600" fill="#4b5563">Balance of Power</text>
+</g>
+<g filter="url(#soft)">
+<rect x="70" y="560" width="300" height="100" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="90" y="592" font-family="ui-monospace,'JetBrains Mono',monospace" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#1e3a8a">MODULE 01 &#183; FOUNDATIONS</text>
+<rect x="90" y="610" width="260" height="6" rx="3" fill="#e5e7eb"/>
+<rect x="90" y="610" width="173" height="6" rx="3" fill="#059669"/>
+<text x="90" y="640" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="12" fill="#6b7280">4 of 6 lessons completed</text>
+</g>
+</svg>

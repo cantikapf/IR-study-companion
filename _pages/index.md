@@ -343,9 +343,6 @@ permalink: /
           <a href="https://www.youtube.com/@IRinANutshell" target="_blank" rel="noopener noreferrer" class="sync-btn sync-btn-primary" style="text-decoration: none;">
             <i class="fa fa-youtube-play" style="color: #ef4444;"></i> Visit @IRinANutshell ➔
           </a>
-          <a href="{{ site.baseurl }}/certificate.html" class="sync-btn sync-btn-secondary" style="text-decoration: none;">
-            <i class="fa fa-graduation-cap"></i> Academic Certificates
-          </a>
           <a href="{{ site.baseurl }}/glossary.html" class="sync-btn sync-btn-secondary" style="text-decoration: none;">
             <i class="fa fa-book"></i> Curated Glossary (122 Terms)
           </a>

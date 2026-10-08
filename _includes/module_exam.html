@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fa fa-check-circle"></i> Examination Passed (${score}%)
                       </h3>
                       <p style="margin: 0; line-height: 1.5; color: var(--lms-ink-secondary);">
-                        Outstanding performance! You answered <strong>${correctCount} of 10</strong> questions correctly, satisfying the 70% mastery threshold. This module is officially recorded as completed toward your academic certificate.
+                        Outstanding performance! You answered <strong>${correctCount} of 10</strong> questions correctly, satisfying the 70% mastery threshold. This module is officially recorded as completed.
                       </p>
                     `;
                 } else {
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fa fa-times-circle"></i> Mastery Threshold Not Reached (${score}%)
                       </h3>
                       <p style="margin: 0 0 1rem; line-height: 1.5; color: var(--lms-ink-secondary);">
-                        You answered <strong>${correctCount} of 10</strong> questions correctly. A minimum score of 70% is required to earn module certification. Review the scholarly explanations above and try again.
+                        You answered <strong>${correctCount} of 10</strong> questions correctly. A minimum score of 70% is required to complete this module. Review the scholarly explanations above and try again.
                       </p>
                       <button type="button" class="sync-btn sync-btn-secondary" onclick="location.reload();">
                         <i class="fa fa-refresh"></i> Reset and Retry Examination
