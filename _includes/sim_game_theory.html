@@ -1,15 +1,139 @@
 <style>
-/* Lab 02 — Prisoner's Dilemma. Shell styles: assets/css/lab-shell.css */
-#game-theory-sim .sim-gt-move-row { display: flex; gap: 10px; margin-top: 6px; }
-#game-theory-sim .sim-gt-move-row .lab-btn { flex: 1; }
-#game-theory-sim .sim-gt-score-label { margin: 0; font-size: 0.85rem; color: var(--lms-ink-secondary); }
-#game-theory-sim .sim-gt-classified {
-    margin-top: 14px;
+/* Lab 02 — Prisoner's Dilemma (M10 Game Layer Retrofit).
+   Mission Console light, theme-aware, consuming --lms-* tokens.
+   Shared game engine: assets/js/lab-game-core.js
+   Shared shell: assets/css/lab-shell.css
+*/
+#game-theory-sim {
+    position: relative;
+}
+
+#game-theory-sim .sim-gt-move-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+#game-theory-sim .sim-gt-move-row .lab-btn {
+    flex: 1;
+    font-weight: 700;
+}
+
+#game-theory-sim .sim-gt-score-label {
+    margin: 0;
     font-size: 0.78rem;
-    color: var(--lms-ink-tertiary);
-    text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--lms-ink-tertiary);
+}
+
+#game-theory-sim .sim-gt-classified {
+    margin-top: 10px;
+    font-size: 0.74rem;
+    color: var(--lab-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+#game-theory-sim .sim-gt-keyhint {
+    text-align: center;
+    color: var(--lms-ink-tertiary);
+    font-size: 0.75rem;
+    margin-top: 12px;
+}
+
+#game-theory-sim .sim-gt-keyhint kbd {
+    background: var(--lms-subtle);
+    border: 1px solid var(--lms-hairline);
+    border-radius: var(--lms-radius-sm);
+    padding: 1px 6px;
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--lms-ink-primary);
+}
+
+#game-theory-sim .sim-gt-vs-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 6px;
+}
+
+#game-theory-sim .sim-gt-vs-word {
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--lms-ink-tertiary);
+    letter-spacing: 0.08em;
+}
+
+#game-theory-sim .sim-gt-vs-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lms-ink-tertiary);
+}
+
+#game-theory-sim .sim-gt-flash {
+    margin: 14px 26px 0;
+    padding: 12px 18px;
+    border-radius: var(--lms-radius-md);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-align: center;
+    border: 1px solid var(--lms-hairline);
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lms-canvas);
+    color: var(--lms-ink-secondary);
+}
+
+#game-theory-sim .sim-gt-flash.is-win {
+    background: rgb(5 150 105 / 10%);
+    border-color: var(--lab-win);
+    color: var(--lab-win);
+}
+
+#game-theory-sim .sim-gt-flash.is-lose {
+    background: rgb(220 38 38 / 10%);
+    border-color: var(--lab-lose);
+    color: var(--lab-lose);
+}
+
+#game-theory-sim .sim-gt-flash.is-warn {
+    background: rgb(217 119 6 / 10%);
+    border-color: var(--lab-warn);
+    color: var(--lab-gold);
+}
+
+#game-theory-sim .sim-gt-finalscore {
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+    margin: 4px 0 10px;
+    color: var(--lab-accent);
+}
+
+#game-theory-sim .sim-gt-finalscore small {
+    font-size: 0.95rem;
     font-weight: 600;
+    color: var(--lms-ink-tertiary);
+}
+
+#game-theory-sim .sim-gt-finalscore.is-negative {
+    color: var(--lab-lose);
+}
+
+@media (max-width: 640px) {
+    #game-theory-sim .sim-gt-flash {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 }
 </style>
 
@@ -19,136 +143,173 @@
     <div class="lab-head">
         <div class="lab-kicker">
             <span class="lab-kicker-chip">Lab 02</span>
-            <span class="lab-kicker-track">Strategy · Game Theory</span>
+            <span class="lab-kicker-track">CASE FILE · GAME THEORY</span>
         </div>
-        <h3 class="lab-title">The Prisoner's Dilemma</h3>
+        <h3 class="lab-title">Diplomacy Duel: The Prisoner's Dilemma</h3>
         <div class="lab-meta">
             <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 4 min</span>
             <span class="lab-meta-chip"><i class="fa fa-repeat" aria-hidden="true"></i> 8-round sessions</span>
-            <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
+            <span class="lab-meta-chip"><i class="fa fa-shield" aria-hidden="true"></i> Strategic Interaction</span>
         </div>
     </div>
 
-    <!-- ======================= BRIEFING ======================= -->
+    <!-- ======================= HUD BAR ======================= -->
+    <div class="lab-hud" aria-live="polite">
+        <span class="lab-hud-chip" id="sim-gt-hud-round">Round — / 8</span>
+        <span class="lab-hud-chip" id="sim-gt-hud-score">Score <b id="sim-gt-val-score" style="color:var(--lab-accent); margin-left:4px;">0</b></span>
+        <span class="lab-hud-chip" id="sim-gt-hud-best">Best <b id="sim-gt-val-best" style="color:var(--lab-gold); margin-left:4px;">0</b></span>
+        <span class="lab-hud-chip is-streak" id="sim-gt-hud-streak" hidden>Streak ×<b id="sim-gt-val-mult">1.5</b></span>
+        <span class="lab-hud-chip" id="sim-gt-mute" style="cursor:pointer; user-select:none;" title="Toggle sound">🔊</span>
+        <span class="lab-hud-chip" id="sim-gt-help-btn" style="cursor:pointer;" title="How to play">❓ Help</span>
+    </div>
+
+    <!-- ======================= DOSSIER BRIEFING ======================= -->
     <div class="lab-briefing" id="sim-gt-briefing">
         <div class="lab-brief-grid">
             <div>
                 <div class="lab-brief-card" style="margin-bottom: 14px;">
-                    <p class="lab-brief-label">Situation</p>
-                    <p>You are State A. Across the table sits State B, an AI power whose strategy is classified. Each round, both states secretly choose: <strong>Cooperate</strong> (keep weapons banned) or <strong>Defect</strong> (secretly build). Choices are revealed simultaneously.</p>
+                    <p class="lab-brief-label">🎯 Game Objective</p>
+                    <p>Survive <strong>8 rounds</strong> against a secret opponent and finish with the highest score you can. ★1+ Survivor · ★★ 15+ Negotiator · ★★★ 40+ Master Diplomat. The golden path: chain <strong>mutual-cooperation streaks</strong> (×1.5 at 3 in a row, ×2 at 5) without getting betrayed. Finish negative and you were <strong>exploited</strong>. Beat your saved Best.</p>
                 </div>
                 <div class="lab-brief-card">
-                    <p class="lab-brief-label">Payoff Matrix</p>
+                    <p class="lab-brief-label">⚖️ Payoff Matrix (You / Opponent)</p>
                     <table class="lab-matrix">
-                        <tr>
-                            <th></th>
-                            <th>B Cooperates</th>
-                            <th>B Defects</th>
-                        </tr>
-                        <tr>
-                            <th>You Cooperate</th>
-                            <td class="is-cc">+5 / +5</td>
-                            <td class="is-sucker">−10 / +10</td>
-                        </tr>
-                        <tr>
-                            <th>You Defect</th>
-                            <td class="is-tempt">+10 / −10</td>
-                            <td class="is-dd">−2 / −2</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Rival Cooperates</th>
+                                <th>Rival Defects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>You Cooperate</th>
+                                <td class="is-cc">+5 / +5</td>
+                                <td class="is-sucker">−10 / +10</td>
+                            </tr>
+                            <tr>
+                                <th>You Defect</th>
+                                <td class="is-tempt">+10 / −10</td>
+                                <td class="is-dd">−2 / −2</td>
+                            </tr>
+                        </tbody>
                     </table>
+                    <p style="font-size:0.78rem; color:var(--lms-ink-tertiary); margin-top:8px; line-height:1.45;">
+                        Mutual cooperation pays best over time — but every round, defection tempts you with +10. That tension <em>is</em> the Prisoner's Dilemma.
+                    </p>
                 </div>
             </div>
             <div>
-                <div class="lab-brief-card" style="margin-bottom: 14px;">
-                    <p class="lab-brief-label">Objectives</p>
-                    <ul class="lab-obj-list">
-                        <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span>Maximize your cumulative score across an <strong>8-round session</strong>.</span></li>
-                        <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>There is no single winning move — the rational choice depends on <em>how your opponent reacts over time</em>. Discover its pattern.</span></li>
-                        <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span>End with a negative score and you have been systematically exploited.</span></li>
-                    </ul>
-                </div>
                 <div class="lab-brief-card">
-                    <p class="lab-brief-label">How It Works</p>
+                    <p class="lab-brief-label">📖 How to Play</p>
                     <ul class="lab-mech-list">
-                        <li><i class="fa fa-handshake-o" aria-hidden="true"></i><span>Mutual cooperation is the joint best outcome (+5 each) — but each state is tempted to defect for +10.</span></li>
-                        <li><i class="fa fa-eye" aria-hidden="true"></i><span>State B <em>adapts to your history</em>. Watch how it answers each of your moves before you commit to a pattern.</span></li>
-                        <li><i class="fa fa-refresh" aria-hidden="true"></i><span>The one-shot game favors defection; the <em>iterated</em> game rewards a different logic. Eight rounds is enough to see which.</span></li>
+                        <li><i class="fa fa-play" aria-hidden="true"></i><span><strong>1. Begin Session:</strong> Press Begin Session below — one of 5 secret strategies is drawn for your rival.</span></li>
+                        <li><i class="fa fa-handshake-o" aria-hidden="true"></i><span><strong>2. Make Your Move:</strong> Each round pick Cooperate or Defect — click the buttons or press <kbd>C</kbd> / <kbd>D</kbd>.</span></li>
+                        <li><i class="fa fa-eye" aria-hidden="true"></i><span><strong>3. Simultaneous Reveal:</strong> Moves reveal at once; payoffs apply. Read the situation log under the arena.</span></li>
+                        <li><i class="fa fa-search" aria-hidden="true"></i><span><strong>4. Read the Tells:</strong> Study the rival's answers — repeating patterns leak their hidden strategy.</span></li>
+                        <li><i class="fa fa-bullhorn" aria-hidden="true"></i><span><strong>5. SIGINT Intercept:</strong> After Round 4, a SIGINT intel hint drops. Use it to plan your endgame.</span></li>
+                        <li><i class="fa fa-trophy" aria-hidden="true"></i><span><strong>6. Debrief & Rank:</strong> After Round 8, reveal the rival's doctrine, receive stars and rank, then replay.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="lab-brief-actions">
             <button class="lab-btn lab-btn-primary" id="sim-gt-btn-begin">
-                <i class="fa fa-play" aria-hidden="true"></i> Begin Session
+                <i class="fa fa-play" aria-hidden="true"></i> Begin Session — Draw Opponent
             </button>
         </div>
     </div>
 
-    <!-- ======================= PLAY AREA ======================= -->
+    <!-- ======================= ARENA / PLAY AREA ======================= -->
     <div id="sim-gt-play" hidden>
-
-        <div class="lab-hud" aria-live="polite">
-            <span class="lab-hud-chip" id="sim-gt-hud-round">Round 1 / 8</span>
-            <span class="lab-hud-chip" id="sim-gt-hud-score">Score: 0</span>
-            <span class="lab-hud-chip">Discover B's strategy</span>
-        </div>
 
         <div class="lab-stage" id="sim-gt-stage">
             <div class="lab-board">
 
-                <div class="lab-tile" style="text-align: center;">
+                <!-- Player Card -->
+                <div class="lab-tile" id="sim-gt-tile-a" style="text-align: center; position: relative;">
                     <h4><i class="fa fa-flag" aria-hidden="true" style="color: var(--lab-accent); margin-right: 6px;"></i>State A — You</h4>
                     <p class="sim-gt-score-label">Cumulative score</p>
                     <div class="lab-score-big" id="sim-gt-score-a">0</div>
+                    <span class="lab-movetag" id="sim-gt-move-a">—</span>
                     <div class="sim-gt-move-row">
-                        <button class="lab-btn lab-btn-primary" onclick="window.playGameTheory('cooperate')" id="sim-gt-btn-coop"><i class="fa fa-handshake-o" aria-hidden="true"></i> Cooperate</button>
-                        <button class="lab-btn" onclick="window.playGameTheory('defect')" id="sim-gt-btn-defect"><i class="fa fa-crosshairs" aria-hidden="true"></i> Defect</button>
+                        <button class="lab-btn lab-btn-primary" id="sim-gt-btn-coop">
+                            <i class="fa fa-handshake-o" aria-hidden="true"></i> Cooperate
+                        </button>
+                        <button class="lab-btn" id="sim-gt-btn-defect">
+                            <i class="fa fa-crosshairs" aria-hidden="true"></i> Defect
+                        </button>
                     </div>
                 </div>
 
-                <div class="lab-tile" style="text-align: center;">
+                <!-- Center Trust Meter -->
+                <div class="sim-gt-vs-col">
+                    <span class="sim-gt-vs-word">VS</span>
+                    <div class="lab-trustbar" title="Bilateral Trust Level">
+                        <div class="lab-trustfill" id="sim-gt-trustfill"></div>
+                    </div>
+                    <span class="sim-gt-vs-label">Trust</span>
+                </div>
+
+                <!-- Opponent Card -->
+                <div class="lab-tile" id="sim-gt-tile-b" style="text-align: center; position: relative;">
                     <h4><i class="fa fa-flag" aria-hidden="true" style="color: var(--lms-ink-tertiary); margin-right: 6px;"></i>State B — Opponent</h4>
-                    <p class="sim-gt-score-label">Cumulative score</p>
+                    <p class="sim-gt-score-label" id="sim-gt-foe-name">???</p>
                     <div class="lab-score-big" id="sim-gt-score-b" style="color: var(--lms-ink-tertiary);">0</div>
-                    <div class="lab-opp-status" id="sim-gt-opp-status" style="min-height: 44px;">Waiting for your Round 1 move…</div>
-                    <div class="sim-gt-classified">Strategy: classified until debrief</div>
+                    <span class="lab-movetag" id="sim-gt-move-b">—</span>
+                    <div class="sim-gt-classified" id="sim-gt-foe-strat-tag">STRATEGY: CLASSIFIED</div>
                 </div>
 
             </div>
         </div>
-        <p class="lab-stage-hint"><i class="fa fa-arrows" aria-hidden="true"></i> Drag the board to rotate the view.</p>
+
+        <p class="sim-gt-keyhint">
+            Keyboard shortcuts: <kbd>C</kbd> Cooperate · <kbd>D</kbd> Defect · Drag the board to rotate view
+        </p>
+
+        <div class="sim-gt-flash" id="sim-gt-flash">
+            Make your opening move.
+        </div>
 
         <div class="lab-tip" id="sim-gt-tip" hidden>
             <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-            <span>Pay attention to how State B answers each of your moves — its behavior is a strategy, not randomness. This round's outcome already hints at it.</span>
+            <span>Pay attention to how State B answers each of your moves — its behavior is a doctrine, not randomness. This round's outcome already hints at it.</span>
             <button class="lab-tip-close" id="sim-gt-tip-close" aria-label="Dismiss tip"><i class="fa fa-times" aria-hidden="true"></i></button>
         </div>
 
         <div class="lab-log" id="sim-gt-log" aria-live="polite">
-            <div class="lab-log-entry is-muted">&gt; Session initialized. Opponent is ready.</div>
+            <div class="lab-log-entry is-muted">&gt; Session initialized. Opponent drawn. Strategy classified.</div>
         </div>
 
+        <!-- ======================= DEBRIEF / END SCREEN ======================= -->
         <div id="sim-gt-outcome" class="lab-debrief" aria-live="polite" hidden>
-            <span class="lab-debrief-tag">Debrief</span>
-            <h4 id="sim-gt-outcome-title"></h4>
+            <span class="lab-debrief-tag">After-Action Report · Debrief</span>
+            <h4 id="sim-gt-outcome-title">Session Complete</h4>
+            <div class="lab-stars" id="sim-gt-stars"></div>
+            <div class="lab-rank" id="sim-gt-rank"></div>
+            <div class="sim-gt-finalscore" id="sim-gt-final-score">0 <small>points</small></div>
             <p id="sim-gt-outcome-desc"></p>
 
             <div class="lab-summary-row">
                 <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-a">0</span><span class="lbl">Your score</span></div>
                 <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-b">0</span><span class="lbl">State B score</span></div>
                 <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-coop">0%</span><span class="lbl">You cooperated</span></div>
-                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-exploit">0</span><span class="lbl">Exploits made</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-exploit">0</span><span class="lbl">Exploits landed</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-betray">0</span><span class="lbl">Times betrayed</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-best">0</span><span class="lbl">Best score</span></div>
             </div>
 
             <div class="lab-recap">
-                <div class="lab-recap-title">Round-by-round record</div>
+                <div class="lab-recap-title">Round-by-round classified record</div>
                 <ul id="sim-gt-recap-list"></ul>
             </div>
 
             <div class="lab-mech-reveal" id="sim-gt-mech-reveal"></div>
 
             <div class="lab-debrief-actions">
-                <button class="lab-btn" onclick="window.simGtRestart()"><i class="fa fa-refresh" aria-hidden="true"></i> Play Another Session</button>
+                <button class="lab-btn lab-btn-primary" id="sim-gt-btn-replay">
+                    <i class="fa fa-refresh" aria-hidden="true"></i> Play Another Session — Draw New Rival
+                </button>
             </div>
         </div>
     </div>
@@ -156,185 +317,687 @@
 
 <script>
 (function() {
+    'use strict';
+
     var MAX_ROUNDS = 8;
-    var scoreA = 0, scoreB = 0, round = 1;
-    var lastOpponentMove = 'cooperate'; // Tit-for-Tat opens cooperatively (kept from original)
-    var history = [];
-    var coopCount = 0, exploitCount = 0;
-    var tipShown = false;
-    var finished = false;
+
+    // 5 Canonical Opponent Personalities (Axelrod 1984)
+    var PERSONALITIES = [
+        {
+            id: 'tft',
+            name: 'Tit-for-Tat',
+            first: 'C',
+            next: function(h) {
+                return h.player.length ? h.player[h.player.length - 1] : 'C';
+            },
+            desc: 'Copies your previous move — opens friendly, retaliates once, forgives once. Won both of Axelrod\'s 1984 tournaments.',
+            beat: 'Cooperate first and never betray: mutual cooperation compounds faster than any exploit.',
+            intel: 'Their last two moves exactly mirrored ours. Pattern lock likely — this is a mirror player.'
+        },
+        {
+            id: 'grim',
+            name: 'Grim Trigger',
+            first: 'C',
+            next: function(h) {
+                if (!h.player.length) return 'C';
+                return h.player.indexOf('D') === -1 ? 'C' : 'D';
+            },
+            desc: 'Cooperates until you defect a single time — then defects forever. Trust here has no second chance.',
+            beat: 'One betrayal poisons everything. Cooperate throughout, or do not bother extending trust at all.',
+            intel: 'After our one betrayal they went cold and never returned to the table. No recovery observed.'
+        },
+        {
+            id: 'pred',
+            name: 'The Predator',
+            first: 'D',
+            next: function() {
+                return 'D';
+            },
+            desc: 'Never cooperates. Every opening you give becomes leverage. Against it, defection is not cynicism — it is self-defense.',
+            beat: 'Defect every round. You cannot be exploited if you never extend trust.',
+            intel: 'Every intercepted transmission mentions weapons. They have never once cooperated. Stop hoping.'
+        },
+        {
+            id: 'wild',
+            name: 'The Wildcard',
+            first: null,
+            next: function() {
+                var r = (window.LabGame && window.LabGame.rng) ? window.LabGame.rng() : Math.random();
+                return r < 0.6 ? 'C' : 'D';
+            },
+            desc: 'Flips a weighted coin (60/40 toward cooperation). Unpredictability as doctrine — impossible to exploit, impossible to trust.',
+            beat: 'Against pure chance, defect slightly more than cooperate: expected value favors armor over hope.',
+            intel: 'Their moves defy every model we can fit. Analysts suspect coin-flip diplomacy.'
+        },
+        {
+            id: 'pav',
+            name: 'Pavlov',
+            first: 'C',
+            next: function(h) {
+                if (!h.player.length) return 'C';
+                var lastOpp = h.opp[h.opp.length - 1];
+                var lastPlayer = h.player[h.player.length - 1];
+                var lastPay = lastOpp === 'C' ? (lastPlayer === 'C' ? 5 : -10)
+                                              : (lastPlayer === 'C' ? 10 : -2);
+                if (lastPay >= 0) return lastOpp;
+                return lastOpp === 'C' ? 'D' : 'C';
+            },
+            desc: 'Win-stay, lose-shift: repeats whatever scored well last round and switches after a poor result. Forgives your betrayal — and milks a cooperator.',
+            beat: 'Stay cooperative while it cooperates; punish its defection once and it flips back to peace.',
+            intel: 'They keep whichever stance won them the previous round. Habitual, not principled.'
+        }
+    ];
+
+    var TELLS = {
+        cc: [
+            'A quiet week. Both arsenals stay sealed.',
+            'Intelligence confirms: neither side moved. Peace, for now, is profitable.'
+        ],
+        dc: [
+            'You armed in the dark. They never noticed — this time.',
+            'Their agents report all quiet on their side. You gained advantage.'
+        ],
+        cd: [
+            'Satellite photos confirm new silos. You disarmed alone.',
+            'Betrayal. They built while you shook hands.'
+        ],
+        dd: [
+            'Both sides built. Both sides watched. Everyone poorer.',
+            'Another costly week of mutual escalation.'
+        ]
+    };
+
+    var state = {
+        p: null,
+        round: 1,
+        scoreP: 0,
+        scoreO: 0,
+        streak: 0,
+        hist: { player: [], opp: [] },
+        busy: false,
+        over: false,
+        exploitCount: 0,
+        betrayCount: 0,
+        coopCount: 0
+    };
 
     function $(id) { return document.getElementById(id); }
 
+    function getBestScore() {
+        if (window.LabGame && window.LabGame.best) {
+            return window.LabGame.best.get('game_theory');
+        }
+        try {
+            return parseInt(localStorage.getItem('labs_best_game_theory') || '0', 10) || 0;
+        } catch (e) {
+            return 0;
+        }
+    }
+
+    function tell(key) {
+        var arr = TELLS[key] || TELLS.cc;
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function popup(tileId, text, isWin) {
+        var tile = $(tileId);
+        if (!tile) return;
+        var el = document.createElement('span');
+        el.className = 'lab-pop ' + (isWin ? 'is-win' : 'is-lose');
+        el.textContent = text;
+        tile.appendChild(el);
+        setTimeout(function() { el.remove(); }, 1000);
+    }
+
+    function setMoves(mine, theirs) {
+        var my = $('sim-gt-move-a');
+        var fo = $('sim-gt-move-b');
+        if (my) {
+            my.textContent = mine ? (mine === 'C' ? 'Cooperated' : 'Defected') : '—';
+            my.className = 'lab-movetag' + (mine === 'C' ? ' is-coop' : mine === 'D' ? ' is-defect' : '');
+        }
+        if (fo) {
+            fo.textContent = theirs ? (theirs === 'C' ? 'Cooperated' : 'Defected') : '—';
+            fo.className = 'lab-movetag' + (theirs === 'C' ? ' is-coop' : theirs === 'D' ? ' is-defect' : '');
+        }
+    }
+
+    function setFlash(text, cls) {
+        var f = $('sim-gt-flash');
+        if (!f) return;
+        f.textContent = text;
+        f.className = 'sim-gt-flash ' + (cls || '');
+    }
+
+    function setButtons(on) {
+        var coop = $('sim-gt-btn-coop');
+        var def = $('sim-gt-btn-defect');
+        if (coop) coop.disabled = !on;
+        if (def) def.disabled = !on;
+    }
+
     function updateHUD() {
-        $('sim-gt-hud-round').innerText = 'Round ' + Math.min(round, MAX_ROUNDS) + ' / ' + MAX_ROUNDS;
-        $('sim-gt-hud-score').innerText = 'Score: ' + scoreA;
+        var roundEl = $('sim-gt-hud-round');
+        if (roundEl) {
+            roundEl.textContent = 'Round ' + Math.min(state.round, MAX_ROUNDS) + ' / ' + MAX_ROUNDS;
+        }
+        var scoreValEl = $('sim-gt-val-score');
+        if (scoreValEl) {
+            scoreValEl.textContent = state.scoreP;
+        }
+        var bestValEl = $('sim-gt-val-best');
+        if (bestValEl) {
+            bestValEl.textContent = getBestScore();
+        }
 
-        var a = $('sim-gt-score-a');
-        a.innerText = scoreA;
-        a.className = 'lab-score-big' + (scoreA < 0 ? ' is-negative' : '');
-        $('sim-gt-score-b').innerText = scoreB;
+        var sa = $('sim-gt-score-a');
+        if (sa) {
+            sa.textContent = state.scoreP;
+            sa.className = 'lab-score-big' + (state.scoreP < 0 ? ' is-negative' : '');
+        }
+        var sb = $('sim-gt-score-b');
+        if (sb) {
+            sb.textContent = state.scoreO;
+        }
+
+        var trust = 50;
+        var n = state.hist.player.length;
+        if (n > 0) {
+            var lastP = state.hist.player[n - 1];
+            var lastO = state.hist.opp[n - 1];
+            trust = (lastP === 'C' && lastO === 'C') ? 85 : ((lastP === 'D' && lastO === 'D') ? 15 : 45);
+        }
+        var fill = $('sim-gt-trustfill');
+        if (fill) {
+            fill.style.height = trust + '%';
+        }
+
+        var streakChip = $('sim-gt-hud-streak');
+        var multVal = $('sim-gt-val-mult');
+        if (streakChip && multVal) {
+            if (state.streak >= 3) {
+                streakChip.hidden = false;
+                multVal.textContent = state.streak >= 5 ? '2' : '1.5';
+            } else {
+                streakChip.hidden = true;
+            }
+        }
     }
 
-    function outcomeText(playerMove, oppMove) {
-        if (playerMove === 'cooperate' && oppMove === 'cooperate') {
-            return 'Mutual Cooperation! Both states enjoy peace <strong style="color:var(--lab-win)">(+5 each)</strong>.';
+    function startSession() {
+        var pIdx = Math.floor(Math.random() * PERSONALITIES.length);
+        state = {
+            p: PERSONALITIES[pIdx],
+            round: 1,
+            scoreP: 0,
+            scoreO: 0,
+            streak: 0,
+            hist: { player: [], opp: [] },
+            busy: false,
+            over: false,
+            exploitCount: 0,
+            betrayCount: 0,
+            coopCount: 0
+        };
+
+        if (window.LabGame && window.LabGame.score) {
+            window.LabGame.score.reset();
         }
-        if (playerMove === 'defect' && oppMove === 'cooperate') {
-            return 'You exploited their trust! You gain dominance <strong style="color:var(--lab-win)">(+10)</strong>, they suffer <strong style="color:var(--lab-lose)">(−10)</strong>.';
+        if (window.LabGame && window.LabGame.streak) {
+            window.LabGame.streak.break();
         }
-        if (playerMove === 'cooperate' && oppMove === 'defect') {
-            return 'You were betrayed! Opponent builds weapons while you disarm <strong style="color:var(--lab-lose)">(−10)</strong>.';
-        }
-        return 'Mutual Defection! An expensive arms race harms both <strong style="color:var(--lab-lose)">(−2 each)</strong>.';
-    }
 
-    window.playGameTheory = function(playerMove) {
-        if (finished) { return; }
-
-        var oppMove = lastOpponentMove; // Tit-for-Tat copies your previous move
-        var changeA = 0, changeB = 0;
-
-        if (playerMove === 'cooperate' && oppMove === 'cooperate') { changeA = 5; changeB = 5; }
-        else if (playerMove === 'defect' && oppMove === 'cooperate') { changeA = 10; changeB = -10; exploitCount++; }
-        else if (playerMove === 'cooperate' && oppMove === 'defect') { changeA = -10; changeB = 10; }
-        else { changeA = -2; changeB = -2; }
-
-        if (playerMove === 'cooperate') { coopCount++; }
-
-        lastOpponentMove = playerMove; // (original mechanic preserved)
-        scoreA += changeA;
-        scoreB += changeB;
-
-        var icon = oppMove === 'cooperate' ? '🤝' : '⚔️';
-        var label = oppMove === 'cooperate' ? 'COOPERATED' : 'DEFECTED';
-        var cls = oppMove === 'cooperate' ? 'is-coop' : 'is-defect';
-        $('sim-gt-opp-status').innerHTML = 'Round ' + round + ': State B played ' + icon + ' <strong class="' + cls + '">' + label + '</strong>';
-
-        var text = outcomeText(playerMove, oppMove);
-        history.push({ round: round, player: playerMove, opp: oppMove });
+        $('sim-gt-briefing').hidden = true;
+        $('sim-gt-outcome').hidden = true;
+        $('sim-gt-play').hidden = false;
 
         var log = $('sim-gt-log');
-        var entry = document.createElement('div');
-        entry.className = 'lab-log-entry';
-        entry.innerHTML = '<strong>[Round ' + round + ']</strong> ' + text;
-        log.insertBefore(entry, log.firstChild);
+        if (log) {
+            log.innerHTML = '<div class="lab-log-entry is-muted">&gt; Session initialized. Opponent drawn. Strategy classified.</div>';
+        }
 
+        setMoves(null, null);
+        setFlash('Opponent drawn. Strategy classified.', '');
+
+        var foeName = $('sim-gt-foe-name');
+        var stratTag = $('sim-gt-foe-strat-tag');
+        if (foeName) {
+            foeName.textContent = 'SCRAMBLING…';
+            foeName.classList.add('lab-roulette');
+        }
+        if (stratTag) {
+            stratTag.textContent = 'STRATEGY: CLASSIFIED';
+        }
+
+        setButtons(false);
         updateHUD();
 
-        if (!tipShown) {
-            tipShown = true;
-            $('sim-gt-tip').hidden = false;
+        if (window.LabGame && window.LabGame.sfx) {
+            window.LabGame.sfx.click();
         }
 
-        if (round >= MAX_ROUNDS) {
-            endSession();
-        } else {
-            round++;
+        setTimeout(function() {
+            if (foeName) {
+                foeName.classList.remove('lab-roulette');
+                foeName.textContent = 'State B (Classified)';
+            }
             updateHUD();
-        }
-    };
-
-    function endSession() {
-        finished = true;
-        $('sim-gt-btn-coop').disabled = true;
-        $('sim-gt-btn-defect').disabled = true;
-
-        try { localStorage.setItem('labs_completed_game_theory', 'true'); } catch (e) {}
-
-        var outcome = $('sim-gt-outcome');
-        outcome.hidden = false;
-
-        var title, desc;
-        if (scoreA >= 40) {
-            title = '🏆 Strategic Masterclass — ' + scoreA + ' points';
-            desc = 'You read the opponent quickly and kept the game on the efficient frontier. Sustained mutual cooperation is the Pareto-optimal path — both states end richer than any exploit could manage alone.';
-        } else if (scoreA > 0) {
-            title = '✅ Net Gainer — ' + scoreA + ' points';
-            desc = 'A positive balance, but check the record: some of it may have been bought by risky exploits that invited retaliation later in the session.';
-        } else if (scoreA === 0) {
-            title = '⚖️ Perfect Stalemate — 0 points';
-            desc = 'Neither side gained. When both states defend short-term advantage, the game locks into mutual defection — the Nash Equilibrium of the one-shot dilemma, and the joint worst outcome over time.';
-        } else {
-            title = '❌ Exploited — ' + scoreA + ' points';
-            desc = 'You paid the sucker\'s payoff repeatedly. Disarming while the other side builds is the worst position in the matrix — trust needs verification.';
-        }
-        $('sim-gt-outcome-title').innerText = title;
-        $('sim-gt-outcome-desc').innerHTML = desc;
-
-        $('sim-gt-sum-a').innerText = scoreA;
-        $('sim-gt-sum-b').innerText = scoreB;
-        $('sim-gt-sum-coop').innerText = Math.round((coopCount / MAX_ROUNDS) * 100) + '%';
-        $('sim-gt-sum-exploit').innerText = exploitCount;
-
-        var recap = $('sim-gt-recap-list');
-        recap.innerHTML = '';
-        history.forEach(function(h) {
-            var li = document.createElement('li');
-            li.innerHTML = '<strong>R' + h.round + '</strong> — You ' + (h.player === 'cooperate' ? 'Cooperated' : 'Defected') + ' · B ' + (h.opp === 'cooperate' ? 'Cooperated' : 'Defected');
-            recap.appendChild(li);
-        });
-
-        $('sim-gt-mech-reveal').innerHTML = '<strong>Mechanics revealed:</strong> State B was playing <em>Tit-for-Tat</em> (Axelrod, <em>The Evolution of Cooperation</em>, 1984) — it opened by cooperating, then simply mirrored your previous move. Tit-for-Tat is nice (never defects first), retaliatory (punishes exploitation), forgiving (returns to cooperation), and clear (easy to read). It won both of Axelrod\'s tournaments. The lesson for international politics: when interactions repeat — the "shadow of the future" — cooperation becomes rational even among egoists, and mutual cooperation (CC) is Pareto-optimal while mutual defection (DD) is the one-shot Nash Equilibrium.<br><br>Continue to the <strong>Knowledge Check</strong> below to test the concept.';
+            setButtons(true);
+        }, 850);
     }
 
-    window.simGtRestart = function() {
-        scoreA = 0; scoreB = 0; round = 1;
-        lastOpponentMove = 'cooperate';
-        history = []; coopCount = 0; exploitCount = 0;
-        tipShown = true; finished = false;
+    function choose(move) {
+        if (state.busy || state.over) return;
+        if (window.LabGame && window.LabGame.help && window.LabGame.help.isOpen()) return;
 
-        $('sim-gt-btn-coop').disabled = false;
-        $('sim-gt-btn-defect').disabled = false;
-        $('sim-gt-outcome').hidden = true;
-        $('sim-gt-opp-status').innerText = 'Waiting for your Round 1 move…';
-        $('sim-gt-log').innerHTML = '<div class="lab-log-entry is-muted">&gt; New session initialized. Opponent is ready.</div>';
+        state.busy = true;
+        setButtons(false);
+
+        if (window.LabGame && window.LabGame.sfx) {
+            window.LabGame.sfx.click();
+        }
+
+        // Determine opponent move based on personality
+        var oppMove;
+        if (state.p.first === null && state.hist.player.length === 0) {
+            oppMove = state.p.next(state.hist);
+        } else if (state.hist.player.length === 0 && state.p.first) {
+            oppMove = state.p.first;
+        } else {
+            oppMove = state.p.next(state.hist);
+        }
+
+        var changeP = 0, changeO = 0, key = '';
+        var isStreakCoop = false;
+
+        if (move === 'C' && oppMove === 'C') {
+            key = 'cc';
+            state.streak++;
+            state.coopCount++;
+            var mult = state.streak >= 5 ? 2 : (state.streak >= 3 ? 1.5 : 1);
+            changeP = Math.round(5 * mult);
+            changeO = 5;
+            isStreakCoop = mult > 1;
+
+            setFlash(isStreakCoop ? 'MUTUAL COOPERATION — +' + changeP + ' (streak ×' + mult + ')' : 'MUTUAL COOPERATION — +5 each', 'is-win');
+            if (window.LabGame && window.LabGame.sfx) {
+                window.LabGame.sfx.good();
+            }
+        } else if (move === 'D' && oppMove === 'C') {
+            key = 'dc';
+            changeP = 10;
+            changeO = -10;
+            state.streak = 0;
+            state.exploitCount++;
+
+            setFlash('YOU EXPLOITED THEM — +10 / −10', 'is-warn');
+            if (window.LabGame && window.LabGame.sfx) {
+                window.LabGame.sfx.good();
+            }
+        } else if (move === 'C' && oppMove === 'D') {
+            key = 'cd';
+            changeP = -10;
+            changeO = 10;
+            state.streak = 0;
+            state.betrayCount++;
+            state.coopCount++;
+
+            setFlash('BETRAYED — −10 / +10', 'is-lose');
+            if (window.LabGame && window.LabGame.sfx) {
+                window.LabGame.sfx.bad();
+            }
+
+            var tileA = $('sim-gt-tile-a');
+            if (tileA) {
+                tileA.classList.add('lab-shaking');
+                setTimeout(function() { tileA.classList.remove('lab-shaking'); }, 420);
+            }
+        } else {
+            key = 'dd';
+            changeP = -2;
+            changeO = -2;
+            state.streak = 0;
+
+            setFlash('MUTUAL DEFECTION — −2 each', 'is-lose');
+            if (window.LabGame && window.LabGame.sfx) {
+                window.LabGame.sfx.bad();
+            }
+        }
+
+        // Suspense beat (~500ms) before reveal
+        setTimeout(function() {
+            state.hist.player.push(move);
+            state.hist.opp.push(oppMove);
+            state.scoreP += changeP;
+            state.scoreO += changeO;
+
+            setMoves(move, oppMove);
+            if (changeP > 0) popup('sim-gt-tile-a', '+' + changeP, true);
+            if (changeP < 0) popup('sim-gt-tile-a', String(changeP), false);
+            if (changeO > 0) popup('sim-gt-tile-b', '+' + changeO, true);
+            if (changeO < 0) popup('sim-gt-tile-b', String(changeO), false);
+
+            var log = $('sim-gt-log');
+            if (log) {
+                var entry = document.createElement('div');
+                entry.className = 'lab-log-entry';
+                entry.innerHTML = '<strong>[Round ' + state.round + ']</strong> ' + tell(key) +
+                    ' <span style="font-size:0.78rem; opacity:0.8;">(You: ' + (move === 'C' ? 'Cooperated' : 'Defected') +
+                    ' · B: ' + (oppMove === 'C' ? 'Cooperated' : 'Defected') + ')</span>';
+                log.insertBefore(entry, log.firstChild);
+            }
+
+            updateHUD();
+
+            // Tip show on Round 1
+            if (state.round === 1) {
+                var tip = $('sim-gt-tip');
+                if (tip) tip.hidden = false;
+            }
+
+            // SIGINT intercept card after Round 4
+            if (state.round === 4) {
+                setTimeout(function() {
+                    if (log) {
+                        var intelEntry = document.createElement('div');
+                        intelEntry.className = 'lab-log-entry is-intel';
+                        intelEntry.id = 'sim-gt-intel-card';
+                        intelEntry.innerHTML = '<span class="lab-intel-tag"><i class="fa fa-bullhorn" aria-hidden="true"></i> INTEL · ROUND 5</span>' + state.p.intel;
+                        log.insertBefore(intelEntry, log.firstChild);
+                    }
+                    if (window.LabGame && window.LabGame.sfx) {
+                        window.LabGame.sfx.reveal();
+                    }
+                }, 350);
+            }
+
+            if (state.round >= MAX_ROUNDS) {
+                state.over = true;
+                setTimeout(endSession, 850);
+            } else {
+                state.round++;
+                updateHUD();
+                state.busy = false;
+                setButtons(true);
+            }
+        }, 500);
+    }
+
+    function endSession() {
+        state.over = true;
+        setButtons(false);
+
+        // Submit flags and best score via LabGame
+        if (window.LabGame && window.LabGame.flags) {
+            window.LabGame.flags.complete('game_theory');
+        } else {
+            try { localStorage.setItem('labs_completed_game_theory', 'true'); } catch (e) {}
+        }
+
+        var isNewBest = false;
+        if (window.LabGame && window.LabGame.best) {
+            isNewBest = window.LabGame.best.submit('game_theory', state.scoreP);
+        } else {
+            try {
+                var curBest = parseInt(localStorage.getItem('labs_best_game_theory') || '0', 10);
+                if (state.scoreP > curBest) {
+                    localStorage.setItem('labs_best_game_theory', String(state.scoreP));
+                    isNewBest = true;
+                }
+            } catch (e) {}
+        }
+
+        var starsCount = 0;
+        if (window.LabGame && window.LabGame.stars) {
+            starsCount = window.LabGame.stars(state.scoreP, 1, 15, 40);
+        } else {
+            if (state.scoreP >= 40) starsCount = 3;
+            else if (state.scoreP >= 15) starsCount = 2;
+            else if (state.scoreP > 0) starsCount = 1;
+            else starsCount = 0;
+        }
+
+        var rank = '';
+        if (starsCount === 3) rank = 'Master Diplomat';
+        else if (starsCount === 2) rank = 'Seasoned Negotiator';
+        else if (starsCount === 1) rank = 'Survivor';
+        else rank = 'Exploited';
+
+        var title = isNewBest ? 'Session Complete — New Record!' : 'Session Complete';
+        var desc = '';
+        if (starsCount === 3) {
+            desc = 'You read the opponent\'s doctrine quickly and locked the game onto the efficient frontier. Sustained mutual cooperation is the Pareto-optimal path — both states exit richer than any exploit could sustain.';
+        } else if (starsCount === 2) {
+            desc = 'A disciplined diplomatic campaign with positive net gains. Your mix of cooperation and defensive moves protected state security while exploring the table.';
+        } else if (starsCount === 1) {
+            desc = 'You survived with a modest positive balance. Check your after-action record below: defensive posture prevented catastrophic loss, but missed opportunities for compounding trust.';
+        } else {
+            desc = 'You paid the sucker\'s payoff repeatedly or locked into mutual defection. In international anarchy, trust without verification creates fatal vulnerabilities.';
+        }
+
+        var outcome = $('sim-gt-outcome');
+        if (outcome) {
+            outcome.hidden = false;
+            outcome.className = 'lab-debrief ' + (starsCount >= 2 ? 'is-win' : (starsCount === 1 ? '' : 'is-lose'));
+        }
+
+        var outTitle = $('sim-gt-outcome-title');
+        if (outTitle) outTitle.textContent = title;
+
+        var outDesc = $('sim-gt-outcome-desc');
+        if (outDesc) outDesc.textContent = desc;
+
+        var rankEl = $('sim-gt-rank');
+        if (rankEl) rankEl.textContent = rank;
+
+        var finalScoreEl = $('sim-gt-final-score');
+        if (finalScoreEl) {
+            finalScoreEl.innerHTML = state.scoreP + ' <small>points</small>';
+            finalScoreEl.className = 'sim-gt-finalscore' + (state.scoreP < 0 ? ' is-negative' : '');
+        }
+
+        // Animated Stars
+        var starsEl = $('sim-gt-stars');
+        if (starsEl) {
+            starsEl.innerHTML = '';
+            for (var i = 0; i < 3; i++) {
+                var s = document.createElement('span');
+                if (i < starsCount) {
+                    s.className = 'lab-star-in';
+                    s.style.animationDelay = (i * 0.22) + 's';
+                    s.textContent = '★';
+                } else {
+                    s.className = 'is-off';
+                    s.textContent = '★';
+                }
+                starsEl.appendChild(s);
+            }
+        }
+
+        if (window.LabGame && window.LabGame.sfx) {
+            if (starsCount >= 3) {
+                window.LabGame.sfx.fanfare();
+            } else if (starsCount > 0) {
+                window.LabGame.sfx.good();
+            } else {
+                window.LabGame.sfx.bad();
+            }
+        }
+
+        // Summary pills
+        var sa = $('sim-gt-sum-a'); if (sa) sa.textContent = state.scoreP;
+        var sb = $('sim-gt-sum-b'); if (sb) sb.textContent = state.scoreO;
+        var sc = $('sim-gt-sum-coop'); if (sc) sc.textContent = Math.round((state.coopCount / MAX_ROUNDS) * 100) + '%';
+        var se = $('sim-gt-sum-exploit'); if (se) se.textContent = state.exploitCount;
+        var sbtr = $('sim-gt-sum-betray'); if (sbtr) sbtr.textContent = state.betrayCount;
+        var sbest = $('sim-gt-sum-best'); if (sbest) sbest.textContent = getBestScore();
+
+        // Round recap list
+        var recap = $('sim-gt-recap-list');
+        if (recap) {
+            recap.innerHTML = '';
+            state.hist.player.forEach(function(pMove, idx) {
+                var oMove = state.hist.opp[idx];
+                var li = document.createElement('li');
+                li.innerHTML = '<strong>Round ' + (idx + 1) + '</strong> — You ' +
+                    (pMove === 'C' ? '<span style="color:var(--lab-win);">Cooperated</span>' : '<span style="color:var(--lab-lose);">Defected</span>') +
+                    ' · State B ' +
+                    (oMove === 'C' ? '<span style="color:var(--lab-win);">Cooperated</span>' : '<span style="color:var(--lab-lose);">Defected</span>');
+                recap.appendChild(li);
+            });
+        }
+
+        // Reveal section with academic citation and closer
+        var reveal = $('sim-gt-mech-reveal');
+        if (reveal) {
+            reveal.innerHTML = '<strong>Mechanics revealed:</strong> State B was playing <em>' + state.p.name +
+                '</em> (Axelrod, <em>The Evolution of Cooperation</em>, 1984). ' +
+                state.p.desc + '<br><br>' +
+                '<strong>How to face it:</strong> ' + state.p.beat + '<br><br>' +
+                'Mutual cooperation (CC) is Pareto-optimal while mutual defection (DD) is the one-shot Nash Equilibrium. ' +
+                'When repeated over an indefinite horizon — the "shadow of the future" — reciprocal strategies like Tit-for-Tat make cooperation robust under anarchy.<br><br>' +
+                'Continue to the <strong>Knowledge Check</strong> below to test the concept.';
+        }
 
         updateHUD();
-    };
+    }
 
-    // Drag-to-rotate CSS-3D board + briefing gate + tip close
+    // Keyboard support
+    document.addEventListener('keydown', function(e) {
+        if (!state.busy && !state.over) {
+            var playDiv = $('sim-gt-play');
+            if (playDiv && !playDiv.hidden) {
+                if (e.key === 'c' || e.key === 'C') {
+                    choose('C');
+                } else if (e.key === 'd' || e.key === 'D') {
+                    choose('D');
+                }
+            }
+        }
+    });
+
+    // Wire up events
     document.addEventListener('DOMContentLoaded', function() {
+        var btnBegin = $('sim-gt-btn-begin');
+        if (btnBegin) {
+            btnBegin.addEventListener('click', startSession);
+        }
+
+        var btnReplay = $('sim-gt-btn-replay');
+        if (btnReplay) {
+            btnReplay.addEventListener('click', startSession);
+        }
+
+        var btnCoop = $('sim-gt-btn-coop');
+        if (btnCoop) {
+            btnCoop.addEventListener('click', function() { choose('C'); });
+        }
+
+        var btnDefect = $('sim-gt-btn-defect');
+        if (btnDefect) {
+            btnDefect.addEventListener('click', function() { choose('D'); });
+        }
+
+        var tipClose = $('sim-gt-tip-close');
+        if (tipClose) {
+            tipClose.addEventListener('click', function() {
+                var tip = $('sim-gt-tip');
+                if (tip) tip.hidden = true;
+            });
+        }
+
+        // Mute button
+        var muteBtn = $('sim-gt-mute');
+        if (muteBtn) {
+            var isMuted = window.LabGame && window.LabGame.sfx ? window.LabGame.sfx.muted() : false;
+            muteBtn.textContent = isMuted ? '🔇' : '🔊';
+            muteBtn.addEventListener('click', function() {
+                if (window.LabGame && window.LabGame.sfx) {
+                    var m = window.LabGame.sfx.toggleMute();
+                    muteBtn.textContent = m ? '🔇' : '🔊';
+                }
+            });
+        }
+
+        // In-game Help Modal mounting via LabGame.help
+        var objectiveHtml = '<p>Survive <strong>8 rounds</strong> against a secret opponent. ★1+ Survivor · ★★ 15+ Negotiator · ★★★ 40+ Master Diplomat. Chain mutual-cooperation streaks (×1.5 at 3 in a row, ×2 at 5) without getting betrayed. Beat your saved Best score.</p>';
+        var howtoHtml = '<ol style="margin:0; padding-left:18px;">' +
+            '<li>Choose <strong>Cooperate</strong> (<kbd>C</kbd>) or <strong>Defect</strong> (<kbd>D</kbd>) each round.</li>' +
+            '<li>Moves reveal simultaneously. Study your opponent\'s responses for recurring patterns.</li>' +
+            '<li>Round 4 drops a <strong>SIGINT intercept</strong> hint about their strategy.</li>' +
+            '<li>Complete the 8-round session to reveal the opponent and claim your rank.</li>' +
+            '</ol>';
+        var payoffHtml = '<table class="lab-matrix" style="width:100%; margin-top:6px;">' +
+            '<tr><th></th><th>Rival Cooperates</th><th>Rival Defects</th></tr>' +
+            '<tr><th>You Cooperate</th><td class="is-cc">+5 / +5</td><td class="is-sucker">−10 / +10</td></tr>' +
+            '<tr><th>You Defect</th><td class="is-tempt">+10 / −10</td><td class="is-dd">−2 / −2</td></tr>' +
+            '</table>';
+
+        if (window.LabGame && window.LabGame.help) {
+            window.LabGame.help.mount({
+                objectiveHtml: objectiveHtml,
+                howtoHtml: howtoHtml,
+                payoffHtml: payoffHtml,
+                triggerEl: '#sim-gt-help-btn'
+            });
+        }
+
+        // CSS-3D Board Drag-to-Rotate
         var stage = $('sim-gt-stage');
         var board = stage ? stage.querySelector('.lab-board') : null;
-
         if (stage && board) {
             var dragging = false, startX = 0, startY = 0, rx = 14, ry = 0;
-
-            function apply() {
+            function applyRotation() {
                 board.style.setProperty('--lab-rx', rx + 'deg');
                 board.style.setProperty('--lab-ry', ry + 'deg');
             }
-
             stage.addEventListener('pointerdown', function(e) {
-                if (e.target.closest('button')) { return; }
-                dragging = true; startX = e.clientX; startY = e.clientY;
+                if (e.target.closest('button') || e.target.closest('input')) return;
+                dragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
                 board.classList.add('is-grabbing');
                 stage.setPointerCapture(e.pointerId);
             });
             stage.addEventListener('pointermove', function(e) {
-                if (!dragging) { return; }
+                if (!dragging) return;
                 ry = Math.max(-38, Math.min(38, ry + (e.clientX - startX) * 0.25));
                 rx = Math.max(-8, Math.min(34, rx - (e.clientY - startY) * 0.15));
-                startX = e.clientX; startY = e.clientY;
-                apply();
+                startX = e.clientX;
+                startY = e.clientY;
+                applyRotation();
             });
             ['pointerup', 'pointercancel'].forEach(function(ev) {
-                stage.addEventListener(ev, function() { dragging = false; board.classList.remove('is-grabbing'); });
+                stage.addEventListener(ev, function() {
+                    dragging = false;
+                    board.classList.remove('is-grabbing');
+                });
             });
         }
+    });
 
-        var tipClose = $('sim-gt-tip-close');
-        if (tipClose) { tipClose.addEventListener('click', function() { $('sim-gt-tip').hidden = true; }); }
-
-        var begin = $('sim-gt-btn-begin');
-        if (begin) {
-            begin.addEventListener('click', function() {
-                $('sim-gt-briefing').hidden = true;
-                $('sim-gt-play').hidden = false;
-                updateHUD();
-            });
+    // Expose for debugging/tests
+    window.simGtChoose = choose;
+    window.getSimGtState = function() { return state; };
+    window.setSimGtOpponent = function(pIdOrObj) {
+        if (typeof pIdOrObj === 'string') {
+            for (var i = 0; i < PERSONALITIES.length; i++) {
+                if (PERSONALITIES[i].id === pIdOrObj) {
+                    state.p = PERSONALITIES[i];
+                    return state.p;
+                }
+            }
+        } else if (pIdOrObj && typeof pIdOrObj === 'object') {
+            state.p = pIdOrObj;
+            return state.p;
         }
+        return null;
+    };
+    window.simGtRestart = startSession;
+    Object.defineProperty(window, 'simGtState', {
+        get: function() { return state; },
+        set: function(v) { state = v; },
+        configurable: true
     });
 })();
 </script>

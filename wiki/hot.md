@@ -13,6 +13,27 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 Phase G1: Shared Game Core + Lab 02 Mini-Game Retrofit (MENUNGGU ACC GERBANG REVIEW):
+Mengeksekusi Fase G1 sesuai arahan Director GLM 5.3 Flash pada `wiki/game-design-bible.md`:
+1. `Shared Game Core (assets/js/lab-game-core.js)`: Implementasi vanilla ES6 `window.LabGame` (~350 baris, zero external dependencies) mencakup: `rng` (mulberry32 seeded PRNG / unseeded random), `score` (add, get, reset), `streak` (hit, break, mult: 1 -> 1.5x @ 3 streak -> 2x @ 5 streak), `stars` (0-3 par evaluator), `best` (getter/submitter localStorage `labs_best_<id>`), `flags` (complete/isComplete `labs_completed_<id>`), `sfx` (WebAudio synth: click, good, bad, reveal, fanfare; persistensi mute `labs_muted_v1`), `help` (mount, open, close, isOpen, capture-phase key locking), dan `timer` (start, stop, paused, auto-disabled saat reduced-motion).
+2. `Design System & Head Integration`:
+   - `_includes/head.html`: memuat `<script defer src="{{site.baseurl}}/assets/js/lab-game-core.js"></script>` tepat setelah `lab-shell.css`.
+   - `assets/css/lab-shell.css`: menambahkan modul mini-game konsisten tema terang & gelap (`body.dark-theme`): modal help (`.lab-modal-back`, `.lab-modal-card`), bintang animasi (`.lab-stars`, `.lab-star-in`), trust bar (`.lab-trustbar`, `.lab-trustfill`), floating score pop (`.lab-pop.is-win`, `.lab-pop.is-lose`), shake anim (`.lab-shaking`), roulette scramble (`.lab-roulette`), intel card (`.lab-log-entry.is-intel`), `scroll-margin-top: 80px` pada debrief, dan perluasan recap max-height ke 420px tanpa pemotongan.
+3. `Lab 02 Mini-Game Retrofit (_includes/sim_game_theory.html)`:
+   - Header & Kicker: `Lab 02` chip + `CASE FILE · GAME THEORY` + title `Diplomacy Duel: The Prisoner's Dilemma`.
+   - Dossier Briefing: Objective (par 1+/15+/40+, streak rule, beat Best), Payoff Matrix (+5/+5, -10/+10, +10/-10, -2/-2), dan 6 langkah How to Play.
+   - Opponent Roulette: 5 personality rahasia (Tit-for-Tat, Grim Trigger, The Predator, The Wildcard 60/40, Pavlov win-stay/lose-shift) dengan animasi "SCRAMBLING…" roulette, tag "STRATEGY: CLASSIFIED".
+   - Turn Resolution & Juice: Suspense beat 500ms, score pops, shake panel saat betrayed, audio synth per event.
+   - SIGINT Intercept: Muncul setelah Ronde 4 di log intel dengan header `INTEL · ROUND 5` dan petunjuk doktrin spesifik lawan.
+   - Debrief & Knowledge Check: Stars animation (0-3 bintang), rank (Master Diplomat / Seasoned Negotiator / Survivor / Exploited), rekap lengkap 8 ronde, pengungkapan doktrin lawan dengan sitasi Axelrod 1984, Pareto-optimal / DD Nash framing, dan closer ke Knowledge Check.
+4. `Verifikasi Multi-Lapis`:
+   - pytest: 369/369 PASS (0.50s).
+   - Jekyll build: PASS bersih tanpa error (93.7s).
+   - Stopwords scan: 0 kata stopword bahasa Indonesia pada markup & script lab.
+   - Playwright E2E (`scripts/verify_g1_playwright.js`, channel msedge): 35/35 checks PASS (briefing visibility, help modal lock/Esc, audio toggle & persistensi, alur main 8 ronde, streak multiplier x1.5 dan x2, SIGINT card ronde 4, all-coop run score 66 >= 40 -> 3 bintang & rank Master Diplomat, Axelrod 1984 citation, debrief recap 8 ronde, localStorage sync, replay reset, 0 console error).
+   - Visual Gate (`vision_analyze` 4/4 screenshot): briefing light/dark dan debrief light/dark terverifikasi 100% bebas clipping, bebas overlap, legenda terbaca jelas, dan bintang/rank/rekap tampil penuh.
+5. `Status & Handoff`: Fase G1 SELESAI dan siap diaudit oleh Director / User untuk ACC sebelum melangkah ke Fase G2.
+
 2026-10-08 - M10 Game Layer: Director's Game Design Bible (Handoff GLM → Gemini via 9router):
 Lanjutan keputusan pengguna: 10 lab diangkat menjadi mini-game sungguhan; pembagian peran lintas-model — GLM 5.3 Flash sebagai Game Director (engine/path/look/archetype/angle), Gemini 3.8 sebagai Build Team di sesi Hermes terpisah via 9router:
 1. `Five Picks (LOCKED)`: (a) Engine = vanilla ES6 shared game core (`lab-game-core.js`: RNG lawan, streak multiplier, stars, best-score, SFX WebAudio, help modal) tanpa dependensi/three.js; (b) Path = G1 core+Lab 02 retrofit → ACC → G2 sembilan lab dengan game verb unik → G3 homepage+QA; (c) Look = Mission Console terang theme-aware (bukan gelap), emas khusus skor/bintang/intel; (d) Archetype = "Classified Case File" (dossier/SIGINT/after-action report); (e) Angle = "Theory is the strategy guide" — menang hanya jika paham teori.
