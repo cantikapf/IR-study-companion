@@ -586,6 +586,8 @@ permalink: /
     max-height: 410px;
     overflow-y: auto;
     padding-right: 0.35rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--lms-border-strong) transparent;
   }
 
   .labs-scroll-pane::-webkit-scrollbar {
