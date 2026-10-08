@@ -13,6 +13,21 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - LMS Navigation Topbar Layout Collision & Responsive Hardening:
+1. `Root Cause Diagnosis (Header Collision)`:
+   - Komponen `.lms-topbar-inner` sebelumnya hanya menggunakan `justify-content: space-between` tanpa `gap` eksplisit dan tanpa `flex-shrink: 0` pada group navigasi kiri (`.lms-brand-group`) dan kanan (`.lms-topbar-actions`).
+   - Judul modul di tengah (`.lms-topbar-center` / `.lms-current-meta`) yang panjang (misalnya *"Module 10 • Understanding Models Of Decision Making In Foreign Policy Analysis"*) mengalami pemotongan teks dengan `text-overflow: ellipsis` tanpa margin atau padding pemisah, menyebabkan elipsis (`...`) menabrak langsung kontrol indikator progres / aksi di sebelah kanan (gap = 0.0px) pada resolusi desktop/tablet (880px s.d. 1200px).
+2. `CSS Hardening & Spacing Standardization (`assets/css/course-player.css`)`:
+   - Menambahkan `gap: 1.25rem` pada `.lms-topbar-inner` serta mengunci `flex-shrink: 0` pada `.lms-brand-group` dan `.lms-topbar-actions` untuk menjamin pemisahan visual minimal 20px di semua viewport.
+   - Merefaktor `.lms-topbar-center` dengan `flex: 1 1 auto; min-width: 0; max-width: 440px; margin: 0 auto; padding: 0 0.5rem; justify-content: center;` dan `.lms-current-meta` dengan `min-width: 0; display: block; text-align: center;`.
+   - Menggeser breakpoint kemunculan judul tengah ke `@media (min-width: 1000px)` agar di layar tablet/split-screen (<1000px) navbar tetap lega tanpa teks yang terhimpit.
+   - Menambahkan aturan responsif mobile: menyembunyikan `.lms-brand-badge` pada <=1120px, menyembunyikan `<kbd>S</kbd>` dan label teks "Backup / Sync" pada <=860px, serta menyembunyikan mini progress bar pada <=540px.
+3. `Verifikasi Multi-Lapis`:
+   - Playwright testing lintas viewport (480px s.d. 1920px): `scrollWidth === clientWidth` (0 horizontal overflow), `GAP Brand -> Center: 20.0px`, `GAP Center -> Actions: 20.0px`.
+   - Visual inspection (`vision_analyze`): Layout topbar terverifikasi bersih, proporsional, dan bebas dari tabrakan elemen.
+   - Pytest: 369/369 PASS.
+   - Jekyll build: Bersih tanpa error (84.9s).
+
 2026-10-08 - Complete Elimination of Redundant Interactive Learning Headers Across Simulation Chapters:
 1. `Root Cause & Visual Hierarchy Harmonization`:
    - Artefak template lama `### Interactive Learning` (dan divider horizontal `---`) yang sebelumnya berada di bawah kartu simulasi (`{% include sim_*.html %}`) di 10 bab kurikulum telah dieliminasi secara tuntas.
