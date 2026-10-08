@@ -35,6 +35,81 @@
         "status": "Ready for Re-upload / Sync"
       },
       "last_updated": "2026-10-06"
+    },
+    {
+      "id": "IR-M01-CH020",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "020",
+      "chapter_slug": "020-globalization-politics",
+      "title": "Globalization and Global Politics",
+      "format": "Mind Map Explanatory",
+      "engine": "YouTube Canonical Video",
+      "duration_sec": 180,
+      "resolution": "1080p",
+      "status": "Published",
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "youtube_id": "7K4preE-EBY",
+        "status": "Published"
+      },
+      "last_updated": "2026-10-07"
+    },
+    {
+      "id": "IR-M01-CH030",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "030",
+      "chapter_slug": "030-basic-realism",
+      "title": "Basic Explanation of Realism in IR",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 323.5,
+      "frames": 9705,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Published",
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "youtube_id": "3VDcQVYty5M",
+        "status": "Published"
+      },
+      "last_updated": "2026-10-08"
+    },
+    {
+      "id": "IR-M01-CH040",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "040",
+      "chapter_slug": "040-basic-liberalism",
+      "title": "Basic Explanation of Liberalism in IR",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 380.75,
+      "frames": 11422,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Published",
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "youtube_id": "FdChrS6Ng3Y",
+        "status": "Published"
+      },
+      "last_updated": "2026-10-08"
     }
   ]
 }

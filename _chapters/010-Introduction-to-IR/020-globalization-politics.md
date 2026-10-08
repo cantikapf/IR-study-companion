@@ -5,10 +5,10 @@ abstract: The explanation of globalization and global politics in the Internatio
 simple_summary: "Pick up your smartphone: its chip was designed in California, its memory made in South Korea, and its case assembled in China. Globalization means borders no longer stop the flow of goods, money, or cultural ideas. While this creates massive wealth and lightning-fast communication, it also leaves national governments struggling to regulate global giants and leaves citizens wondering who is truly in charge when local factories close down."
 youtube_id: "7K4preE-EBY"
 explanatory_video:
-  title: "Summary Video: Globalization and Global Politics"
-  desc: "Watch this video summary first to understand how cross-border economic integration, transnational governance, and time-space compression transform state sovereignty before exploring the lesson text."
+  title: "Mind Map Explanatory: Globalization and Global Politics"
+  desc: "Watch this animated concept map first to understand how cross-border economic integration, transnational governance, and time-space compression transform state sovereignty before exploring the lesson text."
   duration: "3 min"
-  format: "Video Summary"
+  format: "Mind Map Explanatory"
 ---
 
 ## Recommended Supplementary Video

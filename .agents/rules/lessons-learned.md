@@ -49,6 +49,18 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Hermes Desktop Migration & Cross-Agent Linear Workflow Protocol (2026-10-07)**:
+  1. *The Trap of Chat-Centric vs Repository-Centric Memory*: Migrasi antar-platform agen (misal dari Google Antigravity ke Hermes Desktop) rentan mengalami *context amnesia*, perombakan fitur yang tidak perlu, dan hilangnya histori progres jika agen hanya bergantung pada jendela konteks percakapan. Solusi deterministiknya adalah memusatkan seluruh state pada repositori (*Repository as Single Source of Truth*): `PROJECT.md` untuk roadmap/milestone, `wiki/hot.md` untuk active working cache, dan `.agents/rules/lessons-learned.md` untuk katalog bug yang sudah terpecahkan.
+  2. *Dedicated Bootstrap Gateway (`HERMES.md`, `AGENTS.md`, & `IDEA.md`)*: Menyediakan berkas instruksi khusus di root repositori (`HERMES.md`, universal `AGENTS.md`, dan dialog summary `IDEA.md`) yang merangkum peran persona, 5-Step Linear Execution Loop, batas pengujian (`make test`, Jekyll build), dan guardrails repositori (English-only UI, 10 Diplomatic Labs, standar video Remotion RoughJS). Pendekatan *zero-configuration* berbasis file ini membebaskan pengguna dari keharusan mengatur *custom profile* atau *system prompt* di GUI agen; cukup satu kalimat prompt pembuka ("Baca HERMES.md sebelum mulai"), agen langsung beroperasi linier.
+  3. *The 5-Step Linear Loop*: Menjaga kemajuan tetap lurus (linear) dengan siklus deterministik: (1) Bootstrap dari `PROJECT.md` & `wiki/hot.md`, (2) Lock onto 1 Milestone task, (3) Jalankan pre-verification test, (4) Eksekusi & tes empiris, (5) Sinkronisasi balik ke `wiki/hot.md` + Git commit.
+
+- **Curriculum-Wide Mind Map Explanatory Video Coverage Audit (2026-10-07)**:
+  1. *Curriculum Scope & Lesson Accounting*: Platform IR Study Companion memiliki total 157 bab pelajaran materi di 18 modul (di luar 18 halaman indeks `000-index.md`, 4 halaman front-matter platform, dan 1 berkas referensi).
+  2. *Current Production Baseline (2 Chapters Covered)*: Dua bab awal di Modul 1 telah memiliki video pengantar Mind Map resmi:
+     - Bab 010 (*Study of International Relations*, `Sa0PnnZLn0w`): Mind Map Explanatory (5:16, Remotion RoughJS).
+     - Bab 020 (*Globalization and Global Politics*, `7K4preE-EBY`): Mind Map Explanatory (3:00, video pengantar konseptual terkonfirmasi oleh pengguna).
+  3. *Unfulfilled Production Backlog (155 Chapters)*: Sebanyak 155 bab materi kurikulum saat ini belum memiliki video Mind Map Explanatory, dengan 4 bab di Modul 1 (CH030 s.d. CH060) telah terdaftar dalam antrean rendering (`learning-videos/README.md`) berstatus QUEUED.
+
 - **Dynamic Conceptual Gateway Card & Pre-Reading Video Architecture (2026-10-07)**:
   1. *From Raw Embeds to Conceptual Gateway Standard*: Meletakkan iframe video mentah di dalam tubuh teks markdown menghasilkan tampilan tidak konsisten dan merusak ritme pedagogis. Mengangkat video ringkasan bab ke dalam skema frontmatter deklaratif (`youtube_id`, `explanatory_video: { title, desc, duration, format }`) mengaktifkan kartu *CONCEPTUAL GATEWAY* resmi di atas naskah dengan bingkai elegan dan responsif.
   2. *Dynamic Duration Badge in LMS Layout (`_layouts/chapter.html`)*: Mengganti badge durasi statis ("5 MIN") menjadi token dinamis `🎬 WATCH BEFORE READING ({{ page.explanatory_video.duration | upcase }})` memungkinkan penyajian durasi yang akurat (misal: "3 MIN" untuk video ringkasan Chapter 2 `7K4preE-EBY`, "5 MIN" untuk mind map Chapter 1 `Sa0PnnZLn0w`).
@@ -412,6 +424,15 @@ Every final assistant response in main chat or subagent handoff report should in
     1. *Zero Cloud Latency & Zero Cost*: Berjalan 100% lokal pada CPU (82M parameter) tanpa kuota rate limit atau ketergantungan API eksternal.
     2. *Punctuation-Aware Human Cadence*: Peka terhadap tanda baca (`?`, `!`, `--`, `,`) dan ritme bicara santai ala Crash Course host (`am_adam`, `am_michael`).
     3. *Long-Form Scaling*: Mampu menyintesis naskah 1.500+ kata (10+ menit) secara berurutan dengan konsistensi timbre dan zero audio drift.
+- **Relative Render Output Path Pitfall (2026-10-08)**:
+  - *Shadow Directory Trap*: Menjalankan `npx remotion render ... ../learning-videos/exports/...` dari dalam `simulation/ir-motion-library/` menulis output ke `simulation/learning-videos/` (folder bayangan), BUKAN `learning-videos/` di root proyek. Master CH040 sempat "hilang" karena ini.
+  - *Rule*: Selalu gunakan path absolut atau `../../learning-videos/exports/` saat merender dari `ir-motion-library`, dan selalu verifikasi `ls learning-videos/exports/` setelah render selesai sebelum melaporkan sukses.
+
+- **Milestone M9: Mandatory Review Gate After Phase 1 in Mind Map Video Pipeline (2026-10-07)**:
+  - *User Directive*: Setelah menyelesaikan Fase 1 (Ekstraksi Naskah Narasi Voiceover & Desain Node Graf Mind Map), agen **WAJIB berhenti dan mempresentasikan rancangan mind map preview kepada pengguna**.
+  - *Strict Rule*: Fase 2 (sintesis audio Kokoro), Fase 3 (kamera Remotion), Fase 4 (still render), dan Fase 5 (render master MP4) **HANYA boleh dijalankan setelah pengguna memberikan persetujuan (ACC)**.
+  - *Why*: Mencegah waktu render Remotion yang sia-sia dan menghindari desinkronisasi narasi dengan graf sebelum fondasi substansi disepakati.
+
 - **Milestone M7: Online Course Platform Transformation (10-Persona Architecture) (2026-10-05)**:
   1. *Zero-Backend LMS Data Portability*: Mengembangkan sistem sinkronisasi kemajuan (*progress backup & sync*) 100% sisi klien tanpa database backend atau akun pengguna eksternal. Struktur state JSON terkompresi mencakup `chapter_read_*`, `quiz_*`, `exam_*`, dan `bookmark_*` yang dapat diekspor dan diimpor secara instan dengan verifikasi skema, memenuhi kebutuhan persona pembelajar multi-perangkat dan privasi data.
   2. *Build-Time Static Assessment Engines*: Mengkompilasi 180 butir soal ujian akhir modul (10 soal per modul) langsung ke dalam data statis Jekyll (`_data/module_exams.json` & `assets/data/module_exams.json`) menghasilkan latensi 0 ms saat penilaian, passing score threshold 70%, feedback rasional ilmiah komprehensif, serta penanda kelulusan deterministik `exam_module_<id>_passed`.

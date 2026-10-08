@@ -3,6 +3,21 @@ title: Basic Explanation of Liberalism in IR
 slug: basic-liberalism
 abstract: The introduction of Liberalism in International Relations 
 simple_summary: "Liberals argue that countries are not doomed to fight forever. If nations build three bridges—democratic governments where voters can fire warmongers, deep trade ties that make shooting your customers economic suicide, and international organizations like the UN to negotiate rules—peace becomes both rational and profitable for everyone involved."
+youtube_id: "FdChrS6Ng3Y"
+explanatory_video:
+  title: "Mind Map Explanatory: Basic Explanation of Liberalism in IR"
+  desc: "Watch this animated concept map first to explore the Kantian triangle, democratic peace theory, commercial interdependence, and collective security architecture before diving into the chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  video_path: "learning-videos/exports/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_MindMap_1080p.mp4"
+  poster_path: "learning-videos/posters/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_Poster.png"
+  poster: "/learning-videos/posters/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_Poster.png"
+  duration: "6 min"
+  duration_sec: 380.75
+  frames: 11422
+  fps: 30
+  status: "Published"
+  youtube_id: "FdChrS6Ng3Y"
 ---
 
 

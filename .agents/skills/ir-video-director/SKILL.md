@@ -85,6 +85,9 @@ Kamera navigasi dikendalikan secara deterministik melalui segmen diskrit di [`Ca
 [Fase 1: Ekstraksi Naskah & Graf Mind Map]
        │ (30-35 Nodes, Judul Ringkas, Subtitle, Bullet Points, Koneksi Panah)
        ▼
+[GATE REVIEW WAJIB: Presentasikan Mind Map Preview ke User]
+       │ ⛔ STOP: Tunggu persetujuan (ACC) dari User sebelum lanjut!
+       ▼ (Setelah di-ACC)
 [Fase 2: Sintesis Audio & Word/Sentence Alignment]
        │ (voiceover.mp3 + public/subtitles.json)
        ▼
@@ -92,11 +95,14 @@ Kamera navigasi dikendalikan secara deterministik melalui segmen diskrit di [`Ca
        │ (flowchartData.ts: Koordinat X/Y, revealFrame, CAMERA_SEGMENTS)
        ▼
 [Fase 4: Inspection Gate (Still Frame Previews)]
-       │ (npx remotion still CourseVideo out/preview_X.png --frame=...)
-       │ Evaluasi visual: Center, Zoom-in depth, Keterbacaan teks, Nol tabrakan
+       │ (npx remotion still FlowchartVideo out/preview_X.png --frame=...)
+       │ Evaluasi visual: Center, Zoom-in depth, Keterbacaan teks, Nol tabrakan panah
        ▼
-[Fase 5: Render Master Final MP4]
-       │ (npx remotion render CourseVideo out/nama_video.mp4)
+[Fase 5: Render Master Final MP4 & YouTube Thumbnail]
+       │ (1. npx remotion render FlowchartVideo learning-videos/exports/nama_video.mp4)
+       │ (2. npx remotion still FlowchartVideo learning-videos/posters/nama_video_Poster.png --frame=...)
+       │ (3. python scripts/generate_thumbnail.py --title "..." --image "..." --output learning-videos/posters/nama_video_Thumbnail.png)
+       │ (4. Sinkronkan metadata ke catalog.json, README.md, dan frontmatter chapter)
        ▼
 [Selesai: Siap Rilis ke YouTube / LMS]
 ```
@@ -105,4 +111,6 @@ Kamera navigasi dikendalikan secara deterministik melalui segmen diskrit di [`Ca
 - **Engine Produksi Utama**: [`simulation/ir-motion-library/`](file:///d:/PERSONAL%20PROJECT/IR-study-companion/simulation/ir-motion-library/)
 - **Data Mind Map & Kamera**: `simulation/ir-motion-library/src/flowchart/flowchartData.ts`
 - **Komponen Inti**: `src/flowchart/RoughNode.tsx`, `RoughArrow.tsx`, `CameraRig.ts`, `FlowchartCanvas.tsx`, `FlowchartSubtitle.tsx`
-- **Output Preview/Render**: `simulation/ir-motion-library/out/`
+- **Output Video Master**: `learning-videos/exports/*.mp4`
+- **Output Poster & Thumbnail**: `learning-videos/posters/*_Poster.png` & `*_Thumbnail.png`
+- **Generator Thumbnail Kanonik**: `scripts/generate_thumbnail.py` (didukung template master `scripts/assets/thumbnail_overlay_template.png`)
