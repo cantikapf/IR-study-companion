@@ -263,13 +263,6 @@
       display: inline-block;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
     .hero-headline {
       font-family: var(--font-display);
       font-size: 3.4rem;
@@ -299,10 +292,6 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
-    /* Online-course hero visual */
-    .hero-visual { position: relative; }
-    .hero-visual-img { width: 100%; height: auto; display: block; }
 
     /* Editorial Metrics Strip */
     .metrics-bar {
@@ -855,33 +844,175 @@
     .track-col-id .icon-stack { margin-bottom: 0.6rem; }
     .lab-card-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .labs-showcase-split {
-        grid-template-columns: 1fr;
-      }
-      .track-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      .track-col-action {
-        text-align: left;
-      }
-      .metrics-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .video-showcase-box {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .video-visual-card {
-        width: 100%;
-      }
-      .hero-headline {
-        font-size: 2.75rem;
-      }
+    /* ==========================================================================
+       Curriculum Explorer - adapted from ReUI @reui/cascader (mode: columns)
+       and example c-cascader-3 (deep search with path-annotated results)
+       ========================================================================== */
+    .explorer { margin-bottom: 4.5rem; }
+    .explorer-head { margin-bottom: 1.75rem; }
+    .explorer-head .section-title { margin-top: 0.9rem; }
+    .explorer-shell {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .explorer-side {
+      border-right: 1px solid var(--border-hairline);
+      background: var(--surface-subtle);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .explorer-search {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 0.5rem 0.7rem;
+      color: var(--ink-tertiary);
+    }
+    .explorer-search:focus-within { border-color: var(--accent-oxford); }
+    .explorer-search svg { flex: none; }
+    .explorer-search input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--ink-primary);
+    }
+    .cx-filters { display: flex; flex-direction: column; gap: 0.2rem; }
+    .cx-filter {
+      text-align: left;
+      border: none;
+      background: transparent;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-secondary);
+      padding: 0.45rem 0.6rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+    .cx-filter:hover { background: var(--surface-hover); color: var(--ink-primary); }
+    .cx-filter.is-on { background: var(--accent-oxford); color: #ffffff; }
+    .explorer-hint {
+      margin-top: auto;
+      font-size: 0.75rem;
+      color: var(--ink-tertiary);
+      line-height: 1.5;
+      border-top: 1px solid var(--border-hairline);
+      padding-top: 0.85rem;
+    }
+    .explorer-columns { display: grid; grid-template-columns: 280px 1fr; min-height: 420px; }
+    .cx-col { overflow-y: auto; max-height: 480px; }
+    .cx-col-modules { border-right: 1px solid var(--border-hairline); padding: 0.6rem; }
+    .cx-series-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-tertiary);
+      padding: 0.6rem 0.7rem 0.25rem;
+    }
+    .cx-mod {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      padding: 0.55rem 0.7rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+    .cx-mod:hover { background: var(--surface-hover); }
+    .cx-mod.is-on { background: var(--accent-oxford-subtle); box-shadow: inset 2px 0 0 var(--accent-oxford); }
+    .cx-mod-num {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--ink-tertiary);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      padding: 0.1rem 0.3rem;
+      flex: none;
+    }
+    .cx-mod.is-on .cx-mod-num { color: var(--accent-oxford); border-color: var(--accent-oxford); }
+    .cx-mod-name { font-size: 0.85rem; font-weight: 500; color: var(--ink-primary); line-height: 1.3; flex: 1; }
+    .cx-mod-count { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-tertiary); flex: none; }
+    .cx-panel { padding: 1.1rem 1.4rem; }
+    .cx-panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .cx-panel-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--ink-primary); }
+    .cx-panel-overview {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent-oxford);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .cx-panel-overview:hover { text-decoration: underline; }
+    .cx-lesson {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.5rem 0.4rem;
+      border-bottom: 1px solid var(--border-hairline);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+    }
+    .cx-lesson:last-child { border-bottom: none; }
+    .cx-lesson:hover { background: var(--surface-subtle); }
+    .cx-lesson-title { font-size: 0.9rem; color: var(--ink-primary); flex: 1; }
+    .cx-lesson:hover .cx-lesson-title { color: var(--accent-oxford); }
+    .cx-lesson-path { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-tertiary); white-space: nowrap; }
+    .cx-video-chip {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--color-realism);
+      background: var(--color-realism-bg);
+      border-radius: var(--radius-sm);
+      padding: 0.12rem 0.35rem;
+      flex: none;
+    }
+    .cx-empty { padding: 2.5rem 1rem; text-align: center; color: var(--ink-tertiary); font-size: 0.9rem; }
+    .cx-empty strong { color: var(--ink-secondary); }
+
+    @media (max-width: 960px) {
+      .labs-showcase-split { grid-template-columns: 1fr; }
+      .track-row { grid-template-columns: 1fr; gap: 1rem; }
+      .track-col-action { text-align: left; }
+      .metrics-bar { grid-template-columns: repeat(2, 1fr); }
+      .video-showcase-box { flex-direction: column; align-items: flex-start; }
+      .video-visual-card { width: 100%; }
+      .hero-headline { font-size: 2.75rem; }
+      .explorer-shell { grid-template-columns: 1fr; }
+      .explorer-side { border-right: none; border-bottom: 1px solid var(--border-hairline); }
+      .explorer-columns { grid-template-columns: 1fr; min-height: 0; }
+      .cx-col-modules { border-right: none; border-bottom: 1px solid var(--border-hairline); max-height: 240px; }
     }
   </style>
 </head>
@@ -939,15 +1070,11 @@
           </p>
           <div class="hero-actions">
             <a href="index.html" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">Begin Curriculum</a>
-            <a href="#curriculum" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">Browse 18 Modules</a>
+            <a href="#explore" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">Explore the Library</a>
             <a href="#simulations" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">Try Decision Lab</a>
           </div>
         </div>
 
-        <!-- Online-course hero visual (original illustration) -->
-        <div class="hero-visual">
-          <img src="assets/hero-course-illustration.svg" alt="IR Study Companion online course: video lessons, active recall quizzes, and module progress" class="hero-visual-img">
-        </div>
       </div>
     </section>
 
@@ -976,6 +1103,30 @@
     </section>
 
     <!-- Curriculum Tracks -->
+    <!-- Curriculum Explorer (ReUI cascader columns + deep-search adaptation) -->
+    <section class="explorer" id="explore">
+      <div class="explorer-head">
+        <div class="hero-eyebrow"><span>Explore The Full Library</span></div>
+        <h2 class="section-title">Every module. Every lesson. One click away.</h2>
+        <p class="section-subhead">Browse 157 lessons across 18 modules, or search a topic and jump straight into the reading.</p>
+      </div>
+
+      <div class="explorer-shell">
+        <aside class="explorer-side">
+          <label class="explorer-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:14px;height:14px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="cx-search" type="search" placeholder="Search 157 lessons..." aria-label="Search lessons" autocomplete="off">
+          </label>
+          <div class="cx-filters" id="cx-filters" aria-label="Filter by series"></div>
+          <p class="explorer-hint">Pick a module to list its lessons. Click any lesson to start reading &mdash; your progress stays saved in your browser.</p>
+        </aside>
+        <div class="explorer-columns">
+          <nav class="cx-col cx-col-modules" id="cx-modules" aria-label="Modules"></nav>
+          <div class="cx-col" id="cx-lessons" aria-label="Lessons"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="curriculum" style="margin-bottom: 4.5rem;">
       <div class="section-head">
         <div>
@@ -1221,6 +1372,122 @@
     if (savedTheme) {
       root.setAttribute('data-theme', savedTheme);
     }
+
+
+    // ---------- Curriculum Explorer (ReUI cascader columns + deep-search adaptation) ----------
+    const CX_DATA = {"series":{"01":"Foundation Series","02":"Core Discipline","03":"Applications & Method","04":"Law, Region & Society","05":"Global Architecture"},"modules":[{"num":"010","name":"Introduction To Ir","overview":{"slug":"introduction-to-international-relations","title":"Introduction To IR"},"lessons":[{"slug":"study-of-international-relations","title":"Study Of International Relations","v":true},{"slug":"globalization-and-global-politics","title":"Globalization And Global Politics","v":true},{"slug":"basic-realism","title":"Basic Explanation of Realism in IR","v":true},{"slug":"basic-liberalism","title":"Basic Explanation of Liberalism in IR","v":true},{"slug":"basic-marxism","title":"Basic Explanation of Marxism in IR","v":false},{"slug":"basic-constructivism","title":"Basic Explanation of Constructivism in IR","v":false},{"slug":"global-finance-and-global-trade-as-agendas","title":"Global Finance And Global Trade As Agendas","v":false},{"slug":"global-environment-as-agendas","title":"Global Environment As Agendas","v":false},{"slug":"global-security-issues","title":"Global Security Issues","v":false},{"slug":"regionalism-in-international-affairs","title":"Regionalism In International Affairs","v":false}]},{"num":"011","name":"Introduction To Social Science","overview":{"slug":"introduction-to-social-science","title":"Introduction To Social Science"},"lessons":[{"slug":"social-science-concept","title":"Social Science Concepts and Epistemology","v":false},{"slug":"history-social-science-role","title":"History and Its Role in Social Science","v":false},{"slug":"culture-social-science","title":"Culture and Social Science","v":false},{"slug":"state-in-society","title":"State in Society","v":false},{"slug":"politics-and-power","title":"Politics, Power, and Authority","v":false},{"slug":"understanding-social-change","title":"Understanding Social Change","v":false}]},{"num":"012","name":"Modern World History","overview":{"slug":"modern-world-history","title":"Modern World History"},"lessons":[{"slug":"history-matters","title":"Why History Matters?","v":false},{"slug":"rennaissance","title":"The Renaissance and the Reformation in Europe","v":false},{"slug":"westphalia","title":"'The Emergence of the Modern Interstate System: The Thirty Years War and Peace of Westphalia'","v":false},{"slug":"road-to-ww1","title":"The Road to the First World War","v":false},{"slug":"after-the-first-world-war","title":"After The First World War","v":false},{"slug":"great-depression","title":"The Great Depression","v":false},{"slug":"twenty-year-crisis","title":"The Twenty-Year Crisis","v":false},{"slug":"brink-ww2","title":"On the Brink of the Second World War","v":false},{"slug":"end-ww2","title":"The Ending of The Second World War","v":false},{"slug":"post-ww","title":"'The Post-War World Order'","v":false},{"slug":"bretton-woods","title":"The Rise of the Bretton Woods Institutions","v":false},{"slug":"domino-cold-war","title":"'When One Falls, They All Will Follow: The Domino Theory and the Cold War'","v":false},{"slug":"cuban-missile-crisis","title":"Cuban Missile Crisis","v":false},{"slug":"detente","title":"Détente of the 1970-1990","v":false},{"slug":"decolonization","title":"Decolonization and Development","v":false},{"slug":"birth-prc","title":"The Birth and Rise of the People’s Republic of China","v":false},{"slug":"end-cold-war","title":"The End of the Cold War","v":false},{"slug":"world-order","title":"The Post-Cold War World Order","v":false},{"slug":"us-hegemony","title":"'Challenges to US Hegemony: Rising China and Russian Resurgence'","v":false}]},{"num":"013","name":"Indonesia Political Perspective","overview":{"slug":"indonesia-political-perspective","title":"Indonesia Political Perspective"},"lessons":[{"slug":"basic-political","title":"Basic Poilitical Concepts","v":false},{"slug":"political-institution","title":"Indonesia Political Institutions, Political Party, And Interest Group","v":false},{"slug":"evolution-party","title":"The Evolution of Indonesia's Political Party System","v":false},{"slug":"civil-military","title":"Civil-Military Relations in Indonesia","v":false},{"slug":"electoral-indonesia","title":"Indonesia's Electoral Landscape","v":false},{"slug":"democracy-indonesia","title":"'Democracy In Indonesia: Decentralization'","v":false},{"slug":"women-indonesia","title":"Women In Indonesian Politics","v":false},{"slug":"religion-society","title":"Religion, Society And Politics","v":false}]},{"num":"021","name":"International Political Economy","overview":{"slug":"introduction-to-international-political-economy","title":"International Political Economy"},"lessons":[{"slug":"introduction-ipe","title":"Introduction To International Trade And Economy","v":false},{"slug":"merchantilism-liberalism","title":"'Approaches to IPE: Mercantilism vs. Liberalism'","v":false},{"slug":"constructivism-marxist","title":"'Approaches to IPE: Constructivism vs. Marxism'","v":false},{"slug":"gatt","title":"'The World Trade Organization: From GATT to Global Trade Guardian'","v":false},{"slug":"tpp-rcep","title":"'Beyond Tariffs: The Deeper Impacts of the TPP and RCEP Agreements'","v":false},{"slug":"trade-politics","title":"The Politics of Trade","v":false},{"slug":"ISI-export","title":"'From ISI to Export Orientation: How Developing Countries Navigated Trade Strategy'","v":false},{"slug":"monetary-system","title":"International Monetary System","v":false},{"slug":"exchange-rates","title":"'The Tug-of-War Over Exchange Rates: Political Interests vs. Economic Welfare'","v":false},{"slug":"neoliberalism-ipe","title":"'Neoliberalism 101: Understanding the Ideology That Dominates Global Trade'","v":false},{"slug":"neoliberalism-policy","title":"'Neoliberalism Explained: The Ideology That Transformed Modern Capitalism'","v":false}]},{"num":"022","name":"Introduction To Security Studies","overview":{"slug":"introduction-to-security-studies","title":"Introduction To Security Studies"},"lessons":[{"slug":"introduction-security","title":"Introduction To Security Studies","v":false},{"slug":"realism-security","title":"Realism In Security Studies","v":false},{"slug":"liberalism-security","title":"Liberalism In Security Studies","v":false},{"slug":"constructivism-others","title":"Constructivism And Other Approach In Security Studies","v":false},{"slug":"institution-security","title":"Institution In International Security","v":false},{"slug":"peace-operations","title":"Peace Operations","v":false},{"slug":"crime-terrorism-insurgency","title":"Crime, Terrorism, And Insurgency","v":false},{"slug":"energy-security","title":"Energy Security","v":false},{"slug":"human-security","title":"Human Security","v":false}]},{"num":"023","name":"Theories Of International Relations","overview":{"slug":"theories-of-international-relations","title":"Theories Of International Relations"},"lessons":[{"slug":"introduction-ir-theories","title":"Introduction To International Relations Theories","v":false},{"slug":"classical-realism","title":"Classical Realism","v":false},{"slug":"liberalism-ir","title":"Liberalism","v":false},{"slug":"neorealism-ir","title":"Neorealism","v":false},{"slug":"neoliberalism-ir","title":"Neoliberalism","v":false},{"slug":"dependency-theory","title":"Dependency Theory","v":false},{"slug":"constructivism-ir","title":"Constructivism","v":false},{"slug":"domestic-politics","title":"'Domestic Politics: Two Level Games'","v":false},{"slug":"feminism-ir","title":"Feminism In International Relations","v":false},{"slug":"rational-choice-theory","title":"Rational Choice Theory","v":false},{"slug":"game-theory-ir","title":"Game Theory","v":false},{"slug":"critical-theory","title":"Critical Theory","v":false}]},{"num":"031","name":"International Relations Research Method","overview":{"slug":"international-relations-research-method","title":"International Relations Research Method"},"lessons":[{"slug":"social-reserach-method","title":"Social Research Methods in International Relations","v":false},{"slug":"research-ir-study","title":"Research Method in International Relations Study","v":false},{"slug":"research-process","title":"Research Process","v":false},{"slug":"qualitative","title":"'Research Method: Qualitative'","v":false},{"slug":"quantitative","title":"'Research Method: Quantitative'","v":false},{"slug":"research-question","title":"Research Question","v":false},{"slug":"literature-review","title":"Literature Review","v":false},{"slug":"observation-method","title":"'IR Research Method: Participant Observation and Focus Group'","v":false},{"slug":"interview-survey","title":"'IR Research Methods: Elite Interviews and Survey Research'","v":false}]},{"num":"032","name":"Diplomacy And International Politics","overview":{"slug":"diplomacy-and-international-politics","title":"Diplomacy And International Politics"},"lessons":[{"slug":"intro-diplo","title":"Introduction To Diplomacy And International Politics","v":false},{"slug":"history-diplomacy","title":"History Of Diplomacy","v":false},{"slug":"modes-diplomacy","title":"Modes of Diplomacy","v":false},{"slug":"actors-diplomacy","title":"The Actors of Diplomacy","v":false},{"slug":"tools-diplomacy","title":"Tools and Instruments Of Diplomacy","v":false},{"slug":"inter-politics","title":"Understanding Issues of International Politics","v":false}]},{"num":"033","name":"Foreign Policy Analysis In International Relations","overview":{"slug":"foreign-policy-analysis-ir","title":"Foreign Policy Analysis In International Relations"},"lessons":[{"slug":"intro-fpa","title":"Introduction To Foreign Policy Analysis And Foreign Policy In International Relations","v":false},{"slug":"level-of-analysis-fpdm","title":"Level Of Analysis In Foreign Policy Decision Making","v":false},{"slug":"models-fpdm","title":"Understanding Models Of Decision Making In Foreign Policy Analysis","v":false},{"slug":"factors-fpdm","title":"Factor Affecting Foreign Policy Decision","v":false},{"slug":"public-opinion-media-fpdm","title":"Public Opinion, Media And Foreign Policy","v":false}]},{"num":"034","name":"Contemporary Issues In Global Politics","overview":{"slug":"contemporary-issues-in-global-politics","title":"Contemporary issues in global politics"},"lessons":[{"slug":"theoritical-perspective","title":"Theoretical Perspectives in Global Politics","v":false},{"slug":"poverty-development-aid","title":"Poverty, Development, and International Aid","v":false},{"slug":"failed-state","title":"Failed State And State-building Interventions","v":false},{"slug":"media-politics","title":"Alternative Media and International Politics","v":false},{"slug":"cyber-warfare","title":"Cyber Warfare","v":false},{"slug":"multiculturalism","title":"Politics Of Multiculturalism","v":false},{"slug":"political-populism","title":"Political Populism","v":false},{"slug":"natural-disaster","title":"Natural Disaster And Global Politics","v":false}]},{"num":"041","name":"Foreign Policy Of Developed Countries","overview":{"slug":"foreign-policy-of-developed-countries","title":"Foreign Policy Of Developed Countries"},"lessons":[{"slug":"history-fpa","title":"The History And Evolution Of Foreign Policy Analysis","v":false},{"slug":"economic-statecraft","title":"Economic Statecraft","v":false},{"slug":"women-foreign-policy","title":"'Women And Foreign Policy: Swedish Feminist Foreign Policy'","v":false},{"slug":"eu-foreign-policy","title":"EU Foreign Policy and Energy Security","v":false},{"slug":"australia-foreign-policy","title":"Australia Foreign Policy and Current Issues","v":false},{"slug":"us-foreign-policy","title":"U.S. Foreign Policy","v":false},{"slug":"japan-foreign-policy","title":"Japan Foreign Policy","v":false}]},{"num":"042","name":"International Law Issues And International Dispute Settlement","overview":{"slug":"international-law-issues-and-international-dispute-settlement","title":"International Law Issues And International Dispute Settlement"},"lessons":[{"slug":"basic-inter-law","title":"Basic Understanding Of International Law","v":false},{"slug":"international-treaties","title":"International Treaties","v":false},{"slug":"subjects-of-international-law","title":"The Subjects Of International Law","v":false},{"slug":"state-and-international-law","title":"State And International Law","v":false},{"slug":"io-law","title":"International Organization","v":false},{"slug":"customary-international-law","title":"Customary International Law","v":false},{"slug":"ngo-and-international-law","title":"NGO And International Law","v":false},{"slug":"territory-law","title":"Territory and International Law","v":false},{"slug":"dispute-settlement","title":"Dispute Settlement","v":false},{"slug":"law-of-the-sea","title":"The Law Of The Sea","v":false},{"slug":"international-criminal-law-and-dispute-settlement","title":"International Criminal Law And Dispute Settlement","v":false},{"slug":"international-courts-and-tribunal","title":"International Courts and Tribunal","v":false},{"slug":"the-use-of-force-in-international-law","title":"The Use Of Force In International Law","v":false},{"slug":"international-human-right-law","title":"International Human Right Law","v":false},{"slug":"international-humanitarian-law","title":"International Humanitarian Law","v":false},{"slug":"international-law-for-environmental-protection","title":"International Law For Environmental Protection","v":false}]},{"num":"043","name":"International Political Economy Of Development","overview":{"slug":"international-political-economy-of-development","title":"International Political Economy Of Development"},"lessons":[{"slug":"study-of-development","title":"Study Of Development","v":false},{"slug":"fifty-years-economic-growth","title":"Fifty Years Of Economic Growth And Development Strategy","v":false},{"slug":"inequality-development","title":"'Inequality And Development: An Overview'","v":false},{"slug":"women-economic-role","title":"Women's Economic Roles And The Development Paradigm","v":false},{"slug":"asian-model","title":"The Asian Model Of Development","v":false},{"slug":"development-in-china-india-chile-african-arab","title":"Development In China, India, Chile, The African And Arab Region","v":false}]},{"num":"044","name":"Regionalism In Southeast Asia Asean Community","overview":{"slug":"regionalism-in-southeast-asia-asean-community","title":"Regionalism In Southeast Asia ASEAN Community"},"lessons":[{"slug":"basic-regionalism","title":"The Basics Of Regionalism","v":false},{"slug":"southeast-asia-region","title":"Southeast Asia As a Region","v":false},{"slug":"the-establishment-of-asean","title":"The Establishment Of ASEAN","v":false},{"slug":"asean-chapter","title":"Understanding the ASEAN Charter","v":false},{"slug":"asean-community","title":"Understanding ASEAN Community","v":false}]},{"num":"045","name":"International Organization In International Relations","overview":{"slug":"international-organization-in-international-relations","title":"International Organization In International Relations"},"lessons":[{"slug":"intro-international-organization","title":"Introduction To International Organization (IO) In IR","v":false},{"slug":"theory-international-organizaton","title":"Theory And Methods of International Organization","v":false},{"slug":"evolution-internationa-organizations","title":"The Evolution of International Organizations","v":false},{"slug":"un-administration","title":"'The United Nations: Introduction'","v":false},{"slug":"un-security","title":"'The United Nations: Maintaining International Peace And Security'","v":false},{"slug":"imf-world-bank","title":"The IMF And The World Bank","v":false}]},{"num":"046","name":"Global Economic Architecture","overview":{"slug":"global-economic-architecture","title":"Global Economic Architecture"},"lessons":[{"slug":"introduction-to-global-economic-architecture","title":"Introduction To Global Economic Architecture","v":false},{"slug":"evolution-global-economic-architecture","title":"The Evolution of the Global Economic Architecture","v":false},{"slug":"economic-hegemony","title":"'Global Economic Architecture: The View on Global Economic Hegemony'","v":false},{"slug":"world-trading-system","title":"World Trading System In The 20th Century And Beyond","v":false},{"slug":"european-economic","title":"The Rise of the European Economic Giant","v":false},{"slug":"global-financial-system","title":"Global Financial System In The 20th Century And Beyond","v":false}]},{"num":"050","name":"Wto And Trade Diplomacy","overview":{"slug":"wto-and-trade-diplomacy","title":"WTO And Trade Diplomacy"},"lessons":[{"slug":"international-trade-as-diplomacy","title":"International Trade As Diplomacy","v":false},{"slug":"transformation-diplomacy-trade","title":"Three Transformation of Diplomacy and International Trade","v":false},{"slug":"industrial-revolution","title":"The Industrial Revolution That Changed Trade Forever","v":false},{"slug":"evolution-global-trade","title":"'From Silk Road to Superhighway: The Evolution of Global Trade Diplomacy'","v":false},{"slug":"pillars-wto","title":"'The 3 Pillars of the WTO: How Law, Economics, and Politics Shaped Global Trade'","v":false},{"slug":"judicial-procedure-wto","title":"'When Negotiations Fail: The Rise of Judicial Procedures in Trade Agreements'","v":false},{"slug":"wto-dispute-settlement","title":"WTO Dispute Settlement Mechanism","v":false},{"slug":"wto-decision-making","title":"How the WTO Makes Decisions","v":false}]}]};
+    const cxState = { mod: null, series: null, q: "" };
+    const cxModsEl = document.getElementById('cx-modules');
+    const cxFiltersEl = document.getElementById('cx-filters');
+    const cxLessonsEl = document.getElementById('cx-lessons');
+
+    function cxGrouped() {
+      const groups = new Map();
+      CX_DATA.modules.forEach(m => {
+        const g = m.num.slice(0, 2);
+        if (!groups.has(g)) groups.set(g, []);
+        groups.get(g).push(m);
+      });
+      return [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    }
+
+    function esc(t) { return t.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+    function modButton(m, on) {
+      return '<button class="cx-mod' + (on ? " is-on" : "") + '" data-mod="' + m.num + '">' +
+             '<span class="cx-mod-num">M' + m.num + '</span>' +
+             '<span class="cx-mod-name">' + esc(m.name) + '</span>' +
+             '<span class="cx-mod-count">' + m.lessons.length + '</span></button>';
+    }
+
+    function renderFilters() {
+      cxFiltersEl.innerHTML = '<button class="cx-filter is-on" data-s="">All Series</button>' +
+        Object.entries(CX_DATA.series).map(([k, v]) =>
+          '<button class="cx-filter" data-s="' + k + '">' + v + '</button>').join("");
+    }
+
+    function renderModules() {
+      let html = "";
+      cxGrouped().forEach(([g, mods]) => {
+        html += '<div class="cx-series-label">' + (CX_DATA.series[g] || ("Series " + g)) + '</div>';
+        mods.forEach(m => { html += modButton(m, cxState.mod === m.num); });
+      });
+      cxModsEl.innerHTML = html;
+      bindModules();
+    }
+
+    function bindModules() {
+      cxModsEl.querySelectorAll(".cx-mod").forEach(btn => {
+        btn.addEventListener("click", () => {
+          cxState.mod = btn.dataset.mod;
+          cxState.q = "";
+          document.getElementById("cx-search").value = "";
+          renderModules(); renderLessons();
+        });
+      });
+    }
+
+    function lessonRow(l, pathLabel) {
+      const chip = l.v ? ' <span class="cx-video-chip">VIDEO</span>' : "";
+      return '<a class="cx-lesson" href="../' + l.slug + '.html">' +
+             '<span class="cx-lesson-title">' + esc(l.title) + chip + '</span>' +
+             '<span class="cx-lesson-path">' + esc(pathLabel) + '</span></a>';
+    }
+
+    function renderLessons() {
+      if (cxState.q) {
+        const q = cxState.q.toLowerCase();
+        const hits = [];
+        CX_DATA.modules.forEach(m => m.lessons.forEach(l => {
+          if ((l.title + " " + m.name).toLowerCase().includes(q)) {
+            hits.push(lessonRow(l, "M" + m.num + " \u00B7 " + m.name));
+          }
+        }));
+        cxLessonsEl.innerHTML = hits.length
+          ? '<div class="cx-panel"><div class="cx-panel-head"><span class="cx-panel-title">' + hits.length +
+            ' result' + (hits.length === 1 ? "" : "s") + ' for "' + esc(cxState.q) + '"</span></div>' + hits.join("") + '</div>'
+          : '<div class="cx-empty">No lessons match <strong>"' + esc(cxState.q) + '"</strong>.<br>Try another topic.</div>';
+        return;
+      }
+      const m = CX_DATA.modules.find(x => x.num === cxState.mod);
+      if (!m) {
+        cxLessonsEl.innerHTML = '<div class="cx-empty">Select a module on the left to browse its lessons.</div>';
+        return;
+      }
+      const ov = m.overview ? '<a class="cx-panel-overview" href="../' + m.overview.slug + '.html">Module Overview &rarr;</a>' : "";
+      cxLessonsEl.innerHTML = '<div class="cx-panel"><div class="cx-panel-head"><span class="cx-panel-title">' +
+        esc(m.name) + '</span>' + ov + '</div>' +
+        m.lessons.map(l => lessonRow(l, "M" + m.num)).join("") + '</div>';
+    }
+
+    cxFiltersEl.addEventListener("click", e => {
+      const btn = e.target.closest(".cx-filter");
+      if (!btn) return;
+      cxState.series = btn.dataset.s || null;
+      cxFiltersEl.querySelectorAll(".cx-filter").forEach(b => b.classList.toggle("is-on", b === btn));
+      cxState.mod = null;
+      cxState.q = "";
+      document.getElementById("cx-search").value = "";
+      let html = "";
+      cxGrouped().forEach(([g, mods]) => {
+        if (cxState.series && g !== cxState.series) return;
+        html += '<div class="cx-series-label">' + (CX_DATA.series[g] || ("Series " + g)) + '</div>';
+        mods.forEach(m => { html += modButton(m, false); });
+      });
+      cxModsEl.innerHTML = html;
+      bindModules();
+      renderLessons();
+    });
+
+    document.getElementById("cx-search").addEventListener("input", e => {
+      cxState.q = e.target.value.trim();
+      renderLessons();
+    });
+
+    renderFilters();
+    renderModules();
+    cxState.mod = CX_DATA.modules[0].num;
+    renderLessons();
 
     // Playable Prisoner's Dilemma Simulator Logic
     let gtScoreA = 0;
