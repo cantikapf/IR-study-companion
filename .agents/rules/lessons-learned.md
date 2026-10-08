@@ -49,6 +49,11 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **First-Visit Onboarding Modal & E2E Test Isolation (2026-10-08)**:
+  1. *Modal Backdrop Pointer Interception*: Pada browser testing Playwright untuk homepage atau halaman baru, modal tur orientasi (`#onboarding-modal`) otomatis terbuka untuk pengunjung baru (`localStorage.ir_onboarded_v1 === null`), menempatkan backdrop yang mencegat klik pointer (`pointer events intercepted`).
+  2. *Deterministic Fix via `addInitScript`*: Gunakan `await context.addInitScript(() => localStorage.setItem('ir_onboarded_v1', 'true'))` untuk mengisolasi sesi pengujian dari popup onboarding.
+  3. *Network 404 vs Console Runtime Error Separation*: Saat menyaring `page.on('console', msg => msg.type() === 'error')`, filter pesan sumber daya statis (`!msg.text().includes('Failed to load resource')`) agar kegagalan jaringan aset pada test server lokal tidak menimbulkan false positive kegagalan runtime JavaScript.
+
 - **Director-Builder Cross-Model Audit on Windows/MSYS (2026-10-08)**:
   1. *Independent Reproduction Over Builder Reports*: Audit pekerjaan model builder (Gemini) wajib mengeksekusi ulang semua gerbang sendiri (pytest/build/E2E/visual), bukan memercayai ringkasan builder — skrip E2E builder bisa benar-benar dibangun baik, namun tetap direproduksi penuh sebelum ACC.
   2. *Path-Spasi di `spawn(..., {shell:true})`*: Argumen path dengan spasi (`D:/PERSONAL PROJECT/...`) pecah saat dilewatkan ke `spawn` dengan `shell: true` (npx). Solusi: `cwd: repoRoot` + path relatif, ATAU ganti server statis `http-server`/npx dengan server `http.createServer` Node internal.

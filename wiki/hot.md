@@ -13,6 +13,21 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 Phase G3: Homepage Mini-Game Integration, Service Worker v5, and Milestone Completion:
+1. `Homepage Integration (_pages/index.md & prototype/home.html)`:
+   - *10 Catalog Cards Upgraded*: Menambahkan aksen kategori visual (`border-left`: security `#dc2626`, strategy `#2563eb`, governance `#7c3aed`), durasi bermain (`≈ 3-4 min`), container bintang performa (`.lab-card-stars`), dan badge `Completed ✓` (`.lab-card-badge-done`).
+   - *Dynamic Progress Hydration*: Fungsi `renderLabCardsProgress()` membaca status `localStorage` (`labs_completed_<id>` dan `labs_best_<id>`), menghitung perolehan bintang emas (0-3) secara deterministik, dan menampilkan badge "Completed ✓".
+   - *Live Playable Sandbox Upgraded to G1*: Sandbox Teori Permainan di beranda kini mengadopsi standar G1 lengkap (8 ronde, HUD chips Round/Streak/Best/Mute, 5 doktrin lawan rahasia, pengganda streak mutual cooperation $\times 1.5$ dan $\times 2$, intercept SIGINT Ronde 4, WebAudio synth SFX, debrief dengan bintang & deklasifikasi doktrin Axelrod 1984, serta tombol Play Again).
+2. `Platform Hardening & Cache Bump`:
+   - `sw.js`: Dinaikkan dari cache `ir-companion-lms-v4` ke `ir-companion-lms-v5`, menambahkan `assets/js/lab-game-core.js` ke daftar pre-cache.
+3. `Roadmap & State Synchronization`:
+   - `PROJECT.md`: Feature 14 dan Milestone M10 (Diplomatic Lab Experience Overhaul) resmi ditandai **DONE**.
+   - `wiki/game-design-bible.md`: Status diupdate menjadi `G3 COMPLETED — M10 GAME LAYER FULLY DELIVERED`.
+4. `Verifikasi Multi-Lapis`:
+   - pytest: 369/369 PASS.
+   - Jekyll build: Bersih tanpa error.
+   - Playwright E2E suites: G1 (35/35) + G2 (74/74) total 109/109 PASS.
+
 2026-10-08 - M10 G2 AUDIT PASSED (Director Audit: 9 Mini-Games Retrofit Approved):
 Audit independen atas commit `b94c335` (feat(labs): G2 — 9 diplomatic mini-games retrofit) dan seluruh 10 lab:
 1. `Git & Architecture Inspection`:
