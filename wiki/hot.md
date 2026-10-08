@@ -13,6 +13,19 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Video Companion UI & Asset Pipeline Fix:
+1. `Pembersihan AI/TTS References`:
+   - Menghapus penyebutan "local Kokoro-82M neural voices" di kartu showcase YouTube `@IRinANutshell` pada `_pages/index.md` dan `prototype/home.html`.
+   - Menggantikannya dengan deskripsi akademik profesional: *"Produced with concise academic narration and rapid-fire visual breakdowns. Watch our flagship 10-minute master episode: 'The Anarchy Problem — Who's in Charge of the Planet?', or explore mini-documentaries accompanying each core module."*
+2. `Perbaikan Thumbnail Video (@IRinANutshell)`:
+   - Root cause: Direktori `learning-videos` sebelumnya dikecualikan secara global di `_config.yml` (`exclude: - learning-videos`), sehingga Jekyll tidak menyalin folder `learning-videos/posters/` ke dalam `_site`.
+   - Perbaikan: Mengubah konfigurasi `exclude` di `_config.yml` agar hanya mengecualikan subdirektori berat (`learning-videos/exports` dan `learning-videos/probe`), sehingga aset poster/thumbnail disalin secara resmi ke `_site/learning-videos/posters/`.
+   - Menambahkan fallback `onerror` deterministik ke YouTube thumbnail resmi (`https://img.youtube.com/vi/3VDcQVYty5M/maxresdefault.jpg`) jika aset lokal tidak tersedia.
+3. `Verifikasi Visual & QA`:
+   - Build Jekyll: Bersih tanpa error (46.5s).
+   - Pytest: 369/369 PASS.
+   - Playwright + `vision_analyze`: Memverifikasi thumbnail CH030 (Chiaroscuro Chessboard & Fallen King) berhasil dimuat dan tampil tajam di browser.
+
 2026-10-08 - M10 Phase G3: Homepage Mini-Game Integration, Service Worker v5, and Milestone Completion:
 1. `Homepage Integration (_pages/index.md & prototype/home.html)`:
    - *10 Catalog Cards Upgraded*: Menambahkan aksen kategori visual (`border-left`: security `#dc2626`, strategy `#2563eb`, governance `#7c3aed`), durasi bermain (`≈ 3-4 min`), container bintang performa (`.lab-card-stars`), dan badge `Completed ✓` (`.lab-card-badge-done`).

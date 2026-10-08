@@ -122,7 +122,8 @@ exclude:
   - inbox
   - .raw
   - build.log
-  - learning-videos
+  - learning-videos/exports
+  - learning-videos/probe
 
 page_width: 800px
 
