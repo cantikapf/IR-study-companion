@@ -82,7 +82,6 @@ Axelrod's findings provide the micro-foundations for neoliberal institutionalism
 
 {% include sim_crisis.html %}
 
-### Interactive Learning 
 {% include flashcards.html term1="Foreign Policy Analysis (FPA)" def1="Study of decision-making process in foreign policy" term2="Cognitive Biases" def2="Inherent limitations in human cognition influencing judgments" term3="Rational Actor Model (RAM)" def3="Model assuming rational calculation of costs and benefits" term4="Game Theory Model (GTM)" def4="Model analyzing strategic choices in interactive decision making" %}
 
 ### Knowledge Check

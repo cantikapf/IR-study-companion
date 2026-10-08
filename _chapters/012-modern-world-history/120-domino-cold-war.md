@@ -148,9 +148,6 @@ The Cold War ultimately reshaped the global order. The collapse of the Soviet Un
 
 {% include sim_nuclear_deterrence.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Domino Theory" def1="Belief that if one country falls to communism, neighboring nations will follow suit." term2="Marshall Plan" def2="US economic aid program to rebuild post-WWII Western Europe, countering communism." term3="Truman Doctrine" def3="US policy pledging economic/military aid to countries resisting communist expansion globally." term4="NATO" def4="North Atlantic Treaty Organization; Western collective defense alliance formed against Soviet aggression." %}
 
 ### Knowledge Check

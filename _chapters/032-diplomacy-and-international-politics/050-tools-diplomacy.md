@@ -171,9 +171,6 @@ The purpose of consuls is therefore to promote the interests of their home count
 
 {% include sim_treaty_negotiation.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Cultural Diplomacy" def1="Sharing cultural values to strengthen relationships between countries" term2="Public Diplomacy" def2="Engaging foreign publics and non-state actors in diplomacy" term3="Economic Diplomacy" def3="Using economic assets to increase security and cooperation" term4="Digital Diplomacy" def4="Using digital technology in diplomatic communications" %}
 
 ### Knowledge Check

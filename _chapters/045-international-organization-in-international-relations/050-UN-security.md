@@ -109,9 +109,6 @@ In summary, the UN Security Council continues to evolve to address new challenge
 
 {% include sim_unsc_veto.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="UN Security Council" def1="Primary organ for maintaining international peace and security" term2="Peacekeeping Operations" def2="UN missions to maintain peace and security in conflict zones" term3="Preventive Diplomacy" def3="Efforts to prevent conflict through diplomacy and mediation" term4="Disarmament" def4="Elimination of illegal weapons and regulation of arms" %}
 
 ### Knowledge Check
