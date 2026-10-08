@@ -13,6 +13,17 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Brand Badge Elimination in Topbar Navigation:
+1. `Motivasi & Pembersihan Visual`:
+   - Menghapus badge redundant `<span class="lms-brand-badge">LMS Platform</span>` di header navigasi (`_layouts/default.html`).
+   - Menyederhanakan tampilan merek agar murni menyajikan judul canonical "IR Study Companion" tanpa label teknis internal.
+   - Membersihkan styling `.lms-brand-badge` dan aturan breakpoint `@media (max-width: 1120px)` di `assets/css/course-player.css` sehingga membebaskan ruang horizontal di navbar pada semua ukuran layar.
+2. `Verifikasi & QA`:
+   - Pytest: 369/369 PASS.
+   - Jekyll build: Bersih tanpa error (81.1s).
+   - Grep verification di `_site/`: 0 hit untuk `lms-brand-badge` dan `LMS Platform`.
+
+
 2026-10-08 - LMS Navigation Topbar Layout Collision & Responsive Hardening:
 1. `Root Cause Diagnosis (Header Collision)`:
    - Komponen `.lms-topbar-inner` sebelumnya hanya menggunakan `justify-content: space-between` tanpa `gap` eksplisit dan tanpa `flex-shrink: 0` pada group navigasi kiri (`.lms-brand-group`) dan kanan (`.lms-topbar-actions`).
