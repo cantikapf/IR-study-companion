@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Homepage Polishing: Four Learning Tracks Dihapus, Bug Kartu Lab Diperbaiki, Motion Graphic Globe:
+Arahan pengguna: (1) Four Learning Tracks dihapus karena sudah ada "Explore the Full Library", (2) format Diplomatic Decision Labs terlihat jelek, (3) butuh visual motion graphic agar homepage tidak terasa kosong (tulisan saja).
+1. `Bug Root Cause Kartu Lab`: Tiga kartu lab memiliki `</div>` yatim sisa edit icon-stack sebelumnya - menutup `<article>` lebih awal sehingga link "Launch Simulator ➔" jatuh keluar kartu (inilah "format jelek" pada screenshot). Diperbaiki via regex `n=3`; terverifikasi Playwright: semua link berada DI DALAM `article.lab-card-sm`, panel sandbox & 3 kartu top/bottom-aligned sempurna (inspeksi visual PASS).
+2. `Four Learning Tracks Dihapus`: Section, CSS `.tracks-container/.track-row/.track-num`, dan media-query-nya dibersihkan; nav "Curriculum (18)" diarahkan ke `#explore`. Struktur section final: hero, metrics, explore, simulations, video-companion.
+3. `Motion Graphic Globe`: Hero dua kolom lagi (teks kiri, motion kanan). SVG line-art orisinal: globe graticule trigonometris + 6 node ibu kota berdenyut (pulse 3.2s) + 5 rute diplomasi dashed beranimasi `stroke-dashoffset` (22s, 3 warna paradigma) + orbit ring berputar 80s dengan satelit amber + caption editorial "170+ nations - 18 modules - one discipline / The study of how the world negotiates itself". Animasi pure CSS (tanpa JS), `prefers-reduced-motion` dihormati. Terverifikasi Playwright: `cxg-dash` berjalan, opacity node berdenyut real-time.
+4. `Verification`: Playwright E2E (struktur section, explorer M023: 12 lessons, sandbox cooperate -> skor 3, 0 pageerror/console) + inspeksi visual `vision_analyze` hero & labs PASS + 369/369 pytest PASS.
+
 2026-10-08 - Homepage Hero Diganti Curriculum Explorer Interaktif (Adaptasi ReUI Cascader):
 Masukan pengguna: ilustrasi hero SVG terasa "tidak pas" (app-demo SaaS, bukan editorial akademik) dan homepage perlu elemen yang membuat pengunjung mau menelusuri lebih lanjut.
 1. `Riset Registry ReUI`: Blok hero gratis tidak ada (semua hero = premium Pro); komponen free yang cocok adalah `cascader` (mode `columns`: drill-down multi-kolom + breadcrumb) dan example `c-cascader-3` (deep search path-annotated). API dibaca via `get_component`, adaptasi ke vanilla JS (registry ReUI = React/shadcn).
