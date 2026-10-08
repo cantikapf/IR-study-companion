@@ -49,6 +49,13 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Director-Builder Cross-Model Audit on Windows/MSYS (2026-10-08)**:
+  1. *Independent Reproduction Over Builder Reports*: Audit pekerjaan model builder (Gemini) wajib mengeksekusi ulang semua gerbang sendiri (pytest/build/E2E/visual), bukan memercayai ringkasan builder — skrip E2E builder bisa benar-benar dibangun baik, namun tetap direproduksi penuh sebelum ACC.
+  2. *Path-Spasi di `spawn(..., {shell:true})`*: Argumen path dengan spasi (`D:/PERSONAL PROJECT/...`) pecah saat dilewatkan ke `spawn` dengan `shell: true` (npx). Solusi: `cwd: repoRoot` + path relatif, ATAU ganti server statis `http-server`/npx dengan server `http.createServer` Node internal.
+  3. *Windows path.join vs forward-slash ROOT*: Guard `path.join(ROOT, p).startsWith(ROOT)` selalu gagal di Windows (join → backslash, ROOT → forward slash) → 403/404 palsu. Selalu `path.normalize(ROOT)` sebelum perbandingan.
+  4. *Sticky-Topbar False Positive pada Screenshot*: Elemen yang di-scroll flush ke tepi atas viewport tampak "tertutup topbar" pada screenshot full-viewport padahal di halaman nyata tidak defect. Verifikasi ulang dengan offset scroll nyaman (mis. `scrollTo(0, elTop - 120)`) sebelum menandai visual FAIL.
+  5. *Orphan Server Ports*: Jika jalur error melewati `server.kill()`, port http-server yatim tetap LISTENING dan mengacaukan peluncuran ulang; selalu `netstat -ano | grep :PORT` + `taskkill /F /PID` (slash tunggal — MSYS path-conversion dimatikan, `//F` tidak diterjemahkan) di awal recovery.
+
 - **Overwriting Include Files via write_file with Stale-Read Guard (2026-10-08)**:
   1. *Full-Read Requirement*: `write_file` menolak menimpa file include yang belum dibaca utuh dalam sesi yang sama (read_file dengan offset/limit parsial tidak dianggap cukup); solusi deterministik untuk penggantian total adalah `mv file file.bak` lewat terminal, tulis file baru (path tidak ada = tanpa guard stale), lalu verifikasi hasil lewat `git status --short` + `git diff --stat` — jangan percai metadata hasil tool yang bisa tidak konsisten.
   2. *Transcription Corruption Audit*: Setelah menulis include berisi `<script>` inline, wajib jalankan `node -e "new Function(scriptBody)"` untuk cek sintaks JS, grep marker korupsi yang sempat muncul di transkrip, dan hitung keseimbangan `<div>`/`</div>` sebelum build.
