@@ -49,6 +49,11 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **LMS Navigation Topbar Layout Collision & Flexbox Hardening (2026-10-08)**:
+  1. *Root Cause of Header Collision*: Container `.lms-topbar-inner` menggunakan `display: flex; justify-content: space-between;` tanpa properti `gap`. Ketika lebar layar mendekati batas maksimum atau konten tengah melebar, jarak antara grup brand kiri (`.lms-brand-group`), judul modul tengah (`.lms-topbar-center`), dan kontrol aksi kanan (`.lms-topbar-actions`) menyusut menjadi tepat 0.0px.
+  2. *Defensive Flexbox Sizing*: Menambahkan `gap: 1.25rem` pada `.lms-topbar-inner`, mengunci `flex-shrink: 0` pada group kiri & kanan, serta mengonfigurasi `.lms-topbar-center` dengan `flex: 1 1 auto; min-width: 0; max-width: 440px; margin: 0 auto; padding: 0 0.5rem;` menjamin elipsis (`...`) judul panjang tidak pernah menabrak kontrol di sebelahnya.
+  3. *Breakpoint & Mobile Hygiene*: Menaikkan breakpoint judul tengah ke `@media (min-width: 1000px)` mencegah judul terhimpit di layar tablet/split-screen. Aturan responsif mobile (`<=1120px` sembunyikan brand badge, `<=860px` sembunyikan kbd dan teks sync, `<=540px` sembunyikan mini progress bar) mengeliminasi 100% horizontal scroll overflow pada viewport kecil.
+
 - **First-Visit Onboarding Modal & E2E Test Isolation (2026-10-08)**:
   1. *Modal Backdrop Pointer Interception*: Pada browser testing Playwright untuk homepage atau halaman baru, modal tur orientasi (`#onboarding-modal`) otomatis terbuka untuk pengunjung baru (`localStorage.ir_onboarded_v1 === null`), menempatkan backdrop yang mencegat klik pointer (`pointer events intercepted`).
   2. *Deterministic Fix via `addInitScript`*: Gunakan `await context.addInitScript(() => localStorage.setItem('ir_onboarded_v1', 'true'))` untuk mengisolasi sesi pengujian dari popup onboarding.
