@@ -13,6 +13,14 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Homepage Hero Diganti Curriculum Explorer Interaktif (Adaptasi ReUI Cascader):
+Masukan pengguna: ilustrasi hero SVG terasa "tidak pas" (app-demo SaaS, bukan editorial akademik) dan homepage perlu elemen yang membuat pengunjung mau menelusuri lebih lanjut.
+1. `Riset Registry ReUI`: Blok hero gratis tidak ada (semua hero = premium Pro); komponen free yang cocok adalah `cascader` (mode `columns`: drill-down multi-kolom + breadcrumb) dan example `c-cascader-3` (deep search path-annotated). API dibaca via `get_component`, adaptasi ke vanilla JS (registry ReUI = React/shadcn).
+2. `Curriculum Explorer (`#explore`)`: Panel tiga kolom - sidebar (search box + filter 5 series: Foundation/Core Discipline/Applications & Method/Law Region & Society/Global Architecture), kolom modul dikelompokkan per series (M010-M050), kolom lesson. Ilustrasi statis dihapus; hero kembali murni tipografi editorial + CTA "Explore the Library".
+3. `Data Kanonik Nyata`: Diekstrak langsung dari frontmatter `_chapters/` - 18 modul, 157 lessons (persis metrics bar; 175 file - 18 overview), 4 lesson berchip VIDEO (youtube_id/explanatory_video), semua href divalidasi ke `_site` (175/175 exists, 0 missing).
+4. `Fungsional Terverifikasi (Playwright + msedge)`: klik modul (M042: 16 lessons + Module Overview link), search "realism" (4 hasil), empty state, filter series (01: 4 modul; restore: 18), video chips M010 (4), 0 pageerror/console error. Bug ditemukan & diperbaiki: grouping series salah kunci (`m.num` penuh "010" -> `slice(0,2)` "01"). Inspeksi visual `vision_analyze` 4/4 PASS (hero bersih, panel lengkap, konsisten editorial, tanpa defect layout). Juga diperbaiki: blok `@media` responsif yang sebelumnya kehilangan opener-nya.
+5. `Cleanup`: `prototype/assets/hero-course-illustration.svg` + artefak preview/screenshot dihapus (tidak terpakai). 369/369 pytest PASS.
+
 2026-10-08 - Prototype Homepage Revisi Besar + Penghapusan Total Fitur Certification:
 Arahan langsung pengguna: (1) framework diagram dihapus sepenuhnya dari homepage, (2) fitur certification dihilangkan dari SELURUH proyek, (3) tidak ada penomoran Track 01-04, (4) label "1080p Master" dihapus, (5) hero diganti visual online-course.
 1. `Asset Hero Orisinal Baru (`prototype/assets/hero-course-illustration.svg`)`: Ilustrasi SVG buatan sendiri (bukan stok AI): globe wireframe dengan graticule trigonometris + jalur dagu dashed antar node negara, kartu video lesson mind map (CH030 Realism, play button, progress bar), kartu Active Recall (quiz security dilemma), kartu progres modul. Lolos inspection gate via render Playwright/Edge + `vision_analyze`: play button bebas dari panah, teks quiz lengkap, 3/3 PASS setelah perbaikan alignment (right edge 960px) dan margin CONSTRUCTIVISM (inset 936px dari panel 940px).
