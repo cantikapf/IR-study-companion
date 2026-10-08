@@ -1,6 +1,6 @@
 ---
 layout: default
-title: IR Study Companion — Master International Relations with Rigor & Clarity
+title: IR Study Companion — A Free, Structured Course in International Relations
 permalink: /
 ---
 
@@ -592,9 +592,9 @@ permalink: /
   <header class="home-hero-split">
     <div class="home-hero-text">
       <div class="home-eyebrow">The Structured Open-Access Curriculum in International Relations</div>
-      <h1 class="home-title">Understanding Global Politics with <em>Rigor</em>, <em>Structure</em>, and <em>Clarity</em></h1>
+      <h1 class="home-title">World politics, taught from the ground up.</h1>
       <p class="home-description">
-        An academically rigorous self-study companion covering foundational paradigms, geopolitical history, international political economy, and diplomatic statecraft. Grounded in active recall checkpoints and interactive decision-making labs.
+        It follows the sequence of a degree: theory first, then history, political economy, law, and diplomacy. Every module ends with an exam, and the labs drop you into real diplomatic dilemmas.
       </p>
       <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
         <a href="#explore" class="sync-btn sync-btn-primary" style="text-decoration: none;">
