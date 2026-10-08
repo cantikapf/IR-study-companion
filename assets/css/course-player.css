@@ -129,18 +129,6 @@ body.lms-drawer-locked {
   letter-spacing: -0.01em;
 }
 
-.lms-brand-badge {
-  font-size: 0.675rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: var(--lms-subtle);
-  border: 1px solid var(--lms-hairline);
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--lms-radius-pill);
-  color: var(--lms-ink-secondary);
-}
-
 .lms-btn-syllabus {
   display: inline-flex;
   align-items: center;
@@ -232,12 +220,6 @@ body.lms-drawer-locked {
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   color: var(--lms-ink-secondary);
-}
-
-@media (max-width: 1120px) {
-  .lms-brand-badge {
-    display: none;
-  }
 }
 
 @media (max-width: 860px) {
