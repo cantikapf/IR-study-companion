@@ -278,6 +278,13 @@
       font-weight: 400;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
     .hero-standfirst {
       font-size: 1.125rem;
       line-height: 1.65;
@@ -291,6 +298,42 @@
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
+    }
+
+    /* Motion graphic: animated editorial globe (pure CSS/SVG animation) */
+    .hero-visual { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .motion-globe { width: 100%; max-width: 460px; height: auto; display: block; }
+    .motion-caption { text-align: center; display: flex; flex-direction: column; gap: 0.2rem; }
+    .motion-caption-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-tertiary);
+    }
+    .motion-caption-title {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-secondary);
+    }
+    .cxg-route { stroke-dasharray: 1 7; opacity: 0.75; animation: cxg-dash 22s linear infinite; }
+    .cxg-route.route-crimson { stroke: var(--color-realism); }
+    .cxg-route.route-gold { stroke: var(--accent-amber); }
+    .cxg-route.route-oxford { stroke: var(--accent-oxford); }
+    .cxg-node { animation: cxg-pulse 3.2s ease-in-out infinite; }
+    .cxg-node:nth-of-type(2n) { animation-delay: 1.1s; }
+    .cxg-node:nth-of-type(3n) { animation-delay: 2.2s; }
+    .cxg-orbit { transform-origin: 260px 268px; animation: cxg-spin 80s linear infinite; }
+    .cxg-sat { fill: var(--accent-amber); animation: cxg-pulse 3.2s ease-in-out infinite; }
+    @keyframes cxg-dash { to { stroke-dashoffset: -240; } }
+    @keyframes cxg-pulse {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 1; }
+    }
+    @keyframes cxg-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .cxg-route, .cxg-node, .cxg-orbit, .cxg-sat { animation: none; }
     }
 
     /* Editorial Metrics Strip */
@@ -348,81 +391,6 @@
     .section-subhead {
       font-size: 0.95rem;
       color: var(--ink-secondary);
-    }
-
-    /* Curriculum Track Timeline / Metro Route */
-    .tracks-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin-bottom: 4.5rem;
-    }
-
-    .track-row {
-      background: var(--surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--radius-md);
-      padding: 1.75rem 2rem;
-      display: grid;
-      grid-template-columns: 180px 1.4fr 1fr 140px;
-      gap: 2rem;
-      align-items: center;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .track-row:hover {
-      border-color: var(--border-medium);
-      box-shadow: var(--shadow-card);
-    }
-
-    .track-col-id {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .track-scope {
-      font-size: 0.8rem;
-      color: var(--ink-secondary);
-    }
-
-    .track-col-info {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .track-name {
-      font-family: var(--font-sans);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--ink-primary);
-      text-decoration: none;
-    }
-
-    .track-desc {
-      font-size: 0.875rem;
-      color: var(--ink-secondary);
-      line-height: 1.5;
-    }
-
-    .track-col-modules {
-      font-size: 0.825rem;
-      color: var(--ink-secondary);
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .module-bullet {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .track-col-action {
-      text-align: right;
     }
 
     /* Diplomatic Labs Section + Playable Sandbox */
@@ -841,7 +809,6 @@
     .icon-stack-sm { width: 38px; height: 38px; }
     .icon-stack-sm .icon-stack-plane { border-radius: 8px; transform: translate(4px, 4px); }
     .icon-stack-sm .icon-stack-plane.is-back { transform: translate(-3px, -3px); }
-    .track-col-id .icon-stack { margin-bottom: 0.6rem; }
     .lab-card-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
 
     /* ==========================================================================
@@ -1003,12 +970,12 @@
 
     @media (max-width: 960px) {
       .labs-showcase-split { grid-template-columns: 1fr; }
-      .track-row { grid-template-columns: 1fr; gap: 1rem; }
-      .track-col-action { text-align: left; }
       .metrics-bar { grid-template-columns: repeat(2, 1fr); }
       .video-showcase-box { flex-direction: column; align-items: flex-start; }
       .video-visual-card { width: 100%; }
       .hero-headline { font-size: 2.75rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .motion-globe { max-width: 340px; }
       .explorer-shell { grid-template-columns: 1fr; }
       .explorer-side { border-right: none; border-bottom: 1px solid var(--border-hairline); }
       .explorer-columns { grid-template-columns: 1fr; min-height: 0; }
@@ -1027,7 +994,7 @@
       </a>
 
       <ul class="masthead-nav">
-        <li class="nav-item"><a href="#curriculum">Curriculum (18)</a></li>
+        <li class="nav-item"><a href="#explore">Curriculum (18)</a></li>
         <li class="nav-item"><a href="#simulations">Diplomatic Labs (10)</a></li>
         <li class="nav-item"><a href="#video-companion">Video Companion</a></li>
         <li class="nav-item"><a href="../glossary.html">Glossary</a></li>
@@ -1075,6 +1042,48 @@
           </div>
         </div>
 
+        <div class="hero-visual">
+          <svg class="motion-globe" viewBox="0 0 520 536" role="img" aria-label="Animated wireframe globe with animated diplomatic routes between nations">
+            <defs>
+              <clipPath id="mgClip"><circle cx="260" cy="268" r="208"/></clipPath>
+            </defs>
+            <g class="cxg-orbit">
+              <ellipse cx="260" cy="268" rx="242" ry="242" fill="none" stroke="var(--border-medium)" stroke-width="1" stroke-dasharray="1 6" opacity="0.55"/>
+              <circle class="cxg-sat" cx="502" cy="268" r="3.2"/>
+            </g>
+            <g clip-path="url(#mgClip)" fill="none" stroke="var(--accent-oxford)" stroke-width="1.25" opacity="0.22">
+              <ellipse cx="260" cy="123.9" rx="104.0" ry="31.2"/>
+            <ellipse cx="260" cy="184.8" rx="180.1" ry="54.0"/>
+            <ellipse cx="260" cy="268.0" rx="208.0" ry="62.4"/>
+            <ellipse cx="260" cy="351.2" rx="180.1" ry="54.0"/>
+            <ellipse cx="260" cy="412.1" rx="104.0" ry="31.2"/>
+            <ellipse cx="260" cy="268" rx="41.6" ry="208.0"/>
+            <ellipse cx="260" cy="268" rx="93.6" ry="208.0"/>
+            <ellipse cx="260" cy="268" rx="149.8" ry="208.0"/>
+            <ellipse cx="260" cy="268" rx="208.0" ry="208.0"/>
+            </g>
+            <circle cx="260" cy="268" r="208" fill="none" stroke="var(--accent-oxford)" stroke-width="2" opacity="0.5"/>
+            <g fill="none" stroke-linecap="round" stroke-width="2">
+              <path class="cxg-route route-crimson" d="M120,250 Q240,90 365,175"/>
+            <path class="cxg-route route-gold" d="M205,130 Q130,300 155,385"/>
+            <path class="cxg-route route-crimson" d="M365,175 Q385,265 330,345"/>
+            <path class="cxg-route route-oxford" d="M155,385 Q205,320 262,262"/>
+            <path class="cxg-route route-gold" d="M330,345 Q235,300 120,250"/>
+            </g>
+            <g fill="var(--accent-oxford)" stroke="var(--surface)" stroke-width="1.6">
+              <circle class="cxg-node" cx="120" cy="250" r="4.5"/>
+            <circle class="cxg-node" cx="205" cy="130" r="4.5"/>
+            <circle class="cxg-node" cx="365" cy="175" r="4.5"/>
+            <circle class="cxg-node" cx="330" cy="345" r="4.5"/>
+            <circle class="cxg-node" cx="155" cy="385" r="4.5"/>
+            <circle class="cxg-node" cx="262" cy="262" r="4.5"/>
+            </g>
+          </svg>
+          <div class="motion-caption">
+            <span class="motion-caption-label">170+ nations &middot; 18 modules &middot; one discipline</span>
+            <span class="motion-caption-title">The study of how the world negotiates itself</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1124,97 +1133,6 @@
           <nav class="cx-col cx-col-modules" id="cx-modules" aria-label="Modules"></nav>
           <div class="cx-col" id="cx-lessons" aria-label="Lessons"></div>
         </div>
-      </div>
-    </section>
-
-    <section id="curriculum" style="margin-bottom: 4.5rem;">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">The Four Learning Tracks</h2>
-          <div class="section-subhead">A linear academic progression from theoretical foundations to complex multilateral disputes</div>
-        </div>
-      </div>
-
-      <div class="tracks-container">
-        <!-- Track 1 -->
-        <article class="track-row">
-          <div class="track-col-id">
-            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
-            <span class="track-scope">Foundations · 5 Modules</span>
-          </div>
-          <div class="track-col-info">
-            <a href="index.html" class="track-name">Global Politics & IR Theoretical Traditions</a>
-            <p class="track-desc">Ontological debates: Classical Realism, Structural Neorealism, Liberal Institutionalism, Marxism, and Foreign Policy Analysis (FPA).</p>
-          </div>
-          <div class="track-col-modules">
-            <span class="module-bullet">• Discipline Foundations & Social Sciences</span>
-            <span class="module-bullet">• Paradigmatic Great Debates</span>
-            <span class="module-bullet">• Allison's Bureaucratic Politics Models</span>
-          </div>
-          <div class="track-col-action">
-            <a href="index.html" class="btn btn-secondary">Explore ➔</a>
-          </div>
-        </article>
-
-        <!-- Track 2 -->
-        <article class="track-row">
-          <div class="track-col-id">
-            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
-            <span class="track-scope">Security · 4 Modules</span>
-          </div>
-          <div class="track-col-info">
-            <a href="../history-matters.html" class="track-name">Security Studies, Warfare & Diplomatic History</a>
-            <p class="track-desc">The causes of war, Westphalian sovereignty, balance of power mechanics, deterrence doctrine, and non-traditional security crises.</p>
-          </div>
-          <div class="track-col-modules">
-            <span class="module-bullet">• Modern World History (1648–Cold War)</span>
-            <span class="module-bullet">• Strategic Deterrence & MAD Calculations</span>
-            <span class="module-bullet">• Bilateral & Multilateral Statecraft</span>
-          </div>
-          <div class="track-col-action">
-            <a href="../history-matters.html" class="btn btn-secondary">Explore ➔</a>
-          </div>
-        </article>
-
-        <!-- Track 3 -->
-        <article class="track-row">
-          <div class="track-col-id">
-            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span>
-            <span class="track-scope">Economy · 4 Modules</span>
-          </div>
-          <div class="track-col-info">
-            <a href="../introduction-ipe.html" class="track-name">International Political Economy (IPE)</a>
-            <p class="track-desc">The Bretton Woods monetary system, WTO trade rounds, supply chain chokepoints, dependency theory, and development architecture.</p>
-          </div>
-          <div class="track-col-modules">
-            <span class="module-bullet">• Classical Mercantilism vs Free Trade</span>
-            <span class="module-bullet">• Global Financial Institutions (IMF/WB)</span>
-            <span class="module-bullet">• GATT Article XX & Dispute Settlement</span>
-          </div>
-          <div class="track-col-action">
-            <a href="../introduction-ipe.html" class="btn btn-secondary">Explore ➔</a>
-          </div>
-        </article>
-
-        <!-- Track 4 -->
-        <article class="track-row">
-          <div class="track-col-id">
-            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
-            <span class="track-scope">Law & Regionalism · 5 Modules</span>
-          </div>
-          <div class="track-col-info">
-            <a href="../basic-inter-law.html" class="track-name">International Law, Regional Architecture & Indonesia</a>
-            <p class="track-desc">Public international law, UN collective security, Law of the Sea (UNCLOS), ASEAN consensus, and Indonesia’s Bebas-Aktif doctrine.</p>
-          </div>
-          <div class="track-col-modules">
-            <span class="module-bullet">• ICJ Jurisprudence & UN Sanctions</span>
-            <span class="module-bullet">• Maritime Zones & Innocent Passage</span>
-            <span class="module-bullet">• South China Sea Code of Conduct</span>
-          </div>
-          <div class="track-col-action">
-            <a href="../basic-inter-law.html" class="btn btn-secondary">Explore ➔</a>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -1273,8 +1191,7 @@
               </div>
               <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
               <p class="lab-card-desc">Simulate Graham Allison's bureaucratic models in a naval standoff. Balance brinkmanship against accidental war.</p>
-            </div>
-            <a href="../models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
+                        <a href="../models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
           </article>
 
           <article class="lab-card-sm">
@@ -1284,8 +1201,7 @@
               </div>
               <h4 class="lab-card-title">UNCLOS Maritime Zone Delimiter</h4>
               <p class="lab-card-desc">Classify jurisdictional limits from Territorial Sea (12 nm) to the high seas Continental Shelf.</p>
-            </div>
-            <a href="../law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
+                        <a href="../law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
           </article>
 
           <article class="lab-card-sm">
@@ -1295,8 +1211,7 @@
               </div>
               <h4 class="lab-card-title">UNSC Veto Chamber</h4>
               <p class="lab-card-desc">Draft a peacekeeping resolution and survive the P5 veto gauntlet across chapters VII enforcement.</p>
-            </div>
-            <a href="../un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
+                        <a href="../un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
           </article>
         </div>
       </div>
