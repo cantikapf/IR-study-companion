@@ -1,346 +1,1559 @@
 <!DOCTYPE html>
-<html lang="en" data-axis="utilitarian">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IR Study Companion — Online Course Academy</title>
-  <link rel="stylesheet" href="prototype.css">
+  <title>IR Study Companion — The Open Curriculum for International Relations</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* ==========================================================================
+       IR Study Companion — Editorial Academic Design System
+       ========================================================================== */
+    :root {
+      --font-display: 'Newsreader', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+      /* Palette: Scholarly Paper & Deep Ink */
+      --canvas: #fcfcfd;
+      --surface: #ffffff;
+      --surface-subtle: #f5f6f9;
+      --surface-hover: #ebeef3;
+      
+      --ink-primary: #111827;     /* Deep carbon ink */
+      --ink-secondary: #4b5563;   /* Slate body */
+      --ink-tertiary: #6b7280;    /* Muted caption */
+      --ink-faint: #9ca3af;
+
+      --border-hairline: #e5e7eb;
+      --border-medium: #d1d5db;
+      --border-strong: #111827;
+
+      /* Academic Editorial Accents */
+      --accent-oxford: #1e3a8a;   /* Diplomatic Oxford Navy */
+      --accent-oxford-subtle: #eff6ff;
+      --accent-amber: #92400e;    /* Archival Ochre */
+      --accent-amber-subtle: #fef3c7;
+      
+      /* Paradigm Semantic Accents */
+      --color-realism: #e11d48;
+      --color-realism-bg: #fff1f2;
+      --color-liberalism: #059669;
+      --color-liberalism-bg: #ecfdf5;
+      --color-constructivism: #7c3aed;
+      --color-constructivism-bg: #f5f3ff;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      
+      --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+    }
+
+    [data-theme="dark"] {
+      --canvas: #0b0d11;
+      --surface: #12151c;
+      --surface-subtle: #191e28;
+      --surface-hover: #222836;
+
+      --ink-primary: #f3f4f6;
+      --ink-secondary: #9ca3af;
+      --ink-tertiary: #6b7280;
+      --ink-faint: #4b5563;
+
+      --border-hairline: #212634;
+      --border-medium: #374151;
+      --border-strong: #e5e7eb;
+
+      --accent-oxford: #60a5fa;
+      --accent-oxford-subtle: rgba(96, 165, 250, 0.08);
+      --accent-amber: #f59e0b;
+      --accent-amber-subtle: rgba(245, 158, 11, 0.08);
+
+      --color-realism: #fb7185;
+      --color-realism-bg: rgba(251, 113, 133, 0.1);
+      --color-liberalism: #34d399;
+      --color-liberalism-bg: rgba(52, 211, 153, 0.1);
+      --color-constructivism: #a78bfa;
+      --color-constructivism-bg: rgba(167, 139, 250, 0.1);
+
+      --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 10px 20px -3px rgba(0, 0, 0, 0.4);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    /* Masthead Navigation */
+    .masthead {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--canvas);
+      border-bottom: 1px solid var(--border-hairline);
+      height: 60px;
+    }
+
+    .masthead-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--ink-primary);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--ink-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--border-hairline);
+      padding: 0.1rem 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .masthead-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item a {
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-item a:hover {
+      color: var(--ink-primary);
+    }
+
+    .masthead-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--ink-primary);
+      color: var(--canvas);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      border-color: var(--border-hairline);
+      color: var(--ink-primary);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-subtle);
+      border-color: var(--border-medium);
+    }
+
+    .btn-theme {
+      background: transparent;
+      border: 1px solid var(--border-hairline);
+      color: var(--ink-secondary);
+      padding: 0.45rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-theme:hover {
+      color: var(--ink-primary);
+      border-color: var(--border-medium);
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    /* Hero Section: Editorial Headline + Real Mind Map Canvas Showcase */
+    .hero-section {
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      color: var(--ink-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--accent-oxford);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: 3.4rem;
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--ink-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-standfirst {
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--ink-secondary);
+      margin-bottom: 2rem;
+      max-width: 58ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Real Mind Map Canvas Showcase in Hero */
+    .mindmap-showcase {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .mindmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.725rem;
+      color: var(--ink-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .mindmap-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      color: var(--accent-oxford);
+      font-weight: 600;
+    }
+
+    .mindmap-preview-frame {
+      width: 100%;
+      height: 280px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-hairline);
+      position: relative;
+      background: #ffffff;
+      box-shadow: inset 0 0 12px rgba(0,0,0,0.03);
+    }
+
+    .mindmap-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.3s ease;
+    }
+
+    .mindmap-preview-frame:hover .mindmap-preview-img {
+      transform: scale(1.03);
+    }
+
+    .mindmap-caption {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--ink-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .paradigm-pills {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .paradigm-pill {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+    }
+    .pill-realism { background: var(--color-realism-bg); color: var(--color-realism); }
+    .pill-liberalism { background: var(--color-liberalism-bg); color: var(--color-liberalism); }
+    .pill-constructivism { background: var(--color-constructivism-bg); color: var(--color-constructivism); }
+
+    /* Editorial Metrics Strip */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 1.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 3.5rem;
+    }
+
+    .metric-entry {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 500;
+      color: var(--ink-primary);
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--ink-secondary);
+    }
+
+    .metric-caption {
+      font-size: 0.775rem;
+      color: var(--ink-tertiary);
+      line-height: 1.4;
+    }
+
+    /* Section Headers */
+    .section-head {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      color: var(--ink-primary);
+    }
+
+    .section-subhead {
+      font-size: 0.95rem;
+      color: var(--ink-secondary);
+    }
+
+    /* Curriculum Track Timeline / Metro Route */
+    .tracks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .track-row {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 2rem;
+      display: grid;
+      grid-template-columns: 180px 1.4fr 1fr 140px;
+      gap: 2rem;
+      align-items: center;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .track-row:hover {
+      border-color: var(--border-medium);
+      box-shadow: var(--shadow-card);
+    }
+
+    .track-col-id {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .track-num {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .track-scope {
+      font-size: 0.8rem;
+      color: var(--ink-secondary);
+    }
+
+    .track-col-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .track-name {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+      text-decoration: none;
+    }
+
+    .track-desc {
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    .track-col-modules {
+      font-size: 0.825rem;
+      color: var(--ink-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .module-bullet {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .track-col-action {
+      text-align: right;
+    }
+
+    /* Diplomatic Labs Section + Playable Sandbox */
+    .labs-section {
+      margin-bottom: 4.5rem;
+    }
+
+    .labs-showcase-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Playable Interactive Sandbox */
+    .playable-sandbox {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .sandbox-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 1.25rem;
+    }
+
+    .sandbox-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-oxford);
+    }
+
+    .sandbox-status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.725rem;
+      font-family: var(--font-mono);
+      color: var(--color-liberalism);
+      background: var(--color-liberalism-bg);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .sandbox-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .sandbox-prompt {
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+
+    .sandbox-duel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .duel-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .duel-role {
+      font-size: 0.775rem;
+      font-weight: 600;
+      color: var(--ink-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .duel-score {
+      font-family: var(--font-mono);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+      margin: 0.35rem 0;
+    }
+
+    .duel-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .btn-sim {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-medium);
+      transition: all 0.15s ease;
+    }
+
+    .btn-sim-coop {
+      background: var(--color-liberalism);
+      color: #ffffff;
+      border-color: var(--color-liberalism);
+    }
+    .btn-sim-coop:hover { opacity: 0.9; }
+
+    .btn-sim-defect {
+      background: var(--color-realism);
+      color: #ffffff;
+      border-color: var(--color-realism);
+    }
+    .btn-sim-defect:hover { opacity: 0.9; }
+
+    .sandbox-log {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      height: 90px;
+      overflow-y: auto;
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    .sandbox-log-line {
+      border-bottom: 1px dashed var(--border-hairline);
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Lab Catalog Cards */
+    .labs-compact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .lab-card-sm {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+    }
+
+    .lab-card-sm:hover {
+      border-color: var(--border-medium);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .lab-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .lab-card-desc {
+      font-size: 0.825rem;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+      margin-bottom: 0.75rem;
+    }
+
+    .lab-card-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-oxford);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Master Video Companion Channel Showcase (PRESERVED ORIGINAL STRUCTURE) */
+    .video-companion-section {
+      margin-bottom: 4rem;
+    }
+
+    .home-section-header {
+      margin-bottom: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .home-section-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--ink-primary);
+    }
+
+    .home-section-subtitle {
+      font-size: 0.95rem;
+      color: var(--ink-tertiary);
+    }
+
+    .video-showcase-box {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow-card);
+    }
+
+    .video-channel-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-tertiary);
+    }
+
+    .video-channel-name {
+      font-size: 1.4rem;
+      font-weight: 750;
+      color: var(--ink-primary);
+      margin: 0.35rem 0 0.5rem;
+    }
+
+    .video-channel-desc {
+      font-size: 0.95rem;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+      max-width: 65ch;
+    }
+
+    .video-channel-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .sync-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sync-btn-primary {
+      background: var(--ink-primary);
+      color: var(--canvas) !important;
+    }
+
+    .sync-btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .sync-btn-secondary {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      color: var(--ink-primary) !important;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .sync-btn-secondary:hover {
+      background: var(--surface-subtle);
+      border-color: var(--border-medium);
+    }
+
+    /* Video Visual Preview Card */
+    .video-visual-card {
+      width: 320px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .video-thumbnail-frame {
+      width: 100%;
+      height: 170px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      background: #000000;
+    }
+
+    .video-thumbnail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .video-thumbnail-frame:hover .video-thumbnail-img {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .play-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(239, 68, 68, 0.9);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .video-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-tertiary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-hairline);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--ink-tertiary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--ink-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--ink-primary);
+    }
+
+    /* ==========================================================================
+       ReUI-adapted components (patterns of @reui/stepper, @reui/timeline,
+       @reui/icon-stack - free registry items - ported to the vanilla
+       design system of this prototype)
+       ========================================================================== */
+    /* Icon Stack: layered isometric planes + centered stroke icon */
+    .icon-stack {
+      position: relative;
+      width: 46px;
+      height: 46px;
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-oxford);
+    }
+    .icon-stack-plane {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      background: var(--accent-oxford-subtle);
+      border: 1px solid var(--border-hairline);
+      transform: translate(5px, 5px);
+      opacity: 0.8;
+    }
+    .icon-stack-plane.is-back {
+      transform: translate(-4px, -4px);
+      background: var(--surface-subtle);
+      opacity: 0.7;
+    }
+    .icon-stack > svg { position: relative; z-index: 1; }
+    .icon-stack-sm { width: 38px; height: 38px; }
+    .icon-stack-sm .icon-stack-plane { border-radius: 8px; transform: translate(4px, 4px); }
+    .icon-stack-sm .icon-stack-plane.is-back { transform: translate(-3px, -3px); }
+    .track-col-id .icon-stack { margin-bottom: 0.6rem; }
+    .lab-card-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+
+    /* Stepper: recommended study sequence */
+    .stepper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-subtle);
+      margin-bottom: 1.75rem;
+    }
+    .stepper-item { display: flex; align-items: center; gap: 0.6rem; flex: none; }
+    .stepper-indicator {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-tertiary);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-hairline);
+      flex: none;
+    }
+    .stepper-indicator svg { width: 14px; height: 14px; }
+    .stepper-item.is-active .stepper-indicator {
+      background: var(--accent-oxford);
+      border-color: var(--accent-oxford);
+      color: #ffffff;
+      box-shadow: 0 0 0 4px var(--accent-oxford-subtle);
+    }
+    .stepper-title { font-size: 0.8rem; font-weight: 600; color: var(--ink-secondary); white-space: nowrap; }
+    .stepper-item.is-active .stepper-title { color: var(--ink-primary); }
+    .stepper-sep { flex: 1 1 auto; height: 1px; background: var(--border-hairline); min-width: 12px; }
+
+    /* Timeline: the path to certification */
+    .roadmap-section { margin-bottom: 4.5rem; }
+    .timeline { max-width: 780px; }
+    .tl-item { position: relative; padding: 0 0 2rem 2.25rem; }
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 20px;
+      bottom: -4px;
+      width: 2px;
+      background: var(--border-hairline);
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item:last-child::before { display: none; }
+    .tl-indicator {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--border-medium);
+      z-index: 1;
+    }
+    .tl-item.is-active .tl-indicator {
+      border-color: var(--accent-oxford);
+      background: var(--accent-oxford);
+      box-shadow: 0 0 0 4px var(--accent-oxford-subtle);
+    }
+    .tl-header { display: flex; flex-direction: column; gap: 0.15rem; margin-bottom: 0.4rem; }
+    .tl-date {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-tertiary);
+    }
+    .tl-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--ink-primary); }
+    .tl-content { font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.6; max-width: 62ch; }
+    .tl-link { font-size: 0.8rem; font-weight: 600; color: var(--accent-oxford); text-decoration: none; display: inline-block; margin-top: 0.4rem; }
+
+    @media (max-width: 960px) {
+      .stepper { overflow-x: auto; }
+      .stepper-title { display: none; }
+    }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .labs-showcase-split {
+        grid-template-columns: 1fr;
+      }
+      .track-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .track-col-action {
+        text-align: left;
+      }
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .video-showcase-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .video-visual-card {
+        width: 100%;
+      }
+      .hero-headline {
+        font-size: 2.75rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Floating Scandinavian Harness Bar -->
-  <header class="harness-bar" role="banner">
-    <div class="harness-brand">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ink-primary);">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-      </svg>
-      <span>IR Study Companion</span>
-      <span class="harness-brand-badge">Home Academy Prototype</span>
-    </div>
-
-    <!-- Instant Switcher for Home Context -->
-    <div class="harness-switcher" role="group" aria-label="Design System Axis Switcher">
-      <button class="harness-switcher-btn" data-axis="quiet" aria-pressed="false">Quiet</button>
-      <button class="harness-switcher-btn" data-axis="editorial" aria-pressed="false">Editorial</button>
-      <button class="harness-switcher-btn active" data-axis="utilitarian" aria-pressed="true">Utilitarian</button>
-    </div>
-
-    <div class="harness-controls">
-      <a href="index.html" class="harness-ghost-btn" style="text-decoration: none;">
-        <span>Open Course Player ➔</span>
+  <!-- Masthead Navigation -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="home.html" class="brand">
+        <span class="brand-title">IR Study Companion</span>
+        <span class="brand-tag">Academic Edition</span>
       </a>
+
+      <ul class="masthead-nav">
+        <li class="nav-item"><a href="#curriculum">Curriculum (18)</a></li>
+        <li class="nav-item"><a href="#simulations">Diplomatic Labs (10)</a></li>
+        <li class="nav-item"><a href="#video-companion">Video Companion</a></li>
+        <li class="nav-item"><a href="../glossary.html">Glossary</a></li>
+        <li class="nav-item"><a href="../certificate.html">Certification</a></li>
+      </ul>
+
+      <div class="masthead-actions">
+        <button class="btn-theme" id="theme-btn" aria-label="Toggle light and dark theme">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="index.html" class="btn btn-primary">Open Courseware ➔</a>
+      </div>
     </div>
   </header>
 
-  <!-- Main Academy Viewport -->
-  <main class="home-viewport" role="main">
-    
-    <!-- Hero Statement -->
-    <section class="home-hero">
-      <div class="home-eyebrow">Interactive Course Platform</div>
-      <h1 class="home-title">Master International Relations with Rigor & Clarity</h1>
-      <p class="home-description">
-        A structured, peer-verified curriculum covering classical theories, global economic architecture, international public law, and modern diplomacy—powered by active recall and interactive decision-making labs.
-      </p>
-    </section>
+  <main class="main-wrap">
 
-    <!-- Dynamic Resume Learning Card (Command Center) -->
-    <section class="resume-card" aria-label="Resume Current Course">
-      <div class="resume-content">
-        <div class="resume-header-meta">
-          <span class="resume-tag">Active Lesson</span>
-          <span style="color: var(--ink-tertiary);">Track 1 • Module 023</span>
-        </div>
-        <div class="resume-lesson-title">2. Defensive vs. Offensive Realism: Anarchy, Power & The Security Dilemma</div>
-        
-        <div class="resume-progress-container">
-          <div class="resume-progress-track">
-            <div class="resume-progress-fill" style="width: 20%;"></div>
-          </div>
-          <div class="resume-progress-caption tabular-number">
-            1 of 5 lessons completed (20%) • Est. 14 min remaining
-          </div>
-        </div>
+    <!-- Hero Section: Editorial Left + Mind Map Showcase Right -->
+    <section class="hero-section">
+      <div class="hero-eyebrow">
+        <span>The Structured Open-Access Curriculum in International Relations</span>
       </div>
 
-      <a href="index.html" class="resume-action-btn">
-        <span>Continue Learning</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
-      </a>
-    </section>
-
-    <!-- Curriculum Metrics Strip -->
-    <section class="metrics-strip" aria-label="Curriculum Statistics">
-      <div class="metric-cell">
-        <div class="metric-value tabular-number">18</div>
-        <div class="metric-label">Core Modules</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-value tabular-number">157</div>
-        <div class="metric-label">Structured Lessons</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-value tabular-number">156</div>
-        <div class="metric-label">Active Checkpoints</div>
-      </div>
-      <div class="metric-cell">
-        <div class="metric-value tabular-number">3</div>
-        <div class="metric-label">Simulation Labs</div>
-      </div>
-    </section>
-
-    <!-- 4 Structured Learning Tracks -->
-    <section aria-label="Curriculum Tracks">
-      <div class="home-section-header">
+      <div class="hero-grid">
         <div>
-          <div class="eyebrow-label" style="margin-bottom: 0.25rem;">Curriculum Map</div>
-          <h2 class="home-section-title" style="margin: 0;">4 Structured Learning Tracks</h2>
+          <h1 class="hero-headline">
+            Understanding global politics with <em>rigor</em>, <em>structure</em>, and <em>clarity</em>.
+          </h1>
+          <p class="hero-standfirst">
+            An academically rigorous study companion covering foundational paradigms, geopolitical history, international political economy, and diplomatic statecraft. Grounded in active recall checkpoints and 10 interactive decision-making labs.
+          </p>
+          <div class="hero-actions">
+            <a href="index.html" class="btn btn-primary" style="padding: 0.65rem 1.25rem;">Begin Curriculum</a>
+            <a href="#curriculum" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">Browse 18 Modules</a>
+            <a href="#simulations" class="btn btn-secondary" style="padding: 0.65rem 1.25rem;">Try Decision Lab</a>
+          </div>
         </div>
-        <div class="home-section-subtitle">Self-paced • From foundational theory to empirical analysis</div>
-      </div>
 
-      <div class="tracks-grid">
-        
-        <!-- Track 1 -->
-        <article class="track-card">
-          <div>
-            <div class="track-eyebrow-row">
-              <span class="track-number">Track 1</span>
-              <span class="track-badge tabular-number">5 Modules • 42 Lessons</span>
-            </div>
-            <h3 class="track-title">Foundations of Global Politics & IR Theories</h3>
-            <p class="track-description">
-              Core paradigms of international relations: Realism, Liberalism, Constructivism, Rational Choice, and Foreign Policy Analysis (FPA).
-            </p>
-            
-            <ul class="track-modules-list">
-              <li class="track-module-item">
-                <span>010 Introduction to International Relations</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">7 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>023 Theories of International Relations</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">10 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>033 Foreign Policy Analysis (FPA)</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">8 lessons</span>
-              </li>
-            </ul>
+        <!-- Real Mind Map Canvas Showcase -->
+        <div class="mindmap-showcase">
+          <div class="mindmap-header">
+            <span>Canonical Framework Diagram</span>
+            <span class="mindmap-badge"><i class="fa fa-sitemap"></i> Chapter 010</span>
           </div>
 
-          <div class="track-footer">
-            <span class="eyebrow-label" style="color: var(--ink-tertiary);">Current Track</span>
-            <a href="index.html" class="track-link-btn">
-              <span>View Track Syllabus</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </a>
+          <div class="mindmap-preview-frame">
+            <img src="../assets/images/mindmap_chapter_010_poster.png" alt="International Relations Concept Map" class="mindmap-preview-img" onerror="this.src='https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80'">
+          </div>
+
+          <div class="paradigm-pills">
+            <span class="paradigm-pill pill-realism">● Realism (Anarchy & Power)</span>
+            <span class="paradigm-pill pill-liberalism">● Liberalism (Institutions)</span>
+            <span class="paradigm-pill pill-constructivism">● Constructivism (Norms)</span>
+          </div>
+
+          <div class="mindmap-caption">
+            <span>Visual Concept Map: 34 interconnected theoretical nodes</span>
+            <a href="index.html" style="color: var(--accent-oxford); font-weight: 600; text-decoration: none; font-size: 0.775rem;">Explore Canvas ➔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Bar -->
+    <section class="metrics-bar">
+      <div class="metric-entry">
+        <span class="metric-value">18</span>
+        <span class="metric-label">Structured Modules</span>
+        <span class="metric-caption">Covering theory, history, IPE, and regional diplomacy</span>
+      </div>
+      <div class="metric-entry">
+        <span class="metric-value">157</span>
+        <span class="metric-label">Curated Lessons</span>
+        <span class="metric-caption">Ground-truth citations verified via CrossRef</span>
+      </div>
+      <div class="metric-entry">
+        <span class="metric-value">10</span>
+        <span class="metric-label">Diplomatic Decision Labs</span>
+        <span class="metric-caption">Interactive strategic sandboxes (zero external runtime)</span>
+      </div>
+      <div class="metric-entry">
+        <span class="metric-value">156</span>
+        <span class="metric-label">Active Recall Checks</span>
+        <span class="metric-caption">Immediate feedback assessments per chapter</span>
+      </div>
+    </section>
+
+    <!-- Curriculum Tracks -->
+    <section id="curriculum" style="margin-bottom: 4.5rem;">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">The Four Learning Tracks</h2>
+          <div class="section-subhead">A linear academic progression from theoretical foundations to complex multilateral disputes</div>
+        </div>
+      </div>
+
+      <!-- ReUI-adapted stepper: recommended study sequence -->
+      <nav class="stepper" aria-label="Recommended study sequence">
+        <div class="stepper-item is-active">
+          <span class="stepper-indicator">1</span>
+          <span class="stepper-title">Foundations</span>
+        </div>
+        <span class="stepper-sep"></span>
+        <div class="stepper-item">
+          <span class="stepper-indicator">2</span>
+          <span class="stepper-title">Security &amp; History</span>
+        </div>
+        <span class="stepper-sep"></span>
+        <div class="stepper-item">
+          <span class="stepper-indicator">3</span>
+          <span class="stepper-title">Political Economy</span>
+        </div>
+        <span class="stepper-sep"></span>
+        <div class="stepper-item">
+          <span class="stepper-indicator">4</span>
+          <span class="stepper-title">Law &amp; Regionalism</span>
+        </div>
+        <span class="stepper-sep"></span>
+        <div class="stepper-item">
+          <span class="stepper-indicator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></span>
+          <span class="stepper-title">Certification</span>
+        </div>
+      </nav>
+
+      <div class="tracks-container">
+        <!-- Track 1 -->
+        <article class="track-row">
+          <div class="track-col-id">
+            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+            <span class="track-num">Track 01</span>
+            <span class="track-scope">Foundations · 5 Modules</span>
+          </div>
+          <div class="track-col-info">
+            <a href="index.html" class="track-name">Global Politics & IR Theoretical Traditions</a>
+            <p class="track-desc">Ontological debates: Classical Realism, Structural Neorealism, Liberal Institutionalism, Marxism, and Foreign Policy Analysis (FPA).</p>
+          </div>
+          <div class="track-col-modules">
+            <span class="module-bullet">• Discipline Foundations & Social Sciences</span>
+            <span class="module-bullet">• Paradigmatic Great Debates</span>
+            <span class="module-bullet">• Allison's Bureaucratic Politics Models</span>
+          </div>
+          <div class="track-col-action">
+            <a href="index.html" class="btn btn-secondary">Explore ➔</a>
           </div>
         </article>
 
         <!-- Track 2 -->
-        <article class="track-card">
-          <div>
-            <div class="track-eyebrow-row">
-              <span class="track-number">Track 2</span>
-              <span class="track-badge tabular-number">4 Modules • 34 Lessons</span>
-            </div>
-            <h3 class="track-title">Security Studies, Warfare & Diplomacy</h3>
-            <p class="track-description">
-              Causes of armed conflict, nuclear deterrence, human security, intelligence, and classical bilateral/multilateral diplomacy.
-            </p>
-
-            <ul class="track-modules-list">
-              <li class="track-module-item">
-                <span>022 Introduction to Security Studies</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">9 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>032 Diplomacy & International Politics</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">8 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>034 Contemporary Security Challenges</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">9 lessons</span>
-              </li>
-            </ul>
+        <article class="track-row">
+          <div class="track-col-id">
+            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+            <span class="track-num">Track 02</span>
+            <span class="track-scope">Security · 4 Modules</span>
           </div>
-
-          <div class="track-footer">
-            <span class="eyebrow-label" style="color: var(--ink-tertiary);">Intermediate</span>
-            <a href="index.html" class="track-link-btn">
-              <span>View Track Syllabus</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </a>
+          <div class="track-col-info">
+            <a href="../history-matters.html" class="track-name">Security Studies, Warfare & Diplomatic History</a>
+            <p class="track-desc">The causes of war, Westphalian sovereignty, balance of power mechanics, deterrence doctrine, and non-traditional security crises.</p>
+          </div>
+          <div class="track-col-modules">
+            <span class="module-bullet">• Modern World History (1648–Cold War)</span>
+            <span class="module-bullet">• Strategic Deterrence & MAD Calculations</span>
+            <span class="module-bullet">• Bilateral & Multilateral Statecraft</span>
+          </div>
+          <div class="track-col-action">
+            <a href="../history-matters.html" class="btn btn-secondary">Explore ➔</a>
           </div>
         </article>
 
         <!-- Track 3 -->
-        <article class="track-card">
-          <div>
-            <div class="track-eyebrow-row">
-              <span class="track-number">Track 3</span>
-              <span class="track-badge tabular-number">4 Modules • 35 Lessons</span>
-            </div>
-            <h3 class="track-title">International Political Economy (IPE)</h3>
-            <p class="track-description">
-              Bretton Woods institutions, trade diplomacy, globalization, supply-chain weaponization, and the political economy of development.
-            </p>
-
-            <ul class="track-modules-list">
-              <li class="track-module-item">
-                <span>021 International Political Economy</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">9 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>043 Political Economy of Development</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">8 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>050 WTO & Multilateral Trade Diplomacy</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">10 lessons</span>
-              </li>
-            </ul>
+        <article class="track-row">
+          <div class="track-col-id">
+            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span>
+            <span class="track-num">Track 03</span>
+            <span class="track-scope">Economy · 4 Modules</span>
           </div>
-
-          <div class="track-footer">
-            <span class="eyebrow-label" style="color: var(--ink-tertiary);">Intermediate</span>
-            <a href="index.html" class="track-link-btn">
-              <span>View Track Syllabus</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </a>
+          <div class="track-col-info">
+            <a href="../introduction-ipe.html" class="track-name">International Political Economy (IPE)</a>
+            <p class="track-desc">The Bretton Woods monetary system, WTO trade rounds, supply chain chokepoints, dependency theory, and development architecture.</p>
+          </div>
+          <div class="track-col-modules">
+            <span class="module-bullet">• Classical Mercantilism vs Free Trade</span>
+            <span class="module-bullet">• Global Financial Institutions (IMF/WB)</span>
+            <span class="module-bullet">• GATT Article XX & Dispute Settlement</span>
+          </div>
+          <div class="track-col-action">
+            <a href="../introduction-ipe.html" class="btn btn-secondary">Explore ➔</a>
           </div>
         </article>
 
         <!-- Track 4 -->
-        <article class="track-card">
-          <div>
-            <div class="track-eyebrow-row">
-              <span class="track-number">Track 4</span>
-              <span class="track-badge tabular-number">5 Modules • 46 Lessons</span>
-            </div>
-            <h3 class="track-title">International Law, Regionalism & Indonesia</h3>
-            <p class="track-description">
-              UN Charter, maritime law (UNCLOS 1982), ASEAN Community building, and Indonesia's independent and active foreign policy doctrine.
-            </p>
-
-            <ul class="track-modules-list">
-              <li class="track-module-item">
-                <span>013 Indonesian Political Perspectives</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">8 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>042 International Dispute Settlement & Law</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">10 lessons</span>
-              </li>
-              <li class="track-module-item">
-                <span>044 Southeast Asian Regionalism & ASEAN</span>
-                <span class="tabular-number" style="color: var(--ink-tertiary);">10 lessons</span>
-              </li>
-            </ul>
+        <article class="track-row">
+          <div class="track-col-id">
+            <span class="icon-stack" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
+            <span class="track-num">Track 04</span>
+            <span class="track-scope">Law & Regionalism · 5 Modules</span>
           </div>
-
-          <div class="track-footer">
-            <span class="eyebrow-label" style="color: var(--ink-tertiary);">Advanced</span>
-            <a href="index.html" class="track-link-btn">
-              <span>View Track Syllabus</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </a>
+          <div class="track-col-info">
+            <a href="../basic-inter-law.html" class="track-name">International Law, Regional Architecture & Indonesia</a>
+            <p class="track-desc">Public international law, UN collective security, Law of the Sea (UNCLOS), ASEAN consensus, and Indonesia’s Bebas-Aktif doctrine.</p>
+          </div>
+          <div class="track-col-modules">
+            <span class="module-bullet">• ICJ Jurisprudence & UN Sanctions</span>
+            <span class="module-bullet">• Maritime Zones & Innocent Passage</span>
+            <span class="module-bullet">• South China Sea Code of Conduct</span>
+          </div>
+          <div class="track-col-action">
+            <a href="../basic-inter-law.html" class="btn btn-secondary">Explore ➔</a>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- Simulation Labs Showcase -->
-    <section aria-label="Interactive Labs">
+    <!-- ReUI-adapted timeline: the path to certification -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">The Path to Certification</h2>
+          <div class="section-subhead">A five-stage academic progression from first principles to a verified credential</div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="tl-item">
+          <span class="tl-indicator"></span>
+          <div class="tl-header">
+            <span class="tl-date">Stage 01 &middot; Track 01</span>
+            <h3 class="tl-title">Theoretical Foundations</h3>
+          </div>
+          <div class="tl-content">Build the discipline's conceptual base: classical realism, structural neorealism, liberal institutionalism, and constructivism &mdash; consolidated through active-recall checkpoints.</div>
+          <a href="#curriculum" class="tl-link">Open Track 01 &rarr;</a>
+        </article>
+
+        <article class="tl-item">
+          <span class="tl-indicator"></span>
+          <div class="tl-header">
+            <span class="tl-date">Stage 02 &middot; Track 02</span>
+            <h3 class="tl-title">Security &amp; Diplomatic History</h3>
+          </div>
+          <div class="tl-content">From Westphalian sovereignty to Cold War deterrence: the historical mechanics of war, alliances, and strategic stability.</div>
+          <a href="#curriculum" class="tl-link">Open Track 02 &rarr;</a>
+        </article>
+
+        <article class="tl-item">
+          <span class="tl-indicator"></span>
+          <div class="tl-header">
+            <span class="tl-date">Stage 03 &middot; Track 03</span>
+            <h3 class="tl-title">International Political Economy</h3>
+          </div>
+          <div class="tl-content">The Bretton Woods monetary order, trade regimes, and the politics of development and dependency.</div>
+          <a href="#curriculum" class="tl-link">Open Track 03 &rarr;</a>
+        </article>
+
+        <article class="tl-item">
+          <span class="tl-indicator"></span>
+          <div class="tl-header">
+            <span class="tl-date">Stage 04 &middot; Track 04</span>
+            <h3 class="tl-title">Law, Institutions &amp; Regionalism</h3>
+          </div>
+          <div class="tl-content">Public international law, UN collective security, UNCLOS maritime zones, ASEAN consensus, and Indonesia's <em>Bebas-Aktif</em> doctrine.</div>
+          <a href="#curriculum" class="tl-link">Open Track 04 &rarr;</a>
+        </article>
+
+        <article class="tl-item is-active">
+          <span class="tl-indicator"></span>
+          <div class="tl-header">
+            <span class="tl-date">Stage 05 &middot; Final Assessment</span>
+            <h3 class="tl-title">Verified Certification</h3>
+          </div>
+          <div class="tl-content">Sit the comprehensive examination across all four tracks and earn a verifiable academic credential.</div>
+          <a href="../certificate.html" class="tl-link">Review requirements &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Diplomatic Decision Labs + Playable Sandbox -->
+    <section id="simulations" class="labs-section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Diplomatic Decision Labs</h2>
+          <div class="section-subhead">Test theoretical paradigms against realistic crisis constraints in zero-dependency sandboxes</div>
+        </div>
+      </div>
+
+      <div class="labs-showcase-split">
+        <!-- Live Playable Sandbox: Prisoner's Dilemma -->
+        <div class="playable-sandbox" id="game-theory-sim">
+          <div class="sandbox-header">
+            <span class="sandbox-tag"><i class="fa fa-gamepad"></i> Interactive Lab 02 · Game Theory</span>
+            <span class="sandbox-status-chip">● Live Simulation Sandbox</span>
+          </div>
+
+          <h3 class="sandbox-title">The Prisoner's Dilemma Strategic Arena</h3>
+          <p class="sandbox-prompt">
+            You represent State A. State B is an AI opponent playing Axelrod's <strong>'Tit-for-Tat'</strong> strategy. Will you seek mutual disarmament (Cooperate) or clandestinely militarize (Defect)?
+          </p>
+
+          <div class="sandbox-duel-grid">
+            <div class="duel-card">
+              <span class="duel-role">Your Payoff (State A)</span>
+              <div class="duel-score" id="gt-score-a">0</div>
+              <div class="duel-actions">
+                <button class="btn-sim btn-sim-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate</button>
+                <button class="btn-sim btn-sim-defect" onclick="playGameTheory('defect')">⚔️ Defect</button>
+              </div>
+            </div>
+
+            <div class="duel-card">
+              <span class="duel-role">Opponent (State B AI)</span>
+              <div class="duel-score" id="gt-score-b" style="color: var(--accent-oxford);">0</div>
+              <div style="font-size: 0.775rem; color: var(--ink-tertiary); margin-top: 0.85rem;" id="gt-opp-status">
+                Waiting for move...
+              </div>
+            </div>
+          </div>
+
+          <div class="sandbox-log" id="gt-log" aria-live="polite">
+            <div class="sandbox-log-line">> Simulation initialized. Opponent memory cleared. Choose your strategy.</div>
+          </div>
+        </div>
+
+        <!-- 3 Highlighted Labs from the Catalog of 10 -->
+        <div class="labs-compact-grid">
+          <article class="lab-card-sm">
+            <div class="lab-card-head">
+                <span class="icon-stack icon-stack-sm" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+                <div class="sandbox-tag">Lab 01 · FPA Model</div>
+              </div>
+              <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
+              <p class="lab-card-desc">Simulate Graham Allison's bureaucratic models in a naval standoff. Balance brinkmanship against accidental war.</p>
+            </div>
+            <a href="../models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
+          </article>
+
+          <article class="lab-card-sm">
+            <div class="lab-card-head">
+                <span class="icon-stack icon-stack-sm" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg></span>
+                <div class="sandbox-tag">Lab 07 · Law of the Sea</div>
+              </div>
+              <h4 class="lab-card-title">UNCLOS Maritime Zone Delimiter</h4>
+              <p class="lab-card-desc">Classify jurisdictional limits from Territorial Sea (12 nm) to the high seas Continental Shelf.</p>
+            </div>
+            <a href="../law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
+          </article>
+
+          <article class="lab-card-sm">
+            <div class="lab-card-head">
+                <span class="icon-stack icon-stack-sm" aria-hidden="true"><span class="icon-stack-plane is-back"></span><span class="icon-stack-plane"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span>
+                <div class="sandbox-tag">Lab 05 · Global Governance</div>
+              </div>
+              <h4 class="lab-card-title">UNSC Veto Chamber</h4>
+              <p class="lab-card-desc">Draft a peacekeeping resolution and survive the P5 veto gauntlet across chapters VII enforcement.</p>
+            </div>
+            <a href="../un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Video Companion Channel Showcase (PRESERVED ORIGINAL STRUCTURE) -->
+    <section class="video-companion-section" id="video-companion">
       <div class="home-section-header">
         <div>
-          <div class="eyebrow-label" style="margin-bottom: 0.25rem;">Capstone Scenarios</div>
-          <h2 class="home-section-title" style="margin: 0;">Interactive Diplomatic Labs</h2>
+          <h2 class="home-section-title">Official Video Course Companion</h2>
+          <div class="home-section-subtitle">Visual explainers, 10-minute master episodes, and animated concept deep-dives</div>
         </div>
-        <div class="home-section-subtitle">Apply theory through real-time crisis scenarios</div>
       </div>
 
-      <div class="labs-grid">
-        
-        <article class="lab-card">
-          <div>
-            <span class="lab-badge-type">Simulation Lab 01</span>
-            <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
-            <p class="lab-card-desc">
-              Manage brinkmanship, military alerts, and alliance credibility in a simulated naval standoff without inadvertent escalation.
-            </p>
+      <div class="video-showcase-box">
+        <div style="flex: 1; min-width: 280px;">
+          <span class="video-channel-badge">YouTube Channel</span>
+          <h3 class="video-channel-name">@IRinANutshell</h3>
+          <p class="video-channel-desc">
+            Produced with local Kokoro-82M neural voices and rapid-fire visual beats. Watch our flagship 10-minute master episode: <em>"The Anarchy Problem — Who's in Charge of the Planet?"</em>, or explore mini-documentaries accompanying each core module.
+          </p>
+          <div class="video-channel-actions">
+            <a href="https://www.youtube.com/@IRinANutshell" target="_blank" rel="noopener noreferrer" class="sync-btn sync-btn-primary">
+              <i class="fa fa-youtube-play" style="color: #ef4444;"></i> Visit @IRinANutshell ➔
+            </a>
+            <a href="../certificate.html" class="sync-btn sync-btn-secondary">
+              <i class="fa fa-graduation-cap"></i> Academic Certificates
+            </a>
+            <a href="../glossary.html" class="sync-btn sync-btn-secondary">
+              <i class="fa fa-book"></i> Curated Glossary (122 Terms)
+            </a>
           </div>
-          <button class="lab-card-btn" onclick="alert('Launching Crisis Escalation Simulator...');">
-            <span>Launch Simulation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </article>
+        </div>
 
-        <article class="lab-card">
-          <div>
-            <span class="lab-badge-type">Simulation Lab 02</span>
-            <h4 class="lab-card-title">Game Theory Strategic Arena</h4>
-            <p class="lab-card-desc">
-              Iterated Prisoner's Dilemma, Stag Hunt, and Chicken game payoffs to model international cooperation under anarchy.
-            </p>
+        <!-- Video Thumbnail Visual Card -->
+        <div class="video-visual-card">
+          <div class="video-thumbnail-frame">
+            <img src="../learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png" alt="@IRinANutshell Video Poster" class="video-thumbnail-img" onerror="this.src='../assets/images/mindmap_chapter_010_poster.png'">
+            <div class="video-play-overlay">
+              <div class="play-circle"><i class="fa fa-play" style="margin-left: 3px;"></i></div>
+            </div>
           </div>
-          <button class="lab-card-btn" onclick="alert('Launching Game Theory Strategic Arena...');">
-            <span>Launch Simulation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </article>
-
-        <article class="lab-card">
-          <div>
-            <span class="lab-badge-type">Simulation Lab 03</span>
-            <h4 class="lab-card-title">WTO Dispute Settlement Panel</h4>
-            <p class="lab-card-desc">
-              Represent sovereign trade delegations, defend tariffs under GATT Article XX exceptions, and adjudicate subsidy claims.
-            </p>
+          <div class="video-meta-label">
+            <span>CH030 · Basic Realism</span>
+            <span>1080p Master</span>
           </div>
-          <button class="lab-card-btn" onclick="alert('Launching WTO Dispute Settlement Panel...');">
-            <span>Launch Simulation</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </article>
-
+        </div>
       </div>
     </section>
 
-    <!-- Home Footer -->
-    <footer class="home-footer">
-      <div>IR Study Companion — Open Access Educational Platform for International Relations.</div>
-      <div style="display: flex; gap: 1.5rem;">
-        <a href="index.html">Course Player</a>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>IR Study Companion &copy; 2026. Rigorous Open-Access Academic Course Platform.</div>
+      <div class="footer-links">
+        <a href="index.html">Courseware Player</a>
+        <a href="../glossary.html">Glossary (122 Terms)</a>
+        <a href="../about-me.html">About the Author</a>
         <a href="https://github.com/cantikapf/IR-study-companion" target="_blank" rel="noopener">GitHub</a>
       </div>
     </footer>
 
   </main>
 
-  <script src="prototype.js"></script>
+  <script>
+    // Theme Switcher
+    const themeBtn = document.getElementById('theme-btn');
+    const root = document.documentElement;
+
+    themeBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') || 'light';
+      const target = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', target);
+      localStorage.setItem('ir_theme_pref', target);
+    });
+
+    const savedTheme = localStorage.getItem('ir_theme_pref');
+    if (savedTheme) {
+      root.setAttribute('data-theme', savedTheme);
+    }
+
+    // Playable Prisoner's Dilemma Simulator Logic
+    let gtScoreA = 0;
+    let gtScoreB = 0;
+    let lastOpponentMove = 'cooperate'; // Tit for Tat starts friendly
+    let roundNum = 1;
+
+    window.playGameTheory = function(playerMove) {
+      const oppMove = lastOpponentMove;
+      let changeA = 0, changeB = 0;
+      let roundDesc = "";
+
+      if (playerMove === 'cooperate' && oppMove === 'cooperate') {
+        changeA = 3; changeB = 3;
+        roundDesc = "Mutual Cooperation (+3, +3) — Pareto optimal outcome.";
+      } else if (playerMove === 'defect' && oppMove === 'cooperate') {
+        changeA = 5; changeB = 0;
+        roundDesc = "Temptation payoff! You defected while opponent cooperated (+5, 0).";
+      } else if (playerMove === 'cooperate' && oppMove === 'defect') {
+        changeA = 0; changeB = 5;
+        roundDesc = "Sucker's payoff! Opponent exploited your cooperation (0, +5).";
+      } else {
+        changeA = 1; changeB = 1;
+        roundDesc = "Mutual Defection (+1, +1) — Nash equilibrium trap.";
+      }
+
+      gtScoreA += changeA;
+      gtScoreB += changeB;
+      lastOpponentMove = playerMove; // Tit for Tat mimics player's last action
+
+      document.getElementById('gt-score-a').textContent = gtScoreA;
+      document.getElementById('gt-score-b').textContent = gtScoreB;
+      document.getElementById('gt-opp-status').textContent = `Round ${roundNum}: Opponent played ${oppMove.toUpperCase()}`;
+
+      const log = document.getElementById('gt-log');
+      const newLine = document.createElement('div');
+      newLine.className = 'sandbox-log-line';
+      newLine.textContent = `> R${roundNum}: You: ${playerMove.toUpperCase()}, Opp: ${oppMove.toUpperCase()} | ${roundDesc}`;
+      log.insertBefore(newLine, log.firstChild);
+      roundNum++;
+    };
+  </script>
 </body>
 </html>
