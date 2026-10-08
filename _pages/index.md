@@ -1263,7 +1263,7 @@ permalink: /
         <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lms-ink-tertiary);">YouTube Channel</span>
         <h3 style="font-size: 1.4rem; font-weight: 750; color: var(--lms-ink-primary); margin: 0.35rem 0 0.5rem;">@IRinANutshell</h3>
         <p style="font-size: 0.95rem; color: var(--lms-ink-secondary); line-height: 1.6; margin: 0 0 1.25rem;">
-          Produced with local Kokoro-82M neural voices and rapid-fire visual beats. Watch our flagship 10-minute master episode: <em>"The Anarchy Problem — Who's in Charge of the Planet?"</em>, or explore mini-documentaries accompanying each core module.
+          Produced with concise academic narration and rapid-fire visual breakdowns. Watch our flagship 10-minute master episode: <em>"The Anarchy Problem — Who's in Charge of the Planet?"</em>, or explore mini-documentaries accompanying each core module.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <a href="https://www.youtube.com/@IRinANutshell" target="_blank" rel="noopener noreferrer" class="sync-btn sync-btn-primary" style="text-decoration: none;">
@@ -1278,7 +1278,7 @@ permalink: /
       <!-- Video Thumbnail Visual Card -->
       <a href="https://www.youtube.com/watch?v=3VDcQVYty5M" target="_blank" rel="noopener noreferrer" style="width: 320px; background: var(--lms-subtle); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-md); padding: 1rem; display: flex; flex-direction: column; gap: 0.65rem; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;">
         <div style="width: 100%; height: 170px; border-radius: var(--lms-radius-sm); overflow: hidden; position: relative; background: #000000;">
-          <img src="{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png" alt="@IRinANutshell Video Poster" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.95;" onerror="this.src='{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png'">
+          <img src="{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png" alt="@IRinANutshell Video Poster" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.95;" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/3VDcQVYty5M/maxresdefault.jpg';">
           <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;">
             <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(239, 68, 68, 0.9); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
               <i class="fa fa-play" style="margin-left: 3px;"></i>
