@@ -26,6 +26,7 @@
   box-shadow: var(--lms-shadow-md);
   overflow: hidden;
   color: var(--lms-ink-primary);
+  scroll-margin-top: 80px;
 }
 
 .lab-shell[data-cat="security"]  { --lab-accent: #dc2626; --lab-accent-ink: #b91c1c; --lab-accent-soft: rgb(220 38 38 / 7%); }

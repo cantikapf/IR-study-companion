@@ -13,6 +13,31 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 Phase G2: Full 9 Diplomatic Mini-Games Retrofit Completed:
+1. `Cakupan Retrofit 9 Lab` (selaras spec sheet §6 `wiki/game-design-bible.md`):
+   - Lab 01 Crisis Command (`sim_crisis.html`): 3 decision beats (airstrike/blockade/backchannel, second letter/Trollope ploy, Turkey quid-pro-quo), 12s DEFCON timer, SIGINT U-2 Act 2, Allison Model I/II/III reveal.
+   - Lab 02 Diplomacy Duel (`sim_game_theory.html`): Konsolidasi streak ke `window.LabGame.streak` (math 5→10→18→66 terverifikasi 100% identik).
+   - Lab 03 Consensus Market (`sim_wto.html`): 8 voting blocs, 10 Diplomatic Capital points, 5 pillars concessions, SIGINT leak Cairns bluff, WTO Single Undertaking & Art. IX reveal.
+   - Lab 04 Spiral Watch (`sim_security_dilemma.html`): Beta hidden posture (Cautious Reactive vs Opportunistic), CBM restraint streak bonus (-5 threat from R3), SIGINT decrypt R3, Jervis Spiral Model reveal.
+   - Lab 05 Veto Gauntlet (`sim_unsc_veto.html`): P5 cards dengan 2 red lines, 5 Amendment Tokens, 10 E10 votes, SIGINT aide-mémoire Moscow, UN Charter Art. 27(3) P5 veto reveal.
+   - Lab 06 Two-Table Pressure (`sim_treaty_negotiation.html`): 6 turns, 2 AP budget per turn across Level I (Int) & Level II (Dom), max 1-point skew rule, ZOPA expansion, SIGINT Turn 4, Putnam Two-Level Games reveal.
+   - Lab 07 Zone Runner (`sim_unclos_zones.html`): 10 maritime incidents, 3 Incident Tokens, consecutive x1.5 combo, 1-time SIGINT satellite pass, visual ladder, UNCLOS 1982 articles reveal.
+   - Lab 08 Equilibrium Keeper (`sim_balance_of_power.html`): 4 July-1914 crisis shocks (Sarajevo, Blank Check, Mobilization, Belgium), 2 reallocation points, equilibrium threshold 20 pts, SIGINT cable Rome, Waltz/Morgenthau balance of power reveal.
+   - Lab 09 Chair's Gambit (`sim_scs_dispute.html`): 3 drafting rounds, 6 faction meters (claimants, non-claimants, China, partners, unity, substance), SIGINT Phnom Penh R2, ASEAN Way & 2012 precedent reveal.
+   - Lab 10 Second-Strike Ledger (`sim_nuclear_deterrence.html`): 4 Fiscal Years, 100 budget units across ICBM/SLBM/Bombers/BMD, counterforce stress-tests, stability meter, SIGINT FY2, Brodie/Schelling MAD reveal.
+2. `Design System & Platform Hardening`:
+   - `assets/css/lab-shell.css`: menambahkan `scroll-margin-top: 80px;` pada root `.lab-shell` untuk menjamin clearance sticky navbar saat anchor scroll / jump.
+3. `QA Assets & Test Harness`:
+   - `scripts/verify_g1_playwright.js`: di-commit sebagai aset QA resmi (35/35 PASS).
+   - `scripts/verify_g2_playwright.js`: test harness E2E komprehensif menguji seluruh 9 lab baru (74/74 checks PASS, total combined 109/109 checks PASS).
+4. `Verifikasi Multi-Lapis`:
+   - pytest: 369/369 PASS (0.54s).
+   - Jekyll build: PASS bersih tanpa error (60.7s).
+   - Stopwords scan: 0 kata stopword bahasa Indonesia di seluruh 10 file includes.
+   - Playwright E2E: 74/74 PASS pada `verify_g2_playwright.js` dan 35/35 PASS pada `verify_g1_playwright.js`.
+   - Visual Gate (`vision_analyze`): Briefing light dan debrief dark terverifikasi 100% bebas overlap, bebas clipping, teks terbaca jelas, dan tema konsisten.
+5. `Status & Handoff`: Phase G2 SELESAI. Berhenti untuk review direktur / ACC pengguna sebelum melangkah ke Phase G3.
+
 2026-10-08 - M10 G1 ACC'D → G2 AUTHORIZED (gerbang pengguna lolos):
 1. `ACC Pengguna`: "lanjutkan aja" setelah audit direktur `fe447df` — pilot Lab 02 (Diplomacy Duel) diterima tanpa revisi; catatan minor (streak lokal di lab, `scripts/verify_g1_playwright.js` untracked) ditunda ke G2 sebagai opsi konsolidasi, bukan blocker.
 2. `Status bible` (`wiki/game-design-bible.md`): G1 ACC'D · G2 AUTHORIZED · G3 pending.

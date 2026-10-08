@@ -1,324 +1,623 @@
 <style>
-#security-dilemma-sim, #unsc-veto-sim {
-    background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151;
+/* Lab 05 — Veto Gauntlet: UNSC Resolution Chamber */
+#unsc-veto-sim .sim-unsc-p5-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
 }
-.sim-unsc-header {
-    border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px;
+#unsc-veto-sim .sim-unsc-p5-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-sm, 6px);
+  padding: 12px 14px;
+  transition: all 0.2s ease;
 }
-.sim-unsc-header h3 {
-    margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;
+#unsc-veto-sim .sim-unsc-p5-card.is-veto {
+  border-color: var(--lab-lose);
+  background: rgba(220, 38, 38, 0.06);
 }
-.sim-unsc-desc {
-    color: #d1d5db;
-    margin-top: 10px;
-    line-height: 1.5;
+#unsc-veto-sim .sim-unsc-p5-card.is-yes {
+  border-color: var(--lab-win);
+  background: rgba(5, 150, 105, 0.05);
 }
-.sim-unsc-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+#unsc-veto-sim .sim-unsc-p5-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
 }
-@media (max-width: 768px) { .sim-unsc-grid { grid-template-columns: 1fr; } }
-.sim-unsc-panel {
-    background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151;
+#unsc-veto-sim .sim-unsc-p5-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--lms-ink-primary);
 }
-.sim-unsc-panel h4 {
-    margin-top: 0; margin-bottom: 15px; color: #f9fafb; font-size: 1.1rem;
+#unsc-veto-sim .sim-unsc-tokens-box {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-md, 8px);
+  padding: 18px 20px;
+  margin-bottom: 18px;
 }
-.sim-unsc-form-group {
-    margin-bottom: 15px;
+#unsc-veto-sim .sim-unsc-token-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--lms-radius-sm, 6px);
+  border: 1px solid var(--lms-hairline);
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: var(--lms-surface);
+  transition: all 0.15s ease;
 }
-.sim-unsc-form-group label {
-    display: block; margin-bottom: 5px; color: #9ca3af; font-weight: 500; font-size: 0.95rem;
+#unsc-veto-sim .sim-unsc-token-item:hover {
+  border-color: var(--lab-accent);
 }
-.sim-unsc-form-group select {
-    width: 100%; padding: 10px; background: #1f2937; color: #f9fafb; border: 1px solid #374151; border-radius: 6px; font-family: inherit; font-size: 1rem;
+#unsc-veto-sim .sim-unsc-token-item.is-selected {
+  border-color: var(--lab-accent);
+  background: var(--lab-accent-soft);
 }
-.sim-unsc-form-group select:focus {
-    outline: none; border-color: #60a5fa;
+#unsc-veto-sim .sim-unsc-token-checkbox {
+  margin-top: 3px;
+  cursor: pointer;
 }
-.sim-unsc-btn {
-    padding: 12px 15px; background: #374151; color: white; border: 1px solid #4b5563; border-radius: 6px; font-size: 1rem; cursor: pointer; transition: all 0.2s; width: 100%; display: block; margin-top: 20px; font-weight: bold;
+#unsc-veto-sim .sim-unsc-token-title {
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--lms-ink-primary);
+  display: block;
 }
-.sim-unsc-btn:hover:not(:disabled) {
-    background: #4b5563; border-color: #9ca3af; transform: translateY(-2px);
+#unsc-veto-sim .sim-unsc-token-desc {
+  font-size: 0.78rem;
+  color: var(--lms-ink-secondary);
+  line-height: 1.4;
+  margin-top: 2px;
+  display: block;
 }
-.sim-unsc-btn:disabled {
-    opacity: 0.5; cursor: not-allowed;
+#unsc-veto-sim .sim-unsc-e10-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
 }
-.sim-unsc-btn-restart {
-    background: transparent; border: 1px solid #4b5563; margin-top: 15px;
+#unsc-veto-sim .sim-unsc-e10-chip {
+  font-size: 0.74rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--lms-hairline);
+  color: var(--lms-ink-secondary);
 }
-.sim-unsc-btn-restart:hover {
-    background: #374151;
-}
-.sim-unsc-p5-list {
-    list-style: none; padding: 0; margin: 0;
-}
-.sim-unsc-p5-item {
-    display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #374151;
-}
-.sim-unsc-p5-item:last-child {
-    border-bottom: none;
-}
-.sim-unsc-p5-name {
-    display: flex; align-items: center; gap: 8px; font-weight: 500;
-}
-.sim-unsc-badge {
-    padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;
-}
-.sim-unsc-badge.pending {
-    background: transparent; color: #9ca3af; border: 1px solid #4b5563;
-}
-.sim-unsc-badge.approve {
-    background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid #10b981;
-}
-.sim-unsc-badge.veto {
-    background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid #ef4444;
-}
-.sim-unsc-e10-summary {
-    margin-top: 20px; padding-top: 15px; border-top: 1px dashed #374151; text-align: center; color: #9ca3af; font-size: 0.9rem;
-}
-.sim-unsc-result {
-    margin-top: 25px; padding: 20px; border-radius: 8px; display: none; animation: fadeIn 0.5s ease-out;
-}
-.sim-unsc-result.success {
-    background: rgba(16,185,129,0.05); border: 1px solid #10b981;
-}
-.sim-unsc-result.failure {
-    background: rgba(239,68,68,0.05); border: 1px solid #ef4444;
-}
-.sim-unsc-result h4 {
-    margin: 0 0 15px 0; font-size: 1.25rem; display: flex; align-items: center; gap: 8px;
-}
-.sim-unsc-result.success h4 { color: #10b981; }
-.sim-unsc-result.failure h4 { color: #ef4444; }
-.sim-unsc-analysis {
-    margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); color: #d1d5db; font-size: 0.95rem; line-height: 1.6;
-}
-.sim-unsc-veto-reasons {
-    font-size: 0.95rem; color: #f9fafb; margin-bottom: 15px;
-}
-.sim-unsc-veto-reasons ul { margin: 8px 0 0 0; padding-left: 20px; }
-.sim-unsc-veto-reasons li { margin-bottom: 5px; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+#unsc-veto-sim .sim-unsc-e10-chip.is-yes { background: var(--lab-win); color: #fff; }
+#unsc-veto-sim .sim-unsc-e10-chip.is-abs { background: var(--lab-warn); color: #fff; }
 </style>
 
-<div id="unsc-veto-sim">
-    <div class="sim-unsc-header">
-        <h3>🏛️ Simulation: The UN Security Council Chamber</h3>
-        <p class="sim-unsc-desc">You are the rotating President of the UN Security Council. A humanitarian crisis in the fictional state of 'Noviland' demands action. Draft a resolution that can survive the P5 veto gauntlet — a single veto kills the resolution.</p>
+<div class="lab-shell" id="unsc-veto-sim" data-cat="governance">
+
+  <!-- ======================= HEADER ======================= -->
+  <div class="lab-head">
+    <div class="lab-kicker">
+      <span class="lab-kicker-chip">Lab 05</span>
+      <span class="lab-kicker-track">CASE FILE · INTERNATIONAL ORGANIZATIONS</span>
+    </div>
+    <h3 class="lab-title">Veto Gauntlet: UNSC Resolution Chamber</h3>
+    <div class="lab-meta">
+      <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+      <span class="lab-meta-chip"><i class="fa fa-university" aria-hidden="true"></i> 15 Council Members</span>
+      <span class="lab-meta-chip"><i class="fa fa-pencil" aria-hidden="true"></i> 5 Amendment Tokens</span>
+      <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Strategy level</span>
+    </div>
+  </div>
+
+  <!-- ======================= BRIEFING ======================= -->
+  <div class="lab-briefing" id="sim-unsc-briefing">
+    <div class="lab-brief-grid">
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Situation</p>
+          <p>An armed conflict has erupted in a contested regional corridor, threatening hundreds of thousands of civilians. The United Nations Security Council is convened in emergency session to draft a binding humanitarian ceasefire resolution.</p>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">Your Role</p>
+          <p>You are the "Penholder" delegation holding the Council Presidency. You must attach amendment tokens to the resolution text to balance great-power red lines without gutting the support of the Elected Ten (E10).</p>
+        </div>
+      </div>
+      <div>
+        <div class="lab-brief-card" style="margin-bottom: 14px;">
+          <p class="lab-brief-label">Objectives</p>
+          <ul class="lab-obj-list">
+            <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>★★★ Unanimous Mandate:</strong> 15 affirmative votes with zero vetoes.</span></li>
+            <li class="is-warn"><i class="fa fa-adjust" aria-hidden="true"></i><span><strong>★★ Council Consensus:</strong> 9–14 affirmative votes with zero vetoes.</span></li>
+            <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>★ Bare Quorum:</strong> 6–8 votes (Fails adoption, lacks Article 27 nine-vote supermajority).</span></li>
+            <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>0★ Veto Paralysis:</strong> Any single P5 permanent member casts a negative vote.</span></li>
+          </ul>
+        </div>
+        <div class="lab-brief-card">
+          <p class="lab-brief-label">How It Works</p>
+          <ul class="lab-mech-list">
+            <li><i class="fa fa-gavel" aria-hidden="true"></i><span><strong>Article 27(3) Rule:</strong> Adoption requires 9 affirmative votes including the concurring votes of all five permanent members (P5). A single P5 "NO" kills the resolution instantly.</span></li>
+            <li><i class="fa fa-tag" aria-hidden="true"></i><span><strong>5 Amendment Tokens:</strong> Select amendments to pacify hidden P5 demands. But be careful: watering down the text too far causes the E10 to abstain.</span></li>
+            <li><i class="fa fa-eye" aria-hidden="true"></i><span><strong>SIGINT Aide-Mémoire:</strong> Review confidential intelligence regarding P5 core thresholds.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lab-brief-actions">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-unsc-btn-begin">
+        <i class="fa fa-play" aria-hidden="true"></i> Take the Council Gavel
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================= PLAY AREA ======================= -->
+  <div id="sim-unsc-play" hidden>
+    <div class="lab-hud" aria-live="polite">
+      <span class="lab-hud-chip" id="sim-unsc-hud-tokens">Amendments: <b id="sim-unsc-val-tokens">0</b> / 5 Attached</span>
+      <span class="lab-hud-chip" id="sim-unsc-hud-rule">Rule: 9 Votes Needed + 0 Vetoes</span>
+      <div class="lab-hud-actions" style="margin-left: auto; display: flex; gap: 6px;">
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-unsc-mute-btn" title="Toggle audio SFX" aria-label="Toggle audio">
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="lab-btn lab-btn-ghost" id="sim-unsc-help-btn" title="Mission Help" aria-label="Open mission help">
+          <i class="fa fa-question-circle" aria-hidden="true"></i> Help
+        </button>
+      </div>
     </div>
 
-    <div class="sim-unsc-grid">
-        <div class="sim-unsc-panel">
-            <h4>Draft Resolution</h4>
-            
-            <div class="sim-unsc-form-group">
-                <label for="sim-unsc-mandate">Legal Mandate</label>
-                <select id="sim-unsc-mandate">
-                    <option value="ChapterVI">Chapter VI (Peaceful Recommendations)</option>
-                    <option value="ChapterVII">Chapter VII (Binding Enforcement)</option>
-                </select>
-            </div>
-            
-            <div class="sim-unsc-form-group">
-                <label for="sim-unsc-sanctions">Sanctions Regime</label>
-                <select id="sim-unsc-sanctions">
-                    <option value="None">No Sanctions</option>
-                    <option value="Smart">Targeted Smart Sanctions (Asset Freeze & Travel Ban)</option>
-                    <option value="Comprehensive">Comprehensive Economic Embargo</option>
-                </select>
-            </div>
-            
-            <div class="sim-unsc-form-group">
-                <label for="sim-unsc-force">Use of Force</label>
-                <select id="sim-unsc-force">
-                    <option value="None">No Authorization</option>
-                    <option value="Observer">Unarmed Observer Mission</option>
-                    <option value="AllNecessary">"All Necessary Measures" (Article 42)</option>
-                </select>
-            </div>
-            
-            <button id="sim-unsc-submit-btn" class="sim-unsc-btn" onclick="window.simUnscVote()">Submit Resolution for Vote</button>
+    <div class="lab-stage" style="padding: 18px 22px;">
+
+      <!-- P5 Cards Grid -->
+      <h4 style="margin: 0 0 10px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--lab-accent);">
+        <i class="fa fa-shield" aria-hidden="true"></i> Permanent Five (P5) Veto Powers
+      </h4>
+      <div class="sim-unsc-p5-grid">
+        <div class="sim-unsc-p5-card" id="unsc-card-us">
+          <div class="sim-unsc-p5-card-head">
+            <span class="sim-unsc-p5-title">🇺🇸 United States</span>
+            <span class="lab-meta-chip" id="unsc-status-us" style="font-size: 0.7rem;">Evaluating</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Demands Article 51 self-defense carve-outs and explicit civilian monitoring.</div>
+        </div>
+        <div class="sim-unsc-p5-card" id="unsc-card-uk">
+          <div class="sim-unsc-p5-card-head">
+            <span class="sim-unsc-p5-title">🇬🇧 United Kingdom</span>
+            <span class="lab-meta-chip" id="unsc-status-uk" style="font-size: 0.7rem;">Evaluating</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Insists on humanitarian access corridors and regional partnership.</div>
+        </div>
+        <div class="sim-unsc-p5-card" id="unsc-card-fr">
+          <div class="sim-unsc-p5-card-head">
+            <span class="sim-unsc-p5-title">🇫🇷 France</span>
+            <span class="lab-meta-chip" id="unsc-status-fr" style="font-size: 0.7rem;">Evaluating</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Champions R2P civilian protection; supports AU/regional peacekeepers.</div>
+        </div>
+        <div class="sim-unsc-p5-card" id="unsc-card-ru">
+          <div class="sim-unsc-p5-card-head">
+            <span class="sim-unsc-p5-title">🇷🇺 Russian Federation</span>
+            <span class="lab-meta-chip" id="unsc-status-ru" style="font-size: 0.7rem;">Evaluating</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Vetoes Chapter VII armed mandates; demands sovereign consent for aid.</div>
+        </div>
+        <div class="sim-unsc-p5-card" id="unsc-card-cn">
+          <div class="sim-unsc-p5-card-head">
+            <span class="sim-unsc-p5-title">🇨🇳 China</span>
+            <span class="lab-meta-chip" id="unsc-status-cn" style="font-size: 0.7rem;">Evaluating</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--lms-ink-secondary);">Opposes unilateral commercial sanctions; insists on dialogue.</div>
+        </div>
+      </div>
+
+      <!-- 5 Amendment Tokens -->
+      <div class="sim-unsc-tokens-box">
+        <h4 style="margin: 0 0 12px; font-size: 1rem; color: var(--lms-ink-primary);">
+          <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Attach Amendment Tokens to Draft Resolution
+        </h4>
+
+        <div class="sim-unsc-token-item" data-token="consent">
+          <input type="checkbox" class="sim-unsc-token-checkbox" id="token-consent">
+          <label for="token-consent" style="cursor: pointer;">
+            <span class="sim-unsc-token-title">1. Sovereign Consent Protocol</span>
+            <span class="sim-unsc-token-desc">Aid deliveries and observer routes must coordinate with host-state authorities. Pacifies Russian and Chinese sovereignty concerns.</span>
+          </label>
         </div>
 
-        <div class="sim-unsc-panel">
-            <h4>P5 Member States</h4>
-            <ul class="sim-unsc-p5-list" id="sim-unsc-p5-list" aria-live="polite">
-                <li class="sim-unsc-p5-item" id="sim-unsc-p5-us">
-                    <span class="sim-unsc-p5-name">🇺🇸 United States</span>
-                    <span class="sim-unsc-badge pending">Awaiting Vote</span>
-                </li>
-                <li class="sim-unsc-p5-item" id="sim-unsc-p5-uk">
-                    <span class="sim-unsc-p5-name">🇬🇧 United Kingdom</span>
-                    <span class="sim-unsc-badge pending">Awaiting Vote</span>
-                </li>
-                <li class="sim-unsc-p5-item" id="sim-unsc-p5-fr">
-                    <span class="sim-unsc-p5-name">🇫🇷 France</span>
-                    <span class="sim-unsc-badge pending">Awaiting Vote</span>
-                </li>
-                <li class="sim-unsc-p5-item" id="sim-unsc-p5-ru">
-                    <span class="sim-unsc-p5-name">🇷🇺 Russia</span>
-                    <span class="sim-unsc-badge pending">Awaiting Vote</span>
-                </li>
-                <li class="sim-unsc-p5-item" id="sim-unsc-p5-cn">
-                    <span class="sim-unsc-p5-name">🇨🇳 China</span>
-                    <span class="sim-unsc-badge pending">Awaiting Vote</span>
-                </li>
-            </ul>
-            
-            <div class="sim-unsc-e10-summary" id="sim-unsc-e10" style="display: none;">
-                Non-permanent members (E10): 8 YES, 2 ABSTAIN
-            </div>
+        <div class="sim-unsc-token-item" data-token="selfdefense">
+          <input type="checkbox" class="sim-unsc-token-checkbox" id="token-selfdefense">
+          <label for="token-selfdefense" style="cursor: pointer;">
+            <span class="sim-unsc-token-title">2. Article 51 Inherent Self-Defense Clause</span>
+            <span class="sim-unsc-token-desc">Reaffirms that nothing in the resolution impairs allied self-defense rights under Article 51. Non-negotiable for Washington.</span>
+          </label>
         </div>
+
+        <div class="sim-unsc-token-item" data-token="carveout">
+          <input type="checkbox" class="sim-unsc-token-checkbox" id="token-carveout">
+          <label for="token-carveout" style="cursor: pointer;">
+            <span class="sim-unsc-token-title">3. Targeted Humanitarian Sanction Carve-outs</span>
+            <span class="sim-unsc-token-desc">Exempts agricultural, pharmaceutical, and water infrastructure from economic embargoes. Wins Beijing and E10 developing nations.</span>
+          </label>
+        </div>
+
+        <div class="sim-unsc-token-item" data-token="regional">
+          <input type="checkbox" class="sim-unsc-token-checkbox" id="token-regional">
+          <label for="token-regional" style="cursor: pointer;">
+            <span class="sim-unsc-token-title">4. Chapter VIII Regional Partnership (AU / Arab League)</span>
+            <span class="sim-unsc-token-desc">Delegates frontline ceasefire monitoring to regional organizations under Chapter VIII. Enthusiastically supported by France, UK, and E10.</span>
+          </label>
+        </div>
+
+        <div class="sim-unsc-token-item" data-token="monitoring">
+          <input type="checkbox" class="sim-unsc-token-checkbox" id="token-monitoring">
+          <label for="token-monitoring" style="cursor: pointer;">
+            <span class="sim-unsc-token-title">5. Independent Civilian Fact-Finding Mission</span>
+            <span class="sim-unsc-token-desc">Replaces armed military intervention with neutral UN civilian monitors. Preserves investigative credibility without triggering Russian Chapter VII vetoes.</span>
+          </label>
+        </div>
+
+        <button type="button" class="lab-btn lab-btn-primary" id="sim-unsc-btn-vote" style="width: 100%; margin-top: 10px;">
+          <i class="fa fa-gavel" aria-hidden="true"></i> Put Resolution to the Vote
+        </button>
+      </div>
+
+      <!-- Elected Ten (E10) Stand -->
+      <div style="background: var(--lms-surface); border: 1px solid var(--lms-hairline); border-radius: 6px; padding: 12px 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="font-size: 0.84rem; color: var(--lms-ink-primary);">Elected Ten (E10) Non-Permanent Members:</strong>
+          <span id="unsc-e10-count-label" style="font-size: 0.8rem; color: var(--lab-accent); font-weight: 700;">10 Votes Projected</span>
+        </div>
+        <div class="sim-unsc-e10-strip" id="unsc-e10-strip">
+          <span class="sim-unsc-e10-chip is-yes" id="e10-1">Algeria</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-2">Ecuador</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-3">Guyana</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-4">Japan</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-5">Malta</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-6">Mozambique</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-7">Korea</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-8">Sierra Leone</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-9">Slovenia</span>
+          <span class="sim-unsc-e10-chip is-yes" id="e10-10">Switzerland</span>
+        </div>
+      </div>
+
+      <div class="lab-log" id="sim-unsc-log" style="margin-top: 16px;" aria-live="polite">
+        <div class="lab-log-entry is-muted">&gt; Council session open. 15 delegations present. Penholder drafting amendments.</div>
+        <div class="lab-log-entry is-intel">
+          <strong><i class="fa fa-shield"></i> CONFIDENTIAL AIDE-MÉMOIRE · RUSSIAN PERMANENT MISSION:</strong>
+          Moscow's public hardline rhetoric masks its core institutional red line: an explicit sovereign consent clause for cross-border logistics is sufficient to prevent a Russian veto.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================= DEBRIEF ======================= -->
+  <div class="lab-debrief" id="sim-unsc-outcome" hidden>
+    <div class="lab-stars" id="sim-unsc-stars">
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+      <i class="fa fa-star is-off" aria-hidden="true"></i>
+    </div>
+    <div class="lab-rank" id="sim-unsc-rank">Tabulating Council Roll Call...</div>
+    <h3 class="lab-debrief-title" id="sim-unsc-debrief-heading">Official Council Voting Record</h3>
+
+    <div class="lab-stats">
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Total Affirmative</div>
+        <div class="lab-stat-val" id="sim-unsc-stat-votes">15 / 15</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">P5 Vetoes</div>
+        <div class="lab-stat-val" id="sim-unsc-stat-vetoes">0 Vetoes</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Outcome</div>
+        <div class="lab-stat-val" id="sim-unsc-stat-outcome" style="font-size: 0.95rem;">Adopted Unanimously</div>
+      </div>
+      <div class="lab-stat-cell">
+        <div class="lab-stat-label">Saved Best</div>
+        <div class="lab-stat-val" id="sim-unsc-stat-best">15 Votes</div>
+      </div>
     </div>
 
-    <div id="sim-unsc-result-container" class="sim-unsc-result" aria-live="polite">
-        <h4 id="sim-unsc-result-title"></h4>
-        <div id="sim-unsc-result-reasons" class="sim-unsc-veto-reasons"></div>
-        <div id="sim-unsc-result-analysis" class="sim-unsc-analysis"></div>
-        <button class="sim-unsc-btn sim-unsc-btn-restart" onclick="window.simUnscReset()">Reset Simulation</button>
+    <div class="lab-reveal" id="sim-unsc-reveal-body"></div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <button type="button" class="lab-btn lab-btn-primary" id="sim-unsc-btn-replay">
+        <i class="fa fa-repeat" aria-hidden="true"></i> Convene New Emergency Session
+      </button>
     </div>
+  </div>
+
 </div>
 
 <script>
 (function() {
-    const p5Members = [
-        { id: 'us', name: 'United States', evaluate: (m, s, f) => {
-            if (m === 'ChapterVI' && s === 'None') return 'Mandate is too weak; requires enforcement measures.';
-            return null;
-        }},
-        { id: 'uk', name: 'United Kingdom', evaluate: (m, s, f) => {
-            if (f === 'AllNecessary' && s === 'Comprehensive') return 'Comprehensive embargo combined with military force is too extreme for domestic politics.';
-            return null;
-        }},
-        { id: 'fr', name: 'France', evaluate: (m, s, f) => {
-            if (s === 'Comprehensive' && m === 'ChapterVI') return 'Inconsistent legal framework: comprehensive sanctions require Chapter VII mandate.';
-            return null;
-        }},
-        { id: 'ru', name: 'Russia', evaluate: (m, s, f) => {
-            if (f === 'AllNecessary') return 'Strongly opposes military intervention and authorization of force.';
-            if (m === 'ChapterVII' && s === 'Comprehensive') return 'Views comprehensive Chapter VII sanctions as a pretext for regime change.';
-            return null;
-        }},
-        { id: 'cn', name: 'China', evaluate: (m, s, f) => {
-            if (f === 'AllNecessary') return 'Violates strict interpretation of state sovereignty and non-interference.';
-            return null;
-        }}
-    ];
+  'use strict';
 
-    window.simUnscVote = function() {
-        const mandate = document.getElementById('sim-unsc-mandate').value;
-        const sanctions = document.getElementById('sim-unsc-sanctions').value;
-        const force = document.getElementById('sim-unsc-force').value;
-        
-        const btn = document.getElementById('sim-unsc-submit-btn');
-        btn.disabled = true;
-        btn.innerText = "Voting in progress...";
-        
-        const resultContainer = document.getElementById('sim-unsc-result-container');
-        resultContainer.style.display = 'none';
-        
-        document.getElementById('sim-unsc-e10').style.display = 'none';
-        
-        // Reset badges
-        p5Members.forEach(member => {
-            const badge = document.querySelector('#sim-unsc-p5-' + member.id + ' .sim-unsc-badge');
-            badge.className = 'sim-unsc-badge pending';
-            badge.innerText = 'Voting...';
-        });
+  var state = {
+    selectedTokens: {
+      consent: false,
+      selfdefense: false,
+      carveout: false,
+      regional: false,
+      monitoring: false
+    },
+    over: false
+  };
 
-        let vetoes = [];
-        let index = 0;
+  function $(id) { return document.getElementById(id); }
 
-        function rollCall() {
-            if (index < p5Members.length) {
-                const member = p5Members[index];
-                const badge = document.querySelector('#sim-unsc-p5-' + member.id + ' .sim-unsc-badge');
-                
-                const vetoReason = member.evaluate(mandate, sanctions, force);
-                
-                if (vetoReason) {
-                    badge.className = 'sim-unsc-badge veto';
-                    badge.innerText = 'VETO';
-                    vetoes.push({ name: member.name, reason: vetoReason, id: member.id });
-                } else {
-                    badge.className = 'sim-unsc-badge approve';
-                    badge.innerText = 'APPROVE';
-                }
-                
-                index++;
-                setTimeout(rollCall, 600);
-            } else {
-                finishVoting(vetoes);
-            }
-        }
-        
-        setTimeout(rollCall, 400);
-    };
+  function updateTokenCount() {
+    var count = 0;
+    for (var k in state.selectedTokens) {
+      if (state.selectedTokens[k]) count++;
+    }
+    var valEl = $('sim-unsc-val-tokens');
+    if (valEl) valEl.textContent = count;
+  }
 
-    function finishVoting(vetoes) {
-        document.getElementById('sim-unsc-e10').style.display = 'block';
-        
-        const resultContainer = document.getElementById('sim-unsc-result-container');
-        const resultTitle = document.getElementById('sim-unsc-result-title');
-        const resultReasons = document.getElementById('sim-unsc-result-reasons');
-        const resultAnalysis = document.getElementById('sim-unsc-result-analysis');
-        
-        resultContainer.className = 'sim-unsc-result';
-        resultReasons.innerHTML = '';
-        
-        if (vetoes.length === 0) {
-            resultContainer.classList.add('success');
-            resultTitle.innerHTML = '✅ Resolution ADOPTED';
-            resultAnalysis.innerHTML = "<strong>Your resolution passed!</strong> Like UNSC Resolution 1973 (Libya 2011), you found the narrow diplomatic sweet spot.<br><br><strong>Analysis:</strong> Article 27(3) requires concurrence of all P5 members. Your careful calibration of scope avoided triggering any P5 member's core geopolitical interests.";
-        } else {
-            resultContainer.classList.add('failure');
-            resultTitle.innerHTML = '❌ Resolution VETOED';
-            
-            let reasonsHtml = 'The resolution failed due to the following veto(es):<ul>';
-            let westernVeto = false;
-            let easternVeto = false;
-            
-            vetoes.forEach(v => {
-                reasonsHtml += `<li><strong>${v.name}:</strong> ${v.reason}</li>`;
-                if (v.id === 'us' || v.id === 'uk' || v.id === 'fr') westernVeto = true;
-                if (v.id === 'ru' || v.id === 'cn') easternVeto = true;
-            });
-            reasonsHtml += '</ul>';
-            resultReasons.innerHTML = reasonsHtml;
-            
-            let analysisText = "";
-            if (easternVeto && !westernVeto) {
-                analysisText = "<strong>Russia and/or China exercised their veto</strong>, as they did 16 times on Syria (2011-2020).<br><br><strong>Analysis:</strong> The veto reflects the structural tension between collective security ideals and great power sovereignty interests embedded in the 1945 UN Charter. Consider the 'Uniting for Peace' Resolution 377A as a General Assembly workaround.";
-            } else if (westernVeto && !easternVeto) {
-                analysisText = "<strong>An unusual Western veto.</strong><br><br><strong>Analysis:</strong> While rare, Western vetoes occur when resolutions threaten domestic political coalitions or set unwanted precedents for intervention.";
-            } else {
-                analysisText = "<strong>Multiple blocs exercised their veto.</strong><br><br><strong>Analysis:</strong> The resolution faced widespread opposition among permanent members, illustrating deep structural disagreements over the appropriate role of the Security Council in this crisis.";
-            }
-            
-            resultAnalysis.innerHTML = analysisText;
-        }
-        
-        resultContainer.style.display = 'block';
+  function evaluateVotes() {
+    var t = state.selectedTokens;
+    var p5Votes = { us: 'YES', uk: 'YES', fr: 'YES', ru: 'YES', cn: 'YES' };
+    var p5Vetoes = 0;
+
+    // US requires selfdefense
+    if (!t.selfdefense) {
+      p5Votes.us = 'VETO';
+      p5Vetoes++;
     }
 
-    window.simUnscReset = function() {
-        document.getElementById('sim-unsc-mandate').value = 'ChapterVI';
-        document.getElementById('sim-unsc-sanctions').value = 'None';
-        document.getElementById('sim-unsc-force').value = 'None';
-        
-        const btn = document.getElementById('sim-unsc-submit-btn');
-        btn.disabled = false;
-        btn.innerText = "Submit Resolution for Vote";
-        
-        document.getElementById('sim-unsc-result-container').style.display = 'none';
-        document.getElementById('sim-unsc-e10').style.display = 'none';
-        
-        p5Members.forEach(member => {
-            const badge = document.querySelector('#sim-unsc-p5-' + member.id + ' .sim-unsc-badge');
-            badge.className = 'sim-unsc-badge pending';
-            badge.innerText = 'Awaiting Vote';
-        });
+    // Russia requires consent and monitoring (no armed Chapter VII intervention)
+    if (!t.consent || !t.monitoring) {
+      p5Votes.ru = 'VETO';
+      p5Vetoes++;
+    }
+
+    // China requires carveout (no blanket sanctions) and consent
+    if (!t.carveout || !t.consent) {
+      p5Votes.cn = 'VETO';
+      p5Vetoes++;
+    }
+
+    // UK and France agree unless complete chaos
+    if (!t.regional && !t.monitoring) {
+      p5Votes.fr = 'ABSTAIN';
+      p5Votes.uk = 'ABSTAIN';
+    }
+
+    // E10 voting calculation (10 votes):
+    // E10 supports multilateral balance.
+    var e10Yes = 10;
+    if (!t.carveout) e10Yes -= 2; // developing states abstain without humanitarian exemptions
+    if (!t.regional) e10Yes -= 2; // regional partners abstain without Chapter VIII role
+    if (!t.monitoring) e10Yes -= 2; // legalists abstain without civilian monitors
+
+    var p5YesCount = 0;
+    for (var m in p5Votes) {
+      if (p5Votes[m] === 'YES') p5YesCount++;
+    }
+
+    var totalYes = p5YesCount + e10Yes;
+
+    return {
+      p5Votes: p5Votes,
+      p5Vetoes: p5Vetoes,
+      e10Yes: e10Yes,
+      totalYes: totalYes
     };
+  }
+
+  function renderVotingResult(res) {
+    // Update P5 cards
+    var members = ['us', 'uk', 'fr', 'ru', 'cn'];
+    members.forEach(function(m) {
+      var card = $('unsc-card-' + m);
+      var statusBadge = $('unsc-status-' + m);
+      var vote = res.p5Votes[m];
+
+      if (card && statusBadge) {
+        card.classList.remove('is-veto', 'is-yes');
+        if (vote === 'VETO') {
+          card.classList.add('is-veto');
+          statusBadge.textContent = 'VETO (NO)';
+          statusBadge.style.background = 'var(--lab-lose)';
+          statusBadge.style.color = '#fff';
+        } else if (vote === 'YES') {
+          card.classList.add('is-yes');
+          statusBadge.textContent = 'YES';
+          statusBadge.style.background = 'var(--lab-win)';
+          statusBadge.style.color = '#fff';
+        } else {
+          statusBadge.textContent = 'ABSTAIN';
+          statusBadge.style.background = 'var(--lab-warn)';
+          statusBadge.style.color = '#fff';
+        }
+      }
+    });
+
+    // Update E10 chips
+    for (var i = 1; i <= 10; i++) {
+      var chip = $('e10-' + i);
+      if (chip) {
+        if (i <= res.e10Yes) {
+          chip.className = 'sim-unsc-e10-chip is-yes';
+        } else {
+          chip.className = 'sim-unsc-e10-chip is-abs';
+        }
+      }
+    }
+
+    var countLabel = $('unsc-e10-count-label');
+    if (countLabel) countLabel.textContent = res.e10Yes + ' / 10 Affirmative';
+  }
+
+  function handleVote() {
+    var res = evaluateVotes();
+    renderVotingResult(res);
+
+    if (window.LabGame && window.LabGame.sfx) {
+      if (res.p5Vetoes === 0 && res.totalYes >= 9) window.LabGame.sfx.good();
+      else window.LabGame.sfx.bad();
+    }
+
+    setTimeout(function() {
+      endCouncil(res);
+    }, 700);
+  }
+
+  function endCouncil(res) {
+    state.over = true;
+    $('sim-unsc-play').hidden = true;
+    var debrief = $('sim-unsc-outcome');
+    debrief.hidden = false;
+    debrief.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    var passed = (res.p5Vetoes === 0) && (res.totalYes >= 9);
+    var stars = 0;
+    var rank = '';
+    var outcomeTitle = '';
+
+    if (res.p5Vetoes > 0) {
+      stars = 0;
+      rank = 'Vetoed by Permanent Member';
+      outcomeTitle = 'Resolution Vetoed';
+    } else if (res.totalYes === 15) {
+      stars = 3;
+      rank = 'Master Diplomat';
+      outcomeTitle = 'Adopted Unanimously (15/15)';
+    } else if (res.totalYes >= 9) {
+      stars = 2;
+      rank = 'Council Strategist';
+      outcomeTitle = 'Resolution Adopted (' + res.totalYes + '/15)';
+    } else {
+      stars = 1;
+      rank = 'Sub-Quorum Sponsor';
+      outcomeTitle = 'Failed Adoption (' + res.totalYes + '/15, < 9 votes)';
+    }
+
+    var starContainer = $('sim-unsc-stars');
+    if (starContainer) {
+      starContainer.innerHTML = '';
+      for (var i = 0; i < 3; i++) {
+        var s = document.createElement('i');
+        s.className = 'fa fa-star ' + (i < stars ? 'lab-star-in' : 'is-off');
+        s.setAttribute('aria-hidden', 'true');
+        starContainer.appendChild(s);
+      }
+    }
+
+    $('sim-unsc-rank').textContent = rank;
+    $('sim-unsc-stat-votes').textContent = res.totalYes + ' / 15';
+    $('sim-unsc-stat-vetoes').textContent = res.p5Vetoes + (res.p5Vetoes === 1 ? ' Veto' : ' Vetoes');
+    $('sim-unsc-stat-outcome').textContent = outcomeTitle;
+
+    if (window.LabGame) {
+      if (window.LabGame.best) {
+        var scoreVal = passed ? res.totalYes : 0;
+        window.LabGame.best.submit('unsc_veto', scoreVal);
+        var best = window.LabGame.best.get('unsc_veto');
+        $('sim-unsc-stat-best').textContent = best + ' Votes';
+      }
+      if (window.LabGame.flags && passed) {
+        window.LabGame.flags.complete('unsc_veto');
+      }
+      if (window.LabGame.sfx) {
+        if (stars === 3) window.LabGame.sfx.fanfare();
+        else if (stars >= 1) window.LabGame.sfx.reveal();
+        else window.LabGame.sfx.bad();
+      }
+    }
+
+    var revealEl = $('sim-unsc-reveal-body');
+    if (revealEl) {
+      var html = '<p><strong>Diplomatic Declassification: UN Charter Article 27 &amp; Great Power Unanimity</strong></p>' +
+        '<p>The United Nations Security Council was intentionally engineered at Dumbarton Oaks (1944) and Yalta (1945) around the principle of Great Power Unanimity. Under Article 27(3) of the UN Charter:</p>' +
+        '<ul>' +
+        '<li><strong>The Veto Mechanism:</strong> Decisions on non-procedural matters require nine affirmative votes, including the concurring votes of the permanent members. A negative vote by the United States, Russia, China, France, or the United Kingdom constitutes an instant veto.</li>' +
+        '<li><strong>Quiet Diplomacy vs. Public Drafting:</strong> The chamber floor is largely ceremonial theatre; real resolutions are negotiated in closed consultations where "Penholders" craft delicate compromises to address sovereign red lines before formal tabling.</li>' +
+        '<li><strong>The Lowest Common Denominator Trap:</strong> To survive the gauntlet, texts are systematically watered down (shifting from Chapter VII armed enforcement to observer mandates and targeted carve-outs), balancing institutional consensus against operational toothlessness.</li>' +
+        '</ul>' +
+        '<p class="lab-reveal-closer">Continue to the <strong>Knowledge Check</strong> below to test the concept.</p>';
+      revealEl.innerHTML = html;
+    }
+  }
+
+  function attachListeners() {
+    var tokens = ['consent', 'selfdefense', 'carveout', 'regional', 'monitoring'];
+    tokens.forEach(function(tok) {
+      var cb = $('token-' + tok);
+      var item = document.querySelector('.sim-unsc-token-item[data-token="' + tok + '"]');
+      if (cb && item) {
+        cb.addEventListener('change', function() {
+          state.selectedTokens[tok] = cb.checked;
+          if (cb.checked) item.classList.add('is-selected');
+          else item.classList.remove('is-selected');
+          updateTokenCount();
+          if (window.LabGame && window.LabGame.sfx) window.LabGame.sfx.click();
+        });
+      }
+    });
+
+    var voteBtn = $('sim-unsc-btn-vote');
+    if (voteBtn) voteBtn.addEventListener('click', handleVote);
+
+    var beginBtn = $('sim-unsc-btn-begin');
+    if (beginBtn) {
+      beginBtn.addEventListener('click', function() {
+        $('sim-unsc-briefing').hidden = true;
+        $('sim-unsc-play').hidden = false;
+        updateTokenCount();
+      });
+    }
+
+    var replayBtn = $('sim-unsc-btn-replay');
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        state.over = false;
+        tokens.forEach(function(tok) {
+          state.selectedTokens[tok] = false;
+          var cb = $('token-' + tok);
+          if (cb) cb.checked = false;
+          var item = document.querySelector('.sim-unsc-token-item[data-token="' + tok + '"]');
+          if (item) item.classList.remove('is-selected');
+        });
+        $('sim-unsc-outcome').hidden = true;
+        $('sim-unsc-briefing').hidden = true;
+        $('sim-unsc-play').hidden = false;
+        updateTokenCount();
+      });
+    }
+
+    var muteBtn = $('sim-unsc-mute-btn');
+    if (muteBtn && window.LabGame && window.LabGame.sfx) {
+      var updateMute = function() {
+        var m = window.LabGame.sfx.muted();
+        muteBtn.innerHTML = m ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+      };
+      updateMute();
+      muteBtn.addEventListener('click', function() {
+        window.LabGame.sfx.toggleMute();
+        updateMute();
+      });
+    }
+
+    if (window.LabGame && window.LabGame.help) {
+      window.LabGame.help.mount({
+        triggerEl: '#sim-unsc-help-btn',
+        objectiveHtml: '<p>Adopt a Security Council resolution with ≥9 affirmative votes and ZERO P5 vetoes. 15/15 votes = ★★★ Master Diplomat. Any P5 negative vote = 0★ instant collapse.</p>',
+        howtoHtml: '<p>1. Review P5 permanent member cards.<br>2. Select amendment tokens to attach to the text.<br>3. Check confidential aide-mémoire intelligence.<br>4. Submit the resolution for formal vote.<br>5. Inspect P5 and E10 voting results.</p>',
+        payoffHtml: '<p>15 Votes: ★★★ | 9–14 Votes: ★★ | 6–8 Votes: ★ | Any Veto: 0★ Failure.</p>'
+      });
+    }
+  }
+
+  // State exposure
+  window.getSimUnscState = function() { return state; };
+  Object.defineProperty(window, 'simUnscState', {
+    get: function() { return state; },
+    set: function(v) { state = v; }
+  });
+
+  document.addEventListener('DOMContentLoaded', attachListeners);
 })();
 </script>
