@@ -13,6 +13,16 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Integrasi Publikasi YouTube CH030 (Realism) & CH040 (Liberalism) ke Platform:
+Merespons publikasi resmi kedua video Mind Map Explanatory di channel YouTube @IRinANutshell:
+1. `Tautan Resmi YouTube`:
+   - CH030 (Realism): `https://youtu.be/3VDcQVYty5M` (ID: `3VDcQVYty5M`).
+   - CH040 (Liberalism): `https://youtu.be/FdChrS6Ng3Y` (ID: `FdChrS6Ng3Y`).
+2. `Frontmatter Chapter Sync`: Memperbarui `030-basic-realism.md` dan `040-basic-liberalism.md` dengan `youtube_id`, `explanatory_video.title`, `desc`, dan poster resmi.
+3. `Gateway Card Embed`: Memastikan layout `_layouts/chapter.html` otomatis meng-embed video YouTube resmi ke dalam LMS player bab.
+4. `Registry Sync`: Memperbarui `learning-videos/catalog.json` dan `learning-videos/README.md` (status: 🟢 PUBLISHED).
+5. `Verifikasi Sistem`: Jekyll build sukses (63.2s), verifikasi embed `_site/basic-realism.html` dan `_site/basic-liberalism.html` PASS; 369/369 pytest PASS.
+
 2026-10-08 - Homepage Hero Copy De-AI (Rewrite Headline, Deskripsi & Title Tag):
 Arahan pengguna: tulisan hero terbaca "terlalu AI" dan title tag setelah "IR Study Companion" juga perlu diganti (nama situs tetap). Analisis pola via skill humanizer: (1) rule-of-three beritalik "Rigor, Structure, Clarity" di H1, (2) daftar abstraksi beruntun + kata promo "academically rigorous / Grounded in" di deskripsi, (3) title tag marketing "Master International Relations with Rigor & Clarity" yang menggema triad yang sama.
 1. `Title Tag (_pages/index.md:3)`: ➔ "IR Study Companion — A Free, Structured Course in International Relations" (deskriptif, tanpa imperative marketing).

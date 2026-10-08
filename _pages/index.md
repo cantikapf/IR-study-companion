@@ -504,17 +504,109 @@ permalink: /
     margin-bottom: 0.25rem;
   }
 
-  .labs-compact-grid {
+  .labs-catalog-pane {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    background: var(--lms-surface);
+    border: 1px solid var(--lms-border-strong);
+    border-radius: var(--lms-radius-lg);
+    padding: 1.25rem 1.25rem 1rem;
+    box-shadow: var(--lms-shadow-md);
+  }
+
+  .labs-catalog-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--lms-hairline);
+    margin-bottom: 0.75rem;
+  }
+
+  .labs-catalog-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .labs-catalog-title {
+    font-size: 0.875rem;
+    font-weight: 750;
+    color: var(--lms-ink-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .labs-counter-badge {
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    background: rgba(30, 58, 138, 0.08);
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    border-radius: var(--lms-radius-sm);
+    padding: 0.15rem 0.45rem;
+  }
+
+  .labs-filter-chips {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .labs-filter-btn {
+    border: 1px solid var(--lms-hairline);
+    background: var(--lms-subtle);
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--lms-ink-secondary);
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--lms-radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .labs-filter-btn:hover {
+    background: var(--lms-hover);
+    color: var(--lms-ink-primary);
+  }
+
+  .labs-filter-btn.is-active {
+    background: #1e3a8a;
+    color: #ffffff;
+    border-color: #1e3a8a;
+  }
+
+  .labs-scroll-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 0.35rem;
+  }
+
+  .labs-scroll-pane::-webkit-scrollbar {
+    width: 6px;
+  }
+  .labs-scroll-pane::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .labs-scroll-pane::-webkit-scrollbar-thumb {
+    background: var(--lms-border-strong);
+    border-radius: 4px;
+  }
+  .labs-scroll-pane::-webkit-scrollbar-thumb:hover {
+    background: var(--lms-ink-tertiary);
   }
 
   .lab-card-sm {
     background: var(--lms-surface);
     border: 1px solid var(--lms-border-strong);
     border-radius: var(--lms-radius-md);
-    padding: 1.25rem;
+    padding: 1rem 1.15rem;
     box-shadow: var(--lms-shadow-sm);
     display: flex;
     flex-direction: column;
@@ -528,22 +620,27 @@ permalink: /
     box-shadow: var(--lms-shadow-md);
   }
 
+  .lab-card-sm.is-featured-lab {
+    border-left: 3px solid #1e3a8a;
+    background: var(--lms-subtle);
+  }
+
   .lab-card-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--lms-ink-primary);
-    margin: 0.25rem 0 0.35rem;
+    margin: 0.2rem 0 0.3rem;
   }
 
   .lab-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.825rem;
     color: var(--lms-ink-secondary);
     line-height: 1.45;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.65rem;
   }
 
   .lab-card-link {
-    font-size: 0.85rem;
+    font-size: 0.825rem;
     font-weight: 700;
     color: #1e3a8a;
     text-decoration: none;
@@ -582,6 +679,9 @@ permalink: /
     }
     .labs-showcase-split {
       grid-template-columns: 1fr;
+    }
+    .labs-scroll-pane {
+      max-height: 380px;
     }
   }
 </style>
@@ -772,34 +872,127 @@ permalink: /
         </div>
       </div>
 
-      <!-- 3 Highlighted Labs from the Catalog of 10 -->
-      <div class="labs-compact-grid">
-        <article class="lab-card-sm">
-          <div>
-            <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 01 &bull; FPA Model</div>
-            <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
-            <p class="lab-card-desc">Simulate Graham Allison's bureaucratic models in a naval standoff. Balance brinkmanship against accidental war.</p>
+      <!-- Complete 10 Diplomatic Decision Labs Catalog with Category Filtering (Option B) -->
+      <div class="labs-catalog-pane">
+        <div class="labs-catalog-header">
+          <div class="labs-catalog-head-row">
+            <div class="labs-catalog-title">
+              <i class="fa fa-cubes" style="color: #1e3a8a;"></i> Diplomatic Simulation Catalog
+            </div>
+            <span class="labs-counter-badge" id="labs-active-count">10 Labs</span>
           </div>
-          <a href="{{ site.baseurl }}/models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
-        </article>
+          <div class="labs-filter-chips" role="tablist" aria-label="Filter diplomatic labs by category">
+            <button type="button" class="labs-filter-btn is-active" data-filter="all">All (10)</button>
+            <button type="button" class="labs-filter-btn" data-filter="security">Security (4)</button>
+            <button type="button" class="labs-filter-btn" data-filter="strategy">Strategy (3)</button>
+            <button type="button" class="labs-filter-btn" data-filter="governance">Governance (3)</button>
+          </div>
+        </div>
 
-        <article class="lab-card-sm">
-          <div>
-            <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 07 &bull; Law of the Sea</div>
-            <h4 class="lab-card-title">UNCLOS Maritime Zone Delimiter</h4>
-            <p class="lab-card-desc">Classify jurisdictional limits from Territorial Sea (12 nm) to the high seas Continental Shelf.</p>
-          </div>
-          <a href="{{ site.baseurl }}/law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
-        </article>
+        <div class="labs-scroll-pane" id="labs-scroll-pane">
+          <!-- Lab 01 -->
+          <article class="lab-card-sm" data-cat="security">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 01 &bull; FPA Model</div>
+              <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
+              <p class="lab-card-desc">Simulate Graham Allison's bureaucratic models in a naval standoff. Balance brinkmanship against accidental war.</p>
+            </div>
+            <a href="{{ site.baseurl }}/models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
+          </article>
 
-        <article class="lab-card-sm">
-          <div>
-            <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 05 &bull; Global Governance</div>
-            <h4 class="lab-card-title">UNSC Veto Chamber</h4>
-            <p class="lab-card-desc">Draft a peacekeeping resolution and survive the P5 veto gauntlet across Chapter VII enforcement.</p>
-          </div>
-          <a href="{{ site.baseurl }}/un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
-        </article>
+          <!-- Lab 02 -->
+          <article class="lab-card-sm is-featured-lab" data-cat="strategy">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem; color: #059669;">Lab 02 &bull; Game Theory &bull; Featured Live</div>
+              <h4 class="lab-card-title">Prisoner's Dilemma Strategic Arena</h4>
+              <p class="lab-card-desc">Calculate payoffs in Iterated Prisoner's Dilemma against Tit-for-Tat AI. Playable live in the sandbox on the left.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+              <a href="#game-theory-sim" class="lab-card-link" onclick="document.getElementById('game-theory-sim').scrollIntoView({behavior:'smooth'}); return false;">Play Live Sandbox ↰</a>
+              <a href="{{ site.baseurl }}/game-theory-ir.html#game-theory-sim" class="lab-card-link" style="color: var(--lms-ink-tertiary); font-size: 0.78rem;">Full Lesson ➔</a>
+            </div>
+          </article>
+
+          <!-- Lab 03 -->
+          <article class="lab-card-sm" data-cat="governance">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 03 &bull; Trade Dispute</div>
+              <h4 class="lab-card-title">WTO Dispute Settlement Panel</h4>
+              <p class="lab-card-desc">Serve as an Appellate Body panelist adjudicating anti-dumping tariffs, subsidies, and Article XX environmental exceptions.</p>
+            </div>
+            <a href="{{ site.baseurl }}/wto-decision-making.html#wto-sim" class="lab-card-link">Enter Panel ➔</a>
+          </article>
+
+          <!-- Lab 04 -->
+          <article class="lab-card-sm" data-cat="security">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 04 &bull; Security Studies</div>
+              <h4 class="lab-card-title">Security Dilemma Spiral</h4>
+              <p class="lab-card-desc">Navigate 5 rounds of arms race dynamics under Jervis's spiral model against a reactive AI opponent.</p>
+            </div>
+            <a href="{{ site.baseurl }}/realism-security.html#security-dilemma-sim" class="lab-card-link">Run Simulator ➔</a>
+          </article>
+
+          <!-- Lab 05 -->
+          <article class="lab-card-sm" data-cat="governance">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 05 &bull; Global Governance</div>
+              <h4 class="lab-card-title">UNSC Veto Chamber</h4>
+              <p class="lab-card-desc">Draft a peacekeeping resolution and survive the P5 veto gauntlet across Chapter VII enforcement powers.</p>
+            </div>
+            <a href="{{ site.baseurl }}/un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
+          </article>
+
+          <!-- Lab 06 -->
+          <article class="lab-card-sm" data-cat="strategy">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 06 &bull; Diplomacy</div>
+              <h4 class="lab-card-title">Two-Level Game Negotiator</h4>
+              <p class="lab-card-desc">Negotiate a bilateral climate treaty while juggling domestic constituents to find Putnam's Win-Set (ZOPA).</p>
+            </div>
+            <a href="{{ site.baseurl }}/tools-diplomacy.html#treaty-negotiation-sim" class="lab-card-link">Negotiate Treaty ➔</a>
+          </article>
+
+          <!-- Lab 07 -->
+          <article class="lab-card-sm" data-cat="governance">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 07 &bull; Law of the Sea</div>
+              <h4 class="lab-card-title">UNCLOS Maritime Zone Delimiter</h4>
+              <p class="lab-card-desc">Classify jurisdictional limits from Territorial Sea (12 nm) to the Exclusive Economic Zone (EEZ) and Continental Shelf.</p>
+            </div>
+            <a href="{{ site.baseurl }}/law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
+          </article>
+
+          <!-- Lab 08 -->
+          <article class="lab-card-sm" data-cat="security">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 08 &bull; Modern History</div>
+              <h4 class="lab-card-title">Balance of Power Configurator</h4>
+              <p class="lab-card-desc">Build alliance blocs among 1914 Great Powers to assess systemic polarity and compare with Triple Entente dynamics.</p>
+            </div>
+            <a href="{{ site.baseurl }}/road-to-ww1.html#balance-power-sim" class="lab-card-link">Configure Alliances ➔</a>
+          </article>
+
+          <!-- Lab 09 -->
+          <article class="lab-card-sm" data-cat="strategy">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 09 &bull; ASEAN Regionalism</div>
+              <h4 class="lab-card-title">South China Sea Dispute Resolver</h4>
+              <p class="lab-card-desc">As ASEAN Chair, broker a Code of Conduct in the South China Sea balancing claimant demands and regional consensus.</p>
+            </div>
+            <a href="{{ site.baseurl }}/asean-community.html#scs-dispute-sim" class="lab-card-link">Chair Meeting ➔</a>
+          </article>
+
+          <!-- Lab 10 -->
+          <article class="lab-card-sm" data-cat="security">
+            <div>
+              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 10 &bull; Nuclear Strategy</div>
+              <h4 class="lab-card-title">Nuclear Deterrence Calculator</h4>
+              <p class="lab-card-desc">Configure arsenal size, delivery triad, and launch doctrine to explore Mutually Assured Destruction (MAD).</p>
+            </div>
+            <a href="{{ site.baseurl }}/domino-cold-war.html#nuclear-deterrence-sim" class="lab-card-link">Calculate Deterrence ➔</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -830,9 +1023,9 @@ permalink: /
       </div>
 
       <!-- Video Thumbnail Visual Card -->
-      <div style="width: 320px; background: var(--lms-subtle); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-md); padding: 1rem; display: flex; flex-direction: column; gap: 0.65rem;">
+      <a href="https://www.youtube.com/watch?v=3VDcQVYty5M" target="_blank" rel="noopener noreferrer" style="width: 320px; background: var(--lms-subtle); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-md); padding: 1rem; display: flex; flex-direction: column; gap: 0.65rem; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;">
         <div style="width: 100%; height: 170px; border-radius: var(--lms-radius-sm); overflow: hidden; position: relative; background: #000000;">
-          <img src="{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png" alt="@IRinANutshell Video Poster" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.92;" onerror="this.src='{{ site.baseurl }}/assets/images/mindmap_chapter_010_poster.png'">
+          <img src="{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png" alt="@IRinANutshell Video Poster" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.95;" onerror="this.src='{{ site.baseurl }}/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png'">
           <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;">
             <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(239, 68, 68, 0.9); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
               <i class="fa fa-play" style="margin-left: 3px;"></i>
@@ -840,9 +1033,10 @@ permalink: /
           </div>
         </div>
         <div style="font-family: ui-monospace, 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--lms-ink-tertiary); display: flex; justify-content: space-between;">
-          <span>CH030 &bull; Basic Realism</span>
+          <span>CH030 &bull; Realism in Global Politics</span>
+          <span style="color: #ef4444; font-weight: 600;"><i class="fa fa-youtube-play"></i> Watch Now</span>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -1026,6 +1220,30 @@ document.addEventListener('DOMContentLoaded', () => {
     renderModules();
     cxState.mod = CX_DATA.modules[0].num;
     renderLessons();
+
+    // Diplomatic Labs Catalog Category Filter Logic (Option B)
+    const labFilterBtns = document.querySelectorAll('.labs-filter-btn');
+    const labCards = document.querySelectorAll('.labs-scroll-pane .lab-card-sm');
+    const labsCountEl = document.getElementById('labs-active-count');
+
+    labFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        labFilterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        let visibleCount = 0;
+        labCards.forEach(card => {
+          const match = (filter === 'all') || (card.dataset.cat === filter);
+          card.style.display = match ? 'flex' : 'none';
+          if (match) visibleCount++;
+        });
+
+        if (labsCountEl) {
+          labsCountEl.textContent = `${visibleCount} Labs`;
+        }
+      });
+    });
 });
 
 // Playable Prisoner's Dilemma Simulator Logic

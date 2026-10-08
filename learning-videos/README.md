@@ -29,21 +29,23 @@ IR_M{ModuleNumber}_CH{ChapterNumber}_{TitleInSnakeCase}_{Format}_{Resolution}.{e
 ### Contoh Nyata Berkas:
 - **Video Export (MP4):**  
   `learning-videos/exports/IR_M01_CH010_Foundations_of_International_Relations_MindMap_1080p.mp4`
-- **Poster Thumbnail (PNG):**  
+- **Poster Mind Map (PNG):**  
   `learning-videos/posters/IR_M01_CH010_Foundations_of_International_Relations_Poster.png`
+- **Official YouTube Thumbnail 1080p (PNG):**  
+  `learning-videos/posters/IR_M01_CH010_Foundations_of_International_Relations_Thumbnail.png`
 
 ---
 
 ## 📊 2. Dasbor Inventarisasi & Status Video (Video Inventory Matrix)
 
-| ID Video | Modul & Bab | Judul Materi | Format | Durasi | Resolusi | Status Render | YouTube Channel (@IRinANutshell) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: |
-| `IR-M01-CH010` | M01 / CH010 | Foundations of International Relations | Mind Map Explanatory | 05:16 | 1080p | 🟢 RENDERED (41.2 MB) | [Sa0PnnZLn0w](https://youtu.be/Sa0PnnZLn0w) |
-| `IR-M01-CH020` | M01 / CH020 | Evolution of the Modern State System | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | *Pending* |
-| `IR-M01-CH030` | M01 / CH030 | Sovereignty & Westphalian Order | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | *Pending* |
-| `IR-M02-CH040` | M02 / CH040 | Classical & Structural Realism | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | *Pending* |
-| `IR-M02-CH050` | M02 / CH050 | Liberalism & Democratic Peace | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | *Pending* |
-| `IR-M02-CH060` | M02 / CH060 | Social Constructivism & Identity | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | *Pending* |
+| ID Video | Modul & Bab | Judul Materi | Format | Durasi | Resolusi | Status Render | YouTube Thumbnail | YouTube Channel (@IRinANutshell) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: |
+| `IR-M01-CH010` | M01 / CH010 | Foundations of International Relations | Mind Map Explanatory | 05:16 | 1080p | 🟢 RENDERED (41.2 MB) | 🟢 READY | [Sa0PnnZLn0w](https://youtu.be/Sa0PnnZLn0w) |
+| `IR-M01-CH020` | M01 / CH020 | Globalization and Global Politics | Mind Map Explanatory | 03:00 | 1080p | 🟢 PUBLISHED | 🟢 READY | [7K4preE-EBY](https://youtu.be/7K4preE-EBY) |
+| `IR-M01-CH030` | M01 / CH030 | Basic Explanation of Realism in IR | Mind Map Explanatory | 05:23 | 1080p | 🟢 PUBLISHED (51.8 MB) | 🟢 GENERATED | [3VDcQVYty5M](https://youtu.be/3VDcQVYty5M) |
+| `IR-M01-CH040` | M01 / CH040 | Basic Explanation of Liberalism in IR | Mind Map Explanatory | 06:21 | 1080p | 🟢 PUBLISHED (49.3 MB) | 🟢 GENERATED | [FdChrS6Ng3Y](https://youtu.be/FdChrS6Ng3Y) |
+| `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | ⚪ PENDING | *Pending* |
+| `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | ⚪ PENDING | *Pending* |
 
 > **Catatan Status:**  
 > - 🟢 **RENDERED**: Berkas MP4 siap diputar secara lokal dan diunggah ke YouTube.  
@@ -78,12 +80,22 @@ cd simulation/ir-motion-library
 npx remotion render FlowchartVideo "../../learning-videos/exports/IR_M01_CH010_Foundations_of_International_Relations_MindMap_1080p.mp4"
 ```
 
-### Mengambil Preview Still Frame (Poster/Thumbnail):
+### Mengambil Preview Still Frame (Poster Panorama):
 Untuk mengambil tangkapan layar frame tertentu (misal Frame 9200 untuk pemandangan panorama):
 
 ```powershell
 cd simulation/ir-motion-library
 npx remotion still FlowchartVideo "../../learning-videos/posters/IR_M01_CH010_Foundations_of_International_Relations_Poster.png" --frame=9200
+```
+
+### Membuat Official YouTube Thumbnail (1080p Split Brush Mask):
+Untuk menghasilkan YouTube Thumbnail kanonik berformat split-canvas dengan brush torn-paper edge dan typography Archivo Black + Space Mono:
+
+```powershell
+uv run --with pillow python scripts/generate_thumbnail.py `
+  --title "REALISM`nIN`nGLOBAL POLITICS" `
+  --image "learning-videos/posters/realism_visual_chess.jpg" `
+  --output "learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png"
 ```
 
 ---

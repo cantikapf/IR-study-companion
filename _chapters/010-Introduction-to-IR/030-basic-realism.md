@@ -3,10 +3,16 @@ title: Basic Explanation of Realism in IR
 slug: basic-realism
 abstract: The introduction of Realism in International Relations
 simple_summary: "Realists view world politics not as a cooperative community, but as a ruthless wilderness. Because there is no world police to protect the weak, states can rely only on themselves. Power—especially military strength—is the only real currency that guarantees survival. In this worldview, leaders who base foreign policy on moral ideals rather than hard calculations of national power are courting national disaster."
+youtube_id: "3VDcQVYty5M"
+explanatory_video:
+  title: "Mind Map Explanatory: Basic Explanation of Realism in IR"
+  desc: "Watch this animated concept map first to establish a solid mental schema of the 3S triad, international anarchy, the security dilemma, and the neorealist schism before reading this lesson."
+  duration: "5 min"
+  format: "Mind Map Explanatory"
+  poster: "/learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png"
 ---
 
-
-## Introduction
+## Recommended Supplementary Video
 
 <br>
 
@@ -14,6 +20,8 @@ simple_summary: "Realists view world politics not as a cooperative community, bu
 
 <br>
 <br>
+
+## Introduction
 
 **Realism** is an influential tradition in the study of world politics deeply rooted in classical philosophy. It emphasizes statism, survival, and self-help as core tenets shaping relations between **states** in an anarchic **international system**.
 
