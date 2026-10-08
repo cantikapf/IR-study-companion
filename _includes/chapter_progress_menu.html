@@ -115,9 +115,6 @@
        </ul>
        <div id="all-done-msg" class="all-done-msg">
           🎉 Awesome! You have completed all chapters.<br>
-          <button id="download-cert-btn" style="margin-top: 15px; background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; color: white; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4); transition: transform 0.2s;">
-             📜 Download Certificate
-          </button>
        </div>
     </div>
   </div>
@@ -195,56 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listen to changes from other scripts (e.g. mark as read button)
     window.addEventListener('chapter_read', refreshProgressMenu);
 
-    const certBtn = document.getElementById('download-cert-btn');
-    if (certBtn) {
-        certBtn.addEventListener('click', () => {
-            const name = prompt("Enter your name to appear on the certificate:", "Student");
-            if (name) {
-                const printWindow = window.open('', '_blank');
-                printWindow.document.write(`
-                    <html>
-                    <head>
-                        <title>Certificate of Completion</title>
-                        <style>
-                            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;700&display=swap');
-                            body { font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f3f4f6; margin: 0; }
-                            @media print { body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; } .certificate { box-shadow: none !important; border-width: 10px !important; } }
-                            .certificate { width: 800px; padding: 60px 40px 100px; text-align: center; background: white; border: 15px solid #d4af37; outline: 5px solid #fff; outline-offset: -10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative; }
-                            .cert-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1f2937; margin-bottom: 20px; }
-                            .cert-subtitle { font-size: 1.2rem; color: #4b5563; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
-                            .cert-name { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #d4af37; margin-bottom: 20px; font-style: italic; border-bottom: 2px solid #e5e7eb; display: inline-block; padding: 0 40px; }
-                            .cert-desc { font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin-bottom: 40px; padding: 0 50px; }
-                            .cert-date { font-weight: bold; font-size: 1.1rem; color: #1f2937; }
-                            .cert-seal { position: absolute; bottom: 40px; left: 40px; width: 100px; height: 100px; background: #d4af37; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; color: white; font-weight: bold; font-family: 'Playfair Display', serif; font-size: 1.1rem; border: 4px dashed white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-                            .cert-signature { position: absolute; bottom: 40px; right: 40px; text-align: center; }
-                            .cert-signature span { display: block; border-top: 1px solid #1f2937; padding-top: 10px; margin-top: 40px; font-weight: bold; }
-                        </style>
-                    </head>
-                    <body>
-                        <div class="certificate">
-                            <div class="cert-title">Certificate of Completion</div>
-                            <div class="cert-subtitle">This proudly certifies that</div>
-                            <div class="cert-name">${name}</div>
-                            <div class="cert-desc">has successfully completed all chapters of the <strong>International Relations Masterclass</strong>, demonstrating a profound understanding of global systems, geopolitics, and historical international theories.</div>
-                            <div class="cert-date">Date: ${new Date().toLocaleDateString()}</div>
-                            
-                            <div class="cert-seal">Award of<br>Excellence</div>
-                            <div class="cert-signature">
-                                <em style="font-family:'Playfair Display', serif; font-size: 1.5rem;">IR Study Companion</em>
-                                <span>Course Director</span>
-                            </div>
-                        </div>
-                        <script>
-                            setTimeout(() => {
-                                window.print();
-                            }, 500);
-                        </script>
-                    </body>
-                    </html>
-                `);
-                printWindow.document.close();
-            }
-        });
-    }
 });
 </script>

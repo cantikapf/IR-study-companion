@@ -13,6 +13,62 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Prototype Homepage Revisi Besar + Penghapusan Total Fitur Certification:
+Arahan langsung pengguna: (1) framework diagram dihapus sepenuhnya dari homepage, (2) fitur certification dihilangkan dari SELURUH proyek, (3) tidak ada penomoran Track 01-04, (4) label "1080p Master" dihapus, (5) hero diganti visual online-course.
+1. `Asset Hero Orisinal Baru (`prototype/assets/hero-course-illustration.svg`)`: Ilustrasi SVG buatan sendiri (bukan stok AI): globe wireframe dengan graticule trigonometris + jalur dagu dashed antar node negara, kartu video lesson mind map (CH030 Realism, play button, progress bar), kartu Active Recall (quiz security dilemma), kartu progres modul. Lolos inspection gate via render Playwright/Edge + `vision_analyze`: play button bebas dari panah, teks quiz lengkap, 3/3 PASS setelah perbaikan alignment (right edge 960px) dan margin CONSTRUCTIVISM (inset 936px dari panel 940px).
+2. `Framework Diagram Dihapus`: Showcase mind map CH010 (`mindmap-showcase`, badge CHAPTER 010, paradigm pills) dan seluruh CSS-nya dihapus dari hero; diganti `hero-visual` dengan asset baru.
+3. `Certification Dihilangkan dari Seluruh Proyek`: prototype/home.html (nav, stepper award, timeline section "Path to Certification", tombol Academic Certificates), _pages/index.md (tombol), _pages/about-me.md (link + frasa "certification credit"), _includes/chapter_progress_menu.html (tombol Download Certificate + generator sertifikat print), _includes/module_exam.html (2 frasa "module certification/academic certificate"), halaman `_pages/certificate.md` DIHAPUS, dan skrip scratch `scripts/apply_prototype_update.py` (berisi salinan prototype lama) DIHAPUS.
+4. `Penomoran Track Dihapus`: Label "Track 01"-"Track 04" dan CSS `.track-num` dihapus dari homepage (ikon + deskripsi scope dipertahankan).
+5. `Verification`: 369/369 pytest PASS; `jekyll build` sukses (194s); `_site/certificate.html` tidak lagi digenerate; grep seluruh `_site` bersih dari `certificate.html`. Sisa kata "certificates" hanya pada konten kurikulum CBAM (carbon certificates, EU ETS) dan catatan historis milestone — bukan fitur.
+
+2026-10-08 - Prototype Homepage ReUI Component Adaptation (M9 Platform UI):
+Menyempurnakan `prototype/home.html` dengan pola komponen gratis dari registry ReUI (terhubung via MCP `reui`, akun pengguna), dipelajari melalui `get_component` untuk `timeline`, `stepper`, dan `icon-stack`, lalu diadaptasi ke vanilla design system prototipe (ReUI adalah registry React/shadcn; situs ini vanilla HTML, jadi polanya di-port, bukan diinstal):
+1. `Stepper (@reui/stepper pattern)`: Baris navigasi "Recommended Study Sequence" 5 langkah (Foundations ➔ Security & History ➔ Political Economy ➔ Law & Regionalism ➔ Certification) di atas daftar track kurikulum; langkah aktif beraksen Oxford Navy + ring halus.
+2. `Timeline (@reui/timeline pattern)`: Section baru "The Path to Certification" (`#roadmap`) — 5 stage vertikal dengan indikator titik, garis penghubung, tanggal stage gaya mono, dan tautan per stage.
+3. `Icon Stack (@reui/icon-stack pattern)`: Ikon isometrik berlapis (2 plane offset + ikon garis lucide inline SVG) pada 4 kartu track (globe/shield/coins/scale) dan 3 kartu lab (crosshair/map/landmark), plus indikator award di stepper.
+4. `Verification`: 369/369 pytest PASS; anchor edit terverifikasi unik (10/10); semua section asli terjaga (Video Companion + poster CH030, hero mind map CH010, Prisoner's Dilemma sandbox, metrics bar).
+Catatan: pencarian block premium ReUI (hero/navbar/faq) terkunci di paket Pro; komposisi memakai komponen/example gratis sesuai jalur free plan.
+
+2026-10-08 - Milestone M9: Chapter 040 Mind Map Explanatory Video Full Production (First Full 5-Phase Gate Compliance):
+Memproduksi secara penuh video kanonik Mind Map Explanatory untuk Chapter 040 (*Basic Explanation of Liberalism in IR*) — produksi pertama yang patuh penuh pada Mandatory Review Gate:
+1. `Fase 1 (Script & Mind Map Graph)`: 8 slide narasi akademik + 34 node / 33 panah pada 8 kluster (Dialectic, Philosophy, Kantian Triangle, Democratic Peace, Interdependence, Institutional Lab, Neo-Neo Debate, Compass). **Rancangan dipresentasikan sebagai HTML preview interaktif (RoughJS) dan mendapat ACC pengguna sebelum fase lanjutan.**
+2. `Fase 2 (Neural Audio)`: `voiceover.mp3` (380.75 detik / 11.422 frame @ 30 FPS, Kokoro `af_heart` 1.05x) + 51 caption tersinkronisasi. Builder menghitung `revealFrame` & segmen kamera langsung dari `subtitles.json` (anchor caption, bukan estimasi).
+3. `Fase 3 (Flowchart Architecture)`: `ch040_flowchartData.ts` dibangun via `scripts/build_ch040_flowchart_data.py` dengan audit geometri otomatis (Liang-Barsky arrow-box intersection). Redesain dua iterasi: 7 tabrakan awal → 0 collisions final. 30 segmen kamera dengan pasangan fokus kontekstual (hub+pillar bersama dalam frame, zoom 1.55-1.85x).
+4. `Fase 4 (Inspection Gate via vision_analyze)`: Temuan & perbaikan berbasis still frame: (a) root node terpotong di tepi kiri saat Deep Zoom → kamera pasangan fokus; (b) node induk terpotong di segmen pilar → pasangan fokus hub+pillar; (c) panorama memotong node "What Institutions Do" → reposisi panorama (2600,1650, 0.36x). Semua frame kunci terverifikasi bersih.
+5. `Fase 5 (Master Render & Registry Sync)`: Master 1080p `learning-videos/exports/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_MindMap_1080p.mp4` (49.3 MB, 06:21) + poster PNG (230 KB). Sinkron `catalog.json` (entri baru), `README.md` (⚪→🟢), frontmatter `040-basic-liberalism.md`.
+
+2026-10-07 - Milestone M9: Mandatory Review Gate Codification in Mind Map Video Pipeline:
+Merespons arahan langsung pengguna mengenai alur kerja produksi video edukasi kanonik:
+1. `Mandatory Review Gate Codified`: Menyisipkan gerbang inspeksi wajib (*checkpoint review gate*) tepat setelah penyelesaian Fase 1 (Ekstraksi Naskah Narasi Voiceover & Graf Mind Map).
+2. `Permanent Rules Anchoring`: Mengabadikan aturan ini ke dalam:
+   - `HERMES.md` (Bagian 3: Critical Guardrails #3).
+   - `.agents/skills/ir-video-director/SKILL.md` (Diagram 5-Phase Pipeline & Gate Review Wajib).
+   - `.agents/rules/lessons-learned.md` (Memory bank permanen proyek).
+3. `Enforcement Law`: Agen dilarang melangkah ke Fase 2 (audio Kokoro), Fase 3 (kamera Remotion), Fase 4 (still render), atau Fase 5 (render MP4) sebelum rancangan mind map dipresentasikan dan mendapat persetujuan eksplisit (ACC) dari pengguna.
+
+2026-10-07 - Milestone M9: Chapter 030 Mind Map Explanatory Video Full Production & Registry Sync:
+Memproduksi secara penuh video kanonik Mind Map Explanatory untuk Chapter 030 (*Basic Explanation of Realism in IR*):
+1. `Fase 1 (Script & Mind Map Graph Extraction)`: Menyusun 8 slide naskah narasi akademik dan memetakan 34 node graf berstruktur 8 kluster (Roots, 3S Triad, Historical Lineage, Anarchy & Dilemma, Classical vs Neorealism, Defensive vs Offensive, Neoclassical & Middle East Case Study, dan Panorama Compass).
+2. `Fase 2 (Neural Audio & Sentence Alignment)`: Menghasilkan `voiceover.mp3` (323.50 detik / 9.705 frame @ 30 FPS) menggunakan Kokoro-82M ONNX (`af_heart`) serta 39 caption tersinkronisasi di `subtitles.json` dan `timestamps.json`.
+3. `Fase 3 (Remotion Flowchart Architecture & Modular Datasets)`: Membangun dataset TypeScript deterministik di `src/flowchart/data/ch030_flowchartData.ts` dan merekayasa 24 segmen kamera diskrit yang memenuhi Hukum 3 Pilar Kamera (Deep Zoom 2.05x, Stationary Hold $v=0$, Contextual Zoom-out 1.20x, dan Pull-back Panorama 0.39x). Menjaga dataset Chapter 010 tetap terisolasi di `data/ch010/`.
+4. `Fase 4 (Inspection Gate Previews & Collision Remediation)`: Merespons temuan visual pada menit 02:48 (arrow memotong boks "Unitary Rational Actors" serta desinkronisasi tampilan percabangan tradisi). Mengeliminasi seluruh tabrakan panah (total collisions: 0), menyelaraskan pemunculan percabangan Classical Realism & Structural Neorealism tepat saat narasi menyebutkan split tradisi, dan mengarahkan fokus Deep Zoom kamera ke Morgenthau & Animus Dominandi saat menit 02:48. Terverifikasi visual 100% via `vision_analyze`.
+5. `Fase 5 (Master MP4 Render & Registry Sync)`: Merender ulang penuh berkas master 1080p `learning-videos/exports/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_MindMap_1080p.mp4` (51.8 MB) dan poster `learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Poster.png` (295 KB). Menyinkronkan metadata ke `catalog.json`, `learning-videos/README.md`, dan frontmatter `030-basic-realism.md`. 369/369 pytest PASS.
+
+2026-10-07 - Hermes Desktop Migration & Linear Development Framework:
+Mempersiapkan infrastruktur transisi pengerjaan repositori dari Google Antigravity ke Hermes Desktop:
+1. `Root Instruction Bootstrap (`HERMES.md`, `AGENTS.md`, & `IDEA.md`)`: Menyusun manual operasional deterministik khusus Hermes Desktop (`HERMES.md`), standar universal `AGENTS.md`, dan `IDEA.md` sebagai deskripsi proyek di root repositori, mendefinisikan 5-Step Linear Execution Loop (Bootstrap ➔ Scope ➔ Verify Pre ➔ Execute ➔ Sync State).
+2. `Zero-Configuration Architecture (No Custom Profile Needed)`: Pengguna tidak perlu mengonfigurasi profil kustom atau pengaturan sistem di antarmuka Hermes Desktop; dialog pembuatan proyek di Hermes menyimpan deskripsi ke `IDEA.md` yang secara otomatis mengarahkan agen ke `HERMES.md` dan `PROJECT.md`.
+3. `Single Source of Truth (SSOT) Anchoring`: Memastikan state repositori berbasis berkas internal (`PROJECT.md`, `wiki/hot.md`, `lessons-learned.md`) sehingga agen baru dapat langsung melanjutkan milestone M9 tanpa amnesia konteks atau regresi kode.
+4. `Critical Guardrails Codified`: Memetakan 4 hukum repositori (English-only UI, preservasi 10 Diplomatic Labs, standar video Mind Map RoughJS/Remotion @IRinANutshell, dan Jekyll/pytest 369/369 integrity) agar Hermes Desktop tidak melakukan perubahan acak di luar cakupan.
+
+2026-10-07 - Milestone M9: Curriculum-Wide Mind Map Explanatory Video Coverage Audit (Updated per User Clarification):
+Audit menyeluruh terhadap 157 bab materi kurikulum di 18 modul mengenai ketersediaan video Mind Map Explanatory:
+1. `Baseline Status & Clarification`: Tepat 2 bab yang telah selesai diproduksi dan dipublikasikan dalam format Mind Map Explanatory:
+   - Bab 010: *Study of International Relations* (YouTube: `Sa0PnnZLn0w`, 5m 16s, Remotion RoughJS).
+   - Bab 020: *Globalization and Global Politics* (YouTube: `7K4preE-EBY`, 3m, dikonfirmasi pengguna sebagai format mindmap video resmi).
+2. `Coverage Metrics`: 155 dari 157 bab kurikulum (98.73%) belum memiliki video Mind Map Explanatory. 4 bab di Modul 1 (CH030 s.d. CH060) terdaftar berstatus QUEUED di `learning-videos/README.md`.
+3. `Curriculum Breakdown`: Seluruh 155 bab yang belum memiliki Mind Map telah dipetakan secara presisi per modul (18 modul) dan per track pembelajaran (4 tracks). Frontmatter Bab 020 dan `learning-videos/catalog.json` diselaraskan menjadi format Mind Map Explanatory.
+
 2026-10-07 - Milestone M9: Chapter 2 Conceptual Gateway Card & Dynamic Video Badge Integration:
 Merespons observasi pengguna mengenai kartu border Conceptual Gateway yang sebelumnya hanya ada di Bab 1, padahal Bab 2 juga memiliki video ringkasan (3 menit):
 1. `Root Cause Diagnosis`: Video ringkasan Bab 2 (`7K4preE-EBY`, 3 menit) sebelumnya disematkan secara manual via tag raw HTML `<center><iframe ...>` di badan teks markdown bab di bawah judul `## Summary Video`, sehingga tidak mengaktifkan kartu resmi `mindmap-explanatory-gateway` yang dikontrol oleh frontmatter layout.

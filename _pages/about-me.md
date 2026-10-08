@@ -43,7 +43,7 @@ permalink: /about-me.html
     <ol>
       <li><strong>Focus-Mode Reading:</strong> A clean, distraction-free reading experience with chapter outlines and estimated reading times to maximize focus and retention.</li>
       <li><strong>Knowledge Checkpoints:</strong> Formative multiple-choice questions at the end of each lesson provide immediate scholarly rationale and direct links back to cited passages.</li>
-      <li><strong>Summative Module Examinations:</strong> 18 rigorous 10-question exams (180 questions total) requiring a 70% mastery threshold to earn academic certification credit.</li>
+      <li><strong>Summative Module Examinations:</strong> 18 rigorous 10-question exams (180 questions total) requiring a 70% mastery threshold for module completion.</li>
       <li><strong>Interactive Diplomatic Labs:</strong> 10 bespoke simulation engines built in vanilla ES6—including the Cuban Missile Crisis, UN Security Council P5 Veto, UNCLOS Maritime Zoning, and ASEAN South China Sea negotiations.</li>
     </ol>
 
@@ -74,9 +74,6 @@ permalink: /about-me.html
     <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--lms-hairline); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
       <a href="{{ site.baseurl }}/" class="sync-btn sync-btn-primary" style="text-decoration: none;">
         &larr; Return to Course Curriculum
-      </a>
-      <a href="{{ site.baseurl }}/certificate.html" class="sync-btn sync-btn-secondary" style="text-decoration: none;">
-        View Certificate Verification &rarr;
       </a>
     </div>
   </article>
