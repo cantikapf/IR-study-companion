@@ -13,6 +13,24 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Homepage Hero Copy De-AI (Rewrite Headline, Deskripsi & Title Tag):
+Arahan pengguna: tulisan hero terbaca "terlalu AI" dan title tag setelah "IR Study Companion" juga perlu diganti (nama situs tetap). Analisis pola via skill humanizer: (1) rule-of-three beritalik "Rigor, Structure, Clarity" di H1, (2) daftar abstraksi beruntun + kata promo "academically rigorous / Grounded in" di deskripsi, (3) title tag marketing "Master International Relations with Rigor & Clarity" yang menggema triad yang sama.
+1. `Title Tag (_pages/index.md:3)`: ➔ "IR Study Companion — A Free, Structured Course in International Relations" (deskriptif, tanpa imperative marketing).
+2. `H1 Hero`: ➔ "World politics, taught from the ground up." (satu klaim konkret, tanpa triad).
+3. `Deskripsi`: ➔ narasi urutan belajar ("It follows the sequence of a degree: theory first, then history, political economy, law, and diplomacy. Every module ends with an exam, and the labs drop you into real diplomatic dilemmas.") — sengaja tanpa angka 18/157/10 karena metrics strip 10 px di bawahnya sudah menampilkan angka yang sama (hindari duplikasi).
+4. `Sinkronisasi Prototype`: perubahan identik diterapkan di `prototype/home.html` (hero-headline + hero-standfirst).
+5. `Verifikasi`: 369/369 pytest PASS; jekyll build sukses (65s, Ruby via D:/Ruby32-x64); grep `_site/index.html`: 0 sisa teks lama, title & copy baru live.
+
+2026-10-08 - Standardisasi & Otomatisasi YouTube Thumbnail Pipeline Berbasis Template PSD Canonical:
+Merespons permintaan pengguna untuk mengadopsi template Photoshop thumbnail (`thumbnail template.psd` di `D:\PERSONAL PROJECT\IR In The Nutshell\Channel Asset\`) ke dalam pipeline produksi video:
+1. `Ekstraksi & Analisis Template`: Membongkar layer PSD (1920x1080 16:9, split-screen torn-paper brush mask, typography Archivo Black + Space Mono, red-white contrast `#FC1919`/`#FFFFFF`, dan elemen CTA YouTube Subscribe/Bell/Like). Mengekstrak masker overlay transparan lossless ke `scripts/assets/thumbnail_overlay_template.png` dan `Channel Asset/`.
+2. `Engine Otomatisasi Python (`scripts/generate_thumbnail.py`)`: Membuat generator CLI dengan auto-text sizing, font safe-margin dynamic wrap, pewarnaan bergantian otomatis, smart background cover & fit-right mode (untuk diagram mindmap).
+3. `Penyelarasan Workflow Video`: Mengintegrasikan pembuatan thumbnail kanonik ke dalam Fase 5 workflow produksi Mind Map Explanatory (`HERMES.md`, `ir-video-director` SKILL, `learning-videos/README.md`, dan `catalog.json`).
+4. `Pembuatan Thumbnail Dua Video Selesai`: Memproduksi thumbnail 1080p resmi untuk kedua video Mind Map Explanatory:
+   - CH030 (*Basic Explanation of Realism in IR*): `learning-videos/posters/IR_M01_CH030_Basic_Explanation_of_Realism_in_IR_Thumbnail.png` (Visual Chiaroscuro Chessboard & Fallen King).
+   - CH040 (*Basic Explanation of Liberalism in IR*): `learning-videos/posters/IR_M01_CH040_Basic_Explanation_of_Liberalism_in_IR_Thumbnail.png` (Visual UN General Assembly Hall).
+5. `Verifikasi Visual & Test Suite`: Lolos evaluasi inspeksi visual `vision_analyze` dengan skor tinggi untuk legibilitas dan branding; 369/369 pytest PASS.
+
 2026-10-08 - Module 010 Label Standardization: "Introduction to International Relations":
 Memperbaiki penamaan Modul 010 sesuai arahan pengguna agar tidak disingkat ("Introduction To Ir" ➔ "Introduction to International Relations"):
 1. `Curriculum Explorer Dataset`: Memperbarui `name` dan `overview.title` pada M010 di `_pages/index.md` dan `prototype/home.html`.
