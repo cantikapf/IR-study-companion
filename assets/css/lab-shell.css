@@ -16,6 +16,7 @@
   --lab-win: #059669;
   --lab-warn: #d97706;
   --lab-lose: #dc2626;
+  --lab-gold: #d97706;
 
   margin: 36px 0;
   border: 1px solid var(--lms-hairline);
@@ -35,6 +36,7 @@ body.dark-theme .lab-shell {
   --lab-win: #34d399;
   --lab-warn: #fbbf24;
   --lab-lose: #f87171;
+  --lab-gold: #f59e0b;
 }
 
 .lab-shell [hidden] { display: none !important; }
@@ -498,6 +500,7 @@ body.dark-theme .lab-shell {
   border-radius: var(--lms-radius-md);
   background: var(--lms-canvas);
   animation: lab-fade-in 0.5s var(--lms-ease);
+  scroll-margin-top: 80px;
 }
 
 .lab-debrief.is-win  { border-left-color: var(--lab-win); }
@@ -533,7 +536,7 @@ body.dark-theme .lab-shell {
   border-radius: var(--lms-radius-md);
   font-size: 0.82rem;
   color: var(--lms-ink-secondary);
-  max-height: 260px;
+  max-height: 420px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
@@ -602,6 +605,269 @@ body.dark-theme .lab-shell {
 @keyframes lab-fade-in {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   Mini-Game Layer Components (M10 G1/G2/G3)
+   Theme-aware, accessible, reduced-motion safe
+   -------------------------------------------------------------------------- */
+
+/* Modal Backdrop & Card */
+.lab-modal-back {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 18px;
+  animation: lab-fade-in 0.2s var(--lms-ease);
+}
+
+.lab-modal-card {
+  background: var(--lms-surface);
+  border: 1px solid var(--lms-hairline);
+  border-radius: var(--lms-radius-lg);
+  box-shadow: var(--lms-shadow-lg, 0 20px 45px -10px rgba(0,0,0,0.4));
+  max-width: 580px;
+  width: 100%;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--lms-ink-primary);
+  animation: lab-pop-in 0.25s var(--lms-ease);
+}
+
+.lab-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--lms-hairline);
+  background: var(--lms-subtle);
+}
+
+.lab-modal-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lms-ink-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lab-modal-header h4 .fa { color: var(--lab-gold); }
+
+.lab-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--lms-ink-tertiary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--lms-radius-sm);
+  transition: color 0.15s ease;
+}
+
+.lab-modal-close:hover { color: var(--lms-ink-primary); }
+
+.lab-modal-body {
+  padding: 20px 22px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--lms-ink-secondary);
+}
+
+.lab-modal-section h5 {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--lms-ink-primary);
+}
+
+.lab-modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid var(--lms-hairline);
+  background: var(--lms-subtle);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Stars & Rank */
+.lab-stars {
+  font-size: 2.3rem;
+  letter-spacing: 0.18em;
+  color: var(--lab-gold);
+  margin: 4px 0 8px;
+  min-height: 1.2em;
+  line-height: 1;
+}
+
+.lab-stars .is-off {
+  color: var(--lms-ink-muted);
+  opacity: 0.3;
+}
+
+.lab-star-in {
+  display: inline-block;
+  animation: lab-star-pop 0.35s ease both;
+}
+
+.lab-rank {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--lms-ink-primary);
+  margin-bottom: 4px;
+}
+
+/* Move tags */
+.lab-movetag {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--lms-radius-pill);
+  padding: 4px 12px;
+  min-height: 24px;
+  background: var(--lms-subtle);
+  color: var(--lms-ink-secondary);
+  border: 1px solid var(--lms-hairline);
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-movetag.is-coop {
+  color: var(--lab-win);
+  border-color: var(--lab-win);
+  background: rgb(5 150 105 / 10%);
+}
+
+.lab-movetag.is-defect {
+  color: var(--lab-lose);
+  border-color: var(--lab-lose);
+  background: rgb(220 38 38 / 10%);
+}
+
+/* Trust Bar */
+.lab-trustbar {
+  width: 10px;
+  height: 110px;
+  border-radius: var(--lms-radius-pill);
+  background: var(--lms-canvas);
+  border: 1px solid var(--lms-hairline);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.lab-trustfill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--lab-win), var(--lab-gold) 65%, var(--lab-lose));
+  transition: height 0.5s var(--lms-ease);
+}
+
+/* Score pops */
+.lab-pop {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-weight: 900;
+  font-size: 1.55rem;
+  pointer-events: none;
+  animation: lab-float-up 1s ease forwards;
+  z-index: 10;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-pop.is-win  { color: var(--lab-win); }
+.lab-pop.is-lose { color: var(--lab-lose); }
+
+/* Shaking & Roulette */
+.lab-shaking { animation: lab-shake 0.4s ease; }
+.lab-roulette { animation: lab-flick 0.09s linear infinite; }
+
+/* Intel / SIGINT Log Entry */
+.lab-log-entry.is-intel {
+  background: rgb(217 119 6 / 10%);
+  border-left: 3px solid var(--lab-gold);
+  color: var(--lms-ink-primary);
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--lms-radius-sm);
+  margin: 4px 0;
+}
+
+.lab-intel-tag {
+  color: var(--lab-gold);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+/* HUD Streak Chip */
+.lab-hud-chip.is-streak {
+  color: var(--lab-win);
+  border-color: var(--lab-win);
+  font-weight: 700;
+}
+
+.lab-hud-chip.is-streak b { color: var(--lab-gold); }
+
+/* Animations */
+@keyframes lab-pop-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes lab-float-up {
+  from { opacity: 1; transform: translate(-50%, 0); }
+  to   { opacity: 0; transform: translate(-50%, -48px); }
+}
+
+@keyframes lab-shake {
+  0%, 100% { transform: none; }
+  25% { transform: translateX(-7px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+@keyframes lab-flick {
+  50% { opacity: 0.25; }
+}
+
+@keyframes lab-star-pop {
+  from { opacity: 0; transform: scale(2.2); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-modal-back,
+  .lab-modal-card,
+  .lab-pop,
+  .lab-shaking,
+  .lab-roulette,
+  .lab-star-in {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 @media (max-width: 720px) {
