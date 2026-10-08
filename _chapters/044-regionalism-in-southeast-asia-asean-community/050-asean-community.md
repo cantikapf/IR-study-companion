@@ -160,9 +160,6 @@ Continued integration and cooperation will bolster ASEAN's resilience and collec
 
 {% include sim_scs_dispute.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="ASEAN Community" def1="Regional cooperation in politics, security, economy, and socio-culture in Southeast Asia" term2="ASEAN Economic Community" def2="Promotes economic integration and single market among ASEAN member states" term3="Political-Security Community" def3="Fosters regional peace and stability through cooperation on security issues" term4="Socio-Cultural Community" def4="Promotes social development and collective regional identity amongst ASEAN members" %}
 
 ### Knowledge Check

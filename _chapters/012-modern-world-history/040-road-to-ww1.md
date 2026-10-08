@@ -119,9 +119,6 @@ Within weeks, the major powers of Europe were drawn into a massive conflict as a
 
 {% include sim_balance_of_power.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Alliances" def1="Mutual defense pacts between nations, creating rival blocs like the Triple Entente and Triple Alliance." term2="Imperialism" def2="Aggressive pursuit and acquisition of colonies by powerful nations, creating competition and rivalry." term3="Militarism" def3="Nations building strong militaries and readiness for war, fueling an arms race and tensions." term4="Nationalism" def4="Strong pride in one's country and desire for independence, fueling ethnic self-determination." %}
 
 ### Knowledge Check

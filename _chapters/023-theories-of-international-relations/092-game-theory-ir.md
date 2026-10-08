@@ -65,7 +65,6 @@ Under the Cult of the Offensive, windows of vulnerability closed so quickly that
 
 {% include sim_game_theory.html %}
 
-### Interactive Learning 
 {% include flashcards.html term1="Game Theory" def1="Analyzing interactions between individuals or groups in strategic situations" term2="Prisoner's Dilemma" def2="A situation where rational individuals may not cooperate for mutual benefit" term3="Cooperation" def3="Actors working together to achieve a common goal" term4="Defection" def4="Actors choosing not to cooperate to gain an advantage" %}
 
 ### Knowledge Check

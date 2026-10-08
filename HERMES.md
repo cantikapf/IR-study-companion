@@ -69,7 +69,7 @@ Commit with clear conventional messages:
 
 2. **Preservation of 10 Diplomatic Labs**:
    - 10 chapters contain interactive simulation labs (`sim_*.html`). These must remain intact.
-   - The remaining 145 non-simulation chapters have had redundant dividers and `### Interactive Learning` headers cleaned up intentionally. Do not re-inject them.
+   - All 155 chapters (10 simulation + 145 non-simulation) have had redundant dividers and `### Interactive Learning` headers cleaned up intentionally. Do not re-inject them.
 
 3. **Official Video Explanatory Standard (Mind Map Explanatory)**:
    - Educational videos for `@IRinANutshell` use the **Mind Map Explanatory** engine in `simulation/ir-motion-library/` (Remotion + RoughJS + Google Font `Patrick Hand` + Kokoro-82M neural TTS).

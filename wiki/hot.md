@@ -13,6 +13,16 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Complete Elimination of Redundant Interactive Learning Headers Across Simulation Chapters:
+1. `Root Cause & Visual Hierarchy Harmonization`:
+   - Artefak template lama `### Interactive Learning` (dan divider horizontal `---`) yang sebelumnya berada di bawah kartu simulasi (`{% include sim_*.html %}`) di 10 bab kurikulum telah dieliminasi secara tuntas.
+   - Menghilangkan kebingungan hirarki visual di mana heading `Interactive Learning` muncul di bawah Diplomatic Lab (seperti *Cuban Missile Crisis - Begin Crisis Command*) tepat sebelum Flashcards.
+   - Komponen flashcard tetap menampilkan header mandirinya (`Active Recall Cards`), menyelaraskan alur pedagogis 10 bab simulasi dengan 145 bab kurikulum lainnya (*Naskah ➔ Diplomatic Lab ➔ Active Recall Cards ➔ Knowledge Check*).
+2. `Verifikasi & QA`:
+   - Grep verification: 0 hit untuk `### Interactive Learning` di seluruh direktori `_chapters/`.
+   - Unit tests: 369/369 pytest PASS.
+   - Updated repository rules di `HERMES.md` & `.agents/rules/lessons-learned.md`.
+
 2026-10-08 - Video Companion UI & Asset Pipeline Fix:
 1. `Pembersihan AI/TTS References & Klaim Fiktif`:
    - Menghapus penyebutan "local Kokoro-82M neural voices" serta judul/durasi fiktif ("flagship 10-minute master episode: 'The Anarchy Problem — Who's in Charge of the Planet?'") di kartu showcase YouTube `@IRinANutshell` pada `_pages/index.md` dan `prototype/home.html`.

@@ -147,9 +147,6 @@ The compulsory dispute settlement mechanisms under UNCLOS have strengthened the 
 
 {% include sim_unclos_zones.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="UNCLOS" def1="UN Convention on the Law of the Sea, governing ocean use" term2="Territorial Sea" def2="Sovereign waters extending 12 nautical miles from coastline" term3="Exclusive Economic Zone (EEZ)" def3="200 nautical mile zone for resource exploitation and management" term4="High Seas" def4="Open ocean areas beyond national jurisdiction" %}
 
 ### Knowledge Check

@@ -102,9 +102,6 @@ Leaders play a key role in this process by interpreting international threats an
 
 {% include sim_security_dilemma.html %}
 
----
-
-### Interactive Learning 
 {% include flashcards.html term1="Egoism" def1="States act to further their own national interests." term2="Power-centrism" def2="Power is the currency of international politics." term3="Anarchic System" def3="International system with no higher authority above states." term4="Groupism" def4="States are unified rational actors with national interests." %}
 
 ### Knowledge Check

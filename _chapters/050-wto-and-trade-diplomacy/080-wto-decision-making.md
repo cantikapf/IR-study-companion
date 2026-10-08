@@ -119,7 +119,6 @@ The World Trade Organization serves an important role in facilitating trade and 
 
 {% include sim_wto.html %}
 
-### Interactive Learning 
 {% include flashcards.html term1="Consensus-Based Decision Making" def1="WTO decisions made collectively by members with no formal objection" term2="Ministerial Conference" def2="WTO's highest decision-making body meeting every two years" term3="Progressive Liberalization" def3="Gradual opening of markets to international trade and competition" term4="Dispute Settlement Process" def4="WTO process to resolve trade conflicts between member countries" %}
 
 ### Knowledge Check
