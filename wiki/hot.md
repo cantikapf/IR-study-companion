@@ -13,6 +13,16 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Comprehensive README.md Overhaul & Academic SEO Alignment:
+1. `Sinkronisasi Status Platform & SEO Positioning`:
+   - Memutakhirkan `README.md` secara menyeluruh agar selaras dengan milestone aktif M0–M10.
+   - Mengintegrasikan matriks 18 Modul Kurikulum (157 bab pelajaran), 10 Diplomatic Decision Labs, 156 Checkpoint Active Recall, 18 Ujian Modul Komprehensif (180 soal), generator sertifikat otomatis, dan kamus glosarium 122 konsep IR.
+   - Mengoptimalkan kata kunci SEO GitHub & repositori: *International Relations, IR Theory, Diplomacy, Foreign Policy Analysis, Game Theory Simulations, Bespoke LMS, @IRinANutshell*.
+   - Menghapus artefak warisan lama (path `/IR-chapterbook/`, tema jekyll-gitbook, dan pengungkapan internal model AI).
+2. `Verifikasi & QA`:
+   - Pytest: 369/369 PASS.
+
+
 2026-10-08 - Brand Badge Elimination in Topbar Navigation:
 1. `Motivasi & Pembersihan Visual`:
    - Menghapus badge redundant `<span class="lms-brand-badge">LMS Platform</span>` di header navigasi (`_layouts/default.html`).
