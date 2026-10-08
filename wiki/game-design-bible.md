@@ -5,7 +5,7 @@ type: director-handoff
 version: 1.0
 director: GLM 5.3 Flash (via 9router)
 builder: Gemini 3.8 (via 9router, separate Hermes session)
-status: G2 AUDIT PASSED (director audit 2026-10-08) — G3 pending user ACC after G2 review
+status: G3 COMPLETED (2026-10-08) — M10 GAME LAYER FULLY DELIVERED (G1 core + G2 9-lab retrofit + G3 homepage integration & sw.js v5)
 ground-truth-prototype: "scratch (EPHEMERAL): C:/Users/xiyeo/AppData/Local/hermes/cache/scratch/minigame_diplomacy_duel.html — user-ACC'd feel. If pruned, the spec sheets in §6 are authoritative; never block on the missing file."
 ---
 

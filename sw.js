@@ -1,12 +1,13 @@
 ---
 layout: null
 ---
-const CACHE_NAME = 'ir-companion-lms-v4';
+const CACHE_NAME = 'ir-companion-lms-v5';
 const urlsToCache = [
   '{{ site.baseurl }}/',
   '{{ site.baseurl }}/assets/css/course-player.css',
   '{{ site.baseurl }}/assets/css/lab-shell.css',
   '{{ site.baseurl }}/assets/js/course-player.js',
+  '{{ site.baseurl }}/assets/js/lab-game-core.js',
   '{{ site.baseurl }}/{{ site.favicon_path }}'
 ];
 

@@ -622,9 +622,144 @@ permalink: /
     box-shadow: var(--lms-shadow-md);
   }
 
+  .lab-card-sm[data-cat="security"] {
+    border-left: 3px solid #dc2626;
+  }
+  .lab-card-sm[data-cat="strategy"] {
+    border-left: 3px solid #2563eb;
+  }
+  .lab-card-sm[data-cat="governance"] {
+    border-left: 3px solid #7c3aed;
+  }
+
   .lab-card-sm.is-featured-lab {
-    border-left: 3px solid #1e3a8a;
+    border-left: 3px solid #059669;
     background: var(--lms-subtle);
+  }
+
+  .lab-card-sm.is-completed-lab {
+    border-color: rgba(5, 150, 105, 0.4);
+  }
+
+  .lab-card-head-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .lab-card-meta-chips {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .lab-card-chip {
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    color: var(--lms-ink-tertiary);
+    background: var(--lms-subtle);
+    border: 1px solid var(--lms-hairline);
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--lms-radius-sm);
+  }
+
+  .lab-card-status-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .lab-card-badge-done {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #059669;
+    background: rgba(5, 150, 105, 0.12);
+    border: 1px solid rgba(5, 150, 105, 0.25);
+    padding: 0.12rem 0.45rem;
+    border-radius: var(--lms-radius-sm);
+  }
+
+  .lab-card-stars {
+    color: #d97706;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .sandbox-hud-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .sandbox-hud-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--lms-radius-sm);
+    background: var(--lms-subtle);
+    border: 1px solid var(--lms-hairline);
+    color: var(--lms-ink-secondary);
+  }
+
+  .sandbox-hud-chip.is-streak {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.1);
+    border-color: rgba(217, 119, 6, 0.25);
+    font-weight: 700;
+  }
+
+  .sandbox-debrief-card {
+    background: var(--lms-subtle);
+    border: 1px solid var(--lms-border-strong);
+    border-radius: var(--lms-radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  .sandbox-debrief-stars {
+    font-size: 1.8rem;
+    color: #d97706;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.12em;
+  }
+
+  .sandbox-debrief-rank {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--lms-ink-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .sandbox-debrief-reveal {
+    font-size: 0.825rem;
+    color: var(--lms-ink-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 0.65rem 0.85rem;
+    background: var(--lms-surface);
+    border: 1px solid var(--lms-hairline);
+    border-radius: var(--lms-radius-sm);
+  }
+
+  .sandbox-debrief-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .lab-card-title {
@@ -838,39 +973,65 @@ permalink: /
     </div>
 
     <div class="labs-showcase-split">
-      <!-- Live Playable Sandbox: Prisoner's Dilemma -->
+      <!-- Live Playable Sandbox: Prisoner's Dilemma (G1 Retrofit) -->
       <div class="playable-sandbox" id="game-theory-sim">
         <div class="sandbox-header">
           <span class="sandbox-tag"><i class="fa fa-gamepad"></i> Interactive Lab 02 &bull; Game Theory</span>
-          <span class="sandbox-status-chip">&bull; Live Simulation Sandbox</span>
+          <div class="sandbox-hud-chips">
+            <span class="sandbox-status-chip">&bull; Live Arena</span>
+            <span class="sandbox-hud-chip" id="gt-round-chip">Round: <b id="gt-round-val">1</b> / 8</span>
+            <span class="sandbox-hud-chip is-streak" id="gt-streak-chip">Streak: <b id="gt-streak-val">0</b> (<b id="gt-mult-val">×1</b>)</span>
+            <span class="sandbox-hud-chip" id="gt-best-chip">Best: <b id="gt-best-val">0</b> pts</span>
+            <button type="button" class="sandbox-hud-chip" id="gt-mute-toggle" title="Toggle audio" style="cursor: pointer; border: 1px solid var(--lms-hairline);">
+              <i class="fa fa-volume-up" id="gt-mute-icon"></i>
+            </button>
+          </div>
         </div>
 
-        <h3 class="sandbox-title">The Prisoner's Dilemma Strategic Arena</h3>
-        <p class="sandbox-prompt">
-          You represent State A. State B is an AI opponent playing Axelrod's <strong>'Tit-for-Tat'</strong> strategy. Will you seek mutual disarmament (Cooperate) or clandestinely militarize (Defect)?
+        <h3 class="sandbox-title">Diplomacy Duel: The Prisoner's Dilemma</h3>
+        <p class="sandbox-prompt" id="gt-prompt-text">
+          Survive 8 rounds against a classified rival doctrine. Mutual cooperation (+5) earns streak multipliers (&times;1.5 at 3, &times;2 at 5) &mdash; but unilateral defection tempts with +10. Beware betrayal (&minus;10/+10) and mutual defection (&minus;2/&minus;2).
         </p>
 
-        <div class="sandbox-duel-grid">
+        <!-- Active Duel Grid -->
+        <div class="sandbox-duel-grid" id="gt-duel-grid">
           <div class="duel-card">
-            <span class="duel-role">Your Payoff (State A)</span>
+            <span class="duel-role">Your Score (State A)</span>
             <div class="duel-score" id="gt-score-a">0</div>
-            <div class="duel-actions">
-              <button type="button" class="btn-sim btn-sim-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate</button>
-              <button type="button" class="btn-sim btn-sim-defect" onclick="playGameTheory('defect')">⚔️ Defect</button>
+            <div class="duel-actions" id="gt-actions-row">
+              <button type="button" class="btn-sim btn-sim-coop" id="btn-gt-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate (C)</button>
+              <button type="button" class="btn-sim btn-sim-defect" id="btn-gt-defect" onclick="playGameTheory('defect')">⚔️ Defect (D)</button>
             </div>
           </div>
 
           <div class="duel-card">
-            <span class="duel-role">Opponent (State B AI)</span>
+            <span class="duel-role">Classified Rival (State B)</span>
             <div class="duel-score" id="gt-score-b" style="color: #1e3a8a;">0</div>
             <div style="font-size: 0.775rem; color: var(--lms-ink-tertiary); margin-top: 0.85rem;" id="gt-opp-status">
-              Waiting for move...
+              Awaiting opening move...
             </div>
+          </div>
+        </div>
+
+        <!-- Session Debrief Box (Hidden during play) -->
+        <div class="sandbox-debrief-card" id="gt-debrief-box" style="display: none;">
+          <div class="sandbox-debrief-stars" id="gt-debrief-stars">★★★</div>
+          <div class="sandbox-debrief-rank" id="gt-debrief-rank">Master Diplomat</div>
+          <div class="sandbox-debrief-reveal" id="gt-debrief-reveal">
+            <strong>Rival Declassified:</strong> Tit-for-Tat (Axelrod 1984). Cooperates initially, then replicates your previous move.
+          </div>
+          <div class="sandbox-debrief-actions">
+            <button type="button" class="btn-sim btn-sim-coop" style="flex: initial; padding: 0.5rem 1.25rem;" onclick="resetGameTheorySandbox()">
+              <i class="fa fa-refresh"></i> Play Again ↺
+            </button>
+            <a href="{{ site.baseurl }}/game-theory-ir.html#game-theory-sim" class="btn-sim btn-sim-defect" style="flex: initial; padding: 0.5rem 1.25rem; text-decoration: none; text-align: center; background: #1e3a8a;">
+              Full Theory Lesson ➔
+            </a>
           </div>
         </div>
 
         <div class="sandbox-log" id="gt-log" aria-live="polite">
-          <div class="sandbox-log-line">&gt; Simulation initialized. Opponent memory cleared. Choose your strategy.</div>
+          <div class="sandbox-log-line">&gt; Session initialized. Rival doctrine locked under classified protocol. Choose opening stance.</div>
         </div>
       </div>
 
@@ -893,21 +1054,39 @@ permalink: /
 
         <div class="labs-scroll-pane" id="labs-scroll-pane">
           <!-- Lab 01 -->
-          <article class="lab-card-sm" data-cat="security">
+          <article class="lab-card-sm" data-cat="security" data-lab-id="crisis">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 01 &bull; FPA Model</div>
-              <h4 class="lab-card-title">Crisis Escalation Matrix</h4>
-              <p class="lab-card-desc">Simulate Graham Allison's bureaucratic models in a naval standoff. Balance brinkmanship against accidental war.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #dc2626;">Lab 01 &bull; FPA Model</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3-4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="crisis"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Crisis Command: Thirteen Days</h4>
+              <p class="lab-card-desc">Navigate Graham Allison's bureaucratic models in a naval missile crisis across 3 decision acts with DEFCON timers.</p>
             </div>
             <a href="{{ site.baseurl }}/models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
           </article>
 
           <!-- Lab 02 -->
-          <article class="lab-card-sm is-featured-lab" data-cat="strategy">
+          <article class="lab-card-sm is-featured-lab" data-cat="strategy" data-lab-id="game_theory">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem; color: #059669;">Lab 02 &bull; Game Theory &bull; Featured Live</div>
-              <h4 class="lab-card-title">Prisoner's Dilemma Strategic Arena</h4>
-              <p class="lab-card-desc">Calculate payoffs in Iterated Prisoner's Dilemma against Tit-for-Tat AI. Playable live in the sandbox on the left.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #059669;">Lab 02 &bull; Game Theory &bull; Featured Live</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="game_theory"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Diplomacy Duel: Prisoner's Dilemma</h4>
+              <p class="lab-card-desc">8-round strategic duel against classified rival doctrines. Chain cooperation streaks, decode SIGINT, and beat your best score.</p>
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
               <a href="#game-theory-sim" class="lab-card-link" onclick="document.getElementById('game-theory-sim').scrollIntoView({behavior:'smooth'}); return false;">Play Live Sandbox ↰</a>
@@ -916,81 +1095,153 @@ permalink: /
           </article>
 
           <!-- Lab 03 -->
-          <article class="lab-card-sm" data-cat="governance">
+          <article class="lab-card-sm" data-cat="governance" data-lab-id="wto">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 03 &bull; Trade Dispute</div>
-              <h4 class="lab-card-title">WTO Dispute Settlement Panel</h4>
-              <p class="lab-card-desc">Serve as an Appellate Body panelist adjudicating anti-dumping tariffs, subsidies, and Article XX environmental exceptions.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 03 &bull; Trade Dispute</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="wto"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Consensus Market: Doha Round Trap</h4>
+              <p class="lab-card-desc">Broker package deals across 8 voting blocs with 10 Diplomatic Capital points under WTO Single Undertaking rules.</p>
             </div>
             <a href="{{ site.baseurl }}/wto-decision-making.html#wto-sim" class="lab-card-link">Enter Panel ➔</a>
           </article>
 
           <!-- Lab 04 -->
-          <article class="lab-card-sm" data-cat="security">
+          <article class="lab-card-sm" data-cat="security" data-lab-id="security_dilemma">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 04 &bull; Security Studies</div>
-              <h4 class="lab-card-title">Security Dilemma Spiral</h4>
-              <p class="lab-card-desc">Navigate 5 rounds of arms race dynamics under Jervis's spiral model against a reactive AI opponent.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #dc2626;">Lab 04 &bull; Security Studies</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="security_dilemma"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Spiral Watch: Security Dilemma Matrix</h4>
+              <p class="lab-card-desc">Test Jervis's Spiral Model across 5 rounds of arms competition against a secret Cautious or Opportunistic adversary.</p>
             </div>
             <a href="{{ site.baseurl }}/realism-security.html#security-dilemma-sim" class="lab-card-link">Run Simulator ➔</a>
           </article>
 
           <!-- Lab 05 -->
-          <article class="lab-card-sm" data-cat="governance">
+          <article class="lab-card-sm" data-cat="governance" data-lab-id="unsc_veto">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 05 &bull; Global Governance</div>
-              <h4 class="lab-card-title">UNSC Veto Chamber</h4>
-              <p class="lab-card-desc">Draft a peacekeeping resolution and survive the P5 veto gauntlet across Chapter VII enforcement powers.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 05 &bull; Global Governance</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="unsc_veto"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Veto Gauntlet: UNSC Resolution Chamber</h4>
+              <p class="lab-card-desc">Draft Chapter VII resolutions and neutralize P5 red lines with 5 Amendment Tokens under UN Charter Article 27(3).</p>
             </div>
             <a href="{{ site.baseurl }}/un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
           </article>
 
           <!-- Lab 06 -->
-          <article class="lab-card-sm" data-cat="strategy">
+          <article class="lab-card-sm" data-cat="strategy" data-lab-id="treaty_negotiation">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 06 &bull; Diplomacy</div>
-              <h4 class="lab-card-title">Two-Level Game Negotiator</h4>
-              <p class="lab-card-desc">Negotiate a bilateral climate treaty while juggling domestic constituents to find Putnam's Win-Set (ZOPA).</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #2563eb;">Lab 06 &bull; Diplomacy</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="treaty_negotiation"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Two-Table Pressure: Treaty Ratification</h4>
+              <p class="lab-card-desc">Putnam's Two-Level Games in action: balance international concessions against domestic ratification to expand the ZOPA.</p>
             </div>
             <a href="{{ site.baseurl }}/tools-diplomacy.html#treaty-negotiation-sim" class="lab-card-link">Negotiate Treaty ➔</a>
           </article>
 
           <!-- Lab 07 -->
-          <article class="lab-card-sm" data-cat="governance">
+          <article class="lab-card-sm" data-cat="governance" data-lab-id="unclos_zones">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 07 &bull; Law of the Sea</div>
-              <h4 class="lab-card-title">UNCLOS Maritime Zone Delimiter</h4>
-              <p class="lab-card-desc">Classify jurisdictional limits from Territorial Sea (12 nm) to the Exclusive Economic Zone (EEZ) and Continental Shelf.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 07 &bull; Law of the Sea</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="unclos_zones"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Zone Runner: UNCLOS Maritime Delimiter</h4>
+              <p class="lab-card-desc">Adjudicate 10 maritime sovereignty incidents with 3 tokens. Map rights from Territorial Sea to High Seas.</p>
             </div>
             <a href="{{ site.baseurl }}/law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
           </article>
 
           <!-- Lab 08 -->
-          <article class="lab-card-sm" data-cat="security">
+          <article class="lab-card-sm" data-cat="security" data-lab-id="balance_of_power">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 08 &bull; Modern History</div>
-              <h4 class="lab-card-title">Balance of Power Configurator</h4>
-              <p class="lab-card-desc">Build alliance blocs among 1914 Great Powers to assess systemic polarity and compare with Triple Entente dynamics.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #dc2626;">Lab 08 &bull; Modern History</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="balance_of_power"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Equilibrium Keeper: 1914 Alliance Scale</h4>
+              <p class="lab-card-desc">Absorb 4 July 1914 crisis shocks by reallocating diplomatic alignment to prevent an uncontrollable war cascade.</p>
             </div>
             <a href="{{ site.baseurl }}/road-to-ww1.html#balance-power-sim" class="lab-card-link">Configure Alliances ➔</a>
           </article>
 
           <!-- Lab 09 -->
-          <article class="lab-card-sm" data-cat="strategy">
+          <article class="lab-card-sm" data-cat="strategy" data-lab-id="scs_dispute">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 09 &bull; ASEAN Regionalism</div>
-              <h4 class="lab-card-title">South China Sea Dispute Resolver</h4>
-              <p class="lab-card-desc">As ASEAN Chair, broker a Code of Conduct in the South China Sea balancing claimant demands and regional consensus.</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #2563eb;">Lab 09 &bull; ASEAN Regionalism</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="scs_dispute"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Chair's Gambit: South China Sea Code</h4>
+              <p class="lab-card-desc">Chair the ASEAN summit across 3 drafting rounds. Balance claimant sovereignty against regional consensus.</p>
             </div>
             <a href="{{ site.baseurl }}/asean-community.html#scs-dispute-sim" class="lab-card-link">Chair Meeting ➔</a>
           </article>
 
           <!-- Lab 10 -->
-          <article class="lab-card-sm" data-cat="security">
+          <article class="lab-card-sm" data-cat="security" data-lab-id="nuclear_deterrence">
             <div>
-              <div class="sandbox-tag" style="margin-bottom: 0.35rem;">Lab 10 &bull; Nuclear Strategy</div>
-              <h4 class="lab-card-title">Nuclear Deterrence Calculator</h4>
-              <p class="lab-card-desc">Configure arsenal size, delivery triad, and launch doctrine to explore Mutually Assured Destruction (MAD).</p>
+              <div class="lab-card-head-meta">
+                <div class="lab-card-meta-chips">
+                  <span class="sandbox-tag" style="color: #dc2626;">Lab 10 &bull; Nuclear Strategy</span>
+                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
+                </div>
+                <div class="lab-card-status-row">
+                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
+                  <span class="lab-card-stars" data-stars-for="nuclear_deterrence"></span>
+                </div>
+              </div>
+              <h4 class="lab-card-title">Second-Strike Ledger: Nuclear Triad Calculator</h4>
+              <p class="lab-card-desc">Allocate defense budgets across 4 fiscal years to sustain a survivable second-strike triad under Brodie & Schelling.</p>
             </div>
             <a href="{{ site.baseurl }}/domino-cold-war.html#nuclear-deterrence-sim" class="lab-card-link">Calculate Deterrence ➔</a>
           </article>
@@ -1246,51 +1497,333 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+
+    // Dynamic Diplomatic Labs Progress & Stars Hydration (Phase G3)
+    function getLabStars(labId, bestScore, isDone) {
+      const s = parseInt(bestScore || '0', 10);
+      let count = 0;
+      switch (labId) {
+        case 'crisis':
+          count = s >= 100 ? 3 : (s >= 85 ? 2 : (s >= 70 ? 1 : 0));
+          break;
+        case 'game_theory':
+          count = s >= 40 ? 3 : (s >= 15 ? 2 : (s >= 1 ? 1 : 0));
+          break;
+        case 'wto':
+          count = s >= 4 ? 3 : (s >= 1 ? 2 : (s >= 0 && isDone ? 1 : 0));
+          break;
+        case 'security_dilemma':
+          count = s >= 100 ? 3 : (s >= 50 ? 1 : 0);
+          break;
+        case 'unsc_veto':
+          count = s >= 15 ? 3 : (s >= 9 ? 2 : (s >= 6 ? 1 : 0));
+          break;
+        case 'treaty_negotiation':
+          count = s >= 70 ? 3 : (s >= 30 ? 2 : 0);
+          break;
+        case 'unclos_zones':
+          count = s >= 25 ? 3 : (s >= 15 ? 2 : (s >= 5 ? 1 : 0));
+          break;
+        case 'balance_of_power':
+          count = s >= 70 ? 3 : (s >= 40 ? 2 : 0);
+          break;
+        case 'scs_dispute':
+          count = s >= 60 ? 3 : (s >= 30 ? 2 : 0);
+          break;
+        case 'nuclear_deterrence':
+          count = s >= 80 ? 3 : (s >= 50 ? 2 : 0);
+          break;
+        default:
+          count = 0;
+      }
+      return (count === 0 && isDone) ? 1 : count;
+    }
+
+    function renderStarsHtml(count) {
+      let html = '';
+      for (let i = 1; i <= 3; i++) {
+        if (i <= count) {
+          html += '<i class="fa fa-star" style="color: #d97706; margin-right: 2px;"></i>';
+        } else {
+          html += '<i class="fa fa-star is-empty" style="color: var(--lms-ink-muted, #94a3b8); opacity: 0.35; margin-right: 2px;"></i>';
+        }
+      }
+      return html;
+    }
+
+    window.renderLabCardsProgress = function() {
+      const cards = document.querySelectorAll('.labs-scroll-pane .lab-card-sm');
+      cards.forEach(card => {
+        const labId = card.dataset.labId;
+        if (!labId) return;
+        const isDone = localStorage.getItem('labs_completed_' + labId) === 'true';
+        const best = localStorage.getItem('labs_best_' + labId);
+        const stars = getLabStars(labId, best, isDone);
+
+        const doneBadge = card.querySelector('.lab-card-badge-done');
+        if (doneBadge) {
+          doneBadge.hidden = !isDone;
+        }
+
+        const starsEl = card.querySelector('.lab-card-stars');
+        if (starsEl) {
+          starsEl.innerHTML = renderStarsHtml(stars);
+        }
+
+        if (isDone) {
+          card.classList.add('is-completed-lab');
+        }
+      });
+    };
+
+    window.renderLabCardsProgress();
+    initGameTheorySandbox();
 });
 
-// Playable Prisoner's Dilemma Simulator Logic
-let gtScoreA = 0;
-let gtScoreB = 0;
-let lastOpponentMove = 'cooperate'; // Tit for Tat starts friendly
-let roundNum = 1;
+// =============================================================================
+// Upgraded Playable Prisoner's Dilemma Simulator Logic (Phase G1 & G3 Standard)
+// =============================================================================
+const GT_RIVALS = [
+  { id: 'tft', name: 'Tit-for-Tat', cite: 'Axelrod 1984', desc: 'Starts cooperative, then exactly mirrors your previous action.', hint: 'SIGINT Intercept: Rival transmissions mirror our exact previous posture. A mirror doctrine is confirmed.' },
+  { id: 'grim', name: 'Grim Trigger', cite: 'Friedman 1971', desc: 'Cooperates indefinitely until provoked once, then defects irreversibly.', hint: 'SIGINT Intercept: Hostile red-lines detected. One defection triggers permanent retaliatory lockout.' },
+  { id: 'predator', name: 'The Predator', cite: 'Structural Realism', desc: 'Unconditionally defects to maximize relative gains and exploit sucker payoffs.', hint: 'SIGINT Intercept: Offensive naval posture intercepted. Rival has zero intention of disarmament.' },
+  { id: 'wildcard', name: 'The Wildcard', cite: 'Stochastic Model', desc: 'Stochastic behavior alternating between 60% defection and 40% cooperation.', hint: 'SIGINT Intercept: Chaotic diplomatic signals. Rival decision-making exhibits coin-flip stochastic drift.' },
+  { id: 'pavlov', name: 'Pavlov (Win-Stay / Lose-Shift)', cite: 'Nowak & Sigmund 1993', desc: 'Repeats recent choice if rewarded (+5 or +10); shifts choice if penalized.', hint: 'SIGINT Intercept: Behavioral pattern confirms habituation. Rival switches only after adverse payoffs.' }
+];
 
-window.playGameTheory = function(playerMove) {
-  const oppMove = lastOpponentMove;
-  let changeA = 0, changeB = 0;
-  let roundDesc = "";
+let gtState = {
+  round: 1,
+  scoreA: 0,
+  scoreB: 0,
+  streak: 0,
+  rival: null,
+  history: [],
+  hasDefected: false,
+  muted: false
+};
 
-  if (playerMove === 'cooperate' && oppMove === 'cooperate') {
-    changeA = 3; changeB = 3;
-    roundDesc = "Mutual Cooperation (+3, +3) — Pareto optimal outcome.";
-  } else if (playerMove === 'defect' && oppMove === 'cooperate') {
-    changeA = 5; changeB = 0;
-    roundDesc = "Temptation payoff! You defected while opponent cooperated (+5, 0).";
-  } else if (playerMove === 'cooperate' && oppMove === 'defect') {
-    changeA = 0; changeB = 5;
-    roundDesc = "Sucker's payoff! Opponent exploited your cooperation (0, +5).";
-  } else {
-    changeA = 1; changeB = 1;
-    roundDesc = "Mutual Defection (+1, +1) — Nash equilibrium trap.";
+function initGameTheorySandbox() {
+  const rivalIdx = Math.floor(Math.random() * GT_RIVALS.length);
+  gtState.rival = GT_RIVALS[rivalIdx];
+  gtState.round = 1;
+  gtState.scoreA = 0;
+  gtState.scoreB = 0;
+  gtState.streak = 0;
+  gtState.history = [];
+  gtState.hasDefected = false;
+
+  try {
+    gtState.muted = localStorage.getItem('labs_muted_v1') === '1';
+  } catch(e) {}
+
+  const muteBtn = document.getElementById('gt-mute-toggle');
+  const muteIcon = document.getElementById('gt-mute-icon');
+  if (muteBtn && muteIcon) {
+    muteIcon.className = gtState.muted ? 'fa fa-volume-off' : 'fa fa-volume-up';
+    muteBtn.onclick = function() {
+      gtState.muted = !gtState.muted;
+      localStorage.setItem('labs_muted_v1', gtState.muted ? '1' : '0');
+      muteIcon.className = gtState.muted ? 'fa fa-volume-off' : 'fa fa-volume-up';
+    };
   }
 
-  gtScoreA += changeA;
-  gtScoreB += changeB;
-  lastOpponentMove = playerMove; // Tit for Tat mimics player's last action
+  updateSandboxHUD();
+}
 
-  const scoreAEl = document.getElementById('gt-score-a');
-  const scoreBEl = document.getElementById('gt-score-b');
+function updateSandboxHUD() {
+  const roundVal = document.getElementById('gt-round-val');
+  const streakVal = document.getElementById('gt-streak-val');
+  const multVal = document.getElementById('gt-mult-val');
+  const bestVal = document.getElementById('gt-best-val');
+  const scoreA = document.getElementById('gt-score-a');
+  const scoreB = document.getElementById('gt-score-b');
+
+  const mult = gtState.streak >= 5 ? 2 : (gtState.streak >= 3 ? 1.5 : 1);
+  if (roundVal) roundVal.textContent = Math.min(gtState.round, 8);
+  if (streakVal) streakVal.textContent = gtState.streak;
+  if (multVal) multVal.textContent = '×' + mult;
+  if (scoreA) scoreA.textContent = gtState.scoreA;
+  if (scoreB) scoreB.textContent = gtState.scoreB;
+
+  const savedBest = localStorage.getItem('labs_best_game_theory') || '0';
+  if (bestVal) bestVal.textContent = savedBest;
+}
+
+function getRivalMove(playerMove) {
+  const r = gtState.rival.id;
+  const h = gtState.history;
+
+  if (r === 'predator') return 'defect';
+  if (r === 'wildcard') return Math.random() < 0.6 ? 'defect' : 'cooperate';
+
+  if (h.length === 0) return 'cooperate'; // Opening round friendly
+  const last = h[h.length - 1];
+
+  if (r === 'tft') {
+    return last.player;
+  }
+  if (r === 'grim') {
+    return gtState.hasDefected ? 'defect' : 'cooperate';
+  }
+  if (r === 'pavlov') {
+    // Win (CC or DC) -> stay with last move; Lose (CD or DD) -> switch
+    const won = (last.player === 'cooperate' && last.opp === 'cooperate') ||
+                (last.player === 'cooperate' && last.opp === 'defect');
+    return won ? last.opp : (last.opp === 'cooperate' ? 'defect' : 'cooperate');
+  }
+  return 'cooperate';
+}
+
+function playSandboxSound(type) {
+  if (gtState.muted) return;
+  if (window.LabGame && window.LabGame.sfx && typeof window.LabGame.sfx[type] === 'function') {
+    window.LabGame.sfx[type]();
+  }
+}
+
+window.playGameTheory = function(playerMove) {
+  if (gtState.round > 8) return;
+
+  const currentRound = gtState.round;
+  const oppMove = getRivalMove(playerMove);
+  if (playerMove === 'defect') gtState.hasDefected = true;
+
+  let changeA = 0, changeB = 0;
+  let mult = gtState.streak >= 5 ? 2 : (gtState.streak >= 3 ? 1.5 : 1);
+  let roundDesc = '';
+
+  if (playerMove === 'cooperate' && oppMove === 'cooperate') {
+    gtState.streak++;
+    mult = gtState.streak >= 5 ? 2 : (gtState.streak >= 3 ? 1.5 : 1);
+    changeA = Math.round(5 * mult);
+    changeB = 5;
+    roundDesc = `Mutual Cooperation (+${changeA}, +5) — ${mult > 1 ? 'STREAK ×' + mult + '!' : 'Pareto optimal'}`;
+    playSandboxSound('good');
+  } else if (playerMove === 'defect' && oppMove === 'cooperate') {
+    gtState.streak = 0;
+    changeA = 10;
+    changeB = -10;
+    roundDesc = 'Temptation exploitation (+10, −10). Opponent betrayed.';
+    playSandboxSound('click');
+  } else if (playerMove === 'cooperate' && oppMove === 'defect') {
+    gtState.streak = 0;
+    changeA = -10;
+    changeB = 10;
+    roundDesc = "Sucker's payoff (−10, +10). Rival exploited your disarmament!";
+    playSandboxSound('bad');
+  } else {
+    gtState.streak = 0;
+    changeA = -2;
+    changeB = -2;
+    roundDesc = 'Mutual Defection (−2, −2) — Nash equilibrium trap.';
+    playSandboxSound('bad');
+  }
+
+  gtState.scoreA += changeA;
+  gtState.scoreB += changeB;
+  gtState.history.push({ player: playerMove, opp: oppMove });
+
   const statusEl = document.getElementById('gt-opp-status');
-  if (scoreAEl) scoreAEl.textContent = gtScoreA;
-  if (scoreBEl) scoreBEl.textContent = gtScoreB;
-  if (statusEl) statusEl.textContent = `Round ${roundNum}: Opponent played ${oppMove.toUpperCase()}`;
+  if (statusEl) {
+    statusEl.textContent = `Round ${currentRound}: Rival played ${oppMove.toUpperCase()}`;
+  }
 
   const log = document.getElementById('gt-log');
   if (log) {
     const newLine = document.createElement('div');
     newLine.className = 'sandbox-log-line';
-    newLine.textContent = `> R${roundNum}: You: ${playerMove.toUpperCase()}, Opp: ${oppMove.toUpperCase()} | ${roundDesc}`;
+    newLine.innerHTML = `<strong>R${currentRound}:</strong> You [${playerMove.toUpperCase()}], Rival [${oppMove.toUpperCase()}] &bull; ${roundDesc}`;
     log.insertBefore(newLine, log.firstChild);
+
+    // Round 4 SIGINT Intercept card drop
+    if (currentRound === 4) {
+      const intelLine = document.createElement('div');
+      intelLine.className = 'sandbox-log-line';
+      intelLine.style.background = 'rgba(217, 119, 6, 0.08)';
+      intelLine.style.color = '#b45309';
+      intelLine.style.fontWeight = '700';
+      intelLine.innerHTML = `<i class="fa fa-shield"></i> <strong>INTEL &bull; ROUND 5:</strong> ${gtState.rival.hint}`;
+      log.insertBefore(intelLine, log.firstChild);
+    }
   }
-  roundNum++;
+
+  gtState.round++;
+  updateSandboxHUD();
+
+  if (gtState.round > 8) {
+    finishGameTheorySandbox();
+  }
+};
+
+function finishGameTheorySandbox() {
+  const duelGrid = document.getElementById('gt-duel-grid');
+  const debriefBox = document.getElementById('gt-debrief-box');
+  const promptText = document.getElementById('gt-prompt-text');
+  const starsEl = document.getElementById('gt-debrief-stars');
+  const rankEl = document.getElementById('gt-debrief-rank');
+  const revealEl = document.getElementById('gt-debrief-reveal');
+
+  const score = gtState.scoreA;
+  let stars = 0, rank = '';
+  if (score >= 40) {
+    stars = 3; rank = 'Master Diplomat';
+  } else if (score >= 15) {
+    stars = 2; rank = 'Seasoned Negotiator';
+  } else if (score > 0) {
+    stars = 1; rank = 'Survivor';
+  } else {
+    stars = 0; rank = 'Exploited';
+  }
+
+  if (starsEl) starsEl.textContent = stars === 3 ? '★★★' : (stars === 2 ? '★★☆' : (stars === 1 ? '★☆☆' : '☆☆☆'));
+  if (rankEl) rankEl.textContent = `${rank} (${score} pts)`;
+  if (revealEl) {
+    revealEl.innerHTML = `<strong>Rival Declassified: ${gtState.rival.name}</strong> (${gtState.rival.cite}). ${gtState.rival.desc}`;
+  }
+
+  if (promptText) {
+    promptText.textContent = `Session Debrief & After-Action Report. You achieved ${stars} / 3 stars with a final score of ${score} pts.`;
+  }
+
+  if (duelGrid) duelGrid.style.display = 'none';
+  if (debriefBox) debriefBox.style.display = 'block';
+
+  // Persistence to localStorage & shared LabGame core
+  try {
+    localStorage.setItem('labs_completed_game_theory', 'true');
+    const prevBest = parseInt(localStorage.getItem('labs_best_game_theory') || '0', 10);
+    if (score > prevBest) {
+      localStorage.setItem('labs_best_game_theory', String(score));
+    }
+    if (window.LabGame) {
+      if (window.LabGame.flags) window.LabGame.flags.complete('game_theory');
+      if (window.LabGame.best) window.LabGame.best.submit('game_theory', score);
+    }
+  } catch(e) {}
+
+  playSandboxSound(stars === 3 ? 'fanfare' : 'reveal');
+
+  // Immediately reflect update on the catalog cards to the right
+  if (typeof window.renderLabCardsProgress === 'function') {
+    window.renderLabCardsProgress();
+  }
+}
+
+window.resetGameTheorySandbox = function() {
+  const duelGrid = document.getElementById('gt-duel-grid');
+  const debriefBox = document.getElementById('gt-debrief-box');
+  const promptText = document.getElementById('gt-prompt-text');
+  const log = document.getElementById('gt-log');
+
+  if (duelGrid) duelGrid.style.display = 'grid';
+  if (debriefBox) debriefBox.style.display = 'none';
+  if (promptText) {
+    promptText.textContent = "Survive 8 rounds against a classified rival doctrine. Mutual cooperation (+5) earns streak multipliers (\u00D71.5 at 3, \u00D72 at 5) — but unilateral defection tempts with +10. Beware betrayal (−10/+10) and mutual defection (−2/−2).";
+  }
+  if (log) {
+    log.innerHTML = '<div class="sandbox-log-line">&gt; New session initialized. Rival doctrine locked under classified protocol. Choose opening stance.</div>';
+  }
+
+  initGameTheorySandbox();
 };
 </script>
