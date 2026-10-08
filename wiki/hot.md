@@ -13,6 +13,31 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 G2 AUDIT PASSED (Director Audit: 9 Mini-Games Retrofit Approved):
+Audit independen atas commit `b94c335` (feat(labs): G2 — 9 diplomatic mini-games retrofit) dan seluruh 10 lab:
+1. `Git & Architecture Inspection`:
+   - 9 template mini-game (`sim_*.html`) retrofitted mengikuti spec sheet §6 `wiki/game-design-bible.md`.
+   - Konsolidasi streak Lab 02 ke `window.LabGame.streak` diverifikasi 100% konsisten (5→10→18→66 streak math).
+   - Seluruh 10 lab mengimplementasikan `LabGame.best.submit` dan `LabGame.flags.complete` via shared core API.
+2. `Bug Catch & Fix (Lab 04 Spiral Watch)`:
+   - *Issue*: `_includes/sim_security_dilemma.html` meng-gate `flags.complete('security_dilemma')` di balik `stars >= 1`, menyimpang dari spec bible di mana flag kelulusan lab dicatat saat sesi selesai. Akibatnya, saat draw posture Beta acak menghasilkan Arms Race Spiral (0★), test gagal flaky.
+   - *Fix*: Menghapus kondisi `stars >= 1`, membuat penyetelan flag tanpa syarat di akhir sesi identik dengan 9 lab lainnya.
+3. `Verifikasi Multi-Lapis Independen (All Passed)`:
+   - pytest: 369/369 PASS.
+   - Jekyll build: Bersih (63.2s).
+   - Stopwords scan: 0 kata stopword bahasa Indonesia di seluruh 10 file includes.
+   - Playwright E2E:
+     - G1 suite (`scripts/verify_g1_playwright.js`): 35/35 PASS.
+     - G2 suite (`scripts/verify_g2_playwright.js`): 74/74 PASS.
+     - Total combined: 109/109 PASS (100% deterministic).
+4. `Visual Gate (vision_analyze)`:
+   - Lab 01 (Crisis Command): Briefing & Debrief PASS (clean mission console, Graham Allison Models I/II/III).
+   - Lab 02 (Diplomacy Duel): Briefing & Debrief PASS.
+   - Lab 03 (Consensus Market): Briefing PASS (catatan: `${score}%` di sidebar berasal dari legacy `_includes/module_exam.html`, bukan lab).
+   - Lab 05 (Veto Gauntlet): Play area PASS (semua 5 kartu P5 termasuk China terlihat bersih dengan spacing rapi; false positive clipping topbar terverifikasi karena scroll offset tanpa margin).
+   - Lab 10 (Second-Strike Ledger): Debrief PASS (Triad Architect 3★, sitasi Brodie & Schelling terbaca jelas).
+5. `STATUS`: G2 AUDITED & APPROVED. Siap masuk ke Phase G3 (Homepage cards integration + full platform QA + sw.js v5 cache bump).
+
 2026-10-08 - M10 Phase G2: Full 9 Diplomatic Mini-Games Retrofit Completed:
 1. `Cakupan Retrofit 9 Lab` (selaras spec sheet §6 `wiki/game-design-bible.md`):
    - Lab 01 Crisis Command (`sim_crisis.html`): 3 decision beats (airstrike/blockade/backchannel, second letter/Trollope ploy, Turkey quid-pro-quo), 12s DEFCON timer, SIGINT U-2 Act 2, Allison Model I/II/III reveal.

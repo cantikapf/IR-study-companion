@@ -5,7 +5,7 @@ type: director-handoff
 version: 1.0
 director: GLM 5.3 Flash (via 9router)
 builder: Gemini 3.8 (via 9router, separate Hermes session)
-status: G1 ACC'D (user, 2026-10-08) + director audit `fe447df` passed — G2 AUTHORIZED for next builder turn; G3 pending user ACC after G2 review
+status: G2 AUDIT PASSED (director audit 2026-10-08) — G3 pending user ACC after G2 review
 ground-truth-prototype: "scratch (EPHEMERAL): C:/Users/xiyeo/AppData/Local/hermes/cache/scratch/minigame_diplomacy_duel.html — user-ACC'd feel. If pruned, the spec sheets in §6 are authoritative; never block on the missing file."
 ---
 
