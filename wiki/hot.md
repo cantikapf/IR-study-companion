@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 Game Layer: Director's Game Design Bible (Handoff GLM → Gemini via 9router):
+Lanjutan keputusan pengguna: 10 lab diangkat menjadi mini-game sungguhan; pembagian peran lintas-model — GLM 5.3 Flash sebagai Game Director (engine/path/look/archetype/angle), Gemini 3.8 sebagai Build Team di sesi Hermes terpisah via 9router:
+1. `Five Picks (LOCKED)`: (a) Engine = vanilla ES6 shared game core (`lab-game-core.js`: RNG lawan, streak multiplier, stars, best-score, SFX WebAudio, help modal) tanpa dependensi/three.js; (b) Path = G1 core+Lab 02 retrofit → ACC → G2 sembilan lab dengan game verb unik → G3 homepage+QA; (c) Look = Mission Console terang theme-aware (bukan gelap), emas khusus skor/bintang/intel; (d) Archetype = "Classified Case File" (dossier/SIGINT/after-action report); (e) Angle = "Theory is the strategy guide" — menang hanya jika paham teori.
+2. `Deliverable`: `wiki/game-design-bible.md` (v1.0) — dokumen handoff tunggal berisi: 5 picks + rationale, guardrails non-negotiable (English-only, zero-dependency, localStorage-only, canonical citations, authorized-changes-only), API game core, spesifikasi lengkap 10 lab (game verb, scoring, star pars, momen SIGINT, isi reveal + sitasi), copy deck G1 siap-paste, protokol verifikasi (pytest 369/build/E2E msedge/visual gate), dan protokol handoff (builder eksekusi 1 fase per giliran, berhenti dengan bukti; director audit diff + rerun gates sebelum fase berikutnya).
+3. `Ground Truth Feel`: prototipe scratch "Diplomacy Duel" yang sudah di-ACC pengguna (5 kepribadian lawan rahasia, streak ×1.5/×2, SIGINT, 3 bintang + rank + best score; tervalidasi E2E 8/8 + visual 5/5) menjadi acuan ritme; file bersifat ephemeral — spesifikasi di bible bersifat otoritatif.
+4. `Prosedur Pengguna`: buka percakapan baru Hermes Desktop → set model Gemini 3.8 via 9router → satu instruksi: "Read wiki/game-design-bible.md, execute Phase G1, follow HERMES.md." → kembali ke sesi GLM untuk audit.
+
 2026-10-08 - M10 Fase 1: Lab Shell "Mission Console" + Pilot Lab 04 & Lab 02 (MENUNGGU ACC GERBANG REVIEW):
 Merespons temuan pengguna bahwa 10 Interactive Diplomatic Labs kurang menarik secara visual dan tidak ada onboarding/tutorial:
 1. `Root Cause`: 10 lab memakai 10 gaya berbeda dengan kotak gelap hardcoded (#1f2937) yang menjadi "pulau gelap" di halaman LMS terang; satu paragraf intro lalu langsung tombol tanpa briefing/objective/mechanics; ada utang teknis CSS (sim_crisis meminjam .wto-btn milik lab WTO, keyframes fadeIn tak terdefinisi).
