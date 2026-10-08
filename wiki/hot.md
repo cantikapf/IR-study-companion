@@ -13,6 +13,22 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Diplomatic Decision Labs Homepage Showcase Expansion (Option B: Full 10-Lab Scrollable Catalog & Category Filters):
+Merespons pertanyaan pengguna ("diplomatic labs kita kan ada 10, tapi kenapa yang tampil di homepage cuman segini?"):
+1. `Root Cause`: Pada redesain split view homepage sebelumnya, kolom kanan hanya menampilkan 3 kartu statis pilihan (Lab 01, 07, 05) sementara Lab 02 menjadi live sandbox di kiri, meninggalkan 6 lab lainnya tersembunyi.
+2. `Implementasi Opsi B`:
+   - Kolom kiri: Live Playable Sandbox *The Prisoner's Dilemma Strategic Arena* (Axelrod Tit-for-Tat) tetap dipertahankan.
+   - Kolom kanan: Menjadi *Diplomatic Simulation Catalog* lengkap berisi seluruh 10 lab dengan filter kategori dinamis:
+     - `All (10)`: Menampilkan seluruh 10 laboratorium.
+     - `Security (4)`: Lab 01 (FPA Crisis), Lab 04 (Security Dilemma), Lab 08 (Balance of Power), Lab 10 (Nuclear Deterrence).
+     - `Strategy (3)`: Lab 02 (Game Theory Featured), Lab 06 (Two-Level Game), Lab 09 (ASEAN South China Sea).
+     - `Governance (3)`: Lab 03 (WTO Dispute), Lab 05 (UNSC Veto), Lab 07 (UNCLOS Maritime Zones).
+   - Scrollable Pane & Alignment: Wadah scrollable setinggi 410px dengan custom scrollbar (`scrollbar-width: thin`), membuat tinggi total panel kiri dan kanan simetris presisi (525px vs 525px).
+3. `Verifikasi Kualitas`:
+   - 369/369 pytest PASS.
+   - Jekyll build PASS tanpa peringatan / broken links.
+   - Playwright DOM test: semua 4 tombol filter berfungsi instan (hitung kartu sesuai), live score counter sandbox berfungsi, inspeksi visual screenshot PASS.
+
 2026-10-08 - Integrasi Publikasi YouTube CH030 (Realism) & CH040 (Liberalism) ke Platform:
 Merespons publikasi resmi kedua video Mind Map Explanatory di channel YouTube @IRinANutshell:
 1. `Tautan Resmi YouTube`:
