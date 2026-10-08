@@ -1,275 +1,219 @@
 <style>
-/* Design System */
-#security-dilemma-sim {
-    background: #1f2937;
-    color: #f9fafb;
-    border-radius: 12px;
-    padding: 25px;
-    font-family: 'Inter', sans-serif;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    margin: 30px 0;
-    border: 1px solid #374151;
+/* Lab 04 — Security Dilemma. Shell styles: assets/css/lab-shell.css */
+#security-dilemma-sim .sim-sd-legend { display: flex; justify-content: space-between; }
+#security-dilemma-sim .sim-sd-strategy {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--lms-ink-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
 }
-
-#security-dilemma-sim .sim-sd-panel {
-    background: #111827;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #374151;
-}
-
-#security-dilemma-sim .sim-sd-header {
-    border-bottom: 2px solid #374151;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-#security-dilemma-sim .sim-sd-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#security-dilemma-sim .sim-sd-text-muted {
-    color: #9ca3af;
-}
-
-#security-dilemma-sim .sim-sd-btn {
-    padding: 12px 15px;
-    background: #374151;
-    color: white;
-    border: 1px solid #4b5563;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#security-dilemma-sim .sim-sd-btn:hover {
-    background: #4b5563;
-    border-color: #9ca3af;
-    transform: translateY(-2px);
-}
-
-#security-dilemma-sim .sim-sd-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-}
-
-#security-dilemma-sim .sim-sd-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-@media (max-width: 768px) {
-    #security-dilemma-sim .sim-sd-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-#security-dilemma-sim .sim-sd-bar-container {
-    width: 100%;
-    background: #374151;
-    border-radius: 4px;
-    height: 20px;
-    margin-top: 5px;
-    overflow: hidden;
-}
-
-#security-dilemma-sim .sim-sd-bar {
-    height: 100%;
-    background: #ef4444; /* Default threat color */
-    transition: width 0.5s ease;
-}
-
-#security-dilemma-sim .sim-sd-log {
-    max-height: 150px;
-    overflow-y: auto;
-    background: #111827;
-    padding: 10px;
-    border: 1px solid #374151;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-#security-dilemma-sim .sim-sd-log-entry {
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #374151;
-    animation: sim-sd-fadeIn 0.3s;
-}
-
-#security-dilemma-sim .sim-sd-outcome {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    display: none;
-    animation: sim-sd-fadeIn 0.5s;
-}
-
-#security-dilemma-sim .sim-sd-outcome.success {
-    border: 1px solid #10b981;
-    background: rgba(16,185,129,0.1);
-    color: #10b981;
-}
-
-#security-dilemma-sim .sim-sd-outcome.failure {
-    border: 1px solid #ef4444;
-    background: rgba(239,68,68,0.1);
-    color: #ef4444;
-}
-
-#security-dilemma-sim .sim-sd-outcome.warning {
-    border: 1px solid #f59e0b;
-    background: rgba(245,158,11,0.1);
-    color: #f59e0b;
-}
-
-@keyframes sim-sd-fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-#security-dilemma-sim .sim-sd-stat-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    margin-top: 15px;
-}
+#security-dilemma-sim .sim-sd-beta-status { margin-top: 14px; }
 </style>
 
-<div id="security-dilemma-sim">
-    <div class="sim-sd-header">
-        <h3>⚔️ Simulation: The Security Dilemma Spiral</h3>
-        <p class="sim-sd-text-muted">You are State Alpha in an anarchic world. State Beta (AI) responds cautiously to your military posture. Over 5 rounds, will mutual fear spiral into an arms race — or can confidence-building measures forge a security community?</p>
-    </div>
+<div class="lab-shell" id="security-dilemma-sim" data-cat="security">
 
-    <div class="sim-sd-grid">
-        <div class="sim-sd-panel">
-            <h4>State Alpha (You)</h4>
-            <div id="sim-sd-alpha-stats">
-                <div class="sim-sd-stat-row">
-                    <span>Military Power:</span>
-                    <strong id="sim-sd-alpha-power">5</strong>
-                </div>
-                <div class="sim-sd-stat-row">
-                    <span>Threat Perception:</span>
-                    <strong id="sim-sd-alpha-threat-val">50%</strong>
-                </div>
-                <div class="sim-sd-bar-container">
-                    <div id="sim-sd-alpha-threat-bar" class="sim-sd-bar" style="width: 50%;"></div>
-                </div>
-            </div>
-            
-            <h4 style="margin-top: 20px;">Actions (Round <span id="sim-sd-round-counter">1</span>/5)</h4>
-            <button class="sim-sd-btn" onclick="window.simSdAction('build')" id="sim-sd-btn-build">🏗️ Build (+2 Military)</button>
-            <button class="sim-sd-btn" onclick="window.simSdAction('signal')" id="sim-sd-btn-signal">🤝 Signal (+1 Diplomacy)</button>
-            <button class="sim-sd-btn" onclick="window.simSdAction('reduce')" id="sim-sd-btn-reduce">🔽 Reduce (-1 Military)</button>
+    <!-- ======================= HEADER ======================= -->
+    <div class="lab-head">
+        <div class="lab-kicker">
+            <span class="lab-kicker-chip">Lab 04</span>
+            <span class="lab-kicker-track">Security Studies · Realism</span>
         </div>
-
-        <div class="sim-sd-panel">
-            <h4>State Beta (AI)</h4>
-            <div id="sim-sd-beta-stats">
-                <div class="sim-sd-stat-row">
-                    <span>Military Power:</span>
-                    <strong id="sim-sd-beta-power">5</strong>
-                </div>
-                <div class="sim-sd-stat-row">
-                    <span>Threat Perception:</span>
-                    <strong id="sim-sd-beta-threat-val">50%</strong>
-                </div>
-                <div class="sim-sd-bar-container">
-                    <div id="sim-sd-beta-threat-bar" class="sim-sd-bar" style="width: 50%;"></div>
-                </div>
-            </div>
-            <div style="margin-top: 20px;" class="sim-sd-text-muted">
-                <strong>Strategy:</strong> Cautious Reactive
-            </div>
-            <div id="sim-sd-beta-action-display" style="margin-top: 15px; font-weight: bold; color: #60a5fa;">
-                Waiting for Round 1...
-            </div>
+        <h3 class="lab-title">The Security Dilemma Spiral</h3>
+        <div class="lab-meta">
+            <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 3 min</span>
+            <span class="lab-meta-chip"><i class="fa fa-crosshairs" aria-hidden="true"></i> 5 decisions</span>
+            <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
         </div>
     </div>
 
-    <div class="sim-sd-log" id="sim-sd-log" aria-live="polite">
-        <div class="sim-sd-text-muted">Simulation started. Waiting for Alpha's first move.</div>
+    <!-- ======================= BRIEFING ======================= -->
+    <div class="lab-briefing" id="sim-sd-briefing">
+        <div class="lab-brief-grid">
+            <div>
+                <div class="lab-brief-card" style="margin-bottom: 14px;">
+                    <p class="lab-brief-label">Situation</p>
+                    <p>Two states — Alpha and Beta — live in anarchy: there is no world police above them. Both start with equal militaries (power 5 each) and moderate distrust (threat perception 50% on both sides).</p>
+                </div>
+                <div class="lab-brief-card">
+                    <p class="lab-brief-label">Your Role</p>
+                    <p>You direct State Alpha's grand strategy for 5 rounds. State Beta is an AI government reacting cautiously to every move you make.</p>
+                </div>
+            </div>
+            <div>
+                <div class="lab-brief-card" style="margin-bottom: 14px;">
+                    <p class="lab-brief-label">Objectives</p>
+                    <ul class="lab-obj-list">
+                        <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span><strong>Security Community:</strong> end the simulation with <em>both</em> threat perceptions below 35%.</span></li>
+                        <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span><strong>Uneasy Détente:</strong> both perceptions stay between 35% and 75%.</span></li>
+                        <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span><strong>Arms Race Spiral:</strong> either perception rises above 75%. Avoid this.</span></li>
+                    </ul>
+                </div>
+                <div class="lab-brief-card">
+                    <p class="lab-brief-label">How It Works</p>
+                    <ul class="lab-mech-list">
+                        <li><i class="fa fa-arrow-up" aria-hidden="true"></i><span><strong>Build</strong> adds +2 to your military — and raises Beta's threat perception by 20.</span></li>
+                        <li><i class="fa fa-comments" aria-hidden="true"></i><span><strong>Signal</strong> offers diplomacy (Beta's threat −10); <strong>Reduce</strong> cuts your military by 1 (Beta's threat −15).</span></li>
+                        <li><i class="fa fa-eye" aria-hidden="true"></i><span>Beta reacts to your <em>last</em> move each round. Watch its response pattern before committing.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lab-brief-actions">
+            <button class="lab-btn lab-btn-primary" id="sim-sd-btn-begin">
+                <i class="fa fa-play" aria-hidden="true"></i> Begin Simulation
+            </button>
+        </div>
     </div>
 
-    <div id="sim-sd-outcome" class="sim-sd-outcome" aria-live="polite">
-        <h4 id="sim-sd-outcome-title" style="margin-top:0;"></h4>
-        <p id="sim-sd-outcome-desc"></p>
-        <button class="sim-sd-btn" onclick="window.simSdRestart()" style="margin-top: 15px; max-width: 200px;">🔄 Restart Simulation</button>
+    <!-- ======================= PLAY AREA ======================= -->
+    <div id="sim-sd-play" hidden>
+
+        <div class="lab-hud" aria-live="polite">
+            <span class="lab-hud-chip" id="sim-sd-hud-round">Round 1 / 5</span>
+            <span class="lab-hud-chip" id="sim-sd-hud-objective">Target: both threats &lt; 35%</span>
+        </div>
+
+        <div class="lab-stage" id="sim-sd-stage">
+            <div class="lab-board">
+
+                <div class="lab-tile">
+                    <h4><i class="fa fa-shield" aria-hidden="true" style="color: var(--lab-accent); margin-right: 6px;"></i>State Alpha — You</h4>
+                    <div class="lab-stat-row"><span>Military Power</span><strong id="sim-sd-alpha-power">5</strong></div>
+                    <div class="lab-stat-row"><span>Threat Perception (Beta's view of you)</span><strong id="sim-sd-alpha-threat-val">50%</strong></div>
+                    <div class="lab-meter">
+                        <div class="lab-meter-fill" id="sim-sd-alpha-threat-bar" style="width: 50%;"></div>
+                        <span class="lab-meter-tick" style="left: 35%;"></span>
+                        <span class="lab-meter-tick lab-meter-tick--high" style="left: 75%;"></span>
+                    </div>
+                    <div class="lab-meter-legend sim-sd-legend">
+                        <span>0 calm</span><span>35 détente zone</span><span>75 spiral zone</span>
+                    </div>
+
+                    <h4 style="margin-top: 16px;">Actions — Round <span id="sim-sd-round-counter">1</span>/5</h4>
+                    <div class="lab-actions" style="padding: 0;">
+                        <button class="lab-btn" onclick="window.simSdAction('build')" id="sim-sd-btn-build"><i class="fa fa-arrow-up" aria-hidden="true"></i> Build (+2 Military)</button>
+                        <button class="lab-btn" onclick="window.simSdAction('signal')" id="sim-sd-btn-signal"><i class="fa fa-comments" aria-hidden="true"></i> Signal (+1 Diplomacy)</button>
+                        <button class="lab-btn" onclick="window.simSdAction('reduce')" id="sim-sd-btn-reduce"><i class="fa fa-arrow-down" aria-hidden="true"></i> Reduce (−1 Military)</button>
+                    </div>
+                </div>
+
+                <div class="lab-tile">
+                    <h4><i class="fa fa-shield" aria-hidden="true" style="color: var(--lms-ink-tertiary); margin-right: 6px;"></i>State Beta — AI</h4>
+                    <div class="lab-stat-row"><span>Military Power</span><strong id="sim-sd-beta-power">5</strong></div>
+                    <div class="lab-stat-row"><span>Threat Perception (Alpha's view of it)</span><strong id="sim-sd-beta-threat-val">50%</strong></div>
+                    <div class="lab-meter">
+                        <div class="lab-meter-fill" id="sim-sd-beta-threat-bar" style="width: 50%;"></div>
+                        <span class="lab-meter-tick" style="left: 35%;"></span>
+                        <span class="lab-meter-tick lab-meter-tick--high" style="left: 75%;"></span>
+                    </div>
+                    <div class="lab-meter-legend sim-sd-legend">
+                        <span>0 calm</span><span>35 détente zone</span><span>75 spiral zone</span>
+                    </div>
+
+                    <div class="sim-sd-strategy">Declared strategy: Cautious Reactive</div>
+                    <div class="lab-opp-status sim-sd-beta-status" id="sim-sd-beta-action-display">Waiting for your Round 1 decision…</div>
+                </div>
+
+            </div>
+        </div>
+        <p class="lab-stage-hint"><i class="fa fa-arrows" aria-hidden="true"></i> Drag the board to rotate the view.</p>
+
+        <div class="lab-tip" id="sim-sd-tip" hidden>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+            <span>Notice Beta's pattern: it answers a Build with a Build, and rewards diplomacy. Escalation is self-reinforcing — so is restraint.</span>
+            <button class="lab-tip-close" id="sim-sd-tip-close" aria-label="Dismiss tip"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="lab-log" id="sim-sd-log" aria-live="polite">
+            <div class="lab-log-entry is-muted">Simulation started. Waiting for Alpha's first move.</div>
+        </div>
+
+        <div id="sim-sd-outcome" class="lab-debrief" aria-live="polite" hidden>
+            <span class="lab-debrief-tag">Debrief</span>
+            <h4 id="sim-sd-outcome-title"></h4>
+            <p id="sim-sd-outcome-desc"></p>
+            <div class="lab-recap" id="sim-sd-recap">
+                <div class="lab-recap-title">Your round-by-round trajectory</div>
+                <ul id="sim-sd-recap-list"></ul>
+            </div>
+            <div class="lab-mech-reveal" id="sim-sd-mech-reveal"></div>
+            <div class="lab-debrief-actions">
+                <button class="lab-btn" onclick="window.simSdRestart()"><i class="fa fa-refresh" aria-hidden="true"></i> Restart Simulation</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
 (function() {
-    let state = {
-        round: 1,
-        alphaPower: 5,
-        betaPower: 5,
-        alphaThreat: 50,
-        betaThreat: 50,
-        alphaLastAction: null,
-        gameOver: false
-    };
+    var INITIAL = { round: 1, alphaPower: 5, betaPower: 5, alphaThreat: 50, betaThreat: 50, alphaLastAction: null, gameOver: false };
+    var state = JSON.parse(JSON.stringify(INITIAL));
+    var history = [];
+    var tipShown = false;
 
-    function clamp(val, min, max) {
-        return Math.min(Math.max(val, min), max);
-    }
+    function $(id) { return document.getElementById(id); }
+    function clamp(val, min, max) { return Math.min(Math.max(val, min), max); }
+
+    function threatClass(t) { return t >= 75 ? 'is-danger' : (t >= 35 ? 'is-alert' : 'is-calm'); }
 
     function updateUI() {
-        document.getElementById('sim-sd-alpha-power').innerText = state.alphaPower;
-        document.getElementById('sim-sd-alpha-threat-val').innerText = state.alphaThreat + '%';
-        document.getElementById('sim-sd-alpha-threat-bar').style.width = state.alphaThreat + '%';
+        $('sim-sd-alpha-power').innerText = state.alphaPower;
+        $('sim-sd-alpha-threat-val').innerText = state.alphaThreat + '%';
+        var aBar = $('sim-sd-alpha-threat-bar');
+        aBar.style.width = state.alphaThreat + '%';
+        aBar.className = 'lab-meter-fill ' + threatClass(state.alphaThreat);
 
-        document.getElementById('sim-sd-beta-power').innerText = state.betaPower;
-        document.getElementById('sim-sd-beta-threat-val').innerText = state.betaThreat + '%';
-        document.getElementById('sim-sd-beta-threat-bar').style.width = state.betaThreat + '%';
+        $('sim-sd-beta-power').innerText = state.betaPower;
+        $('sim-sd-beta-threat-val').innerText = state.betaThreat + '%';
+        var bBar = $('sim-sd-beta-threat-bar');
+        bBar.style.width = state.betaThreat + '%';
+        bBar.className = 'lab-meter-fill ' + threatClass(state.betaThreat);
 
         if (state.round <= 5) {
-            document.getElementById('sim-sd-round-counter').innerText = state.round;
+            $('sim-sd-round-counter').innerText = state.round;
+            $('sim-sd-hud-round').innerText = 'Round ' + state.round + ' / 5';
+        }
+
+        var obj = $('sim-sd-hud-objective');
+        if (state.alphaThreat < 35 && state.betaThreat < 35) {
+            obj.textContent = 'On trajectory: Security Community';
+            obj.className = 'lab-hud-chip is-win';
+        } else if (state.alphaThreat > 75 || state.betaThreat > 75) {
+            obj.textContent = 'Danger: spiral threshold crossed';
+            obj.className = 'lab-hud-chip is-lose';
+        } else {
+            obj.textContent = 'Target: both threats < 35%';
+            obj.className = 'lab-hud-chip';
         }
     }
 
     function logAction(msg) {
-        const logContainer = document.getElementById('sim-sd-log');
-        const entry = document.createElement('div');
-        entry.className = 'sim-sd-log-entry';
+        history.push({ round: state.round, msg: msg });
+        var logContainer = $('sim-sd-log');
+        var entry = document.createElement('div');
+        entry.className = 'lab-log-entry';
         entry.innerHTML = '<strong>Round ' + state.round + ':</strong> ' + msg;
         logContainer.insertBefore(entry, logContainer.firstChild);
     }
 
     function determineBetaAction() {
-        if (state.round === 1 || !state.alphaLastAction) {
-            return 'wait';
-        }
-        
-        if (state.alphaLastAction === 'build') {
-            return 'build';
-        } else if (state.alphaLastAction === 'signal') {
-            return Math.random() < 0.5 ? 'signal' : 'wait';
-        } else if (state.alphaLastAction === 'reduce') {
-            return 'signal';
-        }
+        if (state.round === 1 || !state.alphaLastAction) { return 'wait'; }
+        if (state.alphaLastAction === 'build') { return 'build'; }
+        if (state.alphaLastAction === 'signal') { return Math.random() < 0.5 ? 'signal' : 'wait'; }
+        if (state.alphaLastAction === 'reduce') { return 'signal'; }
         return 'wait';
     }
 
     window.simSdAction = function(alphaChoice) {
-        if (state.gameOver) return;
+        if (state.gameOver) { return; }
 
-        let betaChoice = determineBetaAction();
-        let alphaMsg = '';
-        let betaMsg = '';
-        
-        // Alpha Action
+        var betaChoice = determineBetaAction();
+        var alphaMsg = '';
+        var betaMsg = '';
+
+        // Alpha action (mechanics preserved)
         if (alphaChoice === 'build') {
             state.alphaPower += 2;
             alphaMsg = 'Alpha Built (+2 Military).';
@@ -279,11 +223,11 @@
             state.betaThreat -= 10;
         } else if (alphaChoice === 'reduce') {
             state.alphaPower = Math.max(0, state.alphaPower - 1);
-            alphaMsg = 'Alpha Reduced military (-1 Military).';
+            alphaMsg = 'Alpha Reduced military (−1 Military).';
             state.betaThreat -= 15;
         }
 
-        // Beta Action
+        // Beta action (mechanics preserved)
         if (betaChoice === 'build') {
             state.betaPower += 2;
             betaMsg = 'Beta Built (+2 Military).';
@@ -293,78 +237,132 @@
             state.alphaThreat -= 10;
         } else if (betaChoice === 'reduce') {
             state.betaPower = Math.max(0, state.betaPower - 1);
-            betaMsg = 'Beta Reduced military (-1 Military).';
+            betaMsg = 'Beta Reduced military (−1 Military).';
             state.alphaThreat -= 15;
         } else {
             betaMsg = 'Beta Waited.';
         }
 
-        // Clamp threats
         state.alphaThreat = clamp(state.alphaThreat, 0, 100);
         state.betaThreat = clamp(state.betaThreat, 0, 100);
 
-        document.getElementById('sim-sd-beta-action-display').innerText = 'Round ' + state.round + ': ' + betaMsg;
+        var opp = $('sim-sd-beta-action-display');
+        opp.innerHTML = 'Round ' + state.round + ' response: <strong>' + betaMsg.replace('Beta ', '') + '</strong>';
         logAction(alphaMsg + ' | ' + betaMsg);
 
         state.alphaLastAction = alphaChoice;
         updateUI();
 
+        if (!tipShown) {
+            tipShown = true;
+            $('sim-sd-tip').hidden = false;
+        }
+
         if (state.round >= 5) {
             endSimulation();
         } else {
             state.round++;
-            document.getElementById('sim-sd-round-counter').innerText = state.round;
+            $('sim-sd-round-counter').innerText = state.round;
+            $('sim-sd-hud-round').innerText = 'Round ' + state.round + ' / 5';
         }
     };
 
     function endSimulation() {
         state.gameOver = true;
-        document.getElementById('sim-sd-btn-build').disabled = true;
-        document.getElementById('sim-sd-btn-signal').disabled = true;
-        document.getElementById('sim-sd-btn-reduce').disabled = true;
+        $('sim-sd-btn-build').disabled = true;
+        $('sim-sd-btn-signal').disabled = true;
+        $('sim-sd-btn-reduce').disabled = true;
 
-        const outcomeDiv = document.getElementById('sim-sd-outcome');
-        const outcomeTitle = document.getElementById('sim-sd-outcome-title');
-        const outcomeDesc = document.getElementById('sim-sd-outcome-desc');
-        
-        outcomeDiv.style.display = 'block';
-        outcomeDiv.className = 'sim-sd-outcome';
+        try { localStorage.setItem('labs_completed_security_dilemma', 'true'); } catch (e) {}
+
+        var outcomeDiv = $('sim-sd-outcome');
+        outcomeDiv.hidden = false;
+        outcomeDiv.className = 'lab-debrief';
+
+        var outcomeTitle = $('sim-sd-outcome-title');
+        var outcomeDesc = $('sim-sd-outcome-desc');
 
         if (state.alphaThreat > 75 && state.betaThreat > 75) {
-            outcomeDiv.classList.add('failure');
+            outcomeDiv.classList.add('is-lose');
             outcomeTitle.innerText = '❌ Arms Race Spiral';
-            outcomeDesc.innerHTML = 'Both states are locked in a ruinous arms race. Neither is more secure than before, but both are poorer.<br><br><strong>Analysis:</strong> This confirms Robert Jervis\\'s Spiral Model — defensive measures were perceived as offensive threats, triggering mutual escalation in a tragic feedback loop.';
+            outcomeDesc.innerHTML = 'Both states are locked in a ruinous arms race. Neither is more secure than before, but both are poorer.<br><br><strong>Analysis:</strong> This confirms Robert Jervis\'s Spiral Model — defensive measures were perceived as offensive threats, triggering mutual escalation in a tragic feedback loop.';
         } else if (state.alphaThreat < 35 && state.betaThreat < 35) {
-            outcomeDiv.classList.add('success');
+            outcomeDiv.classList.add('is-win');
             outcomeTitle.innerText = '✅ Security Community';
-            outcomeDesc.innerHTML = 'Through sustained confidence-building, both states have transcended the security dilemma.<br><br><strong>Analysis:</strong> Karl Deutsch\\'s concept of a Security Community has been achieved — states no longer consider war as a possible instrument against each other.';
+            outcomeDesc.innerHTML = 'Through sustained confidence-building, both states have transcended the security dilemma.<br><br><strong>Analysis:</strong> Karl Deutsch\'s concept of a Security Community has been achieved — states no longer consider war as a possible instrument against each other.';
         } else {
-            outcomeDiv.classList.add('warning');
             outcomeTitle.innerText = '⚠️ Uneasy Détente';
             outcomeDesc.innerHTML = 'A fragile peace persists, but deep mistrust remains beneath the surface.<br><br><strong>Analysis:</strong> This resembles Cold War détente — cooperation on the surface, but neither side has truly abandoned worst-case military planning.';
         }
+
+        var recap = $('sim-sd-recap-list');
+        recap.innerHTML = '';
+        history.forEach(function(h) {
+            var li = document.createElement('li');
+            li.innerHTML = '<strong>R' + h.round + '</strong> — ' + h.msg;
+            recap.appendChild(li);
+        });
+
+        $('sim-sd-mech-reveal').innerHTML = '<strong>Mechanics revealed:</strong> State Beta ran a <em>Cautious Reactive</em> strategy — it mirrored your Build immediately, half-responded to Signals, and answered Reduction with diplomacy. Because intentions are private under anarchy, restraint is cheap to fake and costly to trust. That is precisely why the security dilemma persists even when both sides prefer peace (Jervis, 1976).<br><br>Continue to the <strong>Knowledge Check</strong> below to test the concept.';
     }
 
     window.simSdRestart = function() {
-        state = {
-            round: 1,
-            alphaPower: 5,
-            betaPower: 5,
-            alphaThreat: 50,
-            betaThreat: 50,
-            alphaLastAction: null,
-            gameOver: false
-        };
+        state = JSON.parse(JSON.stringify(INITIAL));
+        history = [];
 
-        document.getElementById('sim-sd-btn-build').disabled = false;
-        document.getElementById('sim-sd-btn-signal').disabled = false;
-        document.getElementById('sim-sd-btn-reduce').disabled = false;
-        
-        document.getElementById('sim-sd-outcome').style.display = 'none';
-        document.getElementById('sim-sd-log').innerHTML = '<div class="sim-sd-text-muted">Simulation restarted. Waiting for Alpha\\'s first move.</div>';
-        document.getElementById('sim-sd-beta-action-display').innerText = 'Waiting for Round 1...';
+        $('sim-sd-btn-build').disabled = false;
+        $('sim-sd-btn-signal').disabled = false;
+        $('sim-sd-btn-reduce').disabled = false;
+
+        $('sim-sd-outcome').hidden = true;
+        $('sim-sd-log').innerHTML = '<div class="lab-log-entry is-muted">Simulation restarted. Waiting for Alpha\'s first move.</div>';
+        $('sim-sd-beta-action-display').innerText = 'Waiting for your Round 1 decision…';
 
         updateUI();
     };
+
+    // Drag-to-rotate CSS-3D board + briefing gate + tip close
+    document.addEventListener('DOMContentLoaded', function() {
+        var stage = $('sim-sd-stage');
+        var board = stage ? stage.querySelector('.lab-board') : null;
+
+        if (stage && board) {
+            var dragging = false, startX = 0, startY = 0, rx = 14, ry = 0;
+
+            function apply() {
+                board.style.setProperty('--lab-rx', rx + 'deg');
+                board.style.setProperty('--lab-ry', ry + 'deg');
+            }
+
+            stage.addEventListener('pointerdown', function(e) {
+                if (e.target.closest('button')) { return; }
+                dragging = true; startX = e.clientX; startY = e.clientY;
+                board.classList.add('is-grabbing');
+                stage.setPointerCapture(e.pointerId);
+            });
+            stage.addEventListener('pointermove', function(e) {
+                if (!dragging) { return; }
+                ry = Math.max(-38, Math.min(38, ry + (e.clientX - startX) * 0.25));
+                rx = Math.max(-8, Math.min(34, rx - (e.clientY - startY) * 0.15));
+                startX = e.clientX; startY = e.clientY;
+                apply();
+            });
+            ['pointerup', 'pointercancel'].forEach(function(ev) {
+                stage.addEventListener(ev, function() { dragging = false; board.classList.remove('is-grabbing'); });
+            });
+        }
+
+        var tipClose = $('sim-sd-tip-close');
+        if (tipClose) { tipClose.addEventListener('click', function() { $('sim-sd-tip').hidden = true; }); }
+
+        var begin = $('sim-sd-btn-begin');
+        if (begin) {
+            begin.addEventListener('click', function() {
+                $('sim-sd-briefing').hidden = true;
+                $('sim-sd-play').hidden = false;
+                updateUI();
+            });
+        }
+    });
 })();
 </script>

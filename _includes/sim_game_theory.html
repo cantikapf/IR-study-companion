@@ -1,95 +1,340 @@
 <style>
-.sim-container { background: #1f2937; color: #f9fafb; border-radius: 12px; padding: 25px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2); margin: 30px 0; border: 1px solid #374151; }
-.sim-header { border-bottom: 2px solid #374151; padding-bottom: 15px; margin-bottom: 20px; }
-.sim-header h3 { margin: 0; color: #60a5fa !important; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
-.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-@media (max-width: 600px) { .sim-grid { grid-template-columns: 1fr; } }
-.sim-panel { background: #111827; padding: 20px; border-radius: 8px; border: 1px solid #374151; text-align: center; }
-.sim-score { font-size: 3rem; font-weight: 800; color: #10b981; margin: 10px 0; }
-.sim-score.negative { color: #ef4444; }
-.sim-actions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
-.sim-btn { flex: 1; padding: 12px; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.2s; }
-.sim-btn-coop { background: #3b82f6; color: white; }
-.sim-btn-coop:hover { background: #2563eb; transform: translateY(-2px); }
-.sim-btn-defect { background: #ef4444; color: white; }
-.sim-btn-defect:hover { background: #dc2626; transform: translateY(-2px); }
-.sim-log { margin-top: 20px; background: #111827; padding: 15px; border-radius: 8px; border: 1px solid #374151; height: 120px; overflow-y: auto; font-family: monospace; font-size: 0.9rem; color: #9ca3af; }
-.sim-log div { margin-bottom: 5px; border-bottom: 1px dashed #374151; padding-bottom: 5px; }
-.sim-log .log-highlight { color: #f3f4f6; font-weight: bold; }
+/* Lab 02 — Prisoner's Dilemma. Shell styles: assets/css/lab-shell.css */
+#game-theory-sim .sim-gt-move-row { display: flex; gap: 10px; margin-top: 6px; }
+#game-theory-sim .sim-gt-move-row .lab-btn { flex: 1; }
+#game-theory-sim .sim-gt-score-label { margin: 0; font-size: 0.85rem; color: var(--lms-ink-secondary); }
+#game-theory-sim .sim-gt-classified {
+    margin-top: 14px;
+    font-size: 0.78rem;
+    color: var(--lms-ink-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
 </style>
 
-<div class="sim-container" id="game-theory-sim">
-    <div class="sim-header">
-        <h3><i class="fa fa-gamepad"></i> Simulation: The Prisoner's Dilemma</h3>
-        <p style="margin-top: 10px; color: #9ca3af; font-size: 0.95rem; line-height: 1.5;">You are State A. State B is an AI opponent using the famous <strong>'Tit-for-Tat'</strong> strategy. Will you disarm (Cooperate) or secretly build weapons (Defect)?</p>
+<div class="lab-shell" id="game-theory-sim" data-cat="strategy">
+
+    <!-- ======================= HEADER ======================= -->
+    <div class="lab-head">
+        <div class="lab-kicker">
+            <span class="lab-kicker-chip">Lab 02</span>
+            <span class="lab-kicker-track">Strategy · Game Theory</span>
+        </div>
+        <h3 class="lab-title">The Prisoner's Dilemma</h3>
+        <div class="lab-meta">
+            <span class="lab-meta-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> ≈ 4 min</span>
+            <span class="lab-meta-chip"><i class="fa fa-repeat" aria-hidden="true"></i> 8-round sessions</span>
+            <span class="lab-meta-chip"><i class="fa fa-bar-chart" aria-hidden="true"></i> Foundation level</span>
+        </div>
     </div>
-    <div class="sim-grid">
-        <div class="sim-panel">
-            <h4 style="margin:0; color:#d1d5db;">Your Score (State A)</h4>
-            <div class="sim-score" id="gt-score-a">0</div>
-            <div class="sim-actions">
-                <button class="sim-btn sim-btn-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate</button>
-                <button class="sim-btn sim-btn-defect" onclick="playGameTheory('defect')">⚔️ Defect</button>
+
+    <!-- ======================= BRIEFING ======================= -->
+    <div class="lab-briefing" id="sim-gt-briefing">
+        <div class="lab-brief-grid">
+            <div>
+                <div class="lab-brief-card" style="margin-bottom: 14px;">
+                    <p class="lab-brief-label">Situation</p>
+                    <p>You are State A. Across the table sits State B, an AI power whose strategy is classified. Each round, both states secretly choose: <strong>Cooperate</strong> (keep weapons banned) or <strong>Defect</strong> (secretly build). Choices are revealed simultaneously.</p>
+                </div>
+                <div class="lab-brief-card">
+                    <p class="lab-brief-label">Payoff Matrix</p>
+                    <table class="lab-matrix">
+                        <tr>
+                            <th></th>
+                            <th>B Cooperates</th>
+                            <th>B Defects</th>
+                        </tr>
+                        <tr>
+                            <th>You Cooperate</th>
+                            <td class="is-cc">+5 / +5</td>
+                            <td class="is-sucker">−10 / +10</td>
+                        </tr>
+                        <tr>
+                            <th>You Defect</th>
+                            <td class="is-tempt">+10 / −10</td>
+                            <td class="is-dd">−2 / −2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <div class="lab-brief-card" style="margin-bottom: 14px;">
+                    <p class="lab-brief-label">Objectives</p>
+                    <ul class="lab-obj-list">
+                        <li class="is-win"><i class="fa fa-check-circle" aria-hidden="true"></i><span>Maximize your cumulative score across an <strong>8-round session</strong>.</span></li>
+                        <li class="is-warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>There is no single winning move — the rational choice depends on <em>how your opponent reacts over time</em>. Discover its pattern.</span></li>
+                        <li class="is-lose"><i class="fa fa-times-circle" aria-hidden="true"></i><span>End with a negative score and you have been systematically exploited.</span></li>
+                    </ul>
+                </div>
+                <div class="lab-brief-card">
+                    <p class="lab-brief-label">How It Works</p>
+                    <ul class="lab-mech-list">
+                        <li><i class="fa fa-handshake-o" aria-hidden="true"></i><span>Mutual cooperation is the joint best outcome (+5 each) — but each state is tempted to defect for +10.</span></li>
+                        <li><i class="fa fa-eye" aria-hidden="true"></i><span>State B <em>adapts to your history</em>. Watch how it answers each of your moves before you commit to a pattern.</span></li>
+                        <li><i class="fa fa-refresh" aria-hidden="true"></i><span>The one-shot game favors defection; the <em>iterated</em> game rewards a different logic. Eight rounds is enough to see which.</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="sim-panel">
-            <h4 style="margin:0; color:#d1d5db;">Opponent (State B)</h4>
-            <div class="sim-score" id="gt-score-b" style="color: #60a5fa;">0</div>
-            <div style="margin-top:20px; color:#9ca3af; font-style: italic; background: #1f2937; padding: 10px; border-radius: 6px;" id="gt-opp-status">Waiting for your move...</div>
+        <div class="lab-brief-actions">
+            <button class="lab-btn lab-btn-primary" id="sim-gt-btn-begin">
+                <i class="fa fa-play" aria-hidden="true"></i> Begin Session
+            </button>
         </div>
     </div>
-    <div class="sim-log" id="gt-log" aria-live="polite">
-        <div style="border-bottom:none;">> Simulation initialized. Opponent is ready.</div>
+
+    <!-- ======================= PLAY AREA ======================= -->
+    <div id="sim-gt-play" hidden>
+
+        <div class="lab-hud" aria-live="polite">
+            <span class="lab-hud-chip" id="sim-gt-hud-round">Round 1 / 8</span>
+            <span class="lab-hud-chip" id="sim-gt-hud-score">Score: 0</span>
+            <span class="lab-hud-chip">Discover B's strategy</span>
+        </div>
+
+        <div class="lab-stage" id="sim-gt-stage">
+            <div class="lab-board">
+
+                <div class="lab-tile" style="text-align: center;">
+                    <h4><i class="fa fa-flag" aria-hidden="true" style="color: var(--lab-accent); margin-right: 6px;"></i>State A — You</h4>
+                    <p class="sim-gt-score-label">Cumulative score</p>
+                    <div class="lab-score-big" id="sim-gt-score-a">0</div>
+                    <div class="sim-gt-move-row">
+                        <button class="lab-btn lab-btn-primary" onclick="window.playGameTheory('cooperate')" id="sim-gt-btn-coop"><i class="fa fa-handshake-o" aria-hidden="true"></i> Cooperate</button>
+                        <button class="lab-btn" onclick="window.playGameTheory('defect')" id="sim-gt-btn-defect"><i class="fa fa-crosshairs" aria-hidden="true"></i> Defect</button>
+                    </div>
+                </div>
+
+                <div class="lab-tile" style="text-align: center;">
+                    <h4><i class="fa fa-flag" aria-hidden="true" style="color: var(--lms-ink-tertiary); margin-right: 6px;"></i>State B — Opponent</h4>
+                    <p class="sim-gt-score-label">Cumulative score</p>
+                    <div class="lab-score-big" id="sim-gt-score-b" style="color: var(--lms-ink-tertiary);">0</div>
+                    <div class="lab-opp-status" id="sim-gt-opp-status" style="min-height: 44px;">Waiting for your Round 1 move…</div>
+                    <div class="sim-gt-classified">Strategy: classified until debrief</div>
+                </div>
+
+            </div>
+        </div>
+        <p class="lab-stage-hint"><i class="fa fa-arrows" aria-hidden="true"></i> Drag the board to rotate the view.</p>
+
+        <div class="lab-tip" id="sim-gt-tip" hidden>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+            <span>Pay attention to how State B answers each of your moves — its behavior is a strategy, not randomness. This round's outcome already hints at it.</span>
+            <button class="lab-tip-close" id="sim-gt-tip-close" aria-label="Dismiss tip"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="lab-log" id="sim-gt-log" aria-live="polite">
+            <div class="lab-log-entry is-muted">&gt; Session initialized. Opponent is ready.</div>
+        </div>
+
+        <div id="sim-gt-outcome" class="lab-debrief" aria-live="polite" hidden>
+            <span class="lab-debrief-tag">Debrief</span>
+            <h4 id="sim-gt-outcome-title"></h4>
+            <p id="sim-gt-outcome-desc"></p>
+
+            <div class="lab-summary-row">
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-a">0</span><span class="lbl">Your score</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-b">0</span><span class="lbl">State B score</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-coop">0%</span><span class="lbl">You cooperated</span></div>
+                <div class="lab-summary-pill"><span class="val" id="sim-gt-sum-exploit">0</span><span class="lbl">Exploits made</span></div>
+            </div>
+
+            <div class="lab-recap">
+                <div class="lab-recap-title">Round-by-round record</div>
+                <ul id="sim-gt-recap-list"></ul>
+            </div>
+
+            <div class="lab-mech-reveal" id="sim-gt-mech-reveal"></div>
+
+            <div class="lab-debrief-actions">
+                <button class="lab-btn" onclick="window.simGtRestart()"><i class="fa fa-refresh" aria-hidden="true"></i> Play Another Session</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
 (function() {
-    let gtScoreA = 0;
-    let gtScoreB = 0;
-    let lastOpponentMove = 'cooperate'; // Tit for tat starts with cooperate
-    let roundCounter = 1;
+    var MAX_ROUNDS = 8;
+    var scoreA = 0, scoreB = 0, round = 1;
+    var lastOpponentMove = 'cooperate'; // Tit-for-Tat opens cooperatively (kept from original)
+    var history = [];
+    var coopCount = 0, exploitCount = 0;
+    var tipShown = false;
+    var finished = false;
+
+    function $(id) { return document.getElementById(id); }
+
+    function updateHUD() {
+        $('sim-gt-hud-round').innerText = 'Round ' + Math.min(round, MAX_ROUNDS) + ' / ' + MAX_ROUNDS;
+        $('sim-gt-hud-score').innerText = 'Score: ' + scoreA;
+
+        var a = $('sim-gt-score-a');
+        a.innerText = scoreA;
+        a.className = 'lab-score-big' + (scoreA < 0 ? ' is-negative' : '');
+        $('sim-gt-score-b').innerText = scoreB;
+    }
+
+    function outcomeText(playerMove, oppMove) {
+        if (playerMove === 'cooperate' && oppMove === 'cooperate') {
+            return 'Mutual Cooperation! Both states enjoy peace <strong style="color:var(--lab-win)">(+5 each)</strong>.';
+        }
+        if (playerMove === 'defect' && oppMove === 'cooperate') {
+            return 'You exploited their trust! You gain dominance <strong style="color:var(--lab-win)">(+10)</strong>, they suffer <strong style="color:var(--lab-lose)">(−10)</strong>.';
+        }
+        if (playerMove === 'cooperate' && oppMove === 'defect') {
+            return 'You were betrayed! Opponent builds weapons while you disarm <strong style="color:var(--lab-lose)">(−10)</strong>.';
+        }
+        return 'Mutual Defection! An expensive arms race harms both <strong style="color:var(--lab-lose)">(−2 each)</strong>.';
+    }
 
     window.playGameTheory = function(playerMove) {
-        const oppMove = lastOpponentMove; 
-        let changeA = 0;
-        let changeB = 0;
-        let resultText = "";
+        if (finished) { return; }
 
-        if (playerMove === 'cooperate' && oppMove === 'cooperate') {
-            changeA = 5; changeB = 5;
-            resultText = "Mutual Cooperation! Both states enjoy peace <span style='color:#10b981'>(+5 each)</span>.";
-        } else if (playerMove === 'defect' && oppMove === 'cooperate') {
-            changeA = 10; changeB = -10;
-            resultText = "You exploited their trust! You gain dominance <span style='color:#10b981'>(+10)</span>, they suffer <span style='color:#ef4444'>(-10)</span>.";
-        } else if (playerMove === 'cooperate' && oppMove === 'defect') {
-            changeA = -10; changeB = 10;
-            resultText = "You were betrayed! Opponent builds weapons while you disarm <span style='color:#ef4444'>(-10)</span>.";
-        } else {
-            changeA = -2; changeB = -2;
-            resultText = "Mutual Defection! An expensive arms race harms both <span style='color:#ef4444'>(-2 each)</span>.";
+        var oppMove = lastOpponentMove; // Tit-for-Tat copies your previous move
+        var changeA = 0, changeB = 0;
+
+        if (playerMove === 'cooperate' && oppMove === 'cooperate') { changeA = 5; changeB = 5; }
+        else if (playerMove === 'defect' && oppMove === 'cooperate') { changeA = 10; changeB = -10; exploitCount++; }
+        else if (playerMove === 'cooperate' && oppMove === 'defect') { changeA = -10; changeB = 10; }
+        else { changeA = -2; changeB = -2; }
+
+        if (playerMove === 'cooperate') { coopCount++; }
+
+        lastOpponentMove = playerMove; // (original mechanic preserved)
+        scoreA += changeA;
+        scoreB += changeB;
+
+        var icon = oppMove === 'cooperate' ? '🤝' : '⚔️';
+        var label = oppMove === 'cooperate' ? 'COOPERATED' : 'DEFECTED';
+        var cls = oppMove === 'cooperate' ? 'is-coop' : 'is-defect';
+        $('sim-gt-opp-status').innerHTML = 'Round ' + round + ': State B played ' + icon + ' <strong class="' + cls + '">' + label + '</strong>';
+
+        var text = outcomeText(playerMove, oppMove);
+        history.push({ round: round, player: playerMove, opp: oppMove });
+
+        var log = $('sim-gt-log');
+        var entry = document.createElement('div');
+        entry.className = 'lab-log-entry';
+        entry.innerHTML = '<strong>[Round ' + round + ']</strong> ' + text;
+        log.insertBefore(entry, log.firstChild);
+
+        updateHUD();
+
+        if (!tipShown) {
+            tipShown = true;
+            $('sim-gt-tip').hidden = false;
         }
 
-        // Update state
-        lastOpponentMove = playerMove; // Tit for tat copies your last move
-        gtScoreA += changeA;
-        gtScoreB += changeB;
-
-        // UI Updates
-        document.getElementById('gt-score-a').innerText = gtScoreA;
-        document.getElementById('gt-score-b').innerText = gtScoreB;
-        document.getElementById('gt-score-a').className = 'sim-score ' + (gtScoreA < 0 ? 'negative' : '');
-        document.getElementById('gt-score-b').className = 'sim-score ' + (gtScoreB < 0 ? 'negative' : '');
-        
-        let oppIcon = oppMove === 'cooperate' ? '🤝' : '⚔️';
-        let oppColor = oppMove === 'cooperate' ? '#3b82f6' : '#ef4444';
-        document.getElementById('gt-opp-status').innerHTML = `State B played: <strong style="color:${oppColor}; font-size:1.1rem;">${oppIcon} ${oppMove.toUpperCase()}</strong>`;
-
-        const log = document.getElementById('gt-log');
-        const newLog = document.createElement('div');
-        newLog.innerHTML = `<span class="log-highlight">[Round ${roundCounter}]</span> ${resultText}`;
-        log.prepend(newLog);
-        roundCounter++;
+        if (round >= MAX_ROUNDS) {
+            endSession();
+        } else {
+            round++;
+            updateHUD();
+        }
     };
+
+    function endSession() {
+        finished = true;
+        $('sim-gt-btn-coop').disabled = true;
+        $('sim-gt-btn-defect').disabled = true;
+
+        try { localStorage.setItem('labs_completed_game_theory', 'true'); } catch (e) {}
+
+        var outcome = $('sim-gt-outcome');
+        outcome.hidden = false;
+
+        var title, desc;
+        if (scoreA >= 40) {
+            title = '🏆 Strategic Masterclass — ' + scoreA + ' points';
+            desc = 'You read the opponent quickly and kept the game on the efficient frontier. Sustained mutual cooperation is the Pareto-optimal path — both states end richer than any exploit could manage alone.';
+        } else if (scoreA > 0) {
+            title = '✅ Net Gainer — ' + scoreA + ' points';
+            desc = 'A positive balance, but check the record: some of it may have been bought by risky exploits that invited retaliation later in the session.';
+        } else if (scoreA === 0) {
+            title = '⚖️ Perfect Stalemate — 0 points';
+            desc = 'Neither side gained. When both states defend short-term advantage, the game locks into mutual defection — the Nash Equilibrium of the one-shot dilemma, and the joint worst outcome over time.';
+        } else {
+            title = '❌ Exploited — ' + scoreA + ' points';
+            desc = 'You paid the sucker\'s payoff repeatedly. Disarming while the other side builds is the worst position in the matrix — trust needs verification.';
+        }
+        $('sim-gt-outcome-title').innerText = title;
+        $('sim-gt-outcome-desc').innerHTML = desc;
+
+        $('sim-gt-sum-a').innerText = scoreA;
+        $('sim-gt-sum-b').innerText = scoreB;
+        $('sim-gt-sum-coop').innerText = Math.round((coopCount / MAX_ROUNDS) * 100) + '%';
+        $('sim-gt-sum-exploit').innerText = exploitCount;
+
+        var recap = $('sim-gt-recap-list');
+        recap.innerHTML = '';
+        history.forEach(function(h) {
+            var li = document.createElement('li');
+            li.innerHTML = '<strong>R' + h.round + '</strong> — You ' + (h.player === 'cooperate' ? 'Cooperated' : 'Defected') + ' · B ' + (h.opp === 'cooperate' ? 'Cooperated' : 'Defected');
+            recap.appendChild(li);
+        });
+
+        $('sim-gt-mech-reveal').innerHTML = '<strong>Mechanics revealed:</strong> State B was playing <em>Tit-for-Tat</em> (Axelrod, <em>The Evolution of Cooperation</em>, 1984) — it opened by cooperating, then simply mirrored your previous move. Tit-for-Tat is nice (never defects first), retaliatory (punishes exploitation), forgiving (returns to cooperation), and clear (easy to read). It won both of Axelrod\'s tournaments. The lesson for international politics: when interactions repeat — the "shadow of the future" — cooperation becomes rational even among egoists, and mutual cooperation (CC) is Pareto-optimal while mutual defection (DD) is the one-shot Nash Equilibrium.<br><br>Continue to the <strong>Knowledge Check</strong> below to test the concept.';
+    }
+
+    window.simGtRestart = function() {
+        scoreA = 0; scoreB = 0; round = 1;
+        lastOpponentMove = 'cooperate';
+        history = []; coopCount = 0; exploitCount = 0;
+        tipShown = true; finished = false;
+
+        $('sim-gt-btn-coop').disabled = false;
+        $('sim-gt-btn-defect').disabled = false;
+        $('sim-gt-outcome').hidden = true;
+        $('sim-gt-opp-status').innerText = 'Waiting for your Round 1 move…';
+        $('sim-gt-log').innerHTML = '<div class="lab-log-entry is-muted">&gt; New session initialized. Opponent is ready.</div>';
+
+        updateHUD();
+    };
+
+    // Drag-to-rotate CSS-3D board + briefing gate + tip close
+    document.addEventListener('DOMContentLoaded', function() {
+        var stage = $('sim-gt-stage');
+        var board = stage ? stage.querySelector('.lab-board') : null;
+
+        if (stage && board) {
+            var dragging = false, startX = 0, startY = 0, rx = 14, ry = 0;
+
+            function apply() {
+                board.style.setProperty('--lab-rx', rx + 'deg');
+                board.style.setProperty('--lab-ry', ry + 'deg');
+            }
+
+            stage.addEventListener('pointerdown', function(e) {
+                if (e.target.closest('button')) { return; }
+                dragging = true; startX = e.clientX; startY = e.clientY;
+                board.classList.add('is-grabbing');
+                stage.setPointerCapture(e.pointerId);
+            });
+            stage.addEventListener('pointermove', function(e) {
+                if (!dragging) { return; }
+                ry = Math.max(-38, Math.min(38, ry + (e.clientX - startX) * 0.25));
+                rx = Math.max(-8, Math.min(34, rx - (e.clientY - startY) * 0.15));
+                startX = e.clientX; startY = e.clientY;
+                apply();
+            });
+            ['pointerup', 'pointercancel'].forEach(function(ev) {
+                stage.addEventListener(ev, function() { dragging = false; board.classList.remove('is-grabbing'); });
+            });
+        }
+
+        var tipClose = $('sim-gt-tip-close');
+        if (tipClose) { tipClose.addEventListener('click', function() { $('sim-gt-tip').hidden = true; }); }
+
+        var begin = $('sim-gt-btn-begin');
+        if (begin) {
+            begin.addEventListener('click', function() {
+                $('sim-gt-briefing').hidden = true;
+                $('sim-gt-play').hidden = false;
+                updateHUD();
+            });
+        }
+    });
 })();
 </script>
