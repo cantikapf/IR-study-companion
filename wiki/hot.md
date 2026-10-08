@@ -13,6 +13,14 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Homepage Production Deployment: Porting Approved Redesign to `_pages/index.md` & Live Netlify:
+Memindahkan seluruh desain homepage baru yang telah disetujui dari `prototype/home.html` langsung ke berkas produksi Jekyll `_pages/index.md`:
+1. `Motion Graphic Hero`: Mengintegrasikan globe wireframe SVG animasi murni CSS (rotasi orbit, rute diplomasi dashed, denyut node) berdampingan dengan tipografi editorial.
+2. `Curriculum Explorer (ReUI Cascader)`: Menanamkan panel pencarian dan penjelajahan 157 lessons lintas 18 modules (5 series) menggantikan section "The Four Learning Tracks" yang lama.
+3. `Diplomatic Decision Labs`: Memperbarui tata letak ke split view berisi Prisoner's Dilemma Game Theory Arena interaktif langsung + 3 kartu lab kompak.
+4. `Sertifikasi Bersih`: Zero sertifikasi, zero tautan `certificate.html`.
+5. `Verifikasi & Push`: Jekyll build lokal sukses, 369/369 pytest PASS, Playwright E2E pass, siap deploy otomatis via Netlify.
+
 2026-10-08 - Homepage Polishing: Four Learning Tracks Dihapus, Bug Kartu Lab Diperbaiki, Motion Graphic Globe:
 Arahan pengguna: (1) Four Learning Tracks dihapus karena sudah ada "Explore the Full Library", (2) format Diplomatic Decision Labs terlihat jelek, (3) butuh visual motion graphic agar homepage tidak terasa kosong (tulisan saja).
 1. `Bug Root Cause Kartu Lab`: Tiga kartu lab memiliki `</div>` yatim sisa edit icon-stack sebelumnya - menutup `<article>` lebih awal sehingga link "Launch Simulator ➔" jatuh keluar kartu (inilah "format jelek" pada screenshot). Diperbaiki via regex `n=3`; terverifikasi Playwright: semua link berada DI DALAM `article.lab-card-sm`, panel sandbox & 3 kartu top/bottom-aligned sempurna (inspeksi visual PASS).
