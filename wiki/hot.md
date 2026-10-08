@@ -13,6 +13,12 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - Module 010 Label Standardization: "Introduction to International Relations":
+Memperbaiki penamaan Modul 010 sesuai arahan pengguna agar tidak disingkat ("Introduction To Ir" ➔ "Introduction to International Relations"):
+1. `Curriculum Explorer Dataset`: Memperbarui `name` dan `overview.title` pada M010 di `_pages/index.md` dan `prototype/home.html`.
+2. `Frontmatter Bab 000`: Memperbarui `title: Introduction to International Relations` di `_chapters/010-Introduction-to-IR/000-index.md`.
+3. `Verifikasi & Push`: 369/369 pytest PASS, Jekyll build sukses tanpa error.
+
 2026-10-08 - Homepage Production Deployment: Porting Approved Redesign to `_pages/index.md` & Live Netlify:
 Memindahkan seluruh desain homepage baru yang telah disetujui dari `prototype/home.html` langsung ke berkas produksi Jekyll `_pages/index.md`:
 1. `Motion Graphic Hero`: Mengintegrasikan globe wireframe SVG animasi murni CSS (rotasi orbit, rute diplomasi dashed, denyut node) berdampingan dengan tipografi editorial.
