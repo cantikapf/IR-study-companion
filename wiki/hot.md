@@ -14,9 +14,11 @@ tags:
 ## Last Updated
 
 2026-10-08 - Video Companion UI & Asset Pipeline Fix:
-1. `Pembersihan AI/TTS References`:
-   - Menghapus penyebutan "local Kokoro-82M neural voices" di kartu showcase YouTube `@IRinANutshell` pada `_pages/index.md` dan `prototype/home.html`.
-   - Menggantikannya dengan deskripsi akademik profesional: *"Produced with concise academic narration and rapid-fire visual breakdowns. Watch our flagship 10-minute master episode: 'The Anarchy Problem — Who's in Charge of the Planet?', or explore mini-documentaries accompanying each core module."*
+1. `Pembersihan AI/TTS References & Klaim Fiktif`:
+   - Menghapus penyebutan "local Kokoro-82M neural voices" serta judul/durasi fiktif ("flagship 10-minute master episode: 'The Anarchy Problem — Who's in Charge of the Planet?'") di kartu showcase YouTube `@IRinANutshell` pada `_pages/index.md` dan `prototype/home.html`.
+   - Menggantikannya dengan deskripsi kurikuler faktual sesuai inventaris nyata di `learning-videos/catalog.json`:
+     - Subtitle: *"Visual mind map explainers and animated concept breakdowns"*
+     - Body: *"Curriculum-aligned animated mind maps and visual explainers accompanying core International Relations modules. Watch our video breakdown of Realism in Global Politics, or explore our growing library of concept deep-dives."*
 2. `Perbaikan Thumbnail Video (@IRinANutshell)`:
    - Root cause: Direktori `learning-videos` sebelumnya dikecualikan secara global di `_config.yml` (`exclude: - learning-videos`), sehingga Jekyll tidak menyalin folder `learning-videos/posters/` ke dalam `_site`.
    - Perbaikan: Mengubah konfigurasi `exclude` di `_config.yml` agar hanya mengecualikan subdirektori berat (`learning-videos/exports` dan `learning-videos/probe`), sehingga aset poster/thumbnail disalin secara resmi ke `_site/learning-videos/posters/`.
