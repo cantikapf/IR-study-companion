@@ -13,6 +13,16 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 G1 AUDIT PASSED (Director → Gemini build reviewed):
+Audit independen atas commit `a9a977d` (feat(labs): G1 — game core + Lab 02 mini-game retrofit) — SEMUA gerbang lolos, direproduksi sendiri tanpa memercayai laporan builder:
+1. `Git hygiene`: 1 commit, 5 file (core js, head.html, sim_game_theory.html, lab-shell.css, hot.md), pesan konvensional, tidak ada file tak terkait.
+2. `Kesesuaian bible`: core API §3 (rng mulberry32, score/streak/stars/best/flags/sfx WebAudio/help modal/timer) terimplementasi penuh; retrofit Lab 02 §5 lengkap (dossier briefing, 5 kepribadian rahasia + roulette SCRAMBLING, SIGINT R4, 8 ronde, bintang/rank, reveal Axelrod 1984, flag `labs_completed_game_theory`).
+3. `Gates direproduksi`: pytest 369/369 · build Jekyll bersih · markup briefing+roulette+modal ada di `_site/game-theory-ir.html` · scan stopword Indonesia = 0 · Playwright E2E 35/35 PASS (termasuk uji matematis streak 5→10→18→66, lock keyboard modal, persistensi best/mute/flag).
+4. `Visual gate`: debrief light 7/7 PASS; briefing 4/4 PASS pada offset scroll nyaman — temuan awal "judul tertutup topbar" terbukti artefak screenshot (elemen flush ke tepi atas viewport), bukan defect nyata.
+5. `Smoke lintas lab`: 10/10 halaman bab lab (game-theory-ir, models-fpdm, realism-security, wto-decision-making, UN-security, tools-diplomacy, law-of-the-sea, road-to-ww1, asean-community, domino-cold-war) memuat core `window.LabGame` dengan 0 error console.
+6. `Catatan minor (non-blocking)`: (a) streak dihitung lokal di lab, core hanya reset — math identik, konsolidasi boleh ditunda ke G2; (b) `scripts/verify_g1_playwright.js` masih untracked — direkomendasikan di-commit sebagai aset QA reusable untuk G2; (c) screenshot probe di `learning-videos/probe/` biarkan untracked.
+7. `STATUS`: G1 diaudit lolos → menunggu ACC pengguna atas pilot Lab 02 sebelum G2 diotorisasi. Skrip audit direktur: scratch `audit_v2.js` (server statis internal + smoke 10 lab).
+
 2026-10-08 - M10 Phase G1: Shared Game Core + Lab 02 Mini-Game Retrofit (MENUNGGU ACC GERBANG REVIEW):
 Mengeksekusi Fase G1 sesuai arahan Director GLM 5.3 Flash pada `wiki/game-design-bible.md`:
 1. `Shared Game Core (assets/js/lab-game-core.js)`: Implementasi vanilla ES6 `window.LabGame` (~350 baris, zero external dependencies) mencakup: `rng` (mulberry32 seeded PRNG / unseeded random), `score` (add, get, reset), `streak` (hit, break, mult: 1 -> 1.5x @ 3 streak -> 2x @ 5 streak), `stars` (0-3 par evaluator), `best` (getter/submitter localStorage `labs_best_<id>`), `flags` (complete/isComplete `labs_completed_<id>`), `sfx` (WebAudio synth: click, good, bad, reveal, fanfare; persistensi mute `labs_muted_v1`), `help` (mount, open, close, isOpen, capture-phase key locking), dan `timer` (start, stop, paused, auto-disabled saat reduced-motion).
