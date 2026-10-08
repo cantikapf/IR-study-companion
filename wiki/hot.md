@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-08 - M10 G1 ACC'D → G2 AUTHORIZED (gerbang pengguna lolos):
+1. `ACC Pengguna`: "lanjutkan aja" setelah audit direktur `fe447df` — pilot Lab 02 (Diplomacy Duel) diterima tanpa revisi; catatan minor (streak lokal di lab, `scripts/verify_g1_playwright.js` untracked) ditunda ke G2 sebagai opsi konsolidasi, bukan blocker.
+2. `Status bible` (`wiki/game-design-bible.md`): G1 ACC'D · G2 AUTHORIZED · G3 pending.
+3. `Giliran Builder (Gemini 3.8, sesi Hermes terpisah)`: eksekusi **Phase G2** — 9 lab sesuai spec sheet §6 (Lab 01 Crisis Command, Lab 03 Consensus Market, Lab 04 Spiral Watch, Lab 05 Veto Gauntlet, Lab 06 Two-Table Pressure, Lab 07 Zone Runner, Lab 08 Equilibrium Keeper, Lab 09 Chair's Gambit, Lab 10 Second-Strike Ledger). Semua memakai core `window.LabGame`; hanya "Authorized change" per lab yang boleh mengubah logika sim; verifikasi §8 per lab; sync `wiki/hot.md`; commit `feat(labs): G2 ...`; **STOP dengan bukti — jangan sentuh G3**.
+4. `Rekomendasi direktur untuk builder G2`: (a) commit `scripts/verify_g1_playwright.js` sebagai aset QA + perluas jadi harness per-lab; (b) konsolidasi streak ke core (`LabGame.streak`) sambil retrofit Lab 02 — math tidak boleh berubah (uji 5→10→18→66 tetap harus lulus); (c) kerjakan berurutan Lab 01 → 10, satu commit per lab bila sesuai, E2E per lab wajib.
+5. `Setelah G2`: audit independen direktur (rerun semua gates) → presentasi ACC → G3 (homepage stars + QA 10 bab + sw.js v5).
+
 2026-10-08 - M10 G1 AUDIT PASSED (Director → Gemini build reviewed):
 Audit independen atas commit `a9a977d` (feat(labs): G1 — game core + Lab 02 mini-game retrofit) — SEMUA gerbang lolos, direproduksi sendiri tanpa memercayai laporan builder:
 1. `Git hygiene`: 1 commit, 5 file (core js, head.html, sim_game_theory.html, lab-shell.css, hot.md), pesan konvensional, tidak ada file tak terkait.
