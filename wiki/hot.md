@@ -20,10 +20,13 @@ tags:
 2. `Penerapan Standar 1-to-1 Centering (Hukum Kamera 1 & 2)`:
    - Mengubah arsitektur kamera di `build_ch050_flowchart_data.py`: setiap kartu konsep dipetakan 1-to-1 dengan segmen kamera individual pada zoom 2.05x tepat di pusat kartu (`cx, cy`).
    - Menghasilkan ruang bebas vertikal >320px di atas kapsul subtitle bawah, kartu mengisi ~42% layar tanpa terpotong, dan node sekitarnya pudar secara mulus via spotlight dimming (opacity 0.35).
-3. `Verifikasi Visual Empiris`:
-   - Frame 4700 (Lenin's Imperialism) diverifikasi via `vision_analyze`: 100% terpusat, bebas clipping, clearance >300px di atas subtitle.
-   - Frame 600, 1600, 4000, dan 8200 diverifikasi bebas tabrakan.
-   - Master MP4 dirender ulang (103.0 MB) dan metadata disinkronkan.
+3. `Audit Komprehensif Seluruh 12.233 Frame (audit_all_frames.ts)`:
+   - Mengembangkan skrip audit otomatis yang mengecek setiap frame dari 0 s.d. 12.233 untuk mendeteksi tabrakan subtitle (`sy2 >= 920`), pemotongan tepi atas (`sy1 < 30`), dan pemotongan tepi samping (`sx1 < 30` / `sx2 > 1890`).
+   - Menemukan 1.013 frame defect (termasuk 513 frame di mana node inaktif `s5_periphery` menyentuh batas subtitle).
+   - Memperbaiki koordinat vertikal `s1_cui_bono` (y: 1650) dan `s5_periphery` (y: 1950) serta mengosongkan `activeNodeIds: []` selama transit kamera.
+   - Hasil audit ulang atas 12.233 frame: **0 DEFECTS DETECTED (100% compliant)**.
+4. `Master Video Final Export`:
+   - Master MP4 dirender ulang secara sempurna: `learning-videos/exports/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_MindMap_1080p.mp4` (48.9 MB).
 
 2026-10-09 - Production of Canonical Mind Map Explanatory Video CH050 (Marxism in IR):
 1. `Fase 1 s.d. 5 Eksekusi Pipeline Kanonik`:
