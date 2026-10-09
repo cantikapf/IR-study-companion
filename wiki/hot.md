@@ -13,6 +13,18 @@ tags:
 
 ## Last Updated
 
+2026-10-09 - Remotion Camera Rig Audit & Centering Standardization (CH050):
+1. `Root Cause Diagnosis (Frame Clipping & Subtitle Collision)`:
+   - Pada segmen `seg_imperialism` sebelumnya, kamera dikonfigurasi mencakup dua node yang berjauhan: `["root_marxism", "s3_imperialism_hub"]` dengan jarak vertikal 750px di kanvas.
+   - Pada zoom 1.65x (tinggi viewport 654px), rata-rata posisi tengah menempatkan kartu atas terpotong tepi atas layar dan menempatkan `root_marxism` di bawah menabrak kapsul subtitle.
+2. `Penerapan Standar 1-to-1 Centering (Hukum Kamera 1 & 2)`:
+   - Mengubah arsitektur kamera di `build_ch050_flowchart_data.py`: setiap kartu konsep dipetakan 1-to-1 dengan segmen kamera individual pada zoom 2.05x tepat di pusat kartu (`cx, cy`).
+   - Menghasilkan ruang bebas vertikal >320px di atas kapsul subtitle bawah, kartu mengisi ~42% layar tanpa terpotong, dan node sekitarnya pudar secara mulus via spotlight dimming (opacity 0.35).
+3. `Verifikasi Visual Empiris`:
+   - Frame 4700 (Lenin's Imperialism) diverifikasi via `vision_analyze`: 100% terpusat, bebas clipping, clearance >300px di atas subtitle.
+   - Frame 600, 1600, 4000, dan 8200 diverifikasi bebas tabrakan.
+   - Master MP4 dirender ulang (103.0 MB) dan metadata disinkronkan.
+
 2026-10-09 - Production of Canonical Mind Map Explanatory Video CH050 (Marxism in IR):
 1. `Fase 1 s.d. 5 Eksekusi Pipeline Kanonik`:
    - Penyiapan naskah akademik 4-Act dan arsitektur graf 30 nodes (Historical Materialism, Base-Superstructure, Lenin's Imperialism, Dependency Theory, Wallerstein's World Systems, Gramscian Cultural Hegemony, Robert Cox's Axiom).
