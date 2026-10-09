@@ -13,6 +13,24 @@ tags:
 
 ## Last Updated
 
+2026-10-09 - Production of Canonical Mind Map Explanatory Video CH050 (Marxism in IR):
+1. `Fase 1 s.d. 5 Eksekusi Pipeline Kanonik`:
+   - Penyiapan naskah akademik 4-Act dan arsitektur graf 30 nodes (Historical Materialism, Base-Superstructure, Lenin's Imperialism, Dependency Theory, Wallerstein's World Systems, Gramscian Cultural Hegemony, Robert Cox's Axiom).
+   - Sintesis audio neural Kokoro-82M (af_heart) menghasilkan 44 subtitle tersinkronisasi presisi (durasi 407.78s / 12.233 frame @ 30 FPS).
+   - Penataan koordinat kanvas 4800x3200 bebas overlap dan audit tabrakan panah (0 collision).
+   - Segmen kamera mematuhi 3-Pillar Camera Law (Zoom-In 1.35x–1.95x, Stationary Hold, Contextual Zoom-out, Panorama pull-back 0.38x).
+2. `Aset Visual & YouTube Thumbnail Standar Kanonik`:
+   - Poster still panorama 1080p tersimpan di `learning-videos/posters/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Poster.png`.
+   - YouTube thumbnail resmi menggunakan foto historis autentik Lewis Hine (1920) "Power house mechanic" yang memvisualisasikan tenaga kerja dan alat produksi kapitalisme industri, dengan template torn-paper brush mask dan tipografi kanonik Archivo Black + Space Mono (`IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Thumbnail.png`).
+   - Ekspor master video MP4 1080p (29.9 MB) di `learning-videos/exports/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_MindMap_1080p.mp4`.
+3. `Sinkronisasi Registry & Platform`:
+   - `learning-videos/catalog.json` & `learning-videos/README.md` diperbarui (status: 🟢 RENDERED 30.0 MB).
+   - `_chapters/010-Introduction-to-IR/050-basic-marxism.md` frontmatter diperbarui dengan gateway pre-reading card.
+4. `Verifikasi & QA`:
+   - Pytest: 369/369 PASS (0.92s).
+   - Remotion TypeScript check: `npx tsc --noEmit` PASS (0 error).
+   - Jekyll static build: Bersih tanpa error (82.4s).
+
 2026-10-08 - Comprehensive README.md Overhaul & Academic SEO Alignment:
 1. `Sinkronisasi Status Platform & SEO Positioning`:
    - Memutakhirkan `README.md` secara menyeluruh agar selaras dengan milestone aktif M0–M10.

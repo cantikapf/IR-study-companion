@@ -49,6 +49,11 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Authentic Historical Photography Standard for YouTube Thumbnails (2026-10-09)**:
+  1. *Mandate for Real Photography*: Pembuatan YouTube thumbnail kanonik (template split torn-paper brush mask) WAJIB menggunakan foto historis/dokumen nyata autentik (seperti *Power house mechanic* Lewis Hine 1920 untuk Marxisme, ruang sidang Majelis Umum PBB untuk Liberalisme, bidak catur jatuh berlatar chiaroscuro untuk Realisme), dan DILARANG menggunakan cuplikan diagram/mindmap.
+  2. *Mobile Legibility & Dramatic Contrast*: Diagram alir/mind map kehilangan daya baca total pada skala resolusi ponsel/feed rekomendasi YouTube dan menciptakan kesan visual yang padat/berantakan. Sebaliknya, fotografi subjek nyata beresolusi tinggi dengan kontras tajam (hitam-putih atau pencahayaan dramatis) memberikan bobot akademis serius, daya henti pandang (*stopping power*), dan diferensiasi paradigmatik yang tajam.
+  3. *Brush Mask Positioning Offset*: Template brush overlay (`thumbnail_overlay_template.png`) menjangkau hingga X=880–920. Agar subjek gambar di sisi kanan tidak terpotong oleh tepi torehan kuas, pastikan titik jangkar/offset jendela gambar ditempatkan dengan aman di `target_x >= 960` pada kanvas 1920x1080.
+
 - **LMS Navigation Topbar Layout Collision & Flexbox Hardening (2026-10-08)**:
   1. *Root Cause of Header Collision*: Container `.lms-topbar-inner` menggunakan `display: flex; justify-content: space-between;` tanpa properti `gap`. Ketika lebar layar mendekati batas maksimum atau konten tengah melebar, jarak antara grup brand kiri (`.lms-brand-group`), judul modul tengah (`.lms-topbar-center`), dan kontrol aksi kanan (`.lms-topbar-actions`) menyusut menjadi tepat 0.0px.
   2. *Defensive Flexbox Sizing*: Menambahkan `gap: 1.25rem` pada `.lms-topbar-inner`, mengunci `flex-shrink: 0` pada group kiri & kanan, serta mengonfigurasi `.lms-topbar-center` dengan `flex: 1 1 auto; min-width: 0; max-width: 440px; margin: 0 auto; padding: 0 0.5rem;` menjamin elipsis (`...`) judul panjang tidak pernah menabrak kontrol di sebelahnya.
