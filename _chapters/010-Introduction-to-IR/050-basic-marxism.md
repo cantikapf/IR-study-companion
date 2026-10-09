@@ -3,6 +3,19 @@ title: Basic Explanation of Marxism in IR
 slug: basic-marxism
 abstract: The introduction of Marxism in International Relations 
 simple_summary: "Marxists look beneath flags, national anthems, and treaties to ask one blunt question: Who owns the wealth? World politics isn't driven by national security, but by global capitalism. Rich 'Core' nations design the rules of the world economy to drain cheap raw materials and labor from poor 'Periphery' nations, turning international politics into an engine of global inequality where wars are fought to defend corporate investments."
+explanatory_video:
+  title: "Mind Map Explanatory: Basic Explanation of Marxism in IR"
+  desc: "Watch this animated concept map first to explore historical materialism, the base-superstructure model, Lenin's imperialism, dependency theory, and Wallerstein's world-system before diving into the chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  video_path: "learning-videos/exports/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_MindMap_1080p.mp4"
+  poster_path: "learning-videos/posters/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Poster.png"
+  poster: "/learning-videos/posters/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Poster.png"
+  duration: "6.8 min"
+  duration_sec: 407.78
+  frames: 12233
+  fps: 30
+  status: "Rendered"
 ---
 
 

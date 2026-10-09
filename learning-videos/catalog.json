@@ -110,6 +110,35 @@
         "status": "Published"
       },
       "last_updated": "2026-10-08"
+    },
+    {
+      "id": "IR-M01-CH050",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "050",
+      "chapter_slug": "050-basic-marxism",
+      "title": "Basic Explanation of Marxism in IR",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 407.78,
+      "frames": 12233,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Rendered",
+      "file_size_bytes": 29968513,
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "youtube_id": null,
+        "status": "Ready for Upload"
+      },
+      "last_updated": "2026-10-09"
     }
   ]
 }

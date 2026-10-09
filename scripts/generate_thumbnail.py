@@ -85,9 +85,9 @@ def process_background(bg_raw: Image.Image, canvas_w: int, canvas_h: int, mode: 
     """
     if mode == "fit-right":
         base = Image.new("RGBA", (canvas_w, canvas_h), (255, 255, 255, 255))
-        target_w = 1100
+        target_w = 860
         target_h = 960
-        target_x = 790
+        target_x = 1020
         target_y = 60
         
         bg_w, bg_h = bg_raw.size
