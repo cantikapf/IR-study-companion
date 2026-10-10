@@ -44,7 +44,7 @@ IR_M{ModuleNumber}_CH{ChapterNumber}_{TitleInSnakeCase}_{Format}_{Resolution}.{e
 | `IR-M01-CH020` | M01 / CH020 | Globalization and Global Politics | Mind Map Explanatory | 03:00 | 1080p | 🟢 PUBLISHED | 🟢 READY | [7K4preE-EBY](https://youtu.be/7K4preE-EBY) |
 | `IR-M01-CH030` | M01 / CH030 | Basic Explanation of Realism in IR | Mind Map Explanatory | 05:23 | 1080p | 🟢 PUBLISHED (51.8 MB) | 🟢 GENERATED | [3VDcQVYty5M](https://youtu.be/3VDcQVYty5M) |
 | `IR-M01-CH040` | M01 / CH040 | Basic Explanation of Liberalism in IR | Mind Map Explanatory | 06:21 | 1080p | 🟢 PUBLISHED (49.3 MB) | 🟢 GENERATED | [FdChrS6Ng3Y](https://youtu.be/FdChrS6Ng3Y) |
-| `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | 06:48 | 1080p | 🟢 RENDERED (48.9 MB) | 🟢 GENERATED | *Ready for Upload* |
+| `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | 06:48 | 1080p | 🟢 PUBLISHED (48.9 MB) | 🟢 GENERATED | [zJesX-ugSX4](https://youtu.be/zJesX-ugSX4) |
 | `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | ⚪ PENDING | *Pending* |
 
 > **Catatan Status:**  

@@ -13,6 +13,45 @@ tags:
 
 ## Last Updated
 
+2026-10-10 - YouTube Release Sync for CH050 (Marxism in IR - zJesX-ugSX4):
+1. `Sinkronisasi Video YouTube Resmi`:
+   - Tautan YouTube resmi: `https://youtu.be/zJesX-ugSX4` (ID: `zJesX-ugSX4`).
+   - Judul resmi: *"Who Really Owns the World? | Marxism in International Relations Explained"*.
+2. `Platform & Chapter Gateway Sync`:
+   - `_chapters/010-Introduction-to-IR/050-basic-marxism.md`: Menambahkan `youtube_id: "zJesX-ugSX4"` dan memperbarui status video menjadi `Published`.
+   - Layout LMS player (`_layouts/chapter.html`) otomatis merender embed player YouTube interaktif (`youtube-nocookie.com/embed/zJesX-ugSX4`) pada kartu gateway konseptual sebelum teks bacaan bab.
+   - Verifikasi build di `_site/basic-marxism.html` mengonfirmasi embed YouTube aktif tanpa error.
+3. `Registry & Inventory Matrix Sync`:
+   - `learning-videos/catalog.json`: Memperbarui entri `IR-M01-CH050` dengan `youtube_id: "zJesX-ugSX4"`, `status: "Published"`.
+   - `learning-videos/README.md`: Memperbarui tabel matriks video menjadi `🟢 PUBLISHED (48.9 MB)` dengan tautan resmi `[zJesX-ugSX4](https://youtu.be/zJesX-ugSX4)`.
+4. `Verifikasi Sistem`:
+   - Pytest: 369/369 PASS.
+   - Jekyll build: Bersih tanpa error.
+
+2026-10-10 - Archival Micro-Documentary Shorts Pilot (Pulau Run vs Manhattan / 1667 Treaty of Breda):
+1. `Root Cause Diagnosis (Mengapa Kinetic & Animasi Peta Sebelumnya Gagal)`:
+   - *Kinetic Typography*: Hanya teks besar bergoyang tanpa objek fisik nyata yang bisa diamati penonton, menimbulkan kesan template murah/AI generated.
+   - *Peta Animasi V1/V2*: Dataset batas negara historis (1200-1300 M) terlalu kasar (Austria hanya satu poligon besar Holy Roman Empire), sehingga visualisasi ekspansi dinasti rentan anakronisme geografi modern.
+2. `Penerapan Format Archival Micro-Documentary (Remotion 9:16)`:
+   - Mengadopsi format micro-dokumenter arsip berbasis aset domain publik / CC0 dari Wikimedia Commons:
+     - Peta Castello New Amsterdam 1660 (Public Domain).
+     - Peta Kepulauan Maluku karya Nicolas Sanson abad ke-17 (CC0).
+     - Ukiran botani buah pala Banda 1599 (CC0).
+     - Lembaran tembaga peringatan Perdamaian Breda 1667 (CC0).
+     - Foto buah pala segar *Myristica fragrans* (CC BY-SA 4.0).
+   - Gerak kamera Ken Burns halus (skala 1.04x -> 1.15x, pan Y/X kontekstual), border arsip keemasan, dan kapsul subtitle berkontras tinggi di safe zone vertikal (`bottom: 400px`, bebas tabrakan UI mobile >410px).
+3. `Sintesis Audio & Visual QA Gate`:
+   - Naskah 6 babak (125 kata, 52.54 detik / 1576 frame @ 30 FPS) disuarakan secara lokal oleh Kokoro-82M ONNX (`am_adam`).
+   - Audit visual komprehensif via `vision_analyze` pada frame uji (Beat 1, 2, 5): 0 tabrakan teks, legibilitas tajam, framing terpusat, dan safe-zone 100% patuh aturan YouTube Shorts.
+4. `Master Video Export`:
+   - Master MP4 1080x1920 30 FPS Full HD: `learning-videos/shorts-experiments/archival-run/output/archival_pulau_run_manhattan_short.mp4` (107 MB).
+   - Versi pratinjau web: `archival_pulau_run_manhattan_short_compressed.mp4` (39 MB).
+   - Contact sheet 6-beat checkpoint: `learning-videos/shorts-experiments/archival-run/checkpoints/contact_sheet.png`.
+5. `Verifikasi Sistem`:
+   - TypeScript: `npx tsc --noEmit` PASS (0 error).
+   - Pytest unit tests: 369/369 PASS.
+
+
 2026-10-09 - Remotion Camera Rig Audit & Centering Standardization (CH050):
 1. `Root Cause Diagnosis (Frame Clipping & Subtitle Collision)`:
    - Pada segmen `seg_imperialism` sebelumnya, kamera dikonfigurasi mencakup dua node yang berjauhan: `["root_marxism", "s3_imperialism_hub"]` dengan jarak vertikal 750px di kanvas.

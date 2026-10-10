@@ -126,7 +126,7 @@
       "frames": 12233,
       "fps": 30,
       "resolution": "1920x1080",
-      "status": "Rendered",
+      "status": "Published",
       "file_size_bytes": 48941298,
       "files": {
         "video": "learning-videos/exports/IR_M01_CH050_Basic_Explanation_of_Marxism_in_IR_MindMap_1080p.mp4",
@@ -135,10 +135,10 @@
       },
       "youtube": {
         "channel": "@IRinANutshell",
-        "youtube_id": null,
-        "status": "Ready for Upload"
+        "youtube_id": "zJesX-ugSX4",
+        "status": "Published"
       },
-      "last_updated": "2026-10-09"
+      "last_updated": "2026-10-10"
     }
   ]
 }
