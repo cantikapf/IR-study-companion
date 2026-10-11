@@ -13,6 +13,78 @@ tags:
 
 ## Last Updated
 
+2026-10-11 - Breakthrough Format YouTube Shorts: Vox-Style Animated Geopolitical Vector Map (Cuban Missile Crisis 1962):
+1. `Evaluasi Kegagalan Format Lama & Solusi Geopolitical Vector Map`:
+   - Penolakan format kinetic typography (hanya teks bergerak tanpa mekanisme visual nyata) dan format archival still kaku (terlalu membosankan/AI slop).
+   - Pengadopsian standar kartografi editorial dinamis ala Vox & Johnny Harris berbasis D3-Geo + GSAP 60fps (`learning-videos/shorts-experiments/sh-05-cuban-crisis-map-animation/index.html`).
+2. `Instalasi 54 Skills Motion Graphics (iart-ai/motion-skills)`:
+   - Terpasang 54 skills dari 17 pack ke `C:/Users/xiyeo/AppData/Local/hermes/skills` (`map-animation`, `diagram-animation`, `isometric-animation`, `threejs-animation`, `particle-system`, dll).
+3. `Fitur Visual & Narasi Taktis (SH-05 Cuban Missile Crisis)`:
+   - Proyeksi peta vektor dunia akurat (`countries-110m.json`) dengan graticule koordinat taktis.
+   - **Animasi Pesawat Pengintai U-2 (Lockheed Dragon Lady)**: Siluet sayap glider panjang terbang melintasi Selat Florida menuju San Cristóbal, menembakkan kerucut sensor optik biru transparan dan kilatan kamera pengintai (dilengkapi camera shutter click SFX) saat mengungkap pangkalan rudal rahasia Kuba.
+   - **Armada Blokade Laut (US Navy vs Soviet Freighter)**: Tiga siluet kapal perusak US Navy menjaga perimeter karantina 500 mil laut, berhadapan dengan kapal kargo Soviet (*Poltava*) pada vektor cegat Atlantik.
+   - **Siluet Kapal Selam Soviet B-59 (Foxtrot-Class)**: Terletak di pusat gelombang denyut sonar Laut Sargasso ($27^\circ\text{N}, 66^\circ\text{W}$).
+   - **Kartu Arsip Foto Sejarah Taktis (Dossier Cards)**: Menampilkan foto autentik John F. Kennedy di Scene 3 (Blokade) dan Vasili Arkhipov di Scene 4 (Veto Nuklir) pada area kosong di kiri atas kanvas.
+   - **Motion Graphics Nuklir**: Lambang bahaya radiasi nuklir berputar 360° dengan cincin gelombang kejut di pembuka (Beat 1), serta tiga bola api termonuklir berdenyut dengan gelombang ledakan dahsyat di klimaks (Beat 5 Mutually Assured Destruction).
+4. `Audit Mutu Visual Tanpa Tabrakan (Zero-Collision Passed via vision_analyze)`:
+   - Eliminasi 100% collision antara label, sprite, garis koordinat, dan batas kanvas menggunakan occluding background fill `#060912`.
+   - **Resmi disetujui (ACC) oleh pengguna**.
+
+2026-10-11 - Workflow Hardening & Cross-Agent Tooling Upgrades:
+1. `Generalisasi Video Frame Auditor (Remotion M9)`:
+   - Dibuat script seragam `simulation/ir-motion-library/scripts/audit_frames.ts` yang dapat mengaudit ribuan frame dari dataset bab mana pun (`npx tsx scripts/audit_frames.ts <chapter>`).
+   - Memvalidasi safe-zone subtitle (sy2 < 920), margin clipping (sy1 >= 30, sx1 >= 30, sx2 <= 1890), dan kepatuhan 3-Pillar Camera Law.
+   - Ditambahkan script `audit` di `simulation/ir-motion-library/package.json`.
+   - Empirically verified: CH060 (12.438 frame) dan CH050 (12.233 frame) keduanya 0 DEFECTS.
+2. `Unified Orchestrator Script Produksi Video`:
+   - Dibuat `scripts/produce_video.py` yang merangkum 5 fase produksi kanonik (extract -> audio -> rig -> audit -> render/thumbnail).
+   - Menegakkan **MANDATORY REVIEW GATE**: berhenti setelah Fase 1 dan menolak mengeksekusi fase downstream tanpa flag `--acc`.
+3. `Builder Test Harness Isolation (Windows/MSYS)`:
+   - Dibuat `scripts/test_server.js` berbasis native Node `http.createServer` untuk mencegah kegagalan path spasi `npx http-server` dan port yatim.
+   - Menyediakan `createIsolatedContext` yang otomatis menyuntikkan `localStorage.setItem('ir_onboarded_v1', 'true')` untuk mengisolasi E2E Playwright dari backdrop modal onboarding.
+   - Memperbarui `playwright.config.js` dan `e2e/ui.spec.js`.
+4. `Otomasi Guard write_file Stale-Read`:
+   - Dibuat `scripts/safe_file_replace.py` yang melakukan penulisan berkas atomik (`os.replace`) bebas dari guard stale-read, dilengkapi validasi sintaks otomatis (Python compile, JSON parse, JS check, dan tag balance audit `<div>` HTML/Liquid).
+5. `Verifikasi Sistem`:
+   - Pytest: 369/369 PASS.
+   - TypeScript: `npx tsc --noEmit` PASS.
+
+2026-10-10 - YouTube Release Sync for CH060 (Constructivism in IR - A5f56_Ni3Iw):
+1. `Sinkronisasi Video YouTube Resmi`:
+   - Tautan YouTube resmi: `https://youtu.be/A5f56_Ni3Iw` (ID: `A5f56_Ni3Iw`).
+   - Judul resmi: *"Do Weapons Matter, or Do Ideas? | Constructivism in International Relations"*.
+2. `Platform & Chapter Gateway Sync`:
+   - `_chapters/010-Introduction-to-IR/060-basic-constructivism.md`: Menambahkan `youtube_id: "A5f56_Ni3Iw"` dan memperbarui status video menjadi `Published`.
+   - Layout LMS player (`_layouts/chapter.html`) otomatis merender embed player YouTube interaktif (`youtube-nocookie.com/embed/A5f56_Ni3Iw`) pada kartu gateway konseptual sebelum teks bacaan bab.
+3. `Registry & Inventory Matrix Sync`:
+   - `learning-videos/catalog.json`: Memperbarui entri `IR-M01-CH060` dengan `youtube_id: "A5f56_Ni3Iw"`, `status: "Published"`.
+   - `learning-videos/README.md`: Memperbarui tabel matriks video menjadi `🟢 PUBLISHED (61.3 MB)` dengan tautan resmi `[A5f56_Ni3Iw](https://youtu.be/A5f56_Ni3Iw)`.
+4. `Verifikasi Sistem`:
+   - Pytest: 369/369 PASS.
+   - Jekyll build: Bersih tanpa error.
+
+2026-10-10 - Production of Canonical Mind Map Explanatory Video CH060 (Constructivism in IR):
+1. `Fase 1 s.d. 5 Eksekusi Pipeline Kanonik`:
+   - Penyiapan naskah akademik 8-Babak dan graf kanonik 36 nodes (Social Facts vs Brute Facts, Agent-Structure Mutual Constitution, Regulative vs Constitutive Rules, Logic of Appropriateness vs Consequences, Norm Life Cycle, Discursive Power, Case Study: Refugees, Alexander Wendt's Cultures of Anarchy).
+   - Sintesis audio neural Kokoro-82M (af_heart) menghasilkan 61 subtitle tersinkronisasi presisi (durasi 414.59s / 12.438 frame @ 30 FPS).
+   - Penataan koordinat kanvas 4800x3200 bebas overlap dan audit tabrakan panah (0 collision).
+   - Segmen kamera mematuhi 3-Pillar Camera Law (Zoom-In 2.05x, Stationary Hold v=0, Contextual Zoom-out, Panorama pull-back 0.37x).
+2. `Audit Kualitas Komprehensif Seluruh 12.438 Frame (audit_ch060_frames.ts)`:
+   - Audit otomatis mengecek setiap frame dari 0 s.d. 12.438 untuk mendeteksi tabrakan subtitle (sy2 >= 920), pemotongan tepi atas (sy1 < 30), dan pemotongan tepi samping (sx1 < 30 / sx2 > 1890).
+   - Menghilangkan overlap kartu rangkuman kompas ("The Constructivist Compass") terhadap subtitle pill bawah di mode panorama dengan memindahkan baris bawah ke y=2450 dan menyetel kamera panorama ke x=2500, y=1560, zoom=0.37.
+   - Hasil audit ulang atas 12.438 frame: **0 DEFECTS DETECTED (100% compliant)**.
+3. `Aset Visual & YouTube Thumbnail Standar Kanonik`:
+   - Poster still panorama 1080p tersimpan di `learning-videos/posters/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_Poster.png`.
+   - YouTube thumbnail resmi dibuat via `scripts/generate_thumbnail.py` menggunakan foto sejarah autentik Eleanor Roosevelt memegang Universal Declaration of Human Rights 1948 (UDHR) dengan tipografi Archivo Black + Space Mono "CONSTRUCTIVISM IN GLOBAL POLITICS" pada split brush-mask frame (`IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_Thumbnail.png`).
+   - Eksekusi render master video MP4 1080p (FlowchartVideo, 12.438 frame @ 30 FPS) sukses 100% tersimpan di `learning-videos/exports/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_MindMap_1080p.mp4` (61.3 MB).
+4. `Sinkronisasi Registry & Platform`:
+   - `learning-videos/catalog.json` & `learning-videos/README.md` diperbarui dengan entri `IR-M01-CH060`.
+   - `_chapters/010-Introduction-to-IR/060-basic-constructivism.md` frontmatter diperbarui dengan gateway pre-reading card `explanatory_video`.
+5. `Verifikasi & QA`:
+   - Pytest: 369/369 PASS.
+   - Remotion TypeScript check: `npx tsc --noEmit` PASS (0 error).
+   - Visual inspection (`vision_analyze`): Still frame deep zoom dan panorama terverifikasi bersih dan bebas tabrakan.
+
 2026-10-10 - YouTube Release Sync for CH050 (Marxism in IR - zJesX-ugSX4):
 1. `Sinkronisasi Video YouTube Resmi`:
    - Tautan YouTube resmi: `https://youtu.be/zJesX-ugSX4` (ID: `zJesX-ugSX4`).
@@ -620,3 +692,9 @@ Merespons arahan langsung pengguna untuk mereplikasi format video orisinal buata
   - Menolak pendekatan avatar wajah sintesis murahan (GravityWrite) demi mempertahankan otoritas ilmiah dan estetika sinematik/arsip dokumenter.
 
 
+
+- **YouTube Shorts Eksperimen (SH-01 "The Island Traded for Manhattan" / Pulau Run & Treaty of Breda 1667)**:
+  - Riset viral Shorts + 3 format (A Hidden-Detail Artifact Reveal, B Archival Micro-Doc, C Ranked Data-Viz) terdokumentasi di `learning-videos/shorts-experiments/SHORTS_RESEARCH_FORMAT_PLAN.md`; engine: Format B = Remotion `ArchivalDocRun.tsx`, Format A & C = HyperFrames (v0.8.145).
+  - Fase 1 (brief + storyboard + script) lolos audit orkestrator 3 ronde; hook "Thirty-nine men held a three-kilometre island against an empire for 1,540 days — for a spice the world could get nowhere else." Dipilih pengguna; restrukturisasi busur menunda "Manhattan" sampai Beat 4.
+  - Fase 2 audio: `generate_audio_elevenlabs.py` → ElevenLabs voice **George - Captivating Storyteller** (`with-timestamps`, word-level alignment). Durasi nyata **50.72s / 1522 frame @30fps**. Manifest di `sh-01-pulau-run/audio/manifest.json`.
+  - Fase 3: komposisi **HyperFrames** di `sh-01-pulau-run-hf/` (portrait 1080×1920); `build_composition.py` membangkitkan `index.html` deterministik dari manifest (6 beat Ken Burns 1.04–1.22x + karaoke subtitle + data chips). `npx hyperframes check` **0 error**, 142/142 WCAG AA.

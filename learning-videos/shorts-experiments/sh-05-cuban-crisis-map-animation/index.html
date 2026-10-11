@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuban Missile Crisis · Vox-Style Map Animation (October 1962)</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script src="data/countries.js"></script>
+  <style>
+    @font-face {
+      font-family: "Archivo Black";
+      src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #04060a;
+      font-family: "Space Mono", monospace;
+      color: #fff;
+    }
+
+    /* FULL VIEWPORT STAGE CONTAINER */
+    #stage-container {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-bottom: 70px;
+    }
+
+    /* 1080x1920 CANVAS RIG */
+    #viewport-scaler {
+      position: absolute;
+      width: 1080px;
+      height: 1920px;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%) scale(0.35);
+      background: #080c16;
+      border: 3px solid #38bdf8;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 0 120px rgba(0,0,0,0.95), 0 0 40px rgba(56, 189, 248, 0.25);
+    }
+
+    /* FLOATING HUD CONTROLLER */
+    #hud-controls {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10, 14, 22, 0.95);
+      border: 1px solid #38bdf8;
+      border-radius: 30px;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 99999;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      font-size: 12px;
+    }
+    #hud-controls button {
+      background: #38bdf8;
+      color: #020617;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-family: "Space Mono", monospace;
+      cursor: pointer;
+    }
+    #hud-controls button:hover { background: #fff; }
+    #hud-controls input[type="range"] {
+      width: 180px;
+      accent-color: #38bdf8;
+      cursor: pointer;
+    }
+
+    /* ROOT COMPOSITION */
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #080c16;
+      overflow: hidden;
+    }
+
+    /* MAP CANVAS */
+    #map-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      z-index: 10;
+    }
+
+    /* CRT SCANLINE & VIGNETTE */
+    .scanlines {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 40;
+      opacity: 0.6;
+    }
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 40%, rgba(4, 6, 10, 0.85) 100%);
+      pointer-events: none;
+      z-index: 41;
+    }
+
+    /* TOP & BOTTOM TELEMETRY */
+    .top-telemetry {
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #94a3b8;
+      border-bottom: 2px solid rgba(255,255,255,0.12);
+      padding-bottom: 16px;
+      z-index: 50;
+    }
+    .top-telemetry .badge {
+      background: #ef4444;
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 4px;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+    }
+    .bottom-telemetry {
+      position: absolute;
+      bottom: 70px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.08em;
+      border-top: 2px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      z-index: 50;
+    }
+
+    /* TACTICAL HUD HEADER */
+    .tactical-header {
+      position: absolute;
+      top: 140px;
+      left: 70px;
+      right: 70px;
+      z-index: 50;
+      pointer-events: none;
+    }
+    .kicker {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #38bdf8;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    }
+    .headline {
+      margin-top: 12px;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 76px;
+      line-height: 1.04;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.95);
+    }
+
+    /* SUBTITLE BOX (MOBILE SAFE ZONE) */
+    .caption-box {
+      position: absolute;
+      top: 1360px;
+      left: 60px;
+      width: 960px;
+      min-height: 160px;
+      background: rgba(9, 13, 22, 0.94);
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      border-radius: 20px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+      z-index: 50;
+    }
+    .caption-text {
+      font-size: 32px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .caption-text .hl {
+      color: #facc15;
+      background: rgba(250, 204, 21, 0.15);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    /* DATA METRIC CHIP HUD (FLOATING IN MAP) */
+    .map-chip {
+      position: absolute;
+      top: 1270px;
+      left: 70px;
+      background: #060912;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-left: 5px solid #ef4444;
+      padding: 10px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #f8fafc;
+      z-index: 50;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.85);
+    }
+
+    /* FLOATING HISTORICAL DOSSIER PHOTO CARDS */
+    .dossier-card {
+      position: absolute;
+      top: 360px;
+      left: 70px;
+      width: 270px;
+      background: #060912;
+      border: 2px solid rgba(56, 189, 248, 0.7);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.9), 0 0 24px rgba(56, 189, 248, 0.25);
+      z-index: 55;
+      pointer-events: none;
+      transform-origin: top left;
+    }
+    .dossier-card-soviet {
+      border-color: rgba(239, 68, 68, 0.8);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.9), 0 0 24px rgba(239, 68, 68, 0.25);
+    }
+    .dossier-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .dossier-badge-us {
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+    .dossier-badge-soviet {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      color: #ef4444;
+    }
+    .dossier-frame {
+      position: relative;
+      width: 100%;
+      height: 270px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: #000;
+    }
+    .dossier-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(85%) contrast(1.15);
+    }
+    .dossier-info {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .dossier-name {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 17px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+    }
+    .dossier-role {
+      font-size: 11px;
+      font-weight: 700;
+      color: #facc15;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    /* MAP OVERLAY STYLING */
+    .country-land {
+      fill: #141c2e;
+      stroke: #1e293b;
+      stroke-width: 1.2px;
+      transition: fill 0.4s, stroke 0.4s;
+    }
+    .country-usa {
+      fill: #1e2d4a;
+      stroke: #38bdf8;
+      stroke-width: 2px;
+    }
+    .country-cuba {
+      fill: #450a0a;
+      stroke: #ef4444;
+      stroke-width: 2.5px;
+    }
+
+    .graticule {
+      fill: none;
+      stroke: rgba(56, 189, 248, 0.14);
+      stroke-width: 1.2px;
+      stroke-dasharray: 6 6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STAGE CONTAINER -->
+  <div id="stage-container">
+    <div id="viewport-scaler">
+      <div id="root" data-composition-id="main" data-start="0" data-duration="40.49" data-width="1080" data-height="1920">
+
+        <!-- AUDIO SOURCE -->
+        <audio id="main-audio" src="audio/voiceover.mp3" preload="auto"></audio>
+
+        <!-- TOP TELEMETRY -->
+        <div class="top-telemetry">
+          <span>GEOPOLITICAL MAPPING // 1962</span>
+          <span class="badge" id="top-badge">DEFCON 2 ALERT</span>
+        </div>
+
+        <!-- TACTICAL HEADER -->
+        <div class="tactical-header">
+          <div class="kicker" id="kicker-txt">THE CARIBBEAN CHOKEPOINT</div>
+          <div class="headline" id="headline-txt">ONE VOTE FROM OBLIVION</div>
+        </div>
+
+        <!-- FLOATING HISTORICAL DOSSIER PHOTO CARDS -->
+        <!-- Scene 3: John F. Kennedy -->
+        <div id="dossier-jfk" class="dossier-card" style="opacity: 0;">
+          <div class="dossier-badge dossier-badge-us">POTUS // COMMANDER-IN-CHIEF</div>
+          <div class="dossier-frame">
+            <img src="data/jfk_portrait.jpg" class="dossier-img" alt="John F. Kennedy" />
+          </div>
+          <div class="dossier-info">
+            <div class="dossier-name">JOHN F. KENNEDY</div>
+            <div class="dossier-role">DECLARED NAVAL QUARANTINE</div>
+          </div>
+        </div>
+
+        <!-- Scene 4: Vasili Arkhipov -->
+        <div id="dossier-arkhipov" class="dossier-card dossier-card-soviet" style="opacity: 0;">
+          <div class="dossier-badge dossier-badge-soviet">SOVIET NAVY // FLOTILLA CHIEF</div>
+          <div class="dossier-frame">
+            <img src="data/arkhipov_portrait.jpg" class="dossier-img" alt="Vasili Arkhipov" />
+          </div>
+          <div class="dossier-info">
+            <div class="dossier-name">VASILI ARKHIPOV</div>
+            <div class="dossier-role">VETOED NUCLEAR TORPEDO</div>
+          </div>
+        </div>
+
+        <!-- FLOATING MAP CHIP -->
+        <div class="map-chip" id="map-chip-txt">
+          NUCLEAR STANDOFF // CARIBBEAN THEATER
+        </div>
+
+        <!-- SUBTITLE CONTAINER -->
+        <div class="caption-box">
+          <div class="caption-text" id="caption-txt">
+            In October 1962, the human race was one single vote away from total <span class="hl">nuclear annihilation</span>.
+          </div>
+        </div>
+
+        <!-- CRT OVERLAYS -->
+        <div class="scanlines"></div>
+        <div class="vignette"></div>
+
+        <!-- ======================================================== -->
+        <!-- MASTER D3-GEO VECTOR MAP (1080x1920)                     -->
+        <!-- ======================================================== -->
+        <svg id="map-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad-u2-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+              <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+            </linearGradient>
+            <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+            <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="8" result="blur" />
+              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+            <radialGradient id="grad-sonar" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+              <stop offset="70%" stop-color="#ef4444" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+            </radialGradient>
+
+            <!-- US NAVY DESTROYER ICON -->
+            <g id="icon-destroyer">
+              <path d="M-6,26 L0,46 L6,26 Z" fill="rgba(56, 189, 248, 0.3)" />
+              <path d="M0,-28 L7,-16 L7,22 L4,28 L-4,28 L-7,22 L-7,-16 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8" />
+              <circle cx="0" cy="-18" r="3" fill="#e2e8f0" stroke="#0284c7" stroke-width="1" />
+              <line x1="0" y1="-18" x2="0" y2="-26" stroke="#f8fafc" stroke-width="1.8" />
+              <circle cx="0" cy="16" r="3" fill="#e2e8f0" stroke="#0284c7" stroke-width="1" />
+              <line x1="0" y1="16" x2="0" y2="24" stroke="#f8fafc" stroke-width="1.8" />
+              <rect x="-4" y="-9" width="8" height="16" rx="2" fill="#334155" stroke="#38bdf8" stroke-width="1.2" />
+              <circle cx="0" cy="-1" r="2.5" fill="#facc15" />
+            </g>
+
+            <!-- SOVIET FREIGHTER / CARGO SHIP ICON -->
+            <g id="icon-freighter">
+              <path d="M-7,30 L0,50 L7,30 Z" fill="rgba(239, 68, 68, 0.3)" />
+              <path d="M0,-32 L9,-20 L9,24 L5,32 L-5,32 L-9,24 L-9,-20 Z" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.8" />
+              <rect x="-6" y="-17" width="12" height="9" rx="1" fill="#18181b" stroke="#fca5a5" stroke-width="1" />
+              <rect x="-6" y="-4" width="12" height="9" rx="1" fill="#18181b" stroke="#fca5a5" stroke-width="1" />
+              <rect x="-7" y="10" width="14" height="13" rx="2" fill="#b91c1c" stroke="#f87171" stroke-width="1.2" />
+              <circle cx="0" cy="16" r="2" fill="#facc15" />
+            </g>
+
+            <!-- SOVIET SUBMARINE B-59 (FOXTROT-CLASS) ICON -->
+            <g id="icon-submarine">
+              <path d="M0,-46 C8,-38 8,-10 8,28 C8,42 5,50 0,56 C-5,50 -8,42 -8,28 C-8,-10 -8,-38 0,-46 Z" fill="#0f172a" stroke="#ef4444" stroke-width="2" />
+              <line x1="0" y1="-42" x2="0" y2="48" stroke="#334155" stroke-width="1.5" />
+              <rect x="-4" y="-14" width="8" height="22" rx="2.5" fill="#ef4444" stroke="#f87171" stroke-width="1.2" />
+              <circle cx="0" cy="-6" r="2" fill="#ffffff" />
+              <line x1="-2" y1="-14" x2="-2" y2="-22" stroke="#e2e8f0" stroke-width="1.5" />
+              <ellipse cx="0" cy="-42" rx="4" ry="2.5" fill="#facc15" filter="url(#glow-red)" />
+              <line x1="-15" y1="40" x2="15" y2="40" stroke="#ef4444" stroke-width="2.5" />
+            </g>
+
+            <!-- TACTICAL RADIATION HAZARD EMBLEM -->
+            <g id="icon-radiation">
+              <circle cx="0" cy="0" r="16" fill="#ef4444" />
+              <circle cx="0" cy="0" r="9" fill="#060912" />
+              <path d="M-9,-16 L-30,-52 A60,60 0 0,1 30,-52 L9,-16 Z" fill="#ef4444" />
+              <path d="M15,7 L52,28 A60,60 0 0,1 22,60 L2,18 Z" fill="#ef4444" />
+              <path d="M-15,7 L-52,28 A60,60 0 0,0 -22,60 L-2,18 Z" fill="#ef4444" />
+              <circle cx="0" cy="0" r="5.5" fill="#facc15" />
+            </g>
+
+            <!-- THERMONUCLEAR BLAST FIREBALL GRADIENTS -->
+            <radialGradient id="grad-fireball" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="20%" stop-color="#fef08a"/>
+              <stop offset="50%" stop-color="#facc15"/>
+              <stop offset="80%" stop-color="#ef4444" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- LAYER 1: BASE MAP & GRATICULE (TRANSFORMED BY CAMERA) -->
+          <g id="map-camera-group">
+            <!-- Graticule grid -->
+            <path id="map-graticule" class="graticule" />
+
+            <!-- Country Polygons -->
+            <g id="countries-layer"></g>
+
+            <!-- LAYER 2: TACTICAL VECTOR GRAPHICS -->
+            <!-- U-2 Reconnaissance Flight Path & Aircraft (Beat 2) -->
+            <g id="u2-recon-mission" opacity="0">
+              <path id="u2-flight-path" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="8 6" opacity="0.85" />
+              <g id="u2-aircraft-rig" transform="translate(0, 0)">
+                <!-- Scanner Cone Beam down on target -->
+                <polygon id="u2-scan-cone" points="0,0 -45,120 45,120" fill="url(#grad-u2-beam)" opacity="0" />
+                <circle id="u2-shutter-flash" cx="0" cy="120" r="16" fill="#ffffff" opacity="0" filter="url(#glow-cyan)" />
+                <!-- Aircraft Silhouette (Long Glider Wings) -->
+                <g id="u2-plane-body" transform="rotate(0)">
+                  <path d="M-65,3 L-65,-1 L-8,-3 L-2,-22 L2,-22 L8,-3 L65,-1 L65,3 L10,3 L8,24 L18,27 L18,30 L-18,30 L-18,27 L-8,24 L-10,3 Z" fill="#f8fafc" stroke="#0284c7" stroke-width="1.8" />
+                  <ellipse cx="0" cy="-12" rx="2.5" ry="5" fill="#38bdf8" />
+                </g>
+                <!-- Label Callout (Offset well Northwest clear of left wingtip x=-65) -->
+                <g id="u2-label-callout" transform="translate(-290, -48)">
+                  <rect width="210" height="32" fill="#080c16" stroke="#38bdf8" stroke-width="1.5" rx="5" />
+                  <text x="12" y="21" fill="#38bdf8" font-size="14" font-weight="bold" letter-spacing="1">U-2 SPY PLANE (FL 700)</text>
+                </g>
+              </g>
+            </g>
+
+            <!-- Distance Measurement: Florida to Cuba (90 Miles) -->
+            <g id="distance-measurer" opacity="0">
+              <line id="dist-line" stroke="#facc15" stroke-width="3" stroke-dasharray="8 6" />
+              <circle id="dist-pt-a" r="6" fill="#facc15" />
+              <circle id="dist-pt-b" r="6" fill="#facc15" />
+              <g id="dist-label-group">
+                <rect id="dist-label-bg" fill="#090d16" stroke="#facc15" stroke-width="1.5" rx="6" />
+                <text id="dist-label-txt" fill="#facc15" font-size="22" font-weight="bold" text-anchor="middle" dy="7">90 MILES (145 KM)</text>
+              </g>
+            </g>
+
+            <!-- Missile Range Concentric Arcs from San Cristóbal -->
+            <g id="missile-arcs-group" opacity="0">
+              <path id="range-arc-1" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="12 8" opacity="0.9" />
+              <path id="range-arc-2" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.7" />
+              <path id="range-arc-3" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 6" opacity="0.5" />
+              <!-- Target Trajectory to Washington D.C. -->
+              <path id="trajectory-dc" fill="none" stroke="#f87171" stroke-width="3" stroke-dasharray="10 8" />
+              <circle id="impact-dc" r="8" fill="#ef4444" filter="url(#glow-red)" />
+              <text id="label-dc" fill="#ffffff" font-size="22" font-weight="bold">WASHINGTON D.C. (180s)</text>
+            </g>
+
+            <!-- Naval Quarantine Blockade Line (500 Nautical Miles Arc) -->
+            <g id="quarantine-group" opacity="0">
+              <path id="quarantine-arc" fill="none" stroke="#facc15" stroke-width="4" stroke-dasharray="14 10" filter="url(#glow-cyan)" />
+
+              <!-- US NAVY DESTROYER FLOTILLA ON PATROL -->
+              <g id="us-navy-destroyers">
+                <g id="des-1" transform="translate(0,0)"><use href="#icon-destroyer" /></g>
+                <g id="des-2" transform="translate(0,0)"><use href="#icon-destroyer" /></g>
+                <g id="des-3" transform="translate(0,0)"><use href="#icon-destroyer" /></g>
+              </g>
+
+              <!-- Soviet Freighter Trajectory & Ship -->
+              <path id="soviet-freighter-path" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="10 6" />
+              <g id="soviet-freighter-rig" transform="translate(0,0)">
+                <use href="#icon-freighter" />
+              </g>
+            </g>
+
+            <!-- Soviet Submarine B-59 Sonar Intercept in Sargasso Sea -->
+            <g id="sonar-group" opacity="0">
+              <!-- Radial Sonar Pulse Rings -->
+              <ellipse id="sonar-wave-1" rx="22" ry="14" fill="none" stroke="#ef4444" stroke-width="3" />
+              <ellipse id="sonar-wave-2" rx="46" ry="28" fill="none" stroke="#ef4444" stroke-width="2" />
+              <ellipse id="sonar-wave-3" rx="72" ry="42" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.6" />
+
+              <!-- Authentic Soviet Submarine Foxtrot-class Silhouette -->
+              <g id="sub-aircraft-rig" transform="translate(0,0) rotate(-45)">
+                <use href="#icon-submarine" />
+              </g>
+
+              <!-- Submarine Callout Box -->
+              <g id="sub-label-box" transform="translate(60, -42)">
+                <rect width="330" height="74" fill="#060912" stroke="#ef4444" stroke-width="1.5" rx="6" />
+                <text x="14" y="24" fill="#ef4444" font-size="18" font-weight="bold">SOVIET SUBMARINE B-59</text>
+                <text x="14" y="46" fill="#facc15" font-size="13" font-weight="bold">ARMED: 10-KT NUCLEAR TORPEDO</text>
+                <text x="14" y="64" fill="#38bdf8" font-size="13" font-weight="bold">ARKHIPOV VETO // LAUNCH ABORTED</text>
+              </g>
+            </g>
+
+            <!-- LAYER 3: TOP-LEVEL OCCLUDING LABELS (Painted after all paths & graticules) -->
+            <g id="tactical-labels-layer">
+              <!-- Independent Fleet Label -->
+              <g id="des-label-box" opacity="0">
+                <rect width="250" height="34" fill="#060912" stroke="#38bdf8" stroke-width="1.8" rx="6" />
+                <text x="125" y="22" fill="#38bdf8" font-size="14" font-weight="bold" letter-spacing="1" text-anchor="middle">US NAVY BLOCKADE FLEET</text>
+              </g>
+
+              <!-- Independent Quarantine Label -->
+              <g id="quarantine-label-box" opacity="0">
+                <rect id="quarantine-label-bg" fill="#060912" stroke="#facc15" stroke-width="1.8" rx="6" />
+                <text id="quarantine-label" fill="#facc15" font-size="16" font-weight="bold" letter-spacing="2">QUARANTINE LINE // 500 NM</text>
+              </g>
+
+              <!-- Independent Freighter Label -->
+              <g id="soviet-ship-label-box" opacity="0">
+                <rect width="210" height="32" fill="#060912" stroke="#ef4444" stroke-width="1.8" rx="6" />
+                <text x="105" y="21" fill="#ef4444" font-size="12" font-weight="bold" letter-spacing="1" text-anchor="middle">SOVIET FREIGHTER CONVOY</text>
+              </g>
+            </g>
+
+            <!-- Pinned Location Labels with Solid Knockouts -->
+            <g id="map-pins-layer">
+              <!-- San Cristóbal Missile Base -->
+              <g id="pin-sancristobal" opacity="0">
+                <circle cx="0" cy="0" r="8" fill="#ef4444" filter="url(#glow-red)" />
+                <circle cx="0" cy="0" r="16" fill="none" stroke="#ef4444" stroke-width="2" />
+                <rect x="28" y="24" width="235" height="30" fill="#060912" stroke="#ef4444" stroke-width="1.2" rx="4" />
+                <text x="36" y="45" fill="#ef4444" font-size="16" font-weight="bold">SAN CRISTÓBAL (MRBM)</text>
+              </g>
+              <!-- Florida / Key West -->
+              <g id="pin-keywest" opacity="0">
+                <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+                <rect x="-185" y="-28" width="165" height="28" fill="#060912" stroke="#38bdf8" stroke-width="1.2" rx="4" />
+                <text x="-20" y="-9" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="end">KEY WEST, USA</text>
+              </g>
+            </g>
+
+            <!-- BEAT 1: NUCLEAR THREAT & DEFCON 2 ALERT MOTION GRAPHICS -->
+            <g id="b1-nuclear-alert-group" opacity="0">
+              <g id="b1-rad-icon-rig" transform="translate(540, 960)">
+                <!-- Concentric Expanding Radiation Shockwaves -->
+                <circle id="b1-nuke-wave-1" r="60" fill="none" stroke="#ef4444" stroke-width="4" opacity="0.8" />
+                <circle id="b1-nuke-wave-2" r="140" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="10 8" opacity="0.6" />
+                <circle id="b1-nuke-wave-3" r="260" fill="none" stroke="#facc15" stroke-width="2.5" stroke-dasharray="16 10" opacity="0.5" />
+                <!-- Nuclear Trefoil Hazard Symbol -->
+                <g id="b1-rad-symbol" transform="scale(1.35)">
+                  <use href="#icon-radiation" />
+                </g>
+                <!-- Targeting Crosshair Lines -->
+                <circle r="340" fill="none" stroke="rgba(239,68,68,0.3)" stroke-width="2" stroke-dasharray="8 6" />
+                <line x1="-400" y1="0" x2="400" y2="0" stroke="rgba(239,68,68,0.4)" stroke-width="2" />
+                <line x1="0" y1="-400" x2="0" y2="400" stroke="rgba(239,68,68,0.4)" stroke-width="2" />
+              </g>
+            </g>
+
+            <!-- BEAT 5: MUTUALLY ASSURED DESTRUCTION (MAD) THERMONUCLEAR FIREBALLS -->
+            <g id="b5-mad-nuclear-group" opacity="0">
+              <!-- Crossing Ballistic Trajectories -->
+              <path id="mad-trajectory-1" d="M 320 800 Q 540 480 850 700" fill="none" stroke="#ef4444" stroke-width="4" stroke-dasharray="14 10" opacity="0.85" />
+              <path id="mad-trajectory-2" d="M 850 700 Q 540 620 320 800" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="14 10" opacity="0.85" />
+
+              <!-- Detonation 1: East Coast US -->
+              <g id="mad-blast-1" transform="translate(340, 810)">
+                <circle id="b5-fire-1" r="30" fill="url(#grad-fireball)" />
+                <circle id="b5-shock-1" r="45" fill="none" stroke="#facc15" stroke-width="5" />
+              </g>
+
+              <!-- Detonation 2: Caribbean Sector -->
+              <g id="mad-blast-2" transform="translate(480, 1040)">
+                <circle id="b5-fire-2" r="35" fill="url(#grad-fireball)" />
+                <circle id="b5-shock-2" r="55" fill="none" stroke="#ef4444" stroke-width="5" />
+              </g>
+
+              <!-- Detonation 3: Atlantic / European Sector -->
+              <g id="mad-blast-3" transform="translate(820, 720)">
+                <circle id="b5-fire-3" r="30" fill="url(#grad-fireball)" />
+                <circle id="b5-shock-3" r="45" fill="none" stroke="#facc15" stroke-width="5" />
+              </g>
+            </g>
+
+          </g>
+        </svg>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING HUD CONTROLLER -->
+  <div id="hud-controls">
+    <button id="btn-play">PLAY</button>
+    <button id="btn-restart">RESTART</button>
+    <button id="btn-audio">AUDIO: ON</button>
+    <input type="range" id="scrubber" min="0" max="40.49" step="0.05" value="0">
+    <span id="time-display" style="min-width: 120px; font-weight: 700;">0.00s / 40.49s</span>
+  </div>
+
+  <!-- CARTOGRAPHY & ANIMATION ENGINE -->
+  <script>
+    // --- 1. PROCEDURAL SOUND SYNTHESIZER ---
+    class MapSoundFX {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+        }
+        if (this.ctx && this.ctx.state === "suspended") this.ctx.resume();
+      }
+      whoosh() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(160, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(40, this.ctx.currentTime + 0.5);
+        gain.gain.setValueAtTime(0.5, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.55);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.55);
+      }
+      cameraClick() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(1600, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(120, this.ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.5, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.09);
+      }
+      ping() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(1400, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(700, this.ctx.currentTime + 0.25);
+        gain.gain.setValueAtTime(0.3, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.25);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.25);
+      }
+      alarm() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "square";
+        osc.frequency.setValueAtTime(880, this.ctx.currentTime);
+        osc.frequency.setValueAtTime(580, this.ctx.currentTime + 0.15);
+        gain.gain.setValueAtTime(0.25, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.3);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.3);
+      }
+    }
+    const sfx = new MapSoundFX();
+
+    // --- 2. RESPONSIVE AUTO-SCALER ---
+    function fitStage() {
+      const scaler = document.getElementById("viewport-scaler");
+      if (!scaler) return;
+      const w = window.innerWidth - 30;
+      const h = window.innerHeight - 80;
+      const scaleX = w / 1080;
+      const scaleY = h / 1920;
+      const scale = Math.min(scaleX, scaleY, 0.95);
+      scaler.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+    window.addEventListener("resize", fitStage);
+    window.addEventListener("DOMContentLoaded", fitStage);
+    setTimeout(fitStage, 50);
+
+    // --- 3. D3-GEO PROJECTION & INITIAL MAP RENDER ---
+    const width = 1080;
+    const height = 1920;
+
+    // Dynamic Camera Parameters
+    const camera = {
+      lng: -76.0,
+      lat: 28.0,
+      scale: 1100
+    };
+
+    const projection = d3.geoMercator()
+      .translate([width / 2, height / 2]);
+
+    const pathGenerator = d3.geoPath(projection);
+
+    function updateProjection() {
+      projection
+        .center([camera.lng, camera.lat])
+        .scale(camera.scale);
+
+      // Re-render country paths
+      d3.selectAll(".country-path").attr("d", pathGenerator);
+
+      // Re-render graticule (call function to get GeoJSON)
+      const graticuleGeo = d3.geoGraticule().step([10, 10])();
+      d3.select("#map-graticule").attr("d", pathGenerator(graticuleGeo));
+
+      // Update Geographic Features Coordinates
+      updateTacticalCoordinates();
+      updateU2Flight();
+    }
+
+    // Render Countries once
+    const countriesG = d3.select("#countries-layer");
+    if (window.WORLD_GEOJSON) {
+      countriesG.selectAll("path")
+        .data(window.WORLD_GEOJSON.features)
+        .enter()
+        .append("path")
+        .attr("class", d => {
+          if (d.id === "840") return "country-path country-land country-usa";
+          if (d.id === "192") return "country-path country-land country-cuba";
+          return "country-path country-land";
+        });
+    }
+
+    // Coordinates of Critical Historical Landmarks
+    const COORDS = {
+      keyWest: [-81.78, 24.55],
+      sanCristobal: [-83.05, 22.72],
+      havana: [-82.36, 23.11],
+      washingtonDC: [-77.03, 38.90],
+      quarantineCenter: [-70.0, 24.0],
+      submarineB59: [-66.0, 27.0]
+    };
+
+    // U-2 Spy Plane Reconnaissance Mission Coordinates
+    const U2_ROUTE = {
+      start: [-86.5, 27.2],        // Gulf of Mexico / West of Florida
+      target: [-83.05, 22.72],     // Over San Cristóbal base
+      end: [-79.0, 18.0]           // Exiting South into Caribbean Sea
+    };
+
+    const u2Mission = {
+      progress: 0
+    };
+
+    function updateU2Flight() {
+      const p = u2Mission.progress;
+      let lng, lat;
+      if (p <= 0.5) {
+        const local = p / 0.5;
+        lng = U2_ROUTE.start[0] + (U2_ROUTE.target[0] - U2_ROUTE.start[0]) * local;
+        lat = U2_ROUTE.start[1] + (U2_ROUTE.target[1] - U2_ROUTE.start[1]) * local;
+      } else {
+        const local = (p - 0.5) / 0.5;
+        lng = U2_ROUTE.target[0] + (U2_ROUTE.end[0] - U2_ROUTE.target[0]) * local;
+        lat = U2_ROUTE.target[1] + (U2_ROUTE.end[1] - U2_ROUTE.target[1]) * local;
+      }
+
+      const screenPt = projection([lng, lat]);
+      const startPt = projection(U2_ROUTE.start);
+      const targetPt = projection(U2_ROUTE.target);
+
+      // Trailing contrail flight path
+      d3.select("#u2-flight-path")
+        .attr("d", `M ${startPt[0]} ${startPt[1]} L ${screenPt[0]} ${screenPt[1]}`);
+
+      // Translate aircraft
+      d3.select("#u2-aircraft-rig")
+        .attr("transform", `translate(${screenPt[0]}, ${screenPt[1]})`);
+
+      // Aircraft nose heading angle
+      const dx = targetPt[0] - startPt[0];
+      const dy = targetPt[1] - startPt[1];
+      const angle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+      d3.select("#u2-plane-body").attr("transform", `rotate(${angle})`);
+    }
+
+    function updateTacticalCoordinates() {
+      // 1. Distance Line: Key West to Havana
+      const kw = projection(COORDS.keyWest);
+      const sc = projection(COORDS.havana);
+      d3.select("#dist-line").attr("x1", kw[0]).attr("y1", kw[1]).attr("x2", sc[0]).attr("y2", sc[1]);
+      d3.select("#dist-pt-a").attr("cx", kw[0]).attr("cy", kw[1]);
+      d3.select("#dist-pt-b").attr("cx", sc[0]).attr("cy", sc[1]);
+
+      // Place 90 MILES label cleanly to the East of the line, away from Key West
+      const midX = (kw[0] + sc[0]) / 2 + 130;
+      const midY = (kw[1] + sc[1]) / 2 + 10;
+      d3.select("#dist-label-bg")
+        .attr("x", midX - 130).attr("y", midY - 20)
+        .attr("width", 260).attr("height", 40);
+      d3.select("#dist-label-txt").attr("x", midX).attr("y", midY + 5);
+
+      // 2. Pins
+      const pSC = projection(COORDS.sanCristobal);
+      d3.select("#pin-sancristobal").attr("transform", `translate(${pSC[0]}, ${pSC[1]})`);
+      const pKW = projection(COORDS.keyWest);
+      d3.select("#pin-keywest").attr("transform", `translate(${pKW[0]}, ${pKW[1]})`);
+
+      // 3. Missile Range Arcs (Sweeping from San Cristóbal into US Mainland)
+      const pDC = projection(COORDS.washingtonDC);
+      const arc1Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(15)();
+      const arc2Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(10)();
+      const arc3Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(5)();
+
+      d3.select("#range-arc-1").attr("d", pathGenerator(arc1Geo));
+      d3.select("#range-arc-2").attr("d", pathGenerator(arc2Geo));
+      d3.select("#range-arc-3").attr("d", pathGenerator(arc3Geo));
+
+      d3.select("#trajectory-dc").attr("d", `M ${pSC[0]} ${pSC[1]} Q ${(pSC[0]+pDC[0])/2 + 60} ${(pSC[1]+pDC[1])/2} ${pDC[0]} ${pDC[1]}`);
+      d3.select("#impact-dc").attr("cx", pDC[0]).attr("cy", pDC[1]);
+      d3.select("#label-dc").attr("x", pDC[0] + 18).attr("y", pDC[1] + 6);
+
+      // 4. Quarantine Line (Great circle arc East of Bahamas)
+      const qArcGeo = d3.geoCircle().center([-72, 23.5]).radius(8)();
+      d3.select("#quarantine-arc").attr("d", pathGenerator(qArcGeo));
+      // Position Quarantine label pill in the clear ocean interior of the circle
+      const pQ = projection([-72.0, 24.5]);
+      d3.select("#quarantine-label-bg").attr("x", pQ[0] - 160).attr("y", pQ[1] - 18).attr("width", 320).attr("height", 36);
+      d3.select("#quarantine-label").attr("x", pQ[0]).attr("y", pQ[1] + 5).attr("text-anchor", "middle").attr("font-size", 16);
+
+      // Place 3 US Navy Destroyers along the quarantine line
+      const pDes1 = projection([-76.5, 27.5]);
+      const pDes2 = projection([-71.0, 30.5]);
+      const pDes3 = projection([-65.5, 27.0]);
+      d3.select("#des-1").attr("transform", `translate(${pDes1[0]}, ${pDes1[1]}) rotate(35)`);
+      d3.select("#des-2").attr("transform", `translate(${pDes2[0]}, ${pDes2[1]}) rotate(85)`);
+      d3.select("#des-3").attr("transform", `translate(${pDes3[0]}, ${pDes3[1]}) rotate(135)`);
+
+      // Independent Fleet Label placed in the ocean north of destroyers
+      const pDesLbl = projection([-73.5, 33.0]);
+      d3.select("#des-label-box").attr("transform", `translate(${pDesLbl[0] - 125}, ${pDesLbl[1] - 17})`);
+
+      // Soviet Freighter Route (Starts from ship, points ahead toward quarantine line)
+      const pSF_Start = projection([-61.5, 28.5]);
+      const pSF_End = projection([-66.5, 25.0]);
+      d3.select("#soviet-freighter-path").attr("d", `M ${pSF_Start[0]} ${pSF_Start[1]} L ${pSF_End[0]} ${pSF_End[1]}`);
+      const pShip = projection([-61.5, 28.5]);
+      d3.select("#soviet-freighter-rig").attr("transform", `translate(${pShip[0]}, ${pShip[1]}) rotate(-130)`);
+
+      // Independent Freighter Label placed safely in Northeast open ocean
+      const pShipLbl = projection([-62.5, 32.5]);
+      d3.select("#soviet-ship-label-box").attr("transform", `translate(${pShipLbl[0] - 105}, ${pShipLbl[1] - 16})`);
+
+      // 5. Sonar at Submarine B-59 (Sargasso Sea)
+      const pSub = projection(COORDS.submarineB59);
+      d3.select("#sonar-group").attr("transform", `translate(${pSub[0]}, ${pSub[1]})`);
+    }
+
+    updateProjection();
+
+    // --- 4. MASTER 40.49s EDITORIAL TIMELINE (GSAP + VO SYNC) ---
+    const BEATS = [
+      {
+        id: "beat1",
+        start: 0.000,
+        end: 6.345,
+        badge: "DEFCON 2 ALERT",
+        kicker: "COLD WAR THEATER // 1962",
+        headline: "ONE VOTE FROM OBLIVION",
+        chip: "GLOBAL ALERT // NUCLEAR POWERS READY",
+        caption: 'In October 1962, the human race was one single vote away from total <span class="hl">nuclear annihilation</span>.',
+        cam: { lng: -76.0, lat: 28.0, scale: 1100 }
+      },
+      {
+        id: "beat2",
+        start: 6.345,
+        end: 15.271,
+        badge: "TARGET: 90 MILES",
+        kicker: "SAN CRISTÓBAL // CUBA",
+        headline: "90 MILES FROM FLORIDA",
+        chip: "MISSILE RANGE: 1,020 NM // IMPACT 180s",
+        caption: 'U-2 spy planes revealed Soviet nuclear warheads just ninety miles off Florida — capable of vaporizing Washington in <span class="hl">three minutes</span>.',
+        cam: { lng: -81.0, lat: 26.5, scale: 2800 }
+      },
+      {
+        id: "beat3",
+        start: 15.271,
+        end: 22.149,
+        badge: "NAVAL QUARANTINE",
+        kicker: "ATLANTIC STANDOFF",
+        headline: "THE NAVAL BLOCKADE",
+        chip: "180 WARSHIPS // CONVOY ON INTERCEPT",
+        caption: 'Kennedy deployed a <span class="hl">naval blockade</span>. The world held its breath as Soviet freighters sailed straight toward the quarantine line.',
+        cam: { lng: -71.5, lat: 26.0, scale: 2100 }
+      },
+      {
+        id: "beat4",
+        start: 22.149,
+        end: 31.992,
+        badge: "VASILI ARKHIPOV",
+        kicker: "SARGASSO SEA // 27°N, 66°W",
+        headline: "THE MAN WHO SAID NO",
+        chip: "SUBMARINE B-59 // 10-KT TORPEDO ARMED",
+        caption: 'Deep underwater, Soviet submarine B-59 prepared to fire a nuclear torpedo. Two officers approved. One man, <span class="hl">Vasili Arkhipov</span>, said NO.',
+        cam: { lng: -67.0, lat: 27.0, scale: 2900 }
+      },
+      {
+        id: "beat5",
+        start: 31.992,
+        end: 40.490,
+        badge: "REALIST DOCTRINE",
+        kicker: "MUTUALLY ASSURED DESTRUCTION",
+        headline: "THE LOGIC OF TERROR",
+        chip: "EQUILIBRIUM // SECOND-STRIKE CERTAINTY",
+        caption: "This is Realism's darkest truth: peace was not preserved by moral treaties, but by the absolute certainty of <span class=\"hl\">Mutually Assured Destruction</span>.",
+        cam: { lng: -45.0, lat: 38.0, scale: 650 }
+      }
+    ];
+
+    const audioEl = document.getElementById("main-audio");
+    let currentBeat = -1;
+
+    function applyBeat(idx) {
+      if (idx === currentBeat || idx < 0 || idx >= BEATS.length) return;
+      currentBeat = idx;
+      const b = BEATS[idx];
+
+      document.getElementById("top-badge").textContent = b.badge;
+      document.getElementById("kicker-txt").textContent = b.kicker;
+      document.getElementById("headline-txt").textContent = b.headline;
+      document.getElementById("map-chip-txt").textContent = b.chip;
+      document.getElementById("caption-txt").innerHTML = b.caption;
+    }
+
+    const masterTl = gsap.timeline({
+      paused: true,
+      repeat: -1,
+      onUpdate: () => {
+        const t = masterTl.time();
+        document.getElementById("scrubber").value = t;
+        document.getElementById("time-display").textContent = `${t.toFixed(2)}s / 40.49s`;
+
+        // Sync Audio
+        if (!masterTl.paused()) {
+          if (Math.abs(audioEl.currentTime - t) > 0.25) audioEl.currentTime = t;
+          if (audioEl.paused) audioEl.play().catch(() => {});
+        } else {
+          if (!audioEl.paused) audioEl.pause();
+        }
+
+        // Active Beat Check
+        for (let i = 0; i < BEATS.length; i++) {
+          if (t >= BEATS[i].start && t < BEATS[i].end) {
+            applyBeat(i);
+            break;
+          }
+        }
+      }
+    });
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = masterTl;
+
+    // --- BUILD CONTINUOUS EDITORIAL CAMERA & VECTOR REVEALS ---
+
+    // BEAT 1 (0.0s -> 6.345s): Strategic Global Establish & Nuclear Alert Motion Graphics
+    masterTl.set(camera, { lng: -76.0, lat: 28.0, scale: 1100, onUpdate: updateProjection }, 0);
+    masterTl.add(() => sfx.whoosh(), 0.05);
+
+    // Beat 1 Nuclear Alert Motion Graphics
+    masterTl.set("#b1-nuclear-alert-group", { opacity: 1 }, 0.00);
+    masterTl.to("#b1-rad-symbol", { rotation: 360, duration: 6.3, ease: "none" }, 0.00);
+    masterTl.fromTo("#b1-nuke-wave-1", { r: 30, opacity: 0.9 }, { r: 160, opacity: 0, duration: 1.6, repeat: 3, ease: "power1.out" }, 0.20);
+    masterTl.fromTo("#b1-nuke-wave-2", { r: 80, opacity: 0.8 }, { r: 240, opacity: 0, duration: 1.8, repeat: 3, ease: "power1.out" }, 0.40);
+    masterTl.fromTo("#b1-nuke-wave-3", { r: 140, opacity: 0.7 }, { r: 340, opacity: 0, duration: 2.0, repeat: 2, ease: "power1.out" }, 0.60);
+    masterTl.add(() => sfx.alarm(), 0.80);
+
+    // Fade out Beat 1 Nuclear Alert as camera punches in
+    masterTl.to("#b1-nuclear-alert-group", { opacity: 0, duration: 0.5 }, 6.20);
+
+    // BEAT 2 (6.345s -> 15.271s): Punch-In to Florida & Cuba, U-2 Reconnaissance Flight
+    masterTl.add(() => sfx.whoosh(), 6.30);
+    masterTl.to(camera, {
+      lng: -81.0, lat: 26.5, scale: 2800,
+      duration: 1.8, ease: "power3.inOut",
+      onUpdate: updateProjection
+    }, 6.35);
+
+    // U-2 Reconnaissance Mission Flight (7.0s -> 12.0s)
+    masterTl.set("#u2-recon-mission", { opacity: 1 }, 7.00);
+    masterTl.to("#map-chip-txt", { opacity: 0, duration: 0.3 }, 6.30);
+    masterTl.fromTo(u2Mission, 
+      { progress: 0 },
+      { progress: 1, duration: 5.2, ease: "power1.inOut", onUpdate: updateU2Flight },
+      7.00
+    );
+
+    // Camera Scan Shutter Flash as U-2 flies over San Cristóbal at 8.8s
+    masterTl.to("#u2-scan-cone", { opacity: 0.9, duration: 0.35, yoyo: true, repeat: 1 }, 8.70);
+    masterTl.to("#u2-shutter-flash", { opacity: 1, scale: 2.4, duration: 0.25, yoyo: true, repeat: 1 }, 8.85);
+    masterTl.add(() => sfx.cameraClick(), 8.85);
+
+    // Fade out U-2 text tag immediately after scan so map stays spotless
+    masterTl.to("#u2-label-callout", { opacity: 0, duration: 0.3 }, 9.40);
+
+    // San Cristóbal Site is Discovered! Pin Drops
+    masterTl.to("#pin-sancristobal", { opacity: 1, duration: 0.5, ease: "back.out(2)" }, 9.00);
+    masterTl.add(() => sfx.ping(), 9.00);
+
+    // Key West Distance Line
+    masterTl.to(["#pin-keywest", "#distance-measurer"], { opacity: 1, duration: 0.6, ease: "power2.out" }, 9.40);
+
+    // Missile Range Arcs Sweep from the discovered site!
+    masterTl.to("#missile-arcs-group", { opacity: 1, duration: 0.8, ease: "power2.out" }, 9.90);
+    masterTl.add(() => sfx.alarm(), 10.10);
+
+    // Fade out U-2 plane as we approach Beat 3
+    masterTl.to("#u2-recon-mission", { opacity: 0, duration: 0.4 }, 14.80);
+
+    // BEAT 3 (15.271s -> 22.149s): Pan to Atlantic Quarantine
+    masterTl.add(() => sfx.whoosh(), 15.20);
+    masterTl.to(camera, {
+      lng: -71.5, lat: 26.0, scale: 2100,
+      duration: 1.8, ease: "power3.inOut",
+      onUpdate: updateProjection
+    }, 15.25);
+    // HIDE BEAT 2 OVERLAYS COMPLETELY
+    masterTl.to(["#distance-measurer", "#missile-arcs-group", "#pin-sancristobal", "#pin-keywest"], { opacity: 0, duration: 0.4 }, 15.20);
+    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box"], { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.60);
+    // REVEAL JFK HISTORICAL DOSSIER PHOTO CARD IN SCENE 3
+    masterTl.fromTo("#dossier-jfk", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 15.80);
+    masterTl.add(() => sfx.ping(), 16.80);
+
+    // BEAT 4 (22.149s -> 31.992s): Sonar Intercept at Submarine B-59
+    masterTl.add(() => sfx.whoosh(), 22.10);
+    masterTl.to(camera, {
+      lng: -67.0, lat: 27.0, scale: 2900,
+      duration: 1.8, ease: "power3.inOut",
+      onUpdate: updateProjection
+    }, 22.15);
+    // HIDE BEAT 3 OVERLAYS AND JFK DOSSIER
+    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box", "#dossier-jfk"], { opacity: 0, duration: 0.4 }, 22.10);
+    masterTl.to("#sonar-group", { opacity: 1, duration: 0.6 }, 23.60);
+    masterTl.fromTo("#sonar-wave-1", { rx: 10, ry: 6, opacity: 1 }, { rx: 70, ry: 40, opacity: 0, duration: 1.2, repeat: 5, ease: "power1.out" }, 23.80);
+    // REVEAL VASILI ARKHIPOV HISTORICAL DOSSIER PHOTO CARD IN SCENE 4
+    masterTl.fromTo("#dossier-arkhipov", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 22.70);
+    masterTl.add(() => sfx.alarm(), 24.00);
+
+    // BEAT 5 (31.992s -> 40.490s): Epic Pullback to Global Atlantic (MAD Detonations)
+    masterTl.add(() => sfx.whoosh(), 31.95);
+    masterTl.to(camera, {
+      lng: -45.0, lat: 38.0, scale: 650,
+      duration: 2.4, ease: "power3.inOut",
+      onUpdate: updateProjection
+    }, 32.00);
+    masterTl.to(["#sonar-group", "#dossier-arkhipov"], { opacity: 0, duration: 0.4 }, 31.90);
+    masterTl.to(".country-usa", { fill: "#0369a1", stroke: "#38bdf8", strokeWidth: 3, duration: 1.2 }, 33.50);
+
+    // Beat 5 Multi-Thermonuclear Detonations Motion Graphics
+    masterTl.set("#b5-mad-nuclear-group", { opacity: 1 }, 32.50);
+    // Blast 1
+    masterTl.fromTo("#b5-fire-1", { scale: 0.2, opacity: 1 }, { scale: 3.5, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 32.80);
+    masterTl.fromTo("#b5-shock-1", { r: 15, opacity: 1 }, { r: 160, opacity: 0, duration: 2.2, ease: "power1.out" }, 32.80);
+    masterTl.add(() => sfx.alarm(), 32.90);
+    // Blast 2
+    masterTl.fromTo("#b5-fire-2", { scale: 0.2, opacity: 1 }, { scale: 4.0, opacity: 0.85, duration: 2.0, ease: "power2.out" }, 33.60);
+    masterTl.fromTo("#b5-shock-2", { r: 20, opacity: 1 }, { r: 180, opacity: 0, duration: 2.4, ease: "power1.out" }, 33.60);
+    // Blast 3
+    masterTl.fromTo("#b5-fire-3", { scale: 0.2, opacity: 1 }, { scale: 3.6, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 34.40);
+    masterTl.fromTo("#b5-shock-3", { r: 18, opacity: 1 }, { r: 170, opacity: 0, duration: 2.2, ease: "power1.out" }, 34.40);
+
+    // Timeline duration anchor
+    masterTl.set({}, {}, 40.49);
+
+    // Apply first beat
+    applyBeat(0);
+
+    // --- 5. HUMAN TESTER CONTROLS ---
+    const btnPlay = document.getElementById("btn-play");
+    btnPlay.addEventListener("click", () => {
+      sfx.init();
+      if (masterTl.paused()) {
+        masterTl.play();
+        audioEl.play().catch(() => {});
+        btnPlay.textContent = "PAUSE";
+      } else {
+        masterTl.pause();
+        audioEl.pause();
+        btnPlay.textContent = "PLAY";
+      }
+    });
+
+    document.getElementById("btn-restart").addEventListener("click", () => {
+      sfx.init();
+      masterTl.restart();
+      audioEl.currentTime = 0;
+      audioEl.play().catch(() => {});
+      btnPlay.textContent = "PAUSE";
+    });
+
+    const btnAudio = document.getElementById("btn-audio");
+    btnAudio.addEventListener("click", () => {
+      audioEl.muted = !audioEl.muted;
+      btnAudio.textContent = `AUDIO: ${audioEl.muted ? "OFF" : "ON"}`;
+      btnAudio.style.background = audioEl.muted ? "#475569" : "#38bdf8";
+    });
+
+    document.getElementById("scrubber").addEventListener("input", (e) => {
+      const seekTime = parseFloat(e.target.value);
+      masterTl.pause();
+      masterTl.time(seekTime);
+      audioEl.currentTime = seekTime;
+      audioEl.pause();
+      btnPlay.textContent = "PLAY";
+    });
+
+    // Auto-init audio context on click
+    window.addEventListener("click", () => sfx.init(), { once: true });
+
+    // URL parameter seek support (?t=N)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("t")) {
+      const seekTime = parseFloat(urlParams.get("t"));
+      masterTl.pause();
+      masterTl.time(seekTime);
+      audioEl.currentTime = seekTime;
+      btnPlay.textContent = "PLAY";
+    }
+  </script>
+</body>
+</html>
