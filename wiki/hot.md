@@ -13,6 +13,20 @@ tags:
 
 ## Last Updated
 
+2026-10-11 - Repo Hygiene Freeze + CH060 Publish Sync (A-only session):
+1. `Baseline`: pytest 369/369 PASS. Branch `master` sebelumnya ahead 10 dengan 5 modified + 40 untracked (semua kerja 10–11 Okt menggantung).
+2. `Git Guard (.gitignore)`:
+   - Exclude AI-CLI skill mirror `.claude/ .cursor/ .opencode/` (kanonik ada di `.agents/skills/`).
+   - Exclude scratch render artifacts: `learning-videos/probe/`, `shorts-experiments/**/output|checkpoints|raw_videos/`.
+   - Root cause: `shorts-experiments/` menyimpan ~700 MB (footage mentah webm/ogv + contact sheet PNG + font/wav duplikat) yang semula trackable → satu `git add .` bisa tembus batas GitHub.
+   - Verified: `check-ignore` menahan probe+checkpoints+raw_videos; sisa `git add -A` hanya 34.4 MB (109 file, dokumentasi/eksperimen).
+3. `Commit A (4c973b9) chore(repo)`: guards + tooling builder (`scripts/safe_file_replace.py`, `scripts/test_server.js`, e2e/playwright onboarding-isolation, sh-05 test CDP/pipeline).
+4. `Commit B (d48ad1c) docs(videos)`: sync publish CH060 (frontmatter `youtube_id: A5f56_Ni3Iw` + `explanatory_video`, `catalog.json` IR-M01-CH060, `README.md` → PUBLISHED) + queue CH070 Post-Structuralism.
+5. `Commit C (7a5bf39) docs(videos)`: poster + thumbnail CH060 + source visuals (`constructivism_visual_udhr.jpg`, `_real_photo_bg.jpg`), mengikuti konvensi CH030/040/050 (poster tracked, export MP4 ignored).
+6. `State`: working tree tracked **bersih**; 369/369 PASS pasca-commit.
+7. `Sisa untracked (sengaja)`: eksperimen Shorts 700 MB + source visual, root docs `AGENTS.md`/`IDEA.md`, `.mcp.json`/`opencode.json` (MCP reui, non-rahasia), `.agents/skills/reui/`. Keputusan track +404 MB ditunda.
+8. `Antrean besok`: **B** produksi video kanonik CH070 (WAJIB STOP di Fase 1 untuk ACC) atau **C** Shorts SH-02 Operation Dropshot (Ready to Produce).
+
 2026-10-11 - Gate Struktur Mind Map + Skill Authoring (mencegah cacat graf terulang di chapter baru):
 1. `Audit Cacat Mind Map CH060 (5 chapter dibandingkan)`:
    - Judul node duplikat `Human Consciousness` x2; **0 dari 36 edge punya label** (field `label` ada di `types.ts:26` tapi tak dipakai).
