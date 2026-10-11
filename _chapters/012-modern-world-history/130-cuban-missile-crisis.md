@@ -5,6 +5,26 @@ simple_summary: "In October 1962, the world came within hours of thermonuclear a
 ---
 
 
+## Cuban Missile Crisis & The Threat of Nuclear War
+
+<br>
+
+<div class="alert alert-info" style="border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.05); padding: 14px 18px; border-radius: 6px; margin: 20px 0;">
+  <strong>Official Course Video Companion:</strong> Watch our animated geopolitical tactical map on YouTube Shorts explaining how close the world came to thermonuclear war during the 1962 Cuban Missile Crisis, and how a single naval officer's veto averted catastrophe:
+  <div style="margin-top: 10px;">
+    <a href="https://youtube.com/shorts/WYGiVcO6jNA" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-danger" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 600;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+      Watch Tactical Map: How Close Were We to Nuclear War? (YouTube Shorts)
+    </a>
+  </div>
+</div>
+
+The 1962 **Cuban Missile Crisis** stands as the definitive moment of the Cold War and the ultimate test of nuclear deterrence theory. For thirteen days, the United States and the Soviet Union stood on the absolute precipice of a full-scale thermonuclear exchange. The discovery of Soviet medium-range ballistic missile (MRBM) sites under construction in San Cristóbal, Cuba—capable of striking Washington D.C. in less than three minutes—radically shattered the perceived geopolitical sanctuary of the American homeland.
+
+President John F. Kennedy enacted a 500-nautical-mile naval "quarantine" (blockade) across the Atlantic. In the depths of the Sargasso Sea, Soviet submarine *B-59*, depth-charged and running out of air, prepared to launch a 10-kiloton nuclear torpedo. Captain Valentin Savitsky and political officer Ivan Maslennikov approved the launch, believing World War III was underway; only the refusal of Flotilla Chief of Staff **Vasili Arkhipov** prevented global annihilation. 
+
+The standoff empirically validated the Realist doctrine of **Mutually Assured Destruction (MAD)**: peace was preserved not by moral treaties or institutional norms, but by the undeniable certainty that initiating nuclear war guaranteed total mutual extinction.
+
 ## Introduction
 
 <br>

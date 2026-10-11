@@ -13,10 +13,31 @@ tags:
 
 ## Last Updated
 
+2026-10-11 - Gate Struktur Mind Map + Skill Authoring (mencegah cacat graf terulang di chapter baru):
+1. `Audit Cacat Mind Map CH060 (5 chapter dibandingkan)`:
+   - Judul node duplikat `Human Consciousness` x2; **0 dari 36 edge punya label** (field `label` ada di `types.ts:26` tapi tak dipakai).
+   - Pasangan kontras dinest salah: `Regulative Rules -> Constitutive Rules` sebagai parent-child, padahal narasi menyebutnya setara.
+   - Topologi hampir rantai: in-degree 1 pada 34/36 node; kedalaman graf 7 (batas sehat 3); rantai 7 node.
+   - Drift antar-chapter: node tanpa bullet 0 (CH010) sampai 20 (CH050) — kedalaman tidak konsisten.
+   - **Keputusan pengguna: chapter lama TIDAK diubah** (semua video sudah diupload). Perbaikan hanya untuk chapter baru.
+2. `Gate Baru: scripts/validate_mindmap.ts` (`simulation/ir-motion-library/`):
+   - Dua mode: `npx tsx scripts/validate_mindmap.ts ch{NNN}` (dataset TS) atau `--graph file.json` (keluaran Fase 3 typed graph).
+   - Menolak: judul duplikat, edge tanpa label, orphan, graf terputus, pasangan contrast sebagai parent-child, rantai >4, kedalaman >3, node dekoratif, vocab relasi tak dikenal.
+   - **Terverifikasi menangkap 4 cacat asli CH060**; fixture bersih lolos exit 0; fixture contrast-as-parent ditolak exit 1.
+   - ⚠️ `audit_frames.ts` HANYA cek geometri kamera/subtitle — CH060 tetap "ZERO DEFECTS" di sana meski grafnya rusak. Dua gate saling melengkapi.
+   - Ter-wire ke orkestrator sebagai `python scripts/produce_video.py --chapter CH0XX --step structure` / `npm run validate -- chXXX`.
+   - Bug lama diperbaiki sekalian: `npm run audit` memakai `tsx` polos yang tidak ada di `node_modules/.bin` → diubah ke `npx tsx`.
+3. `Skill Baru: ir-mindmap-authoring` (dipanggil cukup dengan `buat mindmap CH0XX`):
+   - Pipeline 6 fase bergerbang ACC: brief akademik → kritik akademik → typed concept graph → narasi dari graf → visual builder → validator.
+   - Tersimpan di Hermes skills + `.agents/skills/ir-mindmap-authoring/SKILL.md` (repo).
+   - Alasan: model yang menghasilkan konten + graf + koordinat + timing sekaligus adalah akar semua cacat di atas.
+4. `Verifikasi`: `pytest 369/369`, `npx tsc --noEmit` exit 0, gate struktur exit 1 pada CH060 (sesuai harapan), exit 0 pada graf bersih.
+
 2026-10-11 - Breakthrough Format YouTube Shorts: Vox-Style Animated Geopolitical Vector Map (Cuban Missile Crisis 1962):
 1. `Evaluasi Kegagalan Format Lama & Solusi Geopolitical Vector Map`:
    - Penolakan format kinetic typography (hanya teks bergerak tanpa mekanisme visual nyata) dan format archival still kaku (terlalu membosankan/AI slop).
    - Pengadopsian standar kartografi editorial dinamis ala Vox & Johnny Harris berbasis D3-Geo + GSAP 60fps (`learning-videos/shorts-experiments/sh-05-cuban-crisis-map-animation/index.html`).
+   - Berhasil dipublikasikan ke YouTube Shorts resmi channel @IRinANutshell: `https://youtube.com/shorts/WYGiVcO6jNA`.
 2. `Instalasi 54 Skills Motion Graphics (iart-ai/motion-skills)`:
    - Terpasang 54 skills dari 17 pack ke `C:/Users/xiyeo/AppData/Local/hermes/skills` (`map-animation`, `diagram-animation`, `isometric-animation`, `threejs-animation`, `particle-system`, dll).
 3. `Fitur Visual & Narasi Taktis (SH-05 Cuban Missile Crisis)`:
@@ -25,6 +46,11 @@ tags:
    - **Armada Blokade Laut (US Navy vs Soviet Freighter)**: Tiga siluet kapal perusak US Navy menjaga perimeter karantina 500 mil laut, berhadapan dengan kapal kargo Soviet (*Poltava*) pada vektor cegat Atlantik.
    - **Siluet Kapal Selam Soviet B-59 (Foxtrot-Class)**: Terletak di pusat gelombang denyut sonar Laut Sargasso ($27^\circ\text{N}, 66^\circ\text{W}$).
    - **Kartu Arsip Foto Sejarah Taktis (Dossier Cards)**: Menampilkan foto autentik John F. Kennedy di Scene 3 (Blokade) dan Vasili Arkhipov di Scene 4 (Veto Nuklir) pada area kosong di kiri atas kanvas.
+   - **Kokoro-82M Neural Audio**: Disuarakan oleh model neural Kokoro `af_heart` (kecepatan 1.08x) dengan artikulasi tajam dan sinkronisasi tepat 44,5 detik.
+4. `Penyempurnaan Engine Rendering Deterministik`:
+   - Eliminasi frame putih di awal video melalui pendeteksian kecerahan piksel kanvas otomatis.
+   - Eliminasi stutter/frame drop dengan beralih dari perekaman screencast Playwright ke CDP stepper frame-by-frame (`render_shorts_deterministic.js`).
+   - Eliminasi teks terpotong dan overlap pada seluruh label taktis (U-2, Key West, San Cristóbal, Washington DC, Armada Laut, Submarine B-59) melalui audit visual `vision_analyze`.
    - **Motion Graphics Nuklir**: Lambang bahaya radiasi nuklir berputar 360° dengan cincin gelombang kejut di pembuka (Beat 1), serta tiga bola api termonuklir berdenyut dengan gelombang ledakan dahsyat di klimaks (Beat 5 Mutually Assured Destruction).
 4. `Audit Mutu Visual Tanpa Tabrakan (Zero-Collision Passed via vision_analyze)`:
    - Eliminasi 100% collision antara label, sprite, garis koordinat, dan batas kanvas menggunakan occluding background fill `#060912`.
