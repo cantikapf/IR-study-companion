@@ -2,7 +2,13 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('IR Study Companion UI Interactive Features', () => {
   
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, context }) => {
+    // Isolate test session from onboarding tour modal
+    await context.addInitScript(() => {
+      try {
+        localStorage.setItem('ir_onboarded_v1', 'true');
+      } catch (_) {}
+    });
     // Navigate to a known chapter that has quiz and flashcards
     await page.goto('/poverty-development-aid.html');
   });

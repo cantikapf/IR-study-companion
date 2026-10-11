@@ -25,6 +25,10 @@ id_rsa.pub
 .vscode/
 .idea/
 .DS_Store
+# AI-CLI mirrors of .agents/skills (canonical skills live in .agents/skills/)
+.claude/
+.cursor/
+.opencode/
 
 # Test & Automation artifacts
 node_modules/
@@ -43,4 +47,10 @@ simulation/
 *.onnx
 *.bin
 learning-videos/exports/*.mp4
-
+
+# Scratch render artifacts (source stays tracked; outputs are reproducible)
+learning-videos/probe/
+learning-videos/shorts-experiments/**/output/
+learning-videos/shorts-experiments/**/checkpoints/
+learning-videos/shorts-experiments/**/raw_videos/
+
