@@ -4,7 +4,7 @@ slug: constructivism-others
 simple_summary: "A single nuclear weapon in the hands of North Korea terrifies Washington, while hundreds of nuclear warheads held by the United Kingdom cause zero panic. Why? As constructivism explains, security threats are not pure physical numbers—they are socially constructed through shared identities and historical relationships. Furthermore, as the Copenhagen School shows, leaders can 'securitize' anything from migration to disease through speech acts, convincing the public to suspend normal democratic laws in the name of an existential emergency."
 ---
 
-# Constructivism
+## Constructivism
 
 Constructivism is an influential theoretical approach in **international relations** pioneered by Nicholas Onuf (1989) and Alexander Wendt (1992, 1999). Drawing on sociological insights, constructivism emphasizes the social construction of the world through ongoing processes of interaction between agents and structures. It asserts that international politics is shaped not just by material factors, but also socially constructed norms, identities, and ideas. 
 
@@ -26,7 +26,7 @@ Particularly, constructivism proposes that states designate other states as 'fri
 
 Moreover, security involves continuous processes of contestation and negotiation. Political leaders shape security policies based on domestic priorities and pressures, not just external threats. Public audiences also significantly influence security's meaning and effects through mass communication and collective sensemaking. Overall, constructivism emphasizes the fluid, intersubjective construction of security rather than viewing it as a static objective condition.
 
-# The Copenhagen School
+## The Copenhagen School
 
 Emerging from the defunct Copenhagen Peace Research Institute, the **Copenhagen School** broadens the concept of security beyond just military concerns to include issues like environmental degradation, poverty, and human rights abuses. This school of thought focuses on how security threats are socially constructed and given meaning through intersubjective processes between political leaders, experts, and the public. 
 
@@ -50,7 +50,7 @@ Ole Wæver, a Danish political scientist, is another prominent theorist of the C
 
 As a Dutch academic, Jaap de Wilde contributed significantly to the Copenhagen School's theoretical breadth. De Wilde's scholarship analyzed environmental security and European cooperation. He co-wrote the seminal book "Security: A New Framework for Analysis" with Barry Buzan and Ole Wæver in 1998, cementing core Copenhagen School concepts.
 
-# Critical Theory Challenges Traditional Notions of Security
+## Critical Theory Challenges Traditional Notions of Security
 
 **Critical theory** provides a philosophical and ideological critique of traditional international relations theory and conceptions of security. Rather than accepting the premise of security studies at face value, critical theorists question the underlying assumptions and perspectives that shape mainstream security discourse. 
 
@@ -82,7 +82,7 @@ Critical theorists have challenged traditional perspectives on international rel
 
 **Ken Booth** is a prominent Welsh scholar who helped develop critical security studies and the Welsh School. Booth emphasized the need to expand our understanding of security beyond just the state level. His writings like "Critical Explorations" and "Theory of World Security" challenged realist perspectives, calling for a more ethical approach to international relations and security. Booth helped establish security as a "derivative concept" shaped by language, politics and power relations rather than a self-evident, objective notion.
 
-# Feminism
+## Feminism
 
 Feminist security studies, developed by scholars such as J. Ann Tickner (*Gender in International Relations*, 1992) and Cynthia Enloe (*Bananas, Beaches and Bases*, 1989), challenge patriarchal assumptions and provided distinctive insights. Feminists focus on the gendered nature of global politics, exposing how security discourse contains masculine biases. For example, protection and defense are framed around stereotypically male traits like strength and aggression. 
 

@@ -58,7 +58,7 @@ Neoclassical realism emerged in the 1990s as an attempt to incorporate elements 
 <br>
 <br>
 
-# Key Assumptions of Realism
+## Key Assumptions of Realism
 
 Realism makes several key assumptions about international relations:
 

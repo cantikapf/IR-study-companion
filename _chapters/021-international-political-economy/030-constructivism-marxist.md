@@ -4,7 +4,7 @@ slug: constructivism-marxist
 simple_summary: "Mainstream economics assumes people and states are rational profit-maximizers, but critical IPE looks beneath the surface. Marxism exposes how global capitalism inherently exploits wage labor and extracts surplus value, concentrating wealth in multinational corporations while keeping peripheral nations dependent. Constructivism adds that global markets are not natural laws, but social inventions—money, debt, and property only hold power because society collectively agrees on their shared legitimacy."
 ---
 
-# Introduction
+## Introduction
 
 **International Political Economy** (IPE) has seen the rise of two influential perspectives - **constructivism** and Marxism. These perspectives have challenged conventional narratives and assumptions within the field. 
 

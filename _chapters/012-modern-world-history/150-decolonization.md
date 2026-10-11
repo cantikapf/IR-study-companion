@@ -69,7 +69,7 @@ China's decolonization process demonstrates how global conflict influenced natio
 
 After Japan's surrender ended World War II, the civil war between the Nationalists and Communists resumed in full force. The Communists emerged victorious in 1949, establishing the People's Republic of China after the Great People's Revolution. The interruption of foreign invasion gave the Communists breathing room to build strength. Additionally, their appeals to the peasant class through promises of reduced inequality struck a chord. The civil war picked up where it left off when the external threat dissipated. In the end, the Communists triumphed due to their organized political and military strategies.
 
-# India's Negotiated Independence 
+## India's Negotiated Independence 
 
 India's path to independence from British rule provides an important case study in negotiated decolonization. The Indian National Congress (INC) played a pivotal role in building the independence movement and articulating Indian grievances and demands to the British authorities. Initially founded in 1885 as a forum for the educated Indian elite to have a voice in governance, under the leadership of Mahatma Gandhi, Jawaharlal Nehru and others, the INC grew into a mass movement with widespread appeal. 
 

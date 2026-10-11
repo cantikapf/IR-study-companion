@@ -82,7 +82,7 @@ Contemporary realists, on the other hand, prioritize national power over justice
 
 So while classical realists see alliances as crucial for order and restraint, contemporary realists view power itself as the primary force in international politics. This divergence highlights an evolution in realist thought from its ancient origins to modern theories of international relations.
 
-# Change & Modernization
+## Change & Modernization
 
 Examining change and modernization, classical realists associate change with modernization, bringing shifts in identities and conceptions of security.
 

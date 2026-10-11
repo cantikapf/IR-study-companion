@@ -5,7 +5,7 @@ simple_summary: "The Paris Peace Conference of 1919 tried to rebuild Europe on t
 ---
 
 
-# Introduction
+## Introduction
 
 **World** **War** I was the first truly global war, spanning across multiple continents and involving dozens of nations around the world. What started out as a conflict in Europe, ignited by the assassination of Austrian Archduke Franz Ferdinand in 1914, quickly escalated into a battle on a scale never before seen in human history up until that point. 
 

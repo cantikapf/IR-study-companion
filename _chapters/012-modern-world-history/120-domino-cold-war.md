@@ -5,7 +5,7 @@ simple_summary: "Because nuclear weapons made direct combat between Washington a
 ---
 
 
-# The Cold War and Containment Doctrine
+## The Cold War and Containment Doctrine
 
 <br>
 
@@ -85,7 +85,7 @@ The UN, largely driven by the US, condemned the invasion and sent troops to defe
 
 After years of bloody stalemate and failed peace negotiations, the war ended in 1953 with an armistice that restored the border close to the 38th parallel. While no formal peace treaty was ever signed, the war solidified the division of Korea into communist North Korea and capitalist South Korea. It marked one of the first major eruptions of the Cold War outside of Europe, foreshadowing similar proxy wars to come.
 
-# The Space Race
+## The Space Race
 
 <br>
 

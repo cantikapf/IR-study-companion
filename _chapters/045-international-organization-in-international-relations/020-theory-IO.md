@@ -81,7 +81,7 @@ Universalist perspectives focus on IOs governing people more than states. The pr
 
 Overall, perspectives differ on whether the growth of IOs fundamentally alters world politics and erodes state sovereignty. Realists say no, while liberal views see increasing compromise of sovereignty for mutual gain, and radical views predict the decline of state power.
 
-# IO and Democracy 
+## IO and Democracy 
 
 ## Do International Organizations Promote Democracy?
 

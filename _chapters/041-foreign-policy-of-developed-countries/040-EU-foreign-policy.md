@@ -113,4 +113,7 @@ A country's national power in the energy sector is determined by several key fac
 
 A combination of favorable geography, economic capacity, and political commitment is required for a state to translate its energy resources into tangible national power on the global stage. The presence of oil or gas alone does not confer energy power - many complex factors shape whether states can successfully leverage energy resources to fulfill their strategic objectives.
 
----
+{% include flashcards.html term1="Common Foreign and Security Policy" def1="Framework established by the 1992 Maastricht Treaty to coordinate EU external actions" term2="European Coal and Steel Community" def2="Post-WWII integration initiative that pooled coal and steel resources to foster peace" term3="Multipillar Structure" def3="Governance architecture dividing EU policy across community, security, and judicial domains" term4="Energy Security" def4="Assurance of sufficient and reliable energy supplies at reasonable prices through market diversification" %}
+
+### Knowledge Check
+{% include quiz.html id="quiz_040_eu_foreign_policy" question="What characterizes the European Union's primary strategic approach to external energy security?" opt1="Unilateral military intervention to control foreign energy pipelines" opt2="Market-based strategies emphasizing supply diversification and rules-based governance" opt3="Mandatory state ownership and nationalization of all energy infrastructure" opt4="Exclusive reliance on bilateral energy agreements with a single external supplier" correct="2" %}

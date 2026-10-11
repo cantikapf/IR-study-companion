@@ -40,7 +40,7 @@ Neoliberalism recognizes that cooperation does not come easily in an anarchic in
 
 Neoliberalism examines these challenges presented by anarchy, defection, and free-riding. It then analyzes how international institutions can be designed to facilitate cooperation despite these barriers.
 
-# Role of Institutions
+## Role of Institutions
 
 International institutions are crucial for neoliberalism because they help facilitate cooperation between states in an anarchic international system. Neoliberals believe institutions can be rationally designed to mitigate the challenges of cooperation.
 

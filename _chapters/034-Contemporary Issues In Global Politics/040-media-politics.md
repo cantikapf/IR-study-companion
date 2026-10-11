@@ -60,7 +60,7 @@ In other countries like Saudi Arabia, the heavy hand of government censorship an
 
 The variability in social media's impact highlights that technology alone does not cause political change. Traditional factors like organizational infrastructure, public opinion, and political opportunity remain central. The effectiveness of social media depends heavily on the unique circumstances of each country and movement. There is no uniform blueprint for how digital tools can assist protest in different contexts. The Arab Spring underscores that successful movements combine online and offline action and adapt social media strategically to their local conditions.
 
-# Contextualism
+## Contextualism
 
 The role of social media in social movements and protests depends heavily on the sociopolitical context of the local environment. Social media does not act in isolation, but interacts with existing political, economic, and cultural structures. For example, the "Twitter revolution" during Iran's 2009 election protests allowed rapid information sharing and coordination, but played a minor actual role in protest activities on the ground. 
 

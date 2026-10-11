@@ -48,7 +48,7 @@ The means of production refer to the materials, tools, technology, resources, an
 <center> <img src="{{site.baseurl}}/static/modules/base–superstructure-model.png" alt="The base–superstructure model" width= 60% /> </center>
 
 
-# Imperialism and the Core-Periphery Model
+## Imperialism and the Core-Periphery Model
 
 Lenin built upon Marx's ideas and developed the concept of imperialism, which leads to the formation of a global political-economic structure with two distinct tiers. Lenin observed that capitalism had evolved from an era of free competition among firms to one dominated by monopolies and oligopolies. This concentration and centralization of capital allowed the monopolists to exert control over national markets and governments.
 

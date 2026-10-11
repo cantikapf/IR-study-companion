@@ -146,7 +146,7 @@ Despite stated goals and initiatives, ASEAN has struggled to develop strong cent
 
 Critics argue that ASEAN needs major reforms and initiatives to strengthen its capacity in addressing social issues and fulfilling the goals of the Socio-Cultural Community. There are calls for greater financial commitments, binding frameworks with accountability mechanisms, centralized coordinating institutions, increased partnerships with civil society groups, and a relaxation of the non-interference principle. Addressing weaknesses in the social sphere will be crucial for ASEAN to foster a genuine sense of community and promote equitable development across the region.
 
-# Conclusion
+## Conclusion
 
 ## Summary and Path Forward for ASEAN
 

@@ -85,7 +85,7 @@ Critical IR theory can elucidate the variety of underlying social factors that s
 
 An important perspective is offered by Critical Security Studies, a school of thought that probes how notions of security are constructed and weaponized in international politics. For example, Richard Wyn Jones contends that traditional security studies remains an applied research program rooted in instrumental rationality. Columba Peoples argues that missile defense represents a longstanding effort to normalize the symbols, means, and representations of security.
 
-# Conclusion 
+## Conclusion 
 
 Critical theory in international relations remains vitally important due to its commitment to critical reflexivity and discursive ethics. Critical reflexivity is key, as critical theorists emphasize being skeptical of fact/value separations in theorizing. This requires theorists to have constant awareness of their own assumptions and biases.  
 

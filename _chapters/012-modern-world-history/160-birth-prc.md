@@ -105,7 +105,7 @@ While the Cultural Revolution aimed to renew communist fervor, its dysfunctional
 
 China continues to grapple with the legacy of this complex and turbulent era. The official historical narrative remains contested, subject to censorship and revision. But the Cultural Revolution's far-reaching social and political impacts left an indelible mark on China's national identity and path of development.
 
-# Conclusion
+## Conclusion
 
 ## Summary and Importance of This Period in China's History
 

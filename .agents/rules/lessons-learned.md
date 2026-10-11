@@ -49,6 +49,12 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Content Audit Phase 1 — Structural Integrity (2026-10-11)**:
+  1. *Orchestrator Must Re-Run Gates, Not Trust Subagent Reports*: Subagent pelaporan `UNRESOLVED=0` ternyata melewatkan 3 entri — gate verifikasi independen menemukannya. Selalu reproduksi gate sendiri atas artefak child sebelum menyatakan lolos.
+  2. *"Resolved" Checks Must Include Index Pages*: Slug glosarium yang valid mencakup slug halaman `000-index.md` modul, bukan hanya bab materi. Gate yang mengecualikan index menghasilkan false-positive `unresolved`.
+  3. *Fallback-to-Index is a Silent Defect*: Ketika resolver glosarium gagal menemukan bab topikal, fallback ke slug index modul menghasilkan link hidup tapi konteks salah (halaman index nol coverage topik). Fallback wajib dikunci ke bab dengan coverage term tertinggi.
+  4. *Heading-Level Drift in AI-Generated Content*: 26 dari 158 bab punya `# H1` di badan yang menduplikasi judul frontmatter (hierarki tidak konsisten, polusi TOC). Normalisasi mekanis `# `→`## ` pada badan aman asalkan code-fence dan frontmatter dilewati.
+
 - **Breakthrough YouTube Shorts: Vox-Style Geopolitical Vector Map Animation (2026-10-11)**:
   1. *Elimination of "AI-Slop" Traps in Educational Shorts*: Format kinetic typography semata (hanya teks melayang dengan font besar) dan slide foto arsip statis/kaku ditolak penonton karena terasa generic, membosankan, dan seperti konten AI instan. Solusi viral terverifikasi adalah kartografi editorial dinamis (D3-Geo + GSAP 60fps) berbasis data geospasial nyata (`countries-110m.json`) dengan mekanisme taktis bergerak: pesawat pengintai U-2 bersayap glider dengan scanner cone beam dan kilatan kamera, armada blokade laut karantina 500 NM, denyut sonar kapal selam B-59, dan bola api termonuklir. Terbukti berhasil diterbitkan di YouTube Shorts resmi: `https://youtube.com/shorts/WYGiVcO6jNA`.
   2. *Single-Pass Projection for 60 FPS GPU Rendering*: Melakukan proyeksi ulang 177 poligon negara di CPU pada setiap frame via `projection.center().scale()` memakan ~86ms per frame (> 33ms budget 30 FPS), menyebabkan stuttering dan drop frame parah. Solusi absolut: proyeksikan seluruh poligon sekali saja di inisialisasi, lalu delegasikan pergerakan kamera (pan/zoom) ke hardware-accelerated 2D SVG transform matrix (`mapCameraGroup.setAttribute("transform", ...)`) yang hanya memakan < 0.01ms CPU per frame.

@@ -69,7 +69,7 @@ The Soviet Union had also built up its military strength during World War II, be
 
 This new bipolar dynamic between two ideologically opposed superpowers with massive nuclear arsenals set the stage for decades of tension and proxy wars. The Cold War between the United States and Soviet Union would come to dominate much of the second half of the 20th century.
 
-# Establishment of the United Nations
+## Establishment of the United Nations
 
 The United Nations (UN) was established on October 24, 1945, in the aftermath of World War II. Its founding charter was signed by 50 nations committed to maintaining international peace and security, developing friendly relations among nations, and promoting progress for all of humanity. 
 

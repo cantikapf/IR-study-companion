@@ -6,7 +6,7 @@ simple_summary: "Traditional IR theories treat states like identical black boxes
 ---
 
 
-# What is foreign policy analysis (FPA)?
+## What is foreign policy analysis (FPA)?
 
 **Foreign** **policy** analysis (**FPA**) is a subfield of international relations that focuses on examining the processes and decision-making that shape a country's foreign policy. It aims to explain the strategies and behaviors that governments employ in their interactions with other international actors.
 
@@ -24,7 +24,7 @@ Whereas international relations focuses on relations between states and the inte
 
 Foreign policy is often studied by focusing on a single country and decision (e.g. a U.S. president's decision on the use of force) or by comparing decisions across countries (e.g. environmental policy in the U.S., U.K., Germany, etc.). Foreign policy analysis provides frameworks for systematically analyzing the factors that shape foreign policy in order to build up middle-range theories that can be generalized and applied to other cases.
 
-# Focus of Foreign Policy Analysis
+## Focus of Foreign Policy Analysis
 
 While international relations scholars are often interested in specific foreign policies that states adopt, FPA focuses more on the overall foreign policy process. FPA examines how foreign policies are formulated and implemented, rather than just analyzing the policy outputs. It looks at the various factors that shape how state leaders arrive at foreign policy decisions.
 
@@ -38,7 +38,7 @@ Some key aspects of foreign policy analysis include:
 - Examining whether foreign policy decisions are made through rational cost-benefit analyses versus being shaped by non-rational factors like emotions, values, or historical analogies.
 - Analyzing the domestic and bureaucratic politics that affect how state interests and preferences are defined in foreign policy.
 
-# Three Paradigmatic works of Foreign Policy Analysis
+## Three Paradigmatic works of Foreign Policy Analysis
 
 **Richard Synder** contributed a focus on the decision making process itself as part of the explanation, rather than just foreign policy outputs. For example, the decision making process, such as voting, will influence a country's foreign policy.
 

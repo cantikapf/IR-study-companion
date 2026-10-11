@@ -97,7 +97,7 @@ Some key characteristics defined diplomacy in the modern era:
 - Reliance on diplomatic immunity to enable envoys to travel and operate safely.
 - Dependence on observance of treaties by all parties to enable ongoing relations.
 
-# Diplomatic role from time to time
+## Diplomatic role from time to time
 
 - 15th century
 	- Diplomacy became a true profession

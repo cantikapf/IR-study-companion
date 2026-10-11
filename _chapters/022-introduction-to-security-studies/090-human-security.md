@@ -31,7 +31,7 @@ The impact of globalization on human security thus appears contradictory. While 
 
 <center> <img src="{{site.baseurl}}/static/modules/debates_unresolved issues.png" alt="debates_unresolved issues" width="70%" /> </center>
 
-# Governance
+## Governance
 
 Governance, both international and domestic, plays a crucial role in addressing human security concerns. International financial institutions, often constrained by bureaucratic divisions, must navigate conflicts among state donors. Additionally, power dynamics within these institutions can limit the influence of the Global South. Representation and accountability are key issues.
 
@@ -41,7 +41,7 @@ NGOs have spearheaded efforts on specific human security issues, leveraging thei
 
 Overall, human security requires updated governance to fit an increasingly multipolar world. Both global and local institutions need reform to become more responsive, inclusive and accountable. A balanced approach is necessary, addressing human security without undermining international cooperation and state sovereignty.
 
-# Theory of Human Security
+## Theory of Human Security
 
 Human security broadens the theoretical scope of security studies beyond traditional realist approaches. Perspectives like constructivism and feminism provide alternative frameworks for understanding threats and analyzing global issues.
 
@@ -51,7 +51,7 @@ Feminist theory also challenges realist assumptions by exposing masculine biases
 
 Both constructivist and feminist approaches demonstrate that the concept of security is subjective and grounded in social relationships rather than objective material conditions. Human security applies these insights by reconceptualizing security around the needs of individuals and communities. Theoretical perspectives like constructivism and feminism are vital to developing more holistic frameworks for understanding human security.
 
-# Poverty
+## Poverty
 
 Poverty represents one of the most prominent issues within the human security agenda. The poverty-security nexus highlights the complex and reciprocal relationship between poverty and insecurity. Poverty contributes to a self-reinforcing cycle of instability, conflict, population displacement, and human insecurity. At the same time, conditions of chronic conflict and instability foster environments in which poverty persists and becomes entrenched. This nexus prompts the need for a nuanced understanding of the linkages between poverty and broader aspects of human insecurity.
 
@@ -59,7 +59,7 @@ Several key factors contribute to the poverty-insecurity cycle. The lack of basi
 
 Human security strategies aimed at alleviating poverty and reducing conflict must account for these complex linkages. Sustainable approaches require strengthening state capacity to deliver public services, ensuring access to opportunity and social mobility, and promoting inclusive economic development and resilience. Initiatives should focus on rebuilding after conflict and preventing cycles of recurring violence that reinforce poverty. By addressing the multidimensional nature of poverty, human security policies can help break the cycle where poverty becomes both a root cause and a consequence of chronic insecurity.
 
-# Health
+## Health
 
 Health has become an integral aspect of the human security framework. Traditionally, health was not viewed as a security issue. However, the broadening definition of security in the post-Cold War era has brought health concerns to the forefront. In particular, the spread of infectious diseases and the impact of HIV/AIDS have underscored the complex relationship between health and security.
 
@@ -71,7 +71,7 @@ Bioterrorism has also emerged as a potential security threat in a globalized wor
 
 In addressing this expansive health-security nexus, the human security approach emphasizes collaboration and shared responsibility. Tackling complex health challenges demands multi-sectoral partnerships, from the community level up to global institutions. It also requires recognizing health as an integral component of individual and collective security.
 
-# Population Movements
+## Population Movements
 
 Population movements, both involuntary and voluntary, pose complex challenges related to human security. Involuntary movements, such as flows of refugees fleeing conflict, violence, or persecution, are a major component. According to the UNHCR, there were 26.6 million refugees globally at the end of 2020 - the highest level since records began. This underscores the strong linkages between conflict and refugee flows, as people are forced to seek security and opportunity elsewhere when their states cannot protect or provide for them.
 

@@ -80,7 +80,7 @@ Central party leaders distribute resources to maintain nationwide party cohesion
 
 Overall, parties play an instrumental role in national integration, aggregating diverse preferences and facilitating representation. Their structures and strategies have adapted alongside decentralization reforms. Parties continue maneuvering to balance central power with flexibility for provincial and district leaders.
 
-# Future Prospects
+## Future Prospects
 
 The future of decentralization in Indonesia will depend on several key factors. Most importantly, the success of local democracy and governance will determine if decentralization continues and deepens. Indonesia needs strong, accountable local leaders that can deliver results for citizens through transparent and participatory governance. Regional autonomy and decentralization will only work if local officials are democratically elected and focused on serving community needs. 
 

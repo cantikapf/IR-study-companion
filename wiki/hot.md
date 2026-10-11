@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-11 - Audit Konten Fase 1 (Integritas Struktural) — 3 workstream paralel dilepas ke subagent, lalu diverifikasi ulang independen oleh orkestrator:
+1. `WS1 — Celah Kuis/Flashcard Bab EU`: `_chapters/041-foreign-policy-of-developed-countries/040-EU-foreign-policy.md` satu-satunya bab materi (dari 158) tanpa `{% include quiz.html %}` dan `{% include flashcards.html %}`. Ditambahkan 4 flashcard (CFSP, ECSC, Multipillar Structure, Energy Security) + 1 kuis. Divider `---` yatim di akhir dibersihkan.
+2. `WS2 — Integritas chapter_slug Glosarium`: 122 dari 161 entri `_data/ir_glossary.json` punya `chapter_slug` yang tidak resolve ke slug frontmatter nyata (39 path-form mentah + 83 slug usang). Dipetakan via modul + term/definition; diperbaiki serentak di `assets/data/ir_glossary.json`. **Temuan audit orkestrator**: subagent salah fallback 3 entri (Non-Refoulement, NPT, Strategic Chokepoint) ke slug halaman index modul 034 yang nol coverage — dikoreksi manual ke `human-security`, `institution-security`, `energy-security`. Gate akhir: `UNRESOLVED=0` atas 161 entri vs 180 slug.
+3. `WS3 — Normalisasi Hirarki Heading`: 26 bab (41 baris) punya `# H1` di badan yang menduplikasi judul frontmatter. Semua di-demote ke `##`. Sisa body H1 = 0 di seluruh `_chapters/`.
+4. `Verifikasi Multi-Lapis (independen)`: pytest 369/369 PASS · `audit_full_repo.py` 0 temuan · `audit_include_quizzes.py` 156 kuis 0 isu · `audit_simple_words_uniqueness.py` 161/161 unik · frontmatter 0 rusak · dua salinan glosarium identik.
+5. `Status`: Fase 1 SELESAI. Fase 2 (kunci jawaban vs teks — 155 kuis + 180 soal ujian) dan Fase 3 (substansi akademik per modul) menunggu ACC.
+
 2026-10-11 - Repo Hygiene Freeze + CH060 Publish Sync (A-only session):
 1. `Baseline`: pytest 369/369 PASS. Branch `master` sebelumnya ahead 10 dengan 5 modified + 40 untracked (semua kerja 10–11 Okt menggantung).
 2. `Git Guard (.gitignore)`:

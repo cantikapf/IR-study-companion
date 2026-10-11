@@ -97,7 +97,7 @@ Contemporary Central American institutions for regional dialogue include regular
 
 Despite shared aspirations for unity, Central America's complex history is marked by sources of internal division. Overcoming this legacy to achieve substantive integration has proven difficult, even as leaders invoke the mythology of a unified region. This underscores the inherent challenges facing regional cooperation efforts.
 
-# Economic Aspects of Regional Integration
+## Economic Aspects of Regional Integration
 
 Regional economic integration involves various efforts aimed at reducing barriers to the free flow of goods, services, capital and labor between countries in a geographic region. Regional integration can take the form of free trade areas, customs unions, common markets and economic unions. 
 

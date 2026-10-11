@@ -14,7 +14,7 @@ Urbanization and rising education levels contribute to heightened political awar
 
 Developing nations must find ways to build more inclusive, transparent, and accountable political systems. Doing so will empower citizens, reduce corruption, and ultimately create a more just society. It is a difficult task, but a worthy challenge that developing nations must undertake.
 
-# Huntington's Prediction of Heightened Political Awareness Proves Accurate
+## Huntington's Prediction of Heightened Political Awareness Proves Accurate
 
 In many developing countries, urbanization and rising education levels are contributing to heightened political awareness, particularly among previously non-politicized populations. 
 
@@ -80,7 +80,7 @@ Limited political awareness and educational disparities present additional obsta
 
 Pursuing political office requires a certain degree of education and political know-how. To increase women's representation, grassroots educational initiatives focused on political literacy are essential. Existing programs led by civil society groups demonstrate the power of targeted education in empowering women and girls to become more politically active. Expanding these efforts, alongside boosting educational attainment overall, will open more doors for women to take on leadership positions. Greater awareness and education serve as key steps toward achieving gender parity in Indonesia's political realm.
 
-# The Beginning of Women Representative in Indonesian Political System
+## The Beginning of Women Representative in Indonesian Political System
 
 Ten years after Indonesia independence, there was a first general election that was held in 1955 and will be always held every five years after that. The numbers of political parties which enter the election always different and that makes different calculation of **women participation** (Parawansa, 2005). The election of 1955 has been called to be the first opening for Indonesian women to be representative in parliament, there are seven candidates came from women’s organization and a few from political parties which made 17 women are elected to the legislation (Parawansa, 2005).
 

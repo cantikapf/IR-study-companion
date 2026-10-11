@@ -32,7 +32,7 @@ Beyond passive forums, IOs can act as independent actors shaping agendas and nor
 
 IOs are increasingly involved in collaborative network diplomacy with states, NGOs, and businesses. This multi-stakeholder approach is often more effective at tackling global issues requiring cooperation from various actors across the public, private and non-profit spheres.
 
-# Financial Institutions 
+## Financial Institutions 
 
 Throughout the decades, financial institutions and officials have played a pivotal and ever-shifting role in the realm of global diplomacy and governance. As international financial markets have become increasingly interconnected and complex, these actors have needed to adapt and redefine their functions in navigating this globalized landscape.
 

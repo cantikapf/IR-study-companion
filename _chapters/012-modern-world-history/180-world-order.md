@@ -73,7 +73,7 @@ According to Huntington, factors that will increase civilization consciousness a
 
 Huntington's thesis marked a paradigm shift from viewing conflicts through the lens of ideology or nation-states, pointing instead to civilizations and culture as the primary drivers. It highlighted the potential for tensions, especially between the Western and Islamic worlds, based on their antithetical values on issues like separation of church and state, the role of women, and attitudes towards authority. The cultural fault lines could supersede Cold War alliances and frameworks in shaping global conflicts.
 
-# Geopolitical Complexity
+## Geopolitical Complexity
 
 The geopolitical landscape of the 21st century is marked by a complex interplay between major historical transitions, ideological debates, and evolving power dynamics that emerged in the post-Cold War era. 
 

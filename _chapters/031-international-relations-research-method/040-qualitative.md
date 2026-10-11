@@ -5,10 +5,10 @@ abstract: Qualitative research, commonly called “interpretive research”, is 
 simple_summary: "Numbers and spreadsheets can tell you how many missiles were fired, but they cannot tell you what a president whispered to their top general behind closed doors. Qualitative research provides the 'thick description' of international politics: unlocking the motives, fears, and cultural symbols driving leaders through in-depth interviews, diplomatic archives, and detailed case studies that raw statistics inevitably miss."
 ---
 
-# What is qualitative research?
+## What is qualitative research?
 
 **Qualitative** **research**, commonly called “interpretive research”, is a method that relies heavily on “thick” verbal descriptions of a particular social context being studied. Qualitative research is an inquiry approach in which the inquirer explores a central phenomenon (one key concept), asks participants broad, general questions, collects detailed views of participants in the form of words or images, analyzes and codes the **data** for description and themes, interprets the meaning of the information drawing on personal reflections and past research, and writes the final report that includes personal biases and a flexible structure.
-# The General Characteristics of Qualitative Research
+## The General Characteristics of Qualitative Research
 
 Qualitative research has several defining characteristics:
 
@@ -18,7 +18,7 @@ Qualitative research has several defining characteristics:
 - **Inductive analysis**: Qualitative data analysis uses an inductive approach to identify themes, patterns, and concepts that emerge from the data. Researchers do not start with hypotheses to test.
 - **Describes participant meanings**: A key goal of qualitative research is to describe the meanings, perceptions, and perspectives of research participants. Findings are reported from their point of view.
 
-# Writing Good Qualitative Research Questions
+## Writing Good Qualitative Research Questions
 
 Questions narrow the purpose of qualitative research. There are two main types of qualitative research questions:
 
@@ -39,7 +39,7 @@ When writing qualitative research questions, avoid “quantitative terms” such
 
 The goal is to use open-ended questions focused on gathering descriptive data on the central phenomenon from the perspective of research participants.
 
-# Methods of Qualitative Research Design
+## Methods of Qualitative Research Design
 
 ## Qualitative Study Design
 

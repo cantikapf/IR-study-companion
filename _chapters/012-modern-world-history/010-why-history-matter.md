@@ -50,7 +50,7 @@ Most importantly, history illuminates the unintended consequences of even well-i
 
 In essence, the intricate knowledge gleaned from historical records and scholarship provides the necessary context for comprehending the multifaceted aspects of human existence. We can apply these lessons to promote increased wisdom, nuance, and care when analyzing or acting upon today's intricate global landscape.
 
-# Influencing Foreign Policy
+## Influencing Foreign Policy
 
 History plays an instrumental role in shaping foreign policy and diplomatic relations between nations. The events, patterns, and power dynamics of the past provide critical context for formulating effective strategy. 
 
