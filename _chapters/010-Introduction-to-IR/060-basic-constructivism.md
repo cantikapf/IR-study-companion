@@ -3,6 +3,22 @@ title: Basic Explanation of Constructivism in IR
 slug: basic-constructivism
 abstract: The introduction of Constructivism in International Relations 
 simple_summary: "Material objects don't speak for themselves—human ideas give them meaning. If a country builds 100 nuclear warheads, whether neighbors panic or celebrate depends entirely on shared identity: the US doesn't fear British nukes, but fears North Korean ones. Constructivism shows that state interests aren't carved in stone; when our shared values and moral taboos evolve, the rules of world politics change with them."
+youtube_id: "A5f56_Ni3Iw"
+explanatory_video:
+  title: "Mind Map Explanatory: Basic Explanation of Constructivism in IR"
+  desc: "Watch this animated concept map first to explore social facts, mutual constitution of agents and structures, regulative versus constitutive rules, the logic of appropriateness, and the norm life cycle before diving into the chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  video_path: "learning-videos/exports/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_MindMap_1080p.mp4"
+  poster_path: "learning-videos/posters/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_Poster.png"
+  poster: "/learning-videos/posters/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_Poster.png"
+  thumbnail_path: "learning-videos/posters/IR_M01_CH060_Basic_Explanation_of_Constructivism_in_IR_Thumbnail.png"
+  duration: "6.9 min"
+  duration_sec: 414.59
+  frames: 12438
+  fps: 30
+  status: "Published"
+  youtube_id: "A5f56_Ni3Iw"
 ---
 
 ## Introduction to Constructivism

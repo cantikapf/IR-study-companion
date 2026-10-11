@@ -45,7 +45,8 @@ IR_M{ModuleNumber}_CH{ChapterNumber}_{TitleInSnakeCase}_{Format}_{Resolution}.{e
 | `IR-M01-CH030` | M01 / CH030 | Basic Explanation of Realism in IR | Mind Map Explanatory | 05:23 | 1080p | 🟢 PUBLISHED (51.8 MB) | 🟢 GENERATED | [3VDcQVYty5M](https://youtu.be/3VDcQVYty5M) |
 | `IR-M01-CH040` | M01 / CH040 | Basic Explanation of Liberalism in IR | Mind Map Explanatory | 06:21 | 1080p | 🟢 PUBLISHED (49.3 MB) | 🟢 GENERATED | [FdChrS6Ng3Y](https://youtu.be/FdChrS6Ng3Y) |
 | `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | 06:48 | 1080p | 🟢 PUBLISHED (48.9 MB) | 🟢 GENERATED | [zJesX-ugSX4](https://youtu.be/zJesX-ugSX4) |
-| `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | ⚪ PENDING | *Pending* |
+| `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | 06:54 | 1080p | 🟢 PUBLISHED (61.3 MB) | 🟢 GENERATED | [A5f56_Ni3Iw](https://youtu.be/A5f56_Ni3Iw) |
+| `IR-M01-CH070` | M01 / CH070 | Basic Explanation of Post-Structuralism in IR | Mind Map Explanatory | — | 1080p | ⚪ QUEUED | ⚪ PENDING | *Pending* |
 
 > **Catatan Status:**  
 > - 🟢 **RENDERED**: Berkas MP4 siap diputar secara lokal dan diunggah ke YouTube.  
