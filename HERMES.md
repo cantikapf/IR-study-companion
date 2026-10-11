@@ -81,7 +81,12 @@ Commit with clear conventional messages:
    - Large MP4 exports (>50 MB) must strictly reside in `learning-videos/exports/` and are excluded from Git commits via `.gitignore`.
    - **Canonical YouTube Thumbnail Standard**: Setiap rilis video wajib memproduksi YouTube thumbnail 1080p via `scripts/generate_thumbnail.py` menggunakan template torehan kuas (split-screen brush mask, Archivo Black, Space Mono, red-white contrast, dan channel CTA) tersimpan di `learning-videos/posters/*_Thumbnail.png`.
 
-4. **Bespoke LMS Architecture**:
+4. **Official YouTube Shorts Standard (Vox-Style Geopolitical Vector Map)**:
+   - Educational Shorts (<60s) for `@IRinANutshell` use the **Animated Geopolitical Vector Map** engine (D3-Geo + GSAP 60fps + Kokoro-82M neural TTS `af_heart` + CDP frame-by-frame deterministic render).
+   - Strict standards: 1080x1920 (9:16), single-pass projection with hardware 2D matrix transform, zero initial white flash, zero drop-frame stutter, and zero label-collision via `<g id="tactical-labels-layer">`.
+   - Production registry & 10-episode roadmap documented in `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
+
+5. **Bespoke LMS Architecture**:
    - The platform uses a custom Native LMS engine (`_layouts/chapter.html`, `_layouts/default.html`, `assets/js/course-player.js`). Legacy GitBook markup has been completely eliminated.
 
 ---

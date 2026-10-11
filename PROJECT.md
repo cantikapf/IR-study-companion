@@ -25,6 +25,7 @@
 | 12 | Mind Map Explanatory Video Engine | Produksi video kanonik 1080p Mind Map & Flowchart Remotion (@IRinANutshell, Kokoro TTS, Deep Zoom 2.05x, Stationary Hold, RoughJS) | M9 | DONE |
 | 13 | Learning Videos Vault & Registry | Direktori khusus learning-videos/ (exports, posters, catalog.json, README registry matrix) dengan standar penamaan deterministik | M9 | DONE |
 | 14 | Diplomatic Lab Experience Overhaul | Lab Shell "Mission Console" + shared ES6 core (LabGame) + 10 mini-games (Briefing/Play/Debrief/SIGINT/Reveal) + integrasi homepage & bintang progress | M10 | DONE |
+| 15 | Geopolitical Shorts Pipeline & Registry | Standarisasi produksi video YouTube Shorts taktis D3-Geo + Kokoro-82M + CDP deterministik + katalog 10 episode di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` | M11 | DONE |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
@@ -40,10 +41,7 @@
 | M8 | IR Motion Graphics Library | Arsitektur grafis gerak modular Kurzgesagt: AnimatedWorldMap, TimelineBar, ConceptDiagram, data JSON Module 010 | M7 | DONE |
 | M9 | Mind Map Explanatory Engine | Standarisasi alur kerja video kanonik Mind Map Explanatory (Decluttering spotlight dimming 0.35, warna semantik akademis, dual-font captioning, pre-reading gateway card, 34 node graf, Deep Zoom 2.05x, Stationary Hold, eliminasi ~3,35 GB berkas usang) | M8 | DONE |
 | M10 | Diplomatic Lab Experience Overhaul | Lab Shell Mission Console theme-aware, shared ES6 core (`assets/js/lab-game-core.js`), 10 mini-games (Briefing/Play/Debrief/SIGINT/Reveal), integrasi katalog homepage + status bintang & Completed ✓, cache bump sw.js v5 | M9 | DONE |
-
-
-
-
+| M11 | Geopolitical Shorts Pipeline & Registry | Standarisasi kartografi D3-Geo + Kokoro af_heart, zero-flash/stutter/collision, master workflow SSOT & roadmap 10 episode di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` | M10 | DONE |
 
 ## Lessons Learned
 *(Update this section regularly during the project lifecycle based on Tier 2 self-evaluations)*
