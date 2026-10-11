@@ -978,12 +978,12 @@
     updateU2Flight();
     updateCamera();
 
-    // --- 4. MASTER 40.49s EDITORIAL TIMELINE (GSAP + VO SYNC) ---
+    // --- 4. MASTER 43.44s EDITORIAL TIMELINE (GSAP + VO SYNC) ---
     const BEATS = [
       {
         id: "beat1",
         start: 0.000,
-        end: 6.345,
+        end: 6.601,
         badge: "DEFCON 2 ALERT",
         kicker: "COLD WAR THEATER // 1962",
         headline: "ONE VOTE FROM OBLIVION",
@@ -993,8 +993,8 @@
       },
       {
         id: "beat2",
-        start: 6.345,
-        end: 15.271,
+        start: 6.601,
+        end: 16.209,
         badge: "TARGET: 90 MILES",
         kicker: "SAN CRISTÓBAL // CUBA",
         headline: "90 MILES FROM FLORIDA",
@@ -1004,8 +1004,8 @@
       },
       {
         id: "beat3",
-        start: 15.271,
-        end: 22.149,
+        start: 16.209,
+        end: 23.365,
         badge: "NAVAL QUARANTINE",
         kicker: "ATLANTIC STANDOFF",
         headline: "THE NAVAL BLOCKADE",
@@ -1015,8 +1015,8 @@
       },
       {
         id: "beat4",
-        start: 22.149,
-        end: 31.992,
+        start: 23.365,
+        end: 34.104,
         badge: "VASILI ARKHIPOV",
         kicker: "SARGASSO SEA // 27°N, 66°W",
         headline: "THE MAN WHO SAID NO",
@@ -1026,8 +1026,8 @@
       },
       {
         id: "beat5",
-        start: 31.992,
-        end: 40.490,
+        start: 34.104,
+        end: 43.437,
         badge: "REALIST DOCTRINE",
         kicker: "MUTUALLY ASSURED DESTRUCTION",
         headline: "THE LOGIC OF TERROR",
@@ -1083,114 +1083,114 @@
 
     // --- BUILD CONTINUOUS EDITORIAL CAMERA & VECTOR REVEALS ---
 
-    // BEAT 1 (0.0s -> 6.345s): Strategic Global Establish & Nuclear Alert Motion Graphics
+    // BEAT 1 (0.0s -> 6.601s): Strategic Global Establish & Nuclear Alert Motion Graphics
     masterTl.set(camera, { x: 540, y: 960, scale: 1.0, onUpdate: updateCamera }, 0);
     masterTl.add(() => sfx.whoosh(), 0.05);
 
     // Beat 1 Nuclear Alert Motion Graphics
     masterTl.set("#b1-nuclear-alert-group", { opacity: 1 }, 0.00);
-    masterTl.to("#b1-rad-symbol", { rotation: 360, duration: 6.3, ease: "none" }, 0.00);
+    masterTl.to("#b1-rad-symbol", { rotation: 360, duration: 6.6, ease: "none" }, 0.00);
     masterTl.fromTo("#b1-nuke-wave-1", { r: 30, opacity: 0.9 }, { r: 160, opacity: 0, duration: 1.6, repeat: 3, ease: "power1.out" }, 0.20);
     masterTl.fromTo("#b1-nuke-wave-2", { r: 80, opacity: 0.8 }, { r: 240, opacity: 0, duration: 1.8, repeat: 3, ease: "power1.out" }, 0.40);
     masterTl.fromTo("#b1-nuke-wave-3", { r: 140, opacity: 0.7 }, { r: 340, opacity: 0, duration: 2.0, repeat: 2, ease: "power1.out" }, 0.60);
     masterTl.add(() => sfx.alarm(), 0.80);
 
     // Fade out Beat 1 Nuclear Alert as camera punches in
-    masterTl.to("#b1-nuclear-alert-group", { opacity: 0, duration: 0.5 }, 6.20);
+    masterTl.to("#b1-nuclear-alert-group", { opacity: 0, duration: 0.5 }, 6.40);
 
-    // BEAT 2 (6.345s -> 15.271s): Punch-In to Florida & Cuba, U-2 Reconnaissance Flight
-    masterTl.add(() => sfx.whoosh(), 6.30);
+    // BEAT 2 (6.601s -> 16.209s): Punch-In to Florida & Cuba, U-2 Reconnaissance Flight
+    masterTl.add(() => sfx.whoosh(), 6.55);
     masterTl.to(camera, {
       x: 260, y: 980, scale: 2.3,
       duration: 1.8, ease: "power3.inOut",
       onUpdate: updateCamera
-    }, 6.35);
+    }, 6.60);
 
-    // U-2 Reconnaissance Mission Flight (7.0s -> 12.0s)
-    masterTl.set("#u2-recon-mission", { opacity: 1 }, 7.00);
-    masterTl.to("#map-chip-txt", { opacity: 0, duration: 0.3 }, 6.30);
+    // U-2 Reconnaissance Mission Flight (7.2s -> 13.0s)
+    masterTl.set("#u2-recon-mission", { opacity: 1 }, 7.20);
+    masterTl.to("#map-chip-txt", { opacity: 0, duration: 0.3 }, 6.60);
     masterTl.fromTo(u2Mission, 
       { progress: 0 },
-      { progress: 1, duration: 5.2, ease: "power1.inOut", onUpdate: updateU2Flight },
-      7.00
+      { progress: 1, duration: 5.6, ease: "power1.inOut", onUpdate: updateU2Flight },
+      7.20
     );
 
-    // Camera Scan Shutter Flash as U-2 flies over San Cristóbal at 8.8s
-    masterTl.to("#u2-scan-cone", { opacity: 0.9, duration: 0.35, yoyo: true, repeat: 1 }, 8.70);
-    masterTl.to("#u2-shutter-flash", { opacity: 1, scale: 2.4, duration: 0.25, yoyo: true, repeat: 1 }, 8.85);
-    masterTl.add(() => sfx.cameraClick(), 8.85);
+    // Camera Scan Shutter Flash as U-2 flies over San Cristóbal at 9.2s
+    masterTl.to("#u2-scan-cone", { opacity: 0.9, duration: 0.35, yoyo: true, repeat: 1 }, 9.10);
+    masterTl.to("#u2-shutter-flash", { opacity: 1, scale: 2.4, duration: 0.25, yoyo: true, repeat: 1 }, 9.25);
+    masterTl.add(() => sfx.cameraClick(), 9.25);
 
     // Fade out U-2 text tag immediately after scan so map stays spotless
-    masterTl.to("#u2-label-callout", { opacity: 0, duration: 0.3 }, 9.40);
+    masterTl.to("#u2-label-callout", { opacity: 0, duration: 0.3 }, 9.80);
 
     // San Cristóbal Site is Discovered! Pin Drops
-    masterTl.to("#pin-sancristobal", { opacity: 1, duration: 0.5, ease: "back.out(2)" }, 9.00);
-    masterTl.add(() => sfx.ping(), 9.00);
+    masterTl.to("#pin-sancristobal", { opacity: 1, duration: 0.5, ease: "back.out(2)" }, 9.40);
+    masterTl.add(() => sfx.ping(), 9.40);
 
     // Key West Distance Line
-    masterTl.to(["#pin-keywest", "#distance-measurer"], { opacity: 1, duration: 0.6, ease: "power2.out" }, 9.40);
+    masterTl.to(["#pin-keywest", "#distance-measurer"], { opacity: 1, duration: 0.6, ease: "power2.out" }, 9.80);
 
     // Missile Range Arcs Sweep from the discovered site!
-    masterTl.to("#missile-arcs-group", { opacity: 1, duration: 0.8, ease: "power2.out" }, 9.90);
-    masterTl.add(() => sfx.alarm(), 10.10);
+    masterTl.to("#missile-arcs-group", { opacity: 1, duration: 0.8, ease: "power2.out" }, 10.40);
+    masterTl.add(() => sfx.alarm(), 10.60);
 
     // Fade out U-2 plane as we approach Beat 3
-    masterTl.to("#u2-recon-mission", { opacity: 0, duration: 0.4 }, 14.80);
+    masterTl.to("#u2-recon-mission", { opacity: 0, duration: 0.4 }, 15.60);
 
-    // BEAT 3 (15.271s -> 22.149s): Pan to Atlantic Quarantine
-    masterTl.add(() => sfx.whoosh(), 15.20);
+    // BEAT 3 (16.209s -> 23.365s): Pan to Atlantic Quarantine
+    masterTl.add(() => sfx.whoosh(), 16.15);
     masterTl.to(camera, {
       x: 540, y: 980, scale: 1.8,
       duration: 1.8, ease: "power3.inOut",
       onUpdate: updateCamera
-    }, 15.25);
+    }, 16.20);
     // HIDE BEAT 2 OVERLAYS COMPLETELY
-    masterTl.to(["#distance-measurer", "#missile-arcs-group", "#pin-sancristobal", "#pin-keywest"], { opacity: 0, duration: 0.4 }, 15.20);
-    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box"], { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.60);
+    masterTl.to(["#distance-measurer", "#missile-arcs-group", "#pin-sancristobal", "#pin-keywest"], { opacity: 0, duration: 0.4 }, 16.15);
+    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box"], { opacity: 1, duration: 0.8, ease: "power2.out" }, 17.40);
     // REVEAL JFK HISTORICAL DOSSIER PHOTO CARD IN SCENE 3
-    masterTl.fromTo("#dossier-jfk", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 15.80);
-    masterTl.add(() => sfx.ping(), 16.80);
+    masterTl.fromTo("#dossier-jfk", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 16.70);
+    masterTl.add(() => sfx.ping(), 17.50);
 
-    // BEAT 4 (22.149s -> 31.992s): Sonar Intercept at Submarine B-59
-    masterTl.add(() => sfx.whoosh(), 22.10);
+    // BEAT 4 (23.365s -> 34.104s): Sonar Intercept at Submarine B-59
+    masterTl.add(() => sfx.whoosh(), 23.30);
     masterTl.to(camera, {
       x: 582, y: 984, scale: 2.4,
       duration: 1.8, ease: "power3.inOut",
       onUpdate: updateCamera
-    }, 22.15);
+    }, 23.35);
     // HIDE BEAT 3 OVERLAYS AND JFK DOSSIER
-    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box", "#dossier-jfk"], { opacity: 0, duration: 0.4 }, 22.10);
-    masterTl.to("#sonar-group", { opacity: 1, duration: 0.6 }, 23.60);
-    masterTl.fromTo("#sonar-wave-1", { rx: 10, ry: 6, opacity: 1 }, { rx: 70, ry: 40, opacity: 0, duration: 1.2, repeat: 5, ease: "power1.out" }, 23.80);
+    masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box", "#dossier-jfk"], { opacity: 0, duration: 0.4 }, 23.30);
+    masterTl.to("#sonar-group", { opacity: 1, duration: 0.6 }, 24.60);
+    masterTl.fromTo("#sonar-wave-1", { rx: 10, ry: 6, opacity: 1 }, { rx: 70, ry: 40, opacity: 0, duration: 1.2, repeat: 5, ease: "power1.out" }, 24.80);
     // REVEAL VASILI ARKHIPOV HISTORICAL DOSSIER PHOTO CARD IN SCENE 4
-    masterTl.fromTo("#dossier-arkhipov", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 22.70);
-    masterTl.add(() => sfx.alarm(), 24.00);
+    masterTl.fromTo("#dossier-arkhipov", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.7, ease: "back.out(1.4)" }, 23.80);
+    masterTl.add(() => sfx.alarm(), 25.00);
 
-    // BEAT 5 (31.992s -> 40.490s): Epic Pullback to Global Atlantic (MAD Detonations)
-    masterTl.add(() => sfx.whoosh(), 31.95);
+    // BEAT 5 (34.104s -> 43.437s): Epic Pullback to Global Atlantic (MAD Detonations)
+    masterTl.add(() => sfx.whoosh(), 34.00);
     masterTl.to(camera, {
       x: 540, y: 880, scale: 0.65,
       duration: 2.4, ease: "power3.inOut",
       onUpdate: updateCamera
-    }, 32.00);
-    masterTl.to(["#sonar-group", "#dossier-arkhipov"], { opacity: 0, duration: 0.4 }, 31.90);
-    masterTl.to(".country-usa", { fill: "#0369a1", stroke: "#38bdf8", strokeWidth: 3, duration: 1.2 }, 33.50);
+    }, 34.10);
+    masterTl.to(["#sonar-group", "#dossier-arkhipov"], { opacity: 0, duration: 0.4 }, 34.00);
+    masterTl.to(".country-usa", { fill: "#0369a1", stroke: "#38bdf8", strokeWidth: 3, duration: 1.2 }, 35.60);
 
     // Beat 5 Multi-Thermonuclear Detonations Motion Graphics
-    masterTl.set("#b5-mad-nuclear-group", { opacity: 1 }, 32.50);
+    masterTl.set("#b5-mad-nuclear-group", { opacity: 1 }, 34.80);
     // Blast 1
-    masterTl.fromTo("#b5-fire-1", { scale: 0.2, opacity: 1 }, { scale: 3.5, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 32.80);
-    masterTl.fromTo("#b5-shock-1", { r: 15, opacity: 1 }, { r: 160, opacity: 0, duration: 2.2, ease: "power1.out" }, 32.80);
-    masterTl.add(() => sfx.alarm(), 32.90);
+    masterTl.fromTo("#b5-fire-1", { scale: 0.2, opacity: 1 }, { scale: 3.5, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 35.20);
+    masterTl.fromTo("#b5-shock-1", { r: 15, opacity: 1 }, { r: 160, opacity: 0, duration: 2.2, ease: "power1.out" }, 35.20);
+    masterTl.add(() => sfx.alarm(), 35.30);
     // Blast 2
-    masterTl.fromTo("#b5-fire-2", { scale: 0.2, opacity: 1 }, { scale: 4.0, opacity: 0.85, duration: 2.0, ease: "power2.out" }, 33.60);
-    masterTl.fromTo("#b5-shock-2", { r: 20, opacity: 1 }, { r: 180, opacity: 0, duration: 2.4, ease: "power1.out" }, 33.60);
+    masterTl.fromTo("#b5-fire-2", { scale: 0.2, opacity: 1 }, { scale: 4.0, opacity: 0.85, duration: 2.0, ease: "power2.out" }, 36.20);
+    masterTl.fromTo("#b5-shock-2", { r: 20, opacity: 1 }, { r: 180, opacity: 0, duration: 2.4, ease: "power1.out" }, 36.20);
     // Blast 3
-    masterTl.fromTo("#b5-fire-3", { scale: 0.2, opacity: 1 }, { scale: 3.6, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 34.40);
-    masterTl.fromTo("#b5-shock-3", { r: 18, opacity: 1 }, { r: 170, opacity: 0, duration: 2.2, ease: "power1.out" }, 34.40);
+    masterTl.fromTo("#b5-fire-3", { scale: 0.2, opacity: 1 }, { scale: 3.6, opacity: 0.8, duration: 1.8, ease: "power2.out" }, 37.20);
+    masterTl.fromTo("#b5-shock-3", { r: 18, opacity: 1 }, { r: 170, opacity: 0, duration: 2.2, ease: "power1.out" }, 37.20);
 
     // Timeline duration anchor
-    masterTl.set({}, {}, 40.49);
+    masterTl.set({}, {}, 43.44);
 
     // Apply first beat
     applyBeat(0);

@@ -14,8 +14,8 @@ const localExportPath = path.join(projectDir, "output_cuban_crisis_short.mp4");
 const audioPath = path.join(projectDir, "audio/voiceover.mp3");
 
 const FPS = 30;
-const DURATION_SEC = 42.0; // 40.5s speech + 1.5s clean ending hold so narration never cuts off
-const TOTAL_FRAMES = Math.ceil(DURATION_SEC * FPS); // 1260 frames
+const DURATION_SEC = 44.5; // 43.44s speech + 1.0s clean ending hold
+const TOTAL_FRAMES = Math.ceil(DURATION_SEC * FPS); // 1335 frames
 
 async function renderDeterministic() {
   console.log("========================================================");
