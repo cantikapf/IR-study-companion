@@ -765,40 +765,35 @@
     window.addEventListener("DOMContentLoaded", fitStage);
     setTimeout(fitStage, 50);
 
-    // --- 3. D3-GEO PROJECTION & INITIAL MAP RENDER ---
+    // --- 3. D3-GEO BASE PROJECTION (RENDERED ONCE AT 60 FPS GPU ZERO-LOAD) ---
     const width = 1080;
     const height = 1920;
 
-    // Dynamic Camera Parameters
-    const camera = {
-      lng: -76.0,
-      lat: 28.0,
-      scale: 1100
-    };
-
-    const projection = d3.geoMercator()
+    // Base Reference Projection: Centered on the Americas/Atlantic Theater
+    const baseProjection = d3.geoMercator()
+      .center([-68, 28])
+      .scale(1200)
       .translate([width / 2, height / 2]);
 
-    const pathGenerator = d3.geoPath(projection);
+    const pathGenerator = d3.geoPath(baseProjection);
 
-    function updateProjection() {
-      projection
-        .center([camera.lng, camera.lat])
-        .scale(camera.scale);
+    // Hardware Accelerated 2D Matrix Camera
+    const camera = {
+      x: 540,
+      y: 960,
+      scale: 1.0
+    };
 
-      // Re-render country paths
-      d3.selectAll(".country-path").attr("d", pathGenerator);
+    const mapCameraGroup = document.getElementById("map-camera-group");
 
-      // Re-render graticule (call function to get GeoJSON)
-      const graticuleGeo = d3.geoGraticule().step([10, 10])();
-      d3.select("#map-graticule").attr("d", pathGenerator(graticuleGeo));
-
-      // Update Geographic Features Coordinates
-      updateTacticalCoordinates();
-      updateU2Flight();
+    function updateCamera() {
+      const s = camera.scale;
+      const tx = 540 - camera.x * s;
+      const ty = 960 - camera.y * s;
+      mapCameraGroup.setAttribute("transform", `translate(${tx}, ${ty}) scale(${s})`);
     }
 
-    // Render Countries once
+    // Render Countries once at load
     const countriesG = d3.select("#countries-layer");
     if (window.WORLD_GEOJSON) {
       countriesG.selectAll("path")
@@ -809,8 +804,13 @@
           if (d.id === "840") return "country-path country-land country-usa";
           if (d.id === "192") return "country-path country-land country-cuba";
           return "country-path country-land";
-        });
+        })
+        .attr("d", pathGenerator);
     }
+
+    // Render Graticule once at load
+    const graticuleGeo = d3.geoGraticule().step([10, 10])();
+    d3.select("#map-graticule").attr("d", pathGenerator(graticuleGeo));
 
     // Coordinates of Critical Historical Landmarks
     const COORDS = {
@@ -818,15 +818,15 @@
       sanCristobal: [-83.05, 22.72],
       havana: [-82.36, 23.11],
       washingtonDC: [-77.03, 38.90],
-      quarantineCenter: [-70.0, 24.0],
+      quarantineCenter: [-72.0, 23.5],
       submarineB59: [-66.0, 27.0]
     };
 
     // U-2 Spy Plane Reconnaissance Mission Coordinates
     const U2_ROUTE = {
-      start: [-86.5, 27.2],        // Gulf of Mexico / West of Florida
-      target: [-83.05, 22.72],     // Over San Cristóbal base
-      end: [-79.0, 18.0]           // Exiting South into Caribbean Sea
+      start: [-86.5, 27.2],
+      target: [-83.05, 22.72],
+      end: [-79.0, 18.0]
     };
 
     const u2Mission = {
@@ -846,9 +846,9 @@
         lat = U2_ROUTE.target[1] + (U2_ROUTE.end[1] - U2_ROUTE.target[1]) * local;
       }
 
-      const screenPt = projection([lng, lat]);
-      const startPt = projection(U2_ROUTE.start);
-      const targetPt = projection(U2_ROUTE.target);
+      const screenPt = baseProjection([lng, lat]);
+      const startPt = baseProjection(U2_ROUTE.start);
+      const targetPt = baseProjection(U2_ROUTE.target);
 
       // Trailing contrail flight path
       d3.select("#u2-flight-path")
@@ -865,15 +865,14 @@
       d3.select("#u2-plane-body").attr("transform", `rotate(${angle})`);
     }
 
-    function updateTacticalCoordinates() {
+    function initTacticalFeatures() {
       // 1. Distance Line: Key West to Havana
-      const kw = projection(COORDS.keyWest);
-      const sc = projection(COORDS.havana);
+      const kw = baseProjection(COORDS.keyWest);
+      const sc = baseProjection(COORDS.havana);
       d3.select("#dist-line").attr("x1", kw[0]).attr("y1", kw[1]).attr("x2", sc[0]).attr("y2", sc[1]);
       d3.select("#dist-pt-a").attr("cx", kw[0]).attr("cy", kw[1]);
       d3.select("#dist-pt-b").attr("cx", sc[0]).attr("cy", sc[1]);
 
-      // Place 90 MILES label cleanly to the East of the line, away from Key West
       const midX = (kw[0] + sc[0]) / 2 + 130;
       const midY = (kw[1] + sc[1]) / 2 + 10;
       d3.select("#dist-label-bg")
@@ -882,13 +881,13 @@
       d3.select("#dist-label-txt").attr("x", midX).attr("y", midY + 5);
 
       // 2. Pins
-      const pSC = projection(COORDS.sanCristobal);
+      const pSC = baseProjection(COORDS.sanCristobal);
       d3.select("#pin-sancristobal").attr("transform", `translate(${pSC[0]}, ${pSC[1]})`);
-      const pKW = projection(COORDS.keyWest);
+      const pKW = baseProjection(COORDS.keyWest);
       d3.select("#pin-keywest").attr("transform", `translate(${pKW[0]}, ${pKW[1]})`);
 
       // 3. Missile Range Arcs (Sweeping from San Cristóbal into US Mainland)
-      const pDC = projection(COORDS.washingtonDC);
+      const pDC = baseProjection(COORDS.washingtonDC);
       const arc1Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(15)();
       const arc2Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(10)();
       const arc3Geo = d3.geoCircle().center(COORDS.sanCristobal).radius(5)();
@@ -902,42 +901,43 @@
       d3.select("#label-dc").attr("x", pDC[0] + 18).attr("y", pDC[1] + 6);
 
       // 4. Quarantine Line (Great circle arc East of Bahamas)
-      const qArcGeo = d3.geoCircle().center([-72, 23.5]).radius(8)();
+      const qArcGeo = d3.geoCircle().center(COORDS.quarantineCenter).radius(8)();
       d3.select("#quarantine-arc").attr("d", pathGenerator(qArcGeo));
-      // Position Quarantine label pill in the clear ocean interior of the circle
-      const pQ = projection([-72.0, 24.5]);
+      const pQ = baseProjection([-72.0, 24.5]);
       d3.select("#quarantine-label-bg").attr("x", pQ[0] - 160).attr("y", pQ[1] - 18).attr("width", 320).attr("height", 36);
       d3.select("#quarantine-label").attr("x", pQ[0]).attr("y", pQ[1] + 5).attr("text-anchor", "middle").attr("font-size", 16);
 
       // Place 3 US Navy Destroyers along the quarantine line
-      const pDes1 = projection([-76.5, 27.5]);
-      const pDes2 = projection([-71.0, 30.5]);
-      const pDes3 = projection([-65.5, 27.0]);
+      const pDes1 = baseProjection([-76.5, 27.5]);
+      const pDes2 = baseProjection([-71.0, 30.5]);
+      const pDes3 = baseProjection([-65.5, 27.0]);
       d3.select("#des-1").attr("transform", `translate(${pDes1[0]}, ${pDes1[1]}) rotate(35)`);
       d3.select("#des-2").attr("transform", `translate(${pDes2[0]}, ${pDes2[1]}) rotate(85)`);
       d3.select("#des-3").attr("transform", `translate(${pDes3[0]}, ${pDes3[1]}) rotate(135)`);
 
       // Independent Fleet Label placed in the ocean north of destroyers
-      const pDesLbl = projection([-73.5, 33.0]);
+      const pDesLbl = baseProjection([-73.5, 33.0]);
       d3.select("#des-label-box").attr("transform", `translate(${pDesLbl[0] - 125}, ${pDesLbl[1] - 17})`);
 
       // Soviet Freighter Route (Starts from ship, points ahead toward quarantine line)
-      const pSF_Start = projection([-61.5, 28.5]);
-      const pSF_End = projection([-66.5, 25.0]);
+      const pSF_Start = baseProjection([-61.5, 28.5]);
+      const pSF_End = baseProjection([-66.5, 25.0]);
       d3.select("#soviet-freighter-path").attr("d", `M ${pSF_Start[0]} ${pSF_Start[1]} L ${pSF_End[0]} ${pSF_End[1]}`);
-      const pShip = projection([-61.5, 28.5]);
+      const pShip = baseProjection([-61.5, 28.5]);
       d3.select("#soviet-freighter-rig").attr("transform", `translate(${pShip[0]}, ${pShip[1]}) rotate(-130)`);
 
       // Independent Freighter Label placed safely in Northeast open ocean
-      const pShipLbl = projection([-62.5, 32.5]);
-      d3.select("#soviet-ship-label-box").attr("transform", `translate(${pShipLbl[0] - 105}, ${pShipLbl[1] - 16})`);
+      const pShipLbl = baseProjection([-57.5, 31.0]);
+      d3.select("#soviet-ship-label-box").attr("transform", `translate(${pShipLbl[0] - 120}, ${pShipLbl[1] - 17})`);
 
       // 5. Sonar at Submarine B-59 (Sargasso Sea)
-      const pSub = projection(COORDS.submarineB59);
+      const pSub = baseProjection(COORDS.submarineB59);
       d3.select("#sonar-group").attr("transform", `translate(${pSub[0]}, ${pSub[1]})`);
     }
 
-    updateProjection();
+    initTacticalFeatures();
+    updateU2Flight();
+    updateCamera();
 
     // --- 4. MASTER 40.49s EDITORIAL TIMELINE (GSAP + VO SYNC) ---
     const BEATS = [
@@ -1045,7 +1045,7 @@
     // --- BUILD CONTINUOUS EDITORIAL CAMERA & VECTOR REVEALS ---
 
     // BEAT 1 (0.0s -> 6.345s): Strategic Global Establish & Nuclear Alert Motion Graphics
-    masterTl.set(camera, { lng: -76.0, lat: 28.0, scale: 1100, onUpdate: updateProjection }, 0);
+    masterTl.set(camera, { x: 540, y: 960, scale: 1.0, onUpdate: updateCamera }, 0);
     masterTl.add(() => sfx.whoosh(), 0.05);
 
     // Beat 1 Nuclear Alert Motion Graphics
@@ -1062,9 +1062,9 @@
     // BEAT 2 (6.345s -> 15.271s): Punch-In to Florida & Cuba, U-2 Reconnaissance Flight
     masterTl.add(() => sfx.whoosh(), 6.30);
     masterTl.to(camera, {
-      lng: -81.0, lat: 26.5, scale: 2800,
+      x: 260, y: 980, scale: 2.3,
       duration: 1.8, ease: "power3.inOut",
-      onUpdate: updateProjection
+      onUpdate: updateCamera
     }, 6.35);
 
     // U-2 Reconnaissance Mission Flight (7.0s -> 12.0s)
@@ -1101,9 +1101,9 @@
     // BEAT 3 (15.271s -> 22.149s): Pan to Atlantic Quarantine
     masterTl.add(() => sfx.whoosh(), 15.20);
     masterTl.to(camera, {
-      lng: -71.5, lat: 26.0, scale: 2100,
+      x: 540, y: 980, scale: 1.8,
       duration: 1.8, ease: "power3.inOut",
-      onUpdate: updateProjection
+      onUpdate: updateCamera
     }, 15.25);
     // HIDE BEAT 2 OVERLAYS COMPLETELY
     masterTl.to(["#distance-measurer", "#missile-arcs-group", "#pin-sancristobal", "#pin-keywest"], { opacity: 0, duration: 0.4 }, 15.20);
@@ -1115,9 +1115,9 @@
     // BEAT 4 (22.149s -> 31.992s): Sonar Intercept at Submarine B-59
     masterTl.add(() => sfx.whoosh(), 22.10);
     masterTl.to(camera, {
-      lng: -67.0, lat: 27.0, scale: 2900,
+      x: 582, y: 984, scale: 2.4,
       duration: 1.8, ease: "power3.inOut",
-      onUpdate: updateProjection
+      onUpdate: updateCamera
     }, 22.15);
     // HIDE BEAT 3 OVERLAYS AND JFK DOSSIER
     masterTl.to(["#quarantine-group", "#des-label-box", "#quarantine-label-box", "#soviet-ship-label-box", "#dossier-jfk"], { opacity: 0, duration: 0.4 }, 22.10);
@@ -1130,9 +1130,9 @@
     // BEAT 5 (31.992s -> 40.490s): Epic Pullback to Global Atlantic (MAD Detonations)
     masterTl.add(() => sfx.whoosh(), 31.95);
     masterTl.to(camera, {
-      lng: -45.0, lat: 38.0, scale: 650,
+      x: 540, y: 880, scale: 0.65,
       duration: 2.4, ease: "power3.inOut",
-      onUpdate: updateProjection
+      onUpdate: updateCamera
     }, 32.00);
     masterTl.to(["#sonar-group", "#dossier-arkhipov"], { opacity: 0, duration: 0.4 }, 31.90);
     masterTl.to(".country-usa", { fill: "#0369a1", stroke: "#38bdf8", strokeWidth: 3, duration: 1.2 }, 33.50);
