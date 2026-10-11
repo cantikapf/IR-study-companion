@@ -34,6 +34,38 @@
       color: #fff;
     }
 
+    /* RENDER MODE (CLEAN 1080x1920 ZERO CHROME, ZERO HUD, FULL BLEED) */
+    body.render-mode {
+      width: 1080px !important;
+      height: 1920px !important;
+      overflow: hidden !important;
+      background: #080c16 !important;
+    }
+    body.render-mode #stage-container {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 1080px !important;
+      height: 1920px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+    }
+    body.render-mode #viewport-scaler {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 1080px !important;
+      height: 1920px !important;
+      transform: none !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+    body.render-mode #hud-controls {
+      display: none !important;
+    }
+
     /* FULL VIEWPORT STAGE CONTAINER */
     #stage-container {
       position: absolute;
@@ -255,13 +287,13 @@
     /* FLOATING HISTORICAL DOSSIER PHOTO CARDS */
     .dossier-card {
       position: absolute;
-      top: 360px;
+      top: 490px;
       left: 70px;
-      width: 270px;
+      width: 250px;
       background: #060912;
       border: 2px solid rgba(56, 189, 248, 0.7);
       border-radius: 12px;
-      padding: 12px;
+      padding: 10px;
       box-shadow: 0 16px 40px rgba(0,0,0,0.9), 0 0 24px rgba(56, 189, 248, 0.25);
       z-index: 55;
       pointer-events: none;
@@ -293,7 +325,7 @@
     .dossier-frame {
       position: relative;
       width: 100%;
-      height: 270px;
+      height: 250px;
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.2);
@@ -570,21 +602,21 @@
                 <use href="#icon-submarine" />
               </g>
 
-              <!-- Submarine Callout Box -->
-              <g id="sub-label-box" transform="translate(60, -42)">
-                <rect width="330" height="74" fill="#060912" stroke="#ef4444" stroke-width="1.5" rx="6" />
-                <text x="14" y="24" fill="#ef4444" font-size="18" font-weight="bold">SOVIET SUBMARINE B-59</text>
-                <text x="14" y="46" fill="#facc15" font-size="13" font-weight="bold">ARMED: 10-KT NUCLEAR TORPEDO</text>
-                <text x="14" y="64" fill="#38bdf8" font-size="13" font-weight="bold">ARKHIPOV VETO // LAUNCH ABORTED</text>
+              <!-- Submarine Callout Box (Proportioned for 2.4x Zoom, Zero Screen Clipping) -->
+              <g id="sub-label-box" transform="translate(-80, 45)">
+                <rect width="160" height="34" fill="#060912" stroke="#ef4444" stroke-width="0.8" rx="3" />
+                <text x="8" y="11" fill="#ef4444" font-size="8" font-weight="bold" font-family="'Space Mono', monospace">SOVIET SUBMARINE B-59</text>
+                <text x="8" y="21" fill="#facc15" font-size="6.5" font-weight="bold" font-family="'Space Mono', monospace">ARMED: 10-KT NUCLEAR TORPEDO</text>
+                <text x="8" y="30" fill="#38bdf8" font-size="6.5" font-weight="bold" font-family="'Space Mono', monospace">ARKHIPOV VETO // LAUNCH ABORTED</text>
               </g>
             </g>
 
             <!-- LAYER 3: TOP-LEVEL OCCLUDING LABELS (Painted after all paths & graticules) -->
             <g id="tactical-labels-layer">
-              <!-- Independent Fleet Label -->
+              <!-- Independent Fleet Label (Proportioned for 1.8x Zoom) -->
               <g id="des-label-box" opacity="0">
-                <rect width="250" height="34" fill="#060912" stroke="#38bdf8" stroke-width="1.8" rx="6" />
-                <text x="125" y="22" fill="#38bdf8" font-size="14" font-weight="bold" letter-spacing="1" text-anchor="middle">US NAVY BLOCKADE FLEET</text>
+                <rect width="140" height="24" fill="#060912" stroke="#38bdf8" stroke-width="1.2" rx="4" />
+                <text x="70" y="16" fill="#38bdf8" font-size="9" font-weight="bold" letter-spacing="0.5" text-anchor="middle" font-family="'Space Mono', monospace">US NAVY BLOCKADE FLEET</text>
               </g>
 
               <!-- Independent Quarantine Label -->
@@ -593,10 +625,10 @@
                 <text id="quarantine-label" fill="#facc15" font-size="16" font-weight="bold" letter-spacing="2">QUARANTINE LINE // 500 NM</text>
               </g>
 
-              <!-- Independent Freighter Label -->
+              <!-- Independent Freighter Label (Proportioned for 1.8x Zoom) -->
               <g id="soviet-ship-label-box" opacity="0">
-                <rect width="210" height="32" fill="#060912" stroke="#ef4444" stroke-width="1.8" rx="6" />
-                <text x="105" y="21" fill="#ef4444" font-size="12" font-weight="bold" letter-spacing="1" text-anchor="middle">SOVIET FREIGHTER CONVOY</text>
+                <rect width="140" height="24" fill="#060912" stroke="#ef4444" stroke-width="1.2" rx="4" />
+                <text x="70" y="16" fill="#ef4444" font-size="9" font-weight="bold" letter-spacing="0.5" text-anchor="middle" font-family="'Space Mono', monospace">SOVIET FREIGHTER CONVOY</text>
               </g>
             </g>
 
@@ -752,6 +784,7 @@
 
     // --- 2. RESPONSIVE AUTO-SCALER ---
     function fitStage() {
+      if (document.body.classList.contains("render-mode")) return;
       const scaler = document.getElementById("viewport-scaler");
       if (!scaler) return;
       const w = window.innerWidth - 30;
@@ -915,9 +948,9 @@
       d3.select("#des-2").attr("transform", `translate(${pDes2[0]}, ${pDes2[1]}) rotate(85)`);
       d3.select("#des-3").attr("transform", `translate(${pDes3[0]}, ${pDes3[1]}) rotate(135)`);
 
-      // Independent Fleet Label placed in the ocean north of destroyers
-      const pDesLbl = baseProjection([-73.5, 33.0]);
-      d3.select("#des-label-box").attr("transform", `translate(${pDesLbl[0] - 125}, ${pDesLbl[1] - 17})`);
+      // Independent Fleet Label placed safely in open ocean between JFK and Quarantine line
+      const pDesLbl = baseProjection([-67.5, 33.8]);
+      d3.select("#des-label-box").attr("transform", `translate(${pDesLbl[0] - 70}, ${pDesLbl[1] - 12})`);
 
       // Soviet Freighter Route (Starts from ship, points ahead toward quarantine line)
       const pSF_Start = baseProjection([-61.5, 28.5]);
@@ -926,9 +959,9 @@
       const pShip = baseProjection([-61.5, 28.5]);
       d3.select("#soviet-freighter-rig").attr("transform", `translate(${pShip[0]}, ${pShip[1]}) rotate(-130)`);
 
-      // Independent Freighter Label placed safely in Northeast open ocean
-      const pShipLbl = baseProjection([-57.5, 31.0]);
-      d3.select("#soviet-ship-label-box").attr("transform", `translate(${pShipLbl[0] - 120}, ${pShipLbl[1] - 17})`);
+      // Independent Freighter Label placed safely in Northeast open ocean (zero screen clipping)
+      const pShipLbl = baseProjection([-61.0, 31.5]);
+      d3.select("#soviet-ship-label-box").attr("transform", `translate(${pShipLbl[0] - 70}, ${pShipLbl[1] - 12})`);
 
       // 5. Sonar at Submarine B-59 (Sargasso Sea)
       const pSub = baseProjection(COORDS.submarineB59);

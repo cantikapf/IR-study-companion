@@ -14,12 +14,12 @@ const localExportPath = path.join(projectDir, "output_cuban_crisis_short.mp4");
 const audioPath = path.join(projectDir, "audio/voiceover.mp3");
 
 const FPS = 30;
-const DURATION_SEC = 40.49;
-const TOTAL_FRAMES = Math.ceil(DURATION_SEC * FPS);
+const DURATION_SEC = 42.0; // 40.5s speech + 1.5s clean ending hold so narration never cuts off
+const TOTAL_FRAMES = Math.ceil(DURATION_SEC * FPS); // 1260 frames
 
 async function renderDeterministic() {
   console.log("========================================================");
-  console.log("🎬 STARTING DETERMINISTIC FRAME-BY-FRAME RENDER");
+  console.log("🎬 STARTING DETERMINISTIC FRAME-BY-FRAME RENDER (FULL BLEED)");
   console.log(`Resolution: 1080x1920 | FPS: ${FPS} | Frames: ${TOTAL_FRAMES}`);
   console.log("========================================================");
 
@@ -38,16 +38,9 @@ async function renderDeterministic() {
   console.log("Loading composition:", fileUrl);
   await page.goto(fileUrl);
 
-  // Setup exact 1080x1920 unscaled canvas and pause playhead
+  // Activate render-mode (full bleed 1080x1920, no scaler, no phone border, no HUD buttons)
   await page.evaluate(() => {
-    const s = document.getElementById("viewport-scaler");
-    s.style.transform = "none";
-    s.style.top = "0";
-    s.style.left = "0";
-    s.style.borderRadius = "0";
-    s.style.border = "none";
-    s.style.boxShadow = "none";
-    document.getElementById("hud-controls").style.display = "none";
+    document.body.classList.add("render-mode");
     masterTl.pause();
     masterTl.time(0);
   });
@@ -69,6 +62,7 @@ async function renderDeterministic() {
     "-r", String(FPS),
     "-c:a", "aac",
     "-b:a", "192k",
+    "-af", "apad=pad_dur=2.0",
     "-shortest",
     finalExportPath
   ]);
