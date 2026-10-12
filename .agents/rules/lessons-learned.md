@@ -482,6 +482,12 @@ Every final assistant response in main chat or subagent handoff report should in
   - *Strict Rule*: Fase 2 (sintesis audio Kokoro), Fase 3 (kamera Remotion), Fase 4 (still render), dan Fase 5 (render master MP4) **HANYA boleh dijalankan setelah pengguna memberikan persetujuan (ACC)**.
   - *Why*: Mencegah waktu render Remotion yang sia-sia dan menghindari desinkronisasi narasi dengan graf sebelum fondasi substansi disepakati.
 
+- **Assessment Answer-Key Integrity & Option-Position Bias (2026-10-12)**:
+  - *Substance ≠ structural integrity*: Subagent yang ditanya "apakah kunci didukung teks?" akan menjawab "ya" untuk 336/337 item, tapi melewatkan bahwa 90% kuis bab berkunci `opt2` dan 83% ujian berkunci opsi ke-2. Kunci yang benar secara isi tetap bocor bila posisinya tetap — siswa menebak dari pola, bukan pemahaman.
+  - *Rule*: Saat mengaudit asesmen, WAJIB cek tiga lapis — (1) kunci didukung sumber, (2) distribusi posisi kunci (hitung histogram `correct`), (3) apakah render mengacak opsi. Laporan subagent "0 defect" hanya mencakup lapis 1.
+  - *Subagent WEAK bisa false alarm*: `031#q2` dilaporkan WEAK, tetapi kuis itu menanyakan MSSD (Mill's Method of Difference), kunci `opt0` "Most Similar Systems Design" — benar. Reproduksi manual sebelum mengadopsi temuan.
+  - *Fix pattern (order-independent shuffle)*: Simpan kunci pada atribut node (`data-idx`) / `value` radio, bukan pada indeks posisi; lalu acak urutan node DOM saat `DOMContentLoaded`. Pindah urutan node → atribut ikut pindah → penilaian tetap benar. Berlaku untuk `_includes/quiz.html` dan `_includes/module_exam.html`. Tidak butuh perubahan data 337 item.
+
 - **Milestone M7: Online Course Platform Transformation (10-Persona Architecture) (2026-10-05)**:
   1. *Zero-Backend LMS Data Portability*: Mengembangkan sistem sinkronisasi kemajuan (*progress backup & sync*) 100% sisi klien tanpa database backend atau akun pengguna eksternal. Struktur state JSON terkompresi mencakup `chapter_read_*`, `quiz_*`, `exam_*`, dan `bookmark_*` yang dapat diekspor dan diimpor secara instan dengan verifikasi skema, memenuhi kebutuhan persona pembelajar multi-perangkat dan privasi data.
   2. *Build-Time Static Assessment Engines*: Mengkompilasi 180 butir soal ujian akhir modul (10 soal per modul) langsung ke dalam data statis Jekyll (`_data/module_exams.json` & `assets/data/module_exams.json`) menghasilkan latensi 0 ms saat penilaian, passing score threshold 70%, feedback rasional ilmiah komprehensif, serta penanda kelulusan deterministik `exam_module_<id>_passed`.

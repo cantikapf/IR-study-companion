@@ -217,6 +217,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Randomize option order so the correct answer's position cannot be memorised.
+    // Keys are stored on the option nodes (data-idx), so scoring is order-independent.
+    const optsStack = container.querySelector('.quiz-options');
+    if (optsStack) {
+        const items = Array.from(optsStack.children);
+        for (let i = items.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [items[i], items[j]] = [items[j], items[i]];
+        }
+        items.forEach(el => optsStack.appendChild(el));
+    }
+
     // Expose explanation helper to submitQuiz
     container._renderExplanation = renderExplanation;
 });

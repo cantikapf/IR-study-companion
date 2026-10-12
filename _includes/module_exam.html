@@ -81,6 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Randomize option order so a fixed answer position cannot be memorised.
+    // Scoring reads the radio input's value index, so it stays order-independent.
+    container.querySelectorAll('.exam-options-stack').forEach(stack => {
+        const rows = Array.from(stack.children);
+        for (let i = rows.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [rows[i], rows[j]] = [rows[j], rows[i]];
+        }
+        rows.forEach(el => stack.appendChild(el));
+    });
+
     // Option selection styling
     const labels = container.querySelectorAll('.exam-option-label');
     labels.forEach(label => {

@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-12 - Audit Konten Fase 2 (Kunci Jawaban vs Teks Bab) + Remediasi Bias Posisi:
+1. `Substansi Kunci — LULUS`: 337 item (157 kuis bab + 180 soal ujian) dipecah jadi 6 unit seimbang (3 modul/unit), diaudit 6 subagent paralel (read-only). Hasil: 336 OK. Satu-satunya temuan `031#q2` **direproduksi orkestrator dan dibatalkan** — kuis menanyakan MSSD (Mill's Method of Difference), kunci `opt0` "Most Similar Systems Design", cocok dengan penjelasannya. Subagent salah baca. Efektif **337/337 benar secara isi**; tidak ada swapped-key.
+2. `Cacat Struktural (dilewatkan subagent)`: bias posisi kunci — kuis bab 141/157 (90%) berkunci `opt2` (`opt4` tak pernah jadi kunci); ujian modul 149/180 (83%) kunci pada opsi ke-2. `course-player.js` tidak mengacak opsi → siswa bisa lulus via pola posisi, bukan pemahaman.
+3. `Remediasi (Opsi 1, disetujui user)`: shuffling opsi saat render di dua engine include — `_includes/quiz.html` (acak anak `.quiz-options`) dan `_includes/module_exam.html` (acak tiap `.exam-options-stack`). Kunci tersimpan pada node (`data-idx`) / value radio, jadi penilaian order-independent; nol perubahan data 337 item.
+4. `Verifikasi multi-lapis`: pytest 369/369 PASS · Jekyll build OK (71.5s) · shuffle hadir di 157 halaman kuis + 18 halaman ujian `_site` (semua `exam-options-stack` ber-shuffle; satu "MISSING" = `course-player.css`, bukan halaman).
+5. `Status`: Fase 2 SELESAI. Fase 3 (substansi akademik per modul: kedalaman, akurasi sitasi, cakupan silabus) menunggu ACC.
+
 2026-10-11 - Audit Konten Fase 1 (Integritas Struktural) — 3 workstream paralel dilepas ke subagent, lalu diverifikasi ulang independen oleh orkestrator:
 1. `WS1 — Celah Kuis/Flashcard Bab EU`: `_chapters/041-foreign-policy-of-developed-countries/040-EU-foreign-policy.md` satu-satunya bab materi (dari 158) tanpa `{% include quiz.html %}` dan `{% include flashcards.html %}`. Ditambahkan 4 flashcard (CFSP, ECSC, Multipillar Structure, Energy Security) + 1 kuis. Divider `---` yatim di akhir dibersihkan.
 2. `WS2 — Integritas chapter_slug Glosarium`: 122 dari 161 entri `_data/ir_glossary.json` punya `chapter_slug` yang tidak resolve ke slug frontmatter nyata (39 path-form mentah + 83 slug usang). Dipetakan via modul + term/definition; diperbaiki serentak di `assets/data/ir_glossary.json`. **Temuan audit orkestrator**: subagent salah fallback 3 entri (Non-Refoulement, NPT, Strategic Chokepoint) ke slug halaman index modul 034 yang nol coverage — dikoreksi manual ke `human-security`, `institution-security`, `energy-security`. Gate akhir: `UNRESOLVED=0` atas 161 entri vs 180 slug.
