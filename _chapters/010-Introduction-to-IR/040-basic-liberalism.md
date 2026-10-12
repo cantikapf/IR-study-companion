@@ -61,7 +61,7 @@ However, the League collapsed with the outbreak of the Second World War, illustr
 
 Despite the failure of the League of Nations, the United Nations (UN) emerged as its successor after World War 2, with the aim of maintaining international peace and security. However, the UN Charter took a more cautious approach to collective security compared to the League Covenant.
 
-Under the League, members were automatically obliged to provide military support in response to acts of aggression. This 'automaticity' was dropped in the UN system, with members retaining the discretion on whether to contribute troops or enforce sanctions. The UN Security Council holds primary responsibility for authorizing military action, but the permanent members (US, UK, France, China, Russia) can veto resolutions. This reduces the scope for unilateral idealism.
+Under the League Covenant (Article 16(2)), the Council was merely empowered to recommend what military forces member states should contribute in response to acts of aggression, rather than imposing an automatic binding obligation to deploy troops. In the UN system, the UN Security Council holds primary responsibility for authorizing collective military action under Chapter VII, but permanent members (US, UK, France, China, Russia) can veto resolutions, and member states retain discretion on contributing forces. This reduces the scope for unilateral idealism.
 
 While the UN has achieved some successes in peacekeeping, humanitarian aid, and setting global norms, it has faced criticism for inaction at times of crisis due to gridlock between the major powers. The UN is an imperfect institution, but remains an important forum facilitating international cooperation.
 

@@ -18,7 +18,7 @@ Various approaches explain the occurrence of riots and armed conflicts. The soci
 
 ## Resolution of Ethnic Civil Wars
 
-Resolving ethnic civil wars involves diverse strategies. Compromise settlements, exemplified by the Sudan civil war in 1972 or the Oslo Accords in 1993, sometimes collapse later. Power-sharing models, as witnessed in post-apartheid South Africa and the Good Friday agreement in Northern Ireland, seek to distribute power among conflicting groups. Military victories can be achieved by governments, as seen in Nigeria in the 1960s, or by rebel ethnic groups leading to the partition of Bengal and the independence of Bosnians.
+Resolving ethnic civil wars involves diverse strategies. Compromise settlements, exemplified by the Sudan civil war in 1972 or the Oslo Accords in 1993, sometimes collapse later. Power-sharing models, as witnessed in post-apartheid South Africa and the Good Friday agreement in Northern Ireland, seek to distribute power among conflicting groups. Military victories can be achieved by governments, as seen in Nigeria (1970) and Sri Lanka (2009), or by insurgent movements, as seen with the Rwandan Patriotic Front (1994) or the Eritrean People's Liberation Front (1991).
 
 ## Peace Operations
 

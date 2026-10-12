@@ -27,7 +27,7 @@ International courts can be categorized into four main types:
 
 ### Global Courts
 
-Global courts have jurisdiction that extends across borders and continents. The **International Court** of Justice (ICJ) is an example of a global court. Based in The Hague, the ICJ settles legal disputes between countries and provides advisory opinions on legal questions proposed by authorized UN organs and agencies. All UN member states are automatically parties to the ICJ statute, but they are not obligated to comply with the court's rulings.
+Global courts have jurisdiction that extends across borders and continents. The **International Court** of Justice (ICJ) is an example of a global court. Based in The Hague, the ICJ settles legal disputes between countries and provides advisory opinions on legal questions proposed by authorized UN organs and agencies. All UN member states are automatically parties to the ICJ statute. Under Article 94(1) of the UN Charter, member states are obligated to comply with the Court's decisions in any case to which they are party, and non-compliance can be referred to the Security Council under Article 94(2), though the ICJ itself lacks its own independent enforcement apparatus.
 
 ### Regional Courts 
 

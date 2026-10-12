@@ -51,6 +51,8 @@ The legal theories help explain and justify territorial acquisitions, but there 
 
 Special rules have evolved in international law with regard to boundary rivers. These rules recognize the equal rights of riparian states in the uses of the whole course of a river that traverses or forms the border between two or more states. There have been a number of legal principles developed through international judicial decisions and treaties to deal with the complex issues that arise regarding navigation, fishing, pollution, and ownership over segments or islands of the rivers.
 
+### Island and Maritime Territorial Disputes
+
 One prominent example is the dispute between the United Kingdom and Argentina over the Falkland Islands, South Georgia and the South Sandwich Islands and surrounding maritime areas. The Falkland Islands constitute an Overseas Territory of the United Kingdom in the southern Atlantic Ocean, located over 400 km east of the South American continent. The Falkland Islands Government exercises control over its internal affairs but the United Kingdom remains responsible for their defense and foreign affairs. However, Argentina claims sovereignty over the islands it calls the Malvinas along with other British and Chilean islands in the region. The dispute led to an armed conflict in 1982 when Argentina invaded and occupied the islands before being defeated by the British. But Argentina continues to claim the islands are part of its national territory. The dispute remains unresolved despite United Nations resolutions calling on both countries to resume negotiations.
 
 ### Law of Outer Space

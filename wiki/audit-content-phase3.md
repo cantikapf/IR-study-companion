@@ -1,7 +1,7 @@
 ---
 type: report
 title: Content Audit — Phase 3 (Academic Substance)
-status: remediated-fails
+status: remediated
 date: 2026-10-12
 tags:
   - audit
@@ -76,3 +76,9 @@ Three-phase content audit of the IR Study Companion curriculum (~332k words, 157
 - Jekyll build OK
 - Every FAIL fix re-checked by orchestrator via grep + re-read
 - 13 files changed, all under `_chapters/`; frontmatter/slug/quiz/flashcard Liquid untouched
+
+## MINOR remediation (2026-10-12)
+
+All 22 MINOR findings were corrected in a second pass (3 file-disjoint workstreams). Fixes: League Art 16(2) Council-recommendation not automatic obligation (010/040); League Council unanimity per Art 5(1) (012/070); NATO 1949 not countering a 1955 Warsaw Pact (012/120); post-Vichy Malagasy uprising (012/150); DPD equal representation per Art 22C(2) (013/050); UU 1/1957 expanded local councils (013/060); 1955→1971 election gap + 30% as candidate-list quota (013/070); Medan rivals not aligned (013/080); GATT had Art XXII/XXIII dispute settlement (021/040); TPP had an SME chapter (021/050); Ricardo-Viner = specific/immobile factors (021/060); Bengal partition / Dayton Bosnia are not ethnic rebel military victories (022/060); Morgenthau = traditionalist critic of positivism (031/020); post-9/11 rhetoric not "North Korea as cause" (033/040); ALP in government since May 2022 (041/050); Yasukuni in Chiyoda, Tokyo (041/070); Art 2(7) is in Chapter I (042/050); Falklands moved to Island & Maritime Disputes (042/060); ICJ rulings binding per Art 94(1) (042/091); UNSCR 688 not Chapter VII / no force authorization (042/092); US-demographics digression replaced with developmental-state model (043/050); ATT 2013 and ICTY 1993 (045/050).
+
+Verification: pytest 369/369 PASS · Jekyll build OK · 22 files changed, all under `_chapters/`; every fix re-checked by orchestrator via grep + context read.

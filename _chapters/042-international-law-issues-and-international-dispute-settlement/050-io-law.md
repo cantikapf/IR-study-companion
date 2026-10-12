@@ -25,7 +25,7 @@ The UN Charter lays out the purposes, principles, and organizational structure o
 - Outlining the 6 main organs of the UN: the General Assembly, the Security Council, the Economic and Social Council, the Trusteeship Council, the International Court of Justice, and the Secretariat. 
 - Setting membership criteria, rights, and responsibilities. 
 - Articulating core principles of the UN like sovereign equality of member states, good faith fulfillment of obligations, peaceful resolution of disputes, and non-intervention in domestic affairs.
-- Chapter V, Article 2(7) specifically limits UN intervention, stating "Nothing contained in the present Charter shall authorize the United Nations to intervene in matters which are essentially within the domestic jurisdiction of any state." This upholds national sovereignty.
+- Chapter I, Article 2(7) specifically limits UN intervention, stating "Nothing contained in the present Charter shall authorize the United Nations to intervene in matters which are essentially within the domestic jurisdiction of any state." This upholds national sovereignty.
 - Chapter VI establishes means for peaceful dispute settlement like negotiation, enquiry, mediation, conciliation, arbitration, and judicial settlement.
 
 The UN Charter provides the legal and normative framework underpinning the entire UN system. It balances national sovereignty with the need for international cooperation to maintain peace, advance human rights, and solve global issues. The Charter's limitations on intervention affirm state sovereignty while providing means to peacefully adjudicate conflicts between member states.

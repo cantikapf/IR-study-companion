@@ -70,15 +70,15 @@ In summary, the TPP established far-reaching, legally binding protections for la
 
 ## Business Provisions
 
-The RCEP places greater emphasis on improving the overall business environment across member nations compared to the TPP. Some of the key differences in business provisions between the two agreements include:
+Both agreements incorporate modern commercial rules to improve the broader business environment across member nations. Key dimensions of business provisions include:
 
-- **E-Commerce** - The RCEP contains an entire chapter dedicated to e-commerce, establishing rules to facilitate cross-border digital trade. It aims to prevent barriers that would restrict electronic transmissions and provides frameworks for issues like online consumer protection, personal information protection, and digital signatures. In contrast, the TPP only included partial e-commerce provisions.
+- **E-Commerce** - Both agreements feature dedicated e-commerce chapters establishing rules for cross-border digital trade. The TPP included a comprehensive chapter (Chapter 14) that pioneered binding disciplines on cross-border data flows and prohibited customs duties on digital products, while the RCEP establishes frameworks for online consumer protection, personal information protection, paperless trading, and digital signatures.
 
-- **SME Support** - Acknowledging the critical role of SMEs in economic growth, the RCEP implements special measures to increase their ability to participate in and benefit from the agreement. This includes provisions on information sharing, reducing regulatory burdens, and enhancing access to finance. The TPP did not provide explicit support mechanisms for SMEs.
+- **SME Support** - Acknowledging the critical role of SMEs in economic growth, both agreements provide explicit mechanisms to support smaller firms. The TPP included a dedicated chapter on Small and Medium-Sized Enterprises (Chapter 24) to facilitate access to trade information and integrate smaller businesses into global supply chains. Similarly, the RCEP incorporates measures on information sharing, reducing regulatory burdens, and enhancing SME competitiveness.
 
 - **Government Procurement** - The RCEP mandates increased transparency in the government procurement process and non-discrimination against companies from partner countries bidding on government contracts. It aims to open up this sector among member states. Government procurement commitments were also present in the TPP but not emphasized to the same degree.
 
-Overall, the emphasis on e-commerce, SMEs, and government procurement in the RCEP demonstrates its focus on improving the broader business climate across the Asia Pacific region. The TPP took a narrower approach more limited to trade liberalization.
+Overall, the emphasis on e-commerce, SMEs, and government procurement across both frameworks demonstrates growing regional attention to modern digital trade and supply chain integration.
 
 ## Enforcement Against IP Infringement 
 

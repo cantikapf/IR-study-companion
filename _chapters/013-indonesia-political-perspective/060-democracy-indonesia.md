@@ -34,15 +34,15 @@ The Dutch colonial government implemented a system linking central and local gov
 
 This system aimed to enhance efficiency by utilizing local intermediaries for basic governance while maintaining Dutch oversight and authority. Local leaders had some fiscal responsibilities for their jurisdictions but lacked true autonomy.
 
-The Dutch also initiated the Ethical Policy during the early 20th century, which aimed to lighten the economic and fiscal burden on localities by involving them in limited decision-making and administration. While the Ethical Policy represented a very modest shift, the fundamental two-tier system connecting central colonial and local administration persisted until it was abolished in 1957 under the Basic Law on Local Administration enacted by the new Indonesian government following independence.
+The Dutch also initiated the Ethical Policy during the early 20th century, which aimed to lighten the economic and fiscal burden on localities by involving them in limited decision-making and administration. While the Ethical Policy represented a very modest shift, the fundamental two-tier system connecting central colonial and local administration persisted until it was restructured in 1957 under the Basic Law on Local Administration (Law No. 1/1957) enacted following independence.
 
-## Post-Independence Centralization
+## Post-Independence Governance and Centralization
 
-Following independence, Indonesia initially retained the two-tier system established under Dutch colonial rule, which linked the central government to local administrative units. However, in 1957 the enactment of the Basic Law on Local Administration led to the abolishment of this two-tier system. 
+Following independence, Indonesia initially retained elements of the two-tier system established under Dutch colonial rule. In 1957, the enactment of the Basic Law on Local Administration (Law No. 1/1957) attempted to replace colonial dualism by significantly expanding the powers of local assemblies (DPRD) and placing regional heads under local legislative control, granting regions unprecedented autonomy.
 
-Under the new law, local assemblies and heads of government were eliminated. Local administrators became part of the central government bureaucracy, functioning as agents of the central government rather than representatives of local interests. This reflected the dominance of Javanese political elites and centralized autocratic rule under President Sukarno.
+However, this decentralized model was short-lived. Amid rising regional rebellions and political unrest, President Sukarno declared martial law and later issued Presidential Edict No. 6/1959 under Guided Democracy, reversing the 1957 reforms. Central authority was reinstated, subordinating regional heads to Jakarta and reducing local assemblies to consultative roles.
 
-The 1957 law thus marked a shift towards centralization in Indonesia in the post-independence period. Local autonomy and administration were subsumed under central authority. This unitary system concentrated power in the hands of central government officials. Local needs and aspirations took a backseat, as local administrators were appointed by and reported to the central bureaucracy rather than local residents.
+The post-1959 period thus marked a sharp shift towards centralization in Indonesia. Local autonomy was subsumed under central authority, creating a unitary system where power was concentrated in central government hands. Local needs and aspirations took a backseat, as regional administrators were appointed by and reported to the central bureaucracy rather than local residents.
 
 ## Post-Suharto Decentralization Reforms
 

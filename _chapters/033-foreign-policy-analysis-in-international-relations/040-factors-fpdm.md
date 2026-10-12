@@ -29,9 +29,9 @@ Evoked sets are things that are already known as a set of information (white pap
 
 ### Emotions
 
-Emotions, such as fear, anger, and desire for revenge, can profoundly impact decision-making and are influenced by both domestic and international events. Leaders are known to be influenced by mass opinion which is also influenced by domestic and international events. This emotional analysis can also be seen from how decision-makers make public speeches
+Emotions, such as fear, anger, and desire for revenge, can profoundly impact decision-making and are influenced by both domestic and international events. Leaders are known to be influenced by mass opinion which is also influenced by domestic and international events. This emotional analysis can also be seen from how decision-makers make public speeches.
 
-For example: when Bush gave a speech a week after the 9/11 incident, his speech often contained repetitions of caring for mothers and children which indicated his empathetic attitude and repeated repetition of North Korea as the cause of terrorism which indicated his hatred for North Korea. Which can be seen that emotions are also influenced by existing pressures.
+For example, following the September 11 attacks, President George W. Bush's speeches reflected profound emotional pressure, combining themes of national compassion with moral outrage directed at al-Qaeda and regimes harboring terrorists. This emotional framing later extended to his 2002 State of the Union address, which grouped Iraq, Iran, and North Korea into an "axis of evil," demonstrating how fear and indignation shape leaders' threat perceptions under acute crisis pressures.
 
 ### Images
 

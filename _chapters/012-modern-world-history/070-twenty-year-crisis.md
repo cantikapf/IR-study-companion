@@ -39,7 +39,7 @@ The League of Nations had three main constitutional organs:
 
 - The Council began with 4 permanent members - Britain, France, Italy, and Japan. It later expanded to include 9 elected non-permanent members.
 - The Council met more regularly throughout the year to oversee political disputes and security matters. 
-- It could make decisions with a majority vote, but the great powers often dominated the Council.
+- In accordance with Article 5(1) of the Covenant, Council decisions on substantive matters required unanimous agreement (with simple majorities reserved only for procedural issues), giving members an effective veto while great powers dominated deliberations.
 
 ### The Secretariat
 

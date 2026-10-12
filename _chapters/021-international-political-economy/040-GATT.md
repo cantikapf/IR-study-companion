@@ -19,7 +19,7 @@ Overall, the shift from GATT to the WTO represented an evolution from a set of m
 | 1. | Multilateral treaty (agreement)                                     | International organization with membership                                  |
 | 2. | Applied on provisional basis (protocol for provisional application) | No provisional application                                                  |
 | 3. | Covered tarrif barriers in trade and goods                          | Include non-tariff barriers, trade in service, intellectual property rights |
-| 4. | No dispute settlement mechanism                                     | Strong dispute settlement mechanism                                         |
+| 4. | Weaker dispute settlement (diplomatic, Articles XXII/XXIII)          | Strong, binding dispute settlement mechanism (DSB / Appellate Body)         |
 
 </div>
 

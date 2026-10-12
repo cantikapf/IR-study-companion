@@ -44,7 +44,7 @@ Significant progress came in 2004 with the implementation of a 30% quota system 
 
 ## Advancements for Indonesian Women
 
-Indonesia has seen several advancements for women's political participation in recent decades. One of the most notable was the implementation of a 30% quota system for women in 2004. This quota mandated that 30% of a political party's candidates and parliamentary seats must be filled by women. 
+Indonesia has seen several advancements for women's political participation in recent decades. One of the most notable was the implementation of a 30% quota system for women in 2004. This policy mandated that at least 30% of a political party's candidates on electoral lists must be women, rather than reserving parliamentary seats.
 
 The quota system has significantly increased the number of women in parliament. In the 2004 election, women won 11.3% of parliamentary seats, up from 8% in the previous election. By 2009, this percentage had jumped to 18%, largely attributed to the quota. While Indonesia has yet to reach the 30% target, the quota represents an important affirmative action policy to improve women's political representation.
 
@@ -82,7 +82,7 @@ Pursuing political office requires a certain degree of education and political k
 
 ## The Beginning of Women Representative in Indonesian Political System
 
-Ten years after Indonesia independence, there was a first general election that was held in 1955 and will be always held every five years after that. The numbers of political parties which enter the election always different and that makes different calculation of **women participation** (Parawansa, 2005). The election of 1955 has been called to be the first opening for Indonesian women to be representative in parliament, there are seven candidates came from women’s organization and a few from political parties which made 17 women are elected to the legislation (Parawansa, 2005).
+Ten years after Indonesian independence, the first general election was held in 1955. Although intended to occur regularly, no further national elections took place until 1971 under the New Order regime, after which elections were held every five years. The numbers of political parties which enter the election always different and that makes different calculation of **women participation** (Parawansa, 2005). The election of 1955 has been called to be the first opening for Indonesian women to be representative in parliament, there are seven candidates came from women’s organization and a few from political parties which made 17 women are elected to the legislation (Parawansa, 2005).
 
 In New Order era when Soeharto become the president, Indonesia use a single party which is a major party is a dominant one, and women representation are determined by the party-elites because they can’t do anything if they don’ have anyone who strong enough to bring them to the top, so the candidates must be have close relationship with the elites, also in this era, women don’t involved directly in election campaign and they there is a gap between the candidates and the voters. (Parawansa, 2005).
 

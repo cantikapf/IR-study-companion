@@ -61,7 +61,7 @@ The Berlin Blockade was an early **Cold War** crisis that increased tensions bet
 
 ## NATO Formation Provides Western Alliance
 
-In April 1949, the North Atlantic Treaty Organization (NATO) was established as a collective defense alliance between Western powers. The catalyst was rising tensions with the Soviet Union and a desire to counterbalance the influence of the Warsaw Pact. 
+In April 1949, the North Atlantic Treaty Organization (NATO) was established as a collective defense alliance between Western powers. The catalyst was rising tensions with the Soviet Union and Soviet pressure in Eastern and Central Europe, underscored by events like the Berlin Blockade. (The Warsaw Pact was established later, in May 1955, as the Soviet bloc's response to NATO and the rearmament of West Germany.)
 
 Led by the United States, NATO provided a formal alliance between North American and European countries. The original members included the US, Canada, Britain, France, Belgium, the Netherlands, Luxembourg, Norway, Denmark, Iceland, Italy, and Portugal. It marked a significant commitment by the US to European security.
 

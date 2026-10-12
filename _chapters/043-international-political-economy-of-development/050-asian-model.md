@@ -59,17 +59,18 @@ The excessive focus on rapid GDP growth has also raised doubts about this being 
 
 Alternative measures of progress like the UN's Human Development Index are gaining prominence. Overall, the Asian model needs to evolve to address these sustainability issues and ensure long-term, inclusive and green development.
 
-## Diversity of Asian Americans
+## The Developmental State Model
 
-Asian Americans are an incredibly diverse population, representing over 20 ethnic groups and speaking over 100 language dialects. It's important to recognize that Asian Americans have varied backgrounds and experiences based on factors like:
+A defining framework explaining East Asia's economic rise is the developmental state model, first formulated by political scientist Chalmers Johnson to describe post-war Japan and later extended to South Korea and Taiwan by Alice Amsden and Robert Wade. In contrast to both Soviet-style command economies and Anglo-American laissez-faire capitalism, the developmental state prioritizes state-led strategic industrial policy while harnessing competitive market forces.
 
-- Socioeconomic status - There are large discrepancies in income, educational attainment, and social mobility among different Asian American groups. Many face poverty, lack of access to resources, and other challenges.
-- Geographic residence - Historically, Asian immigrants settled in coastal states like California, New York, and Hawaii. But today, the fastest growing Asian populations are in southern and midwestern states. Their needs and integration experiences vary by location.
-- Ethnicity - The term "Asian American" aggregates many diverse ethnicities like Chinese, Indian, Vietnamese, Filipino, Korean, Japanese, and more. Each group has distinct cultural values, migration histories, community institutions and identities.  
-- Immigration histories - Later waves of Asian immigrants (post-1965) from Southeast Asia, South Asia, and elsewhere have markedly different needs than earlier Chinese and Japanese settlers. Refugees may require more social services.
-- Inter-ethnic differences - There are sometimes tensions between ethnic groups due to cultural stereotypes, perceived competition, or political conflicts in Asia.
+Key pillars of the developmental state include:
 
-Proper representation and support for Asian Americans requires nuanced understanding of subgroups. One size does not fit all. Policymakers must recognize how factors like ethnicity, language, religion, immigration era, and education intersect to create unique barriers or opportunities for members of this diverse population.
+- **Pilot Planning Agencies** - Elite economic bureaucracies, such as Japan's Ministry of International Trade and Industry (MITI) and South Korea's Economic Planning Board (EPB), guided long-term industrial strategy, targeting high-value sectors for growth.
+- **State-Directed Credit** - Governments channeled capital and preferential credit through state-controlled banking systems directly to strategic infant industries, accelerating capital accumulation.
+- **Export Discipline** - Unlike inward-looking import substitution industrialization, developmental states conditioned subsidies, import tariffs, and tax incentives on strict export performance metrics in global markets.
+- **Embedded Autonomy** - Sociologist Peter Evans characterized these states by "embedded autonomy," where highly meritocratic bureaucrats maintain close networks with private business conglomerates (such as Japan's keiretsu and South Korea's chaebols) without becoming captured by special private interests.
+
+By disciplining private capital, building robust infrastructure, and prioritizing technology acquisition, the developmental state model engineered rapid structural transformation and sustained decades of export-led manufacturing growth.
 
 ## Evolution of the Model
 

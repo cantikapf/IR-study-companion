@@ -64,7 +64,7 @@ This hybrid model reflected an effort to balance the district system's tendency 
 
 In 2004, Indonesia implemented reforms to its electoral system. A district system was introduced for the Regional Representative Council (DPD), while proportional representation was maintained for other legislative bodies like the People's Representative Council (DPR).
 
-Under the district system, DPD representatives are elected from constituencies at the provincial level. This ties them more closely to their constituents in the regions. The number of DPD members per province depends on its population. 
+Under the district system, DPD representatives are elected from constituencies at the provincial level. This ties them more closely to their constituents in the regions. Under Article 22C(2) of the 1945 Constitution, each province is entitled to equal representation—four DPD members regardless of population size.
 
 The rationale was to provide better regional representation. DPD members are focused on voicing regional interests at the national level. The district system was seen as simplifying the process for voters to elect representatives devoted to their province.
 

@@ -51,7 +51,7 @@ World War II catalyzed a wave of nationalist rebellions against colonial rule ac
 
 One major uprising was the Quit India movement in 1942 against British rule. Indian leader Mohandas Gandhi launched the movement, demanding immediate independence. Gandhi and other Indian National Congress leaders were arrested, but the protests continued. Millions took part in nonviolent civil disobedience, strikes, and other forms of mass resistance. Though suppressed by the British, the Quit India movement undermined their legitimacy and demonstrated the strength of Indian nationalist sentiment.
 
-Other examples include the Madagascar revolt against French Vichy rule in 1947 and uprisings against the restoration of Dutch rule in Indonesia after the war. The war weakened and distracted the colonial powers while fueling nationalism. This created conditions for successful anti-colonial revolts that ushered in decolonization after 1945.
+Other examples include the 1947–1948 Malagasy uprising against postwar French colonial rule (under the Fourth Republic) and uprisings against the restoration of Dutch rule in Indonesia after the war. The war weakened and distracted the colonial powers while fueling nationalism. This created conditions for successful anti-colonial revolts that ushered in decolonization after 1945.
 
 ## The Cold War's Influence
 
