@@ -13,6 +13,26 @@ tags:
 
 ## Last Updated
 
+2026-10-12 - Produksi Video Mind Map CH070 (Global Finance & Global Trade as Agendas):
+1. `Pipeline 6-Fase Berhasil Diselesaikan`:
+   - Fase 1: Academic Concept Brief (`public/data/ch070/brief.json`) dengan 55/55 kutipan terverifikasi grounded 100%.
+   - Fase 2: Academic Critic Review menyelaraskan mandat IMF vs World Bank dan doktrin liberalisasi finansial.
+   - Fase 3: Concept Graph (`public/data/ch070/graph.json`) 35 node, 34 edge, 4 act, lulus validator struktur 0 defect.
+   - Fase 4: Voiceover Kokoro-82M `af_heart` (8 slide, 470.4 detik, 14.112 frame, 53 subtitle tersinkronisasi monotonik).
+   - Fase 5: Layout kanvas & 3-Pillar Camera Rig (`build_ch070_flowchart_data.py`). Menyelesaikan defect visual teks meluber (32/35 node) dengan content-aware auto-sizing (+28px safety buffer), penataan ulang bebas tabrakan (min gap 60px), dan supresi label panah saat panorama di `RoughArrow.tsx`.
+2. `Verifikasi Multi-Gate Lulus Mutlak`:
+   - `npx tsc --noEmit` -> 0 error.
+   - `validate_mindmap.ts ch070` -> 0 defect struktural.
+   - `audit_frames.ts ch070` -> ZERO DEFECTS (14.112 frame patuh zona aman subtitle).
+   - `audit_card_fit.ts ch070` -> 35/35 PASS.
+   - `pytest` -> 369/369 PASS.
+3. `Aset & Registri`:
+   - Poster panorama 1080p (`IR_M01_CH070_Global_Finance_and_Trade_Poster.png`).
+   - Official YouTube Thumbnail 1080p (`IR_M01_CH070_Global_Finance_and_Trade_Thumbnail.png`) via `generate_thumbnail.py`.
+   - Frontmatter bab `070-global-finance-trade.md` terpasang gateway card `explanatory_video`.
+   - `learning-videos/catalog.json` & `learning-videos/README.md` tersinkronisasi.
+   - Master video MP4 render aktif berjalan di background (`IR_M01_CH070_MindMap_1080p.mp4`).
+
 2026-10-12 - Audit Konten Fase 3 — Remediasi 22 MINOR:
 1. `22 MINOR dituntaskan` (3 subagent file-disjoint, 22 file, +44/-41): (a) hukum/IO — League Art 16(2) rekomendasi dewan bukan kewajiban otomatis (`010/040`), unanimitas Art 5(1) (`012/070`), GATT punya dispute settlement Art XXII/XXIII (`021/040`), ICJ rulings mengikat Art 94(1) (`042/091`), UNSCR 688 bukan Chapter VII (`042/092`), Art 2(7) di Chapter I (`042/050`), Falklands dipindah ke "Island & Maritime Disputes" (`042/060`); (b) fakta/tanggal — NATO 1949 bukan lawan Warsawa 1955 (`012/120`), kelanjutan pasca-Vichy Madagaskar (`012/150`), DPD representasi setara Art 22C(2) (`013/050`), UU 1/1957 memperluas DPRD (`013/060`), jeda pemilu 1955→1971 + kuota 30% daftar calon (`013/070`), rival Medan tak bersekutu (`013/080`), TPP punya bab SME (`021/050`), Ricardo-Viner faktor spesifik/imobil (`021/060`), Morgenthau tradisionis anti-positivisme (`031/020`), retorika pasca-9/11 bukan "Korea Utara penyebab" (`033/040`), ALP berkuasa sejak Mei 2022 (`041/050`), Yasukuni di Chiyoda Tokyo (`041/070`), ATT 2013 & ICTY 1993 (`045/050`); (c) coverage — digresi demografi AS diganti model developmental-state (`043/050`), Bengal/Bosnia bukan kemenangan militer etnis (`022/060`).
 2. `Verifikasi`: pytest 369/369 PASS · Jekyll build OK (164.9s) · 22 file (semua `_chapters/`, +44/-41) · tiap fix dicek ulang orkestrator (grep + baca konteks).

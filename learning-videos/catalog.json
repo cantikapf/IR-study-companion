@@ -168,6 +168,34 @@
         "status": "Published"
       },
       "last_updated": "2026-10-10"
+    },
+    {
+      "id": "IR-M01-CH070",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "070",
+      "chapter_slug": "070-global-finance-trade",
+      "title": "Global Finance and Global Trade as Agendas",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 470.4,
+      "frames": 14112,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Rendered",
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH070_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH070_Global_Finance_and_Trade_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH070_Global_Finance_and_Trade_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "status": "Ready for Re-upload / Sync"
+      },
+      "last_updated": "2026-10-12",
+      "file_size_bytes": 106937521
     }
   ]
 }
