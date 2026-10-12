@@ -109,6 +109,16 @@ body.dark-theme .glossary-filter-pill.is-active {
   background: #f4f4f5;
   color: #09090b;
 }
+body.dark-theme .glossary-plain-note {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+body.dark-theme .glossary-plain-label {
+  color: #a7f3d0;
+}
+body.dark-theme .glossary-plain-text {
+  color: var(--lms-ink-primary);
+}
 .glossary-item-card {
   background: var(--lms-surface);
   border: 1px solid var(--lms-hairline);
@@ -129,10 +139,6 @@ body.dark-theme .glossary-filter-pill.is-active {
   border-radius: 0 var(--lms-radius-sm) var(--lms-radius-sm) 0;
   margin-bottom: 0.85rem;
 }
-body.dark-theme .glossary-plain-note {
-  background: rgba(16, 185, 129, 0.14);
-  border-left-color: #34d399;
-}
 .glossary-plain-label {
   display: block;
   font-size: 0.775rem;
@@ -141,9 +147,6 @@ body.dark-theme .glossary-plain-note {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
-}
-body.dark-theme .glossary-plain-label {
-  color: #34d399;
 }
 .glossary-plain-text {
   font-size: 0.9rem;

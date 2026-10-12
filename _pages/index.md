@@ -821,6 +821,61 @@ permalink: /
       max-height: 380px;
     }
   }
+
+  /* ── Dark Mode Overrides ── */
+  body.dark-theme .home-eyebrow { color: var(--lms-ink-tertiary); }
+  body.dark-theme .home-title { color: var(--lms-ink-primary); }
+  body.dark-theme .home-description { color: var(--lms-ink-secondary); }
+  body.dark-theme .home-section-title { color: var(--lms-ink-primary); }
+  body.dark-theme .home-section-subtitle { color: var(--lms-ink-tertiary); }
+  body.dark-theme .metric-value { color: var(--lms-ink-primary); }
+  body.dark-theme .metric-label { color: var(--lms-ink-tertiary); }
+  body.dark-theme .resume-card {
+    background: var(--lms-surface);
+    border-color: var(--lms-border-strong);
+  }
+  body.dark-theme .resume-card .resume-title,
+  body.dark-theme .resume-card .resume-lesson-title { color: var(--lms-ink-primary); }
+  body.dark-theme .resume-card .resume-subtitle { color: var(--lms-ink-secondary); }
+  body.dark-theme .resume-card .resume-progress-text,
+  body.dark-theme .resume-card .resume-progress-caption { color: var(--lms-ink-tertiary); }
+  body.dark-theme .resume-card .resume-cta,
+  body.dark-theme .resume-action-btn {
+    background: #f4f4f5;
+    color: #09090b !important;
+  }
+  body.dark-theme .cx-panel-overview { color: #93c5fd; }
+  body.dark-theme .cx-video-chip {
+    color: #fb7185;
+    background: rgba(251, 113, 133, 0.15);
+  }
+  body.dark-theme .cx-filter.is-on {
+    background: var(--lms-subtle);
+    color: var(--lms-ink-primary);
+    border-color: var(--lms-border-strong);
+  }
+  body.dark-theme .sandbox-tag { color: #93c5fd; }
+  body.dark-theme .sandbox-status-chip {
+    color: #6ee7b7;
+    background: rgba(110, 231, 183, 0.12);
+  }
+  body.dark-theme .sandbox-hud-chip.is-streak {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.12);
+  }
+  body.dark-theme .labs-counter-badge {
+    color: #93c5fd;
+    background: rgba(147, 197, 253, 0.12);
+  }
+  body.dark-theme .lab-card-link { color: #93c5fd; }
+  body.dark-theme .lab-card-badge-done {
+    color: #6ee7b7;
+    background: rgba(110, 231, 183, 0.12);
+  }
+  body.dark-theme .btn-sim.btn-sim-coop {
+    background: #059669;
+    color: #ffffff;
+  }
 </style>
 
 <div class="home-viewport">

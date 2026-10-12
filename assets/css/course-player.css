@@ -58,6 +58,41 @@ body.dark-theme {
   --lms-border-strong: rgb(255 255 255 / 20%);
 }
 
+/* Contents page links */
+.chapter-label { color: var(--lms-ink-primary); }
+.chapter a { color: var(--lms-ink-primary); text-decoration: none; }
+.chapter a:hover { text-decoration: underline; }
+.abstract { color: var(--lms-ink-secondary); }
+
+/* Component dark overrides */
+body.dark-theme .sync-btn-primary {
+  background: var(--lms-subtle);
+  color: var(--lms-ink-primary);
+  border-color: var(--lms-border-strong);
+}
+
+body.dark-theme .sync-btn-text-danger {
+  color: #f87171;
+}
+
+body.dark-theme .lesson-terms-badge {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.2);
+}
+
+body.dark-theme .lesson-term-card-plain-title {
+  color: #a7f3d0;
+}
+
+body.dark-theme .lesson-term-card-plain-text {
+  color: var(--lms-ink-primary);
+}
+
+body.dark-theme .lesson-term-card-plain {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
 /* Base Reset & Typography */
 html {
   box-sizing: border-box;
@@ -1522,8 +1557,9 @@ body.dark-theme .btn-dock-complete {
   border: none;
 }
 body.dark-theme .sync-btn-primary {
-  background: #f4f4f5;
-  color: #09090b;
+  background: var(--lms-subtle);
+  color: var(--lms-ink-primary);
+  border-color: var(--lms-border-strong);
 }
 .sync-btn-primary:hover {
   opacity: 0.9;
@@ -2118,9 +2154,8 @@ body.dark-theme .ir-popover-plain-label {
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
 body.dark-theme .lesson-terms-badge {
-  color: #34d399;
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(52, 211, 153, 0.3);
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.2);
 }
 .lesson-terms-subtitle {
   font-size: 0.88rem;
@@ -2176,8 +2211,8 @@ body.dark-theme .lesson-terms-badge {
   margin-bottom: 0.75rem;
 }
 body.dark-theme .lesson-term-card-plain {
-  background: rgba(16, 185, 129, 0.15);
-  border-left-color: #34d399;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
 }
 .lesson-term-card-plain-title {
   font-size: 0.7rem;

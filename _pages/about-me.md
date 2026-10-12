@@ -4,6 +4,13 @@ title: About the Platform & Academic Methodology
 permalink: /about-me.html
 ---
 
+<style>
+/* ── Dark Mode Overrides ── */
+body.dark-theme .home-eyebrow { color: var(--lms-ink-tertiary); }
+body.dark-theme .home-title { color: var(--lms-ink-primary); }
+body.dark-theme .home-description { color: var(--lms-ink-secondary); }
+</style>
+
 <div class="home-viewport" style="max-width: 860px;">
   <header class="home-hero" style="margin-bottom: 2.5rem;">
     <div class="home-eyebrow">Academic Credibility &bull; Open Educational Resources</div>

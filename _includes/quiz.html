@@ -144,6 +144,59 @@ body.dark-theme .quiz-explanation-title {
     text-decoration: underline;
     font-size: 0.825rem;
 }
+
+body.dark-theme .quiz-container {
+  background: #18181b;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+body.dark-theme .quiz-header-badge {
+  color: rgba(244, 244, 245, 0.55);
+}
+body.dark-theme .quiz-header-badge::before {
+  background: #f4f4f5;
+}
+body.dark-theme .quiz-question {
+  color: #f4f4f5;
+}
+body.dark-theme .quiz-option {
+  background: #121215;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(244, 244, 245, 0.75);
+}
+body.dark-theme .quiz-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+body.dark-theme .quiz-option.selected {
+  border-color: #f4f4f5;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4f4f5;
+}
+body.dark-theme .quiz-submit {
+  background: #f4f4f5;
+  color: #09090b;
+}
+body.dark-theme .quiz-option.correct {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+body.dark-theme .quiz-option.wrong {
+  border-color: rgba(248, 113, 113, 0.35);
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+}
+body.dark-theme .quiz-feedback.show-correct {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: #6ee7b7;
+}
+body.dark-theme .quiz-feedback.show-wrong {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(248, 113, 113, 0.3);
+  color: #fca5a5;
+}
 </style>
 
 <div class="quiz-container" id="quiz-{{ include.id }}" aria-label="Knowledge Checkpoint">
