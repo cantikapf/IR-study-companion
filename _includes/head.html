@@ -20,7 +20,7 @@
 <link rel="manifest" href="{{site.baseurl}}/manifest.json">
 <meta name="theme-color" content="#3b82f6">
 
-<meta name="generator" content="Jekyll (using jekyll-chapterbook theme)">
+<meta name="generator" content="Jekyll (Bespoke LMS engine)">
 
 {%- if site.author -%}
   <meta name="author" content="{{ site.author | escape }}">
@@ -39,12 +39,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <!--
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="152x152"
-  href="{{site.baseurl}}/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+  apple-touch-icon omitted: the GitBook theme asset it referenced was removed.
+  Add a rel="apple-touch-icon" here pointing at a local PNG if one is produced.
 -->
-{% if site.favicon_path %}  
+{% if site.favicon_path %}
 <link
   rel="shortcut icon"
   href="{{site.baseurl}}/{{site.favicon_path}}"

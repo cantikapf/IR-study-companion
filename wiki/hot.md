@@ -13,6 +13,18 @@ tags:
 
 ## Last Updated
 
+2026-10-12 - Repo Rapikan + Build-Output De-bloat (Dead Code & Stale Artifact Purge):
+1. `Audit Referensi`: Sweep seluruh repo (rg, exclude .git/node_modules/_site/.venv/simulation) atas setiap include/layout/asset kandidat sebelum penghapusan.
+2. `Dead Code Dihapus (63 file, −12.531 baris)`:
+   - 12 `_includes/*.html` orphan (0 referensi nyata): `above-content`, `below-content`, `body`, `chapter-link`, `figure`, `footer-extra`, `toc-date`, `progress`, `reading_progress`, `reading_time`, `homepage_progress`, `chapter_progress_menu`.
+   - 5 `_includes/*.json.tpl` GitBook metadata (`metadata.json.tpl`, `metadata-home`, `metadata-post`, `gitbook-metadata`, `gitbook-sharing`).
+   - `assets/gitbook/` (41 file, 1,5 MB — nol load di runtime) + `assets/chapterbook/` (2 file).
+   - `_layouts/about-me.html`, `_layouts/sitemap.html` (nol halaman memakainya).
+   - `scripts/missing_keywords.json` (artefak scratch yang ter-track).
+3. `Referensi Basi Dikoreksi`: `head.html` meta generator "jekyll-chapterbook theme" → "Bespoke LMS engine"; blok komentar apple-touch GitBook dibersihkan; `manifest.json` ikon 152px GitBook dihapus (tetap merender `/static/icon.png`); blok `bookcrumbs` `_config.yml` (nol konsumen) dihapus.
+4. `Build-Output De-bloat (766 MB → 60 MB)`: `_config.yml exclude` diperluas (`learning-videos/shorts-experiments`, `playwright-report`, `test-results`, `e2e`, `scripts`, `public`, `docs`, `.venv`). Sebelumnya Jekyll menyalin 702 MB footage eksperimen Shorts + report Playwright + source `scripts/` ke `_site/`. Poster kanonik + katalog tetap tersalin.
+5. `Verifikasi`: pytest 369/369 PASS · Jekyll build OK (129s) · `_site` bebas referensi `assets/gitbook`/`jekyll-chapterbook` (0 hit) · `manifest.json` render benar · halaman kunci (index, contents, disclaimer, about-me, glossary, 404, sitemap) ada · gateway video chapter (basic-realism) tetap ter-embed.
+
 2026-10-12 - Produksi Video Mind Map CH070 (Global Finance & Global Trade as Agendas):
 1. `Pipeline 6-Fase Berhasil Diselesaikan`:
    - Fase 1: Academic Concept Brief (`public/data/ch070/brief.json`) dengan 55/55 kutipan terverifikasi grounded 100%.

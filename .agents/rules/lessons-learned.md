@@ -49,6 +49,12 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Repo Hygiene & Jekyll Build-Output Bloat (2026-10-12)**:
+  1. *Jekyll Copies Every Non-Excluded File into `_site/`*: `exclude:` hanya menahan direktori yang didaftarkan. Tanpa entri eksplisit, Jekyll menyalin subtree non-web berat (footage eksperimen Shorts 702 MB, `playwright-report/`, `test-results/`, source `scripts/`, `public/`, `.venv/`) ke `_site/` — membengkakkan output 766 MB → 60 MB setelah exclude diperluas. Periksa `du -sh _site/*` setelah setiap perubahan struktur direktori besar.
+  2. *Exclude Granularity vs Media Web Assets*: Jangan pernah mengecualikan parent direktori media secara borongan bila aset web (poster/thumbnail) berada di dalamnya. Kecualikan hanya subfolder non-web berat (`learning-videos/exports`, `learning-videos/shorts-experiments`, `learning-videos/probe`).
+  3. *Orphan Detection Requires Full-Repo Sweep*: Banyak `_includes/*.html` (12 file) dan `.json.tpl` (5 file) GitBook adalah dead code. Buktikan 0 referensi via sweep `rg` yang mengecualikan `.git`, `node_modules`, `_site`, `.venv`, `simulation` SEBELUM menghapus; catatan di `wiki/hot.md` (narasi historis) bukan referensi kode.
+  4. *JSON `write_file` Guard Rejects Frontmatter*: `patch`/`write_file` menolak menulis file `.json` yang berawalan frontmatter Jekyll (`---`) karena gagal validasi JSON. Untuk file ber-frontmatter (`manifest.json`, `sw.js`) gunakan `cp` dari file staging `.txt`, bukan tool tulis JSON.
+
 - **Content Audit Phase 1 — Structural Integrity (2026-10-11)**:
   1. *Orchestrator Must Re-Run Gates, Not Trust Subagent Reports*: Subagent pelaporan `UNRESOLVED=0` ternyata melewatkan 3 entri — gate verifikasi independen menemukannya. Selalu reproduksi gate sendiri atas artefak child sebelum menyatakan lolos.
   2. *"Resolved" Checks Must Include Index Pages*: Slug glosarium yang valid mencakup slug halaman `000-index.md` modul, bukan hanya bab materi. Gate yang mengecualikan index menghasilkan false-positive `unresolved`.
