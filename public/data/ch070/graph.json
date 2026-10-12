@@ -1,0 +1,610 @@
+{
+  "chapter": "CH070",
+  "root": "root_global_finance_trade",
+  "acts": [
+    {
+      "id": "act_1",
+      "title": "Act I: The Global Economy Puzzle",
+      "hub": "hub_act1_global_economy",
+      "scope": "Uneven economic interconnectedness, intensity versus extensity metrics, and regional trade clustering"
+    },
+    {
+      "id": "act_2",
+      "title": "Act II: Postwar Institutional Architecture",
+      "hub": "hub_act2_institutions",
+      "scope": "Bretton Woods monetary system, GATT to WTO evolution, and undemocratic lender governance"
+    },
+    {
+      "id": "act_3",
+      "title": "Act III: The Finance Paradox",
+      "hub": "hub_act3_finance_paradox",
+      "scope": "Financial liberalization doctrine, efficient capital allocation theory, mission creep, and hot money volatility"
+    },
+    {
+      "id": "act_4",
+      "title": "Act IV: The Crisis Reckoning",
+      "hub": "hub_act4_crisis_reckoning",
+      "scope": "2007-2008 subprime crisis breakdown, public bailouts, and regulatory control regimes"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "root_global_finance_trade",
+      "title": "Global Finance and Trade Architecture",
+      "subtitle": "Uneven Integration, Multilateral Institutions, and Systemic Financial Fragility",
+      "kind": "hub",
+      "bullets": [
+        "Postwar economic order established at Bretton Woods expanded global transactions unevenly across regions",
+        "Financial deregulation detached from regulatory control regimes generated systemic crisis and forced public bailouts"
+      ]
+    },
+    {
+      "id": "hub_act1_global_economy",
+      "title": "Act I: The Global Economy Puzzle",
+      "subtitle": "Uneven Expansion, Flow Dynamics, and Regional Clustering",
+      "kind": "hub",
+      "bullets": [
+        "World trade expanded dramatically since 1970 but remained clustered in advanced industrial economies",
+        "Contrasts transaction intensity against geographic extensity and regional agreements against global integration"
+      ]
+    },
+    {
+      "id": "global_economic_flows",
+      "title": "Dimensions of Global Economic Flows",
+      "subtitle": "Analytical metrics distinguishing transaction magnitude from geographic reach",
+      "kind": "hub",
+      "bullets": [
+        "Disaggregates global interconnectedness into distinct density and dispersion dimensions",
+        "Framework essential for identifying whether globalization is truly worldwide or geographically narrow"
+      ]
+    },
+    {
+      "id": "intensity_of_flows",
+      "title": "Intensity of Economic Flows",
+      "subtitle": "Magnitude and density of cross-border transactions across national borders",
+      "kind": "concept",
+      "bullets": [
+        "Measures trade volume, foreign direct investment, capital transfers, and migration density",
+        "Reflects deepening transaction frequency among heavily integrated industrial trading partners"
+      ]
+    },
+    {
+      "id": "extensity_of_flows",
+      "title": "Extensity of Economic Flows",
+      "subtitle": "Geographical spread and worldwide reach of economic transactions across nations",
+      "kind": "concept",
+      "bullets": [
+        "Measures number of participating countries and global dispersion of cross-border linkages",
+        "Reveals whether economic networks encompass developing nations or remain spatially restricted"
+      ]
+    },
+    {
+      "id": "spatial_trade_patterns",
+      "title": "Spatial Organization of World Trade",
+      "subtitle": "Contrasting worldwide economic integration against concentrated regional blocs",
+      "kind": "hub",
+      "bullets": [
+        "Examines whether trade growth represents genuine global inclusion or regional concentration",
+        "Identifies structural exclusion of peripheral developing nations from core trading circuits"
+      ]
+    },
+    {
+      "id": "globalization",
+      "title": "Worldwide Economic Globalization",
+      "subtitle": "Universal integration of economies across goods, capital, and technology",
+      "kind": "concept",
+      "bullets": [
+        "Theoretically envisions worldwide economic interdependence and reciprocal cross-border market opening",
+        "Promised comprehensive integration of developing economies into expanding global production networks"
+      ]
+    },
+    {
+      "id": "regional_economic_integration",
+      "title": "Regional Economic Integration",
+      "subtitle": "Trade and investment flows clustered predominantly within regional trading blocs",
+      "kind": "concept",
+      "bullets": [
+        "FDI and goods commerce concentrate heavily inside North America, the European Union, and East Asia",
+        "Postwar trade growth driven by regional neighbor agreements rather than genuine worldwide inclusion"
+      ]
+    },
+    {
+      "id": "geographically_uneven_globalization",
+      "title": "Geographically Uneven Globalization",
+      "subtitle": "Persistent exclusion of peripheral economies from global trade benefits",
+      "kind": "concept",
+      "bullets": [
+        "Advanced industrial regions capture major trade gains while vast areas participate only marginally",
+        "Least developed countries operate on systemic margins with restricted market access and investment"
+      ]
+    },
+    {
+      "id": "hub_act2_institutions",
+      "title": "Act II: Postwar Institutional Architecture",
+      "subtitle": "Bretton Woods Foundations, Trade Evolution, and Governance Deficits",
+      "kind": "hub",
+      "bullets": [
+        "1944 conference established multilateral framework to secure postwar monetary and trade stability",
+        "Evolution from GATT to WTO and lender voting inequality created structural developmental imbalances"
+      ]
+    },
+    {
+      "id": "multilateral_trade_system",
+      "title": "Multilateral Trade Order",
+      "subtitle": "Evolution from provisional GATT tariff rounds to binding WTO dispute resolution",
+      "kind": "hub",
+      "bullets": [
+        "Institutional transition designed to overcome negotiating bottlenecks and establish commerce rules",
+        "Confronts persistent deadlocks over developed country agricultural protectionism"
+      ]
+    },
+    {
+      "id": "gatt",
+      "title": "General Agreement on Tariffs and Trade (GATT)",
+      "subtitle": "1947 provisional trade agreement reducing tariffs via unanimous consensus",
+      "kind": "concept",
+      "bullets": [
+        "Established rules and negotiating rounds for reducing tariffs and import quotas between nations",
+        "Unwieldy consensus structure required unanimous member agreement, leading to institutional gridlock"
+      ]
+    },
+    {
+      "id": "world_trade_organization",
+      "title": "World Trade Organization (WTO)",
+      "subtitle": "1995 formal trade body establishing binding dispute resolution and commercial rules",
+      "kind": "concept",
+      "bullets": [
+        "Provides permanent institutional foundation for negotiating multilateral agreements and trade rules",
+        "Replaces unanimity with enforceable dispute settlement panels to resolve international trade friction"
+      ]
+    },
+    {
+      "id": "wto_signaling_mechanism",
+      "title": "WTO Signalling Mechanism",
+      "subtitle": "Institutional commitment device signaling trade orthodoxy to global lenders",
+      "kind": "concept",
+      "bullets": [
+        "Joining WTO signals adherence to free trade norms to IMF, World Bank, and credit rating agencies",
+        "Enhances sovereign credibility to attract overseas private investment and multilateral loan access"
+      ]
+    },
+    {
+      "id": "agricultural_subsidies_deadlock",
+      "title": "Agricultural Subsidies Deadlock",
+      "subtitle": "Developed country farm supports restricting developing state comparative advantage",
+      "kind": "concept",
+      "bullets": [
+        "US and European Union agricultural subsidies prevent southern nations from realizing agricultural gains",
+        "Impasse over agricultural protections repeatedly stalls multilateral rounds and trade liberalization"
+      ]
+    },
+    {
+      "id": "bretton_woods_monetary_system",
+      "title": "Postwar Monetary Stability Order",
+      "subtitle": "1944 framework establishing dollar-pegged exchange rates and international lenders",
+      "kind": "hub",
+      "bullets": [
+        "Engineered monetary stability to prevent competitive devaluations that fueled prewar economic collapse",
+        "Created IMF and World Bank as twin multilateral pillars of global macroeconomic management"
+      ]
+    },
+    {
+      "id": "bretton_woods_order",
+      "title": "Bretton Woods Monetary Order",
+      "subtitle": "1944 monetary regime anchoring postwar stability via dollar-pegged exchange rates",
+      "kind": "concept",
+      "bullets": [
+        "Instituted fixed exchange rate regime tied to US dollar with multilateral balance of payments support",
+        "Established institutional mandate to foster postwar reconstruction and international financial stability"
+      ]
+    },
+    {
+      "id": "evidence_dollar_gold_standard",
+      "title": "Dollar-Gold Anchor Standard",
+      "subtitle": "US dollar as central reserve currency backed by fixed gold convertibility",
+      "kind": "evidence",
+      "bullets": [
+        "US dollar functioned as primary global transaction currency anchored by 35 dollars per ounce gold peg",
+        "Central banks maintained parity margins, anchoring global liquidity until unilateral 1971 closing"
+      ]
+    },
+    {
+      "id": "undemocratic_financial_governance",
+      "title": "Undemocratic Financial Governance",
+      "subtitle": "Dominance of IMF and World Bank voting power by Western contributing states",
+      "kind": "concept",
+      "bullets": [
+        "United States and Western European nations hold largest voting shares and decisive executive influence",
+        "Loan conditions reflect geopolitical and commercial priorities of donors over needs of borrowers"
+      ]
+    },
+    {
+      "id": "imf_stabilization_mandate",
+      "title": "IMF Crisis Stabilization Mandate",
+      "subtitle": "Emergency balance-of-payments loans conditional on fiscal austerity reforms",
+      "kind": "concept",
+      "bullets": [
+        "Provides emergency liquidity to sovereign nations facing balance-of-payments and currency crises",
+        "Requires borrowers to adopt strict austerity measures, spending cuts, and free-market discipline"
+      ]
+    },
+    {
+      "id": "world_bank_development_mandate",
+      "title": "World Bank Development Mandate",
+      "subtitle": "Long-term development project financing conditional on market-friendly reforms",
+      "kind": "concept",
+      "bullets": [
+        "Finances capital infrastructure and long-term development projects in developing countries",
+        "Conditions loans on recipient adoption of policies friendly to foreign investment and trade openness"
+      ]
+    },
+    {
+      "id": "hub_act3_finance_paradox",
+      "title": "Act III: The Finance Paradox",
+      "subtitle": "Cross-Border Financial Liberalization, Mission Creep, and Capital Volatility",
+      "kind": "hub",
+      "bullets": [
+        "1980s deregulatory push allowed financial flows to dwarf and decouple from physical trade in goods",
+        "Institutional mission creep exposed developing countries to volatile speculative capital flight"
+      ]
+    },
+    {
+      "id": "financial_liberalization",
+      "title": "Financial Liberalization Doctrine",
+      "subtitle": "Deregulatory policies permitting financial firms and markets to operate with minimal oversight",
+      "kind": "concept",
+      "bullets": [
+        "Eliminated cross-border capital controls and regulatory limits on financial institutions and markets",
+        "Elevated laissez-faire market self-regulation as dominant ideology governing global financial flows"
+      ]
+    },
+    {
+      "id": "efficient_capital_allocation",
+      "title": "Efficient Capital Allocation Rationale",
+      "subtitle": "Theoretical doctrine that borderless capital flows to its most productive global use",
+      "kind": "concept",
+      "bullets": [
+        "Hypothesizes that unconstrained financial markets channel global savings into highest-return investments",
+        "Provided orthodox theoretical legitimacy for dismantling sovereign capital account regulations"
+      ]
+    },
+    {
+      "id": "finance_trade_divergence",
+      "title": "Finance-Trade Divergence",
+      "subtitle": "Concentration of global finance in North Atlantic detached from trade in goods",
+      "kind": "concept",
+      "bullets": [
+        "Cross-border financial transactions expanded exponentially beyond underlying volumes of goods trade",
+        "Financial assets remained heavily clustered in Wall Street and London rather than dispersing globally"
+      ]
+    },
+    {
+      "id": "mission_creep",
+      "title": "Institutional Mission Creep",
+      "subtitle": "IMF and World Bank expanding mandate from trade stabilization to capital deregulation",
+      "kind": "concept",
+      "bullets": [
+        "Institutions originally formed to stabilize trade shifted to aggressively enforcing financial openness",
+        "Prioritized interests of Western commercial banks by demanding capital account liberalization"
+      ]
+    },
+    {
+      "id": "hot_money_volatility",
+      "title": "Hot Money Volatility",
+      "subtitle": "Rapid speculative capital inflows and sudden reversals destabilizing emerging economies",
+      "kind": "concept",
+      "bullets": [
+        "Developing markets opening to foreign finance experience volatile surges of short-term portfolio funds",
+        "Sudden speculative capital flight causes sharp currency devaluations and severe balance of payments crises"
+      ]
+    },
+    {
+      "id": "evidence_emerging_market_fragility",
+      "title": "Emerging Market Capital Account Vulnerability",
+      "subtitle": "Removal of capital controls leaving developing states vulnerable to liquidity shocks",
+      "kind": "evidence",
+      "bullets": [
+        "Developing nations stripped of defensive capital controls suffer acute macroeconomic destabilization",
+        "Short-term portfolio reversals trigger systemic sovereign debt distress across recipient economies"
+      ]
+    },
+    {
+      "id": "hub_act4_crisis_reckoning",
+      "title": "Act IV: The Crisis Reckoning",
+      "subtitle": "2007-2008 Systemic Collapse, State Bailouts, and Regulatory Control Regimes",
+      "kind": "hub",
+      "bullets": [
+        "Subprime crisis demonstrated catastrophe of unchecked financial deregulation and self-regulation",
+        "Public bailouts halted systemic collapse while proving indispensability of regulatory control regimes"
+      ]
+    },
+    {
+      "id": "subprime_financial_crisis",
+      "title": "2007-2008 Subprime Financial Crisis",
+      "subtitle": "Systemic financial breakdown triggered by bank overexposure to mortgage-backed securities",
+      "kind": "concept",
+      "bullets": [
+        "Bursting of US housing bubble exposed over-leveraged, under-capitalized positions across major banks",
+        "Illiquid mortgage derivatives triggered liquidity freezes, bank failures, and worldwide recession"
+      ]
+    },
+    {
+      "id": "public_bailouts",
+      "title": "Public Bailouts and State Intervention",
+      "subtitle": "Massive government rescues deployed to prevent systemic international financial collapse",
+      "kind": "concept",
+      "bullets": [
+        "Emergency sovereign bailouts and guarantees rescued large financial institutions from bankruptcy",
+        "State intervention prevented cascading contagion while revealing moral hazards of private risk socialization"
+      ]
+    },
+    {
+      "id": "regulatory_control_regimes",
+      "title": "Regulatory Control Regimes",
+      "subtitle": "Prudential public supervisory frameworks indispensable for systemic economic stability",
+      "kind": "concept",
+      "bullets": [
+        "Mandates capital adequacy requirements, strict leverage limits, and asset transparency standards",
+        "Proves global finance cannot safely operate as self-regulating entity detached from public authority"
+      ]
+    },
+    {
+      "id": "market_self_regulation_failure",
+      "title": "Collapse of Market Self-Regulation Rationale",
+      "subtitle": "Empirical breakdown of laissez-faire ideology in complex financialized markets",
+      "kind": "hub",
+      "bullets": [
+        "Self-regulating markets concentrated wealth and incentivized excessive risk-taking by too-big-to-fail banks",
+        "Underscored that financial liberalization is fundamentally incompatible with unmanaged risk stability"
+      ]
+    },
+    {
+      "id": "evidence_bank_insolvency_failures",
+      "title": "Bank Over-Leverage and Insolvency Failures",
+      "subtitle": "Collapse of Bear Stearns and Lehman Brothers from opaque mortgage exposures",
+      "kind": "evidence",
+      "bullets": [
+        "Institutions carried severe leverage with inadequate capital reserves against complex mortgage securities",
+        "Counterparty credit freeze rapidly transmitted systemic distress across interconnected global banks"
+      ]
+    },
+    {
+      "id": "evidence_macroprudential_oversight",
+      "title": "Macroprudential Governance Standards",
+      "subtitle": "Post-crisis supervisory architecture reasserting sovereign state regulatory oversight",
+      "kind": "evidence",
+      "bullets": [
+        "Replaces voluntary self-regulation with mandatory supervisory ratios to absorb credit contagion",
+        "Reasserts democratic state authority to ensure international financial markets serve broader society"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "root_global_finance_trade",
+      "to": "hub_act1_global_economy",
+      "relation": "contains",
+      "label": "Act I: Trade Dynamics & Spatial Distribution"
+    },
+    {
+      "from": "root_global_finance_trade",
+      "to": "hub_act2_institutions",
+      "relation": "contains",
+      "label": "Act II: Postwar Multilateral Architecture"
+    },
+    {
+      "from": "root_global_finance_trade",
+      "to": "hub_act3_finance_paradox",
+      "relation": "contains",
+      "label": "Act III: Deregulation & Financial Divergence"
+    },
+    {
+      "from": "root_global_finance_trade",
+      "to": "hub_act4_crisis_reckoning",
+      "relation": "contains",
+      "label": "Act IV: Crisis Reckoning & State Intervention"
+    },
+    {
+      "from": "hub_act1_global_economy",
+      "to": "global_economic_flows",
+      "relation": "contains",
+      "label": "metrics of economic interconnectedness"
+    },
+    {
+      "from": "global_economic_flows",
+      "to": "intensity_of_flows",
+      "relation": "constitutes",
+      "label": "measures transaction volume and density"
+    },
+    {
+      "from": "global_economic_flows",
+      "to": "extensity_of_flows",
+      "relation": "constitutes",
+      "label": "measures geographic reach and dispersion"
+    },
+    {
+      "from": "hub_act1_global_economy",
+      "to": "spatial_trade_patterns",
+      "relation": "contains",
+      "label": "geographical distribution of trade"
+    },
+    {
+      "from": "spatial_trade_patterns",
+      "to": "globalization",
+      "relation": "constitutes",
+      "label": "universal cross-border integration ideal"
+    },
+    {
+      "from": "spatial_trade_patterns",
+      "to": "regional_economic_integration",
+      "relation": "constitutes",
+      "label": "clustering within regional trade blocs"
+    },
+    {
+      "from": "spatial_trade_patterns",
+      "to": "geographically_uneven_globalization",
+      "relation": "criticizes",
+      "label": "structural exclusion of peripheral nations"
+    },
+    {
+      "from": "hub_act2_institutions",
+      "to": "multilateral_trade_system",
+      "relation": "contains",
+      "label": "multilateral trade architecture"
+    },
+    {
+      "from": "multilateral_trade_system",
+      "to": "gatt",
+      "relation": "contains",
+      "label": "1947 provisional consensus tariff rules"
+    },
+    {
+      "from": "multilateral_trade_system",
+      "to": "world_trade_organization",
+      "relation": "contains",
+      "label": "1995 formal binding dispute arbiter"
+    },
+    {
+      "from": "multilateral_trade_system",
+      "to": "wto_signaling_mechanism",
+      "relation": "enables",
+      "label": "signals free trade compliance to lenders"
+    },
+    {
+      "from": "multilateral_trade_system",
+      "to": "agricultural_subsidies_deadlock",
+      "relation": "criticizes",
+      "label": "northern farm subsidies stall negotiations"
+    },
+    {
+      "from": "hub_act2_institutions",
+      "to": "bretton_woods_monetary_system",
+      "relation": "contains",
+      "label": "postwar monetary stability framework"
+    },
+    {
+      "from": "bretton_woods_monetary_system",
+      "to": "bretton_woods_order",
+      "relation": "constitutes",
+      "label": "establishes dollar-pegged exchange stability"
+    },
+    {
+      "from": "bretton_woods_monetary_system",
+      "to": "evidence_dollar_gold_standard",
+      "relation": "illustrates",
+      "label": "anchors international currency convertibility"
+    },
+    {
+      "from": "hub_act2_institutions",
+      "to": "undemocratic_financial_governance",
+      "relation": "criticizes",
+      "label": "donor voting power dominates lenders"
+    },
+    {
+      "from": "undemocratic_financial_governance",
+      "to": "imf_stabilization_mandate",
+      "relation": "causes",
+      "label": "mandates fiscal austerity conditionalities"
+    },
+    {
+      "from": "undemocratic_financial_governance",
+      "to": "world_bank_development_mandate",
+      "relation": "causes",
+      "label": "enforces foreign investment deregulation"
+    },
+    {
+      "from": "hub_act3_finance_paradox",
+      "to": "financial_liberalization",
+      "relation": "contains",
+      "label": "deregulatory financial doctrine"
+    },
+    {
+      "from": "financial_liberalization",
+      "to": "efficient_capital_allocation",
+      "relation": "enables",
+      "label": "hypothesizes productive capital distribution"
+    },
+    {
+      "from": "financial_liberalization",
+      "to": "finance_trade_divergence",
+      "relation": "constitutes",
+      "label": "decouples financial volume from goods trade"
+    },
+    {
+      "from": "hub_act3_finance_paradox",
+      "to": "mission_creep",
+      "relation": "contains",
+      "label": "multilateral mandate expansion"
+    },
+    {
+      "from": "mission_creep",
+      "to": "hot_money_volatility",
+      "relation": "causes",
+      "label": "unleashes speculative capital volatility"
+    },
+    {
+      "from": "mission_creep",
+      "to": "evidence_emerging_market_fragility",
+      "relation": "illustrates",
+      "label": "strips defensive sovereign capital controls"
+    },
+    {
+      "from": "hub_act4_crisis_reckoning",
+      "to": "subprime_financial_crisis",
+      "relation": "contains",
+      "label": "systemic mortgage derivative collapse"
+    },
+    {
+      "from": "subprime_financial_crisis",
+      "to": "public_bailouts",
+      "relation": "causes",
+      "label": "forces massive state liquidity rescues"
+    },
+    {
+      "from": "subprime_financial_crisis",
+      "to": "regulatory_control_regimes",
+      "relation": "causes",
+      "label": "proves necessity of mandatory public controls"
+    },
+    {
+      "from": "hub_act4_crisis_reckoning",
+      "to": "market_self_regulation_failure",
+      "relation": "criticizes",
+      "label": "indicts laissez-faire self-regulation doctrine"
+    },
+    {
+      "from": "market_self_regulation_failure",
+      "to": "evidence_bank_insolvency_failures",
+      "relation": "illustrates",
+      "label": "demonstrates collapse of over-leveraged banks"
+    },
+    {
+      "from": "market_self_regulation_failure",
+      "to": "evidence_macroprudential_oversight",
+      "relation": "applies_to",
+      "label": "reasserts public supervisory authority"
+    }
+  ],
+  "contrasts": [
+    {
+      "a": "intensity_of_flows",
+      "b": "extensity_of_flows"
+    },
+    {
+      "a": "regional_economic_integration",
+      "b": "globalization"
+    },
+    {
+      "a": "gatt",
+      "b": "world_trade_organization"
+    },
+    {
+      "a": "imf_stabilization_mandate",
+      "b": "world_bank_development_mandate"
+    },
+    {
+      "a": "financial_liberalization",
+      "b": "regulatory_control_regimes"
+    }
+  ]
+}

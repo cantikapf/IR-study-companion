@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "slideNumber": "01 / 08",
+    "category": "GLOBAL FLOW METRICS",
+    "title": "The Global Economy Puzzle: Intensity and Extensity",
+    "subtitle": "Disaggregating the Volume and Geographic Reach of Economic Flows",
+    "narration": "Welcome to the architecture of global finance and trade. When observers examine world commerce, they encounter the global economy puzzle: cross-border transactions have expanded exponentially, yet their benefits remain deeply unequal. To understand this structural imbalance, scholars evaluate the core dimensions of global economic flows. First, we examine the intensity of economic flows, measuring the pure volume and transaction density of exports, foreign direct investment, and cross-border capital transfers. Second, we assess the extensity of economic flows, mapping the geographic dispersion and number of sovereign nations participating across world markets. Tracking both density and spatial reach reveals whether international commerce truly connects humanity or merely circulates within a privileged few.",
+    "bullets": [
+      {
+        "headline": "The Global Economy Puzzle",
+        "detail": "Cross-border economic transactions have grown rapidly since 1970 while remaining deeply unequal."
+      },
+      {
+        "headline": "Intensity vs. Extensity",
+        "detail": "Intensity measures transaction density and volume; extensity measures geographical spread and inclusion."
+      },
+      {
+        "headline": "Analytical Disaggregation",
+        "detail": "Distinguishing flow magnitude from planetary reach reveals genuine limits of world economic integration."
+      }
+    ],
+    "uiCard": {
+      "type": "curriculum-hierarchy",
+      "activeModule": "MODULE 010: INTRO TO IR",
+      "activeTrack": "TRACK 01: FOUNDATIONS & THEORIES",
+      "totalModules": "18 Modules",
+      "totalLessons": "157 Lessons",
+      "modules": [
+        {
+          "code": "010",
+          "name": "Foundations of IR",
+          "status": "completed"
+        },
+        {
+          "code": "020",
+          "name": "Globalization & Politics",
+          "status": "completed"
+        },
+        {
+          "code": "030",
+          "name": "Realism in IR",
+          "status": "completed"
+        },
+        {
+          "code": "040",
+          "name": "Liberalism in IR",
+          "status": "completed"
+        },
+        {
+          "code": "050",
+          "name": "Marxism in IR",
+          "status": "completed"
+        },
+        {
+          "code": "060",
+          "name": "Constructivism in IR",
+          "status": "completed"
+        },
+        {
+          "code": "070",
+          "name": "Global Finance & Trade",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slideNumber": "02 / 08",
+    "category": "SPATIAL DISPARITIES",
+    "title": "Spatial Trade Patterns: Regional Blocs vs. Worldwide Globalization",
+    "subtitle": "Regional Integration Clustered Against Peripheral Exclusion",
+    "narration": "Analyzing the spatial organization of world trade exposes profound territorial divides across the planet. Conventional theory celebrated worldwide economic globalization, promising seamless integration of goods, capital, and technology across every continent. In practice, postwar trade growth stems primarily from regional economic integration. Foreign direct investment and commercial supply chains cluster tightly inside regional trading blocs in North America, the European Union, and East Asia. Consequently, humanity confronts geographically uneven globalization. Advanced industrial economies capture the overwhelming share of export gains and capital accumulation, while less developed countries remain pushed to the periphery. Isolated from major trading circuits, impoverished nations struggle with marginalization, facing structural barriers to overseas markets and export-led growth.",
+    "bullets": [
+      {
+        "headline": "Spatial Trade Concentration",
+        "detail": "Postwar trade expansion is concentrated heavily within northern economies and regional neighbor pacts."
+      },
+      {
+        "headline": "Regional Economic Blocs",
+        "detail": "FDI and supply chains cluster inside North America, the European Union, and East Asia."
+      },
+      {
+        "headline": "Peripheral Marginalization",
+        "detail": "Least developed countries operate on systemic margins with minimal shares of global exports."
+      }
+    ],
+    "uiCard": {
+      "type": "regional-vs-global",
+      "regional": {
+        "title": "REGIONAL CONCENTRATION",
+        "examples": [
+          "EU Single Market",
+          "North American Supply Chains",
+          "East Asian Manufacturing Networks"
+        ]
+      },
+      "global": {
+        "title": "PERIPHERAL EXCLUSION",
+        "examples": [
+          "Least Developed Countries",
+          "Sub-Saharan Africa Margins",
+          "Structural Export Barriers"
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "slideNumber": "03 / 08",
+    "category": "MULTILATERAL TRADE",
+    "title": "The Multilateral Trade Order: From GATT to the WTO",
+    "subtitle": "Consensus Deadlocks, Enforceable Rules, and the Agricultural Divide",
+    "narration": "We now examine the postwar institutional architecture designed to govern international commerce. The multilateral trade order originated in nineteen forty-seven with the General Agreement on Tariffs and Trade. However, GATT relied on an unwieldy consensus model where every single member held a de facto veto, stalling progressive tariff reductions. To resolve this paralysis, nations established the World Trade Organization in nineteen ninety-five, creating binding dispute settlement mechanisms. Beyond enforcing rules, joining operates as a vital WTO signalling mechanism, reassuring international lenders and credit rating agencies that a state follows orthodox market discipline. Yet progress remains constrained by the agricultural subsidies deadlock. Massive farm subsidies across wealthy Western nations restrict developing states from exploiting comparative advantages, repeatedly gridlocking ministerial negotiations.",
+    "bullets": [
+      {
+        "headline": "GATT Consensus Gridlock",
+        "detail": "1947 provisional trade regime required unanimous member consensus, causing institutional paralysis."
+      },
+      {
+        "headline": "WTO Dispute Settlement",
+        "detail": "1995 formal trade organization introduced binding dispute panels and orthodox signaling credibility."
+      },
+      {
+        "headline": "Agricultural Subsidies Deadlock",
+        "detail": "US and European farm supports block developing countries from comparative advantages in agriculture."
+      }
+    ],
+    "uiCard": {
+      "type": "trade-architecture-evolution",
+      "gatt": {
+        "year": "1947",
+        "name": "GATT",
+        "rule": "Unanimous Consensus",
+        "status": "Provisional"
+      },
+      "wto": {
+        "year": "1995",
+        "name": "WTO",
+        "rule": "Binding Dispute Resolution",
+        "status": "Permanent"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "slideNumber": "04 / 08",
+    "category": "MONETARY GOVERNANCE",
+    "title": "Bretton Woods Monetary Order and Undemocratic Lenders",
+    "subtitle": "The Dollar-Gold Standard, Structural Adjustment, and Voting Asymmetry",
+    "narration": "Parallel to trade, the postwar monetary stability order took shape at the nineteen forty-four New Hampshire conference. The resulting Bretton Woods monetary order anchored planetary currencies through fixed exchange rates. This regime rested on the dollar-gold anchor standard, fixing thirty-five dollars per ounce of gold until unilateral termination in nineteen seventy-one. Simultaneously, the framework produced undemocratic financial governance. Dominant Western contributors retained decisive voting majorities over key international lenders. Under the IMF crisis stabilization mandate, emergency balance-of-payments loans require distressed sovereign borrowers to implement punishing fiscal austerity and spending cuts. Similarly, the World Bank development mandate conditions long-term capital infrastructure loans on market liberalization. These lender policies frequently compromise national self-determination to serve northern geopolitical interests.",
+    "bullets": [
+      {
+        "headline": "Bretton Woods 1944",
+        "detail": "Fixed exchange rate regime backed by US dollar pegged to gold at 35 dollars per ounce."
+      },
+      {
+        "headline": "Undemocratic Voting Power",
+        "detail": "United States and Western Europe hold decisive voting quotas in both IMF and World Bank boards."
+      },
+      {
+        "headline": "Twin Lender Mandates",
+        "detail": "IMF enforces fiscal austerity on crisis debtors; World Bank conditions infrastructure on open markets."
+      }
+    ],
+    "uiCard": {
+      "type": "bretton-woods-institutions",
+      "imf": {
+        "mandate": "Crisis Stabilization",
+        "condition": "Austerity & spending cuts",
+        "voting": "Western donor quota majority"
+      },
+      "worldBank": {
+        "mandate": "Development Projects",
+        "condition": "Foreign investment liberalization",
+        "voting": "Western donor quota majority"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "slideNumber": "05 / 08",
+    "category": "FINANCIAL DIVERGENCE",
+    "title": "The Finance Paradox: Liberalization and Market Decoupling",
+    "subtitle": "Efficient Allocation Theory vs. North Atlantic Asset Concentration",
+    "narration": "In Act Three, we encounter the finance paradox: cross-border capital flows have expanded drastically while divorcing from the productive real economy. From the nineteen eighties onward, governments embraced the financial liberalization doctrine, removing capital controls and dismantling supervisory guardrails. Advocates defended this wave through the efficient capital allocation rationale, arguing borderless capital would automatically flow to its most productive global use. Instead, the world witnessed an extreme finance-trade divergence. Financial transactions outpaced physical goods trade by multiple orders of magnitude, generating massive speculative asset bubbles. Crucially, rather than distributing investment evenly across developing societies, global financial activity concentrated overwhelmingly within the North Atlantic corridor, creating too-big-to-fail institutions while compounding systemic vulnerabilities.",
+    "bullets": [
+      {
+        "headline": "The Finance Paradox",
+        "detail": "Financial flows expanded exponentially while uncoupling from the underlying physical trade in goods."
+      },
+      {
+        "headline": "Efficient Allocation Doctrine",
+        "detail": "Laissez-faire premise that unconstrained capital automatically channels into highest-productivity uses."
+      },
+      {
+        "headline": "North Atlantic Clustering",
+        "detail": "Financial assets remained clustered on Wall Street and the City of London, breeding systemic risk."
+      }
+    ],
+    "uiCard": {
+      "type": "finance-trade-divergence",
+      "metrics": {
+        "goodsTrade": "Slow physical linear growth",
+        "financialFlows": "Exponential speculative explosion",
+        "concentration": "North Atlantic corridor dominance"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "slideNumber": "06 / 08",
+    "category": "CAPITAL VOLATILITY",
+    "title": "Mission Creep and Emerging Market Fragility",
+    "subtitle": "Hot Money Surges, Sudden Reversals, and Capital Flight",
+    "narration": "The transformation of global finance accelerated as multilateral institutions underwent profound mission creep. Originally chartered to stabilize exchange rates and trade balances, the International Monetary Fund and World Bank pivoted to aggressively mandating capital account opening. This policy served Western banking interests while exposing vulnerable emerging markets to acute hot money volatility. Developing economies experienced massive surges of speculative, short-term portfolio capital during global booms, followed by panicked, sudden reversals whenever investor sentiment turned. This trajectory demonstrates catastrophic emerging market capital account vulnerability. Stripped of defensive capital controls and macroprudential barriers, developing nations experienced severe currency devaluations, depleted foreign reserves, and devastating debt shocks that erased decades of hard-won economic progress.",
+    "bullets": [
+      {
+        "headline": "Institutional Mission Creep",
+        "detail": "IMF and World Bank shifted from stabilizing trade to aggressively enforcing open capital accounts."
+      },
+      {
+        "headline": "Hot Money Volatility",
+        "detail": "Surges of short-term speculative capital inflows followed by abrupt capital flight and crashes."
+      },
+      {
+        "headline": "Capital Account Vulnerability",
+        "detail": "Abolishing capital controls leaves developing states exposed to foreign liquidity shocks."
+      }
+    ],
+    "uiCard": {
+      "type": "hot-money-cycle",
+      "phases": [
+        {
+          "phase": "Inflow Surge",
+          "driver": "Speculative search for high emerging yields"
+        },
+        {
+          "phase": "Sudden Reversal",
+          "driver": "Shift in risk sentiment and rapid dollar repatriation"
+        },
+        {
+          "phase": "Sovereign Crisis",
+          "driver": "Currency devaluation and balance of payments distress"
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "slideNumber": "07 / 08",
+    "category": "SYSTEMIC BREAKDOWN",
+    "title": "The Crisis Reckoning: The 2007-2008 Subprime Collapse",
+    "subtitle": "Asset Bubbles, State Interventions, and Regulatory Imperatives",
+    "narration": "In Act Four, we reach the crisis reckoning. Decades of unconstrained deregulation culminated in the disastrous two thousand and seven subprime financial crisis. When the American housing bubble burst, over-leveraged commercial banks faced colossal losses on opaque mortgage-backed securities and toxic credit derivatives. As counterparty trust vanished, interbank lending froze, precipitating an unprecedented worldwide recession. To prevent total system implosion, governments orchestrated massive public bailouts and state intervention, injecting hundreds of billions in taxpayer funds to rescue failing private banking conglomerates. This extraordinary emergency rescue proved that financial stability cannot survive without robust regulatory control regimes. Free-market liberalization proved fundamentally incompatible with financial stability, demonstrating that unmanaged markets inevitably socialize catastrophic losses onto the public.",
+    "bullets": [
+      {
+        "headline": "2007-2008 Subprime Collapse",
+        "detail": "Bursting US housing bubble exposed extreme leverage and illiquid mortgage derivatives."
+      },
+      {
+        "headline": "Interbank Liquidity Freeze",
+        "detail": "Loss of counterparty trust halted wholesale credit markets and triggered global recession."
+      },
+      {
+        "headline": "Public Bailouts & State Rescue",
+        "detail": "Emergency sovereign intervention saved financial institutions, revealing systemic moral hazards."
+      }
+    ],
+    "uiCard": {
+      "type": "subprime-crisis-anatomy",
+      "steps": [
+        "Subprime Mortgage Securitization",
+        "Housing Bubble Deflation",
+        "Illiquid Derivative Losses",
+        "Public Sovereign Bailouts"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "slideNumber": "08 / 08",
+    "category": "PRUDENTIAL GOVERNANCE",
+    "title": "The Regulatory Reckoning: Reasserting Public Authority",
+    "subtitle": "From Insolvency Failures to Democratic Governance",
+    "narration": "The global financial meltdown produced the complete collapse of market self-regulation rationale, proving that laissez-faire ideology cannot safeguard complex planetary credit networks. Unchecked speculation sparked catastrophic bank over-leverage and insolvency failures, highlighted by the historic collapse of Bear Stearns and Lehman Brothers under opaque subprime liabilities. In response, modern international political economy reasserted binding macroprudential governance standards, establishing mandatory capital reserves, strict leverage ceilings, and rigorous transparency rules to contain systemic contagion. Global markets cannot operate as detached, self-policing enclaves; they demand sovereign oversight to ensure finance serves societal development rather than predatory speculation. This mind map is your cognitive advance organizer. Now, dive into Chapter 070 and master the political forces shaping global finance and trade.",
+    "bullets": [
+      {
+        "headline": "Death of Self-Regulation",
+        "detail": "The 2008 crash disproved the doctrine that financial markets possess internal stabilizing mechanisms."
+      },
+      {
+        "headline": "Bear Stearns & Lehman Collapse",
+        "detail": "Historic bank failures proved extreme insolvency vulnerabilities within unregulated shadow finance."
+      },
+      {
+        "headline": "Macroprudential Governance",
+        "detail": "Post-crisis oversight reasserts public authority through capital adequacy and leverage boundaries."
+      }
+    ],
+    "uiCard": {
+      "type": "panorama-synthesis",
+      "totalNodes": 35,
+      "tradition": "GLOBAL FINANCE & TRADE",
+      "coreMantra": "Multilateral Architecture, Financial Divergence, Regulatory Regimes",
+      "callToAction": "Dive into Chapter 070: Global Finance and Global Trade As Agendas"
+    }
+  }
+]
