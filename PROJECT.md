@@ -18,7 +18,7 @@
 | 5 | Diagrams & Maps | Visualisasi skenario krisis dan peta interaktif SVG | M1 | DONE |
 | 6 | Dark/Light Mode | Dukungan tema kontras tinggi dan aksesibel | M1 | DONE |
 | 7 | Quality Assurance (QA) | Suite pengujian otomatis via pytest dan Playwright | M1 | DONE |
-| 8 | Content & Reference Verification | Audit keaslian sitasi akademik via CrossRef & fact-check AI | M2 | IN PROGRESS |
+| 8 | Content & Reference Verification | Audit keaslian sitasi akademik via CrossRef & fact-check AI; audit konten 3-fase (integritas struktural, kunci jawaban vs teks, substansi akademik 4-sumbu) — SSOT `wiki/audit-content-phase3.md` | M2 | DONE |
 | 9 | Interactive Diplomatic Labs Expansion | 10 simulasi interaktif mandiri (zero external dependencies) | M6 | DONE |
 | 10 | Final Stage Online Course Transformation | Backup/Sync, Deep Search, 18-Module Exams (180 soal), Curated Glossary (122 konsep), Elaborate Certificate, Onboarding Tour | M7 | DONE |
 | 11 | IR Motion Graphics Library | Kurzgesagt-style Remotion component library (World Map, Timeline, Concept Diagram) + Pilot Chapter 010 dataset | M8 | DONE |
@@ -54,3 +54,4 @@
 - **Adopsi Struktur**: Mengadopsi struktur VibeCoding ke repositori yang sudah matang harus menjaga pondasi SSG (Jekyll), dependensi Ruby/Node, dan workflow testing tanpa menimpa README.md dan file arsitektur inti.
 - **Integritas Referensi**: Daftar pustaka terpusat di `010-references.md` terbukti berbasis karya nyata (29 DOI diverifikasi CrossRef), sehingga mitigasi halusinasi dapat difokuskan pada ketepatan interpretasi substansi bab dan kunci kuis.
 - **Normalisasi Markdown AI**: Pemindaian menyeluruh terhadap 157 bab berhasil menormalkan 28 anomali sintaks markdown bolding (`**`) hasil AI generator di 18 modul kurikulum dan memastikan 156 kuis interaktif 100% konsisten.
+- **Audit Konten 3-Fase Tuntas (2026-10-12)**: Fase 1 integritas struktural (`5c5caad`), Fase 2 kunci jawaban + bias posisi opsi (`94e6730`), Fase 3 substansi akademik 4-sumbu — 13 FAIL + 22 MINOR diperbaiki (`83e223c`, `c6a6749`). Verifikasi independen orkestrator (reproduksi tiap temuan) menangkap cacat yang dilewatkan subagent: 3 slug glosarium salah fallback (Fase 1), bias posisi kunci 90% (Fase 2), atribusi fabrikasi "Podgorski" (Fase 3).
