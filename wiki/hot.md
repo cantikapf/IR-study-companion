@@ -13,7 +13,29 @@ tags:
 
 ## Last Updated
 
-2026-10-12 - Repo Rapikan + Build-Output De-bloat (Dead Code & Stale Artifact Purge):
+2026-10-12 - Koreksi Judul Modul di Side Menu & Navigasi (Canonical Title Case):
+1. `Root Cause`: Di `_includes/chapter-iterate-current.html` dan `_includes/chapter-vars.html`, label modul `i_part_label` digenerate via `i_part_folder | split: '-' | shift | join: ' ' | capitalize`. Filter `capitalize` hanya mengkapitalkan huruf pertama string dan mengecilkan sisanya (`010-Introduction-to-IR` -> "Introduction to ir", `012-modern-world-history` -> "Modern world history"). Lookup `_part_index_path` gagal karena mencocokkan `path` absolut alih-alih `relative_path`.
+2. `Perbaikan`:
+   - `_includes/chapter-iterate-current.html` & `_includes/chapter-vars.html`: Ganti filter query jadi `where: 'relative_path', _part_index_path`, dan prioritaskan `i_part_index_chapter.title` langsung dari frontmatter `000-index.md` kanonik.
+   - `_chapters/034-Contemporary Issues In Global Politics/000-index.md`: Koreksi `title` menjadi Title Case ("Contemporary Issues In Global Politics").
+3. `Verifikasi`:
+   - 20 judul modul di side menu (Curriculum Drawer) & breadcrumbs ter-render Title Case kanonik ("Introduction to International Relations", "Modern World History", "WTO And Trade Diplomacy", dsb.).
+   - Jekyll build lolos bersih tanpa error.
+   - `pytest` 369/369 PASS.
+
+2026-10-12 - Dark Mode Systemic Contrast & Component Alignment:
+1. `Root Cause Diagnosis`: Dark mode (`body.dark-theme`) hanya terdefinisi parsial pada token root `--lms-*`, sementara berbagai komponen memakai variabel legacy (`--ink-*`, `--surface-*`), warna hardcoded (`#ffffff`, `#000000`, `rgba(9, 9, 11, ...)`), inline styling berlatar putih pada flashcards & quiz, serta link bawaan browser (`#0000ee`) di halaman Contents TOC.
+2. `Perbaikan Sistemik`:
+   - `assets/css/course-player.css`: Menambahkan compatibility aliases pada `:root` (`--ink-*`, `--surface-*`, `--border-*` dipetakan ke `--lms-*`), styling dark theme untuk link TOC part/chapter, `.home-eyebrow`, `.home-title`, `.home-description`, `.resume-tag`, `.sync-btn-primary`, `.sync-btn-text-danger`, dan normalisasi kontras kartu glosarium / lesson terminology (`#a7f3d0`).
+   - `_includes/dark_mode.html`: Warna tombol toggle (☀️/🌙) diselaraskan ke `var(--lms-ink-secondary)`.
+   - `_includes/flashcards.html` & `_includes/quiz.html`: Menambahkan rule `body.dark-theme` pada kartu Active Recall dan Knowledge Check agar container, opsi pilihan, dan badge terkonversi ke palet permukaan gelap berlatar kontras tinggi.
+   - `_pages/index.md`, `_pages/glossary.md`, `_pages/about-me.md`: Penyelarasan hero headers, resume card, curriculum explorer chips, dan filter pills.
+3. `Verifikasi Multi-Lapis`:
+   - pytest: 369/369 PASS.
+   - Jekyll build: PASS bersih tanpa error (78.4s).
+   - Automated dark-mode contrast test (Playwright/Edge headless): 0 JS error, 0 unstyled white slab, contrast ratio judul >15:1.
+   - Visual inspection (`vision_analyze`): Homepage, Glossary, TOC, dan Lesson View terverifikasi tajam, bebas dari teks hilang, dan palet gelap konsisten.
+
 1. `Audit Referensi`: Sweep seluruh repo (rg, exclude .git/node_modules/_site/.venv/simulation) atas setiap include/layout/asset kandidat sebelum penghapusan.
 2. `Dead Code Dihapus (63 file, −12.531 baris)`:
    - 12 `_includes/*.html` orphan (0 referensi nyata): `above-content`, `below-content`, `body`, `chapter-link`, `figure`, `footer-extra`, `toc-date`, `progress`, `reading_progress`, `reading_time`, `homepage_progress`, `chapter_progress_menu`.

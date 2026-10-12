@@ -61,8 +61,8 @@
       {% assign part_sort_index_ext = nil %}
     {% endif %}
 
-    {% capture part_index_path %}_chapters/{{ part_folder}}/000-index.md{% endcapture %}
-    {% assign part_index_chapter = site.chapters | where: "path", part_index_path | first  %}  
+    {% capture part_index_path %}_chapters/{{ part_folder }}/000-index.md{% endcapture %}
+    {% assign part_index_chapter = site.chapters | where: "relative_path", part_index_path | first  %}  
 
     {% if part_sort_index_ext == "draft" %}
       {% assign part_is_draft = true %}
@@ -75,7 +75,11 @@
       {% assign part_label = nil %}
     {% else %}
       {% assign part_unnumbered = false %}
-      {% assign part_label = part_folder | split: "-" | shift | join: " " | capitalize %}
+      {% if part_index_chapter and part_index_chapter.title %}
+        {% assign part_label = part_index_chapter.title %}
+      {% else %}
+        {% assign part_label = part_folder | split: "-" | shift | join: " " | capitalize %}
+      {% endif %}
     {% endif %}
   {% endif %}
 

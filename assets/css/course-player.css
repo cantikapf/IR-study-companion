@@ -39,6 +39,18 @@
   /* Animation Easing */
   --lms-ease: cubic-bezier(0.2, 0, 0, 1);
   --lms-duration: 0.22s;
+
+  /* Compatibility aliases for legacy component variables */
+  --ink-primary: var(--lms-ink-primary);
+  --ink-secondary: var(--lms-ink-secondary);
+  --ink-tertiary: var(--lms-ink-tertiary);
+  --ink-muted: var(--lms-ink-muted);
+  --surface-bg: var(--lms-surface);
+  --surface-subtle: var(--lms-subtle);
+  --surface-hover: var(--lms-hover);
+  --surface-pressed: var(--lms-pressed);
+  --border-hairline: var(--lms-hairline);
+  --border-strong: var(--lms-border-strong);
 }
 
 /* Dark Mode Tokens */
@@ -59,12 +71,21 @@ body.dark-theme {
 }
 
 /* Contents page links */
-.chapter-label { color: var(--lms-ink-primary); }
-.chapter a { color: var(--lms-ink-primary); text-decoration: none; }
-.chapter a:hover { text-decoration: underline; }
+.chapter-label, .part-label { color: var(--lms-ink-primary); }
+.chapter a, .part a, .part-label a, .toc-chapters-full a { color: var(--lms-ink-primary); text-decoration: none; }
+.chapter a:hover, .part a:hover, .part-label a:hover, .toc-chapters-full a:hover { text-decoration: underline; }
 .abstract { color: var(--lms-ink-secondary); }
 
 /* Component dark overrides */
+body.dark-theme .home-eyebrow { color: var(--lms-ink-tertiary); }
+body.dark-theme .home-title { color: var(--lms-ink-primary); }
+body.dark-theme .home-description { color: var(--lms-ink-secondary); }
+
+body.dark-theme .resume-tag {
+  background: var(--lms-subtle);
+  color: var(--lms-ink-primary);
+  border-color: var(--lms-border-strong);
+}
 body.dark-theme .sync-btn-primary {
   background: var(--lms-subtle);
   color: var(--lms-ink-primary);
@@ -2224,7 +2245,7 @@ body.dark-theme .lesson-term-card-plain {
   display: block;
 }
 body.dark-theme .lesson-term-card-plain-title {
-  color: #34d399;
+  color: #a7f3d0;
 }
 .lesson-term-card-plain-text {
   font-size: 0.85rem;
