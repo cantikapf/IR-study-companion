@@ -47,6 +47,24 @@ tags:
 4. `Build-Output De-bloat (766 MB → 60 MB)`: `_config.yml exclude` diperluas (`learning-videos/shorts-experiments`, `playwright-report`, `test-results`, `e2e`, `scripts`, `public`, `docs`, `.venv`). Sebelumnya Jekyll menyalin 702 MB footage eksperimen Shorts + report Playwright + source `scripts/` ke `_site/`. Poster kanonik + katalog tetap tersalin.
 5. `Verifikasi`: pytest 369/369 PASS · Jekyll build OK (129s) · `_site` bebas referensi `assets/gitbook`/`jekyll-chapterbook` (0 hit) · `manifest.json` render benar · halaman kunci (index, contents, disclaimer, about-me, glossary, 404, sitemap) ada · gateway video chapter (basic-realism) tetap ter-embed.
 
+2026-10-12 - YouTube Release Sync for CH070 (Global Finance & Trade - F31-IkqM-Qg):
+1. `Sinkronisasi Video YouTube Resmi`:
+   - Tautan YouTube resmi: `https://youtu.be/F31-IkqM-Qg` (ID: `F31-IkqM-Qg`).
+   - Judul resmi: *"Who Really Controls Global Finance & Trade? | International Relations Explained"*.
+2. `Platform & Chapter Gateway Sync`:
+   - `_chapters/010-Introduction-to-IR/070-global-finance-trade.md`: Menambahkan `youtube_id: "F31-IkqM-Qg"` dan memperbarui status video menjadi `Published`.
+   - Layout LMS player (`_layouts/chapter.html`) otomatis merender embed player YouTube interaktif (`youtube-nocookie.com/embed/F31-IkqM-Qg`) pada kartu gateway konseptual sebelum teks bacaan bab.
+3. `Registry & Inventory Matrix Sync`:
+   - `learning-videos/catalog.json`: Memperbarui entri `IR-M01-CH070` dengan `youtube_id: "F31-IkqM-Qg"`, `status: "Published"`, `file_size_bytes: 118497546`.
+   - `learning-videos/README.md`: Memperbarui tabel matriks video menjadi `🟢 PUBLISHED (118.5 MB)` dengan tautan resmi `[F31-IkqM-Qg](https://youtu.be/F31-IkqM-Qg)`.
+4. `Standar Wajib Thumbnail Kanonik (Enforced Rule)`:
+   - Thumbnail YouTube WAJIB menggunakan foto sejarah autentik / riil yang merepresentasikan materi bab (arsip Library of Congress / Wikimedia Commons domain publik), BUKAN still diagram mindmap.
+   - CH070 menggunakan foto arsip 1963 Thomas J. O'Halloran lantai bursa NYSE / Wall Street (`learning-videos/posters/finance_trade_visual_nyse.jpg`) dengan split-screen brush mask, Archivo Black + Space Mono, red-white contrast, dan URL Netlify `IR-GUIDE.NETLIFY.APP`.
+5. `Verifikasi Sistem`:
+   - Pytest: 369/369 PASS.
+   - Remotion TypeScript check: `npx tsc --noEmit` PASS (0 error).
+   - Card fit & frame audit: PASS (0 defect).
+
 2026-10-12 - Produksi Video Mind Map CH070 (Global Finance & Global Trade as Agendas):
 1. `Pipeline 6-Fase Berhasil Diselesaikan`:
    - Fase 1: Academic Concept Brief (`public/data/ch070/brief.json`) dengan 55/55 kutipan terverifikasi grounded 100%.

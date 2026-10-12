@@ -184,7 +184,7 @@
       "frames": 14112,
       "fps": 30,
       "resolution": "1920x1080",
-      "status": "Rendered",
+      "status": "Published",
       "files": {
         "video": "learning-videos/exports/IR_M01_CH070_MindMap_1080p.mp4",
         "poster": "learning-videos/posters/IR_M01_CH070_Global_Finance_and_Trade_Poster.png",
@@ -192,7 +192,8 @@
       },
       "youtube": {
         "channel": "@IRinANutshell",
-        "status": "Ready for Re-upload / Sync"
+        "youtube_id": "F31-IkqM-Qg",
+        "status": "Published"
       },
       "last_updated": "2026-10-12",
       "file_size_bytes": 118497546

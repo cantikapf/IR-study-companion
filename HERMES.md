@@ -79,7 +79,7 @@ Commit with clear conventional messages:
      - Stationary Hold ($v = 0$) during voiceover sentences.
      - Contextual Zoom-Out (1.15x – 1.25x) during paradigm transitions & Panorama pull-back (0.39x) at the end.
    - Large MP4 exports (>50 MB) must strictly reside in `learning-videos/exports/` and are excluded from Git commits via `.gitignore`.
-   - **Canonical YouTube Thumbnail Standard**: Setiap rilis video wajib memproduksi YouTube thumbnail 1080p via `scripts/generate_thumbnail.py` menggunakan template torehan kuas (split-screen brush mask, Archivo Black, Space Mono, red-white contrast, dan channel CTA) tersimpan di `learning-videos/posters/*_Thumbnail.png`.
+   - **Canonical YouTube Thumbnail Standard**: Setiap rilis video wajib memproduksi YouTube thumbnail 1080p via `scripts/generate_thumbnail.py` menggunakan template torehan kuas (split-screen brush mask, Archivo Black, Space Mono, red-white contrast, dan channel CTA) tersimpan di `learning-videos/posters/*_Thumbnail.png`. **WAJIB menggunakan foto sejarah/arsip autentik riil yang merepresentasikan materi bab** (tersimpan di `learning-videos/posters/<topik>_visual_<subjek>.jpg` via `--mode cover`), dan **DILARANG KERAS menggunakan cuplikan/still diagram mindmap** sebagai latar thumbnail.
 
 4. **Official YouTube Shorts Standard (Vox-Style Geopolitical Vector Map)**:
    - Educational Shorts (<60s) for `@IRinANutshell` use the **Animated Geopolitical Vector Map** engine (D3-Geo + GSAP 60fps + Kokoro-82M neural TTS `af_heart` + CDP frame-by-frame deterministic render).

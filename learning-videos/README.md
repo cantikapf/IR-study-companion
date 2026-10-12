@@ -46,7 +46,7 @@ IR_M{ModuleNumber}_CH{ChapterNumber}_{TitleInSnakeCase}_{Format}_{Resolution}.{e
 | `IR-M01-CH040` | M01 / CH040 | Basic Explanation of Liberalism in IR | Mind Map Explanatory | 06:21 | 1080p | 🟢 PUBLISHED (49.3 MB) | 🟢 GENERATED | [FdChrS6Ng3Y](https://youtu.be/FdChrS6Ng3Y) |
 | `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | 06:48 | 1080p | 🟢 PUBLISHED (48.9 MB) | 🟢 GENERATED | [zJesX-ugSX4](https://youtu.be/zJesX-ugSX4) |
 | `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | 06:54 | 1080p | 🟢 PUBLISHED (61.3 MB) | 🟢 GENERATED | [A5f56_Ni3Iw](https://youtu.be/A5f56_Ni3Iw) |
-| `IR-M01-CH070` | M01 / CH070 | Global Finance and Global Trade as Agendas | Mind Map Explanatory | 07:50 | 1080p | 🟢 RENDERED (118.5 MB) | 🟢 GENERATED | *Pending Sync* |
+| `IR-M01-CH070` | M01 / CH070 | Global Finance and Global Trade as Agendas | Mind Map Explanatory | 07:50 | 1080p | 🟢 PUBLISHED (118.5 MB) | 🟢 GENERATED | [F31-IkqM-Qg](https://youtu.be/F31-IkqM-Qg) |
 
 > **Catatan Status:**  
 > - 🟢 **RENDERED**: Berkas MP4 siap diputar secara lokal dan diunggah ke YouTube.  

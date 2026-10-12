@@ -3,6 +3,7 @@ title: Global Finance And Global Trade As Agendas
 slug: global-finance-and-global-trade-as-agendas
 abstract: What is global finance and global trade system?
 simple_summary: "Money and merchandise don't flow across borders by accident; they travel on tracks laid by the 1944 Bretton Woods conference. While institutions like the WTO, IMF, and World Bank were built to prevent global financial crashes and spur commerce, they also reflect deep power imbalances. Wealthy Western donors hold the biggest voting shares, leaving developing nations bound to strict loan conditions while vast regions of the Global South remain clustered at the margins of world trade."
+youtube_id: "F31-IkqM-Qg"
 explanatory_video:
   title: "Mind Map Explanatory: Global Finance and Global Trade as Agendas"
   desc: "Watch this animated concept map first to explore Bretton Woods architecture, WTO signalling mechanisms, IMF and World Bank mandates, financial liberalization doctrine, hot money volatility, and the 2007-2008 crisis reckoning before diving into the chapter text."
@@ -16,7 +17,8 @@ explanatory_video:
   duration_sec: 470.40
   frames: 14112
   fps: 30
-  status: "Rendered"
+  status: "Published"
+  youtube_id: "F31-IkqM-Qg"
 ---
 
 
