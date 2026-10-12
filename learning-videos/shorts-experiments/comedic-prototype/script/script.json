@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "text": "In 1896, Britain fought a war so fast, their soldiers barely finished their morning tea.",
+    "visual": "tea_or_empire",
+    "timing_hint": "fast hook"
+  },
+  {
+    "id": 2,
+    "text": "The new Sultan of Zanzibar essentially told the British: 'You wouldn't dare shoot at me.'",
+    "visual": "sultan_khalid",
+    "timing_hint": "smug bluff"
+  },
+  {
+    "id": 3,
+    "text": "At 9:02 AM, the Royal Navy said: 'Bet.'",
+    "visual": "warships_aim",
+    "timing_hint": "deadpan punchline"
+  },
+  {
+    "id": 4,
+    "text": "Five British warships opened fire, blasting 500 explosive shells directly into his wooden palace.",
+    "visual": "bombardment",
+    "timing_hint": "chaos and smoke"
+  },
+  {
+    "id": 5,
+    "text": "By 9:40 AM... just 38 minutes later... the Sultan fled, his palace was in ruins, and the war was over.",
+    "visual": "ruins",
+    "timing_hint": "total devastation"
+  },
+  {
+    "id": 6,
+    "text": "British casualties? Exactly one wounded sailor. Truly the most efficient war in human history.",
+    "visual": "ruins_smug",
+    "timing_hint": "ironic outro"
+  }
+]

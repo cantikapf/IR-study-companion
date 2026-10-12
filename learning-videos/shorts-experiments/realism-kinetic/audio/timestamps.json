@@ -1,0 +1,134 @@
+{
+  "fps": 30,
+  "totalDurationSec": 45.402,
+  "totalFrames": 1362,
+  "beats": [
+    {
+      "id": 1,
+      "beat": "HOOK",
+      "title": "The Emergency Call Problem",
+      "startSec": 0.0,
+      "endSec": 5.379,
+      "durationSec": 5.379,
+      "startFrame": 0,
+      "endFrame": 161,
+      "durationFrames": 161,
+      "visual_cues": {
+        "headline": "WHO DO YOU CALL?",
+        "keywords": [
+          "FOREIGN ARMY",
+          "BORDER",
+          "THE UN?",
+          "THINK AGAIN"
+        ],
+        "accent_color": "#FF2A55",
+        "icon": "phone-alert"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "ANARCHY",
+      "title": "The Brutal Reality of Anarchy",
+      "startSec": 5.729,
+      "endSec": 15.003,
+      "durationSec": 9.275,
+      "startFrame": 172,
+      "endFrame": 450,
+      "durationFrames": 278,
+      "visual_cues": {
+        "headline": "NO GLOBAL 911",
+        "keywords": [
+          "NO 911",
+          "ANARCHY",
+          "NO SUPREME AUTHORITY"
+        ],
+        "accent_color": "#FF2A55",
+        "icon": "globe-shield-broken"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "THE_THREE_S",
+      "title": "The Three S's of Realism",
+      "startSec": 15.353,
+      "endSec": 21.753,
+      "durationSec": 6.4,
+      "startFrame": 461,
+      "endFrame": 653,
+      "durationFrames": 192,
+      "visual_cues": {
+        "headline": "THE 3 S's OF REALISM",
+        "keywords": [
+          "STATISM",
+          "SURVIVAL",
+          "SELF-HELP"
+        ],
+        "accent_color": "#FFB703",
+        "icon": "cards-three"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "THE_THREE_S_DETAIL",
+      "title": "Ruthless Logic of Survival",
+      "startSec": 22.103,
+      "endSec": 31.57,
+      "durationSec": 9.467,
+      "startFrame": 663,
+      "endFrame": 947,
+      "durationFrames": 284,
+      "visual_cues": {
+        "headline": "RUTHLESS CALCULUS",
+        "keywords": [
+          "ONLY PLAYERS",
+          "AVOID EXTINCTION",
+          "TRUST NO ONE"
+        ],
+        "accent_color": "#FFB703",
+        "icon": "radar-target"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "SECURITY_DILEMMA",
+      "title": "The Security Dilemma Paradox",
+      "startSec": 31.92,
+      "endSec": 38.968,
+      "durationSec": 7.048,
+      "startFrame": 958,
+      "endFrame": 1169,
+      "durationFrames": 211,
+      "visual_cues": {
+        "headline": "SECURITY DILEMMA",
+        "keywords": [
+          "ARMS RACE",
+          "MORE DANGEROUS",
+          "PARADOX OF POWER"
+        ],
+        "accent_color": "#00F0FF",
+        "icon": "balance-hazard"
+      }
+    },
+    {
+      "id": 6,
+      "beat": "OUTRO",
+      "title": "The Cold Reality of Power",
+      "startSec": 39.318,
+      "endSec": 44.902,
+      "durationSec": 5.584,
+      "startFrame": 1180,
+      "endFrame": 1347,
+      "durationFrames": 167,
+      "visual_cues": {
+        "headline": "POLITICAL REALISM",
+        "keywords": [
+          "CAN PEACE EXIST?",
+          "DROP YOUR THOUGHTS",
+          "@IRinANutshell"
+        ],
+        "accent_color": "#FFFFFF",
+        "icon": "compass"
+      }
+    }
+  ]
+}

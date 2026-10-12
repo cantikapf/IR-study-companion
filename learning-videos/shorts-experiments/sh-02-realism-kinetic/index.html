@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REALISM · Kinetic Motion Graphics (Shorts)</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face {
+      font-family: "Archivo Black";
+      src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #020204;
+      font-family: "Space Mono", monospace;
+      color: #fff;
+    }
+
+    /* Container for Desktop Preview auto-scaling */
+    #stage-container {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-bottom: 70px;
+    }
+
+    #viewport-scaler {
+      position: absolute;
+      width: 1080px;
+      height: 1920px;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%) scale(0.35);
+      background: #06070a;
+      border: 4px solid #ffe600;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 0 100px rgba(0,0,0,0.9), 0 0 40px rgba(255, 230, 0, 0.2);
+    }
+
+    /* Floating preview HUD controller */
+    #hud-controls {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 17, 23, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 230, 0, 0.4);
+      border-radius: 40px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+    #hud-controls button {
+      background: #ffe600;
+      color: #000;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-family: "Space Mono", monospace;
+      cursor: pointer;
+      transition: transform 0.1s, background 0.2s;
+    }
+    #hud-controls button:hover { background: #fff; transform: scale(1.05); }
+    #hud-controls input[type="range"] {
+      width: 200px;
+      accent-color: #ffe600;
+      cursor: pointer;
+    }
+
+    /* ROOT HYPERFRAMES COMPOSITION */
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #06070a;
+      overflow: hidden;
+    }
+
+    /* GRID & OVERLAYS */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+      pointer-events: none;
+    }
+
+    /* TOP & BOTTOM TELEMETRY */
+    .top-telemetry {
+      position: absolute;
+      top: 90px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #71717a;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+      padding-bottom: 20px;
+      z-index: 50;
+    }
+    .top-telemetry .pill {
+      background: #ffe600;
+      color: #000;
+      padding: 4px 14px;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .bottom-telemetry {
+      position: absolute;
+      bottom: 120px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      color: #52525b;
+      letter-spacing: 0.1em;
+      border-top: 2px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      z-index: 50;
+    }
+
+    /* SCENE CLIPS */
+    .clip {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* TYPOGRAPHY SYSTEM */
+    .huge-type {
+      font-family: "Archivo Black", sans-serif;
+      text-transform: uppercase;
+      line-height: 0.92;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+    .accent-yellow { color: #ffe600; }
+    .accent-red { color: #ff2a2a; }
+    .accent-cyan { color: #00f0ff; }
+
+    /* BEAT 1: NO 911 */
+    #beat1 { background: #06070a; }
+    .radar-crosshair {
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      border: 2px dashed rgba(255, 230, 0, 0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .radar-crosshair::before, .radar-crosshair::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 230, 0, 0.35);
+    }
+    .radar-crosshair::before { width: 100%; height: 2px; }
+    .radar-crosshair::after { width: 2px; height: 100%; }
+    .b1-alert-card {
+      position: absolute;
+      top: 500px;
+      padding: 10px 24px;
+      background: rgba(255, 42, 42, 0.15);
+      border: 2px solid #ff2a2a;
+      border-radius: 6px;
+      color: #ff2a2a;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+    }
+
+    /* BEAT 2: BILLIARD BALLS (INVERTED CONTRAST: BONE WHITE) */
+    #beat2 { background: #f3efe6; color: #09090b; }
+    #beat2 .top-telemetry, #beat2 .bottom-telemetry { border-color: rgba(0,0,0,0.12); color: #71717a; }
+    #beat2 .bg-grid {
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    }
+    .b2-header {
+      position: absolute;
+      top: 280px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 960px;
+      text-align: center;
+    }
+    .physics-arena {
+      position: absolute;
+      width: 940px;
+      height: 520px;
+      top: 680px;
+      border: 4px solid #09090b;
+      border-radius: 20px;
+      background: #e8e3d8;
+      overflow: hidden;
+      box-shadow: 12px 12px 0px #09090b;
+    }
+    .state-sphere {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border: 4px solid #09090b;
+      box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    }
+    .sphere-a {
+      background: #0f172a;
+      color: #ffe600;
+      top: 215px;
+      left: 100px;
+    }
+    .sphere-b {
+      background: #b91c1c;
+      color: #fff;
+      top: 215px;
+      right: 100px;
+    }
+    .impact-shockwave {
+      position: absolute;
+      top: 300px;
+      left: 470px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 8px solid #ff2a2a;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* BEAT 3: ZERO SUM GAUGE */
+    #beat3 { background: #08090d; }
+    .b3-header {
+      position: absolute;
+      top: 260px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 960px;
+      text-align: center;
+    }
+    .gauge-rig {
+      position: absolute;
+      top: 660px;
+      width: 920px;
+      height: 540px;
+      background: rgba(255,255,255,0.02);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .bar-track {
+      width: 100%;
+      height: 64px;
+      background: #18181b;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.15);
+      position: relative;
+    }
+    .bar-fill-gain {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      box-shadow: 0 0 24px rgba(52, 211, 153, 0.5);
+    }
+    .bar-fill-loss {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #ef4444, #f87171);
+      box-shadow: 0 0 24px rgba(239, 68, 68, 0.5);
+    }
+
+    /* BEAT 4: SECURITY DILEMMA LOOP */
+    #beat4 { background: #06070a; }
+    .spiral-container {
+      position: relative;
+      width: 880px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+    }
+    .dilemma-chip {
+      width: 100%;
+      padding: 30px;
+      border-radius: 12px;
+      font-size: 48px;
+      font-family: "Archivo Black", sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      border: 3px solid;
+    }
+    .chip-1 { background: rgba(0, 240, 255, 0.08); border-color: #00f0ff; color: #00f0ff; }
+    .chip-2 { background: rgba(255, 230, 0, 0.08); border-color: #ffe600; color: #ffe600; }
+    .chip-3 { background: rgba(255, 42, 42, 0.15); border-color: #ff2a2a; color: #ff2a2a; }
+
+    /* BEAT 5: FINALE */
+    #beat5 { background: #000; }
+    .stamp-box {
+      border: 6px solid #ffe600;
+      padding: 40px 60px;
+      background: #09090b;
+      box-shadow: 0 0 80px rgba(255, 230, 0, 0.35);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating HUD controller for human tester -->
+  <div id="hud-controls">
+    <button id="btn-play">PAUSE</button>
+    <button id="btn-restart">RESTART</button>
+    <button id="btn-audio">AUDIO: ON</button>
+    <input type="range" id="scrubber" min="0" max="14" step="0.01" value="0">
+    <span id="time-display">0.00s / 14.00s</span>
+  </div>
+
+  <!-- STAGE CONTAINER -->
+  <div id="stage-container">
+    <!-- VIEWPORT CONTAINER (1080x1920) -->
+    <div id="viewport-scaler">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14.00" data-width="1080" data-height="1920">
+
+      <!-- AMBIENT GRID & TELEMETRY -->
+      <div class="bg-grid"></div>
+      <div class="vignette"></div>
+
+      <!-- TOP TELEMETRY -->
+      <div class="top-telemetry">
+        <span>IR EXPERIMENTAL SHORTS · NO. 02</span>
+        <span class="pill">REALIST THEORY</span>
+      </div>
+
+      <!-- BOTTOM TELEMETRY -->
+      <div class="bottom-telemetry">
+        <span>SECURITY DILEMMA &amp; ANARCHY</span>
+        <span>@IRinANutshell</span>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- BEAT 1: THE HOOK · ANARCHY (0.00 - 2.80s)   -->
+      <!-- ========================================== -->
+      <section class="clip" id="beat1" data-start="0.00" data-duration="2.80">
+        <div class="radar-crosshair" id="b1-crosshair"></div>
+        <div class="b1-alert-card" id="b1-card">ALERT // SYSTEM LAW = ZERO</div>
+        <div class="huge-type" id="b1-title1" style="font-size: 160px; color: #ffffff; margin-top: 100px;">
+          NO 911
+        </div>
+        <div class="huge-type accent-yellow" id="b1-title2" style="font-size: 78px; margin-top: 24px;">
+          IN WORLD POLITICS
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BEAT 2: BILLIARD BALLS (2.80 - 6.20s)      -->
+      <!-- ========================================== -->
+      <section class="clip" id="beat2" data-start="2.80" data-duration="3.40">
+        <div class="b2-header">
+          <div class="huge-type" id="b2-title" style="font-size: 84px; line-height: 1.25; color: #09090b; letter-spacing: -0.01em;">
+            STATES ARE<br><span style="background: #09090b; color: #f3efe6; padding: 4px 24px; border-radius: 8px;">BILLIARD BALLS</span>
+          </div>
+          <div style="font-size: 26px; font-weight: 700; color: #52525b; margin-top: 24px; letter-spacing: 0.15em;">
+            NO TRUST. ONLY COLLISION.
+          </div>
+        </div>
+
+        <div class="physics-arena">
+          <div class="impact-shockwave" id="b2-shockwave"></div>
+          <div class="state-sphere sphere-a" id="b2-sphere-a">
+            <span style="font-size: 32px;">USA</span>
+            <span style="font-size: 16px; opacity: 0.8;">CAPACITY</span>
+          </div>
+          <div class="state-sphere sphere-b" id="b2-sphere-b">
+            <span style="font-size: 32px;">USSR</span>
+            <span style="font-size: 16px; opacity: 0.8;">SURVIVAL</span>
+          </div>
+        </div>
+
+        <div id="b2-metric" style="position: absolute; bottom: 380px; font-size: 36px; font-weight: 700; color: #b91c1c; letter-spacing: 0.1em;">
+          FRICTION = MAXIMUM
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BEAT 3: RELATIVE GAINS GAUGE (6.20 - 9.60s)-->
+      <!-- ========================================== -->
+      <section class="clip" id="beat3" data-start="6.20" data-duration="3.40">
+        <div class="b3-header">
+          <div class="huge-type" id="b3-title1" style="font-size: 84px; color: #ffffff;">
+            YOUR DEFENSE
+          </div>
+          <div class="huge-type accent-red" id="b3-title2" style="font-size: 96px; margin-top: 10px;">
+            IS MY THREAT
+          </div>
+        </div>
+
+        <div class="gauge-rig" id="b3-rig">
+          <div class="bar-row">
+            <div class="bar-label">
+              <span style="color: #34d399;">RIVAL MISSILE SILOS (+80%)</span>
+              <span id="b3-val-gain" style="color: #34d399;">+0%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill-gain" id="b3-fill-gain"></div>
+            </div>
+          </div>
+
+          <div style="text-align: center; font-size: 30px; font-weight: 700; color: #e4e4e7; letter-spacing: 0.2em;">
+            [ ZERO-SUM EQUILIBRIUM ]
+          </div>
+
+          <div class="bar-row">
+            <div class="bar-label">
+              <span style="color: #f87171;">YOUR RELATIVE SECURITY (-80%)</span>
+              <span id="b3-val-loss" style="color: #f87171;">100%</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill-loss" id="b3-fill-loss"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BEAT 4: SECURITY DILEMMA (9.60 - 12.00s)   -->
+      <!-- ========================================== -->
+      <section class="clip" id="beat4" data-start="9.60" data-duration="2.40">
+        <div style="font-size: 26px; color: #71717a; letter-spacing: 0.25em; font-weight: 700; margin-bottom: 40px;">
+          THE FATAL FEEDBACK LOOP
+        </div>
+
+        <div class="spiral-container">
+          <div class="dilemma-chip chip-1" id="b4-chip1">1. BUILD WEAPONS</div>
+          <div class="dilemma-chip chip-2" id="b4-chip2">2. NEIGHBOR PANICS</div>
+          <div class="dilemma-chip chip-3" id="b4-chip3">3. LESS SECURE</div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BEAT 5: THE VERDICT / CALL TO ARMS (12.00 - 14.00s) -->
+      <!-- ========================================== -->
+      <section class="clip" id="beat5" data-start="12.00" data-duration="2.00">
+        <div class="stamp-box" id="b5-box">
+          <div style="font-size: 32px; letter-spacing: 0.3em; color: #a1a1aa; margin-bottom: 16px;">
+            PARADIGM VERDICT
+          </div>
+          <div class="huge-type accent-yellow" id="b5-stamp" style="font-size: 140px;">
+            THIS IS<br>REALISM
+          </div>
+          <div style="font-size: 26px; color: #fff; margin-top: 30px; letter-spacing: 0.15em; font-weight: 700;">
+            POWER RULES. INTENTIONS LIE.
+          </div>
+        </div>
+
+        <div id="b5-sub" style="margin-top: 80px; font-size: 32px; color: #e4e4e7; letter-spacing: 0.1em; font-weight: 700;">
+          @IRinANutshell
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+  <!-- GSAP & SYNTHETIC SOUND ENGINE -->
+  <script>
+    // --- 1. PROCEDURAL SOUND ENGINE (Zero Asset Dependency) ---
+    class SoundFX {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+        }
+        if (this.ctx.state === "suspended") {
+          this.ctx.resume();
+        }
+      }
+      // 808 Sub Boom Impact
+      subHit(time = 0) {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(130, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(32, this.ctx.currentTime + 0.45);
+        gain.gain.setValueAtTime(0.7, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.5);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.5);
+      }
+      // Mechanical Click / Shutter
+      click(time = 0) {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(80, this.ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.4, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.09);
+      }
+      // Metal Collision Clang
+      clank() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const osc2 = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sawtooth";
+        osc.frequency.setValueAtTime(320, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(40, this.ctx.currentTime + 0.35);
+        osc2.type = "square";
+        osc2.frequency.setValueAtTime(480, this.ctx.currentTime);
+        osc2.frequency.exponentialRampToValueAtTime(60, this.ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0.6, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.35);
+        osc.connect(gain);
+        osc2.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc2.start();
+        osc.stop(this.ctx.currentTime + 0.35);
+        osc2.stop(this.ctx.currentTime + 0.35);
+      }
+      // Tech Warning Beep
+      beep() {
+        if (!this.enabled || !this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(880, this.ctx.currentTime);
+        gain.gain.setValueAtTime(0.3, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.12);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.12);
+      }
+    }
+    const sfx = new SoundFX();
+
+    // --- 2. RESPONSIVE AUTO-SCALER FOR DESKTOP PREVIEW ---
+    function autoScaleViewport() {
+      const scaler = document.getElementById("viewport-scaler");
+      if (!scaler) return;
+      const w = window.innerWidth - 30;
+      const h = window.innerHeight - 90; // room for bottom HUD
+      const scaleX = w / 1080;
+      const scaleY = h / 1920;
+      const scale = Math.min(scaleX, scaleY, 0.95);
+      scaler.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+    window.addEventListener("resize", autoScaleViewport);
+    window.addEventListener("DOMContentLoaded", autoScaleViewport);
+    setTimeout(autoScaleViewport, 50);
+
+    // --- 3. MASTER GSAP TIMELINE (HyperFrames contract) ---
+    const masterTl = gsap.timeline({
+      paused: false,
+      repeat: -1,
+      onUpdate: () => {
+        const t = masterTl.time();
+        document.getElementById("scrubber").value = t;
+        document.getElementById("time-display").textContent = `${t.toFixed(2)}s / 14.00s`;
+      }
+    });
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = masterTl;
+
+    // --- SCENE 1: ANARCHY / NO 911 (0.00s - 2.80s) ---
+    masterTl.add(() => sfx.subHit(), 0.00);
+    masterTl.set("#beat1", { opacity: 1 }, 0.00);
+    masterTl.fromTo("#b1-crosshair", 
+      { scale: 0.2, rotation: -90, opacity: 0 }, 
+      { scale: 1, rotation: 45, opacity: 1, duration: 1.2, ease: "back.out(2)" }, 0.05
+    );
+    masterTl.fromTo("#b1-card",
+      { y: -80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.2
+    );
+    masterTl.fromTo("#b1-title1",
+      { scale: 2.8, opacity: 0, y: 50 },
+      { scale: 1, opacity: 1, y: 0, duration: 0.6, ease: "elastic.out(1, 0.5)", onStart: () => sfx.click() }, 0.35
+    );
+    masterTl.fromTo("#b1-title2",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power4.out", onStart: () => sfx.click() }, 0.8
+    );
+    masterTl.to("#beat1", { opacity: 0, duration: 0.2 }, 2.60);
+
+    // --- SCENE 2: BILLIARD BALLS (2.80s - 6.20s) ---
+    masterTl.set("#beat2", { opacity: 1 }, 2.80);
+    masterTl.add(() => sfx.subHit(), 2.80);
+    masterTl.fromTo("#b2-title",
+      { y: -60, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 2.85
+    );
+    // Collision trajectory
+    masterTl.fromTo("#b2-sphere-a",
+      { x: -280 },
+      { x: 165, duration: 0.85, ease: "power3.in" }, 3.10
+    );
+    masterTl.fromTo("#b2-sphere-b",
+      { x: 280 },
+      { x: -165, duration: 0.85, ease: "power3.in" }, 3.10
+    );
+    // COLLISION IMPACT! (at 3.95s)
+    masterTl.add(() => sfx.clank(), 3.95);
+    masterTl.fromTo("#b2-shockwave",
+      { scale: 0, opacity: 1 },
+      { scale: 24, opacity: 0, duration: 0.5, ease: "power2.out" }, 3.95
+    );
+    masterTl.to(["#b2-sphere-a", "#b2-sphere-b"], {
+      scale: 1.15, duration: 0.08, yoyo: true, repeat: 1
+    }, 3.95);
+    // Rebound back
+    masterTl.to("#b2-sphere-a", { x: 70, duration: 0.9, ease: "elastic.out(1, 0.4)" }, 4.05);
+    masterTl.to("#b2-sphere-b", { x: -70, duration: 0.9, ease: "elastic.out(1, 0.4)" }, 4.05);
+    masterTl.fromTo("#b2-metric",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)", onStart: () => sfx.beep() }, 4.40
+    );
+    masterTl.to("#beat2", { opacity: 0, duration: 0.2 }, 6.00);
+
+    // --- SCENE 3: ZERO-SUM GAUGE (6.20s - 9.60s) ---
+    masterTl.set("#beat3", { opacity: 1 }, 6.20);
+    masterTl.add(() => sfx.subHit(), 6.20);
+    masterTl.fromTo("#b3-title1",
+      { x: -120, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.4, ease: "power4.out", onStart: () => sfx.click() }, 6.25
+    );
+    masterTl.fromTo("#b3-title2",
+      { x: 120, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.4, ease: "power4.out", onStart: () => sfx.click() }, 6.65
+    );
+    masterTl.fromTo("#b3-rig",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 6.90
+    );
+    // Live Bar Fill Animation
+    masterTl.to("#b3-fill-gain", {
+      width: "82%", duration: 1.4, ease: "power3.inOut",
+      onUpdate: function() {
+        const val = Math.round(this.progress() * 82);
+        document.getElementById("b3-val-gain").textContent = `+${val}%`;
+      }
+    }, 7.20);
+    masterTl.to("#b3-fill-loss", {
+      width: "18%", duration: 1.4, ease: "power3.inOut",
+      onStart: () => sfx.beep(),
+      onUpdate: function() {
+        const val = Math.round(100 - (this.progress() * 82));
+        document.getElementById("b3-val-loss").textContent = `${val}%`;
+      }
+    }, 7.20);
+    masterTl.to("#beat3", { opacity: 0, duration: 0.2 }, 9.40);
+
+    // --- SCENE 4: SECURITY DILEMMA LOOP (9.60s - 12.00s) ---
+    masterTl.set("#beat4", { opacity: 1 }, 9.60);
+    masterTl.add(() => sfx.subHit(), 9.60);
+    masterTl.fromTo("#b4-chip1",
+      { x: -200, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.35, ease: "back.out(2)", onStart: () => sfx.click() }, 9.75
+    );
+    masterTl.fromTo("#b4-chip2",
+      { x: 200, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.35, ease: "back.out(2)", onStart: () => sfx.click() }, 10.35
+    );
+    masterTl.fromTo("#b4-chip3",
+      { scale: 1.5, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.45, ease: "elastic.out(1, 0.4)", onStart: () => sfx.clank() }, 10.95
+    );
+    masterTl.to("#beat4", { opacity: 0, duration: 0.2 }, 11.80);
+
+    // --- SCENE 5: FINALE STAMP (12.00s - 14.00s) ---
+    masterTl.set("#beat5", { opacity: 1 }, 12.00);
+    masterTl.add(() => sfx.subHit(), 12.00);
+    masterTl.fromTo("#b5-box",
+      { scale: 3.5, opacity: 0, rotation: -8 },
+      { scale: 1, opacity: 1, rotation: 0, duration: 0.5, ease: "elastic.out(1, 0.5)", onStart: () => sfx.clank() }, 12.10
+    );
+    masterTl.fromTo("#b5-sub",
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 12.60
+    );
+    masterTl.to("#beat5", { opacity: 0, duration: 0.2 }, 13.85);
+
+    // --- 4. HUMAN TESTER CONTROLS ---
+    const btnPlay = document.getElementById("btn-play");
+    btnPlay.addEventListener("click", () => {
+      sfx.init();
+      if (masterTl.paused()) {
+        masterTl.play();
+        btnPlay.textContent = "PAUSE";
+      } else {
+        masterTl.pause();
+        btnPlay.textContent = "PLAY";
+      }
+    });
+
+    document.getElementById("btn-restart").addEventListener("click", () => {
+      sfx.init();
+      masterTl.restart();
+      btnPlay.textContent = "PAUSE";
+    });
+
+    const btnAudio = document.getElementById("btn-audio");
+    btnAudio.addEventListener("click", () => {
+      sfx.init();
+      sfx.enabled = !sfx.enabled;
+      btnAudio.textContent = `AUDIO: ${sfx.enabled ? "ON" : "OFF"}`;
+      btnAudio.style.background = sfx.enabled ? "#ffe600" : "#52525b";
+    });
+
+    document.getElementById("scrubber").addEventListener("input", (e) => {
+      masterTl.pause();
+      btnPlay.textContent = "PLAY";
+      masterTl.time(parseFloat(e.target.value));
+    });
+
+    // Auto-init audio context on first user click anywhere
+    window.addEventListener("click", () => sfx.init(), { once: true });
+
+    // URL parameter time seek (e.g. ?t=1.2)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("t")) {
+      const seekTime = parseFloat(urlParams.get("t"));
+      masterTl.pause();
+      masterTl.time(seekTime);
+      btnPlay.textContent = "PLAY";
+    }
+  </script>
+</body>
+</html>

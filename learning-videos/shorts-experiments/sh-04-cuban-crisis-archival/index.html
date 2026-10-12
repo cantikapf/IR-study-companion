@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13 Days on the Brink · The Physics of Nuclear Deterrence (1962)</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face {
+      font-family: "Archivo Black";
+      src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Space Mono";
+      src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #020306;
+      font-family: "Space Mono", monospace;
+      color: #fff;
+    }
+
+    /* FULL VIEWPORT STAGE CONTAINER */
+    #stage-container {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-bottom: 70px;
+    }
+
+    /* 1080x1920 CANVAS RIG */
+    #viewport-scaler {
+      position: absolute;
+      width: 1080px;
+      height: 1920px;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%) scale(0.35);
+      background: #06070a;
+      border: 3px solid #facc15;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 0 120px rgba(0,0,0,0.95), 0 0 40px rgba(250, 204, 21, 0.25);
+    }
+
+    /* FLOATING HUD CONTROLLER */
+    #hud-controls {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10, 14, 22, 0.95);
+      border: 1px solid #facc15;
+      border-radius: 30px;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 99999;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      font-size: 12px;
+    }
+    #hud-controls button {
+      background: #facc15;
+      color: #020617;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-family: "Space Mono", monospace;
+      cursor: pointer;
+    }
+    #hud-controls button:hover { background: #fff; }
+    #hud-controls input[type="range"] {
+      width: 180px;
+      accent-color: #facc15;
+      cursor: pointer;
+    }
+
+    /* ROOT COMPOSITION */
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #040406;
+      overflow: hidden;
+    }
+
+    /* LAYER 0: ATMOSPHERE & SCRIMS */
+    .topscrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 480px;
+      background: linear-gradient(to bottom, rgba(4,4,6,0.88) 0%, rgba(4,4,6,0.6) 50%, transparent 100%);
+      pointer-events: none;
+      z-index: 20;
+    }
+    .botscrim {
+      position: absolute;
+      top: 1100px;
+      left: 0;
+      width: 1080px;
+      height: 820px;
+      background: linear-gradient(to bottom, transparent 0%, rgba(4,4,6,0.7) 25%, rgba(4,4,6,0.94) 70%, #040406 100%);
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* LAYER 1: ARCHIVAL VIDEO MEDIA */
+    .video-layer {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      z-index: 10;
+    }
+    .archival-clip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      object-fit: cover;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    /* LAYER 2: TELEMETRY & DATA CARDS */
+    .header-zone {
+      position: absolute;
+      top: 150px;
+      left: 70px;
+      right: 70px;
+      z-index: 30;
+    }
+    .kicker {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #facc15;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.95);
+    }
+    .headline {
+      margin-top: 14px;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 82px;
+      line-height: 1.02;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.95);
+    }
+    .watermark {
+      position: absolute;
+      top: 155px;
+      right: 70px;
+      font-size: 26px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.95);
+      z-index: 30;
+    }
+
+    .docket {
+      position: absolute;
+      top: 1080px;
+      left: 70px;
+      width: 940px;
+      font-size: 22px;
+      letter-spacing: 0.06em;
+      color: #e2e8f0;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.95);
+      z-index: 30;
+    }
+    .chips {
+      position: absolute;
+      top: 1125px;
+      left: 70px;
+      width: 940px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 30;
+    }
+    .chip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 52px;
+      border-left: 5px solid #facc15;
+      padding-left: 18px;
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 0 8px 8px 0;
+    }
+    .chip .cl {
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      color: #cbd5e1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    }
+    .chip .cv {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    }
+
+    /* LAYER 3: FLOATING CAPTIONS (MOBILE SAFE ZONE) */
+    .caption-box {
+      position: absolute;
+      top: 1285px;
+      left: 60px;
+      width: 960px;
+      min-height: 180px;
+      background: rgba(9, 12, 20, 0.94);
+      border: 1.5px solid rgba(250, 204, 21, 0.4);
+      border-radius: 20px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+      z-index: 35;
+    }
+    .caption-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .caption-text .hl {
+      color: #facc15;
+      background: rgba(250, 204, 21, 0.15);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    /* FILM GRAIN & OVERLAY */
+    .grain {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.6) 100%);
+      pointer-events: none;
+      z-index: 25;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STAGE CONTAINER -->
+  <div id="stage-container">
+    <div id="viewport-scaler">
+      <div id="root" data-composition-id="main" data-start="0" data-duration="40.49" data-width="1080" data-height="1920">
+
+        <!-- AUDIO SOURCE -->
+        <audio id="main-audio" src="audio/voiceover.mp3" preload="auto"></audio>
+
+        <!-- LAYER 1: AUTHENTIC ARCHIVAL VIDEOS -->
+        <div class="video-layer">
+          <video id="v-clip1" class="archival-clip" src="assets/clip1_bomber.mp4" muted playsinline loop></video>
+          <video id="v-clip2" class="archival-clip" src="assets/clip2_recon.mp4" muted playsinline loop></video>
+          <video id="v-clip3" class="archival-clip" src="assets/clip3_naval.mp4" muted playsinline loop></video>
+          <video id="v-clip4" class="archival-clip" src="assets/clip4_standoff.mp4" muted playsinline loop></video>
+          <video id="v-clip5" class="archival-clip" src="assets/clip5_mushroom.mp4" muted playsinline loop></video>
+        </div>
+
+        <!-- LAYER 0: SCRIMS & GRAIN -->
+        <div class="topscrim"></div>
+        <div class="botscrim"></div>
+        <div class="grain"></div>
+
+        <!-- WATERMARK -->
+        <div class="watermark">@IRinANutshell</div>
+
+        <!-- LAYER 2: DYNAMIC TELEMETRY & DATA CARDS -->
+        <div class="header-zone">
+          <div class="kicker" id="kicker-txt">DEFCON 2 ALERT // 1962</div>
+          <div class="headline" id="headline-txt">ONE VOTE FROM OBLIVION</div>
+        </div>
+
+        <div class="docket" id="docket-txt">STRATEGIC AIR COMMAND · ALERT B-52</div>
+
+        <div class="chips" id="chips-container">
+          <div class="chip">
+            <span class="cl" id="chip1-label">GLOBAL ALERT</span>
+            <span class="cv" id="chip1-val">DEFCON 2 (HIGHEST EVER)</span>
+          </div>
+          <div class="chip">
+            <span class="cl" id="chip2-label">AIRBORNE FORCE</span>
+            <span class="cv" id="chip2-val">1,436 STRATEGIC BOMBERS</span>
+          </div>
+        </div>
+
+        <!-- LAYER 3: FLOATING CAPTIONS (MOBILE SAFE ZONE) -->
+        <div class="caption-box">
+          <div class="caption-text" id="caption-txt">
+            In October 1962, the human race was one single vote away from total <span class="hl">nuclear annihilation</span>.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING HUD CONTROLLER -->
+  <div id="hud-controls">
+    <button id="btn-play">PLAY</button>
+    <button id="btn-restart">RESTART</button>
+    <button id="btn-audio">AUDIO: ON</button>
+    <input type="range" id="scrubber" min="0" max="40.49" step="0.05" value="0">
+    <span id="time-display" style="min-width: 120px; font-weight: 700;">0.00s / 40.49s</span>
+  </div>
+
+  <!-- MASTER GSAP TIMELINE & METADATA SYNC ENGINE -->
+  <script>
+    // --- 1. BEAT METADATA CONTRACT ---
+    const BEATS = [
+      {
+        id: "beat1",
+        start: 0.000,
+        end: 6.345,
+        videoEl: document.getElementById("v-clip1"),
+        kicker: "DEFCON 2 ALERT // 1962",
+        headline: "ONE VOTE FROM OBLIVION",
+        docket: "STRATEGIC AIR COMMAND · ALERT B-52",
+        chip1L: "GLOBAL ALERT", chip1V: "DEFCON 2 (HIGHEST EVER)",
+        chip2L: "AIRBORNE FORCE", chip2V: "1,436 STRATEGIC BOMBERS",
+        caption: 'In October 1962, the human race was one single vote away from total <span class="hl">nuclear annihilation</span>.'
+      },
+      {
+        id: "beat2",
+        start: 6.345,
+        end: 15.271,
+        videoEl: document.getElementById("v-clip2"),
+        kicker: "SAN CRISTOBAL // CUBA",
+        headline: "90 MILES FROM FLORIDA",
+        docket: "U-2 RECONNAISSANCE · MEDIUM RANGE BALLISTIC MISSILES",
+        chip1L: "TARGET DISTANCE", chip1V: "90 MILES TO US COAST",
+        chip2L: "IMPACT TIMELINE", chip2V: "180 SECONDS TO CAPITAL",
+        caption: 'U-2 spy planes revealed Soviet nuclear warheads just ninety miles off Florida — capable of vaporizing Washington in <span class="hl">three minutes</span>.'
+      },
+      {
+        id: "beat3",
+        start: 15.271,
+        end: 22.149,
+        videoEl: document.getElementById("v-clip3"),
+        kicker: "ATLANTIC QUARANTINE LINE",
+        headline: "THE NAVAL STANDOFF",
+        docket: "US NAVY DESTROYER TASK FORCE · ATLANTIC",
+        chip1L: "WARSHIPS DEPLOYED", chip1V: "180 US NAVAL VESSELS",
+        chip2L: "SOVIET CONVOY", chip2V: "16 SHIPS ON INTERCEPT",
+        caption: 'Kennedy deployed a <span class="hl">naval blockade</span>. The world held its breath as Soviet freighters sailed straight toward the quarantine line.'
+      },
+      {
+        id: "beat4",
+        start: 22.149,
+        end: 31.992,
+        videoEl: document.getElementById("v-clip4"),
+        kicker: "SOVIET SUBMARINE B-59",
+        headline: "THE MAN WHO SAID NO",
+        docket: "SUBMARINE FLOTILLA · NUCLEAR TORPEDO 10-KILOTON",
+        chip1L: "CREW CONDITION", chip1V: "50°C CABIN · BATTERY DEPLETED",
+        chip2L: "OFFICER VETO", chip2V: "VASILI ARKHIPOV ABORTED",
+        caption: 'Deep underwater, Soviet submarine B-59 prepared to fire a nuclear torpedo. Two officers approved. One man, <span class="hl">Vasili Arkhipov</span>, said NO.'
+      },
+      {
+        id: "beat5",
+        start: 31.992,
+        end: 40.490,
+        videoEl: document.getElementById("v-clip5"),
+        kicker: "MUTUALLY ASSURED DESTRUCTION",
+        headline: "THE LOGIC OF TERROR",
+        docket: "STRATEGIC DOCTRINE · COLD WAR DETERRENCE",
+        chip1L: "SURVIVAL MECHANISM", chip1V: "SECOND-STRIKE CERTAINTY",
+        chip2L: "CHANNEL CTA", chip2V: "@IRinANutshell",
+        caption: "This is Realism's darkest truth: peace was not preserved by moral treaties, but by the absolute certainty of <span class=\"hl\">Mutually Assured Destruction</span>."
+      }
+    ];
+
+    // --- 2. RESPONSIVE AUTO-SCALER ---
+    function fitStage() {
+      const scaler = document.getElementById("viewport-scaler");
+      if (!scaler) return;
+      const w = window.innerWidth - 30;
+      const h = window.innerHeight - 80;
+      const scaleX = w / 1080;
+      const scaleY = h / 1920;
+      const scale = Math.min(scaleX, scaleY, 0.95);
+      scaler.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+    window.addEventListener("resize", fitStage);
+    window.addEventListener("DOMContentLoaded", fitStage);
+    setTimeout(fitStage, 50);
+
+    // --- 3. MASTER GSAP & PLAYHEAD SYNC ---
+    const audioEl = document.getElementById("main-audio");
+    let currentBeatIndex = -1;
+
+    function applyBeat(idx) {
+      if (idx === currentBeatIndex || idx < 0 || idx >= BEATS.length) return;
+      currentBeatIndex = idx;
+      const b = BEATS[idx];
+
+      document.getElementById("kicker-txt").textContent = b.kicker;
+      document.getElementById("headline-txt").textContent = b.headline;
+      document.getElementById("docket-txt").textContent = b.docket;
+      document.getElementById("chip1-label").textContent = b.chip1L;
+      document.getElementById("chip1-val").textContent = b.chip1V;
+      document.getElementById("chip2-label").textContent = b.chip2L;
+      document.getElementById("chip2-val").textContent = b.chip2V;
+      document.getElementById("caption-txt").innerHTML = b.caption;
+
+      BEATS.forEach((item, i) => {
+        if (i === idx) {
+          gsap.to(item.videoEl, { opacity: 1, duration: 0.35, ease: "power2.out" });
+          item.videoEl.currentTime = 0;
+          if (!masterTl.paused()) item.videoEl.play();
+        } else {
+          gsap.to(item.videoEl, { opacity: 0, duration: 0.35, ease: "power2.out" });
+          item.videoEl.pause();
+        }
+      });
+    }
+
+    const masterTl = gsap.timeline({
+      paused: true,
+      repeat: -1,
+      onUpdate: () => {
+        const t = masterTl.time();
+        document.getElementById("scrubber").value = t;
+        document.getElementById("time-display").textContent = `${t.toFixed(2)}s / 40.49s`;
+
+        // Sync Audio
+        if (!masterTl.paused()) {
+          if (Math.abs(audioEl.currentTime - t) > 0.25) {
+            audioEl.currentTime = t;
+          }
+          if (audioEl.paused) audioEl.play().catch(() => {});
+        } else {
+          if (!audioEl.paused) audioEl.pause();
+        }
+
+        // Detect active beat
+        for (let i = 0; i < BEATS.length; i++) {
+          if (t >= BEATS[i].start && t < BEATS[i].end) {
+            applyBeat(i);
+            const relTime = t - BEATS[i].start;
+            const vid = BEATS[i].videoEl;
+            if (vid && Math.abs(vid.currentTime - relTime) > 0.3) {
+              try { vid.currentTime = relTime; } catch(e) {}
+            }
+            break;
+          }
+        }
+      }
+    });
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["main"] = masterTl;
+
+    // Build timeline beats with Ken Burns camera zoom
+    BEATS.forEach((b, idx) => {
+      masterTl.add(() => applyBeat(idx), b.start);
+      // Continuous Ken Burns camera push (1.05x -> 1.15x)
+      masterTl.fromTo(b.videoEl,
+        { scale: 1.05 },
+        { scale: 1.18, duration: b.end - b.start, ease: "none" },
+        b.start
+      );
+    });
+
+    // Timeline duration anchor
+    masterTl.set({}, {}, 40.49);
+
+    // Initial beat setup
+    applyBeat(0);
+
+    // --- 4. HUMAN TESTER CONTROLS ---
+    const btnPlay = document.getElementById("btn-play");
+    btnPlay.addEventListener("click", () => {
+      if (masterTl.paused()) {
+        masterTl.play();
+        audioEl.play().catch(() => {});
+        const activeVid = BEATS[currentBeatIndex]?.videoEl;
+        if (activeVid) activeVid.play();
+        btnPlay.textContent = "PAUSE";
+      } else {
+        masterTl.pause();
+        audioEl.pause();
+        BEATS.forEach(b => b.videoEl.pause());
+        btnPlay.textContent = "PLAY";
+      }
+    });
+
+    document.getElementById("btn-restart").addEventListener("click", () => {
+      masterTl.restart();
+      audioEl.currentTime = 0;
+      audioEl.play().catch(() => {});
+      btnPlay.textContent = "PAUSE";
+    });
+
+    const btnAudio = document.getElementById("btn-audio");
+    btnAudio.addEventListener("click", () => {
+      audioEl.muted = !audioEl.muted;
+      btnAudio.textContent = `AUDIO: ${audioEl.muted ? "OFF" : "ON"}`;
+      btnAudio.style.background = audioEl.muted ? "#64748b" : "#facc15";
+    });
+
+    document.getElementById("scrubber").addEventListener("input", (e) => {
+      const seekTime = parseFloat(e.target.value);
+      masterTl.pause();
+      masterTl.time(seekTime);
+      audioEl.currentTime = seekTime;
+      audioEl.pause();
+      BEATS.forEach(b => b.videoEl.pause());
+      btnPlay.textContent = "PLAY";
+    });
+
+    // Auto-init audio on user interaction
+    window.addEventListener("click", () => {
+      if (audioEl.paused && !masterTl.paused()) audioEl.play().catch(() => {});
+    }, { once: true });
+
+    // URL parameter seek support (?t=N)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("t")) {
+      const seekTime = parseFloat(urlParams.get("t"));
+      masterTl.pause();
+      masterTl.time(seekTime);
+      audioEl.currentTime = seekTime;
+      btnPlay.textContent = "PLAY";
+    }
+  </script>
+</body>
+</html>

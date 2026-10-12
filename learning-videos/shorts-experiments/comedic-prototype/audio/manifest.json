@@ -1,0 +1,62 @@
+{
+  "title": "The 38-Minute War (Comedic)",
+  "fps": 30,
+  "totalSec": 39.127,
+  "totalFrames": 1174,
+  "subtitles": [
+    {
+      "id": 1,
+      "text": "In 1896, Britain fought a war so fast, their soldiers barely finished their morning tea.",
+      "visual": "tea_or_empire",
+      "startSec": 0.0,
+      "endSec": 7.595,
+      "startFrame": 0,
+      "endFrame": 228
+    },
+    {
+      "id": 2,
+      "text": "The new Sultan of Zanzibar essentially told the British: 'You wouldn't dare shoot at me.'",
+      "visual": "sultan_khalid",
+      "startSec": 7.775,
+      "endSec": 13.151,
+      "startFrame": 233,
+      "endFrame": 395
+    },
+    {
+      "id": 3,
+      "text": "At 9:02 AM, the Royal Navy said: 'Bet.'",
+      "visual": "warships_aim",
+      "startSec": 13.331,
+      "endSec": 16.829,
+      "startFrame": 400,
+      "endFrame": 505
+    },
+    {
+      "id": 4,
+      "text": "Five British warships opened fire, blasting 500 explosive shells directly into his wooden palace.",
+      "visual": "bombardment",
+      "startSec": 17.109,
+      "endSec": 24.171,
+      "startFrame": 513,
+      "endFrame": 725
+    },
+    {
+      "id": 5,
+      "text": "By 9:40 AM... just 38 minutes later... the Sultan fled, his palace was in ruins, and the war was over.",
+      "visual": "ruins",
+      "startSec": 24.351,
+      "endSec": 31.967,
+      "startFrame": 731,
+      "endFrame": 959
+    },
+    {
+      "id": 6,
+      "text": "British casualties? Exactly one wounded sailor. Truly the most efficient war in human history.",
+      "visual": "ruins_smug",
+      "startSec": 32.147,
+      "endSec": 38.547,
+      "startFrame": 964,
+      "endFrame": 1156
+    }
+  ]
+}

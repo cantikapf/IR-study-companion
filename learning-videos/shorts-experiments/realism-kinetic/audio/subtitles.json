@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "beatId": 1,
+    "beatName": "HOOK",
+    "sentenceIndex": 1,
+    "startSec": 0.0,
+    "endSec": 2.304,
+    "startFrame": 0,
+    "endFrame": 69,
+    "text": "If a foreign army crossed your border tonight...",
+    "visual_cues": {
+      "headline": "WHO DO YOU CALL?",
+      "keywords": [
+        "FOREIGN ARMY",
+        "BORDER",
+        "THE UN?",
+        "THINK AGAIN"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "phone-alert"
+    }
+  },
+  {
+    "id": 2,
+    "beatId": 1,
+    "beatName": "HOOK",
+    "sentenceIndex": 2,
+    "startSec": 2.504,
+    "endSec": 3.379,
+    "startFrame": 75,
+    "endFrame": 101,
+    "text": "who would you call?",
+    "visual_cues": {
+      "headline": "WHO DO YOU CALL?",
+      "keywords": [
+        "FOREIGN ARMY",
+        "BORDER",
+        "THE UN?",
+        "THINK AGAIN"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "phone-alert"
+    }
+  },
+  {
+    "id": 3,
+    "beatId": 1,
+    "beatName": "HOOK",
+    "sentenceIndex": 3,
+    "startSec": 3.579,
+    "endSec": 4.347,
+    "startFrame": 107,
+    "endFrame": 130,
+    "text": "The UN?",
+    "visual_cues": {
+      "headline": "WHO DO YOU CALL?",
+      "keywords": [
+        "FOREIGN ARMY",
+        "BORDER",
+        "THE UN?",
+        "THINK AGAIN"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "phone-alert"
+    }
+  },
+  {
+    "id": 4,
+    "beatId": 1,
+    "beatName": "HOOK",
+    "sentenceIndex": 4,
+    "startSec": 4.547,
+    "endSec": 5.379,
+    "startFrame": 136,
+    "endFrame": 161,
+    "text": "Think again.",
+    "visual_cues": {
+      "headline": "WHO DO YOU CALL?",
+      "keywords": [
+        "FOREIGN ARMY",
+        "BORDER",
+        "THE UN?",
+        "THINK AGAIN"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "phone-alert"
+    }
+  },
+  {
+    "id": 5,
+    "beatId": 2,
+    "beatName": "ANARCHY",
+    "sentenceIndex": 1,
+    "startSec": 5.729,
+    "endSec": 8.694,
+    "startFrame": 172,
+    "endFrame": 261,
+    "text": "In world politics, there is no global 911.",
+    "visual_cues": {
+      "headline": "NO GLOBAL 911",
+      "keywords": [
+        "NO 911",
+        "ANARCHY",
+        "NO SUPREME AUTHORITY"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "globe-shield-broken"
+    }
+  },
+  {
+    "id": 6,
+    "beatId": 2,
+    "beatName": "ANARCHY",
+    "sentenceIndex": 2,
+    "startSec": 8.894,
+    "endSec": 11.582,
+    "startFrame": 267,
+    "endFrame": 347,
+    "text": "Realists call this brutal reality: Anarchy.",
+    "visual_cues": {
+      "headline": "NO GLOBAL 911",
+      "keywords": [
+        "NO 911",
+        "ANARCHY",
+        "NO SUPREME AUTHORITY"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "globe-shield-broken"
+    }
+  },
+  {
+    "id": 7,
+    "beatId": 2,
+    "beatName": "ANARCHY",
+    "sentenceIndex": 3,
+    "startSec": 11.782,
+    "endSec": 15.003,
+    "startFrame": 353,
+    "endFrame": 450,
+    "text": "Not chaos, but the total absence of a supreme authority.",
+    "visual_cues": {
+      "headline": "NO GLOBAL 911",
+      "keywords": [
+        "NO 911",
+        "ANARCHY",
+        "NO SUPREME AUTHORITY"
+      ],
+      "accent_color": "#FF2A55",
+      "icon": "globe-shield-broken"
+    }
+  },
+  {
+    "id": 8,
+    "beatId": 3,
+    "beatName": "THE_THREE_S",
+    "sentenceIndex": 1,
+    "startSec": 15.353,
+    "endSec": 21.753,
+    "startFrame": 461,
+    "endFrame": 653,
+    "text": "Because no one is coming to save you, states survive by three ruthless rules: Statism, Survival, and Self-Help.",
+    "visual_cues": {
+      "headline": "THE 3 S's OF REALISM",
+      "keywords": [
+        "STATISM",
+        "SURVIVAL",
+        "SELF-HELP"
+      ],
+      "accent_color": "#FFB703",
+      "icon": "cards-three"
+    }
+  },
+  {
+    "id": 9,
+    "beatId": 4,
+    "beatName": "THE_THREE_S_DETAIL",
+    "sentenceIndex": 1,
+    "startSec": 22.103,
+    "endSec": 24.813,
+    "startFrame": 663,
+    "endFrame": 744,
+    "text": "Statism: states are the only players that matter.",
+    "visual_cues": {
+      "headline": "RUTHLESS CALCULUS",
+      "keywords": [
+        "ONLY PLAYERS",
+        "AVOID EXTINCTION",
+        "TRUST NO ONE"
+      ],
+      "accent_color": "#FFB703",
+      "icon": "radar-target"
+    }
+  },
+  {
+    "id": 10,
+    "beatId": 4,
+    "beatName": "THE_THREE_S_DETAIL",
+    "sentenceIndex": 2,
+    "startSec": 25.013,
+    "endSec": 27.615,
+    "startFrame": 750,
+    "endFrame": 828,
+    "text": "Survival: avoiding extinction at all costs.",
+    "visual_cues": {
+      "headline": "RUTHLESS CALCULUS",
+      "keywords": [
+        "ONLY PLAYERS",
+        "AVOID EXTINCTION",
+        "TRUST NO ONE"
+      ],
+      "accent_color": "#FFB703",
+      "icon": "radar-target"
+    }
+  },
+  {
+    "id": 11,
+    "beatId": 4,
+    "beatName": "THE_THREE_S_DETAIL",
+    "sentenceIndex": 3,
+    "startSec": 27.815,
+    "endSec": 31.57,
+    "startFrame": 834,
+    "endFrame": 947,
+    "text": "And Self-Help: trust no one, build your military, and assume the worst.",
+    "visual_cues": {
+      "headline": "RUTHLESS CALCULUS",
+      "keywords": [
+        "ONLY PLAYERS",
+        "AVOID EXTINCTION",
+        "TRUST NO ONE"
+      ],
+      "accent_color": "#FFB703",
+      "icon": "radar-target"
+    }
+  },
+  {
+    "id": 12,
+    "beatId": 5,
+    "beatName": "SECURITY_DILEMMA",
+    "sentenceIndex": 1,
+    "startSec": 31.92,
+    "endSec": 37.168,
+    "startFrame": 958,
+    "endFrame": 1115,
+    "text": "When every nation arms itself to feel safe, the whole world becomes infinitely more dangerous.",
+    "visual_cues": {
+      "headline": "SECURITY DILEMMA",
+      "keywords": [
+        "ARMS RACE",
+        "MORE DANGEROUS",
+        "PARADOX OF POWER"
+      ],
+      "accent_color": "#00F0FF",
+      "icon": "balance-hazard"
+    }
+  },
+  {
+    "id": 13,
+    "beatId": 5,
+    "beatName": "SECURITY_DILEMMA",
+    "sentenceIndex": 2,
+    "startSec": 37.368,
+    "endSec": 38.968,
+    "startFrame": 1121,
+    "endFrame": 1169,
+    "text": "That is the Security Dilemma.",
+    "visual_cues": {
+      "headline": "SECURITY DILEMMA",
+      "keywords": [
+        "ARMS RACE",
+        "MORE DANGEROUS",
+        "PARADOX OF POWER"
+      ],
+      "accent_color": "#00F0FF",
+      "icon": "balance-hazard"
+    }
+  },
+  {
+    "id": 14,
+    "beatId": 6,
+    "beatName": "OUTRO",
+    "sentenceIndex": 1,
+    "startSec": 39.318,
+    "endSec": 41.153,
+    "startFrame": 1180,
+    "endFrame": 1235,
+    "text": "Welcome to Political Realism.",
+    "visual_cues": {
+      "headline": "POLITICAL REALISM",
+      "keywords": [
+        "CAN PEACE EXIST?",
+        "DROP YOUR THOUGHTS",
+        "@IRinANutshell"
+      ],
+      "accent_color": "#FFFFFF",
+      "icon": "compass"
+    }
+  },
+  {
+    "id": 15,
+    "beatId": 6,
+    "beatName": "OUTRO",
+    "sentenceIndex": 2,
+    "startSec": 41.353,
+    "endSec": 43.315,
+    "startFrame": 1241,
+    "endFrame": 1299,
+    "text": "Can world peace ever truly exist?",
+    "visual_cues": {
+      "headline": "POLITICAL REALISM",
+      "keywords": [
+        "CAN PEACE EXIST?",
+        "DROP YOUR THOUGHTS",
+        "@IRinANutshell"
+      ],
+      "accent_color": "#FFFFFF",
+      "icon": "compass"
+    }
+  },
+  {
+    "id": 16,
+    "beatId": 6,
+    "beatName": "OUTRO",
+    "sentenceIndex": 3,
+    "startSec": 43.515,
+    "endSec": 44.902,
+    "startFrame": 1305,
+    "endFrame": 1347,
+    "text": "Drop your thoughts below.",
+    "visual_cues": {
+      "headline": "POLITICAL REALISM",
+      "keywords": [
+        "CAN PEACE EXIST?",
+        "DROP YOUR THOUGHTS",
+        "@IRinANutshell"
+      ],
+      "accent_color": "#FFFFFF",
+      "icon": "compass"
+    }
+  }
+]

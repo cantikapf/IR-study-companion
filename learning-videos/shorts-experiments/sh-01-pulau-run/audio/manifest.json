@@ -1,0 +1,716 @@
+{
+  "title": "The Island Traded for Manhattan: Pulau Run & The 1667 Treaty of Breda",
+  "voice": "George - Captivating Storyteller",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "fps": 30,
+  "totalSec": 50.724,
+  "totalFrames": 1522,
+  "beats": [
+    {
+      "id": "b1_hook",
+      "beat": 1,
+      "asset": "moluccas_map_17th.jpg",
+      "kicker": "THE SPICE ISLAND SIEGE",
+      "headline": "39 MEN · 1,540 DAYS",
+      "text": "Thirty-nine men held a three-kilometre island against an empire for 1,540 days — for a spice the world could get nowhere else.",
+      "focus": "1,540-Day Island Stand",
+      "startSec": 0.0,
+      "endSec": 9.195,
+      "startFrame": 0,
+      "endFrame": 276,
+      "words": [
+        {
+          "w": "Thirty-nine",
+          "start": 0.0,
+          "end": 0.72
+        },
+        {
+          "w": "men",
+          "start": 0.72,
+          "end": 1.057
+        },
+        {
+          "w": "held",
+          "start": 1.057,
+          "end": 1.3
+        },
+        {
+          "w": "a",
+          "start": 1.3,
+          "end": 1.393
+        },
+        {
+          "w": "three-kilometre",
+          "start": 1.393,
+          "end": 2.125
+        },
+        {
+          "w": "island",
+          "start": 2.125,
+          "end": 2.74
+        },
+        {
+          "w": "against",
+          "start": 2.74,
+          "end": 3.17
+        },
+        {
+          "w": "an",
+          "start": 3.17,
+          "end": 3.297
+        },
+        {
+          "w": "empire",
+          "start": 3.297,
+          "end": 3.785
+        },
+        {
+          "w": "for",
+          "start": 3.785,
+          "end": 3.936
+        },
+        {
+          "w": "1,540",
+          "start": 3.936,
+          "end": 5.468
+        },
+        {
+          "w": "days",
+          "start": 5.468,
+          "end": 6.026
+        },
+        {
+          "w": "—",
+          "start": 6.026,
+          "end": 6.676
+        },
+        {
+          "w": "for",
+          "start": 6.676,
+          "end": 6.861
+        },
+        {
+          "w": "a",
+          "start": 6.861,
+          "end": 6.931
+        },
+        {
+          "w": "spice",
+          "start": 6.931,
+          "end": 7.338
+        },
+        {
+          "w": "the",
+          "start": 7.338,
+          "end": 7.465
+        },
+        {
+          "w": "world",
+          "start": 7.465,
+          "end": 7.767
+        },
+        {
+          "w": "could",
+          "start": 7.767,
+          "end": 7.941
+        },
+        {
+          "w": "get",
+          "start": 7.941,
+          "end": 8.173
+        },
+        {
+          "w": "nowhere",
+          "start": 8.173,
+          "end": 8.545
+        },
+        {
+          "w": "else.",
+          "start": 8.545,
+          "end": 9.195
+        }
+      ]
+    },
+    {
+      "id": "b2_the_island",
+      "beat": 2,
+      "asset": "moluccas_map_17th.jpg",
+      "kicker": "BANDA SEA · MALUKU",
+      "headline": "PULAU RUN: 3-KM OUTPOST",
+      "text": "That island was Run, three kilometres long in the Banda archipelago — the world's only source of nutmeg and mace.",
+      "focus": "Banda Archipelago & Nutmeg Monopoly",
+      "startSec": 9.495,
+      "endSec": 16.6,
+      "startFrame": 285,
+      "endFrame": 498,
+      "words": [
+        {
+          "w": "That",
+          "start": 9.495,
+          "end": 9.832
+        },
+        {
+          "w": "island",
+          "start": 9.832,
+          "end": 10.203
+        },
+        {
+          "w": "was",
+          "start": 10.203,
+          "end": 10.412
+        },
+        {
+          "w": "Run,",
+          "start": 10.412,
+          "end": 10.946
+        },
+        {
+          "w": "three",
+          "start": 10.946,
+          "end": 11.213
+        },
+        {
+          "w": "kilometres",
+          "start": 11.213,
+          "end": 11.736
+        },
+        {
+          "w": "long",
+          "start": 11.736,
+          "end": 12.061
+        },
+        {
+          "w": "in",
+          "start": 12.061,
+          "end": 12.189
+        },
+        {
+          "w": "the",
+          "start": 12.189,
+          "end": 12.293
+        },
+        {
+          "w": "Banda",
+          "start": 12.293,
+          "end": 12.653
+        },
+        {
+          "w": "archipelago",
+          "start": 12.653,
+          "end": 13.535
+        },
+        {
+          "w": "—",
+          "start": 13.535,
+          "end": 13.918
+        },
+        {
+          "w": "the",
+          "start": 13.918,
+          "end": 14.069
+        },
+        {
+          "w": "world's",
+          "start": 14.069,
+          "end": 14.476
+        },
+        {
+          "w": "only",
+          "start": 14.476,
+          "end": 14.778
+        },
+        {
+          "w": "source",
+          "start": 14.778,
+          "end": 15.114
+        },
+        {
+          "w": "of",
+          "start": 15.114,
+          "end": 15.254
+        },
+        {
+          "w": "nutmeg",
+          "start": 15.254,
+          "end": 15.73
+        },
+        {
+          "w": "and",
+          "start": 15.73,
+          "end": 15.904
+        },
+        {
+          "w": "mace.",
+          "start": 15.904,
+          "end": 16.6
+        }
+      ]
+    },
+    {
+      "id": "b3_the_siege",
+      "beat": 3,
+      "asset": "nutmeg_vintage_1599.jpg",
+      "kicker": "1616–1620 RESISTANCE",
+      "headline": "COURTHOPE'S STAND",
+      "text": "In sixteen sixteen, English captain Nathaniel Courthope arrived to break the Dutch monopoly, holding out until his death in sixteen twenty.",
+      "focus": "Nathaniel Courthope & VOC Monopoly",
+      "startSec": 16.9,
+      "endSec": 24.981,
+      "startFrame": 507,
+      "endFrame": 749,
+      "words": [
+        {
+          "w": "In",
+          "start": 16.9,
+          "end": 17.109
+        },
+        {
+          "w": "sixteen",
+          "start": 17.109,
+          "end": 17.562
+        },
+        {
+          "w": "sixteen,",
+          "start": 17.562,
+          "end": 18.282
+        },
+        {
+          "w": "English",
+          "start": 18.282,
+          "end": 18.641
+        },
+        {
+          "w": "captain",
+          "start": 18.641,
+          "end": 19.059
+        },
+        {
+          "w": "Nathaniel",
+          "start": 19.059,
+          "end": 19.57
+        },
+        {
+          "w": "Courthope",
+          "start": 19.57,
+          "end": 20.197
+        },
+        {
+          "w": "arrived",
+          "start": 20.197,
+          "end": 20.65
+        },
+        {
+          "w": "to",
+          "start": 20.65,
+          "end": 20.766
+        },
+        {
+          "w": "break",
+          "start": 20.766,
+          "end": 21.068
+        },
+        {
+          "w": "the",
+          "start": 21.068,
+          "end": 21.184
+        },
+        {
+          "w": "Dutch",
+          "start": 21.184,
+          "end": 21.451
+        },
+        {
+          "w": "monopoly,",
+          "start": 21.451,
+          "end": 22.31
+        },
+        {
+          "w": "holding",
+          "start": 22.31,
+          "end": 22.659
+        },
+        {
+          "w": "out",
+          "start": 22.659,
+          "end": 22.856
+        },
+        {
+          "w": "until",
+          "start": 22.856,
+          "end": 23.123
+        },
+        {
+          "w": "his",
+          "start": 23.123,
+          "end": 23.262
+        },
+        {
+          "w": "death",
+          "start": 23.262,
+          "end": 23.576
+        },
+        {
+          "w": "in",
+          "start": 23.576,
+          "end": 23.727
+        },
+        {
+          "w": "sixteen",
+          "start": 23.727,
+          "end": 24.191
+        },
+        {
+          "w": "twenty.",
+          "start": 24.191,
+          "end": 24.981
+        }
+      ]
+    },
+    {
+      "id": "b4_the_treaty",
+      "beat": 4,
+      "asset": "castello_plan_manhattan_1660.jpg",
+      "kicker": "1667 TREATY OF BREDA",
+      "headline": "THE ATLANTIC SETTLEMENT",
+      "text": "After England seized Manhattan, the sixteen sixty-seven Treaty of Breda ended their war under uti possidetis: each side kept what it already held.",
+      "focus": "Seizure of Manhattan & Uti Possidetis",
+      "startSec": 25.281,
+      "endSec": 34.94,
+      "startFrame": 758,
+      "endFrame": 1048,
+      "words": [
+        {
+          "w": "After",
+          "start": 25.281,
+          "end": 25.676
+        },
+        {
+          "w": "England",
+          "start": 25.676,
+          "end": 26.059
+        },
+        {
+          "w": "seized",
+          "start": 26.059,
+          "end": 26.419
+        },
+        {
+          "w": "Manhattan,",
+          "start": 26.419,
+          "end": 27.069
+        },
+        {
+          "w": "the",
+          "start": 27.069,
+          "end": 27.22
+        },
+        {
+          "w": "sixteen",
+          "start": 27.22,
+          "end": 27.731
+        },
+        {
+          "w": "sixty-seven",
+          "start": 27.731,
+          "end": 28.474
+        },
+        {
+          "w": "Treaty",
+          "start": 28.474,
+          "end": 28.857
+        },
+        {
+          "w": "of",
+          "start": 28.857,
+          "end": 28.95
+        },
+        {
+          "w": "Breda",
+          "start": 28.95,
+          "end": 29.507
+        },
+        {
+          "w": "ended",
+          "start": 29.507,
+          "end": 29.879
+        },
+        {
+          "w": "their",
+          "start": 29.879,
+          "end": 30.099
+        },
+        {
+          "w": "war",
+          "start": 30.099,
+          "end": 30.436
+        },
+        {
+          "w": "under",
+          "start": 30.436,
+          "end": 30.714
+        },
+        {
+          "w": "uti",
+          "start": 30.714,
+          "end": 31.167
+        },
+        {
+          "w": "possidetis:",
+          "start": 31.167,
+          "end": 32.607
+        },
+        {
+          "w": "each",
+          "start": 32.607,
+          "end": 32.851
+        },
+        {
+          "w": "side",
+          "start": 32.851,
+          "end": 33.234
+        },
+        {
+          "w": "kept",
+          "start": 33.234,
+          "end": 33.501
+        },
+        {
+          "w": "what",
+          "start": 33.501,
+          "end": 33.687
+        },
+        {
+          "w": "it",
+          "start": 33.687,
+          "end": 33.803
+        },
+        {
+          "w": "already",
+          "start": 33.803,
+          "end": 34.186
+        },
+        {
+          "w": "held.",
+          "start": 34.186,
+          "end": 34.941
+        }
+      ]
+    },
+    {
+      "id": "b5_the_deal",
+      "beat": 5,
+      "asset": "treaty_of_breda_1667.jpg",
+      "kicker": "1667 GLOBAL SETTLEMENT",
+      "headline": "THE MONOPOLY LOCK",
+      "text": "England kept Manhattan; the Dutch kept Run, which completed their grip on the world's nutmeg trade.",
+      "focus": "Dutch VOC Monopoly Settlement",
+      "startSec": 35.24,
+      "endSec": 41.231,
+      "startFrame": 1057,
+      "endFrame": 1237,
+      "words": [
+        {
+          "w": "England",
+          "start": 35.24,
+          "end": 35.728
+        },
+        {
+          "w": "kept",
+          "start": 35.728,
+          "end": 36.006
+        },
+        {
+          "w": "Manhattan;",
+          "start": 36.006,
+          "end": 36.784
+        },
+        {
+          "w": "the",
+          "start": 36.784,
+          "end": 36.947
+        },
+        {
+          "w": "Dutch",
+          "start": 36.947,
+          "end": 37.249
+        },
+        {
+          "w": "kept",
+          "start": 37.249,
+          "end": 37.527
+        },
+        {
+          "w": "Run,",
+          "start": 37.527,
+          "end": 38.166
+        },
+        {
+          "w": "which",
+          "start": 38.166,
+          "end": 38.41
+        },
+        {
+          "w": "completed",
+          "start": 38.41,
+          "end": 38.897
+        },
+        {
+          "w": "their",
+          "start": 38.897,
+          "end": 39.118
+        },
+        {
+          "w": "grip",
+          "start": 39.118,
+          "end": 39.431
+        },
+        {
+          "w": "on",
+          "start": 39.431,
+          "end": 39.559
+        },
+        {
+          "w": "the",
+          "start": 39.559,
+          "end": 39.675
+        },
+        {
+          "w": "world's",
+          "start": 39.675,
+          "end": 40.058
+        },
+        {
+          "w": "nutmeg",
+          "start": 40.058,
+          "end": 40.476
+        },
+        {
+          "w": "trade.",
+          "start": 40.476,
+          "end": 41.231
+        }
+      ]
+    },
+    {
+      "id": "b6_the_paradox",
+      "beat": 6,
+      "asset": "nutmeg_fruit_fresh.jpg",
+      "kicker": "THE GEOPOLITICAL IRONY",
+      "headline": "MANHATTAN VS RUN",
+      "text": "Today, Manhattan is a global financial capital. And Run? A quiet island of about fifteen hundred people, where nutmeg still grows.",
+      "focus": "Modern Contrast & Geopolitical Legacy",
+      "startSec": 41.531,
+      "endSec": 50.355,
+      "startFrame": 1246,
+      "endFrame": 1511,
+      "words": [
+        {
+          "w": "Today,",
+          "start": 41.531,
+          "end": 42.042
+        },
+        {
+          "w": "Manhattan",
+          "start": 42.042,
+          "end": 42.564
+        },
+        {
+          "w": "is",
+          "start": 42.564,
+          "end": 42.692
+        },
+        {
+          "w": "a",
+          "start": 42.692,
+          "end": 42.762
+        },
+        {
+          "w": "global",
+          "start": 42.762,
+          "end": 43.168
+        },
+        {
+          "w": "financial",
+          "start": 43.168,
+          "end": 43.702
+        },
+        {
+          "w": "capital.",
+          "start": 43.702,
+          "end": 44.608
+        },
+        {
+          "w": "And",
+          "start": 44.608,
+          "end": 44.863
+        },
+        {
+          "w": "Run?",
+          "start": 44.863,
+          "end": 45.78
+        },
+        {
+          "w": "A",
+          "start": 45.78,
+          "end": 45.943
+        },
+        {
+          "w": "quiet",
+          "start": 45.943,
+          "end": 46.338
+        },
+        {
+          "w": "island",
+          "start": 46.338,
+          "end": 46.732
+        },
+        {
+          "w": "of",
+          "start": 46.732,
+          "end": 46.837
+        },
+        {
+          "w": "about",
+          "start": 46.837,
+          "end": 47.127
+        },
+        {
+          "w": "fifteen",
+          "start": 47.127,
+          "end": 47.58
+        },
+        {
+          "w": "hundred",
+          "start": 47.58,
+          "end": 47.905
+        },
+        {
+          "w": "people,",
+          "start": 47.905,
+          "end": 48.555
+        },
+        {
+          "w": "where",
+          "start": 48.555,
+          "end": 48.799
+        },
+        {
+          "w": "nutmeg",
+          "start": 48.799,
+          "end": 49.252
+        },
+        {
+          "w": "still",
+          "start": 49.252,
+          "end": 49.565
+        },
+        {
+          "w": "grows.",
+          "start": 49.565,
+          "end": 50.355
+        }
+      ]
+    }
+  ]
+}

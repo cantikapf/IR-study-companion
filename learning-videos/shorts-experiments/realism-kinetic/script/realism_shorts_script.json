@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "beat": "HOOK",
+    "title": "The Emergency Call Problem",
+    "narration": "If a foreign army crossed your border tonight... who would you call? The UN? Think again.",
+    "visual_cues": {
+      "headline": "WHO DO YOU CALL?",
+      "keywords": ["FOREIGN ARMY", "BORDER", "THE UN?", "THINK AGAIN"],
+      "accent_color": "#FF2A55",
+      "icon": "phone-alert"
+    }
+  },
+  {
+    "id": 2,
+    "beat": "ANARCHY",
+    "title": "The Brutal Reality of Anarchy",
+    "narration": "In world politics, there is no global 911. Realists call this brutal reality: Anarchy. Not chaos, but the total absence of a supreme authority.",
+    "visual_cues": {
+      "headline": "NO GLOBAL 911",
+      "keywords": ["NO 911", "ANARCHY", "NO SUPREME AUTHORITY"],
+      "accent_color": "#FF2A55",
+      "icon": "globe-shield-broken"
+    }
+  },
+  {
+    "id": 3,
+    "beat": "THE_THREE_S",
+    "title": "The Three S's of Realism",
+    "narration": "Because no one is coming to save you, states survive by three ruthless rules: Statism, Survival, and Self-Help.",
+    "visual_cues": {
+      "headline": "THE 3 S's OF REALISM",
+      "keywords": ["STATISM", "SURVIVAL", "SELF-HELP"],
+      "accent_color": "#FFB703",
+      "icon": "cards-three"
+    }
+  },
+  {
+    "id": 4,
+    "beat": "THE_THREE_S_DETAIL",
+    "title": "Ruthless Logic of Survival",
+    "narration": "Statism: states are the only players that matter. Survival: avoiding extinction at all costs. And Self-Help: trust no one, build your military, and assume the worst.",
+    "visual_cues": {
+      "headline": "RUTHLESS CALCULUS",
+      "keywords": ["ONLY PLAYERS", "AVOID EXTINCTION", "TRUST NO ONE"],
+      "accent_color": "#FFB703",
+      "icon": "radar-target"
+    }
+  },
+  {
+    "id": 5,
+    "beat": "SECURITY_DILEMMA",
+    "title": "The Security Dilemma Paradox",
+    "narration": "When every nation arms itself to feel safe, the whole world becomes infinitely more dangerous. That is the Security Dilemma.",
+    "visual_cues": {
+      "headline": "SECURITY DILEMMA",
+      "keywords": ["ARMS RACE", "MORE DANGEROUS", "PARADOX OF POWER"],
+      "accent_color": "#00F0FF",
+      "icon": "balance-hazard"
+    }
+  },
+  {
+    "id": 6,
+    "beat": "OUTRO",
+    "title": "The Cold Reality of Power",
+    "narration": "Welcome to Political Realism. Can world peace ever truly exist? Drop your thoughts below.",
+    "visual_cues": {
+      "headline": "POLITICAL REALISM",
+      "keywords": ["CAN PEACE EXIST?", "DROP YOUR THOUGHTS", "@IRinANutshell"],
+      "accent_color": "#FFFFFF",
+      "icon": "compass"
+    }
+  }
+]

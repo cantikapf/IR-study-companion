@@ -1,0 +1,56 @@
+[
+  {
+    "id": "b1_hook",
+    "beat": 1,
+    "asset": "moluccas_map_17th.jpg",
+    "kicker": "THE SPICE ISLAND SIEGE",
+    "headline": "39 MEN · 1,540 DAYS",
+    "text": "Thirty-nine men held a three-kilometre island against an empire for 1,540 days — for a spice the world could get nowhere else.",
+    "focus": "1,540-Day Island Stand"
+  },
+  {
+    "id": "b2_the_island",
+    "beat": 2,
+    "asset": "moluccas_map_17th.jpg",
+    "kicker": "BANDA SEA · MALUKU",
+    "headline": "PULAU RUN: 3-KM OUTPOST",
+    "text": "That island was Run, three kilometres long in the Banda archipelago — the world's only source of nutmeg and mace.",
+    "focus": "Banda Archipelago & Nutmeg Monopoly"
+  },
+  {
+    "id": "b3_the_siege",
+    "beat": 3,
+    "asset": "nutmeg_vintage_1599.jpg",
+    "kicker": "1616–1620 RESISTANCE",
+    "headline": "COURTHOPE'S STAND",
+    "text": "In sixteen sixteen, English captain Nathaniel Courthope arrived to break the Dutch monopoly, holding out until his death in sixteen twenty.",
+    "focus": "Nathaniel Courthope & VOC Monopoly"
+  },
+  {
+    "id": "b4_the_treaty",
+    "beat": 4,
+    "asset": "castello_plan_manhattan_1660.jpg",
+    "kicker": "1667 TREATY OF BREDA",
+    "headline": "THE ATLANTIC SETTLEMENT",
+    "text": "After England seized Manhattan, the sixteen sixty-seven Treaty of Breda ended their war under uti possidetis: each side kept what it already held.",
+    "focus": "Seizure of Manhattan & Uti Possidetis"
+  },
+  {
+    "id": "b5_the_deal",
+    "beat": 5,
+    "asset": "treaty_of_breda_1667.jpg",
+    "kicker": "1667 GLOBAL SETTLEMENT",
+    "headline": "THE MONOPOLY LOCK",
+    "text": "England kept Manhattan; the Dutch kept Run, which completed their grip on the world's nutmeg trade.",
+    "focus": "Dutch VOC Monopoly Settlement"
+  },
+  {
+    "id": "b6_the_paradox",
+    "beat": 6,
+    "asset": "nutmeg_fruit_fresh.jpg",
+    "kicker": "THE GEOPOLITICAL IRONY",
+    "headline": "MANHATTAN VS RUN",
+    "text": "Today, Manhattan is a global financial capital. And Run? A quiet island of about fifteen hundred people, where nutmeg still grows.",
+    "focus": "Modern Contrast & Geopolitical Legacy"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "title": "The Island Traded for Manhattan: Pulau Run & The 1667 Treaty of Breda",
+  "fps": 30,
+  "totalSec": 52.545,
+  "totalFrames": 1576,
+  "beats": [
+    {
+      "id": "b1_hook",
+      "beat": 1,
+      "asset": "castello_plan_manhattan_1660.jpg",
+      "kicker": "1667 THE HISTORIC TRADE",
+      "headline": "THE WORST TRADE IN HISTORY?",
+      "text": "In sixteen sixty-seven, the Dutch gave away Manhattan for a tiny island in Indonesia. And at the time, they thought they won.",
+      "focus": "Manhattan vs Pulau Run",
+      "startSec": 0.0,
+      "endSec": 7.296,
+      "startFrame": 0,
+      "endFrame": 219
+    },
+    {
+      "id": "b2_the_island",
+      "beat": 2,
+      "asset": "moluccas_map_17th.jpg",
+      "kicker": "BANDA SEA \u00b7 MALUKU",
+      "headline": "PULAU RUN: 3 KM OF GOLD",
+      "text": "That island was Pulau Run, a three-kilometer speck in Maluku's Banda archipelago. Back then, it was the only place on Earth where nutmeg grew.",
+      "focus": "Banda Archipelago & Nutmeg",
+      "startSec": 7.576,
+      "endSec": 16.429,
+      "startFrame": 227,
+      "endFrame": 493
+    },
+    {
+      "id": "b3_the_siege",
+      "beat": 3,
+      "asset": "nutmeg_vintage_1599.jpg",
+      "kicker": "1616\u20131620 SIEGE",
+      "headline": "WORTH MORE THAN GOLD",
+      "text": "Gram for gram, nutmeg was worth more than gold. English captain Nathaniel Courthope defended Run for over fifteen hundred days against Dutch naval sieges.",
+      "focus": "Nathaniel Courthope & 1540-day siege",
+      "startSec": 16.709,
+      "endSec": 25.84,
+      "startFrame": 501,
+      "endFrame": 775
+    },
+    {
+      "id": "b4_the_treaty",
+      "beat": 4,
+      "asset": "castello_plan_manhattan_1660.jpg",
+      "kicker": "1664 NEW AMSTERDAM",
+      "headline": "THE SHIFTING ATLANTIC",
+      "text": "When English warships seized New Amsterdam across the Atlantic, the sixteen sixty-seven Treaty of Breda settled the war under the principle of uti possidetis.",
+      "focus": "Seizure of New Amsterdam & Breda negotiations",
+      "startSec": 26.12,
+      "endSec": 35.379,
+      "startFrame": 784,
+      "endFrame": 1061
+    },
+    {
+      "id": "b5_the_deal",
+      "beat": 5,
+      "asset": "treaty_of_breda_1667.jpg",
+      "kicker": "1667 TREATY OF BREDA",
+      "headline": "THE MONOPOLY LOCK",
+      "text": "To secure a total global monopoly on the nutmeg trade, the Dutch abandoned Manhattan to keep Run. To them, it was the obvious choice.",
+      "focus": "Dutch VOC monopoly decision",
+      "startSec": 35.659,
+      "endSec": 43.552,
+      "startFrame": 1070,
+      "endFrame": 1307
+    },
+    {
+      "id": "b6_the_paradox",
+      "beat": 6,
+      "asset": "nutmeg_fruit_fresh.jpg",
+      "kicker": "THE GEOPOLITICAL IRONY",
+      "headline": "MANHATTAN VS PULAU RUN",
+      "text": "Today, Manhattan is the financial capital of the planet. And Pulau Run? A quiet island of fifteen hundred people, where the nutmeg trees still grow.",
+      "focus": "Modern contrast & IR Legacy",
+      "startSec": 43.832,
+      "endSec": 52.045,
+      "startFrame": 1315,
+      "endFrame": 1561
+    }
+  ]
+}

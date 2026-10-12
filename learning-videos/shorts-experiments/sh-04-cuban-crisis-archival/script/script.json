@@ -1,0 +1,72 @@
+[
+  {
+    "id": "beat1_hook",
+    "beat": "1. THE HOOK",
+    "kicker": "DEFCON 2 ALERT // 1962",
+    "headline": "ONE VOTE FROM OBLIVION",
+    "text": "In October 1962, the human race was one single vote away from total nuclear annihilation.",
+    "focus": "nuclear annihilation",
+    "asset": "b1_sac_alert.mp4",
+    "docket": "STRATEGIC AIR COMMAND · ALERT B-52",
+    "chips": [
+      {"label": "GLOBAL ALERT", "val": "DEFCON 2 (HIGHEST EVER)"},
+      {"label": "AIRBORNE FORCE", "val": "1,436 STRATEGIC BOMBERS"}
+    ]
+  },
+  {
+    "id": "beat2_threat",
+    "beat": "2. THE THREAT",
+    "kicker": "SAN CRISTOBAL // CUBA",
+    "headline": "90 MILES FROM FLORIDA",
+    "text": "U-2 spy planes revealed Soviet nuclear warheads just ninety miles off the coast of Florida — capable of vaporizing Washington in three minutes.",
+    "focus": "three minutes",
+    "asset": "b2_u2_missiles.mp4",
+    "docket": "U-2 RECONNAISSANCE · MEDIUM RANGE BALLISTIC MISSILES",
+    "chips": [
+      {"label": "TARGET DISTANCE", "val": "90 MILES TO US COAST"},
+      {"label": "IMPACT TIMELINE", "val": "180 SECONDS TO CAPITAL"}
+    ]
+  },
+  {
+    "id": "beat3_blockade",
+    "beat": "3. THE QUARANTINE",
+    "kicker": "ATLANTIC QUARANTINE LINE",
+    "headline": "THE NAVAL STANDOFF",
+    "text": "Kennedy deployed a naval blockade. The world held its breath as Soviet freighters sailed straight toward the quarantine line.",
+    "focus": "naval blockade",
+    "asset": "b3_naval_blockade.mp4",
+    "docket": "US NAVY DESTROYER TASK FORCE · ATLANTIC",
+    "chips": [
+      {"label": "WARSHIPS DEPLOYED", "val": "180 US NAVAL VESSELS"},
+      {"label": "SOVIET CONVOY", "val": "16 SHIPS ON INTERCEPT"}
+    ]
+  },
+  {
+    "id": "beat4_arkhipov",
+    "beat": "4. THE HERO",
+    "kicker": "SOVIET SUBMARINE B-59",
+    "headline": "THE MAN WHO SAID NO",
+    "text": "Deep underwater, Soviet submarine B-59 prepared to fire a nuclear torpedo. Two senior officers approved. One man, Vasili Arkhipov, said NO.",
+    "focus": "Vasili Arkhipov",
+    "asset": "b4_submarine_depth.mp4",
+    "docket": "SUBMARINE FLOTILLA · NUCLEAR TORPEDO 10-KILOTON",
+    "chips": [
+      {"label": "CREW CONDITION", "val": "50°C CABIN · BATTERY DEPLETED"},
+      {"label": "OFFICER VETO", "val": "VASILI ARKHIPOV ABORTED"}
+    ]
+  },
+  {
+    "id": "beat5_paradox",
+    "beat": "5. THE REALIST VERDICT",
+    "kicker": "MUTUALLY ASSURED DESTRUCTION",
+    "headline": "THE LOGIC OF TERROR",
+    "text": "This is Realism's darkest truth: peace was not preserved by moral treaties, but by the absolute certainty of Mutually Assured Destruction.",
+    "focus": "Mutually Assured Destruction",
+    "asset": "b5_thermonuclear.mp4",
+    "docket": "STRATEGIC DOCTRINE · COLD WAR DETERRENCE",
+    "chips": [
+      {"label": "SURVIVAL MECHANISM", "val": "SECOND-STRIKE CERTAINTY"},
+      {"label": "CHANNEL CTA", "val": "@IRinANutshell"}
+    ]
+  }
+]

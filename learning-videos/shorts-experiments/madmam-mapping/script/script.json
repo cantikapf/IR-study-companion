@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "year": "PRESENT",
+    "text": "How did tiny Austria end up ruling most of Europe?",
+    "focus": "austria_tiny"
+  },
+  {
+    "id": 2,
+    "year": "976",
+    "text": "Austria started in 976 as a small frontier march to protect Central Europe from nomadic raids.",
+    "focus": "march_976"
+  },
+  {
+    "id": 3,
+    "year": "1156",
+    "text": "Over the next 270 years, it was slowly transformed from a border outpost into a proper Duchy.",
+    "focus": "duchy_1156"
+  },
+  {
+    "id": 4,
+    "year": "1273",
+    "text": "Then in 1273, Rudolph of Habsburg won election as Holy Roman Emperor.",
+    "focus": "hre_election"
+  },
+  {
+    "id": 5,
+    "year": "1278",
+    "text": "Rudolph immediately seized Austria and Styria, followed by Carinthia.",
+    "focus": "habsburg_core"
+  },
+  {
+    "id": 6,
+    "year": "1500s",
+    "text": "From there, the Habsburgs played the ultimate long game: expanding through marriage into Burgundy, Spain, and Hungary.",
+    "focus": "empire_superpower"
+  }
+]
