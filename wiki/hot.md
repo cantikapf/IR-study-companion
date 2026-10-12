@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-12 - Audit Konten Fase 3 (Substansi Akademik) + Remediasi 13 FAIL:
+1. `Audit`: 157 bab (18 modul, ~332k kata) dipecah 6 unit, diaudit 6 subagent paralel pada 4 sumbu (accuracy, depth, attribution, coverage). Hasil: 122 PASS (78%), 22 MINOR (14%), 13 FAIL (8%). Tiap FAIL direproduksi orkestrator (grep kutipan + baca konteks) sebelum diperbaiki; atribusi "Podgorski" diverifikasi fabrikasi via web search.
+2. `13 FAIL diperbaiki` (3 subagent, file-disjoint, patch minimal, frontmatter/slug/quiz tak disentuh): (a) fabrikasi/misatribusi — `012/160-birth-prc.md` (sumber "Podgorski" fabrikasi → suara kursus), `023/060-dependency-theory.md` (imperialisme Marx → Lenin/dependency); (b) kronologi — `013/020-political-institution.md`, `013/030-evolution-party.md`, `032/020-history-diplomacy.md` (Dante/Petrarch abad-14, Richelieu 1624), `045/030-evolution-IO.md` (Danube 1856/1838), `041/010-history-evolution-fpa.md` (jurnal FPA 2005); (c) inversi fakta — `046/030-economic-hegemony.md` (US nominal, China PPP), `050/060-judicial-procedure-wto.md` (WTO tak override hukum domestik); (d) coverage/filler — `043/060-dev-china-india-chile...md` (boilerplate ×5 → historis per kawasan), `045/060-IMF-world-bank.md` (+section World Bank), `050/020-transformation-diplomacy-trade.md` (3 transformasi eksplisit), `050/040-evolution-global-trade.md` (naratif Silk Road→WTO).
+3. `Laporan SSOT`: `wiki/audit-content-phase3.md` (tabel 13 FAIL + 22 MINOR outstanding).
+4. `Verifikasi`: pytest 369/369 PASS · Jekyll build OK (42.7s) · 13 file berubah (semua `_chapters/`, +185/-223) · tiap fix dicek ulang orkestrator.
+5. `Status`: Fase 3 SELESAI (FAIL dituntaskan). Sisa: 22 MINOR menunggu keputusan user.
+
 2026-10-12 - Audit Konten Fase 2 (Kunci Jawaban vs Teks Bab) + Remediasi Bias Posisi:
 1. `Substansi Kunci — LULUS`: 337 item (157 kuis bab + 180 soal ujian) dipecah jadi 6 unit seimbang (3 modul/unit), diaudit 6 subagent paralel (read-only). Hasil: 336 OK. Satu-satunya temuan `031#q2` **direproduksi orkestrator dan dibatalkan** — kuis menanyakan MSSD (Mill's Method of Difference), kunci `opt0` "Most Similar Systems Design", cocok dengan penjelasannya. Subagent salah baca. Efektif **337/337 benar secara isi**; tidak ada swapped-key.
 2. `Cacat Struktural (dilewatkan subagent)`: bias posisi kunci — kuis bab 141/157 (90%) berkunci `opt2` (`opt4` tak pernah jadi kunci); ujian modul 149/180 (83%) kunci pada opsi ke-2. `course-player.js` tidak mengacak opsi → siswa bisa lulus via pola posisi, bukan pemahaman.

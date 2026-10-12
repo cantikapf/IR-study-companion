@@ -38,14 +38,11 @@ This focus on honesty was crucial in the Byzantine court. The emperor often had 
 
 So Byzantium relied on temporary diplomats focused narrowly on the job at hand. And it developed an early form of diplomatic ethics stressing truth and candor above all.
 
-**Italian City States 15th AD**
+**Italian City States and Early Diplomacy**
 
-In the 15th century, diplomacy became a true profession as the Italian city-states began appointing permanent ambassadors. The most notable of these ambassadors were:
+Prior to the institutionalization of permanent resident embassies, prominent 14th-century Italian literary figures frequently served on ad hoc diplomatic missions: Dante Alighieri undertook embassies for Florence, Francesco Petrarca (Petrarch) served as an envoy to European courts and Avignon, and Giovanni Boccaccio was entrusted with diplomatic assignments.
 
-- Dante Alighieri, author of the Divine Comedy, who was sent on a number of diplomatic missions for the city of Florence.
-- Francesco Petrarca, known as Petrarch, served as ambassador to the papal court in Avignon.
-- Giovanni Boccaccio, author of the Decameron, worked on diplomatic missions and carried out espionage work.
-- Niccolò Machiavelli wrote extensively on diplomacy in his famous work The Prince. He served as Secretary of the Second Chancery of the Signoria of Florence from 1498-1512.
+In the 15th century, diplomacy became a true profession as the Italian city-states began appointing permanent resident ambassadors. Niccolò Machiavelli later reflected this diplomatic environment, serving as Secretary of the Second Chancery of the Signoria of Florence from 1498 to 1512 and analyzing diplomacy and statecraft in *The Prince*.
 
 The establishment of permanent embassies was a major development, creating continuous diplomatic relationships instead of ad hoc missions. The Italian states shared linguistic and cultural similarities that enabled open communication. Ambassadors were typically appointed from the educated elite who were familiar with Latin and could converse easily. The small distances between city-states also facilitated more frequent contact and correspondence between envoys.
 
@@ -99,13 +96,12 @@ Some key characteristics defined diplomacy in the modern era:
 
 ## Diplomatic role from time to time
 
-- 15th century
-	- Diplomacy became a true profession
-	- Italian States began to appoint permanent ambassadors
-	- Dante, Petrarch, Boccaccio, Machiavelli 
-- 1600 
-	- Cardinal Richelieu (1600) - advances in diplomatic theory and practice
-	- Political Testament - diplomacy shoulc be a continuous process aimed at creating durable relationships rather than attempting to make opportunistic advances
+- 14th–15th century
+	- 14th century: writers (Dante, Petrarch, Boccaccio) served as early ad hoc envoys
+	- 15th century: Italian States began appointing permanent resident ambassadors; Machiavelli served as Florentine envoy (1498–1512)
+- 17th century
+	- Cardinal Richelieu (ministry 1624–1642) - advances in diplomatic theory and practice
+	- Political Testament - diplomacy should be a continuous process aimed at creating durable relationships rather than attempting to make opportunistic advances
 - Before 18th century
 	- the language of diplomacy: Latin
 	- Treaty of Westphalia, the Anglo-Danish Treaty, and Anglo Dutch Treaty

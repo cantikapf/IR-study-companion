@@ -55,13 +55,13 @@ This parliamentary system was fraught with instability, leading to Sukarno decla
 
 The rise to power of Suharto in 1967 saw him banning most political parties and instituting a restrictive authoritarian regime for over 30 years. Only two parties were allowed during this period - Suharto's own Golongan Karya (Golkar) party and the PPP, an amalgamation of several Islamic parties. The regime used Golkar to exert control and monopolize power, reducing the role of political parties. 
 
-However, Suharto's fall in 1998 led to democratization and political liberalization. This opened the floodgates for new political parties to emerge in Indonesia. From just 3 parties in 2004, the number rapidly rose to 24 parties contesting the 2019 elections. This shift marked a new chapter in Indonesia's political landscape.
+However, Suharto's fall in 1998 led to democratization and political liberalization. This opened the floodgates for new political parties to emerge in Indonesia. From just three state-sanctioned parties under the New Order, 24 parties contested the 2004 elections following democratic reforms. This shift marked a new chapter in Indonesia's political landscape.
 
 ## Proliferation of Parties in Early Parliamentary Era
 
 Indonesia's early parliamentary democracy era in the 1950s saw a proliferation of political parties, with over 30 parties forming during this period. This fragmented landscape was characterized by regionalism, with parties organized around ethnic, religious and local interests competing for power and influence. 
 
-The initial euphoria after independence led to idealistic goals of fulfilling regional aspirations through political vehicles. This resulted in a surge of parties representing distinct ethnic groups, religious denominations, islands, and provinces. The four largest parties were secular nationalist parties with ties to the independence movement, but they failed to establish nationwide dominance.
+The initial euphoria after independence led to idealistic goals of fulfilling regional aspirations through political vehicles. This resulted in a surge of parties representing distinct ethnic groups, religious denominations, islands, and provinces. The four largest parties in the 1955 elections reflected the country's primary ideological streams: the secular nationalist Indonesian National Party (PNI) and communist PKI, alongside major Islamic parties Masyumi (modernist) and Nahdlatul Ulama (traditionalist). However, none achieved an absolute majority, preventing any single party from establishing nationwide dominance.
 
 Smaller, regionally-based parties had strongholds in certain areas but little national presence. This fragmentation and regionalism ultimately bred dissatisfaction with the ineffective parliamentary system. The proliferation of localized parties catering to specific constituencies made it difficult to form stable ruling coalitions or achieve coherent national policymaking.
 
@@ -69,7 +69,7 @@ Smaller, regionally-based parties had strongholds in certain areas but little na
 
 Sukarno's rise to power in the late 1950s marked a shift towards guided democracy and growing nationalism in Indonesia. Faced with ethnic and regional tensions, Sukarno sought to exert greater control over the political structures. 
 
-A key characteristic of this period was the increasing authority exerted by Sukarno over the parliamentary system and political parties. The 1945 constitution had established a parliamentary democracy, but Sukarno aimed to consolidate power in the presidency. 
+A key characteristic of this period was the increasing authority exerted by Sukarno over the parliamentary system and political parties. While post-independence governance had operated under a parliamentary system under the 1950 Provisional Constitution, Sukarno aimed to consolidate power in the presidency by reinstating the presidential 1945 Constitution. 
 
 In 1957, Sukarno declared martial law and introduced Guided Democracy - an authoritarian system with Sukarno at the helm. Political parties were forced to amalgamate into two groups, reducing opposition and dissent. The Indonesian Nationalist Party (PNI), with its emphasis on nationalism aligned with Sukarno's vision, became the dominant political force during this period.
 
@@ -91,7 +91,7 @@ One of the most notable changes was the elimination of restrictions on establish
 
 Within just a few years after Suharto stepped down, the number of parties contesting national elections swelled from three to over 100. This was a dramatic shift from the rigid party system that had existed for over three decades under the New Order regime. A wider range of political voices and ideologies found expression through these newly formed parties.
 
-Some of the more influential parties emerging in the immediate post-Suharto period included the Indonesian Democratic Party of Struggle (PDI-P), led by Suharto's successor Megawati Sukarnoputri, and the National Awakening Party (PKB), with support bases among Muslim constituencies. The National Mandate Party (PAN) and the Justice and Unity Party (PKP) also drew significant support in early elections.
+Some of the more influential parties emerging in the immediate post-Suharto period included the Indonesian Democratic Party of Struggle (PDI-P), led by Sukarno's daughter Megawati Sukarnoputri, and the National Awakening Party (PKB), with support bases among Muslim constituencies. The National Mandate Party (PAN) and the Justice and Unity Party (PKP) also drew significant support in early elections.
 
 This proliferation of new parties marked a clear departure from the dominance of Golkar, PDI, and PPP under Suharto's New Order. It signaled greater political liberalization and a more open, democratic process taking root in the post-authoritarian era. The influx of parties represented the voices of Reformasi, reflecting the public's demand for transparent, representative politics after decades of restrictive government control over the party system.
 

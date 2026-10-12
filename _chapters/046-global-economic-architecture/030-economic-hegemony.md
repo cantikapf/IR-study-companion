@@ -20,11 +20,11 @@ A hegemonic power, according to the theory of Hegemonic Stability, has distinct 
 - **Must Have Strongest Military** - A hegemonic power must have the most potent military capabilities in the world. This includes having the largest military force in terms of personnel and equipment like ships, planes, tanks etc. The hegemon must also have a robust network of military alliances that is stronger than any opposing military bloc. Having overwhelming military dominance is essential for a hegemon to be able to enforce the international rules and norms it establishes.
 
 ## Must Have Strongest Economy
-A critical characteristic of a hegemonic power is having the strongest economy globally. This is often measured by having the largest GDP (gross domestic product). While China currently has the largest overall GDP, the US still maintains the largest GDP in terms of purchasing power parity. Purchasing power parity (PPP) attempts to measure the actual purchasing power of a country's currency within its own borders. 
+A critical characteristic of a hegemonic power is having the strongest economy globally. This is often measured by having the largest GDP (gross domestic product). While the United States maintains the largest overall nominal GDP, China possesses the largest GDP in terms of purchasing power parity (PPP). Purchasing power parity (PPP) attempts to measure the actual purchasing power of a country's currency within its own borders by adjusting for differences in price levels. 
 
-This suggests that while China's overall GDP may be higher, the US dollar still goes further for American consumers compared to the Chinese yuan for consumers in China. Additionally, the US dollar is the dominant global reserve currency. This gives the US immense economic clout worldwide.
+This indicates that while China's domestic purchasing power and output volume are higher when adjusted for local price levels, the US economy remains significantly larger in nominal dollar terms on the global stage. Additionally, the US dollar is the dominant global reserve currency. This gives the US immense economic clout worldwide.
 
-Therefore, by the economic measures of PPP GDP and having the dominant reserve currency, the US can make a strong claim to still having the world's strongest economy. China may increasingly challenge US economic dominance, but likely does not yet exceed it. To become a true hegemonic power, China would need to surpass the US significantly in terms of economic strength and influence.
+Therefore, by the economic measures of nominal GDP and having the dominant reserve currency, the US can make a strong claim to still having the world's strongest economy. China may increasingly challenge US economic dominance through its massive PPP-adjusted output, but does not yet exceed it in global monetary and financial primacy. To become a true hegemonic power, China would need to surpass the US significantly in terms of nominal economic strength, financial openness, and institutional influence.
 
 ## Must Have Political Cooperation
 
@@ -61,7 +61,7 @@ By providing these public goods, the hegemonic power helps maintain stability an
 
 ## China's Bid for Hegemony
 
-China has emerged as an economic powerhouse in recent decades, possessing the largest GDP in the world. However, China falls short of being a true hegemonic power. While its economy is formidable, China lacks other key attributes of a hegemon. 
+China has emerged as an economic powerhouse in recent decades, possessing the largest GDP in the world by purchasing power parity. However, China falls short of being a true hegemonic power. While its economy is formidable, China lacks other key attributes of a hegemon. 
 
 First, China does not have the most powerful military or a strong system of alliances that span the globe. The United States far surpasses China in military strength, with defense spending several times higher. America also has long-standing military alliances with countries in Europe, Asia, and around the world. China's military partnerships are limited by comparison.
 
@@ -91,7 +91,7 @@ Overall, the EU's strong economic fundamentals, stable growth, and high producti
 
 In conclusion, the United States is currently the world's leading candidate for hegemonic power status based on an analysis of the key characteristics. While China's economic growth presents a rising challenge, the US still maintains critical advantages that make it the most dominant single state in global politics and economics. 
 
-Specifically, the US has the world's largest economy by purchasing power parity, allowing it unrivaled financial influence and leverage. The ubiquity of the US dollar as the global reserve currency is a major source of American hegemony. Politically, the US maintains the most powerful military force in the world by far, with an unmatched ability to project power globally through alliances and hundreds of overseas bases. No other nation comes close to America's hard and soft power reach. 
+Specifically, the US has the world's largest economy in nominal terms, allowing it unrivaled financial influence and leverage. The ubiquity of the US dollar as the global reserve currency is a major source of American hegemony. Politically, the US maintains the most powerful military force in the world by far, with an unmatched ability to project power globally through alliances and hundreds of overseas bases. No other nation comes close to America's hard and soft power reach. 
 
 China and the EU may someday contend for hegemony, but currently lack the full spectrum dominance the US exhibits. Though facing relative decline, America preserves its superpower position and remains the closest match to a hegemon according to the theory of hegemonic stability. Barring major changes in the distribution of global power, the US is poised to maintain its leadership role for the foreseeable future.
 

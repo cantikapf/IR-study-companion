@@ -101,7 +101,7 @@ The Cultural Revolution left a profound and complex legacy on Chinese society. O
 
 However, the Cultural Revolution also produced some paradoxical impacts. By attacking the party elite, Mao unintentionally paved the way for Deng Xiaoping's eventual rise to power and China's embrace of capitalist policies after Mao's death. The excesses and failings of the Cultural Revolution discredited rigid ideological dogma and showed the need for more pragmatic policies. Artists and writers explored more personal expression in the aftermath, moving away from propaganda. The emphasis on class struggle also receded.
 
-While the Cultural Revolution aimed to renew communist fervor, its dysfunctional excesses ultimately diminished the appeal of doctrinaire socialism. The Podgorskis argue that the Cultural Revolution's "greatest irony" was that "in overthrowing one group of Communist leaders, Mao unleashed forces that helped destroy the very foundations of Communism in China." 
+While the Cultural Revolution aimed to renew communist fervor, its dysfunctional excesses ultimately diminished the appeal of doctrinaire socialism. In what became a central paradox of the era, the campaign's radical disruptions discredited doctrinaire Maoism: in overthrowing one group of Communist leaders, Mao unleashed forces that ultimately undermined the institutional foundations of orthodox Communism in China. 
 
 China continues to grapple with the legacy of this complex and turbulent era. The official historical narrative remains contested, subject to censorship and revision. But the Cultural Revolution's far-reaching social and political impacts left an indelible mark on China's national identity and path of development.
 

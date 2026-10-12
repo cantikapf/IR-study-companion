@@ -52,14 +52,14 @@ Developed countries utilize regulations, incentives, and technology to maintain 
 
 ## Overview of Foreign Policy Analysis
 
-**Foreign** **Policy** Analysis (FPA) emerged as a subfield of International Relations in the late 1980s, with a focus on developing middle range theories to explain foreign policy decision making. Prior to this, the IR research community had concentrated on the major paradigms of Realism, Liberalism, and Constructivism. 
+**Foreign** **Policy** Analysis (FPA) emerged as a distinct subfield of International Relations in the 1950s and 1960s (pioneered by scholars such as Richard Snyder, H.W. Bruck, and Burton Sapin in 1954, James Rosenau, and Harold and Margaret Sprout), with a focus on developing middle range theories to explain foreign policy decision making. Prior to this, the IR research community had concentrated primarily on broad structural paradigms. 
 
 FPA aims to understand the actual conduct and practice of foreign policy, concentrating more on state agency rather than broad structural factors. It examines how and why states make the foreign policy decisions they do, considering the role of factors like domestic politics, individual leaders, and bureaucratic politics.
 
 Some key developments in the field include:
 
 - In 1988, the International Studies Association established an FPA section. This helped to cement FPA as a recognized subfield within IR.
-- In 1991, the journal *Foreign Policy Analysis* was launched, providing a dedicated platform for FPA research.
+- In 2005, the journal *Foreign Policy Analysis* was launched by the International Studies Association (ISA), providing a dedicated platform for FPA research.
 - Research has expanded from a focus on the US and USSR during the Cold War era to incorporate more comparative analysis across different states and time periods. New theoretical approaches have also emerged.
 - Scholars have worked to integrate insights from psychology, cognitive science, and decision-making theory to better understand the individual level.
 

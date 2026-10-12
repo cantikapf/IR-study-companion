@@ -38,7 +38,7 @@ Cabinets during this time period were short-lived, with frequent collapses and r
 
 The Guided Democracy era under President Sukarno saw notable deviations from constitutional norms, marked by strong presidential dominance and limited roles for political parties. 
 
-During this period from 1959 to 1965, Sukarno exercised near-absolute control over the political system. The 1945 constitution was replaced with a new provisional constitution in 1959 that centralized **executive** power in the presidency and weakened parliamentary oversight. 
+During this period from 1959 to 1965, Sukarno exercised near-absolute control over the political system. Through the Presidential Decree of July 1959, Sukarno dissolved the Konstituante and reinstated the 1945 Constitution, centralizing **executive** power in the presidency and weakening parliamentary oversight. 
 
 Sukarno also dissolved the elected parliament and replaced it with an appointed parliament. This allowed him to bypass parliamentary opposition and rule by decree. Political parties were forced to join together under one party, the Indonesian Nationalist Party (PNI), which further consolidated Sukarno's control.
 
@@ -292,13 +292,11 @@ From 1999 onwards, the DPR has been directly elected by the people every 5 years
 
 ## Executive Institutions in Indonesia
 
-Moving to the executive structure in Indonesia, the 1945 Constitution established a presidential system with a president serving as both head of state and head of government. This structure was in place from 1945 to 1959.
+Moving to the executive structure in Indonesia, the 1945 Constitution established a presidential system with a president serving as both head of state and head of government. However, following the 1949 Federal (RIS) Constitution and the 1950 Provisional Constitution, Indonesia operated under a parliamentary system from 1950 to 1959. Under the original 1945 framework, the president was chosen by the People's Consultative Assembly (MPR) rather than directly elected, and presidential term limits were not fixed until post-Suharto constitutional amendments (direct presidential elections only began in 2004). The president held the power to appoint and dismiss cabinet ministers and was the supreme commander of the armed forces.
 
-The president was directly elected and could serve a maximum of two five-year terms. They had the power to appoint and dismiss cabinet ministers. The president was also the supreme commander of the armed forces.
+In July 1959, Sukarno issued a Presidential Decree returning the country to the 1945 presidential Constitution, inaugurating Guided Democracy and centralizing power in the presidency rather than parliament. From 1967 to 1998 during the "New Order" period under President Suharto's authoritarian rule, the president held strong executive powers.
 
-In 1959, Indonesia moved briefly to a parliamentary system, but presidentialism was restored in 1965. From 1967 to 1998 during the "New Order" period under President Suharto's authoritarian rule, the president held strong executive powers.
-
-After the fall of Suharto in 1998, Indonesia's post-reformation era saw the presidency retain its dominant position but with some limitations to presidential powers. Direct presidential elections were reintroduced in 2004.
+After the fall of Suharto in 1998, Indonesia's post-reformation era saw the presidency retain its dominant position but with some limitations to presidential powers. Direct presidential elections were introduced in 2004.
 
 The president and vice president are directly elected as a ticket and can serve a maximum of two consecutive five-year terms. The president heads the cabinet and has broad appointment powers over top military and government positions. However, the president's ability to dismiss the legislature is limited, and presidential emergency powers are subject to parliamentary oversight.
 
