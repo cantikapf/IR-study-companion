@@ -13,6 +13,11 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Sync Curriculum Explorer Video Chips CH050, CH060, CH070:
+1. `Root Cause Diagnosis`: Di `_pages/index.md` dan `prototype/home.html`, dataset `CX_DATA` dibuat statis pada 8 Oktober 2026 saat video yang terbit baru CH010-CH040 (`v: true`). Ketika video mindmap CH050 (Marxism), CH060 (Constructivism), dan CH070 (Global Finance & Trade) diproduksi dan dipublikasikan ke YouTube dengan frontmatter `youtube_id`, flag `v` pada objek `CX_DATA` di homepage terlewat diperbarui sehingga badge `VIDEO` tidak muncul di Curriculum Explorer.
+2. `Perbaikan`: Memperbarui `CX_DATA` M010 di `_pages/index.md` dan `prototype/home.html` agar `basic-marxism`, `basic-constructivism`, dan `global-finance-and-global-trade-as-agendas` bernilai `v: true`.
+3. `Verifikasi`: `pytest` 369/369 PASS, sinkronisasi 7 video mindmap di homepage M010 tuntas.
+
 2026-10-13 - Rebuild Short SH-02 "The First Nuclear Strike: Operation Dropshot" ke Standar Kanonik (Animated Geopolitical Map via HyperFrames + D3-Geo):
 1. `Konteks & Arahan User`: Format awal (slideshow foto arsip full-screen + tulisan besar) dikoreksi oleh pengguna. Format resmi kanonik adalah **animasi geomap penuh (D3-Geo polar azimuthal equidistant)** dengan animasi rute bomber kutub, target arc, shockwave detonasi, pergerakan kamera matriks 2D GPU, dan **kartu foto arsip tokoh/dokumen sebagai inset kecil (dossier card ~260px)** saat narasi menjelaskan figur/peristiwa.
 2. `Arsitektur Mesin (map-animation + hyperframes-animation)`:
