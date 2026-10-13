@@ -910,6 +910,14 @@ permalink: /
     color: #09090b !important;
   }
   body.dark-theme .cx-panel-overview { color: #93c5fd; }
+  body.dark-theme .cx-lesson:hover .cx-lesson-title { color: #93c5fd; }
+  body.dark-theme .cx-mod.is-on {
+    box-shadow: inset 3px 0 0 #60a5fa;
+  }
+  body.dark-theme .cx-mod.is-on .cx-mod-num {
+    color: #93c5fd;
+    border-color: #60a5fa;
+  }
   body.dark-theme .cx-video-chip {
     color: #fb7185;
     background: rgba(251, 113, 133, 0.15);

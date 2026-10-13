@@ -13,6 +13,11 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Fix Dark Mode Curriculum Explorer Hover Contrast:
+1. `Root Cause`: Selector `.cx-lesson:hover .cx-lesson-title` meng-hardcode warna `#1e3a8a` (Oxford blue) tanpa override untuk `body.dark-theme`. Akibatnya, saat pengguna meng-hover item bab pada mode gelap, teks berubah menjadi biru tua pekat di atas background abu-abu gelap (`#1a1a1f`), merusak kontras legibilitas.
+2. `Perbaikan`: Menambahkan `body.dark-theme .cx-lesson:hover .cx-lesson-title { color: #93c5fd; }` dan styling aktif modul (`.cx-mod.is-on`) pada mode gelap di `_pages/index.md`.
+3. `Verifikasi`: 373/373 pytest PASS, `jekyll build` sukses (70s).
+
 2026-10-13 - Dark Mode Motion Globe Visual Polish:
 1. `Root Cause`: Hardcode `#1e3a8a` (Oxford navy) pada SVG graticule dan capital nodes tenggelam di background hitam dark theme (`#09090b`), rute oxford lenyap, dan globe kawat tampak datar tanpa volume 3D.
 2. `Penyelarasan Warna & Atmosfer`:
