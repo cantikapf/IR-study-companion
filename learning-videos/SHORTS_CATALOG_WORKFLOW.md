@@ -26,7 +26,11 @@ Audio: disuarakan narasi profesional (ElevenLabs / Kokoro) dengan sinkronisasi w
 1. **Resolusi & Aspek Rasio**: 1080 × 1920 (9:16 Vertikal).
 2. **Durasi Ideal**: 40.0 – 45.0 detik (Maksimum batas YouTube Shorts: <60 detik).
 3. **Engine Visual**: D3-Geo (`countries-110m.json`) + GSAP 60 FPS + SVG hardware transform matrix.
-4. **Pencegahan Cacat Visual**:
+4. **Hook & Packaging Rigor (Naskah & Kemasan)**:
+   - Voice Persona: Wajib mengacu pada panduan resmi `learning-videos/voice.md` (@IRinANutshell).
+   - Hook Scoring (3 Detik Pertama): Skor via `python scripts/yt/hookscore.py --hook "<naskah_pembuka>"` (target band: WORKABLE/STRONG, evaluasi 5-sumbu & 21 formula hook).
+   - Title & Packaging Lint: Verifikasi via `python scripts/yt/title.py --title "<judul>" --thumb "<teks_thumbnail>"`.
+5. **Pencegahan Cacat Visual**:
    - Zero-Flash: Deteksi piksel awal via PIL (`brightness < 100`) dengan trim `-ss` FFmpeg otomatis.
    - Zero-Stutter: Seek deterministik per frame ($f/30.0$) via CDP `Page.captureScreenshot` di-pipe ke stdin FFmpeg.
    - Zero-Collision: Seluruh label taktis wajib di-center (`text-anchor="middle"`) dan diletakkan di `<g id="tactical-labels-layer">` teratas dengan kotak pekat `#060912`.

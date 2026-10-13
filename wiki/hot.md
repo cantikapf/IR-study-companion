@@ -13,6 +13,19 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Integrasi Toolset YouTube Copywriting & Retention Analytics (`scripts/yt/`):
+1. `Konteks & Kebutuhan`: Evaluasi paket skill `youtube-agent-skill` untuk optimasi hook naskah dan kemasan YouTube Shorts/eksplikatori `@IRinANutshell`. Mengambil komponen murni data/algoritmik tanpa bloating dependensi eksternal.
+2. `Aset & Skrip Terintegrasi`:
+   - `scripts/yt/hookscore.py` & `hooks.json`: Penilai matematis 5-sumbu (Specificity, Address, Stakes, Curiosity, Brevity) berbasis 21 formula hook kanonik.
+   - `scripts/yt/title.py`: Linter kemasan judul & thumbnail teks (cek batas 40 karakter mobile, redundansi kata thumbnail-vs-judul, dan all-caps spam).
+   - `scripts/yt/retention.py` & `deadair.py`: Parser telemetri retensi CSV YouTube Studio untuk mendeteksi 30s hook leak dan drop cliffs.
+   - `scripts/yt/swipe.py`: Analisis outlier performa video kompetitor berbasis kelipatan median channel.
+   - `learning-videos/voice.md`: Profil persona resmi kanal `@IRinANutshell` (antitesis clickbait, factual rigor, zero AI fluff).
+3. `Verifikasi & QA`:
+   - Unit tests terpasang di `tests/test_yt_tools.py` (5 tes mencakup scoring, linter, classifier, dan loader).
+   - Test suite: `pytest` 378/378 PASS.
+
+
 2026-10-13 - Fix Dark Mode Curriculum Explorer Hover Contrast:
 1. `Root Cause`: Selector `.cx-lesson:hover .cx-lesson-title` meng-hardcode warna `#1e3a8a` (Oxford blue) tanpa override untuk `body.dark-theme`. Akibatnya, saat pengguna meng-hover item bab pada mode gelap, teks berubah menjadi biru tua pekat di atas background abu-abu gelap (`#1a1a1f`), merusak kontras legibilitas.
 2. `Perbaikan`: Menambahkan `body.dark-theme .cx-lesson:hover .cx-lesson-title { color: #93c5fd; }` dan styling aktif modul (`.cx-mod.is-on`) pada mode gelap di `_pages/index.md`.
