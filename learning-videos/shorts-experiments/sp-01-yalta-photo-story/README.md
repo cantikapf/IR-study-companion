@@ -7,6 +7,7 @@ synthesised press-camera shutter accents. No vector graphics, no stock footage.
 - **Export:** `learning-videos/exports/SP01_Yalta_Photo_Story_Short_1080p.mp4`
 - **Spec:** 1080×1920 · 30 fps · 33.18 s · H.264 + AAC 48 kHz stereo
 - **Source photo:** NARA 111-SC-260486, Public Domain (see `SOURCES.md`)
+- **Published YouTube:** https://youtube.com/shorts/OP6fEXloh-k (`OP6fEXloh-k`)
 
 ## Concepts Applied
 

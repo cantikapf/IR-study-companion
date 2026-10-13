@@ -40,6 +40,7 @@ ightarrow 17.50\text{s}$ untuk Churchill), mencegah anomali di mana teks menyebu
    - `hyperframes check`: 0 errors, 0 warnings, 0 layout issues, 5/5 text checks WCAG AA pass.
    - `vision_analyze` audit: Frame $t=12.14\text{s}$ terkonfirmasi menampilkan Stalin terpusat dengan teks *"Stalin was the host. Not by accident."* tajam dan kontras.
    - Output render final: `learning-videos/exports/SP01_Yalta_Photo_Story_Short_1080p.mp4` (**35.2 MB · 1080×1920 · 30 FPS · 33.20s · h264 + AAC 48kHz stereo**).
+   - **PUBLISHED TO YOUTUBE**: `https://youtube.com/shorts/OP6fEXloh-k` (`OP6fEXloh-k`). Katalog diperbarui di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` dan `PROJECT.md`.
    - Test suite: `pytest` 373/373 PASS. Stills diperbarui di `qa_stills/01`..`07`.
 
 2026-10-13 - SP-01 "Yalta Photo Story" — Perbaikan Hook 3 Detik & Eliminasi Space Kosong Bawah (Konsep A + D):

@@ -53,6 +53,16 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 
 ---
 
+## 📷 Catalog Registry Single Photo Story (SP-xx Series)
+
+Format editorial alternatif anti-AI feel: 1 foto arsip autentik resolusi ultra-tinggi ($\ge 2720\text{px}$) + Ken Burns editorial + narasi Kokoro TTS + aksen shutter kamera mekanis:
+
+| # | ID Seri | Topik / Judul Episode | Foto Arsip / Subjek Sejarah | Bab Kurikulum Terkait | Status Produksi | Tautan YouTube |
+|---|---|---|---|---|---|---|
+| **01** | `SP-01` | **One of These Men Will Die in 60 Days: The Yalta Photo Story** | NARA 111-SC-260486 (Livadia Palace, 1945) — Churchill, Roosevelt, Stalin | `_chapters/012-modern-world-history/090-end-ww2.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/OP6fEXloh-k) |
+
+---
+
 ## 🛠️ CLI Runner Produksi Cepat
 
 ### Jalur kanonik (Animated Geopolitical Vector Map / HyperFrames) — SH-02 "Operation Dropshot"
