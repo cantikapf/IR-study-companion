@@ -2,7 +2,9 @@
 
 Dokumen ini adalah **Single Source of Truth (SSOT)** resmi untuk lini produksi konten **YouTube Shorts (@IRinANutshell)** dalam proyek IR Study Companion.
 
-Format resmi: **Animated Geopolitical Vector Map (Vox-Style)** berbasis **D3-Geo + GSAP 60 FPS**, disuarakan oleh **Kokoro-82M ONNX (`af_heart`)**, dan di-render secara **Deterministik via CDP (1080×1920 30 FPS)**.
+Format resmi lini produksi yang **sudah tayang** (SH-01, SH-02): **Archival Micro-Documentary (HyperFrames)** — foto arsip domain-publik + scrim gelap + karaoke caption, disuarakan **ElevenLabs** (`JBFqnCBsd6RMkjVDRZzb`, word-level timestamps native), di-render via **`hyperframes render`** (1080×1920 30 FPS).
+
+Format alternatif/eksperimental: **Animated Geopolitical Vector Map (Vox-Style)** berbasis **D3-Geo + GSAP 60 FPS**, disuarakan oleh **Kokoro-82M ONNX (`af_heart`)**, dan di-render secara **Deterministik via CDP (1080×1920 30 FPS)**.
 
 ---
 
@@ -39,7 +41,7 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 | # | ID Seri | Topik / Judul Episode | Studi Kasus / Lokasi Geopolitik | Bab Kurikulum Terkait | Status Produksi | Tautan YouTube |
 |---|---|---|---|---|---|---|
 | **01** | `SH-01` | **The Cuban Missile Crisis: One Vote from Oblivion** | San Cristóbal, Selat Florida, & Sargasso Sea (1962) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/WYGiVcO6jNA) |
-| **02** | `SH-02` | **The First Nuclear Strike: Operation Dropshot** | Garis Arktik, Koridor ICBM Soviet & Pangkalan SAC AS (1949) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | Ready to Produce | - |
+| **02** | `SH-02` | **The First Nuclear Strike: Operation Dropshot** | Pangkalan SAC AS, Koridor Bomber Lintas Kutub, & Semipalatinsk (1949) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **RENDERED** — siap upload | - |
 | **03** | `SH-03` | **The South China Sea Chokepoint: Nine-Dash Line Standoff** | Kepulauan Spratly, Scarborough Shoal, & Selat Malaka | `_chapters/044-regionalism-in-southeast-asia-asean-community/050-asean-community.md` | Planned | - |
 | **04** | `SH-04` | **The Berlin Air Corridor: Operation Vittles** | 3 Koridor Udara Sekutu Tempelhof vs Blokade Soviet (1948) | `_chapters/012-modern-world-history/100-post-ww.md` | Planned | - |
 | **05** | `SH-05` | **The UN Security Council Veto Trap** | Resolusi Perang Korea 1950 & Boikot Soviet Yakov Malik | `_chapters/045-international-organization-in-international-relations/050-UN-security.md` | Planned | - |
@@ -53,14 +55,28 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 
 ## 🛠️ CLI Runner Produksi Cepat
 
-Untuk memproduksi dan merender episode Shorts berikutnya menggunakan template deterministik:
+### Jalur kanonik (Archival Micro-Documentary / HyperFrames) — dipakai SH-01 & SH-02
+
 ```bash
-# 1. Masuk ke direktori eksperimen shorts
+cd learning-videos/shorts-experiments/sh-02-operation-dropshot-hf/
+
+# 1. VO + word-level manifest (ElevenLabs) — otomatis menyalin vo_full.mp3 ke audio/
+py -3.13 generate_audio_elevenlabs.py
+
+# 2. Bangun index.html dari manifest (deterministik)
+py -3.13 build_composition.py
+
+# 3. Gate QA wajib (lint + runtime + layout + motion + kontras WCAG)
+npx --yes hyperframes@0.8.145 check
+
+# 4. Render rilis — MP4 >50 MB WAJIB ke learning-videos/exports/ (gitignored)
+npx --yes hyperframes@0.8.145 render -q delivery \
+  -o "D:/PERSONAL PROJECT/IR-study-companion/learning-videos/exports/SH02_Operation_Dropshot_Short_1080p.mp4"
+```
+
+### Jalur alternatif (Animated Geopolitical Vector Map / D3-Geo)
+
+```bash
 cd learning-videos/shorts-experiments/sh-05-cuban-crisis-map-animation/
-
-# 2. Render MP4 1080x1920 (Frame-by-Frame CDP Stepper)
-node render_shorts_deterministic.js
-
-# 3. Hasil ekspor tersimpan di:
-# learning-videos/exports/
+node render_shorts_deterministic.js   # frame-by-frame CDP stepper
 ```

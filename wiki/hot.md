@@ -13,6 +13,20 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Produksi Short SH-02 "The First Nuclear Strike: Operation Dropshot" (HyperFrames Archival Micro-Documentary):
+1. `Konteks`: Melanjutkan lini Shorts kanonik yang sudah tayang. Engine = HyperFrames `0.8.145` + ElevenLabs (`JBFqnCBsd6RMkjVDRZzb`, word-level timestamps native). Proyek: `learning-videos/shorts-experiments/sh-02-operation-dropshot-hf/` (komposisi) + `sh-02-operation-dropshot/` (sumber `script/` + `audio/`).
+2. `Zero-Hallucination`: `SHORTS_CATALOG_WORKFLOW.md` baris SH-02 memuat klaim palsu "Koridor ICBM Soviet (1949)" — ICBM pertama USSR (R-7) baru terbang Agustus 1957. Klaim dibuang, diganti koridor bomber lintas kutub (B-36/B-50 SAC). Tiga klaim tak bersumber lain juga dibuang (Dropshot sebagai direktif presiden; 300 bom tersedia di 1949; stockpile 1949 sebenarnya ~170 warhead). 24 baris klaim (narasi + kicker + headline + chip + docket) diaudit ke sumber deklasifikasi di `SOURCES.md`.
+3. `Perbaikan Pipeline`:
+   - `generate_audio_elevenlabs.py`: kini otomatis menyalin `vo_full.mp3` ke `audio/` proyek HyperFrames. Sebelumnya `hyperframes check` gagal `audio_src_not_found` dan render keluar tanpa suara.
+   - `build_composition.py`: ramp `.botscrim` dipertajam (0.82 @5%, 0.96 @12%) + `.docket` jadi `#ffffff` bold. Sebelumnya 3 kegagalan kontras WCAG di zona docket y=1146px (2.11:1–3.19:1).
+4. `Verifikasi`:
+   - `pytest` baseline 369/369 PASS.
+   - `hyperframes check`: 0 error, kontras **145/145 pass WCAG AA** (bukan 52/52 placeholder), layout 0 issue, motion 0 error.
+   - Render: `hyperframes render -q delivery` → `learning-videos/exports/SH02_Operation_Dropshot_Short_1080p.mp4`, **74.9 MB · 1080×1920 · 30 fps · 1689 frame · 56.3 s** (di bawah batas 60 s Shorts).
+   - Sinkron VO: durasi `vo_full.mp3` 56.288 s == `manifest.totalSec`, kata terakhir berakhir 55.927 s. Jendela 6 beat menyambung tanpa celah hitam.
+   - QA visual `vision_analyze` 7 frame (0.6/8.8/19.0/27.4/36.8/45.2/55.8 s): nol black frame, nol white flash, teks tidak terpotong, safe zone bawah ~20% bersih untuk UI Shorts.
+5. `Catatan`: Shorts tidak memakai thumbnail torehan kuas (standar itu khusus rilis Mind Map long-form); SH-01 pun tidak punya. `scripts/tts_shorts.py` (jalur Kokoro) disimpan sebagai tool alternatif, bukan jalur kanonik.
+
 2026-10-12 - Koreksi Judul Modul di Side Menu & Navigasi (Canonical Title Case):
 1. `Root Cause`: Di `_includes/chapter-iterate-current.html` dan `_includes/chapter-vars.html`, label modul `i_part_label` digenerate via `i_part_folder | split: '-' | shift | join: ' ' | capitalize`. Filter `capitalize` hanya mengkapitalkan huruf pertama string dan mengecilkan sisanya (`010-Introduction-to-IR` -> "Introduction to ir", `012-modern-world-history` -> "Modern world history"). Lookup `_part_index_path` gagal karena mencocokkan `path` absolut alih-alih `relative_path`.
 2. `Perbaikan`:

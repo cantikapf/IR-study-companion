@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SH-02 · Operation Dropshot — The War Plan That Never Happened</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Archivo Black"; src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype"); font-weight: 400; }
+      @font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Regular.ttf") format("truetype"); font-weight: 400; }
+      @font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Bold.ttf") format("truetype"); font-weight: 700; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0a0a0c;
+        font-family: "Space Mono", monospace; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #06060a; }
+      .beat { position: absolute; inset: 0; }
+      .imwrap { position: absolute; top: 0; left: 0; width: 1080px; height: 1920px; overflow: hidden; background: #06060a; }
+      .kb { position: absolute; top: 0; left: 0; width: 1080px; height: 1920px; object-fit: cover; will-change: transform; }
+      /* Scrim Window Transparency Rule: topscrim height <= 480px, botscrim top >= 1100px (>= 600px middle band transparent) */
+      .topscrim { position: absolute; top: 0; left: 0; width: 1080px; height: 480px;
+        background: linear-gradient(to bottom, rgba(4,4,6,0.97) 0%, rgba(4,4,6,0.88) 30%, rgba(4,4,6,0.55) 62%, rgba(4,4,6,0.14) 86%, rgba(4,4,6,0) 100%); }
+      .botscrim { position: absolute; top: 1100px; left: 0; width: 1080px; height: 820px;
+        background: linear-gradient(to bottom, rgba(4,4,6,0) 0%, rgba(4,4,6,0.82) 5%, rgba(4,4,6,0.96) 12%, rgba(4,4,6,0.99) 30%, rgba(4,4,6,0.995) 100%); }
+      .tm { position: absolute; top: 200px; left: 70px; width: 940px; }
+      .kicker { font-size: 30px; letter-spacing: 0.20em; color: #F6E05E; font-weight: 700;
+        text-shadow: 0 2px 14px rgba(0,0,0,0.95); }
+      .headline { margin-top: 16px; font-family: "Archivo Black", sans-serif; font-size: 86px; line-height: 1.02;
+        color: #ffffff; letter-spacing: -0.01em; text-shadow: 0 4px 22px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.95); }
+      .wm { position: absolute; top: 210px; right: 70px; font-size: 28px; letter-spacing: 0.06em;
+        color: rgba(255,255,255,0.88); text-shadow: 0 2px 10px rgba(0,0,0,0.95); }
+      .docket { position: absolute; top: 1146px; left: 70px; width: 940px; font-size: 22px; font-weight: 700; letter-spacing: 0.05em;
+        color: #ffffff; white-space: nowrap; overflow: hidden;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.95); }
+      .chips { position: absolute; top: 1186px; left: 70px; width: 940px; }
+      .chip { display: flex; justify-content: space-between; align-items: center; height: 50px; margin-bottom: 8px;
+        border-left: 4px solid #F6E05E; padding-left: 16px; }
+      .cl { font-size: 25px; letter-spacing: 0.08em; color: #b4b4be; line-height: 1;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+      .cv { font-size: 27px; font-weight: 700; letter-spacing: 0.03em; color: #ffffff; line-height: 1;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+      /* Mobile safe zone: bottom edge at 1320+168=1488px (>= 430px clear from bottom 1920px). No backdrop-filter. */
+      .cap { position: absolute; top: 1320px; left: 55px; width: 970px; height: 168px;
+        display: flex; flex-wrap: wrap; align-content: center; justify-content: center;
+        background: rgba(9,12,20,0.96); border: 1px solid rgba(246,224,94,0.30); border-radius: 18px;
+        padding: 14px 24px; }
+      .w { font-size: 31px; line-height: 1.26; color: #ECECEE; font-weight: 700; padding: 0 6px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="56.288"
+         data-width="1080" data-height="1920">
+      <audio id="vo" src="audio/vo_full.mp3" data-start="0" data-duration="56.288"></audio>
+
+    <section class="clip beat" id="beat1" data-start="0.000" data-duration="8.659" data-track-index="1">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb1" src="assets/jcs_bradley_swearing_in_1949.jpg" alt="A PLAN FOR TOTAL WAR" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">CLASSIFIED WAR PLAN · 1949</div>
+        <div class="headline">A PLAN FOR TOTAL WAR</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">WAR PLAN CONCEPTION · DOC REF JCS-1949</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">ORIGINATING BODY</span><span class="cv">US JOINT CHIEFS OF STAFF</span></div>
+        <div class="chip"><span class="cl">PLANNING DATE</span><span class="cv">DECEMBER 1949</span></div>
+      </div>
+      <div class="cap" id="cap1"><span class="w" data-t="0.0" data-e="0.197">In</span> <span class="w" data-t="0.197" data-e="0.662">December</span> <span class="w" data-t="0.662" data-e="1.057">nineteen</span> <span class="w" data-t="1.057" data-e="1.916">forty-nine,</span> <span class="w" data-t="1.916" data-e="2.45">American</span> <span class="w" data-t="2.45" data-e="2.856">planners</span> <span class="w" data-t="2.856" data-e="3.286">drafted</span> <span class="w" data-t="3.286" data-e="3.379">a</span> <span class="w" data-t="3.379" data-e="3.796">secret</span> <span class="w" data-t="3.796" data-e="4.168">strike</span> <span class="w" data-t="4.168" data-e="4.284">to</span> <span class="w" data-t="4.284" data-e="4.702">destroy</span> <span class="w" data-t="4.702" data-e="4.807">an</span> <span class="w" data-t="4.807" data-e="5.631">empire,</span> <span class="w" data-t="5.631" data-e="6.026">betting</span> <span class="w" data-t="6.026" data-e="6.142">on</span> <span class="w" data-t="6.142" data-e="6.281">an</span> <span class="w" data-t="6.281" data-e="6.815">arsenal</span> <span class="w" data-t="6.815" data-e="6.966">that</span> <span class="w" data-t="6.966" data-e="7.129">did</span> <span class="w" data-t="7.129" data-e="7.291">not</span> <span class="w" data-t="7.291" data-e="7.5">yet</span> <span class="w" data-t="7.5" data-e="8.359">exist.</span></div>
+    </section>
+    <section class="clip beat" id="beat2" data-start="8.659" data-duration="10.145" data-track-index="2">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb2" src="assets/soviet_strategic_urban_targets_1945.jpg" alt="300 ATOMIC BOMBS · 100 CITIES" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">PROJECTED 1957 CAMPAIGN</div>
+        <div class="headline">300 ATOMIC BOMBS · 100 CITIES</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">TARGET LIST &amp; DAMAGE · DOC REF JCS-1949</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">PLANNED WEAPONS</span><span class="cv">300 ATOMIC · 29,000 HE BOMBS</span></div>
+        <div class="chip"><span class="cl">PLANNED TARGETS</span><span class="cv">100 CITIES · 85% INDUSTRY</span></div>
+      </div>
+      <div class="cap" id="cap2"><span class="w" data-t="8.659" data-e="9.263">Codenamed</span> <span class="w" data-t="9.263" data-e="10.006">Dropshot,</span> <span class="w" data-t="10.006" data-e="10.157">it</span> <span class="w" data-t="10.157" data-e="10.691">projected</span> <span class="w" data-t="10.691" data-e="10.981">war</span> <span class="w" data-t="10.981" data-e="11.12">in</span> <span class="w" data-t="11.12" data-e="11.492">nineteen</span> <span class="w" data-t="11.492" data-e="12.63">fifty-seven:</span> <span class="w" data-t="12.63" data-e="12.931">three</span> <span class="w" data-t="12.931" data-e="13.245">hundred</span> <span class="w" data-t="13.245" data-e="13.663">atomic</span> <span class="w" data-t="13.663" data-e="14.034">bombs</span> <span class="w" data-t="14.034" data-e="14.383">across</span> <span class="w" data-t="14.383" data-e="14.592">one</span> <span class="w" data-t="14.592" data-e="14.905">hundred</span> <span class="w" data-t="14.905" data-e="15.59">cities,</span> <span class="w" data-t="15.59" data-e="16.159">destroying</span> <span class="w" data-t="16.159" data-e="16.705">eighty-five</span> <span class="w" data-t="16.705" data-e="17.146">percent</span> <span class="w" data-t="17.146" data-e="17.262">of</span> <span class="w" data-t="17.262" data-e="17.68">Soviet</span> <span class="w" data-t="17.68" data-e="18.504">industry.</span></div>
+    </section>
+    <section class="clip beat" id="beat3" data-start="18.804" data-duration="8.474" data-track-index="3">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb3" src="assets/b36_peacemaker_flight_1949.jpg" alt="NO MISSILES · BOMBERS ONLY" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">STRATEGIC AIR COMMAND</div>
+        <div class="headline">NO MISSILES · BOMBERS ONLY</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">SAC FLIGHT PROFILES · DOC REF JCS-1949</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">DELIVERY VEHICLE</span><span class="cv">B-36 &amp; B-50 HEAVY BOMBERS</span></div>
+        <div class="chip"><span class="cl">STRIKE ROUTE</span><span class="cv">ARCTIC POLAR CORRIDORS</span></div>
+      </div>
+      <div class="cap" id="cap3"><span class="w" data-t="18.804" data-e="19.083">With</span> <span class="w" data-t="19.083" data-e="19.28">no</span> <span class="w" data-t="19.28" data-e="19.744">missiles</span> <span class="w" data-t="19.744" data-e="19.942">yet</span> <span class="w" data-t="19.942" data-e="20.766">invented,</span> <span class="w" data-t="20.766" data-e="21.091">every</span> <span class="w" data-t="21.091" data-e="21.393">bomb</span> <span class="w" data-t="21.393" data-e="21.869">required</span> <span class="w" data-t="21.869" data-e="22.554">Strategic</span> <span class="w" data-t="22.554" data-e="22.786">Air</span> <span class="w" data-t="22.786" data-e="23.239">Command</span> <span class="w" data-t="23.239" data-e="23.529">heavy</span> <span class="w" data-t="23.529" data-e="24.319">bombers,</span> <span class="w" data-t="24.319" data-e="24.772">flying</span> <span class="w" data-t="24.772" data-e="25.224">Arctic</span> <span class="w" data-t="25.224" data-e="25.538">routes</span> <span class="w" data-t="25.538" data-e="25.758">from</span> <span class="w" data-t="25.758" data-e="26.13">forward</span> <span class="w" data-t="26.13" data-e="26.977">bases.</span></div>
+    </section>
+    <section class="clip beat" id="beat4" data-start="27.278" data-duration="9.449" data-track-index="4">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb4" src="assets/joe1_fallout_tracking_map_1949.jpg" alt="THE MONOPOLY ENDS · RDS-1" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">SOVIET ATOMIC BREAKTHROUGH</div>
+        <div class="headline">THE MONOPOLY ENDS · RDS-1</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">AFOAT-1 DETECTION · DOC REF EBB-286</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">FIRST SOVIET TEST</span><span class="cv">29 AUGUST 1949 · RDS-1</span></div>
+        <div class="chip"><span class="cl">TEST LOCATION</span><span class="cv">SEMIPALATINSK, KAZAKHSTAN</span></div>
+      </div>
+      <div class="cap" id="cap4"><span class="w" data-t="27.278" data-e="27.499">In</span> <span class="w" data-t="27.499" data-e="28.067">August</span> <span class="w" data-t="28.067" data-e="28.485">nineteen</span> <span class="w" data-t="28.485" data-e="29.437">forty-nine,</span> <span class="w" data-t="29.437" data-e="29.902">Moscow</span> <span class="w" data-t="29.902" data-e="30.552">detonated</span> <span class="w" data-t="30.552" data-e="31.574">R-D-S-one</span> <span class="w" data-t="31.574" data-e="31.713">at</span> <span class="w" data-t="31.713" data-e="32.967">Semipalatinsk,</span> <span class="w" data-t="32.967" data-e="33.338">ending</span> <span class="w" data-t="33.338" data-e="33.803">America&#x27;s</span> <span class="w" data-t="33.803" data-e="34.209">atomic</span> <span class="w" data-t="34.209" data-e="34.906">monopoly</span> <span class="w" data-t="34.906" data-e="35.231">years</span> <span class="w" data-t="35.231" data-e="35.475">ahead</span> <span class="w" data-t="35.475" data-e="35.579">of</span> <span class="w" data-t="35.579" data-e="36.427">schedule.</span></div>
+    </section>
+    <section class="clip beat" id="beat5" data-start="36.727" data-duration="8.287" data-track-index="5">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb5" src="assets/buster_jangle_nuclear_test_1951.jpg" alt="WAR PLAN SHELVED" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">STRATEGIC REVISION</div>
+        <div class="headline">WAR PLAN SHELVED</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">STRATEGIC REVISION · DOC REF JCS-1951</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">OPERATIONAL STATUS</span><span class="cv">NEVER EXECUTED · WITHDRAWN 1951</span></div>
+        <div class="chip"><span class="cl">DOCTRINE SHIFT</span><span class="cv">FIRST STRIKE TO DETERRENCE</span></div>
+      </div>
+      <div class="cap" id="cap5"><span class="w" data-t="36.727" data-e="37.284">Dropshot</span> <span class="w" data-t="37.284" data-e="37.458">was</span> <span class="w" data-t="37.458" data-e="37.725">never</span> <span class="w" data-t="37.725" data-e="38.48">launched.</span> <span class="w" data-t="38.48" data-e="38.782">Once</span> <span class="w" data-t="38.782" data-e="39.084">both</span> <span class="w" data-t="39.084" data-e="39.699">superpowers</span> <span class="w" data-t="39.699" data-e="39.955">held</span> <span class="w" data-t="39.955" data-e="40.071">the</span> <span class="w" data-t="40.071" data-e="40.547">bomb,</span> <span class="w" data-t="40.547" data-e="40.709">a</span> <span class="w" data-t="40.709" data-e="41.023">first</span> <span class="w" data-t="41.023" data-e="41.441">strike</span> <span class="w" data-t="41.441" data-e="41.708">meant</span> <span class="w" data-t="41.708" data-e="42.091">mutual</span> <span class="w" data-t="42.091" data-e="42.892">destruction,</span> <span class="w" data-t="42.892" data-e="43.391">creating</span> <span class="w" data-t="43.391" data-e="43.797">nuclear</span> <span class="w" data-t="43.797" data-e="44.715">deterrence.</span></div>
+    </section>
+    <section class="clip beat" id="beat6" data-start="45.014" data-duration="11.274" data-track-index="6">
+      <div class="imwrap" data-layout-allow-overflow><img class="kb" id="kb6" src="assets/truman_oval_office_defense_1949.jpg" alt="THE PAPER ARSENAL" /></div>
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="tm">
+        <div class="kicker">DECLASSIFIED 1977</div>
+        <div class="headline">THE PAPER ARSENAL</div>
+      </div>
+      <div class="wm">@IRinANutshell</div>
+      <div class="docket">DECLASSIFIED RECORD · DOC REF JCS-1977</div>
+      <div class="chips">
+        <div class="chip"><span class="cl">1949 US STOCKPILE</span><span class="cv">~170 ATOMIC WARHEADS</span></div>
+        <div class="chip"><span class="cl">DECLASSIFICATION</span><span class="cv">PUBLIC RELEASE IN 1977</span></div>
+      </div>
+      <div class="cap" id="cap6"><span class="w" data-t="45.014" data-e="45.885">Declassified</span> <span class="w" data-t="45.885" data-e="46.012">in</span> <span class="w" data-t="46.012" data-e="46.407">nineteen</span> <span class="w" data-t="46.407" data-e="47.429">seventy-seven,</span> <span class="w" data-t="47.429" data-e="47.963">Dropshot</span> <span class="w" data-t="47.963" data-e="48.207">held</span> <span class="w" data-t="48.207" data-e="48.311">a</span> <span class="w" data-t="48.311" data-e="48.694">final</span> <span class="w" data-t="48.694" data-e="49.774">irony:</span> <span class="w" data-t="49.774" data-e="49.948">in</span> <span class="w" data-t="49.948" data-e="50.343">nineteen</span> <span class="w" data-t="50.343" data-e="51.167">forty-nine,</span> <span class="w" data-t="51.167" data-e="51.678">America</span> <span class="w" data-t="51.678" data-e="51.852">had</span> <span class="w" data-t="51.852" data-e="52.143">only</span> <span class="w" data-t="52.143" data-e="52.456">about</span> <span class="w" data-t="52.456" data-e="52.665">one</span> <span class="w" data-t="52.665" data-e="53.002">hundred</span> <span class="w" data-t="53.002" data-e="53.431">seventy</span> <span class="w" data-t="53.431" data-e="54.081">warheads</span> <span class="w" data-t="54.081" data-e="54.279">for</span> <span class="w" data-t="54.279" data-e="54.348">a</span> <span class="w" data-t="54.348" data-e="55.242">three-hundred-bomb</span> <span class="w" data-t="55.242" data-e="55.927">war.</span></div>
+    </section>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+    // ---- beat 1 ----
+    tl.fromTo("#kb1", { scale: 1.04, x: 0, y: 0 },
+      { scale: 1.15, x: -25, y: 20, duration: 8.659, ease: "none" }, 0.000);
+    tl.fromTo("#cap1", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 0.000);
+    tl.to("#cap1", { opacity: 0, duration: 0.25, ease: "power2.in" }, 8.109);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(1)", { color: "#F6E05E" }, 0.000);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(1)", { color: "#E8E8EC" }, 0.197);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(2)", { color: "#F6E05E" }, 0.197);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(2)", { color: "#E8E8EC" }, 0.662);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(3)", { color: "#F6E05E" }, 0.662);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(3)", { color: "#E8E8EC" }, 1.057);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(4)", { color: "#F6E05E" }, 1.057);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(4)", { color: "#E8E8EC" }, 1.916);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(5)", { color: "#F6E05E" }, 1.916);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(5)", { color: "#E8E8EC" }, 2.450);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(6)", { color: "#F6E05E" }, 2.450);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(6)", { color: "#E8E8EC" }, 2.856);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(7)", { color: "#F6E05E" }, 2.856);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(7)", { color: "#E8E8EC" }, 3.286);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(8)", { color: "#F6E05E" }, 3.286);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(8)", { color: "#E8E8EC" }, 3.379);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(9)", { color: "#F6E05E" }, 3.379);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(9)", { color: "#E8E8EC" }, 3.796);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(10)", { color: "#F6E05E" }, 3.796);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(10)", { color: "#E8E8EC" }, 4.168);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(11)", { color: "#F6E05E" }, 4.168);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(11)", { color: "#E8E8EC" }, 4.284);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(12)", { color: "#F6E05E" }, 4.284);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(12)", { color: "#E8E8EC" }, 4.702);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(13)", { color: "#F6E05E" }, 4.702);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(13)", { color: "#E8E8EC" }, 4.807);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(14)", { color: "#F6E05E" }, 4.807);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(14)", { color: "#E8E8EC" }, 5.631);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(15)", { color: "#F6E05E" }, 5.631);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(15)", { color: "#E8E8EC" }, 6.026);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(16)", { color: "#F6E05E" }, 6.026);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(16)", { color: "#E8E8EC" }, 6.142);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(17)", { color: "#F6E05E" }, 6.142);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(17)", { color: "#E8E8EC" }, 6.281);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(18)", { color: "#F6E05E" }, 6.281);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(18)", { color: "#E8E8EC" }, 6.815);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(19)", { color: "#F6E05E" }, 6.815);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(19)", { color: "#E8E8EC" }, 6.966);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(20)", { color: "#F6E05E" }, 6.966);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(20)", { color: "#E8E8EC" }, 7.129);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(21)", { color: "#F6E05E" }, 7.129);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(21)", { color: "#E8E8EC" }, 7.291);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(22)", { color: "#F6E05E" }, 7.291);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(22)", { color: "#E8E8EC" }, 7.500);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(23)", { color: "#F6E05E" }, 7.500);
+    tl.set(".beat:nth-of-type(1) .w:nth-child(23)", { color: "#E8E8EC" }, 8.359);
+    // ---- beat 2 ----
+    tl.fromTo("#kb2", { scale: 1.1, x: -10, y: 15 },
+      { scale: 1.22, x: 15, y: -20, duration: 10.145, ease: "none" }, 8.659);
+    tl.fromTo("#cap2", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 8.659);
+    tl.to("#cap2", { opacity: 0, duration: 0.25, ease: "power2.in" }, 18.254);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(1)", { color: "#F6E05E" }, 8.659);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(1)", { color: "#E8E8EC" }, 9.263);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(2)", { color: "#F6E05E" }, 9.263);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(2)", { color: "#E8E8EC" }, 10.006);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(3)", { color: "#F6E05E" }, 10.006);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(3)", { color: "#E8E8EC" }, 10.157);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(4)", { color: "#F6E05E" }, 10.157);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(4)", { color: "#E8E8EC" }, 10.691);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(5)", { color: "#F6E05E" }, 10.691);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(5)", { color: "#E8E8EC" }, 10.981);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(6)", { color: "#F6E05E" }, 10.981);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(6)", { color: "#E8E8EC" }, 11.120);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(7)", { color: "#F6E05E" }, 11.120);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(7)", { color: "#E8E8EC" }, 11.492);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(8)", { color: "#F6E05E" }, 11.492);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(8)", { color: "#E8E8EC" }, 12.630);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(9)", { color: "#F6E05E" }, 12.630);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(9)", { color: "#E8E8EC" }, 12.931);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(10)", { color: "#F6E05E" }, 12.931);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(10)", { color: "#E8E8EC" }, 13.245);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(11)", { color: "#F6E05E" }, 13.245);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(11)", { color: "#E8E8EC" }, 13.663);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(12)", { color: "#F6E05E" }, 13.663);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(12)", { color: "#E8E8EC" }, 14.034);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(13)", { color: "#F6E05E" }, 14.034);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(13)", { color: "#E8E8EC" }, 14.383);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(14)", { color: "#F6E05E" }, 14.383);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(14)", { color: "#E8E8EC" }, 14.592);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(15)", { color: "#F6E05E" }, 14.592);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(15)", { color: "#E8E8EC" }, 14.905);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(16)", { color: "#F6E05E" }, 14.905);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(16)", { color: "#E8E8EC" }, 15.590);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(17)", { color: "#F6E05E" }, 15.590);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(17)", { color: "#E8E8EC" }, 16.159);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(18)", { color: "#F6E05E" }, 16.159);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(18)", { color: "#E8E8EC" }, 16.705);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(19)", { color: "#F6E05E" }, 16.705);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(19)", { color: "#E8E8EC" }, 17.146);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(20)", { color: "#F6E05E" }, 17.146);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(20)", { color: "#E8E8EC" }, 17.262);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(21)", { color: "#F6E05E" }, 17.262);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(21)", { color: "#E8E8EC" }, 17.680);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(22)", { color: "#F6E05E" }, 17.680);
+    tl.set(".beat:nth-of-type(2) .w:nth-child(22)", { color: "#E8E8EC" }, 18.504);
+    // ---- beat 3 ----
+    tl.fromTo("#kb3", { scale: 1.04, x: 0, y: 0 },
+      { scale: 1.15, x: 15, y: -30, duration: 8.474, ease: "none" }, 18.804);
+    tl.fromTo("#cap3", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 18.804);
+    tl.to("#cap3", { opacity: 0, duration: 0.25, ease: "power2.in" }, 26.728);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(1)", { color: "#F6E05E" }, 18.804);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(1)", { color: "#E8E8EC" }, 19.083);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(2)", { color: "#F6E05E" }, 19.083);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(2)", { color: "#E8E8EC" }, 19.280);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(3)", { color: "#F6E05E" }, 19.280);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(3)", { color: "#E8E8EC" }, 19.744);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(4)", { color: "#F6E05E" }, 19.744);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(4)", { color: "#E8E8EC" }, 19.942);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(5)", { color: "#F6E05E" }, 19.942);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(5)", { color: "#E8E8EC" }, 20.766);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(6)", { color: "#F6E05E" }, 20.766);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(6)", { color: "#E8E8EC" }, 21.091);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(7)", { color: "#F6E05E" }, 21.091);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(7)", { color: "#E8E8EC" }, 21.393);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(8)", { color: "#F6E05E" }, 21.393);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(8)", { color: "#E8E8EC" }, 21.869);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(9)", { color: "#F6E05E" }, 21.869);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(9)", { color: "#E8E8EC" }, 22.554);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(10)", { color: "#F6E05E" }, 22.554);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(10)", { color: "#E8E8EC" }, 22.786);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(11)", { color: "#F6E05E" }, 22.786);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(11)", { color: "#E8E8EC" }, 23.239);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(12)", { color: "#F6E05E" }, 23.239);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(12)", { color: "#E8E8EC" }, 23.529);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(13)", { color: "#F6E05E" }, 23.529);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(13)", { color: "#E8E8EC" }, 24.319);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(14)", { color: "#F6E05E" }, 24.319);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(14)", { color: "#E8E8EC" }, 24.772);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(15)", { color: "#F6E05E" }, 24.772);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(15)", { color: "#E8E8EC" }, 25.224);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(16)", { color: "#F6E05E" }, 25.224);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(16)", { color: "#E8E8EC" }, 25.538);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(17)", { color: "#F6E05E" }, 25.538);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(17)", { color: "#E8E8EC" }, 25.758);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(18)", { color: "#F6E05E" }, 25.758);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(18)", { color: "#E8E8EC" }, 26.130);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(19)", { color: "#F6E05E" }, 26.130);
+    tl.set(".beat:nth-of-type(3) .w:nth-child(19)", { color: "#E8E8EC" }, 26.977);
+    // ---- beat 4 ----
+    tl.fromTo("#kb4", { scale: 1.04, x: 0, y: 0 },
+      { scale: 1.15, x: -25, y: 20, duration: 9.449, ease: "none" }, 27.278);
+    tl.fromTo("#cap4", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 27.278);
+    tl.to("#cap4", { opacity: 0, duration: 0.25, ease: "power2.in" }, 36.177);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(1)", { color: "#F6E05E" }, 27.278);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(1)", { color: "#E8E8EC" }, 27.499);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(2)", { color: "#F6E05E" }, 27.499);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(2)", { color: "#E8E8EC" }, 28.067);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(3)", { color: "#F6E05E" }, 28.067);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(3)", { color: "#E8E8EC" }, 28.485);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(4)", { color: "#F6E05E" }, 28.485);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(4)", { color: "#E8E8EC" }, 29.437);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(5)", { color: "#F6E05E" }, 29.437);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(5)", { color: "#E8E8EC" }, 29.902);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(6)", { color: "#F6E05E" }, 29.902);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(6)", { color: "#E8E8EC" }, 30.552);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(7)", { color: "#F6E05E" }, 30.552);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(7)", { color: "#E8E8EC" }, 31.574);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(8)", { color: "#F6E05E" }, 31.574);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(8)", { color: "#E8E8EC" }, 31.713);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(9)", { color: "#F6E05E" }, 31.713);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(9)", { color: "#E8E8EC" }, 32.967);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(10)", { color: "#F6E05E" }, 32.967);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(10)", { color: "#E8E8EC" }, 33.338);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(11)", { color: "#F6E05E" }, 33.338);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(11)", { color: "#E8E8EC" }, 33.803);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(12)", { color: "#F6E05E" }, 33.803);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(12)", { color: "#E8E8EC" }, 34.209);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(13)", { color: "#F6E05E" }, 34.209);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(13)", { color: "#E8E8EC" }, 34.906);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(14)", { color: "#F6E05E" }, 34.906);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(14)", { color: "#E8E8EC" }, 35.231);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(15)", { color: "#F6E05E" }, 35.231);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(15)", { color: "#E8E8EC" }, 35.475);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(16)", { color: "#F6E05E" }, 35.475);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(16)", { color: "#E8E8EC" }, 35.579);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(17)", { color: "#F6E05E" }, 35.579);
+    tl.set(".beat:nth-of-type(4) .w:nth-child(17)", { color: "#E8E8EC" }, 36.427);
+    // ---- beat 5 ----
+    tl.fromTo("#kb5", { scale: 1.04, x: 0, y: 0 },
+      { scale: 1.15, x: 20, y: -25, duration: 8.287, ease: "none" }, 36.727);
+    tl.fromTo("#cap5", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 36.727);
+    tl.to("#cap5", { opacity: 0, duration: 0.25, ease: "power2.in" }, 44.464);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(1)", { color: "#F6E05E" }, 36.727);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(1)", { color: "#E8E8EC" }, 37.284);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(2)", { color: "#F6E05E" }, 37.284);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(2)", { color: "#E8E8EC" }, 37.458);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(3)", { color: "#F6E05E" }, 37.458);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(3)", { color: "#E8E8EC" }, 37.725);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(4)", { color: "#F6E05E" }, 37.725);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(4)", { color: "#E8E8EC" }, 38.480);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(5)", { color: "#F6E05E" }, 38.480);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(5)", { color: "#E8E8EC" }, 38.782);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(6)", { color: "#F6E05E" }, 38.782);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(6)", { color: "#E8E8EC" }, 39.084);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(7)", { color: "#F6E05E" }, 39.084);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(7)", { color: "#E8E8EC" }, 39.699);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(8)", { color: "#F6E05E" }, 39.699);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(8)", { color: "#E8E8EC" }, 39.955);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(9)", { color: "#F6E05E" }, 39.955);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(9)", { color: "#E8E8EC" }, 40.071);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(10)", { color: "#F6E05E" }, 40.071);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(10)", { color: "#E8E8EC" }, 40.547);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(11)", { color: "#F6E05E" }, 40.547);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(11)", { color: "#E8E8EC" }, 40.709);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(12)", { color: "#F6E05E" }, 40.709);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(12)", { color: "#E8E8EC" }, 41.023);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(13)", { color: "#F6E05E" }, 41.023);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(13)", { color: "#E8E8EC" }, 41.441);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(14)", { color: "#F6E05E" }, 41.441);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(14)", { color: "#E8E8EC" }, 41.708);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(15)", { color: "#F6E05E" }, 41.708);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(15)", { color: "#E8E8EC" }, 42.091);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(16)", { color: "#F6E05E" }, 42.091);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(16)", { color: "#E8E8EC" }, 42.892);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(17)", { color: "#F6E05E" }, 42.892);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(17)", { color: "#E8E8EC" }, 43.391);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(18)", { color: "#F6E05E" }, 43.391);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(18)", { color: "#E8E8EC" }, 43.797);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(19)", { color: "#F6E05E" }, 43.797);
+    tl.set(".beat:nth-of-type(5) .w:nth-child(19)", { color: "#E8E8EC" }, 44.715);
+    // ---- beat 6 ----
+    tl.fromTo("#kb6", { scale: 1.04, x: 0, y: 0 },
+      { scale: 1.15, x: -15, y: 20, duration: 11.274, ease: "none" }, 45.014);
+    tl.fromTo("#cap6", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: "power3.out" }, 45.014);
+    tl.to("#cap6", { opacity: 0, duration: 0.25, ease: "power2.in" }, 55.678);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(1)", { color: "#F6E05E" }, 45.014);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(1)", { color: "#E8E8EC" }, 45.885);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(2)", { color: "#F6E05E" }, 45.885);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(2)", { color: "#E8E8EC" }, 46.012);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(3)", { color: "#F6E05E" }, 46.012);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(3)", { color: "#E8E8EC" }, 46.407);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(4)", { color: "#F6E05E" }, 46.407);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(4)", { color: "#E8E8EC" }, 47.429);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(5)", { color: "#F6E05E" }, 47.429);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(5)", { color: "#E8E8EC" }, 47.963);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(6)", { color: "#F6E05E" }, 47.963);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(6)", { color: "#E8E8EC" }, 48.207);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(7)", { color: "#F6E05E" }, 48.207);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(7)", { color: "#E8E8EC" }, 48.311);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(8)", { color: "#F6E05E" }, 48.311);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(8)", { color: "#E8E8EC" }, 48.694);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(9)", { color: "#F6E05E" }, 48.694);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(9)", { color: "#E8E8EC" }, 49.774);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(10)", { color: "#F6E05E" }, 49.774);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(10)", { color: "#E8E8EC" }, 49.948);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(11)", { color: "#F6E05E" }, 49.948);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(11)", { color: "#E8E8EC" }, 50.343);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(12)", { color: "#F6E05E" }, 50.343);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(12)", { color: "#E8E8EC" }, 51.167);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(13)", { color: "#F6E05E" }, 51.167);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(13)", { color: "#E8E8EC" }, 51.678);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(14)", { color: "#F6E05E" }, 51.678);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(14)", { color: "#E8E8EC" }, 51.852);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(15)", { color: "#F6E05E" }, 51.852);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(15)", { color: "#E8E8EC" }, 52.143);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(16)", { color: "#F6E05E" }, 52.143);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(16)", { color: "#E8E8EC" }, 52.456);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(17)", { color: "#F6E05E" }, 52.456);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(17)", { color: "#E8E8EC" }, 52.665);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(18)", { color: "#F6E05E" }, 52.665);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(18)", { color: "#E8E8EC" }, 53.002);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(19)", { color: "#F6E05E" }, 53.002);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(19)", { color: "#E8E8EC" }, 53.431);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(20)", { color: "#F6E05E" }, 53.431);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(20)", { color: "#E8E8EC" }, 54.081);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(21)", { color: "#F6E05E" }, 54.081);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(21)", { color: "#E8E8EC" }, 54.279);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(22)", { color: "#F6E05E" }, 54.279);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(22)", { color: "#E8E8EC" }, 54.348);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(23)", { color: "#F6E05E" }, 54.348);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(23)", { color: "#E8E8EC" }, 55.242);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(24)", { color: "#F6E05E" }, 55.242);
+    tl.set(".beat:nth-of-type(6) .w:nth-child(24)", { color: "#E8E8EC" }, 55.927);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
