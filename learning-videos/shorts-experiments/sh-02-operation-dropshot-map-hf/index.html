@@ -45,7 +45,7 @@
         box-shadow: inset 0 0 160px 40px rgba(4, 6, 10, 0.95);
       }
 
-      /* UNTIMED PERSISTENT MAP STAGE (EXPANDED TO OCCUPY 1200PX VERTICAL CANVAS) */
+      /* UNTIMED PERSISTENT MAP STAGE */
       #map-stage {
         position: absolute;
         inset: 0;
@@ -204,7 +204,7 @@
         margin-top: 4px;
       }
 
-      /* LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, ELIMINATES DEAD SPACE) */
+      /* LOWER DATA STRIP */
       .stat-strip {
         position: absolute;
         top: 1475px;
@@ -231,7 +231,7 @@
         color: #f8fafc;
       }
 
-      /* CAPTIONS (POSITIONED DIRECTLY ABOVE MOBILE UI, NO DEAD VOID) */
+      /* CAPTIONS */
       .cap {
         position: absolute;
         top: 1535px;
@@ -285,7 +285,7 @@
     <div id="root" data-composition-id="main" data-start="0" data-duration="56.288" data-width="1080" data-height="1920">
       <audio id="vo" src="audio/vo_full.mp3" data-start="0" data-duration="56.288"></audio>
 
-      <!-- SHARED VECTOR MAP BACKGROUND (EXPANDED TO FILL VERTICAL VIEWPORT) -->
+      <!-- SHARED VECTOR MAP BACKGROUND -->
       <div id="map-stage" data-layout-allow-overflow>
         <svg id="map-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" data-layout-allow-overflow>
           <defs>
@@ -296,22 +296,49 @@
               <stop offset="80%" stop-color="#dc2626" stop-opacity="0.9" />
               <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0" />
             </radialGradient>
+            <radialGradient id="grad-blast-flash" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+              <stop offset="60%" stop-color="#fef08a" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#facc15" stop-opacity="0" />
+            </radialGradient>
             <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="6" result="blur" />
               <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
             </filter>
 
-            <!-- B-36 PEACEMAKER SILHOUETTE ICON -->
+            <!-- ENHANCED B-36 PEACEMAKER SILHOUETTE (6 PUSHER ENGINES + CONTRAILS) -->
             <g id="icon-b36">
-              <path d="M0,-30 L3,-22 L3,24 L0,30 L-3,24 L-3,-22 Z" fill="#e2e8f0" stroke="#475569" stroke-width="1.2" />
-              <polygon points="0,-6 72,6 72,12 8,6 0,6 -8,6 -72,12 -72,6" fill="#cbd5e1" stroke="#475569" stroke-width="1.2" />
-              <polygon points="0,22 24,27 24,30 0,28 -24,30 -24,27" fill="#94a3b8" stroke="#475569" stroke-width="1" />
-              <circle cx="20" cy="7" r="2" fill="#38bdf8" />
-              <circle cx="38" cy="8.5" r="2" fill="#38bdf8" />
-              <circle cx="56" cy="10" r="2" fill="#38bdf8" />
-              <circle cx="-20" cy="7" r="2" fill="#38bdf8" />
-              <circle cx="-38" cy="8.5" r="2" fill="#38bdf8" />
-              <circle cx="-56" cy="10" r="2" fill="#38bdf8" />
+              <!-- Fuselage -->
+              <path d="M0,-34 L4,-24 L4,26 L0,34 L-4,26 L-4,-24 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5" />
+              <!-- Giant swept wing -->
+              <polygon points="0,-6 80,6 80,14 10,7 0,7 -10,7 -80,14 -80,6" fill="#e2e8f0" stroke="#334155" stroke-width="1.5" />
+              <!-- Tailplane -->
+              <polygon points="0,24 28,30 28,34 0,31 -28,34 -28,30" fill="#cbd5e1" stroke="#334155" stroke-width="1.2" />
+              <!-- 6 Pusher Propeller Engine Nacelles -->
+              <circle cx="22" cy="7" r="2.5" fill="#0284c7" />
+              <circle cx="42" cy="9" r="2.5" fill="#0284c7" />
+              <circle cx="62" cy="11" r="2.5" fill="#0284c7" />
+              <circle cx="-22" cy="7" r="2.5" fill="#0284c7" />
+              <circle cx="-42" cy="9" r="2.5" fill="#0284c7" />
+              <circle cx="-62" cy="11" r="2.5" fill="#0284c7" />
+              <!-- Contrail Plumes -->
+              <line x1="22" y1="12" x2="22" y2="42" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+              <line x1="42" y1="14" x2="42" y2="46" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+              <line x1="62" y1="16" x2="62" y2="48" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+              <line x1="-22" y1="12" x2="-22" y2="42" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+              <line x1="-42" y1="14" x2="-42" y2="46" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+              <line x1="-62" y1="16" x2="-62" y2="48" stroke="rgba(248, 250, 252, 0.85)" stroke-width="2" stroke-dasharray="3 4" />
+            </g>
+
+            <!-- AFOAT-1 RECON AIRCRAFT -->
+            <g id="icon-recon">
+              <path d="M0,-24 L3,-16 L3,20 L0,25 L-3,20 L-3,-16 Z" fill="#f8fafc" stroke="#0284c7" stroke-width="1.2" />
+              <polygon points="0,-4 54,4 54,9 6,4 0,4 -6,4 -54,9 -54,4" fill="#cbd5e1" stroke="#0284c7" stroke-width="1.2" />
+              <polygon points="0,18 18,22 18,25 0,23 -18,25 -18,22" fill="#94a3b8" stroke="#0284c7" stroke-width="1" />
+              <circle cx="18" cy="5" r="2.5" fill="#38bdf8" />
+              <circle cx="36" cy="6.5" r="2.5" fill="#38bdf8" />
+              <circle cx="-18" cy="5" r="2.5" fill="#38bdf8" />
+              <circle cx="-36" cy="6.5" r="2.5" fill="#38bdf8" />
             </g>
 
             <!-- BASE PIN (WHITE/STEEL DIAMOND) -->
@@ -322,12 +349,12 @@
 
             <!-- TARGET CROSSHAIR PIN (RED) -->
             <g id="icon-target-pin">
-              <circle cx="0" cy="0" r="8" fill="none" stroke="#dc2626" stroke-width="2" />
-              <circle cx="0" cy="0" r="2" fill="#dc2626" />
-              <line x1="-12" y1="0" x2="-4" y2="0" stroke="#dc2626" stroke-width="1.8" />
-              <line x1="4" y1="0" x2="12" y2="0" stroke="#dc2626" stroke-width="1.8" />
-              <line x1="0" y1="-12" x2="0" y2="-4" stroke="#dc2626" stroke-width="1.8" />
-              <line x1="0" y1="4" x2="0" y2="12" stroke="#dc2626" stroke-width="1.8" />
+              <circle cx="0" cy="0" r="9" fill="none" stroke="#dc2626" stroke-width="2" />
+              <circle cx="0" cy="0" r="2.5" fill="#dc2626" />
+              <line x1="-14" y1="0" x2="-5" y2="0" stroke="#dc2626" stroke-width="2" />
+              <line x1="5" y1="0" x2="14" y2="0" stroke="#dc2626" stroke-width="2" />
+              <line x1="0" y1="-14" x2="0" y2="-5" stroke="#dc2626" stroke-width="2" />
+              <line x1="0" y1="5" x2="0" y2="14" stroke="#dc2626" stroke-width="2" />
             </g>
 
             <!-- RADIATION TREFOIL ICON -->
@@ -356,57 +383,87 @@
                 <circle id="b1-pulse-omaha" r="30" fill="none" stroke="#94a3b8" stroke-width="2" opacity="0.6" />
                 <use href="#icon-base-pin" />
               </g>
-              <path id="b1-threat-arc" d="M 106 1041.5 Q 480 650 832.8 945.7" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="10 8" opacity="0.85" />
+              <path id="b1-threat-arc" d="M 106 1041.5 Q 480 650 832.8 945.7" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-dasharray="10 8" opacity="0.85" />
             </g>
 
-            <!-- BEAT 2 OVERLAYS -->
+            <!-- BEAT 2 OVERLAYS (SEQUENTIAL TARGET DROPS) -->
             <g id="b2-overlays" opacity="0">
               <circle id="b2-target-ring-1" cx="832.8" cy="945.7" r="80" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
               <circle id="b2-target-ring-2" cx="832.8" cy="945.7" r="160" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="10 8" opacity="0.5" />
               <circle id="b2-target-ring-3" cx="888.7" cy="812.7" r="120" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
 
-              <g transform="translate(832.8, 945.7)"><use href="#icon-target-pin" /></g> <!-- Moscow -->
-              <g transform="translate(774.3, 954.3)"><use href="#icon-target-pin" /></g> <!-- Leningrad -->
-              <g transform="translate(888.7, 812.7)"><use href="#icon-target-pin" /></g> <!-- Chelyabinsk -->
-              <g transform="translate(871.2, 814.8)"><use href="#icon-target-pin" /></g> <!-- Sverdlovsk -->
-              <g transform="translate(846.4, 909.5)"><use href="#icon-target-pin" /></g> <!-- Gorky -->
-              <g transform="translate(885.2, 680.7)"><use href="#icon-target-pin" /></g> <!-- Novosibirsk -->
-              <g transform="translate(1011.4, 932.9)"><use href="#icon-target-pin" /></g> <!-- Baku -->
+              <g id="tgt-moscow" transform="translate(832.8, 945.7)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-leningrad" transform="translate(774.3, 954.3)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-chelyabinsk" transform="translate(888.7, 812.7)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-sverdlovsk" transform="translate(871.2, 814.8)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-gorky" transform="translate(846.4, 909.5)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-novosibirsk" transform="translate(885.2, 680.7)"><use href="#icon-target-pin" /></g>
+              <g id="tgt-baku" transform="translate(1011.4, 932.9)"><use href="#icon-target-pin" /></g>
             </g>
 
-            <!-- BEAT 3 OVERLAYS -->
+            <!-- BEAT 3 OVERLAYS (POLAR BOMBER ROUTES & MOVING AIRPLANES) -->
             <g id="b3-overlays" opacity="0">
-              <g transform="translate(338.5, 604.2)"><use href="#icon-base-pin" /></g> <!-- Alaska -->
-              <g transform="translate(437.6, 850)"><use href="#icon-base-pin" /></g> <!-- Thule -->
-              <g transform="translate(673.7, 1117.5)"><use href="#icon-base-pin" /></g> <!-- UK -->
+              <g transform="translate(338.5, 604.2)">
+                <circle id="radar-alaska" r="22" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.8" />
+                <use href="#icon-base-pin" />
+              </g>
+              <g transform="translate(437.6, 850)">
+                <circle id="radar-thule" r="22" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.8" />
+                <use href="#icon-base-pin" />
+              </g>
+              <g transform="translate(673.7, 1117.5)">
+                <circle id="radar-uk" r="20" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.8" />
+                <use href="#icon-base-pin" />
+              </g>
 
-              <path id="route-alaska" d="M 338.5 604.2 Q 520 540 888.7 812.7" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-dasharray="12 8" opacity="0.9" />
-              <path id="route-thule" d="M 437.6 850 Q 600 920 832.8 945.7" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-dasharray="12 8" opacity="0.9" />
-              <path id="route-uk" d="M 673.7 1117.5 Q 730 1020 774.3 954.3" fill="none" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 8" opacity="0.8" />
+              <!-- Curved Great-Circle Flight Corridors -->
+              <path id="route-alaska" d="M 338.5 604.2 Q 520 540 888.7 812.7" fill="none" stroke="#f8fafc" stroke-width="4" stroke-dasharray="14 10" opacity="0.9" />
+              <path id="route-thule" d="M 437.6 850 Q 600 920 832.8 945.7" fill="none" stroke="#f8fafc" stroke-width="4" stroke-dasharray="14 10" opacity="0.9" />
+              <path id="route-uk" d="M 673.7 1117.5 Q 730 1020 774.3 954.3" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-dasharray="12 8" opacity="0.85" />
 
+              <!-- ANIMATED PATH-TRACKING B-36 PEACEMAKER BOMBERS -->
               <g id="bomber-rig-alaska" transform="translate(338.5, 604.2)">
-                <use href="#icon-b36" transform="scale(0.8) rotate(70)" />
+                <use href="#icon-b36" transform="scale(0.95)" />
               </g>
               <g id="bomber-rig-thule" transform="translate(437.6, 850)">
-                <use href="#icon-b36" transform="scale(0.8) rotate(100)" />
+                <use href="#icon-b36" transform="scale(0.95)" />
               </g>
               <g id="bomber-rig-uk" transform="translate(673.7, 1117.5)">
-                <use href="#icon-b36" transform="scale(0.8) rotate(55)" />
+                <use href="#icon-b36" transform="scale(0.90)" />
               </g>
             </g>
 
-            <!-- BEAT 4 OVERLAYS -->
+            <!-- BEAT 4 OVERLAYS (SEMIPALATINSK DETONATION & AFOAT-1 RECON) -->
             <g id="b4-overlays" opacity="0">
+              <!-- Ground Zero Blast -->
               <g transform="translate(936, 698.5)">
-                <circle id="b4-fireball" r="10" fill="url(#grad-fireball)" />
-                <circle id="b4-shock-1" r="25" fill="none" stroke="#FFE619" stroke-width="4" opacity="0.9" />
-                <circle id="b4-shock-2" r="50" fill="none" stroke="#dc2626" stroke-width="3" opacity="0.7" />
-                <circle id="b4-shock-3" r="85" fill="none" stroke="#f87171" stroke-width="2" opacity="0.5" />
-                <g id="b4-radiation-icon" transform="translate(0, -50) scale(0.6)">
+                <circle id="b4-flash" r="100" fill="url(#grad-blast-flash)" opacity="0" />
+                <circle id="b4-fireball" r="8" fill="url(#grad-fireball)" />
+                <circle id="b4-shock-1" r="20" fill="none" stroke="#FFE619" stroke-width="4.5" opacity="0.95" />
+                <circle id="b4-shock-2" r="45" fill="none" stroke="#dc2626" stroke-width="3" opacity="0.8" />
+                <circle id="b4-shock-3" r="80" fill="none" stroke="#f87171" stroke-width="2" opacity="0.6" />
+                <g id="b4-radiation-icon" transform="translate(0, -42) scale(0.60)">
                   <use href="#icon-radiation" />
                 </g>
               </g>
-              <path id="b4-fallout-plume" d="M 936 698.5 Q 780 500 520 480" fill="none" stroke="#FFE619" stroke-width="3.5" stroke-dasharray="10 8" opacity="0.85" />
+
+              <!-- Drifting Radioactive Fallout Cloud Vector -->
+              <path id="b4-fallout-plume" d="M 936 698.5 Q 890 640 830 590" fill="none" stroke="#FFE619" stroke-width="4.5" stroke-dasharray="12 8" opacity="0.85" />
+              
+              <!-- Expanding Fallout Cloud Atmosphere Mass -->
+              <g id="b4-cloud-mass" opacity="0">
+                <circle cx="900" cy="650" r="26" fill="rgba(254, 240, 138, 0.35)" />
+                <circle cx="865" cy="615" r="38" fill="rgba(254, 240, 138, 0.28)" />
+                <circle cx="830" cy="585" r="50" fill="rgba(254, 240, 138, 0.20)" />
+              </g>
+
+              <!-- AFOAT-1 Atmospheric Intercept Route across open sky -->
+              <path id="route-afoat" d="M 990 520 Q 920 570 850 620" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="10 6" opacity="0.9" />
+              
+              <!-- AFOAT-1 WB-29 Recon Aircraft Rig (Intercepts downwind cloud) -->
+              <g id="recon-rig-afoat" transform="translate(990, 520)">
+                <use href="#icon-recon" transform="scale(0.95)" />
+              </g>
             </g>
 
             <!-- BEAT 5 OVERLAYS -->
@@ -436,7 +493,7 @@
               </g>
             </g>
 
-            <!-- TACTICAL LABELS LAYER (LAST CHILD OF SVG) -->
+            <!-- TACTICAL LABELS LAYER -->
             <g id="tactical-labels-layer">
               <!-- Beat 1: Washington DC -->
               <g id="label-washington" opacity="1" transform="translate(106, 1065)" data-layout-allow-overflow data-layout-allow-occlusion>
@@ -472,7 +529,7 @@
               </g>
 
               <!-- Beat 4: Semipalatinsk -->
-              <g id="label-semipalatinsk" opacity="0" transform="translate(860, 740)" data-layout-allow-overflow data-layout-allow-occlusion>
+              <g id="label-semipalatinsk" opacity="0" transform="translate(850, 785)" data-layout-allow-overflow data-layout-allow-occlusion>
                 <rect x="0" y="0" width="170" height="22" rx="3" fill="#0a0e18" stroke="#FFE619" stroke-width="1.2" />
                 <text x="85" y="15" fill="#FFE619" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">SEMIPALATINSK · RDS-1</text>
               </g>
@@ -507,13 +564,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">PLANNING BODY: US JCS</span>
         <span class="stat-r">ORIGIN DATE: DECEMBER 1949</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap1"><span class="w">In</span> <span class="w">December</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">American</span> <span class="w">planners</span> <span class="w">drafted</span> <span class="w">a</span> <span class="w">secret</span> <span class="w">strike</span> <span class="w">to</span> <span class="w">destroy</span> <span class="w">an</span> <span class="w">empire,</span> <span class="w">betting</span> <span class="w">on</span> <span class="w">an</span> <span class="w">arsenal</span> <span class="w">that</span> <span class="w">did</span> <span class="w">not</span> <span class="w">yet</span> <span class="w">exist.</span></div>
     </section>
     <section class="clip beat" id="beat2" data-start="8.659" data-duration="10.145" data-track-index="2">
@@ -538,13 +595,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">TARGET LIST: 100 URBAN CENTERS</span>
         <span class="stat-r">PROJECTED IMPACT: 85% INDUSTRY</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap2"><span class="w">Codenamed</span> <span class="w">Dropshot,</span> <span class="w">it</span> <span class="w">projected</span> <span class="w">war</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">fifty-seven:</span> <span class="w">three</span> <span class="w">hundred</span> <span class="w">atomic</span> <span class="w">bombs</span> <span class="w">across</span> <span class="w">one</span> <span class="w">hundred</span> <span class="w">cities,</span> <span class="w">destroying</span> <span class="w">eighty-five</span> <span class="w">percent</span> <span class="w">of</span> <span class="w">Soviet</span> <span class="w">industry.</span></div>
     </section>
     <section class="clip beat" id="beat3" data-start="18.804" data-duration="8.474" data-track-index="3">
@@ -569,13 +626,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">DELIVERY VEHICLE: B-36 & B-50</span>
         <span class="stat-r">STRIKE ROUTE: ARCTIC CORRIDORS</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap3"><span class="w">With</span> <span class="w">no</span> <span class="w">missiles</span> <span class="w">yet</span> <span class="w">invented,</span> <span class="w">every</span> <span class="w">bomb</span> <span class="w">required</span> <span class="w">Strategic</span> <span class="w">Air</span> <span class="w">Command</span> <span class="w">heavy</span> <span class="w">bombers,</span> <span class="w">flying</span> <span class="w">Arctic</span> <span class="w">routes</span> <span class="w">from</span> <span class="w">forward</span> <span class="w">bases.</span></div>
     </section>
     <section class="clip beat" id="beat4" data-start="27.278" data-duration="9.449" data-track-index="4">
@@ -600,13 +657,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">FIRST SOVIET DETONATION: RDS-1</span>
         <span class="stat-r">MONOPOLY: ENDED AUG 1949</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap4"><span class="w">In</span> <span class="w">August</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">Moscow</span> <span class="w">detonated</span> <span class="w">R-D-S-one</span> <span class="w">at</span> <span class="w">Semipalatinsk,</span> <span class="w">ending</span> <span class="w">America's</span> <span class="w">atomic</span> <span class="w">monopoly</span> <span class="w">years</span> <span class="w">ahead</span> <span class="w">of</span> <span class="w">schedule.</span></div>
     </section>
     <section class="clip beat" id="beat5" data-start="36.727" data-duration="8.287" data-track-index="5">
@@ -631,13 +688,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">OPERATIONAL STATUS: WITHDRAWN</span>
         <span class="stat-r">DOCTRINE: MUTUAL DETERRENCE</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap5"><span class="w">Dropshot</span> <span class="w">was</span> <span class="w">never</span> <span class="w">launched.</span> <span class="w">Once</span> <span class="w">both</span> <span class="w">superpowers</span> <span class="w">held</span> <span class="w">the</span> <span class="w">bomb,</span> <span class="w">a</span> <span class="w">first</span> <span class="w">strike</span> <span class="w">meant</span> <span class="w">mutual</span> <span class="w">destruction,</span> <span class="w">creating</span> <span class="w">nuclear</span> <span class="w">deterrence.</span></div>
     </section>
     <section class="clip beat" id="beat6" data-start="45.014" data-duration="11.274" data-track-index="6">
@@ -662,13 +719,13 @@
         </div>
       </div>
 
-      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <!-- LOWER DATA STRIP -->
       <div class="stat-strip">
         <span class="stat-l">1949 US STOCKPILE: ~170 WARHEADS</span>
         <span class="stat-r">DROPSHOT PLAN: 300 BOMBS</span>
       </div>
 
-      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <!-- BOTTOM CAPTION CONTAINER -->
       <div class="cap" id="cap6"><span class="w">Declassified</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">seventy-seven,</span> <span class="w">Dropshot</span> <span class="w">held</span> <span class="w">a</span> <span class="w">final</span> <span class="w">irony:</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">America</span> <span class="w">had</span> <span class="w">only</span> <span class="w">about</span> <span class="w">one</span> <span class="w">hundred</span> <span class="w">seventy</span> <span class="w">warheads</span> <span class="w">for</span> <span class="w">a</span> <span class="w">three-hundred-bomb</span> <span class="w">war.</span></div>
     </section>
 
@@ -723,7 +780,47 @@
       }
       updateCamera();
 
-      // Standalone browser preview helper (does not touch GSAP timeline, safe for HyperFrames)
+      // SYNCHRONOUS BUILD-TIME PATH PRECOMPUTATION (ZERO RUNTIME DOM MEASUREMENT)
+      function precomputePathPoints(pathId, steps = 120) {
+        const path = document.getElementById(pathId);
+        if (!path) return [];
+        const totalLen = path.getTotalLength();
+        const pts = [];
+        for (let i = 0; i < steps; i++) {
+          const l = (i / (steps - 1)) * totalLen;
+          const pt = path.getPointAtLength(l);
+          const next = path.getPointAtLength(Math.min(totalLen, l + 2));
+          const angle = Math.atan2(next.y - pt.y, next.x - pt.x) * 180 / Math.PI + 90;
+          pts.push({ x: pt.x, y: pt.y, angle: angle, totalLen: totalLen });
+        }
+        return pts;
+      }
+
+      const pointsAlaska = precomputePathPoints("route-alaska");
+      const pointsThule = precomputePathPoints("route-thule");
+      const pointsUK = precomputePathPoints("route-uk");
+      const pointsRecon = precomputePathPoints("route-afoat");
+
+      const flightAnim = { pAlaska: 0.001, pThule: 0.001, pUK: 0.001, pRecon: 0.001 };
+
+      function updateFlightRig(points, rigId, progress) {
+        if (!points || points.length === 0) return;
+        const rig = document.getElementById(rigId);
+        if (!rig) return;
+        const p = Math.max(0, Math.min(1, progress));
+        const idx = Math.min(points.length - 1, Math.floor(p * points.length));
+        const pt = points[idx];
+        rig.setAttribute("transform", `translate(${pt.x}, ${pt.y}) rotate(${pt.angle})`);
+      }
+
+      function updateAllFlights() {
+        updateFlightRig(pointsAlaska, "bomber-rig-alaska", flightAnim.pAlaska);
+        updateFlightRig(pointsThule, "bomber-rig-thule", flightAnim.pThule);
+        updateFlightRig(pointsUK, "bomber-rig-uk", flightAnim.pUK);
+        updateFlightRig(pointsRecon, "recon-rig-afoat", flightAnim.pRecon);
+      }
+
+      // Standalone browser preview helper
       function syncClipsForTime(t) {
         document.querySelectorAll(".clip.beat").forEach(clip => {
           const s = parseFloat(clip.dataset.start);
@@ -736,58 +833,84 @@
         paused: true,
         onUpdate: () => {
           updateCamera();
+          updateAllFlights();
           syncClipsForTime(tl.time());
         }
       });
 
-      // BEAT 1 (0.000s -> 8.659s)
+      // BEAT 1 (0.000s -> 8.659s): STRATEGIC JCS COMMAND CONCEPTION
       tl.set(camera, { x: 540, y: 860, scale: 1.15 }, 0.00);
       tl.fromTo("#b1-pulse-wash", { r: 15, opacity: 0.9 }, { r: 55, opacity: 0, duration: 1.8, repeat: 4, ease: "power1.out" }, 0.20);
       tl.fromTo("#b1-pulse-omaha", { r: 15, opacity: 0.9 }, { r: 60, opacity: 0, duration: 2.0, repeat: 3, ease: "power1.out" }, 0.30);
       tl.fromTo("#b1-threat-arc", { strokeDashoffset: 500 }, { strokeDashoffset: 0, duration: 3.5, ease: "power2.out" }, 0.80);
       tl.fromTo("#dossier1", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 0.50);
 
-      // BEAT 2 (8.659s -> 18.804s)
+      // BEAT 2 (8.659s -> 18.804s): 300 ATOMIC BOMBS / 100 SOVIET TARGETS
       tl.to(camera, { x: 840, y: 920, scale: 1.65, duration: 2.2, ease: "power2.inOut" }, 8.659);
       tl.to(["#b1-overlays", "#label-washington", "#label-omaha"], { opacity: 0, duration: 0.5 }, 8.659);
       tl.to("#b2-overlays", { opacity: 1, duration: 0.8 }, 9.20);
       tl.to(["#label-moscow", "#label-chelyabinsk"], { opacity: 1, duration: 0.6 }, 9.80);
+      // Sequential Target Drops
+      tl.fromTo("#tgt-moscow", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 9.30);
+      tl.fromTo("#tgt-leningrad", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 9.60);
+      tl.fromTo("#tgt-chelyabinsk", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 9.90);
+      tl.fromTo("#tgt-sverdlovsk", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 10.20);
+      tl.fromTo("#tgt-gorky", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 10.50);
+      tl.fromTo("#tgt-novosibirsk", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 10.80);
+      tl.fromTo("#tgt-baku", { scale: 2.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 11.10);
+      // Expanding Industrial Target Destruction Rings
       tl.fromTo("#b2-target-ring-1", { r: 20, opacity: 0.9 }, { r: 140, opacity: 0.2, duration: 2.4, repeat: 3, ease: "power1.out" }, 9.50);
       tl.fromTo("#b2-target-ring-3", { r: 20, opacity: 0.9 }, { r: 150, opacity: 0.2, duration: 2.6, repeat: 3, ease: "power1.out" }, 9.80);
       tl.fromTo("#dossier2", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 9.00);
 
-      // BEAT 3 (18.804s -> 27.278s)
+      // BEAT 3 (18.804s -> 27.278s): ARCTIC BOMBER FLIGHT ANIMATION
       tl.to(camera, { x: 500, y: 820, scale: 1.35, duration: 2.0, ease: "power2.inOut" }, 18.804);
       tl.to(["#b2-overlays", "#label-moscow", "#label-chelyabinsk"], { opacity: 0, duration: 0.5 }, 18.804);
       tl.to("#b3-overlays", { opacity: 1, duration: 0.8 }, 19.30);
       tl.to(["#label-alaska", "#label-thule"], { opacity: 1, duration: 0.6 }, 19.80);
-      tl.fromTo("#route-alaska", { strokeDashoffset: 800 }, { strokeDashoffset: 0, duration: 4.5, ease: "none" }, 19.40);
-      tl.fromTo("#route-thule", { strokeDashoffset: 700 }, { strokeDashoffset: 0, duration: 4.5, ease: "none" }, 19.60);
-      tl.fromTo("#route-uk", { strokeDashoffset: 500 }, { strokeDashoffset: 0, duration: 4.0, ease: "none" }, 19.80);
-      tl.fromTo("#bomber-rig-alaska", { x: 0, y: 0 }, { x: 420, y: 160, duration: 6.5, ease: "none" }, 19.50);
-      tl.fromTo("#bomber-rig-thule", { x: 0, y: 0 }, { x: 300, y: 70, duration: 6.5, ease: "none" }, 19.60);
+      // Base radar sweeps
+      tl.fromTo("#radar-alaska", { r: 5, opacity: 1 }, { r: 45, opacity: 0, duration: 1.8, repeat: 4, ease: "power1.out" }, 19.20);
+      tl.fromTo("#radar-thule", { r: 5, opacity: 1 }, { r: 45, opacity: 0, duration: 1.8, repeat: 4, ease: "power1.out" }, 19.40);
+      tl.fromTo("#radar-uk", { r: 5, opacity: 1 }, { r: 40, opacity: 0, duration: 1.8, repeat: 4, ease: "power1.out" }, 19.60);
+      // TRUE DYNAMIC PATH-FOLLOWING FLIGHT FOR B-36 BOMBERS (Banking, Heading Rotation & Contrails)
+      tl.fromTo(flightAnim, 
+        { pAlaska: 0.01, pThule: 0.01, pUK: 0.01 },
+        { pAlaska: 0.98, pThule: 0.98, pUK: 0.98, duration: 7.2, ease: "power1.inOut", onUpdate: updateAllFlights },
+        19.10
+      );
       tl.fromTo("#dossier3", { opacity: 0, x: 35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 19.10);
 
-      // BEAT 4 (27.278s -> 36.727s)
-      tl.to(camera, { x: 920, y: 760, scale: 2.10, duration: 2.0, ease: "power3.inOut" }, 27.278);
+      // BEAT 4 (27.278s -> 36.727s): SEMIPALATINSK RDS-1 NUCLEAR DETONATION & AFOAT-1 RECON
+      tl.to(camera, { x: 820, y: 760, scale: 1.55, duration: 2.0, ease: "power3.inOut" }, 27.278);
       tl.to(["#b3-overlays", "#label-alaska", "#label-thule"], { opacity: 0, duration: 0.5 }, 27.278);
       tl.to("#b4-overlays", { opacity: 1, duration: 0.6 }, 27.80);
       tl.to("#label-semipalatinsk", { opacity: 1, duration: 0.5 }, 28.30);
-      tl.fromTo("#b4-fireball", { r: 6, opacity: 1 }, { r: 65, opacity: 0.75, duration: 1.2, ease: "power2.out" }, 28.50);
-      tl.fromTo("#b4-shock-1", { r: 15, opacity: 1 }, { r: 160, opacity: 0, duration: 1.8, repeat: 3, ease: "power1.out" }, 28.60);
-      tl.fromTo("#b4-shock-2", { r: 30, opacity: 0.9 }, { r: 240, opacity: 0, duration: 2.2, repeat: 2, ease: "power1.out" }, 28.80);
+      // Initial Thermonuclear Flash & Fireball
+      tl.fromTo("#b4-flash", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 2.2, duration: 0.35, yoyo: true, repeat: 1, ease: "power2.in" }, 28.30);
+      tl.fromTo("#b4-fireball", { r: 6, opacity: 1 }, { r: 70, opacity: 0.85, duration: 1.4, ease: "power2.out" }, 28.45);
+      tl.fromTo("#b4-shock-1", { r: 15, opacity: 1, strokeWidth: 5 }, { r: 180, opacity: 0, strokeWidth: 1, duration: 2.0, repeat: 3, ease: "power1.out" }, 28.50);
+      tl.fromTo("#b4-shock-2", { r: 30, opacity: 0.9, strokeWidth: 4 }, { r: 260, opacity: 0, strokeWidth: 1, duration: 2.4, repeat: 2, ease: "power1.out" }, 28.70);
+      tl.fromTo("#b4-shock-3", { r: 50, opacity: 0.7, strokeWidth: 3 }, { r: 340, opacity: 0, strokeWidth: 0.5, duration: 2.8, repeat: 2, ease: "power1.out" }, 28.90);
       tl.to("#b4-radiation-icon", { rotation: 360, duration: 7.0, ease: "none" }, 28.50);
       tl.to("#label-semipalatinsk", { opacity: 0, duration: 0.4 }, 33.50);
-      tl.fromTo("#b4-fallout-plume", { strokeDashoffset: 600 }, { strokeDashoffset: 0, duration: 4.5, ease: "power2.out" }, 29.50);
+      // Radioactive fallout plume drifts across Siberia
+      tl.fromTo("#b4-fallout-plume", { strokeDashoffset: 600 }, { strokeDashoffset: 0, duration: 4.8, ease: "power1.out" }, 28.60);
+      tl.to("#b4-cloud-mass", { opacity: 1, duration: 2.5, ease: "power1.out" }, 28.70);
+      // AFOAT-1 WB-29 Reconnaissance Aircraft Intercepts downwind cloud
+      tl.fromTo(flightAnim,
+        { pRecon: 0.01 },
+        { pRecon: 0.98, duration: 5.2, ease: "power1.inOut", onUpdate: updateAllFlights },
+        28.30
+      );
       tl.fromTo("#dossier4", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 27.60);
 
-      // BEAT 5 (36.727s -> 45.014s)
+      // BEAT 5 (36.727s -> 45.014s): MUTUAL DETERRENCE STANDOFF
       tl.to(camera, { x: 560, y: 880, scale: 1.20, duration: 2.0, ease: "power2.inOut" }, 36.727);
       tl.to(["#b4-overlays", "#label-semipalatinsk"], { opacity: 0, duration: 0.5 }, 36.727);
       tl.to("#b5-overlays", { opacity: 1, duration: 0.8 }, 37.30);
       tl.fromTo("#dossier5", { opacity: 0, x: 35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 37.00);
 
-      // BEAT 6 (45.014s -> 56.288s)
+      // BEAT 6 (45.014s -> 56.288s): ARSENAL REALITY GAP & FINAL DECLASSIFICATION
       tl.to(camera, { x: 540, y: 860, scale: 1.15, duration: 2.2, ease: "power2.inOut" }, 45.014);
       tl.to("#b5-overlays", { opacity: 0, duration: 0.5 }, 45.014);
       tl.to("#b6-overlays", { opacity: 1, duration: 0.8 }, 45.60);
