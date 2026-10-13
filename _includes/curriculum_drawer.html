@@ -71,6 +71,9 @@
           <span class="drawer-lesson-title-text">
             {% if i_chapter_num %}<span class="drawer-lesson-num">{{ i_chapter_num }}.</span>{% endif %}
             {{ i_chapter.title | escape }}
+            {% if i_chapter.youtube_id or i_chapter.explanatory_video %}
+              <span class="drawer-video-chip" style="font-family: ui-monospace, 'JetBrains Mono', monospace; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em; color: #e11d48; background: rgba(225, 29, 72, 0.1); border-radius: 4px; padding: 0.1rem 0.35rem; margin-left: 0.4rem; vertical-align: middle;">VIDEO</span>
+            {% endif %}
           </span>
         </a>
       </li>

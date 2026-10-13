@@ -1375,6 +1375,14 @@ document.addEventListener('DOMContentLoaded', () => {
       {% endfor %}
     ];
 
+    const VIDEO_SLUGS = new Set([
+      {% for chapter in site.chapters %}
+        {% if chapter.youtube_id or chapter.explanatory_video %}
+          "{{ chapter.slug }}",
+        {% endif %}
+      {% endfor %}
+    ]);
+
     let completed = 0;
     let lastActive = null;
 
@@ -1467,7 +1475,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function lessonRow(l, pathLabel) {
-      const chip = l.v ? ' <span class="cx-video-chip">VIDEO</span>' : "";
+      const hasVideo = l.v || (typeof VIDEO_SLUGS !== 'undefined' && VIDEO_SLUGS.has(l.slug));
+      const chip = hasVideo ? ' <span class="cx-video-chip">VIDEO</span>' : "";
       const href = siteBase + "/" + l.slug + ".html";
       return '<a class="cx-lesson" href="' + href + '">' +
              '<span class="cx-lesson-title">' + esc(l.title) + chip + '</span>' +

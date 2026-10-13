@@ -28,6 +28,18 @@ tags:
    - Output MP4: `learning-videos/exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4` (**24.0 MB · 1080×1920 · 30 FPS · 56.3s · 1689 frames**).
    - Verifikasi tangkapan layar render aktual via `vision_analyze` di $t = 23.5\text{s}$ dan $t = 29.5\text{s}$ mengonfirmasi mutu produksi pixel-sharp, pergerakan pesawat akurat, dan nol cacat layout.
 
+2026-10-13 - Dynamic Video Badge Automation & YouTube Sync Protocol:
+1. `Dynamic Badge Detection di Platform`:
+   - `_pages/index.md`: `VIDEO_SLUGS` kini dikompilasi secara otomatis oleh Jekyll Liquid dari `site.chapters` berbasis keberadaan `youtube_id` / `explanatory_video`. Fungsi `lessonRow` memeriksa `VIDEO_SLUGS.has(l.slug)` sehingga badge `VIDEO` muncul otomatis tanpa ketergantungan pada edit statis JSON.
+   - `_includes/curriculum_drawer.html` & `_includes/chapterbook-toc.html`: Ditambahkan badge `VIDEO` (`.drawer-video-chip`, `.toc-video-chip`) pada setiap baris bab yang memiliki video resmi.
+   - `_layouts/chapter.html`: Ditambahkan tag "Video Mindmap" pada header meta bar materi bab.
+   - `assets/css/course-player.css`: Token styling dan dark theme untuk chip video drawer & TOC.
+2. `CLI Tool Otomasi (scripts/sync_youtube_video.py)`:
+   - Skrip terpadu satu perintah: `python scripts/sync_youtube_video.py --chapter <query> --url <yt_url>`.
+   - Mengambil ID YouTube dari berbagai format link, memperbarui frontmatter bab (`youtube_id`, `status: "Published"`), menyinkronkan `learning-videos/catalog.json`, `learning-videos/README.md`, dan `CX_DATA`.
+   - Disertai unit test di `tests/test_sync_youtube_video.py` (4 test, 373/373 test suite pass).
+3. `Enforced Protocol`: Aturan dibakukan di `HERMES.md` di bawah Guardrail 3.
+
 2026-10-13 - Sync Curriculum Explorer Video Chips CH050, CH060, CH070:
 1. `Root Cause Diagnosis`: Di `_pages/index.md` dan `prototype/home.html`, dataset `CX_DATA` dibuat statis pada 8 Oktober 2026 saat video yang terbit baru CH010-CH040 (`v: true`). Ketika video mindmap CH050 (Marxism), CH060 (Constructivism), dan CH070 (Global Finance & Trade) diproduksi dan dipublikasikan ke YouTube dengan frontmatter `youtube_id`, flag `v` pada objek `CX_DATA` di homepage terlewat diperbarui sehingga badge `VIDEO` tidak muncul di Curriculum Explorer.
 2. `Perbaikan`: Memperbarui `CX_DATA` M010 di `_pages/index.md` dan `prototype/home.html` agar `basic-marxism`, `basic-constructivism`, dan `global-finance-and-global-trade-as-agendas` bernilai `v: true`.

@@ -831,6 +831,28 @@ body.dark-theme .btn-dock-complete {
   margin-right: 0.2rem;
 }
 
+.drawer-video-chip,
+.toc-video-chip {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #e11d48;
+  background: rgba(225, 29, 72, 0.1);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  margin-left: 0.35rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+body.dark-theme .drawer-video-chip,
+body.dark-theme .toc-video-chip {
+  color: #fb7185;
+  background: rgba(251, 113, 133, 0.15);
+}
+
 
 
 /* Prose Blockquotes & Callouts */
