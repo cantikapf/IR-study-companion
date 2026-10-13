@@ -21,6 +21,7 @@ import glob
 import json
 import argparse
 import subprocess
+from typing import Optional
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SIM_DIR = os.path.join(REPO_ROOT, "simulation", "ir-motion-library")
@@ -34,7 +35,7 @@ def find_chapter_markdown(chapter_id: str):
     matches = [m for m in matches if not os.path.basename(m).startswith("000-")]
     return matches[0] if matches else None
 
-def step_phase_1_extract(chapter_id: str, auto_approve: bool = False):
+def step_phase_1_extract(chapter_id: str, auto_approve: bool = False, hook_text: Optional[str] = None, yt_title: Optional[str] = None):
     """Phase 1: Academic Script Extraction & Mind Map Proposal."""
     print(f"\n========================================================")
     print(f"🎬 PHASE 1: SCRIPT EXTRACTION & MIND MAP PROPOSAL ({chapter_id})")
@@ -67,6 +68,24 @@ def step_phase_1_extract(chapter_id: str, auto_approve: bool = False):
     print("  • Act Structure: 8 Acts / Concept Hubs")
     print("  • Camera Standard: 1-to-1 Deep Zoom (2.05x) + Stationary Hold (v=0)")
     print("--------------------------------------------------------")
+
+    # Hook & Packaging Audit Integration
+    try:
+        sys.path.insert(0, os.path.join(REPO_ROOT, "scripts"))
+        from yt.hookscore import score as score_hook, report as report_hook
+        from yt.title import check as check_title, show as show_title_lint
+
+        if hook_text:
+            print("\n🎯 HOOK AUDIT (First 15 Seconds):")
+            parts, verdict, name, hits = score_hook(hook_text)
+            report_hook(hook_text, parts, verdict, name, hits)
+        
+        if yt_title:
+            print("\n📦 YOUTUBE TITLE PACKAGING AUDIT:")
+            t_res = check_title(yt_title)
+            show_title_lint(t_res)
+    except Exception as e:
+        print(f"[DEBUG] Hook/Title audit helper note: {e}")
 
     if not auto_approve:
         print("\n⚠️  [MANDATORY REVIEW GATE]")
@@ -195,12 +214,14 @@ def main():
                         default="all", help="Target production phase to execute")
     parser.add_argument("--acc", action="store_true", help="Grant user approval to proceed past Phase 1")
     parser.add_argument("--render-video", action="store_true", help="Execute full Remotion MP4 render in Phase 5")
+    parser.add_argument("--hook", default=None, help="Candidate hook text to score in Phase 1")
+    parser.add_argument("--yt-title", default=None, help="Candidate YouTube title to lint in Phase 1")
 
     args = parser.parse_args()
     chapter_id = args.chapter.upper()
 
     if args.step in ["extract", "all"]:
-        ok = step_phase_1_extract(chapter_id, auto_approve=args.acc)
+        ok = step_phase_1_extract(chapter_id, auto_approve=args.acc, hook_text=args.hook, yt_title=args.yt_title)
         if not ok or args.step == "extract":
             sys.exit(0 if ok else 1)
 

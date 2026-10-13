@@ -245,8 +245,20 @@ def main():
     parser.add_argument("--tagline", default="International Relations in a nutshell", help="Header tagline text")
     parser.add_argument("--url", default="https://ir-guide.netlify.app/", help="Footer website URL")
     parser.add_argument("--overlay", default=None, help="Path to custom overlay template PNG")
+    parser.add_argument("--yt-title", default=None, help="Video title on YouTube to lint against thumbnail text")
 
     args = parser.parse_args()
+
+    if args.yt_title:
+        try:
+            from yt.title import check as check_title, show as show_title_lint
+            clean_thumb_text = " ".join([l.replace("[red]", "").replace("[white]", "").replace("[/red]", "").replace("[/white]", "").strip() for l in args.title.split("\n")])
+            lint_res = check_title(args.yt_title, thumb=clean_thumb_text)
+            print("\n[PACKAGE LINT] YouTube Title & Thumbnail Pairing Audit:")
+            show_title_lint(lint_res)
+        except Exception as e:
+            print(f"[WARN] Could not run title lint: {e}", file=sys.stderr)
+
     generate_thumbnail(
         title=args.title,
         image_path=args.image,
