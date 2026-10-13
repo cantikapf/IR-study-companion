@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SH-02 · Operation Dropshot — Cold War Geopolitical Map Animation (1949)</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="data/countries.js"></script>
+    <style>
+      @font-face {
+        font-family: "Archivo Black";
+        src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Space Mono";
+        src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Space Mono";
+        src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+        font-weight: 700;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #080c14;
+        font-family: "Space Mono", monospace;
+        color: #ffffff;
+      }
+
+      #root {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: radial-gradient(circle at 50% 50%, #141c2b 0%, #0a0e18 65%, #05070c 100%);
+        box-shadow: inset 0 0 160px 40px rgba(4, 6, 10, 0.95);
+      }
+
+      /* UNTIMED PERSISTENT MAP STAGE (EXPANDED TO OCCUPY 1200PX VERTICAL CANVAS) */
+      #map-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        z-index: 20;
+        overflow: hidden;
+      }
+      #map-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 1920px;
+      }
+
+      /* SOFT GRADIENT SCRIMS */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 300px;
+        background: linear-gradient(to bottom, rgba(5, 7, 12, 0.98) 0%, rgba(5, 7, 12, 0.85) 50%, rgba(5, 7, 12, 0.30) 80%, rgba(5, 7, 12, 0) 100%);
+        pointer-events: none;
+        z-index: 25;
+      }
+      .botscrim {
+        position: absolute;
+        top: 1400px;
+        left: 0;
+        width: 1080px;
+        height: 520px;
+        background: linear-gradient(to bottom, rgba(5, 7, 12, 0) 0%, rgba(5, 7, 12, 0.85) 15%, rgba(5, 7, 12, 0.98) 35%, #05070c 100%);
+        pointer-events: none;
+        z-index: 25;
+      }
+
+      /* CLIPS (TIMED BY TIMELINE DISPLAY TOGGLE, z-index 30) */
+      .clip.beat {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: transparent;
+        z-index: 30;
+        display: none;
+      }
+
+      /* TOP DOCUMENTARY HEADLINE */
+      .tm {
+        position: absolute;
+        top: 80px;
+        left: 60px;
+        width: 960px;
+      }
+      .kicker {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        color: #FFE619;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+        text-transform: uppercase;
+      }
+      .headline {
+        margin-top: 10px;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 68px;
+        line-height: 1.05;
+        color: #ffffff;
+        letter-spacing: -0.01em;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.98);
+      }
+
+      /* TACTILE ARCHIVAL EXHIBIT CARD */
+      .dossier-card {
+        position: absolute;
+        top: 340px;
+        width: 350px;
+        background: #0f1523;
+        border: 1.5px solid rgba(255, 255, 255, 0.22);
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+        pointer-events: none;
+      }
+      .dossier-card.left-dock {
+        left: 60px;
+      }
+      .dossier-card.right-dock {
+        right: 60px;
+        left: auto;
+      }
+      .dossier-header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        padding: 0 2px;
+      }
+      .dossier-stamp {
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: #f87171;
+        border: 1.5px solid #f87171;
+        border-radius: 3px;
+        padding: 2px 6px;
+        text-transform: uppercase;
+        transform: rotate(-3deg);
+        display: inline-block;
+      }
+      .dossier-ref {
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #94a3b8;
+      }
+      .dossier-frame {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: #000000;
+      }
+      .dossier-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(20%) contrast(1.15) brightness(0.98);
+      }
+      .dossier-info {
+        margin-top: 10px;
+        text-align: left;
+        padding: 0 2px;
+      }
+      .dossier-name {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 17px;
+        line-height: 1.25;
+        color: #ffffff;
+        letter-spacing: 0.02em;
+      }
+      .dossier-role {
+        font-family: "Space Mono", monospace;
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #FFE619;
+        letter-spacing: 0.06em;
+        margin-top: 4px;
+      }
+
+      /* LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, ELIMINATES DEAD SPACE) */
+      .stat-strip {
+        position: absolute;
+        top: 1475px;
+        left: 60px;
+        width: 960px;
+        height: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 18px;
+        background: rgba(14, 20, 34, 0.96);
+        border: 1px solid rgba(255, 230, 25, 0.40);
+        border-radius: 8px;
+        font-family: "Space Mono", monospace;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+      }
+      .stat-l {
+        color: #FFE619;
+      }
+      .stat-r {
+        color: #f8fafc;
+      }
+
+      /* CAPTIONS (POSITIONED DIRECTLY ABOVE MOBILE UI, NO DEAD VOID) */
+      .cap {
+        position: absolute;
+        top: 1535px;
+        left: 60px;
+        width: 960px;
+        min-height: 140px;
+        max-height: 180px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        background: rgba(10, 14, 24, 0.98);
+        border: 1.5px solid rgba(255, 230, 25, 0.35);
+        border-radius: 18px;
+        padding: 16px 28px;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.98);
+      }
+      .w {
+        font-size: 32px;
+        line-height: 1.35;
+        color: #cbd5e1;
+        font-weight: 700;
+        padding: 0 6px;
+      }
+
+      /* TACTICAL CARTOGRAPHY PALETTE */
+      .country-land {
+        fill: #111827;
+        stroke: #283344;
+        stroke-width: 1.2px;
+      }
+      .country-allied {
+        fill: #192436;
+        stroke: #94a3b8;
+        stroke-width: 1.6px;
+      }
+      .country-ussr {
+        fill: #3b0f15;
+        stroke: #dc2626;
+        stroke-width: 2.0px;
+      }
+      .graticule {
+        fill: none;
+        stroke: rgba(148, 163, 184, 0.12);
+        stroke-width: 1.2px;
+        stroke-dasharray: 6 6;
+      }
+    
+      /* RESPONSIVE DESKTOP PREVIEW CONTAINER */
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #04060a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #stage-container {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding-bottom: 60px;
+      }
+      #viewport-scaler {
+        position: absolute;
+        width: 1080px;
+        height: 1920px;
+        top: 50%;
+        left: 50%;
+        transform-origin: center center;
+        transform: translate(-50%, -50%) scale(0.38);
+        background: #080c14;
+        border: 3px solid #334155;
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 20px 80px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 230, 25, 0.15);
+      }
+      #hud-controls {
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(14, 20, 34, 0.96);
+        border: 1.5px solid #FFE619;
+        border-radius: 30px;
+        padding: 8px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        z-index: 99999;
+        font-family: 'Space Mono', monospace;
+        font-size: 13px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+      }
+      #hud-controls button {
+        background: #FFE619;
+        color: #080c14;
+        border: none;
+        padding: 7px 18px;
+        border-radius: 18px;
+        font-weight: 700;
+        font-family: 'Space Mono', monospace;
+        font-size: 12px;
+        cursor: pointer;
+        transition: transform 0.1s, background 0.2s;
+      }
+      #hud-controls button:hover { background: #ffffff; }
+      #hud-controls button:active { transform: scale(0.96); }
+      #hud-controls .btn-secondary {
+        background: #1e293b;
+        color: #f8fafc;
+        border: 1px solid #475569;
+      }
+      #hud-controls .btn-secondary:hover { background: #334155; color: #fff; }
+      #hud-controls input[type="range"] {
+        width: 200px;
+        accent-color: #FFE619;
+        cursor: pointer;
+      }
+      #time-display {
+        min-width: 130px;
+        font-weight: 700;
+        color: #f8fafc;
+      }
+
+    </style>
+  </head>
+  <body>
+  <div id="stage-container">
+    <div id="viewport-scaler">
+      <div id="root" data-composition-id="main" data-start="0" data-duration="56.288" data-width="1080" data-height="1920">
+      <audio id="vo" src="audio/vo_full.mp3" data-start="0" data-duration="56.288"></audio>
+
+      <!-- SHARED VECTOR MAP BACKGROUND (EXPANDED TO FILL VERTICAL VIEWPORT) -->
+      <div id="map-stage" data-layout-allow-overflow>
+        <svg id="map-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" data-layout-allow-overflow>
+          <defs>
+            <radialGradient id="grad-fireball" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="20%" stop-color="#fef08a" />
+              <stop offset="50%" stop-color="#facc15" />
+              <stop offset="80%" stop-color="#dc2626" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0" />
+            </radialGradient>
+            <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+
+            <!-- B-36 PEACEMAKER SILHOUETTE ICON -->
+            <g id="icon-b36">
+              <path d="M0,-30 L3,-22 L3,24 L0,30 L-3,24 L-3,-22 Z" fill="#e2e8f0" stroke="#475569" stroke-width="1.2" />
+              <polygon points="0,-6 72,6 72,12 8,6 0,6 -8,6 -72,12 -72,6" fill="#cbd5e1" stroke="#475569" stroke-width="1.2" />
+              <polygon points="0,22 24,27 24,30 0,28 -24,30 -24,27" fill="#94a3b8" stroke="#475569" stroke-width="1" />
+              <circle cx="20" cy="7" r="2" fill="#38bdf8" />
+              <circle cx="38" cy="8.5" r="2" fill="#38bdf8" />
+              <circle cx="56" cy="10" r="2" fill="#38bdf8" />
+              <circle cx="-20" cy="7" r="2" fill="#38bdf8" />
+              <circle cx="-38" cy="8.5" r="2" fill="#38bdf8" />
+              <circle cx="-56" cy="10" r="2" fill="#38bdf8" />
+            </g>
+
+            <!-- BASE PIN (WHITE/STEEL DIAMOND) -->
+            <g id="icon-base-pin">
+              <polygon points="0,-12 12,0 0,12 -12,0" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+              <circle cx="0" cy="0" r="3" fill="#FFE619" />
+            </g>
+
+            <!-- TARGET CROSSHAIR PIN (RED) -->
+            <g id="icon-target-pin">
+              <circle cx="0" cy="0" r="8" fill="none" stroke="#dc2626" stroke-width="2" />
+              <circle cx="0" cy="0" r="2" fill="#dc2626" />
+              <line x1="-12" y1="0" x2="-4" y2="0" stroke="#dc2626" stroke-width="1.8" />
+              <line x1="4" y1="0" x2="12" y2="0" stroke="#dc2626" stroke-width="1.8" />
+              <line x1="0" y1="-12" x2="0" y2="-4" stroke="#dc2626" stroke-width="1.8" />
+              <line x1="0" y1="4" x2="0" y2="12" stroke="#dc2626" stroke-width="1.8" />
+            </g>
+
+            <!-- RADIATION TREFOIL ICON -->
+            <g id="icon-radiation">
+              <circle cx="0" cy="0" r="14" fill="#dc2626" />
+              <circle cx="0" cy="0" r="8" fill="#0a0e18" />
+              <path d="M-8,-14 L-26,-46 A52,52 0 0,1 26,-46 L8,-14 Z" fill="#dc2626" />
+              <path d="M13,6 L45,24 A52,52 0 0,1 19,52 L2,15 Z" fill="#dc2626" />
+              <path d="M-13,6 L-45,24 A52,52 0 0,0 -19,52 L-2,15 Z" fill="#dc2626" />
+              <circle cx="0" cy="0" r="4.5" fill="#FFE619" />
+            </g>
+          </defs>
+
+          <!-- MAP CAMERA GROUP (TRANSFORMED BY GSAP 2D MATRIX) -->
+          <g id="map-camera-group" data-layout-allow-overflow>
+            <path id="map-graticule" class="graticule" />
+            <g id="countries-layer"></g>
+
+            <!-- BEAT 1 OVERLAYS -->
+            <g id="b1-overlays" opacity="1">
+              <g transform="translate(106, 1041.5)">
+                <circle id="b1-pulse-wash" r="25" fill="none" stroke="#94a3b8" stroke-width="2" opacity="0.6" />
+                <use href="#icon-base-pin" />
+              </g>
+              <g transform="translate(61.4, 879.9)">
+                <circle id="b1-pulse-omaha" r="30" fill="none" stroke="#94a3b8" stroke-width="2" opacity="0.6" />
+                <use href="#icon-base-pin" />
+              </g>
+              <path id="b1-threat-arc" d="M 106 1041.5 Q 480 650 832.8 945.7" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="10 8" opacity="0.85" />
+            </g>
+
+            <!-- BEAT 2 OVERLAYS -->
+            <g id="b2-overlays" opacity="0">
+              <circle id="b2-target-ring-1" cx="832.8" cy="945.7" r="80" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+              <circle id="b2-target-ring-2" cx="832.8" cy="945.7" r="160" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="10 8" opacity="0.5" />
+              <circle id="b2-target-ring-3" cx="888.7" cy="812.7" r="120" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+
+              <g transform="translate(832.8, 945.7)"><use href="#icon-target-pin" /></g> <!-- Moscow -->
+              <g transform="translate(774.3, 954.3)"><use href="#icon-target-pin" /></g> <!-- Leningrad -->
+              <g transform="translate(888.7, 812.7)"><use href="#icon-target-pin" /></g> <!-- Chelyabinsk -->
+              <g transform="translate(871.2, 814.8)"><use href="#icon-target-pin" /></g> <!-- Sverdlovsk -->
+              <g transform="translate(846.4, 909.5)"><use href="#icon-target-pin" /></g> <!-- Gorky -->
+              <g transform="translate(885.2, 680.7)"><use href="#icon-target-pin" /></g> <!-- Novosibirsk -->
+              <g transform="translate(1011.4, 932.9)"><use href="#icon-target-pin" /></g> <!-- Baku -->
+            </g>
+
+            <!-- BEAT 3 OVERLAYS -->
+            <g id="b3-overlays" opacity="0">
+              <g transform="translate(338.5, 604.2)"><use href="#icon-base-pin" /></g> <!-- Alaska -->
+              <g transform="translate(437.6, 850)"><use href="#icon-base-pin" /></g> <!-- Thule -->
+              <g transform="translate(673.7, 1117.5)"><use href="#icon-base-pin" /></g> <!-- UK -->
+
+              <path id="route-alaska" d="M 338.5 604.2 Q 520 540 888.7 812.7" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-dasharray="12 8" opacity="0.9" />
+              <path id="route-thule" d="M 437.6 850 Q 600 920 832.8 945.7" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-dasharray="12 8" opacity="0.9" />
+              <path id="route-uk" d="M 673.7 1117.5 Q 730 1020 774.3 954.3" fill="none" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 8" opacity="0.8" />
+
+              <g id="bomber-rig-alaska" transform="translate(338.5, 604.2)">
+                <use href="#icon-b36" transform="scale(0.8) rotate(70)" />
+              </g>
+              <g id="bomber-rig-thule" transform="translate(437.6, 850)">
+                <use href="#icon-b36" transform="scale(0.8) rotate(100)" />
+              </g>
+              <g id="bomber-rig-uk" transform="translate(673.7, 1117.5)">
+                <use href="#icon-b36" transform="scale(0.8) rotate(55)" />
+              </g>
+            </g>
+
+            <!-- BEAT 4 OVERLAYS -->
+            <g id="b4-overlays" opacity="0">
+              <g transform="translate(936, 698.5)">
+                <circle id="b4-fireball" r="10" fill="url(#grad-fireball)" />
+                <circle id="b4-shock-1" r="25" fill="none" stroke="#FFE619" stroke-width="4" opacity="0.9" />
+                <circle id="b4-shock-2" r="50" fill="none" stroke="#dc2626" stroke-width="3" opacity="0.7" />
+                <circle id="b4-shock-3" r="85" fill="none" stroke="#f87171" stroke-width="2" opacity="0.5" />
+                <g id="b4-radiation-icon" transform="translate(0, -50) scale(0.6)">
+                  <use href="#icon-radiation" />
+                </g>
+              </g>
+              <path id="b4-fallout-plume" d="M 936 698.5 Q 780 500 520 480" fill="none" stroke="#FFE619" stroke-width="3.5" stroke-dasharray="10 8" opacity="0.85" />
+            </g>
+
+            <!-- BEAT 5 OVERLAYS -->
+            <g id="b5-overlays" opacity="0">
+              <path d="M 106 1041.5 Q 540 580 832.8 945.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" opacity="0.75" />
+              <path d="M 832.8 945.7 Q 540 720 106 1041.5" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="12 10" opacity="0.75" />
+              <circle cx="280" cy="850" r="60" fill="none" stroke="#94a3b8" stroke-width="2.5" opacity="0.6" />
+              <circle cx="780" cy="850" r="60" fill="none" stroke="#dc2626" stroke-width="2.5" opacity="0.6" />
+            </g>
+
+            <!-- BEAT 6 OVERLAYS -->
+            <g id="b6-overlays" opacity="0" data-layout-allow-overflow data-layout-allow-occlusion>
+              <g transform="translate(460, 680)">
+                <rect x="0" y="0" width="360" height="150" rx="8" fill="#080c16" stroke="#FFE619" stroke-width="1.8" opacity="0.95" />
+                <text x="180" y="28" fill="#FFE619" font-size="12" font-weight="bold" letter-spacing="1" text-anchor="middle" font-family="'Space Mono', monospace">1949 ATOMIC ARSENAL GAP</text>
+                
+                <rect x="25" y="45" width="310" height="22" rx="4" fill="#330d14" stroke="#dc2626" stroke-width="1.2" />
+                <rect id="b6-bar-planned" x="25" y="45" width="310" height="22" rx="4" fill="#dc2626" opacity="0.75" />
+                <text x="35" y="60" fill="#ffffff" font-size="10" font-weight="bold" font-family="'Space Mono', monospace">DROPSHOT PLAN: 300 BOMBS</text>
+
+                <rect x="25" y="76" width="310" height="22" rx="4" fill="#1e2230" stroke="#FFE619" stroke-width="1.2" />
+                <rect id="b6-bar-actual" x="25" y="76" width="175" height="22" rx="4" fill="#FFE619" opacity="0.85" />
+                <text x="35" y="91" fill="#080c16" font-size="10" font-weight="bold" font-family="'Space Mono', monospace">ACTUAL STOCKPILE: ~170</text>
+
+                <rect x="25" y="108" width="310" height="26" rx="4" fill="#140608" stroke="#dc2626" stroke-width="1" />
+                <text x="180" y="125" fill="#f87171" font-size="10.5" font-weight="bold" letter-spacing="0.5" text-anchor="middle" font-family="'Space Mono', monospace">DEFICIT: -130 WARHEADS SHORT</text>
+              </g>
+            </g>
+
+            <!-- TACTICAL LABELS LAYER (LAST CHILD OF SVG) -->
+            <g id="tactical-labels-layer">
+              <!-- Beat 1: Washington DC -->
+              <g id="label-washington" opacity="1" transform="translate(106, 1065)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="175" height="22" rx="3" fill="#0a0e18" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="87" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">WASHINGTON · JCS</text>
+              </g>
+              <!-- Beat 1: Omaha Offutt AFB -->
+              <g id="label-omaha" opacity="1" transform="translate(95, 895)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="175" height="22" rx="3" fill="#0a0e18" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="87" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">OMAHA · SAC HQ</text>
+              </g>
+
+              <!-- Beat 2: Moscow -->
+              <g id="label-moscow" opacity="0" transform="translate(660, 935)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="160" height="22" rx="3" fill="#0a0e18" stroke="#dc2626" stroke-width="1.2" />
+                <text x="80" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">MOSCOW · TARGET 1</text>
+              </g>
+              <!-- Beat 2: Chelyabinsk Urals -->
+              <g id="label-chelyabinsk" opacity="0" transform="translate(700, 802)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="175" height="22" rx="3" fill="#0a0e18" stroke="#dc2626" stroke-width="1.2" />
+                <text x="87" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">CHELYABINSK · URALS</text>
+              </g>
+
+              <!-- Beat 3: Alaska Eielson -->
+              <g id="label-alaska" opacity="0" transform="translate(338, 565)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="175" height="22" rx="3" fill="#0a0e18" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="87" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">ALASKA · SAC BASE</text>
+              </g>
+              <!-- Beat 3: Thule Greenland -->
+              <g id="label-thule" opacity="0" transform="translate(438, 815)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="165" height="22" rx="3" fill="#0a0e18" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="82" y="15" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">THULE · GREENLAND</text>
+              </g>
+
+              <!-- Beat 4: Semipalatinsk -->
+              <g id="label-semipalatinsk" opacity="0" transform="translate(860, 740)" data-layout-allow-overflow data-layout-allow-occlusion>
+                <rect x="0" y="0" width="170" height="22" rx="3" fill="#0a0e18" stroke="#FFE619" stroke-width="1.2" />
+                <text x="85" y="15" fill="#FFE619" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="'Space Mono', monospace">SEMIPALATINSK · RDS-1</text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- GRADIENT SCRIMS FOR CLEAN CONTRAST -->
+      <div class="topscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div class="botscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+
+    <section class="clip beat" id="beat1" data-start="0.000" data-duration="8.659" data-track-index="1">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">COLD WAR THEATER · 1949</div>
+        <div class="headline">A PLAN FOR TOTAL WAR</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card left-dock" id="dossier1">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · JCS-1949</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/jcs_bradley_swearing_in_1949.jpg" class="dossier-img" alt="GEN. OMAR BRADLEY" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">GEN. OMAR BRADLEY</div>
+          <div class="dossier-role">CHAIRMAN, JOINT CHIEFS OF STAFF</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">PLANNING BODY: US JCS</span>
+        <span class="stat-r">ORIGIN DATE: DECEMBER 1949</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap1"><span class="w">In</span> <span class="w">December</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">American</span> <span class="w">planners</span> <span class="w">drafted</span> <span class="w">a</span> <span class="w">secret</span> <span class="w">strike</span> <span class="w">to</span> <span class="w">destroy</span> <span class="w">an</span> <span class="w">empire,</span> <span class="w">betting</span> <span class="w">on</span> <span class="w">an</span> <span class="w">arsenal</span> <span class="w">that</span> <span class="w">did</span> <span class="w">not</span> <span class="w">yet</span> <span class="w">exist.</span></div>
+    </section>
+    <section class="clip beat" id="beat2" data-start="8.659" data-duration="10.145" data-track-index="2">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">PROJECTED 1957 CAMPAIGN</div>
+        <div class="headline">300 ATOMIC BOMBS · 100 CITIES</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card left-dock" id="dossier2">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · NARA-1945</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/soviet_strategic_urban_targets_1945.jpg" class="dossier-img" alt="STRATEGIC TARGET LIST" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">STRATEGIC TARGET LIST</div>
+          <div class="dossier-role">100 CITIES · 85% SOVIET INDUSTRY</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">TARGET LIST: 100 URBAN CENTERS</span>
+        <span class="stat-r">PROJECTED IMPACT: 85% INDUSTRY</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap2"><span class="w">Codenamed</span> <span class="w">Dropshot,</span> <span class="w">it</span> <span class="w">projected</span> <span class="w">war</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">fifty-seven:</span> <span class="w">three</span> <span class="w">hundred</span> <span class="w">atomic</span> <span class="w">bombs</span> <span class="w">across</span> <span class="w">one</span> <span class="w">hundred</span> <span class="w">cities,</span> <span class="w">destroying</span> <span class="w">eighty-five</span> <span class="w">percent</span> <span class="w">of</span> <span class="w">Soviet</span> <span class="w">industry.</span></div>
+    </section>
+    <section class="clip beat" id="beat3" data-start="18.804" data-duration="8.474" data-track-index="3">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">STRATEGIC AIR COMMAND</div>
+        <div class="headline">NO MISSILES · BOMBERS ONLY</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card right-dock" id="dossier3">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · SAC-7BW</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/b36_peacemaker_flight_1949.jpg" class="dossier-img" alt="CONVAIR B-36 PEACEMAKER" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">CONVAIR B-36 PEACEMAKER</div>
+          <div class="dossier-role">10,000-MILE ARCTIC DELIVERY</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">DELIVERY VEHICLE: B-36 & B-50</span>
+        <span class="stat-r">STRIKE ROUTE: ARCTIC CORRIDORS</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap3"><span class="w">With</span> <span class="w">no</span> <span class="w">missiles</span> <span class="w">yet</span> <span class="w">invented,</span> <span class="w">every</span> <span class="w">bomb</span> <span class="w">required</span> <span class="w">Strategic</span> <span class="w">Air</span> <span class="w">Command</span> <span class="w">heavy</span> <span class="w">bombers,</span> <span class="w">flying</span> <span class="w">Arctic</span> <span class="w">routes</span> <span class="w">from</span> <span class="w">forward</span> <span class="w">bases.</span></div>
+    </section>
+    <section class="clip beat" id="beat4" data-start="27.278" data-duration="9.449" data-track-index="4">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">SOVIET ATOMIC BREAKTHROUGH</div>
+        <div class="headline">THE MONOPOLY ENDS · RDS-1</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card left-dock" id="dossier4">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · AFOAT-1</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/joe1_fallout_tracking_map_1949.jpg" class="dossier-img" alt="FIRST SOVIET TEST (RDS-1)" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">FIRST SOVIET TEST (RDS-1)</div>
+          <div class="dossier-role">SEMIPALATINSK · 29 AUGUST 1949</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">FIRST SOVIET DETONATION: RDS-1</span>
+        <span class="stat-r">MONOPOLY: ENDED AUG 1949</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap4"><span class="w">In</span> <span class="w">August</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">Moscow</span> <span class="w">detonated</span> <span class="w">R-D-S-one</span> <span class="w">at</span> <span class="w">Semipalatinsk,</span> <span class="w">ending</span> <span class="w">America's</span> <span class="w">atomic</span> <span class="w">monopoly</span> <span class="w">years</span> <span class="w">ahead</span> <span class="w">of</span> <span class="w">schedule.</span></div>
+    </section>
+    <section class="clip beat" id="beat5" data-start="36.727" data-duration="8.287" data-track-index="5">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">STRATEGIC REVISION</div>
+        <div class="headline">WAR PLAN SHELVED</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card right-dock" id="dossier5">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · DOD-1951</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/buster_jangle_nuclear_test_1951.jpg" class="dossier-img" alt="NUCLEAR DETERRENCE" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">NUCLEAR DETERRENCE</div>
+          <div class="dossier-role">FIRST STRIKE RENDERED OBSOLETE</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">OPERATIONAL STATUS: WITHDRAWN</span>
+        <span class="stat-r">DOCTRINE: MUTUAL DETERRENCE</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap5"><span class="w">Dropshot</span> <span class="w">was</span> <span class="w">never</span> <span class="w">launched.</span> <span class="w">Once</span> <span class="w">both</span> <span class="w">superpowers</span> <span class="w">held</span> <span class="w">the</span> <span class="w">bomb,</span> <span class="w">a</span> <span class="w">first</span> <span class="w">strike</span> <span class="w">meant</span> <span class="w">mutual</span> <span class="w">destruction,</span> <span class="w">creating</span> <span class="w">nuclear</span> <span class="w">deterrence.</span></div>
+    </section>
+    <section class="clip beat" id="beat6" data-start="45.014" data-duration="11.274" data-track-index="6">
+      <!-- TOP DOCUMENTARY HEADLINE -->
+      <div class="tm">
+        <div class="kicker">DECLASSIFIED 1977</div>
+        <div class="headline">THE PAPER ARSENAL</div>
+      </div>
+
+      <!-- TACTILE ARCHIVAL EXHIBIT CARD -->
+      <div class="dossier-card left-dock" id="dossier6">
+        <div class="dossier-header-bar">
+          <span class="dossier-stamp">TOP SECRET</span>
+          <span class="dossier-ref">DECLASSIFIED · NSA-1977</span>
+        </div>
+        <div class="dossier-frame">
+          <img src="assets/truman_oval_office_defense_1949.jpg" class="dossier-img" alt="HARRY S. TRUMAN" />
+        </div>
+        <div class="dossier-info">
+          <div class="dossier-name">HARRY S. TRUMAN</div>
+          <div class="dossier-role">1949 STOCKPILE: ~170 WARHEADS</div>
+        </div>
+      </div>
+
+      <!-- LOWER DATA STRIP (BRIDGES MAP & SUBTITLES, KILLS DEAD SPACE) -->
+      <div class="stat-strip">
+        <span class="stat-l">1949 US STOCKPILE: ~170 WARHEADS</span>
+        <span class="stat-r">DROPSHOT PLAN: 300 BOMBS</span>
+      </div>
+
+      <!-- BOTTOM CAPTION CONTAINER (MOBILE SAFE ZONE) -->
+      <div class="cap" id="cap6"><span class="w">Declassified</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">seventy-seven,</span> <span class="w">Dropshot</span> <span class="w">held</span> <span class="w">a</span> <span class="w">final</span> <span class="w">irony:</span> <span class="w">in</span> <span class="w">nineteen</span> <span class="w">forty-nine,</span> <span class="w">America</span> <span class="w">had</span> <span class="w">only</span> <span class="w">about</span> <span class="w">one</span> <span class="w">hundred</span> <span class="w">seventy</span> <span class="w">warheads</span> <span class="w">for</span> <span class="w">a</span> <span class="w">three-hundred-bomb</span> <span class="w">war.</span></div>
+    </section>
+
+    </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING PREVIEW CONTROLLER -->
+  <div id="hud-controls">
+    <button id="btn-play">PLAY</button>
+    <button id="btn-restart" class="btn-secondary">RESTART</button>
+    <input type="range" id="scrubber" min="0" max="56.288" step="0.1" value="0">
+    <span id="time-display">0.00s / 56.29s</span>
+  </div>
+
+    <!-- CARTOGRAPHY & CONTINUOUS GSAP TIMELINE ENGINE -->
+    <script>
+      const width = 1080;
+      const height = 1920;
+
+      const baseProjection = d3.geoAzimuthalEquidistant()
+        .rotate([20, -90, 0])
+        .scale(620)
+        .clipAngle(110)
+        .translate([width / 2, 840]);
+
+      const pathGenerator = d3.geoPath(baseProjection);
+
+      const ussrIds = new Set(["643", "398", "804", "112", "860", "795", "051", "498", "440", "428", "233", "031", "268", "762", "417"]);
+      const alliedIds = new Set(["840", "124", "826"]);
+
+      const countriesG = d3.select("#countries-layer");
+      if (window.WORLD_GEOJSON) {
+        countriesG.selectAll("path")
+          .data(window.WORLD_GEOJSON.features)
+          .enter()
+          .append("path")
+          .attr("class", d => {
+            if (alliedIds.has(d.id)) return "country-path country-land country-allied";
+            if (ussrIds.has(d.id)) return "country-path country-land country-ussr";
+            return "country-path country-land";
+          })
+          .attr("d", pathGenerator);
+      }
+
+      const graticuleGeo = d3.geoGraticule().step([15, 15])();
+      d3.select("#map-graticule").attr("d", pathGenerator(graticuleGeo));
+
+      const camera = {
+        x: 540,
+        y: 860,
+        scale: 1.15
+      };
+
+      const mapCameraGroup = document.getElementById("map-camera-group");
+
+      function updateCamera() {
+        const s = camera.scale;
+        const tx = 540 - camera.x * s;
+        const ty = 840 - camera.y * s;
+        mapCameraGroup.setAttribute("transform", `translate(${tx}, ${ty}) scale(${s})`);
+      }
+      updateCamera();
+
+      // Standalone browser preview helper (does not touch GSAP timeline, safe for HyperFrames)
+      function syncClipsForTime(t) {
+        document.querySelectorAll(".clip.beat").forEach(clip => {
+          const s = parseFloat(clip.dataset.start);
+          const d = parseFloat(clip.dataset.duration);
+          clip.style.display = (t >= s && t < s + d) ? "block" : "none";
+        });
+      }
+
+      const tl = gsap.timeline({
+        paused: true,
+        onUpdate: () => {
+          updateCamera();
+          syncClipsForTime(tl.time());
+        }
+      });
+
+      // BEAT 1 (0.000s -> 8.659s)
+      tl.set(camera, { x: 540, y: 860, scale: 1.15 }, 0.00);
+      tl.fromTo("#b1-pulse-wash", { r: 15, opacity: 0.9 }, { r: 55, opacity: 0, duration: 1.8, repeat: 4, ease: "power1.out" }, 0.20);
+      tl.fromTo("#b1-pulse-omaha", { r: 15, opacity: 0.9 }, { r: 60, opacity: 0, duration: 2.0, repeat: 3, ease: "power1.out" }, 0.30);
+      tl.fromTo("#b1-threat-arc", { strokeDashoffset: 500 }, { strokeDashoffset: 0, duration: 3.5, ease: "power2.out" }, 0.80);
+      tl.fromTo("#dossier1", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 0.50);
+
+      // BEAT 2 (8.659s -> 18.804s)
+      tl.to(camera, { x: 840, y: 920, scale: 1.65, duration: 2.2, ease: "power2.inOut" }, 8.659);
+      tl.to(["#b1-overlays", "#label-washington", "#label-omaha"], { opacity: 0, duration: 0.5 }, 8.659);
+      tl.to("#b2-overlays", { opacity: 1, duration: 0.8 }, 9.20);
+      tl.to(["#label-moscow", "#label-chelyabinsk"], { opacity: 1, duration: 0.6 }, 9.80);
+      tl.fromTo("#b2-target-ring-1", { r: 20, opacity: 0.9 }, { r: 140, opacity: 0.2, duration: 2.4, repeat: 3, ease: "power1.out" }, 9.50);
+      tl.fromTo("#b2-target-ring-3", { r: 20, opacity: 0.9 }, { r: 150, opacity: 0.2, duration: 2.6, repeat: 3, ease: "power1.out" }, 9.80);
+      tl.fromTo("#dossier2", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 9.00);
+
+      // BEAT 3 (18.804s -> 27.278s)
+      tl.to(camera, { x: 500, y: 820, scale: 1.35, duration: 2.0, ease: "power2.inOut" }, 18.804);
+      tl.to(["#b2-overlays", "#label-moscow", "#label-chelyabinsk"], { opacity: 0, duration: 0.5 }, 18.804);
+      tl.to("#b3-overlays", { opacity: 1, duration: 0.8 }, 19.30);
+      tl.to(["#label-alaska", "#label-thule"], { opacity: 1, duration: 0.6 }, 19.80);
+      tl.fromTo("#route-alaska", { strokeDashoffset: 800 }, { strokeDashoffset: 0, duration: 4.5, ease: "none" }, 19.40);
+      tl.fromTo("#route-thule", { strokeDashoffset: 700 }, { strokeDashoffset: 0, duration: 4.5, ease: "none" }, 19.60);
+      tl.fromTo("#route-uk", { strokeDashoffset: 500 }, { strokeDashoffset: 0, duration: 4.0, ease: "none" }, 19.80);
+      tl.fromTo("#bomber-rig-alaska", { x: 0, y: 0 }, { x: 420, y: 160, duration: 6.5, ease: "none" }, 19.50);
+      tl.fromTo("#bomber-rig-thule", { x: 0, y: 0 }, { x: 300, y: 70, duration: 6.5, ease: "none" }, 19.60);
+      tl.fromTo("#dossier3", { opacity: 0, x: 35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 19.10);
+
+      // BEAT 4 (27.278s -> 36.727s)
+      tl.to(camera, { x: 920, y: 760, scale: 2.10, duration: 2.0, ease: "power3.inOut" }, 27.278);
+      tl.to(["#b3-overlays", "#label-alaska", "#label-thule"], { opacity: 0, duration: 0.5 }, 27.278);
+      tl.to("#b4-overlays", { opacity: 1, duration: 0.6 }, 27.80);
+      tl.to("#label-semipalatinsk", { opacity: 1, duration: 0.5 }, 28.30);
+      tl.fromTo("#b4-fireball", { r: 6, opacity: 1 }, { r: 65, opacity: 0.75, duration: 1.2, ease: "power2.out" }, 28.50);
+      tl.fromTo("#b4-shock-1", { r: 15, opacity: 1 }, { r: 160, opacity: 0, duration: 1.8, repeat: 3, ease: "power1.out" }, 28.60);
+      tl.fromTo("#b4-shock-2", { r: 30, opacity: 0.9 }, { r: 240, opacity: 0, duration: 2.2, repeat: 2, ease: "power1.out" }, 28.80);
+      tl.to("#b4-radiation-icon", { rotation: 360, duration: 7.0, ease: "none" }, 28.50);
+      tl.to("#label-semipalatinsk", { opacity: 0, duration: 0.4 }, 33.50);
+      tl.fromTo("#b4-fallout-plume", { strokeDashoffset: 600 }, { strokeDashoffset: 0, duration: 4.5, ease: "power2.out" }, 29.50);
+      tl.fromTo("#dossier4", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 27.60);
+
+      // BEAT 5 (36.727s -> 45.014s)
+      tl.to(camera, { x: 560, y: 880, scale: 1.20, duration: 2.0, ease: "power2.inOut" }, 36.727);
+      tl.to(["#b4-overlays", "#label-semipalatinsk"], { opacity: 0, duration: 0.5 }, 36.727);
+      tl.to("#b5-overlays", { opacity: 1, duration: 0.8 }, 37.30);
+      tl.fromTo("#dossier5", { opacity: 0, x: 35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 37.00);
+
+      // BEAT 6 (45.014s -> 56.288s)
+      tl.to(camera, { x: 540, y: 860, scale: 1.15, duration: 2.2, ease: "power2.inOut" }, 45.014);
+      tl.to("#b5-overlays", { opacity: 0, duration: 0.5 }, 45.014);
+      tl.to("#b6-overlays", { opacity: 1, duration: 0.8 }, 45.60);
+      tl.fromTo("#dossier6", { opacity: 0, x: -35 }, { opacity: 1, x: 0, duration: 0.60, ease: "power2.out" }, 45.40);
+
+      // Word-level karaoke tweens
+      tl.set("#cap1 .w:nth-child(1)", { color: "#FFE619" }, 0.0);
+      tl.set("#cap1 .w:nth-child(1)", { color: "#cbd5e1" }, 0.197);
+      tl.set("#cap1 .w:nth-child(2)", { color: "#FFE619" }, 0.197);
+      tl.set("#cap1 .w:nth-child(2)", { color: "#cbd5e1" }, 0.662);
+      tl.set("#cap1 .w:nth-child(3)", { color: "#FFE619" }, 0.662);
+      tl.set("#cap1 .w:nth-child(3)", { color: "#cbd5e1" }, 1.057);
+      tl.set("#cap1 .w:nth-child(4)", { color: "#FFE619" }, 1.057);
+      tl.set("#cap1 .w:nth-child(4)", { color: "#cbd5e1" }, 1.916);
+      tl.set("#cap1 .w:nth-child(5)", { color: "#FFE619" }, 1.916);
+      tl.set("#cap1 .w:nth-child(5)", { color: "#cbd5e1" }, 2.45);
+      tl.set("#cap1 .w:nth-child(6)", { color: "#FFE619" }, 2.45);
+      tl.set("#cap1 .w:nth-child(6)", { color: "#cbd5e1" }, 2.856);
+      tl.set("#cap1 .w:nth-child(7)", { color: "#FFE619" }, 2.856);
+      tl.set("#cap1 .w:nth-child(7)", { color: "#cbd5e1" }, 3.286);
+      tl.set("#cap1 .w:nth-child(8)", { color: "#FFE619" }, 3.286);
+      tl.set("#cap1 .w:nth-child(8)", { color: "#cbd5e1" }, 3.379);
+      tl.set("#cap1 .w:nth-child(9)", { color: "#FFE619" }, 3.379);
+      tl.set("#cap1 .w:nth-child(9)", { color: "#cbd5e1" }, 3.796);
+      tl.set("#cap1 .w:nth-child(10)", { color: "#FFE619" }, 3.796);
+      tl.set("#cap1 .w:nth-child(10)", { color: "#cbd5e1" }, 4.168);
+      tl.set("#cap1 .w:nth-child(11)", { color: "#FFE619" }, 4.168);
+      tl.set("#cap1 .w:nth-child(11)", { color: "#cbd5e1" }, 4.284);
+      tl.set("#cap1 .w:nth-child(12)", { color: "#FFE619" }, 4.284);
+      tl.set("#cap1 .w:nth-child(12)", { color: "#cbd5e1" }, 4.702);
+      tl.set("#cap1 .w:nth-child(13)", { color: "#FFE619" }, 4.702);
+      tl.set("#cap1 .w:nth-child(13)", { color: "#cbd5e1" }, 4.807);
+      tl.set("#cap1 .w:nth-child(14)", { color: "#FFE619" }, 4.807);
+      tl.set("#cap1 .w:nth-child(14)", { color: "#cbd5e1" }, 5.631);
+      tl.set("#cap1 .w:nth-child(15)", { color: "#FFE619" }, 5.631);
+      tl.set("#cap1 .w:nth-child(15)", { color: "#cbd5e1" }, 6.026);
+      tl.set("#cap1 .w:nth-child(16)", { color: "#FFE619" }, 6.026);
+      tl.set("#cap1 .w:nth-child(16)", { color: "#cbd5e1" }, 6.142);
+      tl.set("#cap1 .w:nth-child(17)", { color: "#FFE619" }, 6.142);
+      tl.set("#cap1 .w:nth-child(17)", { color: "#cbd5e1" }, 6.281);
+      tl.set("#cap1 .w:nth-child(18)", { color: "#FFE619" }, 6.281);
+      tl.set("#cap1 .w:nth-child(18)", { color: "#cbd5e1" }, 6.815);
+      tl.set("#cap1 .w:nth-child(19)", { color: "#FFE619" }, 6.815);
+      tl.set("#cap1 .w:nth-child(19)", { color: "#cbd5e1" }, 6.966);
+      tl.set("#cap1 .w:nth-child(20)", { color: "#FFE619" }, 6.966);
+      tl.set("#cap1 .w:nth-child(20)", { color: "#cbd5e1" }, 7.129);
+      tl.set("#cap1 .w:nth-child(21)", { color: "#FFE619" }, 7.129);
+      tl.set("#cap1 .w:nth-child(21)", { color: "#cbd5e1" }, 7.291);
+      tl.set("#cap1 .w:nth-child(22)", { color: "#FFE619" }, 7.291);
+      tl.set("#cap1 .w:nth-child(22)", { color: "#cbd5e1" }, 7.5);
+      tl.set("#cap1 .w:nth-child(23)", { color: "#FFE619" }, 7.5);
+      tl.set("#cap1 .w:nth-child(23)", { color: "#cbd5e1" }, 8.359);
+      tl.set("#cap2 .w:nth-child(1)", { color: "#FFE619" }, 8.659);
+      tl.set("#cap2 .w:nth-child(1)", { color: "#cbd5e1" }, 9.263);
+      tl.set("#cap2 .w:nth-child(2)", { color: "#FFE619" }, 9.263);
+      tl.set("#cap2 .w:nth-child(2)", { color: "#cbd5e1" }, 10.006);
+      tl.set("#cap2 .w:nth-child(3)", { color: "#FFE619" }, 10.006);
+      tl.set("#cap2 .w:nth-child(3)", { color: "#cbd5e1" }, 10.157);
+      tl.set("#cap2 .w:nth-child(4)", { color: "#FFE619" }, 10.157);
+      tl.set("#cap2 .w:nth-child(4)", { color: "#cbd5e1" }, 10.691);
+      tl.set("#cap2 .w:nth-child(5)", { color: "#FFE619" }, 10.691);
+      tl.set("#cap2 .w:nth-child(5)", { color: "#cbd5e1" }, 10.981);
+      tl.set("#cap2 .w:nth-child(6)", { color: "#FFE619" }, 10.981);
+      tl.set("#cap2 .w:nth-child(6)", { color: "#cbd5e1" }, 11.12);
+      tl.set("#cap2 .w:nth-child(7)", { color: "#FFE619" }, 11.12);
+      tl.set("#cap2 .w:nth-child(7)", { color: "#cbd5e1" }, 11.492);
+      tl.set("#cap2 .w:nth-child(8)", { color: "#FFE619" }, 11.492);
+      tl.set("#cap2 .w:nth-child(8)", { color: "#cbd5e1" }, 12.63);
+      tl.set("#cap2 .w:nth-child(9)", { color: "#FFE619" }, 12.63);
+      tl.set("#cap2 .w:nth-child(9)", { color: "#cbd5e1" }, 12.931);
+      tl.set("#cap2 .w:nth-child(10)", { color: "#FFE619" }, 12.931);
+      tl.set("#cap2 .w:nth-child(10)", { color: "#cbd5e1" }, 13.245);
+      tl.set("#cap2 .w:nth-child(11)", { color: "#FFE619" }, 13.245);
+      tl.set("#cap2 .w:nth-child(11)", { color: "#cbd5e1" }, 13.663);
+      tl.set("#cap2 .w:nth-child(12)", { color: "#FFE619" }, 13.663);
+      tl.set("#cap2 .w:nth-child(12)", { color: "#cbd5e1" }, 14.034);
+      tl.set("#cap2 .w:nth-child(13)", { color: "#FFE619" }, 14.034);
+      tl.set("#cap2 .w:nth-child(13)", { color: "#cbd5e1" }, 14.383);
+      tl.set("#cap2 .w:nth-child(14)", { color: "#FFE619" }, 14.383);
+      tl.set("#cap2 .w:nth-child(14)", { color: "#cbd5e1" }, 14.592);
+      tl.set("#cap2 .w:nth-child(15)", { color: "#FFE619" }, 14.592);
+      tl.set("#cap2 .w:nth-child(15)", { color: "#cbd5e1" }, 14.905);
+      tl.set("#cap2 .w:nth-child(16)", { color: "#FFE619" }, 14.905);
+      tl.set("#cap2 .w:nth-child(16)", { color: "#cbd5e1" }, 15.59);
+      tl.set("#cap2 .w:nth-child(17)", { color: "#FFE619" }, 15.59);
+      tl.set("#cap2 .w:nth-child(17)", { color: "#cbd5e1" }, 16.159);
+      tl.set("#cap2 .w:nth-child(18)", { color: "#FFE619" }, 16.159);
+      tl.set("#cap2 .w:nth-child(18)", { color: "#cbd5e1" }, 16.705);
+      tl.set("#cap2 .w:nth-child(19)", { color: "#FFE619" }, 16.705);
+      tl.set("#cap2 .w:nth-child(19)", { color: "#cbd5e1" }, 17.146);
+      tl.set("#cap2 .w:nth-child(20)", { color: "#FFE619" }, 17.146);
+      tl.set("#cap2 .w:nth-child(20)", { color: "#cbd5e1" }, 17.262);
+      tl.set("#cap2 .w:nth-child(21)", { color: "#FFE619" }, 17.262);
+      tl.set("#cap2 .w:nth-child(21)", { color: "#cbd5e1" }, 17.68);
+      tl.set("#cap2 .w:nth-child(22)", { color: "#FFE619" }, 17.68);
+      tl.set("#cap2 .w:nth-child(22)", { color: "#cbd5e1" }, 18.504);
+      tl.set("#cap3 .w:nth-child(1)", { color: "#FFE619" }, 18.804);
+      tl.set("#cap3 .w:nth-child(1)", { color: "#cbd5e1" }, 19.083);
+      tl.set("#cap3 .w:nth-child(2)", { color: "#FFE619" }, 19.083);
+      tl.set("#cap3 .w:nth-child(2)", { color: "#cbd5e1" }, 19.28);
+      tl.set("#cap3 .w:nth-child(3)", { color: "#FFE619" }, 19.28);
+      tl.set("#cap3 .w:nth-child(3)", { color: "#cbd5e1" }, 19.744);
+      tl.set("#cap3 .w:nth-child(4)", { color: "#FFE619" }, 19.744);
+      tl.set("#cap3 .w:nth-child(4)", { color: "#cbd5e1" }, 19.942);
+      tl.set("#cap3 .w:nth-child(5)", { color: "#FFE619" }, 19.942);
+      tl.set("#cap3 .w:nth-child(5)", { color: "#cbd5e1" }, 20.766);
+      tl.set("#cap3 .w:nth-child(6)", { color: "#FFE619" }, 20.766);
+      tl.set("#cap3 .w:nth-child(6)", { color: "#cbd5e1" }, 21.091);
+      tl.set("#cap3 .w:nth-child(7)", { color: "#FFE619" }, 21.091);
+      tl.set("#cap3 .w:nth-child(7)", { color: "#cbd5e1" }, 21.393);
+      tl.set("#cap3 .w:nth-child(8)", { color: "#FFE619" }, 21.393);
+      tl.set("#cap3 .w:nth-child(8)", { color: "#cbd5e1" }, 21.869);
+      tl.set("#cap3 .w:nth-child(9)", { color: "#FFE619" }, 21.869);
+      tl.set("#cap3 .w:nth-child(9)", { color: "#cbd5e1" }, 22.554);
+      tl.set("#cap3 .w:nth-child(10)", { color: "#FFE619" }, 22.554);
+      tl.set("#cap3 .w:nth-child(10)", { color: "#cbd5e1" }, 22.786);
+      tl.set("#cap3 .w:nth-child(11)", { color: "#FFE619" }, 22.786);
+      tl.set("#cap3 .w:nth-child(11)", { color: "#cbd5e1" }, 23.239);
+      tl.set("#cap3 .w:nth-child(12)", { color: "#FFE619" }, 23.239);
+      tl.set("#cap3 .w:nth-child(12)", { color: "#cbd5e1" }, 23.529);
+      tl.set("#cap3 .w:nth-child(13)", { color: "#FFE619" }, 23.529);
+      tl.set("#cap3 .w:nth-child(13)", { color: "#cbd5e1" }, 24.319);
+      tl.set("#cap3 .w:nth-child(14)", { color: "#FFE619" }, 24.319);
+      tl.set("#cap3 .w:nth-child(14)", { color: "#cbd5e1" }, 24.772);
+      tl.set("#cap3 .w:nth-child(15)", { color: "#FFE619" }, 24.772);
+      tl.set("#cap3 .w:nth-child(15)", { color: "#cbd5e1" }, 25.224);
+      tl.set("#cap3 .w:nth-child(16)", { color: "#FFE619" }, 25.224);
+      tl.set("#cap3 .w:nth-child(16)", { color: "#cbd5e1" }, 25.538);
+      tl.set("#cap3 .w:nth-child(17)", { color: "#FFE619" }, 25.538);
+      tl.set("#cap3 .w:nth-child(17)", { color: "#cbd5e1" }, 25.758);
+      tl.set("#cap3 .w:nth-child(18)", { color: "#FFE619" }, 25.758);
+      tl.set("#cap3 .w:nth-child(18)", { color: "#cbd5e1" }, 26.13);
+      tl.set("#cap3 .w:nth-child(19)", { color: "#FFE619" }, 26.13);
+      tl.set("#cap3 .w:nth-child(19)", { color: "#cbd5e1" }, 26.977);
+      tl.set("#cap4 .w:nth-child(1)", { color: "#FFE619" }, 27.278);
+      tl.set("#cap4 .w:nth-child(1)", { color: "#cbd5e1" }, 27.499);
+      tl.set("#cap4 .w:nth-child(2)", { color: "#FFE619" }, 27.499);
+      tl.set("#cap4 .w:nth-child(2)", { color: "#cbd5e1" }, 28.067);
+      tl.set("#cap4 .w:nth-child(3)", { color: "#FFE619" }, 28.067);
+      tl.set("#cap4 .w:nth-child(3)", { color: "#cbd5e1" }, 28.485);
+      tl.set("#cap4 .w:nth-child(4)", { color: "#FFE619" }, 28.485);
+      tl.set("#cap4 .w:nth-child(4)", { color: "#cbd5e1" }, 29.437);
+      tl.set("#cap4 .w:nth-child(5)", { color: "#FFE619" }, 29.437);
+      tl.set("#cap4 .w:nth-child(5)", { color: "#cbd5e1" }, 29.902);
+      tl.set("#cap4 .w:nth-child(6)", { color: "#FFE619" }, 29.902);
+      tl.set("#cap4 .w:nth-child(6)", { color: "#cbd5e1" }, 30.552);
+      tl.set("#cap4 .w:nth-child(7)", { color: "#FFE619" }, 30.552);
+      tl.set("#cap4 .w:nth-child(7)", { color: "#cbd5e1" }, 31.574);
+      tl.set("#cap4 .w:nth-child(8)", { color: "#FFE619" }, 31.574);
+      tl.set("#cap4 .w:nth-child(8)", { color: "#cbd5e1" }, 31.713);
+      tl.set("#cap4 .w:nth-child(9)", { color: "#FFE619" }, 31.713);
+      tl.set("#cap4 .w:nth-child(9)", { color: "#cbd5e1" }, 32.967);
+      tl.set("#cap4 .w:nth-child(10)", { color: "#FFE619" }, 32.967);
+      tl.set("#cap4 .w:nth-child(10)", { color: "#cbd5e1" }, 33.338);
+      tl.set("#cap4 .w:nth-child(11)", { color: "#FFE619" }, 33.338);
+      tl.set("#cap4 .w:nth-child(11)", { color: "#cbd5e1" }, 33.803);
+      tl.set("#cap4 .w:nth-child(12)", { color: "#FFE619" }, 33.803);
+      tl.set("#cap4 .w:nth-child(12)", { color: "#cbd5e1" }, 34.209);
+      tl.set("#cap4 .w:nth-child(13)", { color: "#FFE619" }, 34.209);
+      tl.set("#cap4 .w:nth-child(13)", { color: "#cbd5e1" }, 34.906);
+      tl.set("#cap4 .w:nth-child(14)", { color: "#FFE619" }, 34.906);
+      tl.set("#cap4 .w:nth-child(14)", { color: "#cbd5e1" }, 35.231);
+      tl.set("#cap4 .w:nth-child(15)", { color: "#FFE619" }, 35.231);
+      tl.set("#cap4 .w:nth-child(15)", { color: "#cbd5e1" }, 35.475);
+      tl.set("#cap4 .w:nth-child(16)", { color: "#FFE619" }, 35.475);
+      tl.set("#cap4 .w:nth-child(16)", { color: "#cbd5e1" }, 35.579);
+      tl.set("#cap4 .w:nth-child(17)", { color: "#FFE619" }, 35.579);
+      tl.set("#cap4 .w:nth-child(17)", { color: "#cbd5e1" }, 36.427);
+      tl.set("#cap5 .w:nth-child(1)", { color: "#FFE619" }, 36.727);
+      tl.set("#cap5 .w:nth-child(1)", { color: "#cbd5e1" }, 37.284);
+      tl.set("#cap5 .w:nth-child(2)", { color: "#FFE619" }, 37.284);
+      tl.set("#cap5 .w:nth-child(2)", { color: "#cbd5e1" }, 37.458);
+      tl.set("#cap5 .w:nth-child(3)", { color: "#FFE619" }, 37.458);
+      tl.set("#cap5 .w:nth-child(3)", { color: "#cbd5e1" }, 37.725);
+      tl.set("#cap5 .w:nth-child(4)", { color: "#FFE619" }, 37.725);
+      tl.set("#cap5 .w:nth-child(4)", { color: "#cbd5e1" }, 38.48);
+      tl.set("#cap5 .w:nth-child(5)", { color: "#FFE619" }, 38.48);
+      tl.set("#cap5 .w:nth-child(5)", { color: "#cbd5e1" }, 38.782);
+      tl.set("#cap5 .w:nth-child(6)", { color: "#FFE619" }, 38.782);
+      tl.set("#cap5 .w:nth-child(6)", { color: "#cbd5e1" }, 39.084);
+      tl.set("#cap5 .w:nth-child(7)", { color: "#FFE619" }, 39.084);
+      tl.set("#cap5 .w:nth-child(7)", { color: "#cbd5e1" }, 39.699);
+      tl.set("#cap5 .w:nth-child(8)", { color: "#FFE619" }, 39.699);
+      tl.set("#cap5 .w:nth-child(8)", { color: "#cbd5e1" }, 39.955);
+      tl.set("#cap5 .w:nth-child(9)", { color: "#FFE619" }, 39.955);
+      tl.set("#cap5 .w:nth-child(9)", { color: "#cbd5e1" }, 40.071);
+      tl.set("#cap5 .w:nth-child(10)", { color: "#FFE619" }, 40.071);
+      tl.set("#cap5 .w:nth-child(10)", { color: "#cbd5e1" }, 40.547);
+      tl.set("#cap5 .w:nth-child(11)", { color: "#FFE619" }, 40.547);
+      tl.set("#cap5 .w:nth-child(11)", { color: "#cbd5e1" }, 40.709);
+      tl.set("#cap5 .w:nth-child(12)", { color: "#FFE619" }, 40.709);
+      tl.set("#cap5 .w:nth-child(12)", { color: "#cbd5e1" }, 41.023);
+      tl.set("#cap5 .w:nth-child(13)", { color: "#FFE619" }, 41.023);
+      tl.set("#cap5 .w:nth-child(13)", { color: "#cbd5e1" }, 41.441);
+      tl.set("#cap5 .w:nth-child(14)", { color: "#FFE619" }, 41.441);
+      tl.set("#cap5 .w:nth-child(14)", { color: "#cbd5e1" }, 41.708);
+      tl.set("#cap5 .w:nth-child(15)", { color: "#FFE619" }, 41.708);
+      tl.set("#cap5 .w:nth-child(15)", { color: "#cbd5e1" }, 42.091);
+      tl.set("#cap5 .w:nth-child(16)", { color: "#FFE619" }, 42.091);
+      tl.set("#cap5 .w:nth-child(16)", { color: "#cbd5e1" }, 42.892);
+      tl.set("#cap5 .w:nth-child(17)", { color: "#FFE619" }, 42.892);
+      tl.set("#cap5 .w:nth-child(17)", { color: "#cbd5e1" }, 43.391);
+      tl.set("#cap5 .w:nth-child(18)", { color: "#FFE619" }, 43.391);
+      tl.set("#cap5 .w:nth-child(18)", { color: "#cbd5e1" }, 43.797);
+      tl.set("#cap5 .w:nth-child(19)", { color: "#FFE619" }, 43.797);
+      tl.set("#cap5 .w:nth-child(19)", { color: "#cbd5e1" }, 44.715);
+      tl.set("#cap6 .w:nth-child(1)", { color: "#FFE619" }, 45.014);
+      tl.set("#cap6 .w:nth-child(1)", { color: "#cbd5e1" }, 45.885);
+      tl.set("#cap6 .w:nth-child(2)", { color: "#FFE619" }, 45.885);
+      tl.set("#cap6 .w:nth-child(2)", { color: "#cbd5e1" }, 46.012);
+      tl.set("#cap6 .w:nth-child(3)", { color: "#FFE619" }, 46.012);
+      tl.set("#cap6 .w:nth-child(3)", { color: "#cbd5e1" }, 46.407);
+      tl.set("#cap6 .w:nth-child(4)", { color: "#FFE619" }, 46.407);
+      tl.set("#cap6 .w:nth-child(4)", { color: "#cbd5e1" }, 47.429);
+      tl.set("#cap6 .w:nth-child(5)", { color: "#FFE619" }, 47.429);
+      tl.set("#cap6 .w:nth-child(5)", { color: "#cbd5e1" }, 47.963);
+      tl.set("#cap6 .w:nth-child(6)", { color: "#FFE619" }, 47.963);
+      tl.set("#cap6 .w:nth-child(6)", { color: "#cbd5e1" }, 48.207);
+      tl.set("#cap6 .w:nth-child(7)", { color: "#FFE619" }, 48.207);
+      tl.set("#cap6 .w:nth-child(7)", { color: "#cbd5e1" }, 48.311);
+      tl.set("#cap6 .w:nth-child(8)", { color: "#FFE619" }, 48.311);
+      tl.set("#cap6 .w:nth-child(8)", { color: "#cbd5e1" }, 48.694);
+      tl.set("#cap6 .w:nth-child(9)", { color: "#FFE619" }, 48.694);
+      tl.set("#cap6 .w:nth-child(9)", { color: "#cbd5e1" }, 49.774);
+      tl.set("#cap6 .w:nth-child(10)", { color: "#FFE619" }, 49.774);
+      tl.set("#cap6 .w:nth-child(10)", { color: "#cbd5e1" }, 49.948);
+      tl.set("#cap6 .w:nth-child(11)", { color: "#FFE619" }, 49.948);
+      tl.set("#cap6 .w:nth-child(11)", { color: "#cbd5e1" }, 50.343);
+      tl.set("#cap6 .w:nth-child(12)", { color: "#FFE619" }, 50.343);
+      tl.set("#cap6 .w:nth-child(12)", { color: "#cbd5e1" }, 51.167);
+      tl.set("#cap6 .w:nth-child(13)", { color: "#FFE619" }, 51.167);
+      tl.set("#cap6 .w:nth-child(13)", { color: "#cbd5e1" }, 51.678);
+      tl.set("#cap6 .w:nth-child(14)", { color: "#FFE619" }, 51.678);
+      tl.set("#cap6 .w:nth-child(14)", { color: "#cbd5e1" }, 51.852);
+      tl.set("#cap6 .w:nth-child(15)", { color: "#FFE619" }, 51.852);
+      tl.set("#cap6 .w:nth-child(15)", { color: "#cbd5e1" }, 52.143);
+      tl.set("#cap6 .w:nth-child(16)", { color: "#FFE619" }, 52.143);
+      tl.set("#cap6 .w:nth-child(16)", { color: "#cbd5e1" }, 52.456);
+      tl.set("#cap6 .w:nth-child(17)", { color: "#FFE619" }, 52.456);
+      tl.set("#cap6 .w:nth-child(17)", { color: "#cbd5e1" }, 52.665);
+      tl.set("#cap6 .w:nth-child(18)", { color: "#FFE619" }, 52.665);
+      tl.set("#cap6 .w:nth-child(18)", { color: "#cbd5e1" }, 53.002);
+      tl.set("#cap6 .w:nth-child(19)", { color: "#FFE619" }, 53.002);
+      tl.set("#cap6 .w:nth-child(19)", { color: "#cbd5e1" }, 53.431);
+      tl.set("#cap6 .w:nth-child(20)", { color: "#FFE619" }, 53.431);
+      tl.set("#cap6 .w:nth-child(20)", { color: "#cbd5e1" }, 54.081);
+      tl.set("#cap6 .w:nth-child(21)", { color: "#FFE619" }, 54.081);
+      tl.set("#cap6 .w:nth-child(21)", { color: "#cbd5e1" }, 54.279);
+      tl.set("#cap6 .w:nth-child(22)", { color: "#FFE619" }, 54.279);
+      tl.set("#cap6 .w:nth-child(22)", { color: "#cbd5e1" }, 54.348);
+      tl.set("#cap6 .w:nth-child(23)", { color: "#FFE619" }, 54.348);
+      tl.set("#cap6 .w:nth-child(23)", { color: "#cbd5e1" }, 55.242);
+      tl.set("#cap6 .w:nth-child(24)", { color: "#FFE619" }, 55.242);
+      tl.set("#cap6 .w:nth-child(24)", { color: "#cbd5e1" }, 55.927);
+
+      // ROOT TIMELINE EXPORT FOR HYPERFRAMES RUNNER
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // RESPONSIVE AUTO-SCALER
+      function fitStage() {
+        const scaler = document.getElementById("viewport-scaler");
+        if (!scaler) return;
+        const w = window.innerWidth - 30;
+        const h = window.innerHeight - 80;
+        const scaleX = w / 1080;
+        const scaleY = h / 1920;
+        const scale = Math.min(scaleX, scaleY, 0.95);
+        scaler.style.transform = `translate(-50%, -50%) scale(${scale})`;
+      }
+      window.addEventListener("resize", fitStage);
+      window.addEventListener("DOMContentLoaded", fitStage);
+      setTimeout(fitStage, 50);
+
+      // INTERACTIVE AUDIO & SCRUBBER CONTROLLER
+      const btnPlay = document.getElementById("btn-play");
+      const btnRestart = document.getElementById("btn-restart");
+      const scrubber = document.getElementById("scrubber");
+      const timeDisplay = document.getElementById("time-display");
+      const audioEl = document.getElementById("vo");
+
+      if (btnPlay) {
+        btnPlay.addEventListener("click", () => {
+          if (tl.paused()) {
+            tl.play();
+            if (audioEl) audioEl.play().catch(() => {});
+            btnPlay.textContent = "PAUSE";
+          } else {
+            tl.pause();
+            if (audioEl) audioEl.pause();
+            btnPlay.textContent = "PLAY";
+          }
+        });
+
+        btnRestart.addEventListener("click", () => {
+          tl.restart();
+          if (audioEl) { audioEl.currentTime = 0; audioEl.play().catch(() => {}); }
+          btnPlay.textContent = "PAUSE";
+        });
+
+        scrubber.addEventListener("input", (e) => {
+          const t = parseFloat(e.target.value);
+          tl.pause();
+          tl.time(t);
+          if (audioEl) { audioEl.currentTime = t; audioEl.pause(); }
+          btnPlay.textContent = "PLAY";
+          timeDisplay.textContent = `${t.toFixed(2)}s / 56.29s`;
+        });
+
+        tl.eventCallback("onUpdate", () => {
+          updateCamera();
+          syncClipsForTime(tl.time());
+          const cur = tl.time();
+          if (scrubber) scrubber.value = cur;
+          if (timeDisplay) timeDisplay.textContent = `${cur.toFixed(2)}s / 56.29s`;
+          if (!tl.paused() && audioEl && Math.abs(audioEl.currentTime - cur) > 0.3) {
+            audioEl.currentTime = cur;
+          }
+        });
+      }
+
+    </script>
+  </body>
+</html>
