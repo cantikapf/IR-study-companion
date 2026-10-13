@@ -1,0 +1,99 @@
+{
+  "totalSec": 33.183,
+  "voice": "am_adam",
+  "speed": 1.05,
+  "snapSec": 4.393,
+  "lines": [
+    {
+      "beat": "B1",
+      "text": "One of these men will be dead in sixty days.",
+      "startSec": 0.7,
+      "endSec": 3.004,
+      "duration": 2.304
+    },
+    {
+      "beat": "B1",
+      "text": "Guess which one.",
+      "startSec": 3.454,
+      "endSec": 4.393,
+      "duration": 0.939
+    },
+    {
+      "beat": "B2",
+      "text": "Not the oldest.",
+      "startSec": 4.843,
+      "endSec": 5.845,
+      "duration": 1.003
+    },
+    {
+      "beat": "B2",
+      "text": "The one in the middle.",
+      "startSec": 6.295,
+      "endSec": 7.341,
+      "duration": 1.045
+    },
+    {
+      "beat": "B2",
+      "text": "Roosevelt was dying. His hands shook too badly to pour his own coffee.",
+      "startSec": 7.791,
+      "endSec": 11.673,
+      "duration": 3.883
+    },
+    {
+      "beat": "B3",
+      "text": "Stalin was the host. Not by accident.",
+      "startSec": 12.123,
+      "endSec": 14.406,
+      "duration": 2.283
+    },
+    {
+      "beat": "B3",
+      "text": "He demanded Eastern Europe. He got it.",
+      "startSec": 14.856,
+      "endSec": 17.075,
+      "duration": 2.219
+    },
+    {
+      "beat": "B4",
+      "text": "Churchill won the war.",
+      "startSec": 17.525,
+      "endSec": 18.762,
+      "duration": 1.237
+    },
+    {
+      "beat": "B4",
+      "text": "Five months later, Britain voted him out.",
+      "startSec": 19.212,
+      "endSec": 21.409,
+      "duration": 2.197
+    },
+    {
+      "beat": "B4",
+      "text": "He called it the ingratitude of the British people.",
+      "startSec": 21.859,
+      "endSec": 24.27,
+      "duration": 2.411
+    },
+    {
+      "beat": "B5",
+      "text": "Roosevelt dead by April. Churchill out by July.",
+      "startSec": 24.72,
+      "endSec": 27.877,
+      "duration": 3.157
+    },
+    {
+      "beat": "B5",
+      "text": "Stalin ruled for eight more years.",
+      "startSec": 28.327,
+      "endSec": 30.205,
+      "duration": 1.877
+    },
+    {
+      "beat": "B5",
+      "text": "One photo. Three empires.",
+      "startSec": 30.655,
+      "endSec": 32.383,
+      "duration": 1.728
+    }
+  ]
+}

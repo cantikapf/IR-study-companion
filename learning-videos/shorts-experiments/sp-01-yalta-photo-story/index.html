@@ -85,7 +85,7 @@
       /* ARCHIVAL TOP HEADER */
       #archival-header {
         position: absolute;
-        top: 80px;
+        top: 72px;
         left: 80px;
         width: 920px;
         text-align: center;
@@ -109,7 +109,7 @@
         font-size: 14px;
         font-weight: 500;
         letter-spacing: 0.16em;
-        color: #a8a29e;
+        color: #cfc9c3;
         text-transform: uppercase;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
       }
@@ -121,7 +121,16 @@
         margin: 12px auto 0;
       }
 
-      /* CAMERA / PHOTO VIEWPORT */
+      /* ==================================================================
+         FULL-BLEED CAMERA STAGE
+         The source print is 2720x2239 (1.2148:1). Rendered at 2332x1920 it
+         matches the frame's 1.2146:1 almost exactly, so at scale 1 we see
+         the WHOLE photograph, height-complete, cropped only in width.
+         The three faces span 86% of the 1080 window, so the base framing
+         already holds all three; the men's bodies, the table and the floor
+         supply the lower half of the frame. No letterboxing, no dead space.
+         transform-origin is 0 0, so screen = translate + image_point * scale.
+         ================================================================== */
       #photo-stage {
         position: absolute;
         inset: 0;
@@ -134,20 +143,20 @@
 
       #photo-wrapper {
         position: absolute;
-        top: 180px;
+        top: 0;
         left: 0;
-        width: 1080px;
-        height: 889px;
-        transform-origin: 50% 50%;
+        width: 2332px;
+        height: 1920px;
+        transform-origin: 0 0;
         will-change: transform;
       }
 
       #yalta-photo {
-        width: 1080px;
-        height: 889px;
+        width: 2332px;
+        height: 1920px;
         display: block;
         object-fit: cover;
-        filter: sepia(0.15) contrast(1.1) brightness(0.85);
+        filter: sepia(0.15) contrast(1.08) brightness(0.92);
       }
 
       /* ARCHIVAL SCRIMS & VIGNETTE */
@@ -156,30 +165,38 @@
         top: 0;
         left: 0;
         width: 1080px;
-        height: 280px;
+        height: 320px;
         pointer-events: none;
         background: linear-gradient(
           to bottom,
-          rgba(13, 12, 10, 0.96) 0%,
-          rgba(13, 12, 10, 0.6) 55%,
+          rgba(13, 12, 10, 0.94) 0%,
+          rgba(13, 12, 10, 0.55) 55%,
           rgba(13, 12, 10, 0) 100%
         );
         z-index: 10;
       }
 
+      /* Text legibility only — a gradient over the photo, not a black slab.
+         Two constraints pull against each other: white type needs a dark plate
+         behind it, and the print carries real detail down to its last row
+         (v1800-1920 still measures 77% of pixels above luma 45), so a uniform
+         heavy scrim blacks out usable image and reads as empty space.
+         Resolution: concentrate the density ON the text band (y~1150-1550) and
+         let it fall away below, so the floor stays a photograph. */
       .botscrim {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 1080px;
-        height: 880px;
+        height: 770px;
         pointer-events: none;
         background: linear-gradient(
           to bottom,
           rgba(13, 12, 10, 0) 0%,
-          rgba(13, 12, 10, 0.8) 25%,
-          rgba(13, 12, 10, 0.98) 60%,
-          #0d0c0a 100%
+          rgba(13, 12, 10, 0.56) 22%,
+          rgba(13, 12, 10, 0.52) 50%,
+          rgba(13, 12, 10, 0.34) 75%,
+          rgba(13, 12, 10, 0.22) 100%
         );
         z-index: 10;
       }
@@ -191,12 +208,26 @@
         height: 1920px;
         pointer-events: none;
         background: radial-gradient(
-          ellipse 85% 65% at 50% 38%,
-          rgba(13, 12, 10, 0) 35%,
-          rgba(13, 12, 10, 0.5) 70%,
-          rgba(13, 12, 10, 0.95) 100%
+          ellipse 95% 88% at 50% 42%,
+          rgba(13, 12, 10, 0) 60%,
+          rgba(13, 12, 10, 0.2) 85%,
+          rgba(13, 12, 10, 0.55) 100%
         );
         z-index: 12;
+      }
+
+      /* FILM GRAIN — analog texture over the whole frame. Breaks up the flat
+         digital gradient the scrim leaves behind and reads as archival film. */
+      #grain {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        opacity: 0.085;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+        z-index: 13;
       }
 
       /* FLASH BULB BLOOM — deliberately kept off frame 0 so the poster stays clean */
@@ -215,10 +246,10 @@
       /* EDITORIAL TEXT STAGE */
       #text-stage {
         position: absolute;
-        top: 1300px;
+        top: 1150px;
         left: 80px;
         width: 920px;
-        height: 380px;
+        height: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -233,20 +264,22 @@
         left: 0;
         width: 100%;
         font-family: "Playfair Display", Georgia, serif;
-        font-size: 52px;
+        font-size: 54px;
         font-weight: 600;
-        line-height: 1.28;
+        line-height: 1.26;
         color: #fdfbf7;
         text-shadow:
-          0 4px 24px rgba(0, 0, 0, 0.98),
-          0 2px 6px rgba(0, 0, 0, 1);
+          0 0 34px rgba(0, 0, 0, 0.98),
+          0 3px 12px rgba(0, 0, 0, 1),
+          0 1px 3px rgba(0, 0, 0, 1),
+          0 0 60px rgba(0, 0, 0, 0.9);
         opacity: 0;
         text-align: center;
         pointer-events: none;
       }
 
       .title-climax {
-        font-size: 64px;
+        font-size: 66px;
         font-weight: 700;
         letter-spacing: -0.01em;
         color: #ffffff;
@@ -255,10 +288,12 @@
           0 2px 8px rgba(0, 0, 0, 1);
       }
 
-      /* ARCHIVAL FOOTER */
+      /* ARCHIVAL FOOTER — kept at the TOP: YouTube Shorts paints its title,
+         channel and action buttons over the bottom ~18% of the frame, so a
+         citation down there is invisible on mobile. */
       #archival-footer {
         position: absolute;
-        bottom: 60px;
+        top: 186px;
         left: 80px;
         width: 920px;
         text-align: center;
@@ -271,7 +306,7 @@
         font-size: 13px;
         font-weight: 500;
         letter-spacing: 0.18em;
-        color: #78716c;
+        color: #b8b2ac;
         text-transform: uppercase;
         text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
       }
@@ -284,17 +319,17 @@
       data-start="0"
       data-width="1080"
       data-height="1920"
-      data-duration="45"
+      data-duration="33.18"
     >
-      <!-- ARCHIVAL SOUNDSCAPE (Concept D): press-camera shutter + flash pop at 0.00s,
-           a second softer shutter at 1.20s, radio/projector ambience bed underneath.
-           Synthesised by make_sfx.py — no TTS, no third-party samples. -->
+      <!-- VOICE-OVER (Kokoro-82M, am_adam) + two press-camera shutter accents.
+           Synthesised by generate_audio.py — no third-party samples. The earlier
+           continuous radio-crackle bed was removed (listener feedback: intrusive). -->
       <audio
-        id="sfx"
-        src="audio/sfx_track.mp3"
+        id="vo"
+        src="audio/voiceover.mp3"
         preload="auto"
         data-start="0"
-        data-duration="45"
+        data-duration="33.18"
       ></audio>
 
       <!-- ARCHIVAL TOP HEADER -->
@@ -319,35 +354,36 @@
       <div class="topscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
       <div class="botscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
       <div class="vignette" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div id="grain" data-layout-allow-overflow data-layout-allow-occlusion></div>
       <div id="flash" data-layout-allow-overflow data-layout-allow-occlusion></div>
 
-      <!-- EDITORIAL TEXT STAGE (BOTTOM-THIRD, y:1200-1700) -->
+      <!-- EDITORIAL TEXT STAGE (BOTTOM-THIRD, y:1200-1700).
+           One element per voice-over line, so the caption IS the transcript:
+           generate_audio.py writes audio/manifest.json with the exact start/end
+           of every line, and the GSAP times below are derived from it. -->
       <div id="text-stage" data-layout-allow-overflow>
-        <!-- BEAT 1 — HOOK (0.0s – 5.0s) : 1.2 s of frozen print + shutter, then the double-take -->
-        <div class="story-line" id="t1">Look at this photo again.</div>
-        <div class="story-line" id="t2">One of these men will be dead in 60 days.</div>
+        <!-- BEAT 1 — HOOK (0.0s – 4.39s) : camera frozen, information is not -->
+        <div class="story-line" id="t1">One of these men will be dead in 60 days.</div>
+        <div class="story-line" id="t2">Guess which one.</div>
 
-        <!-- BEAT 2 — ROOSEVELT (5.0s – 15.0s) : pay off the wrong guess -->
+        <!-- BEAT 2 — ROOSEVELT (4.39s – 12.12s) : pay off the wrong guess -->
         <div class="story-line" id="t3">Not the oldest.</div>
         <div class="story-line" id="t4">The one in the middle.</div>
-        <div class="story-line" id="t5">Roosevelt was dying.</div>
-        <div class="story-line" id="t6">His hands shook too badly to pour his own coffee.</div>
+        <div class="story-line" id="t5">Roosevelt was dying. His hands shook too badly to pour his own coffee.</div>
 
-        <!-- BEAT 3 — STALIN (15.0s – 25.0s) -->
-        <div class="story-line" id="t7">Stalin sat in the center. Not by accident.</div>
-        <div class="story-line" id="t8">He demanded Eastern Europe.</div>
-        <div class="story-line" id="t9">He got it.</div>
+        <!-- BEAT 3 — STALIN (12.12s – 17.52s) -->
+        <div class="story-line" id="t6">Stalin was the host. Not by accident.</div>
+        <div class="story-line" id="t7">He demanded Eastern Europe. He got it.</div>
 
-        <!-- BEAT 4 — CHURCHILL (25.0s – 35.0s) -->
-        <div class="story-line" id="t10">Churchill won the war.</div>
-        <div class="story-line" id="t11">Five months later, Britain voted him out.</div>
-        <div class="story-line" id="t12">He called it &ldquo;the ingratitude of the British people.&rdquo;</div>
+        <!-- BEAT 4 — CHURCHILL (17.52s – 24.72s) -->
+        <div class="story-line" id="t8">Churchill won the war.</div>
+        <div class="story-line" id="t9">Five months later, Britain voted him out.</div>
+        <div class="story-line" id="t10">He called it &ldquo;the ingratitude of the British people.&rdquo;</div>
 
-        <!-- BEAT 5 — REVEAL (35.0s – 45.0s) -->
-        <div class="story-line" id="t13">This photo was taken February 1945.</div>
-        <div class="story-line" id="t14">Roosevelt dead by April. Churchill out by July.</div>
-        <div class="story-line" id="t15">Stalin ruled for eight more years.</div>
-        <div class="story-line title-climax" id="t16">One photo. Three empires.</div>
+        <!-- BEAT 5 — REVEAL (24.72s – 33.18s) -->
+        <div class="story-line" id="t11">Roosevelt dead by April. Churchill out by July.</div>
+        <div class="story-line" id="t12">Stalin ruled for eight more years.</div>
+        <div class="story-line title-climax" id="t13">One photo. Three empires.</div>
       </div>
 
       <!-- ARCHIVAL FOOTER -->
@@ -359,93 +395,98 @@
     <script>
       const tl = gsap.timeline({ paused: true });
 
+      // Subject positions in the 2332x1920 element space (measured from the print):
+      //   Churchill face ( 653, 749) · Roosevelt face (1143, 749) · Stalin face (1586, 749)
+      // Camera is translate(tx, ty) scale(s) about origin 0 0, so image point (u, v)
+      // lands on screen at (tx + u*s, ty + v*s); centring (u, v) at scale s means
+      // tx = 540 - u*s and ty = 960 - v*s.
+
       // ---- CAMERA ---------------------------------------------------------
-      // 0.00–1.20 : the print is FROZEN. No motion at all — the shutter does the work.
-      tl.set("#photo-wrapper", { scale: 1.0, x: 0, y: 0 }, 0);
-      // 1.20 : hard SNAP re-frame to a mid crop (the double-take), then a slow drift
-      tl.fromTo(
-        "#photo-wrapper",
-        { scale: 1.55, x: 0, y: 150 },
-        { scale: 1.62, x: -30, y: 170, duration: 3.8, ease: "none" },
-        1.2
-      );
-      tl.fromTo(
-        "#photo-wrapper",
-        { scale: 1.62, x: -30, y: 170 },
-        { scale: 2.2, x: 9, y: 316, duration: 3.2, ease: "power2.inOut" },
-        5.0
-      );
-      tl.to("#photo-wrapper", { scale: 2.28, x: 12, y: 326, duration: 6.4, ease: "none" }, 8.2);
-      tl.fromTo(
-        "#photo-wrapper",
-        { scale: 2.28, x: 12, y: 326 },
-        { scale: 2.05, x: -628, y: 292, duration: 3.2, ease: "power1.inOut" },
-        14.6
-      );
-      tl.to("#photo-wrapper", { scale: 2.12, x: -642, y: 300, duration: 6.8, ease: "none" }, 17.8);
-      tl.fromTo(
-        "#photo-wrapper",
-        { scale: 2.12, x: -642, y: 300 },
-        { scale: 2.05, x: 740, y: 292, duration: 3.5, ease: "power1.inOut" },
-        24.6
-      );
-      tl.to("#photo-wrapper", { scale: 2.12, x: 752, y: 300, duration: 6.5, ease: "none" }, 28.1);
-      tl.fromTo(
-        "#photo-wrapper",
-        { scale: 2.12, x: 752, y: 300 },
-        { scale: 1.0, x: 0, y: 0, duration: 3.8, ease: "power2.inOut" },
-        34.6
-      );
-      tl.to("#photo-wrapper", { scale: 1.05, x: 0, y: 0, duration: 6.6, ease: "none" }, 38.4);
+      // Timed against audio/manifest.json: the VO drives every move.
+      // 0.00–1.20 : the print is FROZEN. No motion — the shutter does the work.
+      // Base framing: the print is 2332x1920, i.e. exactly the frame height, so
+      // at scale 1 / y=0 it fills the canvas edge to edge with NO dead band top
+      // or bottom. (An earlier cut offset it by +115px, which opened a bare
+      // 115px strip at the top and pushed the floor into the scrim.) The three
+      // faces span 933px of the 1080 window, so all three sit inside with a
+      // 73px margin each side — no subject clipped.
+      tl.set("#photo-wrapper", { x: -579, y: 0, scale: 1.0 }, 0);
+
+      // 1.20 : hard SNAP in to Roosevelt (the visual double-take), slow drift
+      tl.to("#photo-wrapper", { x: -1312, y: -349, scale: 1.62, duration: 0.34, ease: "power3.out" }, 1.2);
+      tl.to("#photo-wrapper", { x: -1380, y: -394, scale: 1.68, duration: 1.38, ease: "none" }, 1.54);
+
+      // 2.92 : SNAP back out to the full group so "Guess which one." lands on all three
+      tl.to("#photo-wrapper", { x: -579, y: 0, scale: 1.0, duration: 0.3, ease: "power3.inOut" }, 2.92);
+      tl.to("#photo-wrapper", { x: -596, y: -20, scale: 1.03, duration: 1.15, ease: "none" }, 3.22);
+
+      // 4.39 : the second shutter fires and the camera answers the question —
+      //        the payoff of the wrong guess, then hold on Roosevelt.
+      tl.to("#photo-wrapper", { x: -1312, y: -349, scale: 1.62, duration: 0.34, ease: "power3.out" }, 4.39);
+      tl.to("#photo-wrapper", { x: -1380, y: -394, scale: 1.68, duration: 5.45, ease: "none" }, 4.73);
+
+      // Each pan is timed so the camera ARRIVES BEFORE the caption that names the
+      // subject (12.12 Stalin, 17.52 Churchill). Sweeping across during the last
+      // line of the previous beat means the frame never shows Roosevelt while the
+      // caption says "Stalin".
+      tl.to("#photo-wrapper", { x: -2029, y: -349, scale: 1.62, duration: 1.8, ease: "power2.inOut" }, 10.20);
+      tl.to("#photo-wrapper", { x: -2125, y: -394, scale: 1.68, duration: 3.50, ease: "none" }, 12.00);
+
+      // 15.50 : pan left to Churchill, landing on him as his first line starts
+      tl.to("#photo-wrapper", { x: -518, y: -349, scale: 1.62, duration: 2.0, ease: "power2.inOut" }, 15.50);
+      tl.to("#photo-wrapper", { x: -557, y: -394, scale: 1.68, duration: 6.90, ease: "none" }, 17.50);
+
+      // 24.40 : pull back out to the whole group for the reveal
+      tl.to("#photo-wrapper", { x: -579, y: 0, scale: 1.0, duration: 3.0, ease: "power2.inOut" }, 24.40);
+      tl.to("#photo-wrapper", { x: -596, y: -20, scale: 1.03, duration: 5.78, ease: "none" }, 27.40);
 
       // ---- FLASH BULB -----------------------------------------------------
-      // Frame 0 stays clean (thumbnail safe); the bulb pops a hair after the shutter.
+      // Frame 0 stays clean (thumbnail safe); each bulb pops a hair after its shutter.
       tl.set("#flash", { opacity: 0 }, 0);
       tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.55, duration: 0.03, ease: "none" }, 0.04);
       tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.out" }, 0.07);
-      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.34, duration: 0.03, ease: "none" }, 1.2);
-      tl.to("#flash", { opacity: 0, duration: 0.26, ease: "power2.out" }, 1.23);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.34, duration: 0.03, ease: "none" }, 4.42);
+      tl.to("#flash", { opacity: 0, duration: 0.26, ease: "power2.out" }, 4.45);
 
-      // ---- BEAT 1 — HOOK (0.0s – 5.0s) ------------------------------------
-      tl.to("#t1", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 1.35);
-      tl.to("#t1", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 2.75);
-      tl.to("#t2", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 2.95);
-      tl.to("#t2", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 4.7);
+      // ---- CAPTIONS — one per voice-over line, from audio/manifest.json ----
+      // Each line's fade-in ENDS exactly on its voice-over onset (in = start-0.22,
+      // out = end+0.18), so the caption lands WITH the voice instead of trailing it.
+      // BEAT 1 — HOOK (0.00–4.39). The camera is frozen for the first 1.2s but the
+      // STAKES are not: the hook line is up by 0.70s, so frame 0 stays a clean
+      // poster frame while the viewer never gets a silent, unexplained print.
+      tl.to("#t1", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 0.48);
+      tl.to("#t1", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 3.00);
+      tl.to("#t2", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 3.23);
+      tl.to("#t2", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 4.39);
 
-      // ---- BEAT 2 — ROOSEVELT (5.0s – 15.0s) ------------------------------
-      tl.to("#t3", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 6.3);
-      tl.to("#t3", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 7.4);
-      tl.to("#t4", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 7.6);
-      tl.to("#t4", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 9.0);
-      tl.to("#t5", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 9.2);
-      tl.to("#t5", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 11.0);
-      tl.to("#t6", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 11.2);
-      tl.to("#t6", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 14.3);
+      // BEAT 2 — ROOSEVELT (4.39–12.12)
+      tl.to("#t3", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 4.62);
+      tl.to("#t3", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 5.84);
+      tl.to("#t4", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 6.07);
+      tl.to("#t4", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 7.34);
+      tl.to("#t5", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 7.57);
+      tl.to("#t5", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 11.67);
 
-      // ---- BEAT 3 — STALIN (15.0s – 25.0s) --------------------------------
-      tl.to("#t7", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 16.0);
-      tl.to("#t7", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 18.5);
-      tl.to("#t8", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 19.0);
-      tl.to("#t8", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 20.6);
-      tl.to("#t9", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 21.0);
-      tl.to("#t9", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 24.3);
+      // BEAT 3 — STALIN (12.12–17.52)
+      tl.to("#t6", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 11.90);
+      tl.to("#t6", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 14.41);
+      tl.to("#t7", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 14.64);
+      tl.to("#t7", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 17.07);
 
-      // ---- BEAT 4 — CHURCHILL (25.0s – 35.0s) -----------------------------
-      tl.to("#t10", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 26.0);
-      tl.to("#t10", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 28.0);
-      tl.to("#t11", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 28.5);
-      tl.to("#t11", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 31.0);
-      tl.to("#t12", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 31.5);
-      tl.to("#t12", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 34.3);
+      // BEAT 4 — CHURCHILL (17.52–24.72)
+      tl.to("#t8", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 17.30);
+      tl.to("#t8", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 18.76);
+      tl.to("#t9", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 18.99);
+      tl.to("#t9", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 21.41);
+      tl.to("#t10", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 21.64);
+      tl.to("#t10", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 24.27);
 
-      // ---- BEAT 5 — REVEAL (35.0s – 45.0s) --------------------------------
-      tl.to("#t13", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 36.0);
-      tl.to("#t13", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 37.6);
-      tl.to("#t14", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 38.0);
-      tl.to("#t14", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 40.1);
-      tl.to("#t15", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 40.5);
-      tl.to("#t15", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 42.6);
-      tl.to("#t16", { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 43.0);
+      // BEAT 5 — REVEAL (24.72–33.18); the closing line holds to the last frame.
+      tl.to("#t11", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 24.50);
+      tl.to("#t11", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 27.88);
+      tl.to("#t12", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 28.11);
+      tl.to("#t12", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 30.20);
+      tl.to("#t13", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 30.44);
 
       // ROOT TIMELINE EXPORT FOR HYPERFRAMES RUNNER
       window.__timelines = window.__timelines || {};

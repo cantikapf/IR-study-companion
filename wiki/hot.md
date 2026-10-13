@@ -26,15 +26,30 @@ tags:
    - Penambahan `radialGradient` (#mgBackdrop) untuk memberikan depth/volume bola tanpa mengganggu light mode.
 3. `Verifikasi`: 373/373 pytest PASS, `bundle exec jekyll build` clean (0 error).
 
-2026-10-13 - Eksperimen Format Baru SP-01 "Yalta Photo Story" (Single Photo Story, Konsep A + D, Hook 3 Detik):
-1. `Konteks & Masalah`: Rilis pertama SP-01 (foto arsip tunggal + Ken Burns + teks editorial) dinilai user tidak menarik pada 3 detik pertama — hook lama `"Three men sat for this photo."` hanya mendeskripsikan gambar di atas frame yang sudah bergerak, tidak ada taruhan/pertanyaan terbuka.
-2. `Konsep A — Double-Take / Replay Bait`:
-   - Frame 0–1,2 s dibekukan total (nol teks, nol gerak kamera), lalu SNAP keras ke crop 1,55× saat baris pertama masuk. Keraguan "aku kelewat sesuatu?" inilah yang mendorong rewatch rate.
-   - Hook diganti jadi pertanyaan yang dijawab salah: `"One of these men will be dead in 60 days."` lalu dibayar di Beat 2 dengan `"Not the oldest. The one in the middle."` (Churchill yang terlihat paling tua bukan yang dimaksud).
-   - Flash bloom sengaja ditunda ke 0,04 s agar frame 0 tetap bersih sebagai kandidat thumbnail.
-3. `Konsep D — Archival Soundscape`: SFX dibangkitkan sendiri oleh `make_sfx.py` (numpy + `wave` + ffmpeg, tanpa sampel pihak ketiga): shutter + flash bulb di 0,00 s, shutter kedua di 1,20 s, bed radio crackle + flutter proyektor film dinormalisasi ke −38 dBFS rms. Tidak ada TTS, tidak ada musik.
-4. `Verifikasi Empiris`: `hyperframes check` 0 error / 5-5 WCAG AA · stream AAC 48 kHz stereo terbukti ada · delta piksel frame-0 vs 1,0 s = 0,62 (0,3 % berubah → benar-benar beku) · vs 0,15 s = 99,3 % (flash menyala) · vs 1,6 s = 48,4 % (snap + teks) · piksel terang di band teks pada 0,0/0,15/1,0 s = **0** (poster bersih) · `pytest` 373/373 PASS.
-5. `Artefak`: `learning-videos/shorts-experiments/sp-01-yalta-photo-story/` (README, index.html, make_sfx.py, qa_stills) → export `learning-videos/exports/SP01_Yalta_Photo_Story_Short_1080p.mp4` (32,3 MB, 45 s). Draft lama diarsipkan sebagai `SP01_Yalta_Photo_Story_v1_silent_hook.mp4`.
+2026-10-13 - SP-01 "Yalta Photo Story" — Ganti Soundscape dengan Voice-Over Kokoro (feedback: "suara background nya menggangu"):
+1. `Masalah & Arahan`: Bed ambience kontinu (radio crackle + flutter proyektor) di `make_sfx.py` dinilai mengganggu oleh user (~900 pop impulsif sepanjang 45 s). User menginstruksikan: "pake voice over kokoro saja".
+2. `Implementasi Audio Kokoro-82M`: Bed dibuang total, diganti narasi Kokoro-82M (`am_adam`, speed 1.05) via `generate_audio.py` (model kanonik `simulation/ir-motion-library/models/kokoro/`). Dua aksen shutter mekanis 90 ms dipertahankan pada $t=0.00\text{s}$ (head transient) dan $t=4.39\text{s}$ (snap ke Roosevelt). Normalisasi peak audio ke $-1.74\text{ dBFS}$ (0 clipped samples).
+3. `Retime & Naskah Faktual`:
+   - Durasi total runtuh dari 45 s ke **33.18 s** mengikuti pacing voice-over. Seluruh timeline kamera GSAP dan caption di-retime berbasis manifest audio.
+   - Koreksi Faktual Naskah: Baris naskah lama *"Stalin sat in the center. Not by accident."* terbukti keliru saat diinspeksi vision QA (pada foto asli Yalta, Roosevelt duduk di tengah, Churchill kiri, Stalin kanan). Dikoreksi menjadi *"Stalin was the host. Not by accident."* (faktual dan selaras dengan crop frame).
+   - Sinkronisasi Kamera & Teks: Kamera tiba (sweep/pan) mendahului atau tepat saat caption terkait muncul ($t=10.20
+ightarrow 12.00\text{s}$ untuk Stalin, $t=15.50
+ightarrow 17.50\text{s}$ untuk Churchill), mencegah anomali di mana teks menyebut Stalin sementara kamera masih menampilkan Roosevelt.
+4. `Verifikasi & QA`:
+   - `check_sync.py`: 13 caption lulus sinkronisasi per-baris dalam toleransi 0.02 s terhadap `audio/manifest.json`.
+   - `hyperframes check`: 0 errors, 0 warnings, 0 layout issues, 5/5 text checks WCAG AA pass.
+   - `vision_analyze` audit: Frame $t=12.14\text{s}$ terkonfirmasi menampilkan Stalin terpusat dengan teks *"Stalin was the host. Not by accident."* tajam dan kontras.
+   - Output render final: `learning-videos/exports/SP01_Yalta_Photo_Story_Short_1080p.mp4` (**35.2 MB · 1080×1920 · 30 FPS · 33.20s · h264 + AAC 48kHz stereo**).
+   - Test suite: `pytest` 373/373 PASS. Stills diperbarui di `qa_stills/01`..`07`.
+
+2026-10-13 - SP-01 "Yalta Photo Story" — Perbaikan Hook 3 Detik & Eliminasi Space Kosong Bawah (Konsep A + D):
+1. `Masalah 1 — Space Kosong Bawah`: Cetakan lanskap 2720×2239 ditempatkan sebagai band `width:1080` (tinggi 889px) di kanvas 1920px → 851px bidang hitam di bawah. Diukur: band terbawah (y1760–1920) hanya 0% piksel di atas luma 45; near-black 39,7%.
+2. `Fix Framing`: Wrapper jadi elemen full-bleed setinggi frame (2332×1920, aspect cocok 0,02%), `transform-origin: 0 0`, kamera = `translate(tx,ty) scale(s)`. `ty=0` → foto mengisi kanvas edge-to-edge tanpa band. Rumus centring subjek: `tx = 540 - u*s`, `ty = 960 - v*s`. Batas atas skala ditentukan lebar grup subjek: 3 wajah membentang 933px → `s ≤ 1,07`; di atas itu ada subjek terpotong (karena itu Beat 2 pakai 1,68× hanya karena sudah masuk close-up).
+3. `Fix Grading`: Profil luminansi vertikal cetakan diukur dulu (v1800–1920 masih 77% piksel > luma 45), jadi scrim bawah dipekatkan HANYA di band teks (y~1150–1550, alpha 0,56→0,34) dan melonggar ke bawah (0,22); vignette jadi elips besar lemah. Ditambah film grain `feTurbulence` data-URI (opacity 0,085, overlay). Hasil: band terbawah 0% → **61%** konten, near-black 39,7% → 24–26%.
+4. `Masalah 2 — 3 Detik Pertama`: Kamera beku 1,2 s TANPA teks = 1,2 detik mati. Hook line dipindah ke **0,25 s** (frame 7) sehingga frame 0 tetap poster bersih tapi penonton tak menunggu. Hook jadi pertanyaan yang dijawab salah: `"One of these men will be dead in 60 days."` → `"Guess which one."` → Beat 2 `"Not the oldest. The one in the middle."` Kamera snap masuk 1,20 s, snap keluar 2,92 s, push lambat masuk 5,0 s.
+5. `Masalah 3 — Kontras Teks` (temuan QA vision): setelah scrim diringankan, teks tenggelam ke celana FDR. Diperbaiki dengan scrim terkonsentrasi + text-shadow 4 lapis (0 0 34px / 0 3px 12px / 0 1px 3px / 0 0 60px). QA vision: legibility **"Clear"**, darkening terbaca sebagai plate desain.
+6. `Verifikasi`: `hyperframes check` 0 error / 5-5 WCAG AA · AAC 48 kHz stereo · envelope audio shutter −29 dB @0,0 s & −31 dB @1,2 s, bed −39 dB, peak −3,8 dBFS · delta piksel frame-0 vs 1,0 s 0,3% (beku) · flash 99,3% · snap 48,4% · `pytest` 373/373 PASS.
+7. `Artefak`: `learning-videos/shorts-experiments/sp-01-yalta-photo-story/` → export `SP01_Yalta_Photo_Story_Short_1080p.mp4` (47,3 MB, 45 s).
 
 2026-10-13 - Perbaikan Layout Header Sandbox Lab 02 Homepage (Pemisahan Header & HUD Bar):
 1. `Root Cause`: Kontainer flex satu baris `.sandbox-header` dipaksa menampung judul lab dan 5 chip status/HUD sekaligus di dalam kolom split ~540px. Akibat ketiadaan `white-space: nowrap`, teks `GAME THEORY` terpotong paksa dua baris dan badge HUD runtuh asimetris meninggalkan ruang kosong di baris kedua.
