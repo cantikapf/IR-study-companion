@@ -21,7 +21,11 @@ tags:
    - `scripts/yt/retention.py` & `deadair.py`: Parser telemetri retensi CSV YouTube Studio untuk mendeteksi 30s hook leak dan drop cliffs.
    - `scripts/yt/swipe.py`: Analisis outlier performa video kompetitor berbasis kelipatan median channel.
    - `learning-videos/voice.md`: Profil persona resmi kanal `@IRinANutshell` (antitesis clickbait, factual rigor, zero AI fluff).
-3. `Verifikasi & QA`:
+3. `Integrasi Pipeline Produksi`:
+   - `scripts/produce_video.py`: Ditambahkan argumen `--hook` dan `--yt-title` pada Fase 1 (`extract`) untuk mengaudit pembukaan naskah dan judul sebelum ACC gate.
+   - `scripts/generate_thumbnail.py`: Ditambahkan flag `--yt-title` untuk memvalidasi teks thumbnail tidak mengulang kata di judul video.
+   - `learning-videos/SHORTS_CATALOG_WORKFLOW.md`: Step 1 dibakukan wajib hook audit & persona voice.
+4. `Verifikasi & QA`:
    - Unit tests terpasang di `tests/test_yt_tools.py` (5 tes mencakup scoring, linter, classifier, dan loader).
    - Test suite: `pytest` 378/378 PASS.
 
