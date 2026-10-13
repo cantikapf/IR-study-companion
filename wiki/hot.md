@@ -13,6 +13,14 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Dark Mode Motion Globe Visual Polish:
+1. `Root Cause`: Hardcode `#1e3a8a` (Oxford navy) pada SVG graticule dan capital nodes tenggelam di background hitam dark theme (`#09090b`), rute oxford lenyap, dan globe kawat tampak datar tanpa volume 3D.
+2. `Penyelarasan Warna & Atmosfer`:
+   - Migrasi pewarnaan SVG ke CSS variables bertema (`--globe-line`, `--globe-node`, `--globe-route-*`, `--globe-sat`).
+   - Dark mode (`body.dark-theme`): graticule sky blue (`#60a5fa`, opacity 0.24), node & oxford route cyan luminous (`#38bdf8`), crimson rose (`#fb7185`), gold warm amber (`#fbbf24`), dan ambient glow drop-shadow cyan.
+   - Penambahan `radialGradient` (#mgBackdrop) untuk memberikan depth/volume bola tanpa mengganggu light mode.
+3. `Verifikasi`: 373/373 pytest PASS, `bundle exec jekyll build` clean (0 error).
+
 2026-10-13 - Eksperimen Format Baru SP-01 "Yalta Photo Story" (Single Photo Story, Konsep A + D, Hook 3 Detik):
 1. `Konteks & Masalah`: Rilis pertama SP-01 (foto arsip tunggal + Ken Burns + teks editorial) dinilai user tidak menarik pada 3 detik pertama — hook lama `"Three men sat for this photo."` hanya mendeskripsikan gambar di atas frame yang sudah bergerak, tidak ada taruhan/pertanyaan terbuka.
 2. `Konsep A — Double-Take / Replay Bait`:

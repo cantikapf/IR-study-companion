@@ -27,6 +27,25 @@ permalink: /
     align-items: center;
     gap: 1rem;
     position: relative;
+    --globe-line: #1e3a8a;
+    --globe-line-opacity: 0.25;
+    --globe-boundary-opacity: 0.55;
+    --globe-node: #1e3a8a;
+    --globe-route-oxford: #1e3a8a;
+    --globe-route-crimson: #e11d48;
+    --globe-route-gold: #d97706;
+    --globe-sat: #d97706;
+  }
+
+  body.dark-theme .hero-motion-graphic {
+    --globe-line: #60a5fa;
+    --globe-line-opacity: 0.24;
+    --globe-boundary-opacity: 0.45;
+    --globe-node: #38bdf8;
+    --globe-route-oxford: #38bdf8;
+    --globe-route-crimson: #fb7185;
+    --globe-route-gold: #fbbf24;
+    --globe-sat: #fbbf24;
   }
 
   .motion-globe {
@@ -35,6 +54,31 @@ permalink: /
     height: auto;
     display: block;
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.04));
+  }
+  body.dark-theme .motion-globe {
+    filter: drop-shadow(0 0 35px rgba(56, 189, 248, 0.1));
+  }
+
+  .cxg-backdrop {
+    fill: url(#mgBackdrop);
+  }
+  .cxg-stop-inner { stop-color: #1e3a8a; stop-opacity: 0.03; }
+  .cxg-stop-outer { stop-color: #1e3a8a; stop-opacity: 0; }
+  body.dark-theme .cxg-stop-inner { stop-color: #38bdf8; stop-opacity: 0.08; }
+  body.dark-theme .cxg-stop-outer { stop-color: #38bdf8; stop-opacity: 0; }
+
+  .cxg-graticule {
+    fill: none;
+    stroke: var(--globe-line);
+    stroke-width: 1.25;
+    opacity: var(--globe-line-opacity);
+  }
+
+  .cxg-boundary {
+    fill: none;
+    stroke: var(--globe-line);
+    stroke-width: 2;
+    opacity: var(--globe-boundary-opacity);
   }
 
   .motion-caption {
@@ -61,13 +105,18 @@ permalink: /
 
   .cxg-route {
     stroke-dasharray: 1 7;
-    opacity: 0.75;
+    opacity: 0.8;
     animation: cxg-dash 22s linear infinite;
   }
-  .cxg-route.route-crimson { stroke: #e11d48; }
-  .cxg-route.route-gold { stroke: #d97706; }
-  .cxg-route.route-oxford { stroke: #1e3a8a; }
+  .cxg-route.route-crimson { stroke: var(--globe-route-crimson); }
+  .cxg-route.route-gold { stroke: var(--globe-route-gold); }
+  .cxg-route.route-oxford { stroke: var(--globe-route-oxford); }
 
+  .cxg-nodes {
+    fill: var(--globe-node);
+    stroke: var(--lms-surface);
+    stroke-width: 1.6;
+  }
   .cxg-node {
     animation: cxg-pulse 3.2s ease-in-out infinite;
   }
@@ -79,7 +128,7 @@ permalink: /
     animation: cxg-spin 80s linear infinite;
   }
   .cxg-sat {
-    fill: #d97706;
+    fill: var(--globe-sat);
     animation: cxg-pulse 3.2s ease-in-out infinite;
   }
 
@@ -922,14 +971,20 @@ permalink: /
       <svg class="motion-globe" viewBox="0 0 520 536" role="img" aria-label="Animated wireframe globe with animated diplomatic routes between nations">
         <defs>
           <clipPath id="mgClip"><circle cx="260" cy="268" r="208"/></clipPath>
+          <radialGradient id="mgBackdrop" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" class="cxg-stop-inner"/>
+            <stop offset="100%" class="cxg-stop-outer"/>
+          </radialGradient>
         </defs>
         <!-- Rotating orbit ring -->
         <g class="cxg-orbit">
           <ellipse cx="260" cy="268" rx="242" ry="242" fill="none" stroke="var(--lms-border-strong)" stroke-width="1" stroke-dasharray="1 6" opacity="0.65"/>
           <circle class="cxg-sat" cx="502" cy="268" r="3.5"/>
         </g>
+        <!-- Globe sphere backdrop -->
+        <circle class="cxg-backdrop" cx="260" cy="268" r="208"/>
         <!-- Globe graticule -->
-        <g clip-path="url(#mgClip)" fill="none" stroke="#1e3a8a" stroke-width="1.25" opacity="0.25">
+        <g class="cxg-graticule" clip-path="url(#mgClip)">
           <ellipse cx="260" cy="123.9" rx="104.0" ry="31.2"/>
           <ellipse cx="260" cy="184.8" rx="180.1" ry="54.0"/>
           <ellipse cx="260" cy="268.0" rx="208.0" ry="62.4"/>
@@ -940,7 +995,7 @@ permalink: /
           <ellipse cx="260" cy="268" rx="149.8" ry="208.0"/>
           <ellipse cx="260" cy="268" rx="208.0" ry="208.0"/>
         </g>
-        <circle cx="260" cy="268" r="208" fill="none" stroke="#1e3a8a" stroke-width="2" opacity="0.55"/>
+        <circle class="cxg-boundary" cx="260" cy="268" r="208"/>
         <!-- Animated diplomatic routes -->
         <g fill="none" stroke-linecap="round" stroke-width="2">
           <path class="cxg-route route-crimson" d="M120,250 Q240,90 365,175"/>
@@ -950,7 +1005,7 @@ permalink: /
           <path class="cxg-route route-gold" d="M330,345 Q235,300 120,250"/>
         </g>
         <!-- Pulsing capital nodes -->
-        <g fill="#1e3a8a" stroke="var(--lms-surface)" stroke-width="1.6">
+        <g class="cxg-nodes">
           <circle class="cxg-node" cx="120" cy="250" r="4.5"/>
           <circle class="cxg-node" cx="205" cy="130" r="4.5"/>
           <circle class="cxg-node" cx="365" cy="175" r="4.5"/>
