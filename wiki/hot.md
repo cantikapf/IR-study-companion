@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Perbaikan Layout Header Sandbox Lab 02 Homepage (Pemisahan Header & HUD Bar):
+1. `Root Cause`: Kontainer flex satu baris `.sandbox-header` dipaksa menampung judul lab dan 5 chip status/HUD sekaligus di dalam kolom split ~540px. Akibat ketiadaan `white-space: nowrap`, teks `GAME THEORY` terpotong paksa dua baris dan badge HUD runtuh asimetris meninggalkan ruang kosong di baris kedua.
+2. `Perbaikan Layout`:
+   - Membagi `.sandbox-header` menjadi 2 tingkatan: `.sandbox-header-top` (judul lab dengan `white-space: nowrap` + status Live Arena & audio toggle) dan `.sandbox-hud-bar` (telemetri game: Round, Streak, Best).
+   - Diaplikasikan secara konsisten pada `_pages/index.md` dan `prototype/home.html`.
+3. `Verifikasi`: `pytest` 373/373 PASS tanpa regresi.
+
 2026-10-13 - Rilis Final Short SH-02 "Operation Dropshot" (Animasi Geopolitical Vector Map, Rute Pesawat B-36 & WB-29, Eliminasi Ruang Kosong):
 1. `Penyempurnaan Layout Vertikal & Eliminasi Dead Space Bawah`:
    - Membuang balok scrim hitam pekat 35% di bagian bawah layar. Proyeksi polar Arktik diperluas ke bawah ($y = 840$, scale 620).
@@ -23,10 +30,11 @@ tags:
    - Detonasi RDS-1 Semipalatinsk (Beat 4): Fireball multi-stage, simbol trefoil radiasi berputar, 3 lapis cincin gelombang kejut, dan massa awan debu radioaktif melayang ke timur laut Siberia.
    - AFOAT-1 WB-29 (Beat 4): Pesawat pengintai atmosfer 4 mesin terbang menyusuri koridor sian di atas Siberia untuk mencegat dan mengambil sampel awan partikel radioaktif.
    - Target Drops (Beat 2): Crosshair target jatuh berurutan di 7 kota industri utama Soviet (Moskow, Leningrad, Chelyabinsk, Sverdlovsk, Gorky, Novosibirsk, Baku).
-3. `Hasil Render Final`:
+3. `Hasil Render & Publikasi`:
    - Lolos audit `hyperframes check`: 0 errors, 145/145 WCAG AA pass.
    - Output MP4: `learning-videos/exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4` (**24.0 MB · 1080×1920 · 30 FPS · 56.3s · 1689 frames**).
    - Verifikasi tangkapan layar render aktual via `vision_analyze` di $t = 23.5\text{s}$ dan $t = 29.5\text{s}$ mengonfirmasi mutu produksi pixel-sharp, pergerakan pesawat akurat, dan nol cacat layout.
+   - **PUBLISHED TO YOUTUBE**: `https://youtube.com/shorts/Ws5VoblIcts` (`Ws5VoblIcts`). Katalog diperbarui di `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
 
 2026-10-13 - Dynamic Video Badge Automation & YouTube Sync Protocol:
 1. `Dynamic Badge Detection di Platform`:

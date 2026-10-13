@@ -383,11 +383,25 @@ permalink: /
 
   .sandbox-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.65rem;
     padding-bottom: 0.85rem;
     border-bottom: 1px solid var(--lms-hairline);
     margin-bottom: 1.25rem;
+  }
+
+  .sandbox-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .sandbox-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   .sandbox-tag {
@@ -397,6 +411,7 @@ permalink: /
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: #1e3a8a;
+    white-space: nowrap;
   }
 
   .sandbox-status-chip {
@@ -694,6 +709,7 @@ permalink: /
     align-items: center;
   }
 
+  .sandbox-hud-bar,
   .sandbox-hud-chips {
     display: flex;
     gap: 0.4rem;
@@ -1031,15 +1047,19 @@ permalink: /
       <!-- Live Playable Sandbox: Prisoner's Dilemma (G1 Retrofit) -->
       <div class="playable-sandbox" id="game-theory-sim">
         <div class="sandbox-header">
-          <span class="sandbox-tag"><i class="fa fa-gamepad"></i> Interactive Lab 02 &bull; Game Theory</span>
-          <div class="sandbox-hud-chips">
-            <span class="sandbox-status-chip">&bull; Live Arena</span>
+          <div class="sandbox-header-top">
+            <span class="sandbox-tag"><i class="fa fa-gamepad"></i> Interactive Lab 02 &bull; Game Theory</span>
+            <div class="sandbox-top-actions">
+              <span class="sandbox-status-chip">&bull; Live Arena</span>
+              <button type="button" class="sandbox-hud-chip" id="gt-mute-toggle" title="Toggle audio" style="cursor: pointer; border: 1px solid var(--lms-hairline);">
+                <i class="fa fa-volume-up" id="gt-mute-icon"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sandbox-hud-bar">
             <span class="sandbox-hud-chip" id="gt-round-chip">Round: <b id="gt-round-val">1</b> / 8</span>
             <span class="sandbox-hud-chip is-streak" id="gt-streak-chip">Streak: <b id="gt-streak-val">0</b> (<b id="gt-mult-val">×1</b>)</span>
             <span class="sandbox-hud-chip" id="gt-best-chip">Best: <b id="gt-best-val">0</b> pts</span>
-            <button type="button" class="sandbox-hud-chip" id="gt-mute-toggle" title="Toggle audio" style="cursor: pointer; border: 1px solid var(--lms-hairline);">
-              <i class="fa fa-volume-up" id="gt-mute-icon"></i>
-            </button>
           </div>
         </div>
 

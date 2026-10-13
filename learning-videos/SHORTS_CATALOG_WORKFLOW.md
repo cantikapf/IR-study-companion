@@ -41,7 +41,7 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 | # | ID Seri | Topik / Judul Episode | Studi Kasus / Lokasi Geopolitik | Bab Kurikulum Terkait | Status Produksi | Tautan YouTube |
 |---|---|---|---|---|---|---|
 | **01** | `SH-01` | **The Cuban Missile Crisis: One Vote from Oblivion** | San Cristóbal, Selat Florida, & Sargasso Sea (1962) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/WYGiVcO6jNA) |
-| **02** | `SH-02` | **The First Nuclear Strike: Operation Dropshot** | Pangkalan SAC AS, Koridor Bomber Lintas Kutub, & Semipalatinsk (1949) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **RENDERED** — siap upload | - |
+| **02** | `SH-02` | **The First Nuclear Strike: Operation Dropshot** | Pangkalan SAC AS, Koridor Bomber Lintas Kutub, & Semipalatinsk (1949) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/Ws5VoblIcts) |
 | **03** | `SH-03` | **The South China Sea Chokepoint: Nine-Dash Line Standoff** | Kepulauan Spratly, Scarborough Shoal, & Selat Malaka | `_chapters/044-regionalism-in-southeast-asia-asean-community/050-asean-community.md` | Planned | - |
 | **04** | `SH-04` | **The Berlin Air Corridor: Operation Vittles** | 3 Koridor Udara Sekutu Tempelhof vs Blokade Soviet (1948) | `_chapters/012-modern-world-history/100-post-ww.md` | Planned | - |
 | **05** | `SH-05` | **The UN Security Council Veto Trap** | Resolusi Perang Korea 1950 & Boikot Soviet Yakov Malik | `_chapters/045-international-organization-in-international-relations/050-UN-security.md` | Planned | - |
