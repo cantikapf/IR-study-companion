@@ -2,9 +2,9 @@
 
 Dokumen ini adalah **Single Source of Truth (SSOT)** resmi untuk lini produksi konten **YouTube Shorts (@IRinANutshell)** dalam proyek IR Study Companion.
 
-Format resmi lini produksi yang **sudah tayang** (SH-01, SH-02): **Archival Micro-Documentary (HyperFrames)** — foto arsip domain-publik + scrim gelap + karaoke caption, disuarakan **ElevenLabs** (`JBFqnCBsd6RMkjVDRZzb`, word-level timestamps native), di-render via **`hyperframes render`** (1080×1920 30 FPS).
+Format resmi lini produksi YouTube Shorts (@IRinANutshell): **Animated Geopolitical Vector Map (HyperFrames + D3-Geo)** — peta vektor proyeksi riil (polar azimuthal / Mercator) dengan animasi kamera matriks 2D GPU, rute bomber/armada, arc target, dan **kartu dossier foto tokoh/dokumen autentik sebagai inset kecil** saat narasi menjelaskan figur/peristiwa terkait (bukan slideshow foto/teks layar penuh).
 
-Format alternatif/eksperimental: **Animated Geopolitical Vector Map (Vox-Style)** berbasis **D3-Geo + GSAP 60 FPS**, disuarakan oleh **Kokoro-82M ONNX (`af_heart`)**, dan di-render secara **Deterministik via CDP (1080×1920 30 FPS)**.
+Audio: disuarakan narasi profesional (ElevenLabs / Kokoro) dengan sinkronisasi waktu kata deterministik, di-render via **`hyperframes render`** atau **CDP deterministic stepper** (1080×1920 30 FPS). Output tersimpan di `learning-videos/exports/`.
 
 ---
 
@@ -55,23 +55,20 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 
 ## 🛠️ CLI Runner Produksi Cepat
 
-### Jalur kanonik (Archival Micro-Documentary / HyperFrames) — dipakai SH-01 & SH-02
+### Jalur kanonik (Animated Geopolitical Vector Map / HyperFrames) — SH-02 "Operation Dropshot"
 
 ```bash
-cd learning-videos/shorts-experiments/sh-02-operation-dropshot-hf/
+cd learning-videos/shorts-experiments/sh-02-operation-dropshot-map-hf/
 
-# 1. VO + word-level manifest (ElevenLabs) — otomatis menyalin vo_full.mp3 ke audio/
-py -3.13 generate_audio_elevenlabs.py
+# 1. Bangun index.html dari data proyeksi dan audio manifest
+py -3.13 build_html.py
 
-# 2. Bangun index.html dari manifest (deterministik)
-py -3.13 build_composition.py
-
-# 3. Gate QA wajib (lint + runtime + layout + motion + kontras WCAG)
+# 2. Gate QA wajib (lint + runtime + layout + motion + kontras WCAG)
 npx --yes hyperframes@0.8.145 check
 
-# 4. Render rilis — MP4 >50 MB WAJIB ke learning-videos/exports/ (gitignored)
+# 3. Render rilis — MP4 >20 MB ke learning-videos/exports/ (gitignored)
 npx --yes hyperframes@0.8.145 render -q delivery \
-  -o "D:/PERSONAL PROJECT/IR-study-companion/learning-videos/exports/SH02_Operation_Dropshot_Short_1080p.mp4"
+  -o "D:/PERSONAL PROJECT/IR-study-companion/learning-videos/exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4"
 ```
 
 ### Jalur alternatif (Animated Geopolitical Vector Map / D3-Geo)

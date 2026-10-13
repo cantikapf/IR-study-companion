@@ -1,0 +1,751 @@
+{
+  "title": "The First Nuclear Strike: Operation Dropshot",
+  "voice": "George - Captivating Storyteller",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_multilingual_v2",
+  "fps": 30,
+  "totalSec": 56.288,
+  "totalFrames": 1689,
+  "beats": [
+    {
+      "id": "b1_hook",
+      "beat": 1,
+      "asset": "jcs_bradley_swearing_in_1949.jpg",
+      "kicker": "CLASSIFIED WAR PLAN · 1949",
+      "headline": "A PLAN FOR TOTAL WAR",
+      "text": "In December nineteen forty-nine, American planners drafted a secret strike to destroy an empire, betting on an arsenal that did not yet exist.",
+      "focus": "Joint Chiefs Classified War Plan",
+      "chip1_label": "ORIGINATING BODY",
+      "chip1_value": "US JOINT CHIEFS OF STAFF",
+      "chip2_label": "PLANNING DATE",
+      "chip2_value": "DECEMBER 1949",
+      "docket": "WAR PLAN CONCEPTION · DOC REF JCS-1949",
+      "startSec": 0.0,
+      "endSec": 8.359,
+      "startFrame": 0,
+      "endFrame": 251,
+      "words": [
+        {
+          "w": "In",
+          "start": 0.0,
+          "end": 0.197
+        },
+        {
+          "w": "December",
+          "start": 0.197,
+          "end": 0.662
+        },
+        {
+          "w": "nineteen",
+          "start": 0.662,
+          "end": 1.057
+        },
+        {
+          "w": "forty-nine,",
+          "start": 1.057,
+          "end": 1.916
+        },
+        {
+          "w": "American",
+          "start": 1.916,
+          "end": 2.45
+        },
+        {
+          "w": "planners",
+          "start": 2.45,
+          "end": 2.856
+        },
+        {
+          "w": "drafted",
+          "start": 2.856,
+          "end": 3.286
+        },
+        {
+          "w": "a",
+          "start": 3.286,
+          "end": 3.379
+        },
+        {
+          "w": "secret",
+          "start": 3.379,
+          "end": 3.796
+        },
+        {
+          "w": "strike",
+          "start": 3.796,
+          "end": 4.168
+        },
+        {
+          "w": "to",
+          "start": 4.168,
+          "end": 4.284
+        },
+        {
+          "w": "destroy",
+          "start": 4.284,
+          "end": 4.702
+        },
+        {
+          "w": "an",
+          "start": 4.702,
+          "end": 4.807
+        },
+        {
+          "w": "empire,",
+          "start": 4.807,
+          "end": 5.631
+        },
+        {
+          "w": "betting",
+          "start": 5.631,
+          "end": 6.026
+        },
+        {
+          "w": "on",
+          "start": 6.026,
+          "end": 6.142
+        },
+        {
+          "w": "an",
+          "start": 6.142,
+          "end": 6.281
+        },
+        {
+          "w": "arsenal",
+          "start": 6.281,
+          "end": 6.815
+        },
+        {
+          "w": "that",
+          "start": 6.815,
+          "end": 6.966
+        },
+        {
+          "w": "did",
+          "start": 6.966,
+          "end": 7.129
+        },
+        {
+          "w": "not",
+          "start": 7.129,
+          "end": 7.291
+        },
+        {
+          "w": "yet",
+          "start": 7.291,
+          "end": 7.5
+        },
+        {
+          "w": "exist.",
+          "start": 7.5,
+          "end": 8.359
+        }
+      ]
+    },
+    {
+      "id": "b2_the_plan",
+      "beat": 2,
+      "asset": "soviet_strategic_urban_targets_1945.jpg",
+      "kicker": "PROJECTED 1957 CAMPAIGN",
+      "headline": "300 ATOMIC BOMBS · 100 CITIES",
+      "text": "Codenamed Dropshot, it projected war in nineteen fifty-seven: three hundred atomic bombs across one hundred cities, destroying eighty-five percent of Soviet industry.",
+      "focus": "Dropshot War Plan Assumptions",
+      "chip1_label": "PLANNED WEAPONS",
+      "chip1_value": "300 ATOMIC · 29,000 HE BOMBS",
+      "chip2_label": "PLANNED TARGETS",
+      "chip2_value": "100 CITIES · 85% INDUSTRY",
+      "docket": "TARGET LIST & DAMAGE · DOC REF JCS-1949",
+      "startSec": 8.659,
+      "endSec": 18.504,
+      "startFrame": 260,
+      "endFrame": 555,
+      "words": [
+        {
+          "w": "Codenamed",
+          "start": 8.659,
+          "end": 9.263
+        },
+        {
+          "w": "Dropshot,",
+          "start": 9.263,
+          "end": 10.006
+        },
+        {
+          "w": "it",
+          "start": 10.006,
+          "end": 10.157
+        },
+        {
+          "w": "projected",
+          "start": 10.157,
+          "end": 10.691
+        },
+        {
+          "w": "war",
+          "start": 10.691,
+          "end": 10.981
+        },
+        {
+          "w": "in",
+          "start": 10.981,
+          "end": 11.12
+        },
+        {
+          "w": "nineteen",
+          "start": 11.12,
+          "end": 11.492
+        },
+        {
+          "w": "fifty-seven:",
+          "start": 11.492,
+          "end": 12.63
+        },
+        {
+          "w": "three",
+          "start": 12.63,
+          "end": 12.931
+        },
+        {
+          "w": "hundred",
+          "start": 12.931,
+          "end": 13.245
+        },
+        {
+          "w": "atomic",
+          "start": 13.245,
+          "end": 13.663
+        },
+        {
+          "w": "bombs",
+          "start": 13.663,
+          "end": 14.034
+        },
+        {
+          "w": "across",
+          "start": 14.034,
+          "end": 14.383
+        },
+        {
+          "w": "one",
+          "start": 14.383,
+          "end": 14.592
+        },
+        {
+          "w": "hundred",
+          "start": 14.592,
+          "end": 14.905
+        },
+        {
+          "w": "cities,",
+          "start": 14.905,
+          "end": 15.59
+        },
+        {
+          "w": "destroying",
+          "start": 15.59,
+          "end": 16.159
+        },
+        {
+          "w": "eighty-five",
+          "start": 16.159,
+          "end": 16.705
+        },
+        {
+          "w": "percent",
+          "start": 16.705,
+          "end": 17.146
+        },
+        {
+          "w": "of",
+          "start": 17.146,
+          "end": 17.262
+        },
+        {
+          "w": "Soviet",
+          "start": 17.262,
+          "end": 17.68
+        },
+        {
+          "w": "industry.",
+          "start": 17.68,
+          "end": 18.504
+        }
+      ]
+    },
+    {
+      "id": "b3_the_delivery",
+      "beat": 3,
+      "asset": "b36_peacemaker_flight_1949.jpg",
+      "kicker": "STRATEGIC AIR COMMAND",
+      "headline": "NO MISSILES · BOMBERS ONLY",
+      "text": "With no missiles yet invented, every bomb required Strategic Air Command heavy bombers, flying Arctic routes from forward bases.",
+      "focus": "Heavy Bomber Arctic Delivery",
+      "chip1_label": "DELIVERY VEHICLE",
+      "chip1_value": "B-36 & B-50 HEAVY BOMBERS",
+      "chip2_label": "STRIKE ROUTE",
+      "chip2_value": "ARCTIC POLAR CORRIDORS",
+      "docket": "SAC FLIGHT PROFILES · DOC REF JCS-1949",
+      "startSec": 18.804,
+      "endSec": 26.978,
+      "startFrame": 564,
+      "endFrame": 809,
+      "words": [
+        {
+          "w": "With",
+          "start": 18.804,
+          "end": 19.083
+        },
+        {
+          "w": "no",
+          "start": 19.083,
+          "end": 19.28
+        },
+        {
+          "w": "missiles",
+          "start": 19.28,
+          "end": 19.744
+        },
+        {
+          "w": "yet",
+          "start": 19.744,
+          "end": 19.942
+        },
+        {
+          "w": "invented,",
+          "start": 19.942,
+          "end": 20.766
+        },
+        {
+          "w": "every",
+          "start": 20.766,
+          "end": 21.091
+        },
+        {
+          "w": "bomb",
+          "start": 21.091,
+          "end": 21.393
+        },
+        {
+          "w": "required",
+          "start": 21.393,
+          "end": 21.869
+        },
+        {
+          "w": "Strategic",
+          "start": 21.869,
+          "end": 22.554
+        },
+        {
+          "w": "Air",
+          "start": 22.554,
+          "end": 22.786
+        },
+        {
+          "w": "Command",
+          "start": 22.786,
+          "end": 23.239
+        },
+        {
+          "w": "heavy",
+          "start": 23.239,
+          "end": 23.529
+        },
+        {
+          "w": "bombers,",
+          "start": 23.529,
+          "end": 24.319
+        },
+        {
+          "w": "flying",
+          "start": 24.319,
+          "end": 24.772
+        },
+        {
+          "w": "Arctic",
+          "start": 24.772,
+          "end": 25.224
+        },
+        {
+          "w": "routes",
+          "start": 25.224,
+          "end": 25.538
+        },
+        {
+          "w": "from",
+          "start": 25.538,
+          "end": 25.758
+        },
+        {
+          "w": "forward",
+          "start": 25.758,
+          "end": 26.13
+        },
+        {
+          "w": "bases.",
+          "start": 26.13,
+          "end": 26.977
+        }
+      ]
+    },
+    {
+      "id": "b4_the_counter",
+      "beat": 4,
+      "asset": "joe1_fallout_tracking_map_1949.jpg",
+      "kicker": "SOVIET ATOMIC BREAKTHROUGH",
+      "headline": "THE MONOPOLY ENDS · RDS-1",
+      "text": "In August nineteen forty-nine, Moscow detonated R-D-S-one at Semipalatinsk, ending America's atomic monopoly years ahead of schedule.",
+      "focus": "First Soviet Atomic Detonation",
+      "chip1_label": "FIRST SOVIET TEST",
+      "chip1_value": "29 AUGUST 1949 · RDS-1",
+      "chip2_label": "TEST LOCATION",
+      "chip2_value": "SEMIPALATINSK, KAZAKHSTAN",
+      "docket": "AFOAT-1 DETECTION · DOC REF EBB-286",
+      "startSec": 27.278,
+      "endSec": 36.427,
+      "startFrame": 818,
+      "endFrame": 1093,
+      "words": [
+        {
+          "w": "In",
+          "start": 27.278,
+          "end": 27.499
+        },
+        {
+          "w": "August",
+          "start": 27.499,
+          "end": 28.067
+        },
+        {
+          "w": "nineteen",
+          "start": 28.067,
+          "end": 28.485
+        },
+        {
+          "w": "forty-nine,",
+          "start": 28.485,
+          "end": 29.437
+        },
+        {
+          "w": "Moscow",
+          "start": 29.437,
+          "end": 29.902
+        },
+        {
+          "w": "detonated",
+          "start": 29.902,
+          "end": 30.552
+        },
+        {
+          "w": "R-D-S-one",
+          "start": 30.552,
+          "end": 31.574
+        },
+        {
+          "w": "at",
+          "start": 31.574,
+          "end": 31.713
+        },
+        {
+          "w": "Semipalatinsk,",
+          "start": 31.713,
+          "end": 32.967
+        },
+        {
+          "w": "ending",
+          "start": 32.967,
+          "end": 33.338
+        },
+        {
+          "w": "America's",
+          "start": 33.338,
+          "end": 33.803
+        },
+        {
+          "w": "atomic",
+          "start": 33.803,
+          "end": 34.209
+        },
+        {
+          "w": "monopoly",
+          "start": 34.209,
+          "end": 34.906
+        },
+        {
+          "w": "years",
+          "start": 34.906,
+          "end": 35.231
+        },
+        {
+          "w": "ahead",
+          "start": 35.231,
+          "end": 35.475
+        },
+        {
+          "w": "of",
+          "start": 35.475,
+          "end": 35.579
+        },
+        {
+          "w": "schedule.",
+          "start": 35.579,
+          "end": 36.427
+        }
+      ]
+    },
+    {
+      "id": "b5_the_verdict",
+      "beat": 5,
+      "asset": "buster_jangle_nuclear_test_1951.jpg",
+      "kicker": "STRATEGIC REVISION",
+      "headline": "WAR PLAN SHELVED",
+      "text": "Dropshot was never launched. Once both superpowers held the bomb, a first strike meant mutual destruction, creating nuclear deterrence.",
+      "focus": "Shift to Nuclear Deterrence",
+      "chip1_label": "OPERATIONAL STATUS",
+      "chip1_value": "NEVER EXECUTED · WITHDRAWN 1951",
+      "chip2_label": "DOCTRINE SHIFT",
+      "chip2_value": "FIRST STRIKE TO DETERRENCE",
+      "docket": "STRATEGIC REVISION · DOC REF JCS-1951",
+      "startSec": 36.727,
+      "endSec": 44.714,
+      "startFrame": 1102,
+      "endFrame": 1341,
+      "words": [
+        {
+          "w": "Dropshot",
+          "start": 36.727,
+          "end": 37.284
+        },
+        {
+          "w": "was",
+          "start": 37.284,
+          "end": 37.458
+        },
+        {
+          "w": "never",
+          "start": 37.458,
+          "end": 37.725
+        },
+        {
+          "w": "launched.",
+          "start": 37.725,
+          "end": 38.48
+        },
+        {
+          "w": "Once",
+          "start": 38.48,
+          "end": 38.782
+        },
+        {
+          "w": "both",
+          "start": 38.782,
+          "end": 39.084
+        },
+        {
+          "w": "superpowers",
+          "start": 39.084,
+          "end": 39.699
+        },
+        {
+          "w": "held",
+          "start": 39.699,
+          "end": 39.955
+        },
+        {
+          "w": "the",
+          "start": 39.955,
+          "end": 40.071
+        },
+        {
+          "w": "bomb,",
+          "start": 40.071,
+          "end": 40.547
+        },
+        {
+          "w": "a",
+          "start": 40.547,
+          "end": 40.709
+        },
+        {
+          "w": "first",
+          "start": 40.709,
+          "end": 41.023
+        },
+        {
+          "w": "strike",
+          "start": 41.023,
+          "end": 41.441
+        },
+        {
+          "w": "meant",
+          "start": 41.441,
+          "end": 41.708
+        },
+        {
+          "w": "mutual",
+          "start": 41.708,
+          "end": 42.091
+        },
+        {
+          "w": "destruction,",
+          "start": 42.091,
+          "end": 42.892
+        },
+        {
+          "w": "creating",
+          "start": 42.892,
+          "end": 43.391
+        },
+        {
+          "w": "nuclear",
+          "start": 43.391,
+          "end": 43.797
+        },
+        {
+          "w": "deterrence.",
+          "start": 43.797,
+          "end": 44.715
+        }
+      ]
+    },
+    {
+      "id": "b6_the_irony",
+      "beat": 6,
+      "asset": "truman_oval_office_defense_1949.jpg",
+      "kicker": "DECLASSIFIED 1977",
+      "headline": "THE PAPER ARSENAL",
+      "text": "Declassified in nineteen seventy-seven, Dropshot held a final irony: in nineteen forty-nine, America had only about one hundred seventy warheads for a three-hundred-bomb war.",
+      "focus": "1949 Stockpile Reality vs Projection",
+      "chip1_label": "1949 US STOCKPILE",
+      "chip1_value": "~170 ATOMIC WARHEADS",
+      "chip2_label": "DECLASSIFICATION",
+      "chip2_value": "PUBLIC RELEASE IN 1977",
+      "docket": "DECLASSIFIED RECORD · DOC REF JCS-1977",
+      "startSec": 45.014,
+      "endSec": 55.928,
+      "startFrame": 1350,
+      "endFrame": 1678,
+      "words": [
+        {
+          "w": "Declassified",
+          "start": 45.014,
+          "end": 45.885
+        },
+        {
+          "w": "in",
+          "start": 45.885,
+          "end": 46.012
+        },
+        {
+          "w": "nineteen",
+          "start": 46.012,
+          "end": 46.407
+        },
+        {
+          "w": "seventy-seven,",
+          "start": 46.407,
+          "end": 47.429
+        },
+        {
+          "w": "Dropshot",
+          "start": 47.429,
+          "end": 47.963
+        },
+        {
+          "w": "held",
+          "start": 47.963,
+          "end": 48.207
+        },
+        {
+          "w": "a",
+          "start": 48.207,
+          "end": 48.311
+        },
+        {
+          "w": "final",
+          "start": 48.311,
+          "end": 48.694
+        },
+        {
+          "w": "irony:",
+          "start": 48.694,
+          "end": 49.774
+        },
+        {
+          "w": "in",
+          "start": 49.774,
+          "end": 49.948
+        },
+        {
+          "w": "nineteen",
+          "start": 49.948,
+          "end": 50.343
+        },
+        {
+          "w": "forty-nine,",
+          "start": 50.343,
+          "end": 51.167
+        },
+        {
+          "w": "America",
+          "start": 51.167,
+          "end": 51.678
+        },
+        {
+          "w": "had",
+          "start": 51.678,
+          "end": 51.852
+        },
+        {
+          "w": "only",
+          "start": 51.852,
+          "end": 52.143
+        },
+        {
+          "w": "about",
+          "start": 52.143,
+          "end": 52.456
+        },
+        {
+          "w": "one",
+          "start": 52.456,
+          "end": 52.665
+        },
+        {
+          "w": "hundred",
+          "start": 52.665,
+          "end": 53.002
+        },
+        {
+          "w": "seventy",
+          "start": 53.002,
+          "end": 53.431
+        },
+        {
+          "w": "warheads",
+          "start": 53.431,
+          "end": 54.081
+        },
+        {
+          "w": "for",
+          "start": 54.081,
+          "end": 54.279
+        },
+        {
+          "w": "a",
+          "start": 54.279,
+          "end": 54.348
+        },
+        {
+          "w": "three-hundred-bomb",
+          "start": 54.348,
+          "end": 55.242
+        },
+        {
+          "w": "war.",
+          "start": 55.242,
+          "end": 55.927
+        }
+      ]
+    }
+  ]
+}
