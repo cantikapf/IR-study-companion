@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SP-01 · Yalta Photo Story (1945)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-italic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #0d0c0a;
+        color: #fdfbf7;
+        font-family: "Playfair Display", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #0d0c0a;
+      }
+
+      /* ARCHIVAL TOP HEADER */
+      #archival-header {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .header-kicker {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #d4af37;
+        text-transform: uppercase;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-sub {
+        margin-top: 6px;
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: #a8a29e;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-rule {
+        width: 60px;
+        height: 1px;
+        background: rgba(212, 175, 55, 0.45);
+        margin: 12px auto 0;
+      }
+
+      /* CAMERA / PHOTO VIEWPORT */
+      #photo-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      #photo-wrapper {
+        position: absolute;
+        top: 180px;
+        left: 0;
+        width: 1080px;
+        height: 889px;
+        transform-origin: 50% 50%;
+        will-change: transform;
+      }
+
+      #yalta-photo {
+        width: 1080px;
+        height: 889px;
+        display: block;
+        object-fit: cover;
+        filter: sepia(0.15) contrast(1.1) brightness(0.85);
+      }
+
+      /* ARCHIVAL SCRIMS & VIGNETTE */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 280px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(13, 12, 10, 0.96) 0%,
+          rgba(13, 12, 10, 0.6) 55%,
+          rgba(13, 12, 10, 0) 100%
+        );
+        z-index: 10;
+      }
+
+      .botscrim {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1080px;
+        height: 880px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(13, 12, 10, 0) 0%,
+          rgba(13, 12, 10, 0.8) 25%,
+          rgba(13, 12, 10, 0.98) 60%,
+          #0d0c0a 100%
+        );
+        z-index: 10;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 85% 65% at 50% 38%,
+          rgba(13, 12, 10, 0) 35%,
+          rgba(13, 12, 10, 0.5) 70%,
+          rgba(13, 12, 10, 0.95) 100%
+        );
+        z-index: 12;
+      }
+
+      /* FLASH BULB BLOOM — deliberately kept off frame 0 so the poster stays clean */
+      #flash {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: #fff6e6;
+        opacity: 0;
+        mix-blend-mode: screen;
+        z-index: 20;
+      }
+
+      /* EDITORIAL TEXT STAGE */
+      #text-stage {
+        position: absolute;
+        top: 1300px;
+        left: 80px;
+        width: 920px;
+        height: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .story-line {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 1.28;
+        color: #fdfbf7;
+        text-shadow:
+          0 4px 24px rgba(0, 0, 0, 0.98),
+          0 2px 6px rgba(0, 0, 0, 1);
+        opacity: 0;
+        text-align: center;
+        pointer-events: none;
+      }
+
+      .title-climax {
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        text-shadow:
+          0 6px 32px rgba(0, 0, 0, 1),
+          0 2px 8px rgba(0, 0, 0, 1);
+      }
+
+      /* ARCHIVAL FOOTER */
+      #archival-footer {
+        position: absolute;
+        bottom: 60px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .footer-meta {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        color: #78716c;
+        text-transform: uppercase;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="45"
+    >
+      <!-- ARCHIVAL SOUNDSCAPE (Concept D): press-camera shutter + flash pop at 0.00s,
+           a second softer shutter at 1.20s, radio/projector ambience bed underneath.
+           Synthesised by make_sfx.py — no TTS, no third-party samples. -->
+      <audio
+        id="sfx"
+        src="audio/sfx_track.mp3"
+        preload="auto"
+        data-start="0"
+        data-duration="45"
+      ></audio>
+
+      <!-- ARCHIVAL TOP HEADER -->
+      <header id="archival-header" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="header-kicker">HISTORICAL DOSSIER &middot; YALTA 1945</div>
+        <div class="header-sub">LIVADIA PALACE, CRIMEA &middot; FEB 9, 1945</div>
+        <div class="header-rule"></div>
+      </header>
+
+      <!-- CAMERA / PHOTO VIEWPORT -->
+      <div id="photo-stage" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="photo-wrapper">
+          <img
+            id="yalta-photo"
+            src="yalta_original.jpg"
+            alt="The Big Three at Yalta, February 1945"
+          />
+        </div>
+      </div>
+
+      <!-- ARCHIVAL SCRIMS & VIGNETTE -->
+      <div class="topscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div class="botscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div class="vignette" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div id="flash" data-layout-allow-overflow data-layout-allow-occlusion></div>
+
+      <!-- EDITORIAL TEXT STAGE (BOTTOM-THIRD, y:1200-1700) -->
+      <div id="text-stage" data-layout-allow-overflow>
+        <!-- BEAT 1 — HOOK (0.0s – 5.0s) : 1.2 s of frozen print + shutter, then the double-take -->
+        <div class="story-line" id="t1">Look at this photo again.</div>
+        <div class="story-line" id="t2">One of these men will be dead in 60 days.</div>
+
+        <!-- BEAT 2 — ROOSEVELT (5.0s – 15.0s) : pay off the wrong guess -->
+        <div class="story-line" id="t3">Not the oldest.</div>
+        <div class="story-line" id="t4">The one in the middle.</div>
+        <div class="story-line" id="t5">Roosevelt was dying.</div>
+        <div class="story-line" id="t6">His hands shook too badly to pour his own coffee.</div>
+
+        <!-- BEAT 3 — STALIN (15.0s – 25.0s) -->
+        <div class="story-line" id="t7">Stalin sat in the center. Not by accident.</div>
+        <div class="story-line" id="t8">He demanded Eastern Europe.</div>
+        <div class="story-line" id="t9">He got it.</div>
+
+        <!-- BEAT 4 — CHURCHILL (25.0s – 35.0s) -->
+        <div class="story-line" id="t10">Churchill won the war.</div>
+        <div class="story-line" id="t11">Five months later, Britain voted him out.</div>
+        <div class="story-line" id="t12">He called it &ldquo;the ingratitude of the British people.&rdquo;</div>
+
+        <!-- BEAT 5 — REVEAL (35.0s – 45.0s) -->
+        <div class="story-line" id="t13">This photo was taken February 1945.</div>
+        <div class="story-line" id="t14">Roosevelt dead by April. Churchill out by July.</div>
+        <div class="story-line" id="t15">Stalin ruled for eight more years.</div>
+        <div class="story-line title-climax" id="t16">One photo. Three empires.</div>
+      </div>
+
+      <!-- ARCHIVAL FOOTER -->
+      <footer id="archival-footer" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="footer-meta">US NATIONAL ARCHIVES &middot; 111-SC-260486</div>
+      </footer>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // ---- CAMERA ---------------------------------------------------------
+      // 0.00–1.20 : the print is FROZEN. No motion at all — the shutter does the work.
+      tl.set("#photo-wrapper", { scale: 1.0, x: 0, y: 0 }, 0);
+      // 1.20 : hard SNAP re-frame to a mid crop (the double-take), then a slow drift
+      tl.fromTo(
+        "#photo-wrapper",
+        { scale: 1.55, x: 0, y: 150 },
+        { scale: 1.62, x: -30, y: 170, duration: 3.8, ease: "none" },
+        1.2
+      );
+      tl.fromTo(
+        "#photo-wrapper",
+        { scale: 1.62, x: -30, y: 170 },
+        { scale: 2.2, x: 9, y: 316, duration: 3.2, ease: "power2.inOut" },
+        5.0
+      );
+      tl.to("#photo-wrapper", { scale: 2.28, x: 12, y: 326, duration: 6.4, ease: "none" }, 8.2);
+      tl.fromTo(
+        "#photo-wrapper",
+        { scale: 2.28, x: 12, y: 326 },
+        { scale: 2.05, x: -628, y: 292, duration: 3.2, ease: "power1.inOut" },
+        14.6
+      );
+      tl.to("#photo-wrapper", { scale: 2.12, x: -642, y: 300, duration: 6.8, ease: "none" }, 17.8);
+      tl.fromTo(
+        "#photo-wrapper",
+        { scale: 2.12, x: -642, y: 300 },
+        { scale: 2.05, x: 740, y: 292, duration: 3.5, ease: "power1.inOut" },
+        24.6
+      );
+      tl.to("#photo-wrapper", { scale: 2.12, x: 752, y: 300, duration: 6.5, ease: "none" }, 28.1);
+      tl.fromTo(
+        "#photo-wrapper",
+        { scale: 2.12, x: 752, y: 300 },
+        { scale: 1.0, x: 0, y: 0, duration: 3.8, ease: "power2.inOut" },
+        34.6
+      );
+      tl.to("#photo-wrapper", { scale: 1.05, x: 0, y: 0, duration: 6.6, ease: "none" }, 38.4);
+
+      // ---- FLASH BULB -----------------------------------------------------
+      // Frame 0 stays clean (thumbnail safe); the bulb pops a hair after the shutter.
+      tl.set("#flash", { opacity: 0 }, 0);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.55, duration: 0.03, ease: "none" }, 0.04);
+      tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.out" }, 0.07);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.34, duration: 0.03, ease: "none" }, 1.2);
+      tl.to("#flash", { opacity: 0, duration: 0.26, ease: "power2.out" }, 1.23);
+
+      // ---- BEAT 1 — HOOK (0.0s – 5.0s) ------------------------------------
+      tl.to("#t1", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 1.35);
+      tl.to("#t1", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 2.75);
+      tl.to("#t2", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 2.95);
+      tl.to("#t2", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 4.7);
+
+      // ---- BEAT 2 — ROOSEVELT (5.0s – 15.0s) ------------------------------
+      tl.to("#t3", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 6.3);
+      tl.to("#t3", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 7.4);
+      tl.to("#t4", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 7.6);
+      tl.to("#t4", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 9.0);
+      tl.to("#t5", { opacity: 1, duration: 0.35, ease: "power1.inOut" }, 9.2);
+      tl.to("#t5", { opacity: 0, duration: 0.25, ease: "power1.inOut" }, 11.0);
+      tl.to("#t6", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 11.2);
+      tl.to("#t6", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 14.3);
+
+      // ---- BEAT 3 — STALIN (15.0s – 25.0s) --------------------------------
+      tl.to("#t7", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 16.0);
+      tl.to("#t7", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 18.5);
+      tl.to("#t8", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 19.0);
+      tl.to("#t8", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 20.6);
+      tl.to("#t9", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 21.0);
+      tl.to("#t9", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 24.3);
+
+      // ---- BEAT 4 — CHURCHILL (25.0s – 35.0s) -----------------------------
+      tl.to("#t10", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 26.0);
+      tl.to("#t10", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 28.0);
+      tl.to("#t11", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 28.5);
+      tl.to("#t11", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 31.0);
+      tl.to("#t12", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 31.5);
+      tl.to("#t12", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 34.3);
+
+      // ---- BEAT 5 — REVEAL (35.0s – 45.0s) --------------------------------
+      tl.to("#t13", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 36.0);
+      tl.to("#t13", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 37.6);
+      tl.to("#t14", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 38.0);
+      tl.to("#t14", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 40.1);
+      tl.to("#t15", { opacity: 1, duration: 0.4, ease: "power1.inOut" }, 40.5);
+      tl.to("#t15", { opacity: 0, duration: 0.3, ease: "power1.inOut" }, 42.6);
+      tl.to("#t16", { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 43.0);
+
+      // ROOT TIMELINE EXPORT FOR HYPERFRAMES RUNNER
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // PREVIEW AUTOPLAY (WHEN OPENED DIRECTLY IN BROWSER OUTSIDE HYPERFRAMES)
+      if (!window.__hyperframes && !window.__HF_SEEK_MODE__ && !window.__HYPERFRAMES_RECORDING__) {
+        if (window.top === window) {
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+            tl.play();
+          } else {
+            window.addEventListener("DOMContentLoaded", () => tl.play());
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

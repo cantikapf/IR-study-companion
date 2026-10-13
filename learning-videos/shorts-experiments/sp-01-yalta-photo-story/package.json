@@ -1,0 +1,10 @@
+{
+  "name": "sp-01-yalta-photo-story",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.150 preview",
+    "check": "npx --yes hyperframes@0.8.150 check",
+    "render": "npx --yes hyperframes@0.8.150 render -o ../../exports/SP01_Yalta_Photo_Story_Short_1080p.mp4 -q delivery"
+  }
+}

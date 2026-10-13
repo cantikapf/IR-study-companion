@@ -13,6 +13,16 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Eksperimen Format Baru SP-01 "Yalta Photo Story" (Single Photo Story, Konsep A + D, Hook 3 Detik):
+1. `Konteks & Masalah`: Rilis pertama SP-01 (foto arsip tunggal + Ken Burns + teks editorial) dinilai user tidak menarik pada 3 detik pertama — hook lama `"Three men sat for this photo."` hanya mendeskripsikan gambar di atas frame yang sudah bergerak, tidak ada taruhan/pertanyaan terbuka.
+2. `Konsep A — Double-Take / Replay Bait`:
+   - Frame 0–1,2 s dibekukan total (nol teks, nol gerak kamera), lalu SNAP keras ke crop 1,55× saat baris pertama masuk. Keraguan "aku kelewat sesuatu?" inilah yang mendorong rewatch rate.
+   - Hook diganti jadi pertanyaan yang dijawab salah: `"One of these men will be dead in 60 days."` lalu dibayar di Beat 2 dengan `"Not the oldest. The one in the middle."` (Churchill yang terlihat paling tua bukan yang dimaksud).
+   - Flash bloom sengaja ditunda ke 0,04 s agar frame 0 tetap bersih sebagai kandidat thumbnail.
+3. `Konsep D — Archival Soundscape`: SFX dibangkitkan sendiri oleh `make_sfx.py` (numpy + `wave` + ffmpeg, tanpa sampel pihak ketiga): shutter + flash bulb di 0,00 s, shutter kedua di 1,20 s, bed radio crackle + flutter proyektor film dinormalisasi ke −38 dBFS rms. Tidak ada TTS, tidak ada musik.
+4. `Verifikasi Empiris`: `hyperframes check` 0 error / 5-5 WCAG AA · stream AAC 48 kHz stereo terbukti ada · delta piksel frame-0 vs 1,0 s = 0,62 (0,3 % berubah → benar-benar beku) · vs 0,15 s = 99,3 % (flash menyala) · vs 1,6 s = 48,4 % (snap + teks) · piksel terang di band teks pada 0,0/0,15/1,0 s = **0** (poster bersih) · `pytest` 373/373 PASS.
+5. `Artefak`: `learning-videos/shorts-experiments/sp-01-yalta-photo-story/` (README, index.html, make_sfx.py, qa_stills) → export `learning-videos/exports/SP01_Yalta_Photo_Story_Short_1080p.mp4` (32,3 MB, 45 s). Draft lama diarsipkan sebagai `SP01_Yalta_Photo_Story_v1_silent_hook.mp4`.
+
 2026-10-13 - Perbaikan Layout Header Sandbox Lab 02 Homepage (Pemisahan Header & HUD Bar):
 1. `Root Cause`: Kontainer flex satu baris `.sandbox-header` dipaksa menampung judul lab dan 5 chip status/HUD sekaligus di dalam kolom split ~540px. Akibat ketiadaan `white-space: nowrap`, teks `GAME THEORY` terpotong paksa dua baris dan badge HUD runtuh asimetris meninggalkan ruang kosong di baris kedua.
 2. `Perbaikan Layout`:
