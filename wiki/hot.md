@@ -13,6 +13,21 @@ tags:
 
 ## Last Updated
 
+2026-10-13 - Rilis Final Short SH-02 "Operation Dropshot" (Animasi Geopolitical Vector Map, Rute Pesawat B-36 & WB-29, Eliminasi Ruang Kosong):
+1. `Penyempurnaan Layout Vertikal & Eliminasi Dead Space Bawah`:
+   - Membuang balok scrim hitam pekat 35% di bagian bawah layar. Proyeksi polar Arktik diperluas ke bawah ($y = 840$, scale 620).
+   - Menambahkan strip telemetri deklasifikasi militer di $y = 1475\text{px}$ yang menghubungkan panggung peta dengan panel subtitle (misal: `PLANNING BODY: US JCS` · `ORIGIN DATE: DECEMBER 1949`).
+   - Reposisi panel subtitle ke $y = 1535\text{px}$ tepat di atas area aman UI native YouTube Shorts / TikTok (ruang vertikal terisi penuh dan seimbang).
+2. `Animasi Pesawat Terbang & Visual Taktis`:
+   - B-36 Peacemaker (Beat 3): 3 pembom strategis dengan siluet 6 mesin pusher-propeller dan asap knalpot contrail beranimasi mulus melintasi kurva proyeksi Arktik dari pangkalan Alaska, Thule Greenland, dan Inggris menuju perbatasan Soviet.
+   - Detonasi RDS-1 Semipalatinsk (Beat 4): Fireball multi-stage, simbol trefoil radiasi berputar, 3 lapis cincin gelombang kejut, dan massa awan debu radioaktif melayang ke timur laut Siberia.
+   - AFOAT-1 WB-29 (Beat 4): Pesawat pengintai atmosfer 4 mesin terbang menyusuri koridor sian di atas Siberia untuk mencegat dan mengambil sampel awan partikel radioaktif.
+   - Target Drops (Beat 2): Crosshair target jatuh berurutan di 7 kota industri utama Soviet (Moskow, Leningrad, Chelyabinsk, Sverdlovsk, Gorky, Novosibirsk, Baku).
+3. `Hasil Render Final`:
+   - Lolos audit `hyperframes check`: 0 errors, 145/145 WCAG AA pass.
+   - Output MP4: `learning-videos/exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4` (**24.0 MB · 1080×1920 · 30 FPS · 56.3s · 1689 frames**).
+   - Verifikasi tangkapan layar render aktual via `vision_analyze` di $t = 23.5\text{s}$ dan $t = 29.5\text{s}$ mengonfirmasi mutu produksi pixel-sharp, pergerakan pesawat akurat, dan nol cacat layout.
+
 2026-10-13 - Sync Curriculum Explorer Video Chips CH050, CH060, CH070:
 1. `Root Cause Diagnosis`: Di `_pages/index.md` dan `prototype/home.html`, dataset `CX_DATA` dibuat statis pada 8 Oktober 2026 saat video yang terbit baru CH010-CH040 (`v: true`). Ketika video mindmap CH050 (Marxism), CH060 (Constructivism), dan CH070 (Global Finance & Trade) diproduksi dan dipublikasikan ke YouTube dengan frontmatter `youtube_id`, flag `v` pada objek `CX_DATA` di homepage terlewat diperbarui sehingga badge `VIDEO` tidak muncul di Curriculum Explorer.
 2. `Perbaikan`: Memperbarui `CX_DATA` M010 di `_pages/index.md` dan `prototype/home.html` agar `basic-marxism`, `basic-constructivism`, dan `global-finance-and-global-trade-as-agendas` bernilai `v: true`.

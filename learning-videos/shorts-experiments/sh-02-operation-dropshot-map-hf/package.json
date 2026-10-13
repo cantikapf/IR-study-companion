@@ -5,6 +5,6 @@
   "scripts": {
     "dev": "npx --yes hyperframes@0.8.145 preview",
     "check": "npx --yes hyperframes@0.8.145 check",
-    "render": "npx --yes hyperframes@0.8.145 render -o ../../../exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4 -q delivery"
+    "render": "npx --yes hyperframes@0.8.145 render -o ../../exports/SH02_Operation_Dropshot_Map_Animation_Short_1080p.mp4 -q delivery"
   }
 }
