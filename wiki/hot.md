@@ -13,6 +13,18 @@ tags:
 
 ## Last Updated
 
+2026-10-14 - Penggantian Globe Homepage ke Animasi Vektor Interaktif (Main Codebase):
+1. `Konteks`: Mengganti animasi wireframe SVG statis di hero section homepage (`_pages/index.md` & `prototype/home.html`) dengan globe vektor interaktif berbasis D3-Geo Orthographic (`world-atlas` 110m).
+2. `Fitur Interaktif`:
+   - Vektor benua autentik riil, graticule 30°, dan rute diplomatik geodesik 3 paradigma (Realism merah, Liberalism/IPE kuning, Constructivism biru).
+   - Hold & drag pointer engine responsif dengan `setPointerCapture(e.pointerId)`, rotasi horizontal (0.35°/px) & pitch vertikal (±55°), serta inersia kinetik halus (flick).
+   - Continuous auto-cruise spin 10°/detik dengan badge telemetri sudut rotasi real-time.
+   - Dual-theme support otomatis (light theme & `body.dark-theme`).
+3. `Verifikasi & QA`:
+   - Headless Chrome (`drive.mjs`): Auto-spin PASS, mouse drag PASS, `console: clean` (0 error).
+   - Jekyll build SSG: Berhasil 100% (`_site/` terbangun dalam 89.9 detik).
+   - Test suite pytest: 378/378 PASS.
+
 2026-10-14 - Produksi Lengkap YouTube Shorts Single Photo Story SP-02 ("The Checkpoint Charlie Tank Standoff, 1961"):
 1. `Konteks & Format`: Produksi video Shorts Single Photo Story ke-2 kanonik (@IRinANutshell) pendamping materi Krisis Berlin 1961 (`_chapters/012-modern-world-history/120-domino-cold-war.md`).
 2. `Arsip Foto Autentik`: Menggunakan foto arsip resolusi ultra-tinggi 3013×2478 Public Domain (USAMHI / NARA / Wikimedia Commons) konfrontasi Friedrichstraße 27–28 Oktober 1961.
