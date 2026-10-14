@@ -1,0 +1,96 @@
+{
+  "fps": 30,
+  "totalDurationSec": 485.769,
+  "totalFrames": 14573,
+  "voice": "Kokoro-82M (af_heart)",
+  "slides": [
+    {
+      "id": 1,
+      "slideNumber": "01 / 08",
+      "title": "The Global Commons Dilemma: Anarchy and the Atmosphere",
+      "startSec": 0.0,
+      "endSec": 49.888,
+      "durationSec": 49.888,
+      "startFrame": 0,
+      "endFrame": 1497,
+      "durationFrames": 1497
+    },
+    {
+      "id": 2,
+      "slideNumber": "02 / 08",
+      "title": "Early Environmental Milestones: From Stockholm to UNEP",
+      "startSec": 50.538,
+      "endSec": 114.847,
+      "durationSec": 64.309,
+      "startFrame": 1516,
+      "endFrame": 3445,
+      "durationFrames": 1929
+    },
+    {
+      "id": 3,
+      "slideNumber": "03 / 08",
+      "title": "Sustainable Development: Brundtland, IPCC, and the Rio Earth Summit",
+      "startSec": 115.497,
+      "endSec": 178.932,
+      "durationSec": 63.435,
+      "startFrame": 3465,
+      "endFrame": 5368,
+      "durationFrames": 1903
+    },
+    {
+      "id": 4,
+      "slideNumber": "04 / 08",
+      "title": "Climate Governance Architecture: UNFCCC and the Kyoto Protocol",
+      "startSec": 179.582,
+      "endSec": 239.606,
+      "durationSec": 60.024,
+      "startFrame": 5387,
+      "endFrame": 7188,
+      "durationFrames": 1801
+    },
+    {
+      "id": 5,
+      "slideNumber": "05 / 08",
+      "title": "Theories Explaining Cooperation: Regime Theory and Epistemic Communities",
+      "startSec": 240.256,
+      "endSec": 303.739,
+      "durationSec": 63.483,
+      "startFrame": 7208,
+      "endFrame": 9112,
+      "durationFrames": 1904
+    },
+    {
+      "id": 6,
+      "slideNumber": "06 / 08",
+      "title": "The Equity Deadlock: Common but Differentiated Responsibilities",
+      "startSec": 304.389,
+      "endSec": 363.602,
+      "durationSec": 59.213,
+      "startFrame": 9132,
+      "endFrame": 10908,
+      "durationFrames": 1776
+    },
+    {
+      "id": 7,
+      "slideNumber": "07 / 08",
+      "title": "Structural Obstacles: Enforcement Deficits and Energy Security",
+      "startSec": 364.252,
+      "endSec": 425.047,
+      "durationSec": 60.795,
+      "startFrame": 10928,
+      "endFrame": 12751,
+      "durationFrames": 1823
+    },
+    {
+      "id": 8,
+      "slideNumber": "08 / 08",
+      "title": "New Climate Pathways: The Paris Architecture and the Ambition Gap",
+      "startSec": 425.697,
+      "endSec": 485.769,
+      "durationSec": 60.072,
+      "startFrame": 12771,
+      "endFrame": 14573,
+      "durationFrames": 1802
+    }
+  ]
+}

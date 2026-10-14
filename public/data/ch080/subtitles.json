@@ -1,0 +1,492 @@
+[
+  {
+    "id": 1,
+    "slideId": 1,
+    "sentenceIndex": 1,
+    "startSec": 0.0,
+    "endSec": 3.776,
+    "startFrame": 0,
+    "endFrame": 113,
+    "text": "Welcome to the architecture of global environmental governance."
+  },
+  {
+    "id": 2,
+    "slideId": 1,
+    "sentenceIndex": 2,
+    "startSec": 4.056,
+    "endSec": 12.696,
+    "startFrame": 122,
+    "endFrame": 381,
+    "text": "Unlike armies or trade tariffs, smog, plastic oceans, and greenhouse gases do not carry passports or stop at national border checkpoints."
+  },
+  {
+    "id": 3,
+    "slideId": 1,
+    "sentenceIndex": 3,
+    "startSec": 12.976,
+    "endSec": 27.568,
+    "startFrame": 389,
+    "endFrame": 827,
+    "text": "When the planet's atmosphere is a shared global commons, every sovereign nation faces a persistent structural temptation to free-ride\u2014enjoying clean planetary air while shifting the painful economic costs of cutting emissions onto others."
+  },
+  {
+    "id": 4,
+    "slideId": 1,
+    "sentenceIndex": 4,
+    "startSec": 27.848,
+    "endSec": 35.827,
+    "startFrame": 835,
+    "endFrame": 1075,
+    "text": "In an anarchic international system without a supranational world police, environmental protection cannot rely on coercion."
+  },
+  {
+    "id": 5,
+    "slideId": 1,
+    "sentenceIndex": 5,
+    "startSec": 36.107,
+    "endSec": 49.888,
+    "startFrame": 1083,
+    "endFrame": 1497,
+    "text": "Addressing transboundary ecological crises forces sovereign states to construct international environmental regimes and treaties, proving that planetary survival requires collective action even in an anarchic world."
+  },
+  {
+    "id": 6,
+    "slideId": 2,
+    "sentenceIndex": 1,
+    "startSec": 50.538,
+    "endSec": 59.434,
+    "startFrame": 1516,
+    "endFrame": 1783,
+    "text": "The modern international environmental movement gained decisive momentum between the late 1960s and early 1970s."
+  },
+  {
+    "id": 7,
+    "slideId": 2,
+    "sentenceIndex": 2,
+    "startSec": 59.714,
+    "endSec": 74.477,
+    "startFrame": 1791,
+    "endFrame": 2234,
+    "text": "In 1968, the United Nations General Assembly recognized the urgent threat of environmental degradation, convening the landmark 1972 UN Conference on the Human Environment in Stockholm, Sweden."
+  },
+  {
+    "id": 8,
+    "slideId": 2,
+    "sentenceIndex": 3,
+    "startSec": 74.757,
+    "endSec": 87.322,
+    "startFrame": 2243,
+    "endFrame": 2620,
+    "text": "At Stockholm, 113 nations adopted the historic Stockholm Declaration containing 26 foundational principles, elevating ecological protection into a permanent global agenda."
+  },
+  {
+    "id": 9,
+    "slideId": 2,
+    "sentenceIndex": 4,
+    "startSec": 87.602,
+    "endSec": 98.951,
+    "startFrame": 2628,
+    "endFrame": 2969,
+    "text": "This watershed gathering produced the United Nations Environment Programme, or UNEP, headquartered in Nairobi, Kenya, as the first dedicated UN agency for planetary ecology."
+  },
+  {
+    "id": 10,
+    "slideId": 2,
+    "sentenceIndex": 5,
+    "startSec": 99.231,
+    "endSec": 114.847,
+    "startFrame": 2977,
+    "endFrame": 3445,
+    "text": "Furthermore, the conference catalyzed national reforms worldwide, spurring the United States to establish the Environmental Protection Agency in 1970 and the United Kingdom its Department of the Environment in 1971."
+  },
+  {
+    "id": 11,
+    "slideId": 3,
+    "sentenceIndex": 1,
+    "startSec": 115.497,
+    "endSec": 127.017,
+    "startFrame": 3465,
+    "endFrame": 3811,
+    "text": "During the 1980s, the international community pioneered the doctrine of sustainable development to overcome the false dichotomy between economic growth and ecological survival."
+  },
+  {
+    "id": 12,
+    "slideId": 3,
+    "sentenceIndex": 2,
+    "startSec": 127.297,
+    "endSec": 135.425,
+    "startFrame": 3819,
+    "endFrame": 4063,
+    "text": "In 1987, the UN World Commission on Environment and Development published the Brundtland Report, titled Our Common Future."
+  },
+  {
+    "id": 13,
+    "slideId": 3,
+    "sentenceIndex": 3,
+    "startSec": 135.705,
+    "endSec": 148.057,
+    "startFrame": 4071,
+    "endFrame": 4442,
+    "text": "Chaired by Gro Harlem Brundtland, the report defined sustainable development as development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+  },
+  {
+    "id": 14,
+    "slideId": 3,
+    "sentenceIndex": 4,
+    "startSec": 148.337,
+    "endSec": 165.468,
+    "startFrame": 4450,
+    "endFrame": 4964,
+    "text": "To anchor policy in rigorous evidence, UNEP and the World Meteorological Organization established the Intergovernmental Panel on Climate Change in 1988, synthesizing scientific literature to build authoritative consensus on anthropogenic warming."
+  },
+  {
+    "id": 15,
+    "slideId": 3,
+    "sentenceIndex": 5,
+    "startSec": 165.748,
+    "endSec": 178.932,
+    "startFrame": 4972,
+    "endFrame": 5368,
+    "text": "This scientific mobilization culminated in the 1992 Rio Earth Summit, producing Agenda 21 and the Rio Declaration to integrate ecological stewardship across worldwide development."
+  },
+  {
+    "id": 16,
+    "slideId": 4,
+    "sentenceIndex": 1,
+    "startSec": 179.582,
+    "endSec": 187.049,
+    "startFrame": 5387,
+    "endFrame": 5611,
+    "text": "By the early 1990s, emerging scientific consensus stimulated direct multilateral legal action."
+  },
+  {
+    "id": 17,
+    "slideId": 4,
+    "sentenceIndex": 2,
+    "startSec": 187.329,
+    "endSec": 194.454,
+    "startFrame": 5620,
+    "endFrame": 5834,
+    "text": "In 1992, world leaders adopted the United Nations Framework Convention on Climate Change, or UNFCCC."
+  },
+  {
+    "id": 18,
+    "slideId": 4,
+    "sentenceIndex": 3,
+    "startSec": 194.734,
+    "endSec": 205.486,
+    "startFrame": 5842,
+    "endFrame": 6165,
+    "text": "The convention established the core objective of stabilizing greenhouse gas concentrations to prevent dangerous anthropogenic interference with the planetary climate system."
+  },
+  {
+    "id": 19,
+    "slideId": 4,
+    "sentenceIndex": 4,
+    "startSec": 205.766,
+    "endSec": 217.393,
+    "startFrame": 6173,
+    "endFrame": 6522,
+    "text": "However, the UNFCCC set purely non-binding limits without formal enforcement mechanisms, relying instead on future protocol updates negotiated at annual Conference of Parties summits."
+  },
+  {
+    "id": 20,
+    "slideId": 4,
+    "sentenceIndex": 5,
+    "startSec": 217.673,
+    "endSec": 227.635,
+    "startFrame": 6530,
+    "endFrame": 6829,
+    "text": "The principal update arrived in 1997 with the Kyoto Protocol, which legally bound developed Annex I parties to quantified emission reductions."
+  },
+  {
+    "id": 21,
+    "slideId": 4,
+    "sentenceIndex": 6,
+    "startSec": 227.915,
+    "endSec": 239.606,
+    "startFrame": 6837,
+    "endFrame": 7188,
+    "text": "To minimize compliance costs, Kyoto introduced market-based emissions trading, allowing states to harness economic incentives by trading carbon allowances across international markets."
+  },
+  {
+    "id": 22,
+    "slideId": 5,
+    "sentenceIndex": 1,
+    "startSec": 240.256,
+    "endSec": 246.144,
+    "startFrame": 7208,
+    "endFrame": 7384,
+    "text": "How does cooperation emerge among sovereign states driven by self-interest and an anarchic system?"
+  },
+  {
+    "id": 23,
+    "slideId": 5,
+    "sentenceIndex": 2,
+    "startSec": 246.424,
+    "endSec": 250.84,
+    "startFrame": 7393,
+    "endFrame": 7525,
+    "text": "International relations scholars deploy two powerful theoretical frameworks."
+  },
+  {
+    "id": 24,
+    "slideId": 5,
+    "sentenceIndex": 3,
+    "startSec": 251.12,
+    "endSec": 268.805,
+    "startFrame": 7534,
+    "endFrame": 8064,
+    "text": "First, Regime Theory demonstrates that international regimes\u2014defined as converged sets of principles, norms, rules, and decision-making procedures\u2014reduce transaction costs, create transparent monitoring systems, and establish expectations of long-term reciprocity."
+  },
+  {
+    "id": 25,
+    "slideId": 5,
+    "sentenceIndex": 4,
+    "startSec": 269.085,
+    "endSec": 274.461,
+    "startFrame": 8073,
+    "endFrame": 8234,
+    "text": "Regimes explain how collective action succeeds despite persistent incentives to defect."
+  },
+  {
+    "id": 26,
+    "slideId": 5,
+    "sentenceIndex": 5,
+    "startSec": 274.741,
+    "endSec": 283.659,
+    "startFrame": 8242,
+    "endFrame": 8510,
+    "text": "Second, Epistemic Communities explain how transnational networks of recognized scientific experts elucidate complex ecological hazards."
+  },
+  {
+    "id": 27,
+    "slideId": 5,
+    "sentenceIndex": 6,
+    "startSec": 283.939,
+    "endSec": 294.157,
+    "startFrame": 8518,
+    "endFrame": 8825,
+    "text": "By aggregating empirical data and framing environmental threats as solvable policy issues, epistemic networks shape how states define their national interests."
+  },
+  {
+    "id": 28,
+    "slideId": 5,
+    "sentenceIndex": 7,
+    "startSec": 294.437,
+    "endSec": 303.739,
+    "startFrame": 8833,
+    "endFrame": 9112,
+    "text": "Furthermore, mechanisms like the Global Environment Facility channel funding to build regulatory and scientific capacity across developing countries."
+  },
+  {
+    "id": 29,
+    "slideId": 6,
+    "sentenceIndex": 1,
+    "startSec": 304.389,
+    "endSec": 314.778,
+    "startFrame": 9132,
+    "endFrame": 9443,
+    "text": "The central ethical and diplomatic battlefield of global climate governance centers on the doctrine of Common but Differentiated Responsibilities, or CBDR."
+  },
+  {
+    "id": 30,
+    "slideId": 6,
+    "sentenceIndex": 2,
+    "startSec": 315.058,
+    "endSec": 327.41,
+    "startFrame": 9452,
+    "endFrame": 9822,
+    "text": "Developed Western economies like the United States, Britain, and Germany powered their wealth through fossil fuels since the Industrial Revolution, consuming the vast majority of the planetary carbon budget."
+  },
+  {
+    "id": 31,
+    "slideId": 6,
+    "sentenceIndex": 3,
+    "startSec": 327.69,
+    "endSec": 334.73,
+    "startFrame": 9831,
+    "endFrame": 10042,
+    "text": "Developing nations rightly contend that historical polluters must lead mitigation and provide climate finance."
+  },
+  {
+    "id": 32,
+    "slideId": 6,
+    "sentenceIndex": 4,
+    "startSec": 335.01,
+    "endSec": 346.274,
+    "startFrame": 10050,
+    "endFrame": 10388,
+    "text": "Conversely, emerging powerhouses like China and India now surpass Western nations in total annual emissions, even though their per capita footprint remains significantly lower."
+  },
+  {
+    "id": 33,
+    "slideId": 6,
+    "sentenceIndex": 5,
+    "startSec": 346.554,
+    "endSec": 355.599,
+    "startFrame": 10397,
+    "endFrame": 10668,
+    "text": "This accounting dilemma is further complicated by global supply chains, where goods consumed in Western markets are manufactured in developing states."
+  },
+  {
+    "id": 34,
+    "slideId": 6,
+    "sentenceIndex": 6,
+    "startSec": 355.879,
+    "endSec": 363.602,
+    "startFrame": 10676,
+    "endFrame": 10908,
+    "text": "Reconciling historical culpability with present emission trajectories remains the fundamental deadlock of climate diplomacy."
+  },
+  {
+    "id": 35,
+    "slideId": 7,
+    "sentenceIndex": 1,
+    "startSec": 364.252,
+    "endSec": 369.585,
+    "startFrame": 10928,
+    "endFrame": 11088,
+    "text": "Achieving binding multilateral climate agreements confronts formidable structural barriers."
+  },
+  {
+    "id": 36,
+    "slideId": 7,
+    "sentenceIndex": 2,
+    "startSec": 369.865,
+    "endSec": 382.815,
+    "startFrame": 11096,
+    "endFrame": 11484,
+    "text": "Foremost is the sovereign enforcement deficit: international environmental law relies entirely on self-enforcement, as treaties lack coercive supranational sanctions to punish non-compliance."
+  },
+  {
+    "id": 37,
+    "slideId": 7,
+    "sentenceIndex": 3,
+    "startSec": 383.095,
+    "endSec": 389.068,
+    "startFrame": 11493,
+    "endFrame": 11672,
+    "text": "This structural vacuum reinforces the temptation to free-ride on other nations' mitigation investments."
+  },
+  {
+    "id": 38,
+    "slideId": 7,
+    "sentenceIndex": 4,
+    "startSec": 389.348,
+    "endSec": 392.655,
+    "startFrame": 11680,
+    "endFrame": 11780,
+    "text": "Second, governments face severe energy security dilemmas."
+  },
+  {
+    "id": 39,
+    "slideId": 7,
+    "sentenceIndex": 5,
+    "startSec": 392.935,
+    "endSec": 402.599,
+    "startFrame": 11788,
+    "endFrame": 12078,
+    "text": "Phasing out entrenched fossil fuel infrastructure threatens reliable, affordable power essential for domestic industrial growth and economic stability."
+  },
+  {
+    "id": 40,
+    "slideId": 7,
+    "sentenceIndex": 6,
+    "startSec": 402.879,
+    "endSec": 409.983,
+    "startFrame": 12086,
+    "endFrame": 12299,
+    "text": "States endowed with vast coal, oil, or gas reserves tenaciously protect the economic value of these assets."
+  },
+  {
+    "id": 41,
+    "slideId": 7,
+    "sentenceIndex": 7,
+    "startSec": 410.263,
+    "endSec": 425.047,
+    "startFrame": 12308,
+    "endFrame": 12751,
+    "text": "Finally, equity concerns dominate developing countries, which prioritize poverty eradication and rising living standards over costly emission curbs, refusing to accept restrictions that would permanently freeze their economic development."
+  },
+  {
+    "id": 42,
+    "slideId": 8,
+    "sentenceIndex": 1,
+    "startSec": 425.697,
+    "endSec": 433.526,
+    "startFrame": 12771,
+    "endFrame": 13006,
+    "text": "To transcend the Kyoto deadlock, the 2015 Paris Agreement inaugurated a revolutionary governance architecture."
+  },
+  {
+    "id": 43,
+    "slideId": 8,
+    "sentenceIndex": 2,
+    "startSec": 433.806,
+    "endSec": 439.395,
+    "startFrame": 13014,
+    "endFrame": 13182,
+    "text": "Abandoning rigid Annex I divisions, Paris mandates climate action from every sovereign state."
+  },
+  {
+    "id": 44,
+    "slideId": 8,
+    "sentenceIndex": 3,
+    "startSec": 439.675,
+    "endSec": 446.097,
+    "startFrame": 13190,
+    "endFrame": 13383,
+    "text": "The treaty aims to limit warming well below two degrees Celsius, pursuing efforts toward one point five degrees."
+  },
+  {
+    "id": 45,
+    "slideId": 8,
+    "sentenceIndex": 4,
+    "startSec": 446.377,
+    "endSec": 459.113,
+    "startFrame": 13391,
+    "endFrame": 13773,
+    "text": "Rather than top-down quotas, countries submit bottom-up Nationally Determined Contributions, updated every five years through an institutional ratchet mechanism designed to escalate ambition over time."
+  },
+  {
+    "id": 46,
+    "slideId": 8,
+    "sentenceIndex": 5,
+    "startSec": 459.393,
+    "endSec": 469.419,
+    "startFrame": 13782,
+    "endFrame": 14083,
+    "text": "By 2021, over one hundred twenty countries pledged net-zero targets, while mandatory carbon pricing systems expanded across seventy jurisdictions."
+  },
+  {
+    "id": 47,
+    "slideId": 8,
+    "sentenceIndex": 6,
+    "startSec": 469.699,
+    "endSec": 477.571,
+    "startFrame": 14091,
+    "endFrame": 14327,
+    "text": "Yet, an alarming ambition gap persists: existing pledges remain mathematically insufficient to prevent catastrophic warming."
+  },
+  {
+    "id": 48,
+    "slideId": 8,
+    "sentenceIndex": 7,
+    "startSec": 477.851,
+    "endSec": 481.755,
+    "startFrame": 14336,
+    "endFrame": 14453,
+    "text": "This mind map is your compass to global environmental politics."
+  },
+  {
+    "id": 49,
+    "slideId": 8,
+    "sentenceIndex": 8,
+    "startSec": 482.035,
+    "endSec": 485.769,
+    "startFrame": 14461,
+    "endFrame": 14573,
+    "text": "Now, explore Chapter 080 with a complete understanding."
+  }
+]

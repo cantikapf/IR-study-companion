@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "slideNumber": "01 / 08",
+    "category": "THE TRAGEDY OF THE COMMONS",
+    "title": "The Global Commons Dilemma: Anarchy and the Atmosphere",
+    "subtitle": "Transboundary Crises, Open-Access Atmosphere, and Structural Free-Riding",
+    "narration": "Welcome to the architecture of global environmental governance. Unlike armies or trade tariffs, smog, plastic oceans, and greenhouse gases do not carry passports or stop at national border checkpoints. When the planet's atmosphere is a shared global commons, every sovereign nation faces a persistent structural temptation to free-ride—enjoying clean planetary air while shifting the painful economic costs of cutting emissions onto others. In an anarchic international system without a supranational world police, environmental protection cannot rely on coercion. Addressing transboundary ecological crises forces sovereign states to construct international environmental regimes and treaties, proving that planetary survival requires collective action even in an anarchic world.",
+    "bullets": [
+      {
+        "headline": "Transboundary Ecological Harm",
+        "detail": "Atmospheric pollution and warming transcend national sovereign borders without border checkpoints."
+      },
+      {
+        "headline": "The Free-Rider Dilemma",
+        "detail": "Sovereign states face structural incentives to enjoy preservation benefits while evading domestic mitigation costs."
+      },
+      {
+        "headline": "Cooperation Under Anarchy",
+        "detail": "Planetary survival compels sovereign nations to construct reciprocal multilateral regimes without a world police."
+      }
+    ],
+    "uiCard": {
+      "type": "curriculum-hierarchy",
+      "activeModule": "MODULE 010: INTRO TO IR",
+      "activeTrack": "TRACK 01: FOUNDATIONS & THEORIES",
+      "totalModules": "18 Modules",
+      "totalLessons": "157 Lessons",
+      "modules": [
+        { "code": "010", "name": "Foundations of IR", "status": "completed" },
+        { "code": "020", "name": "Globalization & Politics", "status": "completed" },
+        { "code": "030", "name": "Realism in IR", "status": "completed" },
+        { "code": "040", "name": "Liberalism in IR", "status": "completed" },
+        { "code": "050", "name": "Marxism in IR", "status": "completed" },
+        { "code": "060", "name": "Constructivism in IR", "status": "completed" },
+        { "code": "070", "name": "Global Finance & Trade", "status": "completed" },
+        { "code": "080", "name": "Global Environment", "status": "active" }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slideNumber": "02 / 08",
+    "category": "INSTITUTIONAL GENESIS",
+    "title": "Early Environmental Milestones: From Stockholm to UNEP",
+    "subtitle": "The 1972 UN Conference, Creation of UNEP, and Domestic Ministries",
+    "narration": "The modern international environmental movement gained decisive momentum between the late 1960s and early 1970s. In 1968, the United Nations General Assembly recognized the urgent threat of environmental degradation, convening the landmark 1972 UN Conference on the Human Environment in Stockholm, Sweden. At Stockholm, 113 nations adopted the historic Stockholm Declaration containing 26 foundational principles, elevating ecological protection into a permanent global agenda. This watershed gathering produced the United Nations Environment Programme, or UNEP, headquartered in Nairobi, Kenya, as the first dedicated UN agency for planetary ecology. Furthermore, the conference catalyzed national reforms worldwide, spurring the United States to establish the Environmental Protection Agency in 1970 and the United Kingdom its Department of the Environment in 1971.",
+    "bullets": [
+      {
+        "headline": "Stockholm 1972 Watershed",
+        "detail": "113 countries adopted 26 foundational principles, formalizing human-environment relations on the global agenda."
+      },
+      {
+        "headline": "UNEP Institutionalization",
+        "detail": "Established in Nairobi as the first UN body dedicated exclusively to coordinating international environmental programs."
+      },
+      {
+        "headline": "Domestic Bureaucratic Response",
+        "detail": "Spurred creation of dedicated ministries including the US EPA in 1970 and UK Department of Environment in 1971."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slideNumber": "03 / 08",
+    "category": "SUSTAINABILITY & CONSENSUS",
+    "title": "Sustainable Development: Brundtland, IPCC, and the Rio Earth Summit",
+    "subtitle": "Reconciling Economic Growth with Ecological Preservation Across Generations",
+    "narration": "During the 1980s, the international community pioneered the doctrine of sustainable development to overcome the false dichotomy between economic growth and ecological survival. In 1987, the UN World Commission on Environment and Development published the Brundtland Report, titled Our Common Future. Chaired by Gro Harlem Brundtland, the report defined sustainable development as development that meets the needs of the present without compromising the ability of future generations to meet their own needs. To anchor policy in rigorous evidence, UNEP and the World Meteorological Organization established the Intergovernmental Panel on Climate Change in 1988, synthesizing scientific literature to build authoritative consensus on anthropogenic warming. This scientific mobilization culminated in the 1992 Rio Earth Summit, producing Agenda 21 and the Rio Declaration to integrate ecological stewardship across worldwide development.",
+    "bullets": [
+      {
+        "headline": "The 1987 Brundtland Report",
+        "detail": "Formalized sustainable development as meeting present needs without compromising future generations' survival."
+      },
+      {
+        "headline": "Authoritative Climate Science",
+        "detail": "The IPCC was created in 1988 to synthesize peer-reviewed literature and establish empirical consensus on climate risks."
+      },
+      {
+        "headline": "1992 Rio Earth Summit",
+        "detail": "Institutionalized global sustainable development through Agenda 21 and the Commission on Sustainable Development."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slideNumber": "04 / 08",
+    "category": "CLIMATE TREATY REGIMES",
+    "title": "Climate Governance Architecture: UNFCCC and the Kyoto Protocol",
+    "subtitle": "From Non-Binding Frameworks to Top-Down Annex I Binding Reductions",
+    "narration": "By the early 1990s, emerging scientific consensus stimulated direct multilateral legal action. In 1992, world leaders adopted the United Nations Framework Convention on Climate Change, or UNFCCC. The convention established the core objective of stabilizing greenhouse gas concentrations to prevent dangerous anthropogenic interference with the planetary climate system. However, the UNFCCC set purely non-binding limits without formal enforcement mechanisms, relying instead on future protocol updates negotiated at annual Conference of Parties summits. The principal update arrived in 1997 with the Kyoto Protocol, which legally bound developed Annex I parties to quantified emission reductions. To minimize compliance costs, Kyoto introduced market-based emissions trading, allowing states to harness economic incentives by trading carbon allowances across international markets.",
+    "bullets": [
+      {
+        "headline": "1992 UNFCCC Treaty",
+        "detail": "Established core framework to stabilize atmospheric greenhouse concentrations to prevent dangerous climate interference."
+      },
+      {
+        "headline": "1997 Kyoto Protocol",
+        "detail": "Legally bound developed industrialized parties to emission reductions while establishing annual COP reviews."
+      },
+      {
+        "headline": "Emissions Trading Mechanism",
+        "detail": "Harnessed market price incentives to reduce compliance costs through international carbon allowance transfers."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slideNumber": "05 / 08",
+    "category": "IR THEORETICAL LENSES",
+    "title": "Theories Explaining Cooperation: Regime Theory and Epistemic Communities",
+    "subtitle": "Overcoming Anarchy Through Reciprocal Rules and Transnational Scientific Networks",
+    "narration": "How does cooperation emerge among sovereign states driven by self-interest and an anarchic system? International relations scholars deploy two powerful theoretical frameworks. First, Regime Theory demonstrates that international regimes—defined as converged sets of principles, norms, rules, and decision-making procedures—reduce transaction costs, create transparent monitoring systems, and establish expectations of long-term reciprocity. Regimes explain how collective action succeeds despite persistent incentives to defect. Second, Epistemic Communities explain how transnational networks of recognized scientific experts elucidate complex ecological hazards. By aggregating empirical data and framing environmental threats as solvable policy issues, epistemic networks shape how states define their national interests. Furthermore, mechanisms like the Global Environment Facility channel funding to build regulatory and scientific capacity across developing countries.",
+    "bullets": [
+      {
+        "headline": "Regime Theory & Reciprocity",
+        "detail": "Shared rules, monitoring mechanisms, and converged expectations lower transaction costs and deter defection."
+      },
+      {
+        "headline": "Transnational Epistemic Networks",
+        "detail": "Authoritative expert consensus clarifies planetary hazards, helping sovereign states identify mutual interests."
+      },
+      {
+        "headline": "Financial Capacity Building",
+        "detail": "The Global Environment Facility at the World Bank funds developing nation scientific and regulatory infrastructure."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slideNumber": "06 / 08",
+    "category": "GEOPOLITICAL ETHICS",
+    "title": "The Equity Deadlock: Common but Differentiated Responsibilities",
+    "subtitle": "Historical Carbon Debts Contrasted Against Surging Developing World Emissions",
+    "narration": "The central ethical and diplomatic battlefield of global climate governance centers on the doctrine of Common but Differentiated Responsibilities, or CBDR. Developed Western economies like the United States, Britain, and Germany powered their wealth through fossil fuels since the Industrial Revolution, consuming the vast majority of the planetary carbon budget. Developing nations rightly contend that historical polluters must lead mitigation and provide climate finance. Conversely, emerging powerhouses like China and India now surpass Western nations in total annual emissions, even though their per capita footprint remains significantly lower. This accounting dilemma is further complicated by global supply chains, where goods consumed in Western markets are manufactured in developing states. Reconciling historical culpability with present emission trajectories remains the fundamental deadlock of climate diplomacy.",
+    "bullets": [
+      {
+        "headline": "The CBDR Principle",
+        "detail": "Establishes that all nations share climate duties but industrialized states must lead due to historical benefits."
+      },
+      {
+        "headline": "Historical Carbon Legacy",
+        "detail": "Western economies consumed the majority of atmospheric space through two centuries of fossil industrialization."
+      },
+      {
+        "headline": "Surging Emerging Emissions",
+        "detail": "Rising total annual emissions in emerging economies contrast with low per capita rates and outsourced manufacturing."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slideNumber": "07 / 08",
+    "category": "STRUCTURAL BARRIERS",
+    "title": "Structural Obstacles: Enforcement Deficits and Energy Security",
+    "subtitle": "The Sovereign Enforcement Vacuum, Fossil Dependencies, and Poverty Alleviation",
+    "narration": "Achieving binding multilateral climate agreements confronts formidable structural barriers. Foremost is the sovereign enforcement deficit: international environmental law relies entirely on self-enforcement, as treaties lack coercive supranational sanctions to punish non-compliance. This structural vacuum reinforces the temptation to free-ride on other nations' mitigation investments. Second, governments face severe energy security dilemmas. Phasing out entrenched fossil fuel infrastructure threatens reliable, affordable power essential for domestic industrial growth and economic stability. States endowed with vast coal, oil, or gas reserves tenaciously protect the economic value of these assets. Finally, equity concerns dominate developing countries, which prioritize poverty eradication and rising living standards over costly emission curbs, refusing to accept restrictions that would permanently freeze their economic development.",
+    "bullets": [
+      {
+        "headline": "Self-Enforcement Deficit",
+        "detail": "Absence of supranational coercive authority allows sovereign nations to free-ride without formal legal sanctions."
+      },
+      {
+        "headline": "Energy Security Dilemma",
+        "detail": "Near-term economic growth dependencies on reliable, affordable fossil power discourage rapid infrastructure phaseouts."
+      },
+      {
+        "headline": "Development & Poverty Priorities",
+        "detail": "Developing nations refuse mitigation burdens that threaten poverty alleviation or constrain industrialization."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slideNumber": "08 / 08",
+    "category": "FUTURE TRAJECTORIES",
+    "title": "New Climate Pathways: The Paris Architecture and the Ambition Gap",
+    "subtitle": "Universal Pledges, 5-Year NDC Ratchet Cycles, and the 1.5°C Planetary Challenge",
+    "narration": "To transcend the Kyoto deadlock, the 2015 Paris Agreement inaugurated a revolutionary governance architecture. Abandoning rigid Annex I divisions, Paris mandates climate action from every sovereign state. The treaty aims to limit warming well below two degrees Celsius, pursuing efforts toward one point five degrees. Rather than top-down quotas, countries submit bottom-up Nationally Determined Contributions, updated every five years through an institutional ratchet mechanism designed to escalate ambition over time. By 2021, over one hundred twenty countries pledged net-zero targets, while mandatory carbon pricing systems expanded across seventy jurisdictions. Yet, an alarming ambition gap persists: existing pledges remain mathematically insufficient to prevent catastrophic warming. This mind map is your compass to global environmental politics. Now, explore Chapter 080 with a complete understanding.",
+    "bullets": [
+      {
+        "headline": "The 2015 Paris Accord",
+        "detail": "Instituted universal bottom-up pledges to limit planetary warming well below 2°C and pursue 1.5°C targets."
+      },
+      {
+        "headline": "5-Year NDC Ratchet Cycles",
+        "detail": "Nationally Determined Contributions updated every 5 years with mandatory expectations of increasing ambition."
+      },
+      {
+        "headline": "The 1.5°C Ambition Gap",
+        "detail": "Current voluntary commitments remain insufficient, requiring accelerated decarbonization across this decisive decade."
+      }
+    ]
+  }
+]

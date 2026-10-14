@@ -13,6 +13,22 @@ tags:
 
 ## Last Updated
 
+2026-10-14 - Produksi Lengkap Video Mind Map CH080 (Global Environment As Agendas):
+1. `Konteks & Kebutuhan`: Produksi video eksplikatori mindmap kanonik ke-8 untuk kanal resmi `@IRinANutshell` pendamping Bab 080 ("Global Environment As Agendas").
+2. `Arsitektur Pipeline 5-Fase Bergerbang`:
+   - Fase 1 & 2: Ekstraksi brief akademik 8-babak dan audit kritis independen. Lolos gerbang `verify_brief_sources.py` 44/44 quotes (100% grounded, zero hallucination).
+   - Fase 3: Penyusunan typed concept graph 34 node dengan label relasi ringkas (<=14 karakter). Lolos gerbang `validate_mindmap.ts` (0 defect).
+   - Fase 4: Naskah 8 babak pedagogis (90–130 kata/babak) dan sintesis vokal neural Kokoro-82M (`af_heart`, speed 1.05) menghasilkan audio 485.77 detik (14.573 frame @ 30 FPS) dengan 49 kalimat caption.
+   - Fase 5: Visual builder kanvas 4800x3200, pewarnaan semantik akademis, penataan 49 segmen kamera (Deep Zoom 2.05x, Stationary Hold v=0, Panorama 0.33x). Lolos 100% audit mekanis: `validate_mindmap.ts` (0 defect), `audit_card_fit.ts` (34/34 pass, margin >=28px), dan `audit_frames.ts` (14.573/14.573 frame bebas subtitle collision & margin clipping).
+3. `Kemasan YouTube Kanonik`:
+   - Thumbnail 1080p diproduksi via `scripts/generate_thumbnail.py` menggunakan foto arsip sejarah autentik EPA DOCUMERICA 1972 (`Birmingham_skyline_with_smog_1972.jpg`, tahun yang sama dengan Deklarasi Stockholm). Lolos lint judul vs thumbnail (skor 94/100, zero duplicate keywords).
+   - Still panorama kanonik tersimpan di `learning-videos/posters/IR_M01_CH080_Global_Environment_As_Agendas_Poster.png`.
+   - Master MP4 1080p dirender di background (`learning-videos/exports/IR_M01_CH080_Global_Environment_As_Agendas_MindMap_1080p.mp4`).
+4. `Registri & Sinkronisasi`:
+   - `learning-videos/catalog.json` & `README.md` diperbarui mencakup metadata CH080.
+   - Suite pengujian `pytest`: 378/378 PASS.
+
+
 2026-10-13 - Integrasi Toolset YouTube Copywriting & Retention Analytics (`scripts/yt/`):
 1. `Konteks & Kebutuhan`: Evaluasi paket skill `youtube-agent-skill` untuk optimasi hook naskah dan kemasan YouTube Shorts/eksplikatori `@IRinANutshell`. Mengambil komponen murni data/algoritmik tanpa bloating dependensi eksternal.
 2. `Aset & Skrip Terintegrasi`:

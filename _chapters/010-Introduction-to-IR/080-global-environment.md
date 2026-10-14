@@ -1,8 +1,17 @@
 ---
+youtube_id: "0SpKawwCPh0"
 title: Global Environment As Agendas
 slug: global-environment-as-agendas
 abstract: Environment issue in International Relations context
 simple_summary: "Smog, plastic in the oceans, and greenhouse gases don't carry passports or stop at national border checkpoints. When the planet's atmosphere is a shared global commons, every sovereign nation faces a temptation to 'free-ride'—enjoying clean air while leaving the painful economic costs of cutting emissions to others. Solving ecological crises forces states to build international environmental regimes and treaties, proving that planetary survival requires collective action even in an anarchic world."
+explanatory_video:
+  title: "Mind Map Explanatory: Global Environment As Agendas"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "0SpKawwCPh0"
+
 ---
 
 

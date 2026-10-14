@@ -197,6 +197,36 @@
       },
       "last_updated": "2026-10-12",
       "file_size_bytes": 118497546
+    },
+    {
+      "id": "IR-M01-CH080",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "080",
+      "chapter_slug": "080-global-environment",
+      "title": "Global Environment As Agendas",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 485.77,
+      "frames": 14573,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Published",
+      "file_size_bytes": 139396113,
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH080_Global_Environment_As_Agendas_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH080_Global_Environment_As_Agendas_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH080_Global_Environment_As_Agendas_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "title": "Who Owns the Atmosphere? | IR Explained",
+        "status": "Published",
+        "youtube_id": "0SpKawwCPh0"
+      },
+      "last_updated": "2026-10-14"
     }
   ]
 }

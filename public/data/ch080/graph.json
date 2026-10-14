@@ -1,0 +1,661 @@
+{
+  "chapter": "CH080",
+  "root": "root_global_environment",
+  "acts": [
+    {
+      "id": "act_1",
+      "title": "Act I: The Global Commons Dilemma",
+      "hub": "hub_act1_global_commons",
+      "scope": "Transboundary pollution, planetary atmosphere as open-access commons, and sovereign free-rider incentives"
+    },
+    {
+      "id": "act_2",
+      "title": "Act II: Early Institutional Milestones",
+      "hub": "hub_act2_milestones",
+      "scope": "1972 Stockholm Conference, UNEP establishment in Nairobi, and creation of domestic environmental ministries"
+    },
+    {
+      "id": "act_3",
+      "title": "Act III: Sustainable Development & Science",
+      "hub": "hub_act3_sustainability",
+      "scope": "1987 Brundtland Report, 1988 IPCC scientific synthesis, and the 1992 Rio Earth Summit Agenda 21"
+    },
+    {
+      "id": "act_4",
+      "title": "Act IV: Climate Governance Architecture",
+      "hub": "hub_act4_climate_regimes",
+      "scope": "1992 UNFCCC non-binding framework, 1997 Kyoto Protocol Annex I binding caps, and market emissions trading"
+    },
+    {
+      "id": "act_5",
+      "title": "Act V: Theories Explaining Cooperation",
+      "hub": "hub_act5_theories",
+      "scope": "Regime theory reciprocity, epistemic communities consensus-building, and Global Environment Facility capacity"
+    },
+    {
+      "id": "act_6",
+      "title": "Act VI: The Equity Deadlock (CBDR)",
+      "hub": "hub_act6_cbdr",
+      "scope": "Common but Differentiated Responsibilities, Western historical carbon budget, and surging emerging market emissions"
+    },
+    {
+      "id": "act_7",
+      "title": "Act VII: Obstacles to Agreement",
+      "hub": "hub_act7_obstacles",
+      "scope": "Self-enforcement deficits, energy security dependencies, and domestic poverty alleviation priorities"
+    },
+    {
+      "id": "act_8",
+      "title": "Act VIII: New Climate Pathways",
+      "hub": "hub_act8_pathways",
+      "scope": "2015 Paris Agreement universal pledges, 5-year NDC cycles, carbon pricing, and the 1.5°C ambition gap"
+    }
+  ],
+  "contrasts": [
+    {
+      "a": "kyoto_protocol_1997",
+      "b": "paris_agreement_2015",
+      "axis": "Top-down Annex I binding caps versus universal bottom-up nationally determined contributions"
+    },
+    {
+      "a": "historical_emissions_legacy",
+      "b": "developing_country_emissions",
+      "axis": "Western cumulative carbon accumulation versus surging contemporary developing country totals"
+    },
+    {
+      "a": "energy_security_dilemma",
+      "b": "sustainable_development",
+      "axis": "Near-term economic fossil dependencies versus multi-generational ecological stabilization"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "root_global_environment",
+      "title": "Global Environmental Governance",
+      "subtitle": "Managing Planetary Commons, Multilateral Regimes, and Climate Dilemmas",
+      "kind": "hub",
+      "bullets": [
+        "Transboundary ecological crises require collective action across sovereign borders without central world authority",
+        "Evolving treaty architectures balance scientific imperatives against domestic economic growth and geopolitical equity"
+      ]
+    },
+    {
+      "id": "hub_act1_global_commons",
+      "title": "Act I: Global Commons Dilemma",
+      "subtitle": "Anarchy, Open-Access Atmosphere, and Structural Free-Riding",
+      "kind": "hub",
+      "bullets": [
+        "Global atmosphere and oceans transcend territorial jurisdictions, making exclusion impossible",
+        "Sovereign states face structural incentives to pollute while shifting mitigation burdens onto others"
+      ]
+    },
+    {
+      "id": "global_commons",
+      "title": "Planetary Global Commons",
+      "subtitle": "Shared transboundary biospheres existing beyond national sovereign control",
+      "kind": "concept",
+      "bullets": [
+        "Atmospheric layers and international oceans cannot be partitioned by sovereign state borders",
+        "Vulnerable to ecological degradation when individual states prioritize short-term resource exploitation"
+      ]
+    },
+    {
+      "id": "free_rider_problem",
+      "title": "The Free-Rider Dilemma",
+      "subtitle": "Defection incentive where states enjoy clean commons without paying costs",
+      "kind": "concept",
+      "bullets": [
+        "States reap collective preservation benefits while avoiding costly domestic industrial regulation",
+        "Absence of supranational enforcement leaves voluntary treaties vulnerable to strategic non-compliance"
+      ]
+    },
+    {
+      "id": "hub_act2_milestones",
+      "title": "Act II: Early Institutional Milestones",
+      "subtitle": "Stockholm 1972, UNEP Genesis, and National Bureaucracies",
+      "kind": "hub",
+      "bullets": [
+        "1968 UN Resolution 2398 recognized environmental harm, convening Stockholm 1972",
+        "Catalyzed multilateral institutionalization and created dedicated domestic regulatory agencies"
+      ]
+    },
+    {
+      "id": "stockholm_conference_1972",
+      "title": "1972 Stockholm Conference",
+      "subtitle": "First major UN global gathering focused explicitly on human-environment interaction",
+      "kind": "concept",
+      "bullets": [
+        "Attended by 113 countries adopting 26 foundational principles in the Stockholm Declaration",
+        "Elevated environmental protection from domestic conservation to permanent global agenda"
+      ]
+    },
+    {
+      "id": "unep",
+      "title": "UN Environment Programme",
+      "subtitle": "Nairobi-based UN agency coordinating worldwide environmental initiatives",
+      "kind": "concept",
+      "bullets": [
+        "Established in December 1972 as first UN body dedicated exclusively to ecological affairs",
+        "Coordinates multilateral environmental monitoring and provides secretariat for major conventions"
+      ]
+    },
+    {
+      "id": "domestic_agencies",
+      "title": "Domestic Environmental Agencies",
+      "subtitle": "National bureaucratic bodies created to enforce domestic ecological rules",
+      "kind": "concept",
+      "bullets": [
+        "Spurred creation of US Environmental Protection Agency in 1970 and UK Department of Environment in 1971",
+        "Tasked with monitoring industrial pollution levels and translating international norms into domestic law"
+      ]
+    },
+    {
+      "id": "hub_act3_sustainability",
+      "title": "Act III: Sustainable Development",
+      "subtitle": "Brundtland Consensus, IPCC Science, and Rio Earth Summit",
+      "kind": "hub",
+      "bullets": [
+        "Reconciles economic development with ecological limits across intergenerational timeframes",
+        "Synthesizes peer-reviewed climate literature to establish authoritative empirical consensus"
+      ]
+    },
+    {
+      "id": "brundtland_report",
+      "title": "1987 Brundtland Report",
+      "subtitle": "Landmark WCED study 'Our Common Future' defining sustainable development",
+      "kind": "concept",
+      "bullets": [
+        "Chaired by Gro Harlem Brundtland, bridging environmental protection and economic development",
+        "Formalized the principle of meeting present needs without compromising future generations' survival"
+      ]
+    },
+    {
+      "id": "sustainable_development",
+      "title": "Doctrine of Sustainability",
+      "subtitle": "Holistic policy paradigm integrating economic, social, and ecological realms",
+      "kind": "concept",
+      "bullets": [
+        "Overcomes false dichotomy between economic expansion and planetary resource conservation",
+        "Demands integrated policymaking to safeguard ecological foundations for coming generations"
+      ]
+    },
+    {
+      "id": "ipcc",
+      "title": "Intergovernmental Panel on Climate Change",
+      "subtitle": "Scientific body established in 1988 by UNEP and WMO to assess climate literature",
+      "kind": "concept",
+      "bullets": [
+        "Provides authoritative scientific synthesis reports on anthropogenic warming risks and impacts",
+        "Jointly awarded 2007 Nobel Peace Prize with Al Gore for establishing global consensus on climate action"
+      ]
+    },
+    {
+      "id": "rio_earth_summit_1992",
+      "title": "1992 Rio Earth Summit",
+      "subtitle": "Watershed UN gathering producing Rio Declaration, Agenda 21, and CSD",
+      "kind": "concept",
+      "bullets": [
+        "Mobilized governments, businesses, and civil society to integrate environment with development",
+        "Established global action blueprint through Agenda 21 and Commission on Sustainable Development"
+      ]
+    },
+    {
+      "id": "hub_act4_climate_regimes",
+      "title": "Act IV: Climate Governance Architecture",
+      "subtitle": "Non-Binding Frameworks, Kyoto Binding Targets, and Market Carbon Offsets",
+      "kind": "hub",
+      "bullets": [
+        "UNFCCC established objective to prevent dangerous anthropogenic climate interference",
+        "Kyoto Protocol introduced legally binding Annex I reductions and flexible market mechanisms"
+      ]
+    },
+    {
+      "id": "unfccc_1992",
+      "title": "1992 UNFCCC Treaty",
+      "subtitle": "Foundational UN Framework Convention setting non-binding climate goals",
+      "kind": "concept",
+      "bullets": [
+        "Aimed at stabilizing greenhouse gas concentrations to prevent dangerous interference with climate system",
+        "Established annual Conference of Parties (COP) as institutional arena for negotiating binding protocols"
+      ]
+    },
+    {
+      "id": "kyoto_protocol_1997",
+      "title": "1997 Kyoto Protocol",
+      "subtitle": "Treaty legally binding developed Annex I states to quantitative emission cuts",
+      "kind": "concept",
+      "bullets": [
+        "Imposed legally binding reduction targets exclusively on industrialized nations while exempting South",
+        "Ratified by 192 countries and entered into force in 2005 to mandate historical accountability"
+      ]
+    },
+    {
+      "id": "emissions_trading",
+      "title": "Emissions Trading Mechanism",
+      "subtitle": "Market-based instrument harnessing price incentives to minimize mitigation costs",
+      "kind": "concept",
+      "bullets": [
+        "Allows states and corporations to trade allocated carbon allowances under Kyoto's flexible mechanisms",
+        "Lowers overall economic cost of compliance by incentivizing abatement where costs are lowest"
+      ]
+    },
+    {
+      "id": "hub_act5_theories",
+      "title": "Act V: Theories Explaining Cooperation",
+      "subtitle": "Regime Theory, Epistemic Consensus, and Multilateral Financial Transfer",
+      "kind": "hub",
+      "bullets": [
+        "Regime theory explains how converged norms and monitoring systems overcome systemic anarchy",
+        "Epistemic communities elucidate scientific stakes and guide state identification of national interests"
+      ]
+    },
+    {
+      "id": "regime_theory",
+      "title": "Regime Theory & Reciprocity",
+      "subtitle": "Institutional principles, norms, and rules facilitating cooperation under anarchy",
+      "kind": "concept",
+      "bullets": [
+        "Establishes transparent monitoring, lowers transaction costs, and creates reciprocal expectations",
+        "Enables states to achieve collective goods despite structural temptations to defect or free-ride"
+      ]
+    },
+    {
+      "id": "epistemic_communities",
+      "title": "Transnational Epistemic Networks",
+      "subtitle": "Networks of authoritative scientific experts shaping multilateral treaty design",
+      "kind": "concept",
+      "bullets": [
+        "Aggregate peer-reviewed evidence to frame complex planetary issues as solvable policy problems",
+        "Help sovereign governments define national interests and formulate evidence-based regulations"
+      ]
+    },
+    {
+      "id": "gef_capacity",
+      "title": "Capacity-Building Funding",
+      "subtitle": "Global Environment Facility at World Bank financing developing nation compliance",
+      "kind": "concept",
+      "bullets": [
+        "Manages billions in multilateral grants to bolster scientific, regulatory, and policy infrastructure",
+        "Reduces institutional deficits in developing nations to enable participation in treaty regimes"
+      ]
+    },
+    {
+      "id": "hub_act6_cbdr",
+      "title": "Act VI: The Equity Deadlock",
+      "subtitle": "Common but Differentiated Responsibilities and Carbon Budget Conflicts",
+      "kind": "hub",
+      "bullets": [
+        "Reconciles shared planetary survival with stark disparities in historical fossil emissions",
+        "Generates persistent diplomatic deadlock between Western historical polluters and emerging powers"
+      ]
+    },
+    {
+      "id": "cbdr_doctrine",
+      "title": "Common but Differentiated Responsibilities",
+      "subtitle": "Core ethical principle balancing universal obligations with historical equity",
+      "kind": "concept",
+      "bullets": [
+        "Acknowledges all nations share duties to protect climate but developed states must lead mitigation",
+        "Reflects historical industrialization benefits accrued by West while recognizing Southern development needs"
+      ]
+    },
+    {
+      "id": "historical_emissions_legacy",
+      "title": "Historical Western Emissions",
+      "subtitle": "Cumulative carbon budget consumed by Western industrialization since 1750",
+      "kind": "concept",
+      "bullets": [
+        "US, UK, and Germany drove economic expansion via coal and oil, consuming majority of carbon space",
+        "Developing states argue historical polluters must bear proportional financial and mitigation burdens"
+      ]
+    },
+    {
+      "id": "developing_country_emissions",
+      "title": "Surging Developing Emissions",
+      "subtitle": "Contemporary rise in total annual emissions from industrializing emerging markets",
+      "kind": "concept",
+      "bullets": [
+        "China and India have surpassed Western states in annual aggregate output while per capita rates stay low",
+        "Global manufacturing transfer complicates liability when goods are produced in South for Western consumption"
+      ]
+    },
+    {
+      "id": "hub_act7_obstacles",
+      "title": "Act VII: Obstacles to Agreement",
+      "subtitle": "Sovereignty Limits, Energy Security Fears, and Development Tradeoffs",
+      "kind": "hub",
+      "bullets": [
+        "International environmental treaties rely on self-enforcement due to lack of coercive authority",
+        "Decarbonization threatens short-term economic stability and reliable access to affordable energy"
+      ]
+    },
+    {
+      "id": "enforcement_deficit",
+      "title": "Self-Enforcement Deficit",
+      "subtitle": "Absence of coercive supranational policing in international environmental law",
+      "kind": "concept",
+      "bullets": [
+        "Treaties depend on voluntary domestic implementation without supranational sanctions for violation",
+        "Requires expanding verification mechanisms, transparency reviews, and mutual trust to deter cheating"
+      ]
+    },
+    {
+      "id": "energy_security_dilemma",
+      "title": "Energy Security Priorities",
+      "subtitle": "Geopolitical imperative to safeguard affordable and reliable power for growth",
+      "kind": "concept",
+      "bullets": [
+        "States resist phasing out domestic fossil fuel infrastructure out of fear of power shortages and price spikes",
+        "Resource-rich economies actively defend economic value of substantial oil, gas, and coal assets"
+      ]
+    },
+    {
+      "id": "equity_poverty_tradeoff",
+      "title": "Development & Poverty Priorities",
+      "subtitle": "Southern imperative prioritizing poverty eradication over emission restrictions",
+      "kind": "concept",
+      "bullets": [
+        "Developing nations insist climate policies must not constrain industrialization or living standards",
+        "Demands financial transfers and green technologies before committing to binding domestic caps"
+      ]
+    },
+    {
+      "id": "hub_act8_pathways",
+      "title": "Act VIII: New Climate Pathways",
+      "subtitle": "Paris Universality, 5-Year NDC Cycles, Carbon Markets, and Ambition Gap",
+      "kind": "hub",
+      "bullets": [
+        "Paris Agreement shifted from top-down mandates to universal bottom-up nationally determined pledges",
+        "Proliferation of net-zero targets and carbon pricing contrasts against widening 1.5°C emissions gap"
+      ]
+    },
+    {
+      "id": "paris_agreement_2015",
+      "title": "2015 Paris Accord",
+      "subtitle": "Universal climate treaty requiring emission reduction actions from all nations",
+      "kind": "concept",
+      "bullets": [
+        "Aims to limit warming well below 2°C and pursue 1.5°C threshold through nationally determined actions",
+        "Replaced rigid Annex I division with universal participation and 5-year ratcheting review cycles"
+      ]
+    },
+    {
+      "id": "ndcs",
+      "title": "Nationally Determined Contributions",
+      "subtitle": "Bottom-up domestic climate pledges submitted and updated in 5-year cycles",
+      "kind": "concept",
+      "bullets": [
+        "192 countries submitted first NDCs by 2021, detailing national decarbonization and adaptation plans",
+        "Ratchet mechanism requires nations to progressively increase ambition with every subsequent submission"
+      ]
+    },
+    {
+      "id": "carbon_pricing",
+      "title": "Carbon Pricing Instruments",
+      "subtitle": "Market emissions trading and taxes attaching financial costs to greenhouse gas output",
+      "kind": "concept",
+      "bullets": [
+        "Emissions trading schemes in 70 jurisdictions covered 21.5% of worldwide greenhouse emissions by 2021",
+        "Internal corporate carbon fees incentivize private capital reallocation toward renewable energy"
+      ]
+    },
+    {
+      "id": "ambition_gap_15",
+      "title": "The 1.5°C Ambition Gap",
+      "subtitle": "Disparity between current voluntary national pledges and required climate trajectory",
+      "kind": "concept",
+      "bullets": [
+        "Existing NDCs remain insufficient to prevent dangerous warming above the 1.5°C critical threshold",
+        "Requires accelerated decarbonization across transport, industry, and energy in this decisive decade"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "root_global_environment",
+      "to": "hub_act1_global_commons",
+      "relation": "contains",
+      "label": "defines"
+    },
+    {
+      "from": "hub_act1_global_commons",
+      "to": "global_commons",
+      "relation": "contains",
+      "label": "encompasses"
+    },
+    {
+      "from": "hub_act1_global_commons",
+      "to": "free_rider_problem",
+      "relation": "contains",
+      "label": "triggers"
+    },
+    {
+      "from": "global_commons",
+      "to": "free_rider_problem",
+      "relation": "causes",
+      "label": "incentivizes"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act2_milestones",
+      "relation": "contains",
+      "label": "evolves"
+    },
+    {
+      "from": "hub_act2_milestones",
+      "to": "stockholm_conference_1972",
+      "relation": "contains",
+      "label": "initiates"
+    },
+    {
+      "from": "hub_act2_milestones",
+      "to": "unep",
+      "relation": "contains",
+      "label": "establishes"
+    },
+    {
+      "from": "hub_act2_milestones",
+      "to": "domestic_agencies",
+      "relation": "contains",
+      "label": "spurs"
+    },
+    {
+      "from": "stockholm_conference_1972",
+      "to": "unep",
+      "relation": "causes",
+      "label": "creates"
+    },
+    {
+      "from": "stockholm_conference_1972",
+      "to": "domestic_agencies",
+      "relation": "enables",
+      "label": "spurs"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act3_sustainability",
+      "relation": "contains",
+      "label": "integrates"
+    },
+    {
+      "from": "hub_act3_sustainability",
+      "to": "brundtland_report",
+      "relation": "contains",
+      "label": "formalizes"
+    },
+    {
+      "from": "hub_act3_sustainability",
+      "to": "sustainable_development",
+      "relation": "contains",
+      "label": "adopts"
+    },
+    {
+      "from": "hub_act3_sustainability",
+      "to": "ipcc",
+      "relation": "contains",
+      "label": "synthesizes"
+    },
+    {
+      "from": "hub_act3_sustainability",
+      "to": "rio_earth_summit_1992",
+      "relation": "contains",
+      "label": "institutionalizes"
+    },
+    {
+      "from": "brundtland_report",
+      "to": "sustainable_development",
+      "relation": "constitutes",
+      "label": "defines"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act4_climate_regimes",
+      "relation": "contains",
+      "label": "structures"
+    },
+    {
+      "from": "hub_act4_climate_regimes",
+      "to": "unfccc_1992",
+      "relation": "contains",
+      "label": "foundational"
+    },
+    {
+      "from": "hub_act4_climate_regimes",
+      "to": "kyoto_protocol_1997",
+      "relation": "contains",
+      "label": "mandates"
+    },
+    {
+      "from": "hub_act4_climate_regimes",
+      "to": "emissions_trading",
+      "relation": "contains",
+      "label": "harnesses"
+    },
+    {
+      "from": "unfccc_1992",
+      "to": "kyoto_protocol_1997",
+      "relation": "enables",
+      "label": "updates"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act5_theories",
+      "relation": "contains",
+      "label": "explains"
+    },
+    {
+      "from": "hub_act5_theories",
+      "to": "regime_theory",
+      "relation": "contains",
+      "label": "models"
+    },
+    {
+      "from": "hub_act5_theories",
+      "to": "epistemic_communities",
+      "relation": "contains",
+      "label": "mobilizes"
+    },
+    {
+      "from": "hub_act5_theories",
+      "to": "gef_capacity",
+      "relation": "contains",
+      "label": "finances"
+    },
+    {
+      "from": "epistemic_communities",
+      "to": "regime_theory",
+      "relation": "enables",
+      "label": "informs"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act6_cbdr",
+      "relation": "contains",
+      "label": "negotiates"
+    },
+    {
+      "from": "hub_act6_cbdr",
+      "to": "cbdr_doctrine",
+      "relation": "contains",
+      "label": "articulates"
+    },
+    {
+      "from": "hub_act6_cbdr",
+      "to": "historical_emissions_legacy",
+      "relation": "contains",
+      "label": "accumulates"
+    },
+    {
+      "from": "hub_act6_cbdr",
+      "to": "developing_country_emissions",
+      "relation": "contains",
+      "label": "surpasses"
+    },
+    {
+      "from": "historical_emissions_legacy",
+      "to": "developing_country_emissions",
+      "relation": "contrasts",
+      "label": "contrasts"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act7_obstacles",
+      "relation": "contains",
+      "label": "impedes"
+    },
+    {
+      "from": "hub_act7_obstacles",
+      "to": "enforcement_deficit",
+      "relation": "contains",
+      "label": "constrains"
+    },
+    {
+      "from": "hub_act7_obstacles",
+      "to": "energy_security_dilemma",
+      "relation": "contains",
+      "label": "threatens"
+    },
+    {
+      "from": "hub_act7_obstacles",
+      "to": "equity_poverty_tradeoff",
+      "relation": "contains",
+      "label": "prioritizes"
+    },
+    {
+      "from": "root_global_environment",
+      "to": "hub_act8_pathways",
+      "relation": "contains",
+      "label": "reconstructs"
+    },
+    {
+      "from": "hub_act8_pathways",
+      "to": "paris_agreement_2015",
+      "relation": "contains",
+      "label": "adopts"
+    },
+    {
+      "from": "hub_act8_pathways",
+      "to": "ndcs",
+      "relation": "contains",
+      "label": "pledges"
+    },
+    {
+      "from": "hub_act8_pathways",
+      "to": "carbon_pricing",
+      "relation": "contains",
+      "label": "incentivizes"
+    },
+    {
+      "from": "hub_act8_pathways",
+      "to": "ambition_gap_15",
+      "relation": "contains",
+      "label": "faces"
+    },
+    {
+      "from": "paris_agreement_2015",
+      "to": "ndcs",
+      "relation": "enables",
+      "label": "mandates"
+    }
+  ]
+}
