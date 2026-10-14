@@ -22,9 +22,11 @@ tags:
    - Header archival docket digeser ke $y=140\text{px}$ untuk mematuhi safe area TikTok/Shorts UI mobile.
    - Text stage dikalibrasi ke $y=1390\text{px}$ dengan botscrim 640px pekat dan text stroke ganda 1px, membersihkan collision dengan frame tubular kaca depan kendaraan dan bebas tabrakan dengan UI layer YouTube Shorts mobile.
    - Pergerakan kamera GSAP presisi: freeze frame-0, snap zoom konfrontasi 75 yard, pan guardhouse, zoom-in M48 Patton ($1.85\times$, pan vertikal $y=-1130\text{px}$ untuk komposisi seimbang), pan deep zoom T-55 Soviet ($2.25\times$), deep punch ke moncong meriam ($2.05\times$), dan wide panorama pullback.
-5. `QA & Verifikasi`:
+5. `QA, Rilis & Sinkronisasi`:
    - `hyperframes check`: 0 errors, 0 warnings, 5/5 WCAG AA contrast pass.
-   - Master MP4 dirender ke `learning-videos/exports/SP02_Checkpoint_Charlie_Standoff_Short_1080p.mp4` (46.2 MB, 34.03s, 1080×1920 30 fps, H.264 + AAC stereo).
+   - Master MP4 dirender ke `learning-videos/exports/SP02_Checkpoint_Charlie_Standoff_Short_1080p.mp4` (44.2 MB, 34.03s, 1080×1920 30 fps, H.264 + AAC stereo).
+   - Resmi dipublikasikan ke YouTube Shorts: [gRX2mVmLG30](https://youtube.com/shorts/gRX2mVmLG30).
+   - Katalog shorts diperbarui ke status PUBLISHED di `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
    - Test suite pytest: 378/378 PASS.
 
 1. `Konteks & Kebutuhan`: Produksi video eksplikatori mindmap kanonik ke-8 untuk kanal resmi `@IRinANutshell` pendamping Bab 080 ("Global Environment As Agendas").

@@ -26,6 +26,10 @@ def extract_youtube_id(url_or_id: str) -> str:
     m = re.search(r'youtu\.be/([a-zA-Z0-9_-]{10,12})', s)
     if m:
         return m.group(1)
+    # Match shorts/<id>
+    m = re.search(r'shorts/([a-zA-Z0-9_-]{10,12})', s)
+    if m:
+        return m.group(1)
     # Match watch?v=<id>
     m = re.search(r'[?&]v=([a-zA-Z0-9_-]{10,12})', s)
     if m:

@@ -64,7 +64,7 @@ Format editorial alternatif anti-AI feel: 1 foto arsip autentik resolusi ultra-t
 | # | ID Seri | Topik / Judul Episode | Foto Arsip / Subjek Sejarah | Bab Kurikulum Terkait | Status Produksi | Tautan YouTube |
 |---|---|---|---|---|---|---|
 | **01** | `SP-01` | **One of These Men Will Die in 60 Days: The Yalta Photo Story** | NARA 111-SC-260486 (Livadia Palace, 1945) — Churchill, Roosevelt, Stalin | `_chapters/012-modern-world-history/090-end-ww2.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/OP6fEXloh-k) |
-| **02** | `SP-02` | **The Checkpoint Charlie Tank Standoff (1961)** | NARA / USAMHI (Friedrichstraße, 27–28 Okt 1961) — US M48 Patton vs Soviet T-55 | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **COMPLETED (Local Release Ready)** | `learning-videos/exports/SP02_Checkpoint_Charlie_Standoff_Short_1080p.mp4` |
+| **02** | `SP-02` | **The Checkpoint Charlie Tank Standoff (1961)** | NARA / USAMHI (Friedrichstraße, 27–28 Okt 1961) — US M48 Patton vs Soviet T-55 | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/gRX2mVmLG30) |
 
 ---
 
