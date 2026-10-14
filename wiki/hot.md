@@ -20,8 +20,8 @@ tags:
 4. `Visual & Framing HyperFrames`:
    - Canvas 1080×1920 (9:16), framing full-bleed height-matched (2335×1920), bebas dead black space.
    - Header archival docket digeser ke $y=140\text{px}$ untuk mematuhi safe area TikTok/Shorts UI mobile.
-   - Text stage diposisikan di $y=1100\text{px}$ di atas bodi jeep.
-   - Pergerakan kamera GSAP presisi: freeze frame-0, snap zoom konfrontasi 75 yard, pan guardhouse, zoom-in M48 Patton ($1.85\times$), pan deep zoom T-55 Soviet ($2.25\times$), deep punch ke moncong meriam ($2.05\times$), dan wide panorama pullback.
+   - Text stage dikalibrasi ke $y=1390\text{px}$ dengan botscrim 640px pekat dan text stroke ganda 1px, membersihkan collision dengan frame tubular kaca depan kendaraan dan bebas tabrakan dengan UI layer YouTube Shorts mobile.
+   - Pergerakan kamera GSAP presisi: freeze frame-0, snap zoom konfrontasi 75 yard, pan guardhouse, zoom-in M48 Patton ($1.85\times$, pan vertikal $y=-1130\text{px}$ untuk komposisi seimbang), pan deep zoom T-55 Soviet ($2.25\times$), deep punch ke moncong meriam ($2.05\times$), dan wide panorama pullback.
 5. `QA & Verifikasi`:
    - `hyperframes check`: 0 errors, 0 warnings, 5/5 WCAG AA contrast pass.
    - Master MP4 dirender ke `learning-videos/exports/SP02_Checkpoint_Charlie_Standoff_Short_1080p.mp4` (46.2 MB, 34.03s, 1080×1920 30 fps, H.264 + AAC stereo).

@@ -172,15 +172,15 @@
         bottom: 0;
         left: 0;
         width: 1080px;
-        height: 770px;
+        height: 640px;
         pointer-events: none;
         background: linear-gradient(
           to bottom,
           rgba(9, 10, 13, 0) 0%,
-          rgba(9, 10, 13, 0.56) 22%,
-          rgba(9, 10, 13, 0.52) 50%,
-          rgba(9, 10, 13, 0.34) 75%,
-          rgba(9, 10, 13, 0.22) 100%
+          rgba(9, 10, 13, 0.72) 20%,
+          rgba(9, 10, 13, 0.75) 55%,
+          rgba(9, 10, 13, 0.45) 85%,
+          rgba(9, 10, 13, 0.25) 100%
         );
         z-index: 10;
       }
@@ -227,10 +227,10 @@
       /* EDITORIAL TEXT STAGE */
       #text-stage {
         position: absolute;
-        top: 1100px;
+        top: 1390px;
         left: 80px;
         width: 920px;
-        height: 400px;
+        height: 220px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -241,19 +241,21 @@
 
       .story-line {
         position: absolute;
-        top: 40px;
+        top: 10px;
         left: 0;
         width: 100%;
         font-family: "Playfair Display", Georgia, serif;
         font-size: 52px;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.28;
-        color: #fdfbf7;
+        color: #ffffff;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.85);
         text-shadow:
-          0 0 34px rgba(0, 0, 0, 0.98),
-          0 3px 12px rgba(0, 0, 0, 1),
-          0 1px 3px rgba(0, 0, 0, 1),
-          0 0 60px rgba(0, 0, 0, 0.9);
+          0 0 20px rgba(0, 0, 0, 1),
+          0 0 40px rgba(0, 0, 0, 1),
+          0 4px 16px rgba(0, 0, 0, 1),
+          0 2px 4px rgba(0, 0, 0, 1),
+          0 0 80px rgba(0, 0, 0, 0.95);
         opacity: 0;
         text-align: center;
         pointer-events: none;
@@ -264,9 +266,11 @@
         font-weight: 700;
         letter-spacing: -0.01em;
         color: #ffffff;
+        -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.9);
         text-shadow:
           0 6px 32px rgba(0, 0, 0, 1),
-          0 2px 8px rgba(0, 0, 0, 1);
+          0 2px 8px rgba(0, 0, 0, 1),
+          0 0 50px rgba(0, 0, 0, 1);
       }
 
       /* ARCHIVAL FOOTER */
@@ -385,8 +389,8 @@
       tl.to("#photo-wrapper", { x: -380, y: -620, scale: 1.53, duration: 2.50, ease: "none" }, 7.87);
 
       // 10.40 : Pan onto American M48 Patton in foreground BEFORE Line 5 lands (11.11s)
-      tl.to("#photo-wrapper", { x: -1650, y: -1050, scale: 1.85, duration: 1.78, ease: "power2.inOut" }, 10.40);
-      tl.to("#photo-wrapper", { x: -1700, y: -1080, scale: 1.90, duration: 1.00, ease: "none" }, 12.20);
+      tl.to("#photo-wrapper", { x: -1650, y: -1130, scale: 1.85, duration: 1.78, ease: "power2.inOut" }, 10.40);
+      tl.to("#photo-wrapper", { x: -1700, y: -1160, scale: 1.90, duration: 1.00, ease: "none" }, 12.20);
 
       // 13.20 : Pan up Friedrichstrasse tightly onto Soviet T-55s BEFORE Line 6 lands (13.66s)
       tl.to("#photo-wrapper", { x: -2050, y: -450, scale: 2.25, duration: 1.80, ease: "power2.inOut" }, 13.20);
