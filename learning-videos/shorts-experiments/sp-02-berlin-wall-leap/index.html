@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SP-02 · Checkpoint Charlie Standoff (1961)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-italic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+        color: #fdfbf7;
+        font-family: "Playfair Display", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+      }
+
+      /* ARCHIVAL TOP HEADER */
+      #archival-header {
+        position: absolute;
+        top: 140px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .header-kicker {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #d4af37;
+        text-transform: uppercase;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-sub {
+        margin-top: 6px;
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: #cfc9c3;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-rule {
+        width: 60px;
+        height: 1px;
+        background: rgba(212, 175, 55, 0.45);
+        margin: 12px auto 0;
+      }
+
+      /* FULL-BLEED CAMERA STAGE */
+      #photo-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      #photo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2335px;
+        height: 1920px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #standoff-photo {
+        width: 2335px;
+        height: 1920px;
+        display: block;
+        object-fit: cover;
+        filter: sepia(0.12) contrast(1.10) brightness(0.92);
+      }
+
+      /* ARCHIVAL SCRIMS & VIGNETTE */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 320px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0.94) 0%,
+          rgba(9, 10, 13, 0.55) 55%,
+          rgba(9, 10, 13, 0) 100%
+        );
+        z-index: 10;
+      }
+
+      .botscrim {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1080px;
+        height: 770px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0) 0%,
+          rgba(9, 10, 13, 0.56) 22%,
+          rgba(9, 10, 13, 0.52) 50%,
+          rgba(9, 10, 13, 0.34) 75%,
+          rgba(9, 10, 13, 0.22) 100%
+        );
+        z-index: 10;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 95% 88% at 50% 42%,
+          rgba(9, 10, 13, 0) 60%,
+          rgba(9, 10, 13, 0.2) 85%,
+          rgba(9, 10, 13, 0.55) 100%
+        );
+        z-index: 12;
+      }
+
+      #grain {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        opacity: 0.085;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+        z-index: 13;
+      }
+
+      #flash {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: #fff6e6;
+        opacity: 0;
+        mix-blend-mode: screen;
+        z-index: 20;
+      }
+
+      /* EDITORIAL TEXT STAGE */
+      #text-stage {
+        position: absolute;
+        top: 1100px;
+        left: 80px;
+        width: 920px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .story-line {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 1.28;
+        color: #fdfbf7;
+        text-shadow:
+          0 0 34px rgba(0, 0, 0, 0.98),
+          0 3px 12px rgba(0, 0, 0, 1),
+          0 1px 3px rgba(0, 0, 0, 1),
+          0 0 60px rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        text-align: center;
+        pointer-events: none;
+      }
+
+      .title-climax {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        text-shadow:
+          0 6px 32px rgba(0, 0, 0, 1),
+          0 2px 8px rgba(0, 0, 0, 1);
+      }
+
+      /* ARCHIVAL FOOTER */
+      #archival-footer {
+        position: absolute;
+        top: 254px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .footer-meta {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        color: #b8b2ac;
+        text-transform: uppercase;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="34.01"
+    >
+      <audio
+        id="vo"
+        src="audio/voiceover.mp3"
+        preload="auto"
+        data-start="0"
+        data-duration="34.01"
+      ></audio>
+
+      <!-- ARCHIVAL TOP HEADER -->
+      <header id="archival-header" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="header-kicker">HISTORICAL DOSSIER &middot; BERLIN 1961</div>
+        <div class="header-sub">CHECKPOINT CHARLIE, FRIEDRICHSTRA&szlig;E &middot; OCT 27, 1961</div>
+        <div class="header-rule"></div>
+      </header>
+
+      <!-- CAMERA / PHOTO VIEWPORT -->
+      <div id="photo-stage" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="photo-wrapper">
+          <img
+            id="standoff-photo"
+            src="checkpoint_original.jpg"
+            alt="US and Soviet tanks facing off at Checkpoint Charlie, Berlin, October 1961"
+          />
+        </div>
+      </div>
+
+      <!-- ARCHIVAL SCRIMS & VIGNETTE -->
+      <div class="topscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div class="botscrim" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div class="vignette" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div id="grain" data-layout-allow-overflow data-layout-allow-occlusion></div>
+      <div id="flash" data-layout-allow-overflow data-layout-allow-occlusion></div>
+
+      <!-- EDITORIAL TEXT STAGE -->
+      <div id="text-stage" data-layout-allow-overflow>
+        <!-- BEAT 1 — HOOK (0.0s – 6.07s) -->
+        <div class="story-line" id="t1">These two tanks are seventy-five yards apart.</div>
+        <div class="story-line" id="t2">Both had orders to fire if the other moved.</div>
+
+        <!-- BEAT 2 — SETUP (6.07s – 10.69s) -->
+        <div class="story-line" id="t3">October 27, 1961.</div>
+        <div class="story-line" id="t4">Checkpoint Charlie, Berlin.</div>
+
+        <!-- BEAT 3 — DETAIL (10.69s – 18.84s) -->
+        <div class="story-line" id="t5">American M-48s in the foreground.</div>
+        <div class="story-line" id="t6">Soviet T-55s waiting across the line.</div>
+        <div class="story-line" id="t7">Engines idling for 16 hours straight.</div>
+
+        <!-- BEAT 4 — STAKES (18.84s – 24.05s) -->
+        <div class="story-line" id="t8">One nervous nineteen-year-old on a trigger...</div>
+        <div class="story-line" id="t9">would have triggered full thermonuclear war.</div>
+
+        <!-- BEAT 5 — CLIMAX / LOOP (24.05s – 34.01s) -->
+        <div class="story-line" id="t10">Behind closed doors, Kennedy and Khrushchev blinked.</div>
+        <div class="story-line" id="t11">One by one, the tanks backed away.</div>
+        <div class="story-line title-climax" id="t12">One photo. The closest humanity ever came to the brink.</div>
+      </div>
+
+      <!-- ARCHIVAL FOOTER -->
+      <footer id="archival-footer" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="footer-meta">US NATIONAL ARCHIVES &middot; USAMHI &middot; PUBLIC DOMAIN</div>
+      </footer>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // ---- CAMERA TIMELINE (Keyed to audio/manifest.json) ----
+      // 0.00–1.20 : Frozen print on wide establishing shot
+      // Centering street confrontation: tx = -622, ty = -202, scale = 1.0
+      tl.set("#photo-wrapper", { x: -622, y: -202, scale: 1.0 }, 0);
+
+      // 1.20 : Snap zoom into confrontation corridor (scale 1.45), slow drift
+      tl.to("#photo-wrapper", { x: -1141, y: -450, scale: 1.45, duration: 0.35, ease: "power3.out" }, 1.20);
+      tl.to("#photo-wrapper", { x: -1180, y: -480, scale: 1.50, duration: 2.15, ease: "none" }, 1.55);
+
+      // 3.70 : Snap in closer on M48 and the open street (scale 1.70)
+      tl.to("#photo-wrapper", { x: -1500, y: -800, scale: 1.70, duration: 0.35, ease: "power3.out" }, 3.70);
+      tl.to("#photo-wrapper", { x: -1550, y: -840, scale: 1.75, duration: 2.00, ease: "none" }, 4.05);
+
+      // 6.07 : Shutter #2 fires -> Pan over to US Checkpoint Guardhouse + sign
+      tl.to("#photo-wrapper", { x: -350, y: -600, scale: 1.50, duration: 1.80, ease: "power2.inOut" }, 6.07);
+      tl.to("#photo-wrapper", { x: -380, y: -620, scale: 1.53, duration: 2.50, ease: "none" }, 7.87);
+
+      // 10.40 : Pan onto American M48 Patton in foreground BEFORE Line 5 lands (11.11s)
+      tl.to("#photo-wrapper", { x: -1650, y: -1050, scale: 1.85, duration: 1.78, ease: "power2.inOut" }, 10.40);
+      tl.to("#photo-wrapper", { x: -1700, y: -1080, scale: 1.90, duration: 1.00, ease: "none" }, 12.20);
+
+      // 13.20 : Pan up Friedrichstrasse tightly onto Soviet T-55s BEFORE Line 6 lands (13.66s)
+      tl.to("#photo-wrapper", { x: -2050, y: -450, scale: 2.25, duration: 1.80, ease: "power2.inOut" }, 13.20);
+      tl.to("#photo-wrapper", { x: -2100, y: -470, scale: 2.30, duration: 3.50, ease: "none" }, 15.00);
+
+      // 18.50 : Deep dramatic punch on gun barrel & boundary corridor (scale 2.05)
+      tl.to("#photo-wrapper", { x: -1950, y: -850, scale: 2.05, duration: 1.50, ease: "power2.out" }, 18.50);
+      tl.to("#photo-wrapper", { x: -2000, y: -880, scale: 2.10, duration: 4.00, ease: "none" }, 20.00);
+
+      // 24.10 : Dramatic pull-back to wide establishing for the climax / resolution
+      tl.to("#photo-wrapper", { x: -622, y: -202, scale: 1.00, duration: 2.78, ease: "power2.inOut" }, 24.10);
+      tl.to("#photo-wrapper", { x: -640, y: -215, scale: 1.03, duration: 7.00, ease: "none" }, 26.90);
+
+      // ---- FLASH BULB ----
+      tl.set("#flash", { opacity: 0 }, 0);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.55, duration: 0.03, ease: "none" }, 0.01);
+      tl.to("#flash", { opacity: 0, duration: 0.06, ease: "power2.out" }, 0.04);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.35, duration: 0.03, ease: "none" }, 6.07);
+      tl.to("#flash", { opacity: 0, duration: 0.15, ease: "power2.out" }, 6.11);
+
+      // ---- CAPTIONS TIMELINE (Derived from manifest.json) ----
+      // B1
+      tl.to("#t1", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 0.48);
+      tl.to("#t1", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 3.45);
+      tl.to("#t2", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 3.65);
+      tl.to("#t2", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 6.07);
+
+      // B2
+      tl.to("#t3", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 6.35);
+      tl.to("#t3", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 8.95);
+      tl.to("#t4", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 9.10);
+      tl.to("#t4", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 10.75);
+
+      // B3
+      tl.to("#t5", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 10.95);
+      tl.to("#t5", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 13.35);
+      tl.to("#t6", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 13.55);
+      tl.to("#t6", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 16.35);
+      tl.to("#t7", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 16.55);
+      tl.to("#t7", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 18.95);
+
+      // B4
+      tl.to("#t8", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 19.15);
+      tl.to("#t8", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 21.65);
+      tl.to("#t9", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 21.85);
+      tl.to("#t9", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 24.15);
+
+      // B5
+      tl.to("#t10", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 24.35);
+      tl.to("#t10", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 27.25);
+      tl.to("#t11", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 27.45);
+      tl.to("#t11", { opacity: 0, duration: 0.18, ease: "power1.inOut" }, 29.60);
+      tl.to("#t12", { opacity: 1, duration: 0.22, ease: "power1.inOut" }, 29.80);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      if (!window.__hyperframes && !window.__HF_SEEK_MODE__ && !window.__HYPERFRAMES_RECORDING__) {
+        if (window.top === window) {
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+            tl.play();
+          } else {
+            window.addEventListener("DOMContentLoaded", () => tl.play());
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+{
+  "totalSec": 34.01,
+  "voice": "am_adam",
+  "speed": 1.05,
+  "snapSec": 6.069,
+  "lines": [
+    {
+      "beat": "B1",
+      "text": "These two tanks are seventy-five yards apart.",
+      "startSec": 0.7,
+      "endSec": 3.367,
+      "duration": 2.667
+    },
+    {
+      "beat": "B1",
+      "text": "Both had orders to fire if the other moved.",
+      "startSec": 3.787,
+      "endSec": 6.069,
+      "duration": 2.283
+    },
+    {
+      "beat": "B2",
+      "text": "October twenty-seventh, nineteen sixty-one.",
+      "startSec": 6.489,
+      "endSec": 8.793,
+      "duration": 2.304
+    },
+    {
+      "beat": "B2",
+      "text": "Checkpoint Charlie, Berlin.",
+      "startSec": 9.213,
+      "endSec": 10.685,
+      "duration": 1.472
+    },
+    {
+      "beat": "B3",
+      "text": "American M-forty-eights in the foreground.",
+      "startSec": 11.105,
+      "endSec": 13.239,
+      "duration": 2.133
+    },
+    {
+      "beat": "B3",
+      "text": "Soviet T-fifty-fives waiting across the line.",
+      "startSec": 13.659,
+      "endSec": 16.24,
+      "duration": 2.581
+    },
+    {
+      "beat": "B3",
+      "text": "Engines idling for sixteen hours straight.",
+      "startSec": 16.66,
+      "endSec": 18.836,
+      "duration": 2.176
+    },
+    {
+      "beat": "B4",
+      "text": "One nervous nineteen-year-old on a trigger...",
+      "startSec": 19.256,
+      "endSec": 21.56,
+      "duration": 2.304
+    },
+    {
+      "beat": "B4",
+      "text": "would have triggered full thermonuclear war.",
+      "startSec": 21.98,
+      "endSec": 24.049,
+      "duration": 2.069
+    },
+    {
+      "beat": "B5",
+      "text": "Behind closed doors, Kennedy and Khrushchev blinked.",
+      "startSec": 24.469,
+      "endSec": 27.179,
+      "duration": 2.709
+    },
+    {
+      "beat": "B5",
+      "text": "One by one, the tanks backed away.",
+      "startSec": 27.599,
+      "endSec": 29.497,
+      "duration": 1.899
+    },
+    {
+      "beat": "B5",
+      "text": "One photo. The closest humanity ever came to the brink.",
+      "startSec": 29.917,
+      "endSec": 33.16,
+      "duration": 3.243
+    }
+  ]
+}

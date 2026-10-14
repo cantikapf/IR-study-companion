@@ -13,7 +13,20 @@ tags:
 
 ## Last Updated
 
-2026-10-14 - Produksi Lengkap Video Mind Map CH080 (Global Environment As Agendas):
+2026-10-14 - Produksi Lengkap YouTube Shorts Single Photo Story SP-02 ("The Checkpoint Charlie Tank Standoff, 1961"):
+1. `Konteks & Format`: Produksi video Shorts Single Photo Story ke-2 kanonik (@IRinANutshell) pendamping materi Krisis Berlin 1961 (`_chapters/012-modern-world-history/120-domino-cold-war.md`).
+2. `Arsip Foto Autentik`: Menggunakan foto arsip resolusi ultra-tinggi 3013×2478 Public Domain (USAMHI / NARA / Wikimedia Commons) konfrontasi Friedrichstraße 27–28 Oktober 1961.
+3. `Audio & Narasi Neural`: Kokoro-82M ONNX (`am_adam`, speed 1.05x) menghasilkan narasi 34.01 detik (12 kalimat caption tersinkronisasi) dengan 2 aksen shutter mekanis (transient 90 ms) pada $t=0.00\text{s}$ dan $t=6.07\text{s}$. Peak mix dinormalisasi ke $-1.5\text{ dBFS}$ (zero clipping).
+4. `Visual & Framing HyperFrames`:
+   - Canvas 1080×1920 (9:16), framing full-bleed height-matched (2335×1920), bebas dead black space.
+   - Header archival docket digeser ke $y=140\text{px}$ untuk mematuhi safe area TikTok/Shorts UI mobile.
+   - Text stage diposisikan di $y=1100\text{px}$ di atas bodi jeep.
+   - Pergerakan kamera GSAP presisi: freeze frame-0, snap zoom konfrontasi 75 yard, pan guardhouse, zoom-in M48 Patton ($1.85\times$), pan deep zoom T-55 Soviet ($2.25\times$), deep punch ke moncong meriam ($2.05\times$), dan wide panorama pullback.
+5. `QA & Verifikasi`:
+   - `hyperframes check`: 0 errors, 0 warnings, 5/5 WCAG AA contrast pass.
+   - Master MP4 dirender ke `learning-videos/exports/SP02_Checkpoint_Charlie_Standoff_Short_1080p.mp4` (46.2 MB, 34.03s, 1080×1920 30 fps, H.264 + AAC stereo).
+   - Test suite pytest: 378/378 PASS.
+
 1. `Konteks & Kebutuhan`: Produksi video eksplikatori mindmap kanonik ke-8 untuk kanal resmi `@IRinANutshell` pendamping Bab 080 ("Global Environment As Agendas").
 2. `Arsitektur Pipeline 5-Fase Bergerbang`:
    - Fase 1 & 2: Ekstraksi brief akademik 8-babak dan audit kritis independen. Lolos gerbang `verify_brief_sources.py` 44/44 quotes (100% grounded, zero hallucination).
