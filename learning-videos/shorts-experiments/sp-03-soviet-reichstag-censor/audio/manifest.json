@@ -1,0 +1,82 @@
+{
+  "lines": [
+    {
+      "beat": "B1",
+      "text": "Before you celebrate this 1945 victory photo...",
+      "startSec": 0.7,
+      "endSec": 3.879,
+      "duration": 3.179
+    },
+    {
+      "beat": "B1",
+      "text": "look closely at this soldier's right wrist.",
+      "startSec": 4.279,
+      "endSec": 6.433,
+      "duration": 2.155
+    },
+    {
+      "beat": "B2",
+      "text": "May 2, 1945. The ruins of Berlin.",
+      "startSec": 6.833,
+      "endSec": 10.225,
+      "duration": 3.392
+    },
+    {
+      "beat": "B2",
+      "text": "Red Army photographer Yevgeny Khaldei stages the iconic Reichstag flag.",
+      "startSec": 10.625,
+      "endSec": 15.895,
+      "duration": 5.269
+    },
+    {
+      "beat": "B3",
+      "text": "Look at Sergeant Ismailov supporting the flagbearer.",
+      "startSec": 16.295,
+      "endSec": 18.94,
+      "duration": 2.645
+    },
+    {
+      "beat": "B3",
+      "text": "On his left wrist, a watch.",
+      "startSec": 19.34,
+      "endSec": 20.919,
+      "duration": 1.579
+    },
+    {
+      "beat": "B3",
+      "text": "On his right wrist... a second watch.",
+      "startSec": 21.319,
+      "endSec": 23.324,
+      "duration": 2.005
+    },
+    {
+      "beat": "B4",
+      "text": "Looting was punishable by execution under Soviet military law.",
+      "startSec": 23.724,
+      "endSec": 27.649,
+      "duration": 3.925
+    },
+    {
+      "beat": "B4",
+      "text": "Hours before publication, Khaldei scraped the second watch off the negative with a needle.",
+      "startSec": 28.049,
+      "endSec": 33.34,
+      "duration": 5.291
+    },
+    {
+      "beat": "B5",
+      "text": "One photograph defined Soviet triumph.",
+      "startSec": 33.74,
+      "endSec": 36.087,
+      "duration": 2.347
+    },
+    {
+      "beat": "B5",
+      "text": "A single needle stroke hid the truth for fifty years.",
+      "startSec": 36.487,
+      "endSec": 39.175,
+      "duration": 2.688
+    }
+  ],
+  "totalSec": 40.075
+}

@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SP-03 · Raising a Flag over the Reichstag (1945 Retouch)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-italic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+        color: #fdfbf7;
+        font-family: "Playfair Display", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+      }
+
+      /* ARCHIVAL TOP HEADER */
+      #archival-header {
+        position: absolute;
+        top: 140px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .header-kicker {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #e53e3e;
+        text-transform: uppercase;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-sub {
+        margin-top: 6px;
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: #cfc9c3;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-rule {
+        width: 60px;
+        height: 1px;
+        background: rgba(229, 62, 62, 0.6);
+        margin: 12px auto 0;
+      }
+
+      /* FULL-BLEED CAMERA STAGE */
+      #photo-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      #photo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2660px;
+        height: 1920px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #standoff-photo {
+        width: 2660px;
+        height: 1920px;
+        display: block;
+        object-fit: cover;
+        filter: sepia(0.10) contrast(1.12) brightness(0.92);
+      }
+
+      /* ARCHIVAL SCRIMS & VIGNETTE */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 320px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0.94) 0%,
+          rgba(9, 10, 13, 0.55) 55%,
+          rgba(9, 10, 13, 0) 100%
+        );
+        z-index: 10;
+      }
+
+      .botscrim {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1080px;
+        height: 640px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0) 0%,
+          rgba(9, 10, 13, 0.72) 20%,
+          rgba(9, 10, 13, 0.75) 55%,
+          rgba(9, 10, 13, 0.45) 85%,
+          rgba(9, 10, 13, 0.25) 100%
+        );
+        z-index: 10;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 95% 88% at 50% 42%,
+          rgba(9, 10, 13, 0) 60%,
+          rgba(9, 10, 13, 0.2) 85%,
+          rgba(9, 10, 13, 0.55) 100%
+        );
+        z-index: 12;
+      }
+
+      /* CAPTIONS STAGE (MOBILE SAFE ZONE: y: 1080 - 1500) */
+      #caption-stage {
+        position: absolute;
+        top: 1140px;
+        left: 80px;
+        width: 920px;
+        height: 340px;
+        z-index: 20;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .story-line {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 52px;
+        line-height: 1.28;
+        font-weight: 600;
+        color: #fdfbf7;
+        opacity: 0;
+        transform: translateY(18px);
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+      }
+
+      .story-line em {
+        font-style: italic;
+        color: #ff7070;
+      }
+
+      .story-line strong {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .climax-line {
+        font-size: 60px;
+        line-height: 1.24;
+        color: #ffffff;
+      }
+
+      /* FLASH BULB BLOOM OVERLAY */
+      #flash-overlay {
+        position: absolute;
+        inset: 0;
+        background: #ffffff;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 30;
+      }
+
+      /* GRAIN */
+      .grain {
+        position: absolute;
+        inset: 0;
+        opacity: 0.045;
+        background-image: radial-gradient(#fff 1px, transparent 1px);
+        background-size: 3px 3px;
+        pointer-events: none;
+        z-index: 15;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      class="clip"
+      data-composition-id="main"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="40.08"
+    >
+      <div id="archival-header" data-layout-allow-overflow data-layout-allow-occlusion>
+        <div class="header-kicker">Soviet State Archive · May 1945</div>
+        <div class="header-sub">The Reichstag Negative Censor · Berlin</div>
+        <div class="header-rule"></div>
+      </div>
+
+      <div id="photo-stage" data-layout-allow-overflow>
+        <div id="photo-wrapper" data-layout-allow-overflow>
+          <img
+            id="standoff-photo"
+            src="reichstag_master.jpg"
+            alt="Raising a flag over the Reichstag, 1945 by Yevgeny Khaldei"
+          />
+        </div>
+      </div>
+
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div id="caption-stage">
+        <!-- B1: Hook -->
+        <div class="story-line" id="line-0">Before you celebrate this <em>1945 victory photo</em>...</div>
+        <div class="story-line" id="line-1">look closely at this soldier's <strong>right wrist</strong>.</div>
+
+        <!-- B2: Context -->
+        <div class="story-line" id="line-2">May 2, 1945. The ruins of Berlin.</div>
+        <div class="story-line" id="line-3">Red Army photographer Yevgeny Khaldei stages the iconic Reichstag flag.</div>
+
+        <!-- B3: Detail Discovery -->
+        <div class="story-line" id="line-4">Look at Sergeant Ismailov supporting the flagbearer.</div>
+        <div class="story-line" id="line-5">On his left wrist, <strong>a watch</strong>.</div>
+        <div class="story-line" id="line-6">On his right wrist... <em>a second watch</em>.</div>
+
+        <!-- B4: The Conflict -->
+        <div class="story-line" id="line-7">Looting was punishable by <strong>execution</strong> under Soviet military law.</div>
+        <div class="story-line" id="line-8">Hours before publication, Khaldei scraped the second watch off the negative with a needle.</div>
+
+        <!-- B5: The Payoff -->
+        <div class="story-line" id="line-9">One photograph defined <strong>Soviet triumph</strong>.</div>
+        <div class="story-line climax-line" id="line-10">A single needle stroke hid the truth for <em>fifty years</em>.</div>
+      </div>
+
+      <div id="flash-overlay"></div>
+      <audio
+        id="narration"
+        src="audio/voiceover.mp3"
+        preload="auto"
+        data-start="0"
+        data-duration="40.08"
+      ></audio>
+    </div>
+
+    <script>
+      /*
+       * CAMERA COORDINATE CALCULATIONS:
+       * Original photo resized to 2660x1920 to match canvas height (1920px).
+       * Canvas is 1080x1920.
+       * Screen coord (X, Y) = (tx + u * s, ty + v * s)
+       * Centering (u, v) on screen (540, 960):
+       *   tx = 540 - u * s
+       *   ty = 960 - v * s
+       *
+       * Landmark centers in 2660x1920:
+       * - Full composition overview: u: 1450, v: 1050, s: 0.95 -> tx: -837, ty: -37
+       * - Flag and flagbearer (Alyosha): u: 1550, v: 1200, s: 1.25 -> tx: -1397, ty: -540
+       * - Ismailov figure & wrists: u: 2020, v: 1650, s: 1.70 -> tx: -2894, ty: -1845
+       * - Deep punch into wrists: u: 2000, v: 1620, s: 2.30 -> tx: -4060, ty: -2766
+       * - Pullback to wide vista / smoke ruins: u: 1350, v: 1000, s: 1.05 -> tx: -877, ty: -90
+       */
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Shutter 1: 0.00s head transient
+      tl.to(
+        "#flash-overlay",
+        {
+          opacity: 0.85,
+          duration: 0.04,
+          ease: "power2.out",
+        },
+        0.02
+      ).to(
+        "#flash-overlay",
+        {
+          opacity: 0,
+          duration: 0.07,
+          ease: "power2.in",
+        },
+        0.06
+      );
+
+      // BEAT 1: HOOK (0.00s - 6.43s)
+      // Frozen overview hold at 0.0s - 1.2s
+      tl.set(
+        "#photo-wrapper",
+        {
+          x: -837,
+          y: -37,
+          scale: 0.95,
+        },
+        0
+      );
+
+      // Hook Line 0: 0.70s - 3.88s
+      tl.to(
+        "#line-0",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        0.70
+      ).to(
+        "#line-0",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        3.88
+      );
+
+      // Snap pan to Ismailov and his wrists on Line 1:
+      // Pan arrives at 4.20s before Line 1 starts at 4.28s
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -2894,
+          y: -1845,
+          scale: 1.70,
+          duration: 1.15,
+          ease: "power3.inOut",
+        },
+        2.90
+      );
+
+      // Shutter 2 at 4.28s
+      tl.to(
+        "#flash-overlay",
+        {
+          opacity: 0.45,
+          duration: 0.04,
+          ease: "power2.out",
+        },
+        4.25
+      ).to(
+        "#flash-overlay",
+        {
+          opacity: 0,
+          duration: 0.06,
+          ease: "power2.in",
+        },
+        4.29
+      );
+
+      // Line 1: 4.28s - 6.43s
+      tl.to(
+        "#line-1",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.42,
+          ease: "power2.out",
+        },
+        4.28
+      ).to(
+        "#line-1",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        6.43
+      );
+
+      // BEAT 2: THE CONTEXT (6.83s - 15.90s)
+      // Pan back to flag and ruined Berlin backdrop
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -1397,
+          y: -540,
+          scale: 1.25,
+          duration: 1.45,
+          ease: "power2.inOut",
+        },
+        5.60
+      );
+
+      // Line 2: 6.83s - 10.22s
+      tl.to(
+        "#line-2",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.42,
+          ease: "power2.out",
+        },
+        6.83
+      ).to(
+        "#line-2",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        10.22
+      );
+
+      // Slow cinematic drift across Berlin skyline during Line 3
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -1250,
+          y: -480,
+          scale: 1.28,
+          duration: 4.80,
+          ease: "sine.out",
+        },
+        10.40
+      );
+
+      // Line 3: 10.62s - 15.90s
+      tl.to(
+        "#line-3",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        10.62
+      ).to(
+        "#line-3",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        15.90
+      );
+
+      // BEAT 3: DETAIL DISCOVERY (16.30s - 23.32s)
+      // Pan directly to Sergeant Ismailov & wrists before line starts
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -2894,
+          y: -1845,
+          scale: 1.70,
+          duration: 1.35,
+          ease: "power3.out",
+        },
+        15.20
+      );
+
+      // Line 4: 16.30s - 18.94s
+      tl.to(
+        "#line-4",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.40,
+          ease: "power2.out",
+        },
+        16.30
+      ).to(
+        "#line-4",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.30,
+          ease: "power2.in",
+        },
+        18.94
+      );
+
+      // Deep zoom-in directly into the wrists: scale 2.30x
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -4060,
+          y: -2766,
+          scale: 2.30,
+          duration: 1.20,
+          ease: "power2.inOut",
+        },
+        18.80
+      );
+
+      // Line 5: 19.34s - 20.92s
+      tl.to(
+        "#line-5",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.35,
+          ease: "power2.out",
+        },
+        19.34
+      ).to(
+        "#line-5",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.30,
+          ease: "power2.in",
+        },
+        20.92
+      );
+
+      // Micro punch onto right wrist (second watch):
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -4120,
+          y: -2850,
+          scale: 2.40,
+          duration: 1.10,
+          ease: "power2.out",
+        },
+        21.10
+      );
+
+      // Line 6: 21.32s - 23.32s
+      tl.to(
+        "#line-6",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.38,
+          ease: "power2.out",
+        },
+        21.32
+      ).to(
+        "#line-6",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.30,
+          ease: "power2.in",
+        },
+        23.32
+      );
+
+      // BEAT 4: THE CONFLICT (23.72s - 33.34s)
+      // Pull back slightly to show soldier's face and tension
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -3300,
+          y: -2150,
+          scale: 1.85,
+          duration: 1.30,
+          ease: "power2.inOut",
+        },
+        23.10
+      );
+
+      // Line 7: 23.72s - 27.65s
+      tl.to(
+        "#line-7",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.42,
+          ease: "power2.out",
+        },
+        23.72
+      ).to(
+        "#line-7",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        27.65
+      );
+
+      // Line 8: 28.05s - 33.34s
+      tl.to(
+        "#line-8",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        28.05
+      ).to(
+        "#line-8",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.35,
+          ease: "power2.in",
+        },
+        33.34
+      );
+
+      // BEAT 5: CLIMAX & PULLBACK (33.74s - 40.08s)
+      // Grand panorama pull-back revealing the whole composition
+      tl.to(
+        "#photo-wrapper",
+        {
+          x: -837,
+          y: -37,
+          scale: 0.95,
+          duration: 3.20,
+          ease: "power2.out",
+        },
+        33.20
+      );
+
+      // Line 9: 33.74s - 36.09s
+      tl.to(
+        "#line-9",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.40,
+          ease: "power2.out",
+        },
+        33.74
+      ).to(
+        "#line-9",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.30,
+          ease: "power2.in",
+        },
+        36.09
+      );
+
+      // Line 10 (Climax): 36.49s - 39.18s
+      tl.to(
+        "#line-10",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        36.49
+      ).to(
+        "#line-10",
+        {
+          opacity: 0,
+          y: -14,
+          duration: 0.50,
+          ease: "power2.in",
+        },
+        39.60
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      if (!window.__hyperframes && !window.__HF_SEEK_MODE__ && !window.__HYPERFRAMES_RECORDING__) {
+        if (window.top === window) {
+          if (document.readyState === "complete" || document.readyState === "interactive") {
+            tl.play();
+          } else {
+            window.addEventListener("DOMContentLoaded", () => tl.play());
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

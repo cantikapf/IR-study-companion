@@ -13,6 +13,36 @@ tags:
 
 ## Last Updated
 
+2026-10-15 - Produksi & Render Penuh YouTube Shorts SP-03 (Single Photo Archival Story):
+1. `Judul & Topik`: "The 1945 Reichstag Photo That Was Secretly Retouched" (Pengibaran Bendera Soviet di Reichstag & Sensor Jam Tangan Jarahan).
+2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi asli (4.349 × 3.139 px) karya fotografer Red Army Yevgeny Khaldei (Master Restoration Public Domain, Wikimedia Commons).
+3. `Audio & Narasi`: Disintesis dengan Kokoro-82M ONNX (`am_adam`, speed 1.05x) + 2 aksen momentary shutter camera (0.00s & snap 4.28s) dengan gain staging terkalibrasi (-1.5 dBFS).
+4. `Visual Staging & Render`: Komposisi vertikal 1080x1920 (40.1s, 30 FPS) dibangun di `learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/index.html` via GSAP + HyperFrames, deep-punch 2.30x ke pergelangan tangan Sersan Ismailov, safe-zone captions (y: 1140-1480px), dan WCAG AA pass.
+5. `Deliverables`: Video selesai di `learning-videos/exports/SP03_Soviet_Reichstag_Censor_Short_1080p.mp4` (118.1 MB) dan thumbnail rilis 1080p di `learning-videos/posters/SP03_Reichstag_Censor_Thumbnail.png`. Status diperbarui ke "READY TO PUBLISH" di `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
+
+
+2026-10-15 - Rilis Eksperimen YouTube Shorts VX-01 (Vox Paper Collage via Google Veo 3.1 & Kokoro TTS):
+1. `Judul & Topik`: "The Man Who Single-Handedly Stopped World War III" (Krisis Rudal Kuba 1962 & Kapal Selam Soviet B-59).
+2. `Format & Engine`: Gaya Vox Paper Collage hasil orkestrasi Chrome CDP (port 9222) ke Google Gemini Video / Veo 3.1 + Kokoro TTS (`am_adam`) + burnt-in Archivo Black safe-zone captions di area bawah (MarginV 220px).
+3. `Sinkronisasi & Tautan`: Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai seri `VX-01` dengan tautan publik: https://youtube.com/shorts/sC9cFz9jacw.
+
+2026-10-15 - Produksi Penuh Mind Map Explanatory Video CH090 ("Global Security Issues"):
+1. `Konteks & Cakupan Bab`: Menyelesaikan siklus lengkap 7-fase produksi video mind map kanonik Remotion (@IRinANutshell) untuk Bab 090 "Global Security Issues" (`_chapters/010-introduction-to-ir/090-global-security.md`).
+2. `Arsitektur Pipeline 7-Fase Bergerbang`:
+   - Fase 1 & 2: Ekstraksi brief akademik 8-babak dan audit kritis independen. Lolos gerbang mekanis `verify_brief_sources.py` 47/47 quotes (100% grounded, zero hallucination).
+   - Fase 3: Penyusunan typed concept graph 29 node (1 Root, 8 Hub, 20 Konsep) dengan label relasi ringkas (<=14 karakter). Lolos gerbang `validate_mindmap.ts` (0 defect).
+   - Fase 4: Naskah 8 babak pedagogis (100–115 kata/babak) dan sintesis vokal neural Kokoro-82M (`af_heart`, speed 1.05x) menghasilkan audio 416.65 detik (12.499 frame @ 30 FPS) dengan 48 caption kalimat.
+   - Fase 5 & 6: Visual builder kanvas 4800x3200, pewarnaan semantik akademis, penataan 49 segmen kamera (Deep Zoom 2.05x, Stationary Hold v=0, Panorama 0.28x). Lolos 100% audit mekanis: `validate_mindmap.ts` (0 defect), bounding-box collision test (0 overlap), `audit_card_fit.ts` (29/29 pass, margin >= 28px), dan `audit_frames.ts` (12.499/12.499 frame bebas subtitle collision & margin clipping).
+3. `Kemasan YouTube & Thumbnail Autentik`:
+   - Thumbnail 1080p diproduksi via `scripts/generate_thumbnail.py` menggunakan foto arsip sejarah institusional autentik: Ruang Sidang Dewan Keamanan PBB (United Nations Security Council Chamber / Norwegian Room di Markas Besar PBB New York dengan lukisan mural Per Krohg) (`global_security_visual_unsc_chamber.jpg`). Menjamin representasi isu keamanan global yang berwibawa, netral, dan akademis tanpa visual militer/tentara kontroversial.
+   - Still panorama kanonik tersimpan di `learning-videos/posters/IR_M01_CH090_Global_Security_Issues_Poster.png`.
+   - Master MP4 1080p dirender di background (`learning-videos/exports/IR_M01_CH090_Global_Security_Issues_MindMap_1080p.mp4`).
+4. `Registri & Sinkronisasi`:
+   - Sinkronisasi rilis YouTube selesai via `scripts/sync_youtube_video.py --chapter 090 --url https://youtu.be/4yt7mlZXeHo`.
+   - `learning-videos/catalog.json` & `README.md` diperbarui mencakup metadata dan status `Published` (`youtube_id: 4yt7mlZXeHo`).
+   - Frontmatter bab `_chapters/010-introduction-to-ir/090-global-security.md` tertaut resmi ke YouTube, mengaktifkan badge dinamis `VIDEO` di Curriculum Explorer, Table of Contents, dan Drawer.
+   - Suite pengujian `pytest`: 378/378 PASS.
+
 2026-10-15 - Peluncuran & Publikasi YouTube Shorts SH-03 "The 2,400-Year War Trap" (Thucydides Trap):
 1. `Konteks & Inovasi Format`: Rilis lini video Shorts format baru **Tri-Hybrid (D3-Geo Vector Map + Archival Collage + Concept Explainer)** pendamping bab Realisme Klasik & Hegemoni (`_chapters/023-theories-of-international-relations/020-classical-realism.md`).
 2. `Arsip Autentik & Segmentasi Scipy`: Menggunakan foto patung marmer Thucydides Royal Ontario Museum (ROM) dengan segmentasi alpha mask morfologis `scipy.ndimage` (zero noise/speckles), foto kapal induk USS Nimitz CSG-11, dan memo studi Harvard Belfer Center 16 kasus.
