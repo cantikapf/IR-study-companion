@@ -1,7 +1,16 @@
 ---
+youtube_id: "hV4uMX9N-x8"
 slug: end-ww2
 title: The Ending of The Second World War
 simple_summary: "World War II ended not just with the unconditional surrender of the Axis powers, but with the terrifying debut of the atomic bomb over Hiroshima and Nagasaki. Over 70 million people died, traditional European empires were bankrupt, and the continent lay divided under foreign boots. The ashes of total war permanently swept away the multipolar European balance, leaving two ideological atomic giants standing: the United States and the Soviet Union."
+explanatory_video:
+  title: "Mind Map Explanatory: The Ending of The Second World War"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "hV4uMX9N-x8"
+
 ---
 
 

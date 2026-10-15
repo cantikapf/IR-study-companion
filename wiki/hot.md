@@ -18,7 +18,7 @@ tags:
 2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi asli (4.349 × 3.139 px) karya fotografer Red Army Yevgeny Khaldei (Master Restoration Public Domain, Wikimedia Commons).
 3. `Audio & Narasi`: Disintesis dengan Kokoro-82M ONNX (`am_adam`, speed 1.05x) + 2 aksen momentary shutter camera (0.00s & snap 4.28s) dengan gain staging terkalibrasi (-1.5 dBFS).
 4. `Visual Staging & Render`: Komposisi vertikal 1080x1920 (40.1s, 30 FPS) dibangun di `learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/index.html` via GSAP + HyperFrames, deep-punch 2.30x ke pergelangan tangan Sersan Ismailov, safe-zone captions (y: 1140-1480px), dan WCAG AA pass.
-5. `Deliverables`: Video selesai di `learning-videos/exports/SP03_Soviet_Reichstag_Censor_Short_1080p.mp4` (118.1 MB) dan thumbnail rilis 1080p di `learning-videos/posters/SP03_Reichstag_Censor_Thumbnail.png`. Status diperbarui ke "READY TO PUBLISH" di `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
+5. `Deliverables & Publikasi`: Video selesai di `learning-videos/exports/SP03_Soviet_Reichstag_Censor_Short_1080p.mp4` (118.1 MB) dan thumbnail rilis 1080p di `learning-videos/posters/SP03_Reichstag_Censor_Thumbnail.png`. Resmi terbit di YouTube: https://youtube.com/shorts/hV4uMX9N-x8 dan disinkronisasi ke kurikulum web Bab 090 via `scripts/sync_youtube_video.py`.
 
 
 2026-10-15 - Rilis Eksperimen YouTube Shorts VX-01 (Vox Paper Collage via Google Veo 3.1 & Kokoro TTS):

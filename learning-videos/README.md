@@ -47,7 +47,8 @@ IR_M{ModuleNumber}_CH{ChapterNumber}_{TitleInSnakeCase}_{Format}_{Resolution}.{e
 | `IR-M01-CH050` | M01 / CH050 | Basic Explanation of Marxism in IR | Mind Map Explanatory | 06:48 | 1080p | 🟢 PUBLISHED (48.9 MB) | 🟢 GENERATED | [zJesX-ugSX4](https://youtu.be/zJesX-ugSX4) |
 | `IR-M01-CH060` | M01 / CH060 | Basic Explanation of Constructivism in IR | Mind Map Explanatory | 06:54 | 1080p | 🟢 PUBLISHED (61.3 MB) | 🟢 GENERATED | [A5f56_Ni3Iw](https://youtu.be/A5f56_Ni3Iw) |
 | `IR-M01-CH070` | M01 / CH070 | Global Finance and Global Trade as Agendas | Mind Map Explanatory | 07:50 | 1080p | 🟢 PUBLISHED (118.5 MB) | 🟢 GENERATED | [F31-IkqM-Qg](https://youtu.be/F31-IkqM-Qg) |
-| `IR-M01-CH080` | M01 / CH080 | 🟢 PUBLISHED | Mind Map Explanatory [0SpKawwCPh0](https://youtu.be/0SpKawwCPh0) | 08:05 | 1080p | 🟢 RENDERED (139.4 MB) | 🟢 GENERATED | ⚪ QUEUED FOR UPLOAD |
+| `IR-M01-CH080` | M01 / CH080 | 🟢 PUBLISHED | Mind Map Explanatory [0SpKawwCPh0](https://youtu.be/0SpKawwCPh0) | 08:05 | 1080p | 🟢 RENDERED (139.4 MB) | 🟢 GENERATED | 🟢 PUBLISHED |
+| `IR-M01-CH090` | M01 / CH090 | 🟢 PUBLISHED | Mind Map Explanatory  [hV4uMX9N-x8](https://youtu.be/hV4uMX9N-x8) | 06:56 | 1080p | 🟢 RENDERED (106.5 MB) | 🟢 GENERATED | 🟢 PUBLISHED |
 
 > **Catatan Status:**  
 > - 🟢 **RENDERED**: Berkas MP4 siap diputar secara lokal dan diunggah ke YouTube.  

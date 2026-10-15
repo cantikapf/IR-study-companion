@@ -227,6 +227,36 @@
         "youtube_id": "0SpKawwCPh0"
       },
       "last_updated": "2026-10-14"
+    },
+    {
+      "id": "IR-M01-CH090",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "090",
+      "chapter_slug": "090-global-security",
+      "title": "Global Security Issues",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (af_heart)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 416.65,
+      "frames": 12499,
+      "fps": 30,
+      "resolution": "1920x1080",
+      "status": "Published",
+      "files": {
+        "video": "learning-videos/exports/IR_M01_CH090_Global_Security_Issues_MindMap_1080p.mp4",
+        "poster": "learning-videos/posters/IR_M01_CH090_Global_Security_Issues_Poster.png",
+        "thumbnail": "learning-videos/posters/IR_M01_CH090_Global_Security_Issues_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "title": "Why Tanks Cannot Protect Us | Global Security Explained",
+        "status": "Published",
+        "youtube_id": "hV4uMX9N-x8"
+      },
+      "last_updated": "2026-10-15",
+      "file_size_bytes": 106502802
     }
   ]
 }

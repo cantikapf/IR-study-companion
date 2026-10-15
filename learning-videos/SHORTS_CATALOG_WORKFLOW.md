@@ -65,7 +65,7 @@ Format editorial alternatif anti-AI feel: foto arsip autentik resolusi ultra-tin
 |---|---|---|---|---|---|---|
 | **01** | `SP-01` | **One of These Men Will Die in 60 Days: The Yalta Photo Story** | Single Photo Archival (NARA 111-SC-260486) | `_chapters/012-modern-world-history/090-end-ww2.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/OP6fEXloh-k) |
 | **02** | `SP-02` | **The Checkpoint Charlie Tank Standoff (1961)** | Single Photo Archival (NARA / USAMHI M48 vs T-55) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/gRX2mVmLG30) |
-| **03** | `SP-03` | **The 1945 Reichstag Photo That Was Secretly Retouched** | Single Photo Archival (Khaldei Master Restoration) | `_chapters/012-modern-world-history/090-end-ww2.md` | **READY TO PUBLISH** | - |
+| **03** | `SP-03` | **The 1945 Reichstag Photo That Was Secretly Retouched** | Single Photo Archival (Khaldei Master Restoration) | `_chapters/012-modern-world-history/090-end-ww2.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/hV4uMX9N-x8) |
 | **04** | `VX-01` | **The Man Who Single-Handedly Stopped World War III** | Vox Paper Collage (Google Veo 3.1 + Kokoro TTS) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/sC9cFz9jacw) |
 
 ---
