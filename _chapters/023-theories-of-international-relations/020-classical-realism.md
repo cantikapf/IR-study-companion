@@ -1,8 +1,17 @@
 ---
+youtube_id: "PZjjpTXoqCs"
 title: Classical Realism
 slug: classical-realism
 abstract: This chapter explains the theory of classical realism in International Relations
 simple_summary: "Classical realists argue that wars do not occur simply because of poor communication or faulty treaties, but because of an inescapable flaw in human nature: the endless lust to dominate (*animus dominandi*). From Thucydides' ancient Athens to Hans Morgenthau's postwar diplomacy, leaders must navigate an unforgiving arena where moral preaching cannot stop tanks. In this tragic view of history, a statesman's highest moral duty is not saintly idealism, but cold prudence and the sober management of national power."
+explanatory_video:
+  title: "Mind Map Explanatory: Classical Realism"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "PZjjpTXoqCs"
+
 ---
 
 ## Realism Summary

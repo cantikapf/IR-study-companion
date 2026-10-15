@@ -1,0 +1,54 @@
+{
+  "title": "The 2,400-Year War Trap",
+  "duration_seconds": 41.83,
+  "total_frames_30fps": 1255,
+  "voice": "am_adam",
+  "sample_rate": 24000,
+  "lines": [
+    {
+      "id": "beat1_hook",
+      "index": 1,
+      "text": "If you think peace lasts, why did 12 out of 16 great powers fail to stop world war before it broke out?",
+      "subtitle": "If you think peace lasts, why did 12 out of 16 great powers fail to stop world war before it broke out?",
+      "start": 0.5,
+      "end": 6.644,
+      "duration": 6.144
+    },
+    {
+      "id": "beat2_origin",
+      "index": 2,
+      "text": "2,400 years ago, Greek historian Thucydides identified the pattern: 'It was the rise of Athens and the fear this instilled in Sparta that made war inevitable.'",
+      "subtitle": "2,400 years ago, Greek historian Thucydides identified the pattern: 'It was the rise of Athens and the fear this instilled in Sparta that made war inevitable.'",
+      "start": 7.044,
+      "end": 17.305,
+      "duration": 10.261
+    },
+    {
+      "id": "beat3_pivot",
+      "index": 3,
+      "text": "Today, that chessboard shifted to the Pacific. Washington is the established superpower. Beijing is the challenger rising at historic speed.",
+      "subtitle": "Today, that chessboard shifted to the Pacific. Washington is the established superpower. Beijing is the challenger rising at historic speed.",
+      "start": 17.705,
+      "end": 25.748,
+      "duration": 8.043
+    },
+    {
+      "id": "beat4_chokepoint",
+      "index": 4,
+      "text": "China now commands the largest naval fleet on Earth. And America's defense perimeter runs straight through this 100-mile strait.",
+      "subtitle": "China now commands the largest naval fleet on Earth. And America's defense perimeter runs straight through this 100-mile strait.",
+      "start": 26.148,
+      "end": 33.423,
+      "duration": 7.275
+    },
+    {
+      "id": "beat5_climax",
+      "index": 5,
+      "text": "When the hegemon feels surrounded and the challenger feels contained, miscalculation is fatal. Are we doomed to repeat it?",
+      "subtitle": "When the hegemon feels surrounded and the challenger feels contained, miscalculation is fatal. Are we doomed to repeat it?",
+      "start": 33.823,
+      "end": 40.628,
+      "duration": 6.805
+    }
+  ]
+}

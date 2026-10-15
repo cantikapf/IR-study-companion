@@ -13,6 +13,13 @@ tags:
 
 ## Last Updated
 
+2026-10-15 - Peluncuran & Publikasi YouTube Shorts SH-03 "The 2,400-Year War Trap" (Thucydides Trap):
+1. `Konteks & Inovasi Format`: Rilis lini video Shorts format baru **Tri-Hybrid (D3-Geo Vector Map + Archival Collage + Concept Explainer)** pendamping bab Realisme Klasik & Hegemoni (`_chapters/023-theories-of-international-relations/020-classical-realism.md`).
+2. `Arsip Autentik & Segmentasi Scipy`: Menggunakan foto patung marmer Thucydides Royal Ontario Museum (ROM) dengan segmentasi alpha mask morfologis `scipy.ndimage` (zero noise/speckles), foto kapal induk USS Nimitz CSG-11, dan memo studi Harvard Belfer Center 16 kasus.
+3. `Kartografi & Kamera GPU`: Proyeksi D3-Geo global meluncur cepat (fly-over 2.8s) dari Laut Aegea 431 SM ke Selat Taiwan 2026, radar konsentris jangkauan rudal pesisir, dan caliper badge `CHOKEPOINT: 160 KM`.
+4. `Audio & Narasi Neural`: Kokoro-82M ONNX (`am_adam`, 1.06x speed, termastering -14 LUFS) menghasilkan audio 41.83 detik tersinkronisasi presisi. Hook naskah mencetak skor 82/100 (STRONG) pada `hookscore.py` dan packaging 100/100 pada `title.py`.
+5. `Publikasi & Tautan Resmi`: Berhasil dirender deterministik frame-by-frame via CDP stepper ke `learning-videos/exports/SH03_Thucydides_Trap_Map_Animation_Short_1080p.mp4` (7.47 MB, 30 fps, 1080x1920) dan resmi tayang di YouTube Shorts: [PZjjpTXoqCs](https://youtube.com/shorts/PZjjpTXoqCs). Status katalog `learning-videos/SHORTS_CATALOG_WORKFLOW.md` tercatat PUBLISHED.
+
 2026-10-14 - Penggantian Globe Homepage ke Animasi Vektor Interaktif (Main Codebase):
 1. `Konteks`: Mengganti animasi wireframe SVG statis di hero section homepage (`_pages/index.md` & `prototype/home.html`) dengan globe vektor interaktif berbasis D3-Geo Orthographic (`world-atlas` 110m).
 2. `Fitur Interaktif`:

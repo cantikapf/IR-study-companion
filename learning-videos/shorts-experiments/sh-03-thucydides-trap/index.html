@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The 2,400-Year War Trap</title>
+  <style>
+    @font-face {
+      font-family: 'Archivo Black';
+      src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('fonts/PlayfairDisplay-normal-700.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('fonts/PlayfairDisplay-italic-400.ttf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/Inter-600.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0A0D14;
+      font-family: 'Inter', sans-serif;
+      color: #F8FAFC;
+      user-select: none;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background: #0A0D14;
+      overflow: hidden;
+    }
+
+    /* LAYER 1: Background Vector Map */
+    #map-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      z-index: 10;
+    }
+
+    .ocean { fill: #0A0D14; }
+    .land { fill: #162032; stroke: #2A3B54; stroke-width: 1.2px; }
+    .graticule { fill: none; stroke: rgba(148, 163, 184, 0.08); stroke-width: 0.8px; }
+    
+    .sparta-land { fill: #142848; stroke: #1E6BFF; stroke-width: 2px; }
+    .athens-land { fill: #3A141A; stroke: #E63946; stroke-width: 2px; }
+    .china-land { fill: #33151A; stroke: #E63946; stroke-width: 2px; }
+    .taiwan-land { fill: #3D2D10; stroke: #F59E0B; stroke-width: 2px; }
+
+    /* Top HUD Bar: Strict Non-Colliding Layout */
+    .hud-header {
+      position: absolute;
+      top: 100px;
+      left: 72px;
+      right: 72px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(10, 13, 20, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 8px;
+      padding: 0 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .hud-badge {
+      background: rgba(30, 107, 255, 0.25);
+      color: #93C5FD;
+      padding: 6px 14px;
+      border-radius: 4px;
+      border: 1px solid #1E6BFF;
+      font-family: 'Space Mono', monospace;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .hud-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 19px;
+      color: #CBD5E1;
+      letter-spacing: 0.04em;
+    }
+
+    /* Subtitle Bar at Bottom Safe Zone */
+    #subtitle-container {
+      position: absolute;
+      bottom: 420px;
+      left: 72px;
+      right: 72px;
+      min-height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 120;
+      pointer-events: none;
+    }
+
+    .subtitle-box {
+      background: rgba(10, 13, 20, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 18px 28px;
+      border-radius: 12px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.8);
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #F8FAFC;
+    }
+
+    .subtitle-box span.highlight {
+      color: #FACC15;
+      font-weight: 700;
+    }
+
+    /* LAYER 2: Archival Collage Cards */
+    .collage-card {
+      position: absolute;
+      z-index: 40;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.85));
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #111827;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    /* Beat 1 Harvard Study Document */
+    #harvard-card {
+      top: 360px;
+      left: 100px;
+      width: 880px;
+      background: #EDE8DD;
+      color: #1A1A1A;
+      padding: 48px 40px;
+      border: 3px solid #C1121F;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+      transform: rotate(-2deg);
+    }
+
+    .harvard-header {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      color: #666;
+      border-bottom: 2px solid #333;
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .stamp-red {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      border: 4px solid #C1121F;
+      color: #C1121F;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 32px;
+      padding: 8px 18px;
+      transform: rotate(12deg);
+      letter-spacing: 0.1em;
+      opacity: 0.9;
+    }
+
+    .stat-hero {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 96px;
+      line-height: 1.0;
+      color: #C1121F;
+      margin: 20px 0 10px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-subtext {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: #222;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Thucydides Bust Cut-out (Placed at Upper Right, away from bottom subtitle) */
+    #thucydides-container {
+      position: absolute;
+      top: 240px;
+      right: 60px;
+      z-index: 35;
+      width: 380px;
+      height: 560px;
+      opacity: 0;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.85));
+    }
+
+    #thucydides-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    #thucydides-quote-card {
+      position: absolute;
+      top: 420px;
+      left: 72px;
+      width: 560px;
+      background: rgba(15, 23, 42, 0.94);
+      border-left: 6px solid #E63946;
+      border-radius: 8px;
+      padding: 24px 28px;
+      z-index: 45;
+      opacity: 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.85);
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 1.35;
+      color: #F8FAFC;
+      margin-bottom: 10px;
+    }
+
+    .quote-author {
+      font-family: 'Space Mono', monospace;
+      font-size: 19px;
+      color: #94A3B8;
+      letter-spacing: 0.08em;
+    }
+
+    /* Carrier Strike Group Card (Beat 3: Compact & Placed Higher) */
+    #carrier-card {
+      position: absolute;
+      top: 240px;
+      left: 90px;
+      width: 900px;
+      height: 440px;
+      background: #0F172A;
+      border: 2px solid #1E6BFF;
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 45;
+      opacity: 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.85);
+    }
+
+    #carrier-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.1) brightness(0.9);
+    }
+
+    .carrier-label {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #1E6BFF;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      color: #60A5FA;
+      letter-spacing: 0.06em;
+    }
+
+    /* Beat 5 Climax Tension Card */
+    #climax-hud {
+      position: absolute;
+      top: 480px;
+      left: 80px;
+      width: 920px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 3px solid #E63946;
+      border-radius: 16px;
+      padding: 44px 36px;
+      text-align: center;
+      z-index: 60;
+      opacity: 0;
+      box-shadow: 0 30px 60px rgba(230, 57, 70, 0.35);
+    }
+
+    .climax-headline {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 58px;
+      line-height: 1.15;
+      color: #F8FAFC;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .climax-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 24px;
+      color: #F59E0B;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <!-- Top HUD Bar -->
+    <div class="hud-header">
+      <div class="hud-badge">HISTORICAL GEOPOLITICS</div>
+      <div class="hud-meta" id="telemetry-coord">HARVARD BELFER CENTER · CASE FILE</div>
+    </div>
+
+    <!-- LAYER 1: Tactical Vector Map -->
+    <svg id="map-svg" viewBox="0 0 1080 1920">
+      <defs>
+        <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="8" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="8" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Camera group driven by hardware 2D matrix -->
+      <g id="map-camera-group">
+        <rect width="10000" height="10000" x="-5000" y="-5000" class="ocean" />
+        <g id="graticules-layer"></g>
+        <g id="land-layer"></g>
+        <g id="tactical-overlays"></g>
+      </g>
+    </svg>
+
+    <!-- LAYER 2: Archival Collage & Cut-outs -->
+    <!-- Beat 1 Card -->
+    <div id="harvard-card" class="collage-card">
+      <div class="harvard-header">
+        <span>HARVARD BELFER CENTER · PROJECT #16</span>
+        <span>PERIOD: 1500–2000 AD</span>
+      </div>
+      <div class="stamp-red">CASE RECORDED</div>
+      <div class="stat-hero">12 OF 16</div>
+      <div class="stat-subtext">Rivalries between rising and ruling superpowers ended in catastrophic world war.</div>
+    </div>
+
+    <!-- Beat 2 Thucydides Bust & Quote -->
+    <div id="thucydides-container">
+      <img src="assets/thucydides_cutout.png" alt="Thucydides Bust" />
+    </div>
+    <div id="thucydides-quote-card">
+      <div class="quote-text">"It was the rise of Athens and the fear that this instilled in Sparta that made war inevitable."</div>
+      <div class="quote-author">— THUCYDIDES, 431 BC</div>
+    </div>
+
+    <!-- Beat 3 & 4 Carrier Strike Group Inset -->
+    <div id="carrier-card" class="collage-card">
+      <img src="assets/uss_nimitz_1080.jpg" alt="USS Nimitz Carrier Strike Group" />
+      <div class="carrier-label">US PACIFIC FLEET · CSG-11 FORWARD PATROL</div>
+    </div>
+
+    <!-- Beat 5 Climax HUD -->
+    <div id="climax-hud">
+      <div class="climax-headline">DOOMED TO REPEAT THE TRAP?</div>
+      <div class="climax-sub">160 KM TAIWAN STRAIT · ZERO MARGIN FOR ERROR</div>
+    </div>
+
+    <!-- Subtitle Overlay Container -->
+    <div id="subtitle-container">
+      <div class="subtitle-box" id="subtitle-text">
+        Loading geopolitical simulation...
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="data/countries.js"></script>
+  <script>
+    // D3 Map Rig Setup
+    const width = 1080;
+    const height = 1920;
+    const svg = d3.select("#map-svg");
+    const cameraGroup = d3.select("#map-camera-group");
+    const landLayer = d3.select("#land-layer");
+    const graticuleLayer = d3.select("#graticules-layer");
+    const tacticalLayer = d3.select("#tactical-overlays");
+
+    // Standard Equirectangular Projection
+    const projection = d3.geoEquirectangular()
+      .scale(320)
+      .translate([width / 2, height / 2]);
+
+    const path = d3.geoPath().projection(projection);
+
+    // Draw Graticule
+    const graticule = d3.geoGraticule().step([15, 15]);
+    graticuleLayer.append("path")
+      .datum(graticule)
+      .attr("class", "graticule")
+      .attr("d", path);
+
+    // Draw Countries
+    const worldData = window.WORLD_GEOJSON || window.countriesData;
+    if (worldData && worldData.features) {
+      landLayer.selectAll("path")
+        .data(worldData.features)
+        .enter()
+        .append("path")
+        .attr("class", d => {
+          const name = d.properties.name || "";
+          if (name === "China") return "land china-land";
+          if (name === "Taiwan") return "land taiwan-land";
+          if (name === "Greece") return "land athens-land";
+          return "land";
+        })
+        .attr("d", path);
+    }
+
+    // Coordinates
+    const taiwanCoord = projection([120.0, 23.8]);
+    const athensCoord = projection([23.7, 37.9]);
+    const spartaCoord = projection([22.4, 37.0]);
+
+    // Aegean Markers
+    tacticalLayer.append("circle")
+      .attr("cx", athensCoord[0])
+      .attr("cy", athensCoord[1])
+      .attr("r", 20)
+      .attr("fill", "rgba(230, 57, 70, 0.45)")
+      .attr("stroke", "#E63946")
+      .attr("stroke-width", 2.5);
+
+    tacticalLayer.append("circle")
+      .attr("cx", spartaCoord[0])
+      .attr("cy", spartaCoord[1])
+      .attr("r", 20)
+      .attr("fill", "rgba(30, 107, 255, 0.45)")
+      .attr("stroke", "#1E6BFF")
+      .attr("stroke-width", 2.5);
+
+    // Taiwan Strait Concentric Radar Rings
+    const radarGroup = tacticalLayer.append("g")
+      .attr("id", "taiwan-radar")
+      .attr("opacity", 0);
+
+    for (let r = 40; r <= 180; r += 45) {
+      radarGroup.append("circle")
+        .attr("cx", taiwanCoord[0])
+        .attr("cy", taiwanCoord[1])
+        .attr("r", r)
+        .attr("fill", "none")
+        .attr("stroke", "rgba(245, 158, 11, 0.45)")
+        .attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", "4,4");
+    }
+
+    // Taiwan Chokepoint Caliper Badge
+    const badgeG = radarGroup.append("g")
+      .attr("transform", `translate(${taiwanCoord[0] - 120}, ${taiwanCoord[1] - 80})`);
+
+    badgeG.append("rect")
+      .attr("width", 240)
+      .attr("height", 36)
+      .attr("rx", 6)
+      .attr("fill", "rgba(10, 13, 20, 0.9)")
+      .attr("stroke", "#F59E0B")
+      .attr("stroke-width", 1.5);
+
+    badgeG.append("text")
+      .attr("x", 120)
+      .attr("y", 24)
+      .attr("fill", "#F59E0B")
+      .attr("font-family", "'Space Mono', monospace")
+      .attr("font-size", "17px")
+      .attr("font-weight", "700")
+      .attr("text-anchor", "middle")
+      .text("CHOKEPOINT: 160 KM");
+
+    // Camera Navigation Helper via hardware 2D matrix
+    function setCamera(centerX, centerY, scaleVal) {
+      const tx = width / 2 - centerX * scaleVal;
+      const ty = height / 2 - centerY * scaleVal;
+      cameraGroup.attr("transform", `translate(${tx}, ${ty}) scale(${scaleVal})`);
+    }
+
+    // Initialize Camera at Global Scale
+    setCamera(width / 2, height / 2, 1.0);
+
+    // Expose to window for headless renderer
+    window.masterTl = gsap.timeline({ paused: true });
+    const masterTl = window.masterTl;
+
+    // Subtitle helper
+    function setSubtitle(html) {
+      document.getElementById("subtitle-text").innerHTML = html;
+    }
+
+    // Camera GSAP proxy object
+    const cam = { x: width / 2, y: height / 2, scale: 1.0 };
+    function updateCam() {
+      setCamera(cam.x, cam.y, cam.scale);
+    }
+
+    // BEAT 1: 0.0s -> 6.64s (Harvard Study Hook)
+    masterTl.add(() => {
+      setSubtitle('If you think peace lasts, why did <span class="highlight">12 out of 16 great powers</span> fail to stop world war?');
+    }, 0.5);
+
+    masterTl.to("#harvard-card", {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      ease: "back.out(1.4)"
+    }, 0.6);
+
+    // BEAT 2: 7.04s -> 17.30s (Thucydides & Ancient Greece)
+    masterTl.add(() => {
+      setSubtitle('2,400 years ago, Greek historian Thucydides saw it: <span class="highlight">"Athens rose, Sparta grew terrified, and war became inevitable."</span>');
+      document.getElementById("telemetry-coord").innerText = "LAT: 37°58′N · LON: 23°43′E (AEGEAN)";
+    }, 7.04);
+
+    masterTl.to("#harvard-card", {
+      opacity: 0,
+      scale: 0.85,
+      duration: 0.5,
+      ease: "power2.in"
+    }, 7.04);
+
+    // Camera zoom into Aegean Sea
+    masterTl.to(cam, {
+      x: athensCoord[0],
+      y: athensCoord[1],
+      scale: 3.8,
+      duration: 2.2,
+      ease: "power2.inOut",
+      onUpdate: updateCam
+    }, 7.2);
+
+    masterTl.to("#thucydides-container", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    }, 8.0);
+
+    masterTl.to("#thucydides-quote-card", {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    }, 9.2);
+
+    // BEAT 3: 17.70s -> 25.75s (Pivot to Pacific: Washington vs Beijing)
+    masterTl.add(() => {
+      setSubtitle('Today, that chessboard shifted to the Pacific. <span class="highlight">Washington is the superpower. Beijing is the challenger</span> rising at historic speed.');
+      document.getElementById("telemetry-coord").innerText = "LAT: 23°40′N · LON: 120°58′E (PACIFIC)";
+    }, 17.70);
+
+    masterTl.to(["#thucydides-container", "#thucydides-quote-card"], {
+      opacity: 0,
+      duration: 0.5
+    }, 17.70);
+
+    // Camera rapid fly-over to West Pacific / Taiwan
+    masterTl.to(cam, {
+      x: taiwanCoord[0],
+      y: taiwanCoord[1],
+      scale: 2.4,
+      duration: 2.8,
+      ease: "power2.inOut",
+      onUpdate: updateCam
+    }, 17.8);
+
+    masterTl.to("#carrier-card", {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: "back.out(1.2)"
+    }, 19.5);
+
+    // BEAT 4: 26.15s -> 33.42s (Largest Navy & 100-Mile Chokepoint)
+    masterTl.add(() => {
+      setSubtitle('China commands the <span class="highlight">largest naval fleet on Earth</span>. And America\'s defense perimeter runs straight through this <span class="highlight">100-mile strait</span>.');
+      document.getElementById("telemetry-coord").innerText = "TAIWAN STRAIT · FIRST ISLAND CHAIN";
+    }, 26.15);
+
+    masterTl.to("#carrier-card", {
+      opacity: 0,
+      duration: 0.5
+    }, 26.15);
+
+    // Zoom into Taiwan Strait Chokepoint
+    masterTl.to(cam, {
+      x: taiwanCoord[0],
+      y: taiwanCoord[1],
+      scale: 4.8,
+      duration: 2.5,
+      ease: "power2.inOut",
+      onUpdate: updateCam
+    }, 26.5);
+
+    masterTl.to("#taiwan-radar", {
+      opacity: 1,
+      duration: 0.8
+    }, 27.5);
+
+    // BEAT 5: 33.82s -> 41.83s (Climax & CTA)
+    masterTl.add(() => {
+      setSubtitle('When the hegemon feels surrounded and the challenger feels contained, <span class="highlight">miscalculation is fatal. Are we doomed to repeat it?</span>');
+      document.getElementById("telemetry-coord").innerText = "HEGEMONIC TRANSITION DILEMMA";
+    }, 33.82);
+
+    masterTl.to("#taiwan-radar", {
+      opacity: 0,
+      duration: 0.5
+    }, 33.82);
+
+    masterTl.to(cam, {
+      x: taiwanCoord[0],
+      y: taiwanCoord[1] + 140,
+      scale: 2.8,
+      duration: 2.0,
+      ease: "power2.out",
+      onUpdate: updateCam
+    }, 33.82);
+
+    masterTl.to("#climax-hud", {
+      opacity: 1,
+      duration: 0.7,
+      ease: "power2.out"
+    }, 34.5);
+
+    // Final Hold
+    masterTl.to({}, { duration: 1.0 }, 40.8);
+  </script>
+</body>
+</html>
