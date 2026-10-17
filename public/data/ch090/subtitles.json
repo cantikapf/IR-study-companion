@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "slideId": 1,
+    "sentenceIndex": 1,
+    "startSec": 0.0,
+    "endSec": 9.173,
+    "startFrame": 0,
+    "endFrame": 275,
+    "text": "For centuries, international relations defined national security through a single lens: armies guarding territorial borders against foreign invasion."
+  },
+  {
+    "id": 2,
+    "slideId": 1,
+    "sentenceIndex": 2,
+    "startSec": 9.453,
+    "endSec": 12.973,
+    "startFrame": 284,
+    "endFrame": 389,
+    "text": "But the end of the Cold War dismantled that narrow certainty."
+  },
+  {
+    "id": 3,
+    "slideId": 1,
+    "sentenceIndex": 3,
+    "startSec": 13.253,
+    "endSec": 21.424,
+    "startFrame": 398,
+    "endFrame": 643,
+    "text": "As direct military confrontation between superpowers receded, complex transnational dangers surged across globalized networks."
+  },
+  {
+    "id": 4,
+    "slideId": 1,
+    "sentenceIndex": 4,
+    "startSec": 21.704,
+    "endSec": 29.277,
+    "startFrame": 651,
+    "endFrame": 878,
+    "text": "Pandemics, climate collapse, financial shocks, cyber warfare, and terrorism ignore sovereign border checkpoints entirely."
+  },
+  {
+    "id": 5,
+    "slideId": 1,
+    "sentenceIndex": 5,
+    "startSec": 29.557,
+    "endSec": 36.96,
+    "startFrame": 887,
+    "endFrame": 1109,
+    "text": "If millions of citizens die from infectious disease or ecological breakdown, heavy battle tanks offer zero protection."
+  },
+  {
+    "id": 6,
+    "slideId": 1,
+    "sentenceIndex": 6,
+    "startSec": 37.24,
+    "endSec": 46.584,
+    "startFrame": 1117,
+    "endFrame": 1398,
+    "text": "Security is now recognized as a complex, multidimensional phenomenon spanning political, economic, societal, and environmental domains."
+  },
+  {
+    "id": 7,
+    "slideId": 1,
+    "sentenceIndex": 7,
+    "startSec": 46.864,
+    "endSec": 52.517,
+    "startFrame": 1406,
+    "endFrame": 1576,
+    "text": "Addressing these borderless vulnerabilities compels us to rethink the very foundation of defense."
+  },
+  {
+    "id": 8,
+    "slideId": 2,
+    "sentenceIndex": 1,
+    "startSec": 53.167,
+    "endSec": 58.607,
+    "startFrame": 1595,
+    "endFrame": 1758,
+    "text": "To understand why security was traditionally militarized, we must turn to the Realist paradigm."
+  },
+  {
+    "id": 9,
+    "slideId": 2,
+    "sentenceIndex": 2,
+    "startSec": 58.887,
+    "endSec": 66.717,
+    "startFrame": 1767,
+    "endFrame": 2002,
+    "text": "Realists view the international arena as a Hobbesian state of nature\u2014an anarchic realm lacking an overarching global government."
+  },
+  {
+    "id": 10,
+    "slideId": 2,
+    "sentenceIndex": 3,
+    "startSec": 66.997,
+    "endSec": 74.826,
+    "startFrame": 2010,
+    "endFrame": 2245,
+    "text": "In this self-help system, sovereign states act as primary actors whose survival depends entirely on their own power capabilities."
+  },
+  {
+    "id": 11,
+    "slideId": 2,
+    "sentenceIndex": 4,
+    "startSec": 75.106,
+    "endSec": 79.906,
+    "startFrame": 2253,
+    "endFrame": 2397,
+    "text": "States are structurally compelled to pursue military power to deter rival nations."
+  },
+  {
+    "id": 12,
+    "slideId": 2,
+    "sentenceIndex": 5,
+    "startSec": 80.186,
+    "endSec": 90.469,
+    "startFrame": 2406,
+    "endFrame": 2714,
+    "text": "Stability is not achieved through goodwill, but through a fragile balance of power and counter-alliances ensuring no single empire attains hegemonic dominance."
+  },
+  {
+    "id": 13,
+    "slideId": 2,
+    "sentenceIndex": 6,
+    "startSec": 90.749,
+    "endSec": 100.37,
+    "startFrame": 2722,
+    "endFrame": 3011,
+    "text": "Because international institutions possess limited enforcement authority under anarchy, military force remains the ultimate guarantor of national survival."
+  },
+  {
+    "id": 14,
+    "slideId": 3,
+    "sentenceIndex": 1,
+    "startSec": 101.02,
+    "endSec": 104.348,
+    "startFrame": 3031,
+    "endFrame": 3130,
+    "text": "Liberal institutionalists challenge this grim fatalism."
+  },
+  {
+    "id": 15,
+    "slideId": 3,
+    "sentenceIndex": 2,
+    "startSec": 104.628,
+    "endSec": 112.671,
+    "startFrame": 3139,
+    "endFrame": 3380,
+    "text": "They argue that while international anarchy is real, states can construct multilateral institutions to escape the zero-sum trap."
+  },
+  {
+    "id": 16,
+    "slideId": 3,
+    "sentenceIndex": 3,
+    "startSec": 112.951,
+    "endSec": 122.017,
+    "startFrame": 3389,
+    "endFrame": 3661,
+    "text": "Organizations such as the United Nations, the World Trade Organization, and NATO facilitate repeated, predictable interactions between governments."
+  },
+  {
+    "id": 17,
+    "slideId": 3,
+    "sentenceIndex": 4,
+    "startSec": 122.297,
+    "endSec": 131.513,
+    "startFrame": 3669,
+    "endFrame": 3945,
+    "text": "By standardizing information and lowering transaction costs, institutions mitigate the fear of cheating and establish durable norms of reciprocity."
+  },
+  {
+    "id": 18,
+    "slideId": 3,
+    "sentenceIndex": 5,
+    "startSec": 131.793,
+    "endSec": 139.665,
+    "startFrame": 3954,
+    "endFrame": 4190,
+    "text": "Over time, member states discover that self-interest is best secured through cooperative rule-making rather than unilateral aggression."
+  },
+  {
+    "id": 19,
+    "slideId": 3,
+    "sentenceIndex": 6,
+    "startSec": 139.945,
+    "endSec": 150.548,
+    "startFrame": 4198,
+    "endFrame": 4516,
+    "text": "By locking states into dense webs of interdependence, international institutions produce positive-sum security outcomes that soften the harsher edges of anarchic rivalry."
+  },
+  {
+    "id": 20,
+    "slideId": 4,
+    "sentenceIndex": 1,
+    "startSec": 151.198,
+    "endSec": 159.731,
+    "startFrame": 4536,
+    "endFrame": 4792,
+    "text": "Constructivists take the argument deeper, asserting that the fundamental structures of world politics are social rather than purely material."
+  },
+  {
+    "id": 21,
+    "slideId": 4,
+    "sentenceIndex": 2,
+    "startSec": 160.011,
+    "endSec": 170.529,
+    "startFrame": 4800,
+    "endFrame": 5116,
+    "text": "As scholar Alexander Wendt demonstrated, anarchy is what states make of it\u2014security environments depend on shared knowledge and expectations rather than missile counts alone."
+  },
+  {
+    "id": 22,
+    "slideId": 4,
+    "sentenceIndex": 3,
+    "startSec": 170.809,
+    "endSec": 176.377,
+    "startFrame": 5124,
+    "endFrame": 5291,
+    "text": "If two states view each other as implacable enemies, a single weapon sparks a security dilemma."
+  },
+  {
+    "id": 23,
+    "slideId": 4,
+    "sentenceIndex": 4,
+    "startSec": 176.657,
+    "endSec": 184.593,
+    "startFrame": 5300,
+    "endFrame": 5538,
+    "text": "But when social interactions foster shared values and mutual trust, competitive self-help transforms into a security community."
+  },
+  {
+    "id": 24,
+    "slideId": 4,
+    "sentenceIndex": 5,
+    "startSec": 184.873,
+    "endSec": 193.598,
+    "startFrame": 5546,
+    "endFrame": 5808,
+    "text": "Within a security community, member states share a collective identity where resolving disputes by military force becomes socially unthinkable."
+  },
+  {
+    "id": 25,
+    "slideId": 4,
+    "sentenceIndex": 6,
+    "startSec": 193.878,
+    "endSec": 198.699,
+    "startFrame": 5816,
+    "endFrame": 5961,
+    "text": "NATO members, for instance, do not deploy military garrisons against one another."
+  },
+  {
+    "id": 26,
+    "slideId": 5,
+    "sentenceIndex": 1,
+    "startSec": 199.349,
+    "endSec": 208.565,
+    "startFrame": 5980,
+    "endFrame": 6257,
+    "text": "During the 1980s and 1990s, Critical Security Studies emerged to question the very morality of orthodox security theory."
+  },
+  {
+    "id": 27,
+    "slideId": 5,
+    "sentenceIndex": 2,
+    "startSec": 208.845,
+    "endSec": 216.995,
+    "startFrame": 6265,
+    "endFrame": 6510,
+    "text": "Critical scholars argue that traditional frameworks suffer from a dangerous blind spot: they assume the state is always a benign protector."
+  },
+  {
+    "id": 28,
+    "slideId": 5,
+    "sentenceIndex": 3,
+    "startSec": 217.275,
+    "endSec": 227.472,
+    "startFrame": 6518,
+    "endFrame": 6824,
+    "text": "In reality, authoritarian regimes and militarized apparatuses are frequently the primary sources of terror and insecurity for their own citizen populations."
+  },
+  {
+    "id": 29,
+    "slideId": 5,
+    "sentenceIndex": 4,
+    "startSec": 227.752,
+    "endSec": 236.115,
+    "startFrame": 6833,
+    "endFrame": 7083,
+    "text": "Through state oppression, political persecution, and systemic inequality, governments destroy human lives under the banner of national defense."
+  },
+  {
+    "id": 30,
+    "slideId": 5,
+    "sentenceIndex": 5,
+    "startSec": 236.395,
+    "endSec": 248.875,
+    "startFrame": 7092,
+    "endFrame": 7466,
+    "text": "Critical security therefore shifts the referent object away from preserving sovereign state elites toward emancipating individual human beings and marginalized social groups from institutional violence."
+  },
+  {
+    "id": 31,
+    "slideId": 6,
+    "sentenceIndex": 1,
+    "startSec": 249.525,
+    "endSec": 258.421,
+    "startFrame": 7486,
+    "endFrame": 7753,
+    "text": "Feminist security theory exposes how global security discourse is fundamentally shaped by masculine assumptions that render women invisible."
+  },
+  {
+    "id": 32,
+    "slideId": 6,
+    "sentenceIndex": 2,
+    "startSec": 258.701,
+    "endSec": 272.738,
+    "startFrame": 7761,
+    "endFrame": 8182,
+    "text": "While defense ministries track interstate tank deployments, millions of women face mortal threats in daily life: domestic violence, rape weaponized as an instrument of war, human trafficking, and severe resource inequality."
+  },
+  {
+    "id": 33,
+    "slideId": 6,
+    "sentenceIndex": 3,
+    "startSec": 273.018,
+    "endSec": 283.322,
+    "startFrame": 8191,
+    "endFrame": 8500,
+    "text": "Feminist scholars insist that genuine peace is impossible without securing women's bodily autonomy and recognizing women as active agents of transformation."
+  },
+  {
+    "id": 34,
+    "slideId": 6,
+    "sentenceIndex": 4,
+    "startSec": 283.602,
+    "endSec": 290.898,
+    "startFrame": 8508,
+    "endFrame": 8727,
+    "text": "Simultaneously, the global landscape experiences fierce friction between globalization and resurgent geopolitics."
+  },
+  {
+    "id": 35,
+    "slideId": 6,
+    "sentenceIndex": 5,
+    "startSec": 291.178,
+    "endSec": 303.402,
+    "startFrame": 8735,
+    "endFrame": 9102,
+    "text": "While globalization promises open flows of capital and ideas, great power rivalries over Pacific chokepoints prove that sovereign competition for territorial dominance remains stubbornly alive."
+  },
+  {
+    "id": 36,
+    "slideId": 7,
+    "sentenceIndex": 1,
+    "startSec": 304.052,
+    "endSec": 315.209,
+    "startFrame": 9122,
+    "endFrame": 9456,
+    "text": "The devastating conflict in the Democratic Republic of Congo from 1996 to 2013 provides tragic proof of the limits of traditional military security."
+  },
+  {
+    "id": 37,
+    "slideId": 7,
+    "sentenceIndex": 2,
+    "startSec": 315.489,
+    "endSec": 325.004,
+    "startFrame": 9465,
+    "endFrame": 9750,
+    "text": "Triggered by the spillover of the 1994 Rwandan genocide, the war quickly drew in armies and proxy militias from Uganda, Burundi, and Angola."
+  },
+  {
+    "id": 38,
+    "slideId": 7,
+    "sentenceIndex": 3,
+    "startSec": 325.284,
+    "endSec": 334.521,
+    "startFrame": 9759,
+    "endFrame": 10036,
+    "text": "While neighboring states claimed to be protecting national defense interests, the human cost was catastrophic, claiming an estimated six million civilian lives."
+  },
+  {
+    "id": 39,
+    "slideId": 7,
+    "sentenceIndex": 4,
+    "startSec": 334.801,
+    "endSec": 346.087,
+    "startFrame": 10044,
+    "endFrame": 10383,
+    "text": "Conventional military operations failed to stop ethnic violence between Hema and Lendu groups, nor did they halt the widespread recruitment of child soldiers and systemic mass rape."
+  },
+  {
+    "id": 40,
+    "slideId": 7,
+    "sentenceIndex": 5,
+    "startSec": 346.367,
+    "endSec": 355.689,
+    "startFrame": 10391,
+    "endFrame": 10671,
+    "text": "This societal collapse proves that military balance of power doctrines cannot protect vulnerable human beings without comprehensive justice and development."
+  },
+  {
+    "id": 41,
+    "slideId": 8,
+    "sentenceIndex": 1,
+    "startSec": 356.339,
+    "endSec": 362.846,
+    "startFrame": 10690,
+    "endFrame": 10885,
+    "text": "Finally, the proliferation of nuclear weapons represents the most catastrophic threat to planetary survival."
+  },
+  {
+    "id": 42,
+    "slideId": 8,
+    "sentenceIndex": 2,
+    "startSec": 363.126,
+    "endSec": 377.206,
+    "startFrame": 10894,
+    "endFrame": 11316,
+    "text": "The primary legal architecture governing atomic arms is the 1968 Nuclear Non-Proliferation Treaty, which recognized five nuclear powers while prohibiting non-nuclear signatories from acquiring atomic arsenals."
+  },
+  {
+    "id": 43,
+    "slideId": 8,
+    "sentenceIndex": 3,
+    "startSec": 377.486,
+    "endSec": 380.558,
+    "startFrame": 11325,
+    "endFrame": 11417,
+    "text": "However, the treaty faces profound structural dilemmas."
+  },
+  {
+    "id": 44,
+    "slideId": 8,
+    "sentenceIndex": 4,
+    "startSec": 380.838,
+    "endSec": 389.329,
+    "startFrame": 11425,
+    "endFrame": 11680,
+    "text": "First, dual-use technology allows civilian enrichment and reprocessing facilities to secretly produce fissile materials for weapons."
+  },
+  {
+    "id": 45,
+    "slideId": 8,
+    "sentenceIndex": 5,
+    "startSec": 389.609,
+    "endSec": 393.619,
+    "startFrame": 11688,
+    "endFrame": 11809,
+    "text": "Second, treaty compliance remains vulnerable to sovereign defection."
+  },
+  {
+    "id": 46,
+    "slideId": 8,
+    "sentenceIndex": 6,
+    "startSec": 393.899,
+    "endSec": 401.622,
+    "startFrame": 11817,
+    "endFrame": 12049,
+    "text": "North Korea withdrew from the treaty in 2003 and detonated multiple nuclear devices starting in 2006."
+  },
+  {
+    "id": 47,
+    "slideId": 8,
+    "sentenceIndex": 7,
+    "startSec": 401.902,
+    "endSec": 409.795,
+    "startFrame": 12057,
+    "endFrame": 12294,
+    "text": "Meanwhile, Iran faces ongoing disputes with the International Atomic Energy Agency over undeclared enrichment capabilities."
+  },
+  {
+    "id": 48,
+    "slideId": 8,
+    "sentenceIndex": 8,
+    "startSec": 410.075,
+    "endSec": 416.646,
+    "startFrame": 12302,
+    "endFrame": 12499,
+    "text": "Controlling atomic perils requires rigorous verification and unwavering multilateral diplomacy."
+  }
+]

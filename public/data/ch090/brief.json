@@ -1,0 +1,317 @@
+{
+  "chapter": "CH090",
+  "source_file": "_chapters/010-Introduction-to-IR/090-global-security.md",
+  "thesis": {
+    "text": "Security has evolved from a state-centric military framework guarding sovereign borders into a multidimensional arena where non-state threats, human rights, and nuclear proliferation challenge the primacy of national defense.",
+    "quote": "Concepts of security have evolved significantly beyond traditional military frameworks and national security perspectives. Security is increasingly recognized as a complex, multidimensional phenomenon encompassing political, economic, societal and environmental aspects."
+  },
+  "learning_objectives": [
+    "Differentiate traditional state-centric national security paradigms from multidimensional security frameworks encompassing societal, economic, and environmental threats.",
+    "Contrast Realist self-help balance of power against Liberal Institutionalist cooperation and Constructivist security communities.",
+    "Analyze how Critical Security Studies and Feminist Theory interrogate the state as a source of insecurity and shift the referent of security to individuals and marginalized groups.",
+    "Evaluate the limits of traditional military power in resolving complex intra-state regionalized humanitarian emergencies through the Democratic Republic of Congo case study.",
+    "Examine the structural governance and dual-use technological vulnerabilities of the Nuclear Non-Proliferation Treaty (NPT 1968).",
+    "Compare non-proliferation breakdowns and compliance challenges across the contrasting case studies of North Korea and Iran.",
+    "Assess the theoretical and strategic tensions between globalization flows and the enduring resurgence of territorial geopolitics."
+  ],
+  "core_concepts": [
+    {
+      "id": "multidimensional_security",
+      "term": "Multidimensional Security",
+      "definition": "An expanded security conception encompassing political, economic, societal, and environmental threats beyond territorial defense.",
+      "kind": "definition",
+      "quote": "Security is increasingly recognized as a complex, multidimensional phenomenon encompassing political, economic, societal and environmental aspects."
+    },
+    {
+      "id": "transnational_threats",
+      "term": "Transnational Interdependent Threats",
+      "definition": "Cross-border dangers such as pandemics, climate change, cyberattacks, and terrorism that evade national territorial boundaries.",
+      "kind": "mechanism",
+      "quote": "Globalization, the rise of non-state actors, climate change, cyberattacks, terrorism, and pandemics present interdependent dangers unconstrained by national borders."
+    },
+    {
+      "id": "traditional_national_security",
+      "term": "Traditional National Security",
+      "definition": "A realist state-centric paradigm where sovereign states rely on military power and self-help to survive in an anarchic system.",
+      "kind": "definition",
+      "quote": "The traditional approach to national security focuses on nation-states as the primary actors in an anarchic international system. This realist perspective views the international arena as akin to a Hobbesian state of nature in which states must rely on self-help to survive."
+    },
+    {
+      "id": "balance_of_power_deterrence",
+      "term": "Balance of Power and Deterrence",
+      "definition": "The realist mechanism seeking systemic stability through military capabilities and counter-alliances to prevent hegemony.",
+      "kind": "mechanism",
+      "quote": "It focuses on concepts like deterrence, offensive and defensive capabilities, alliances, and balancing against threats. The primary threats are viewed as coming from rival states."
+    },
+    {
+      "id": "liberal_institutional_security",
+      "term": "Liberal Institutional Security",
+      "definition": "An institutionalist framework arguing that multilateral organizations mitigate anarchy, reduce transaction costs, and facilitate cooperation.",
+      "kind": "definition",
+      "quote": "liberal institutionalists argue that international institutions can play a crucial role in overcoming anarchy and facilitating collaboration between states."
+    },
+    {
+      "id": "iterated_reciprocity",
+      "term": "Iterated Interaction and Reciprocity",
+      "definition": "The mechanism by which repeated multilateral interactions generate trust, transparency, and positive-sum security outcomes.",
+      "kind": "mechanism",
+      "quote": "institutions help facilitate repeated interactions between states, enhancing trust and enabling reciprocity. By providing information and reducing transaction costs, institutions allow states to negotiate mutually beneficial cooperative agreements."
+    },
+    {
+      "id": "constructivist_social_structure",
+      "term": "Constructivist Social Security Structure",
+      "definition": "An analytical model where international security structures are socially constructed through shared ideas and knowledge rather than material power alone.",
+      "kind": "definition",
+      "quote": "constructivists argue that the structures of international politics are social rather than strictly material. According to constructivists like Alexander Wendt, the fundamental structures in international relations are social and depend on shared knowledge rather than material capabilities alone."
+    },
+    {
+      "id": "security_community",
+      "term": "Security Community",
+      "definition": "A transnational grouping of states characterized by shared identities, mutual trust, and settled norms eliminating the expectation of war.",
+      "kind": "mechanism",
+      "quote": "a competitive self-help system driven by anarchy can evolve into a 'security community' characterized by shared identities, trust, and norms against using force. NATO is an example of a security community where member states share a collective identity and do not view each other as military threats."
+    },
+    {
+      "id": "critical_security_studies",
+      "term": "Critical Security Studies",
+      "definition": "A critical framework shifting the referent of security away from states toward individuals and marginalized groups, highlighting structural inequality.",
+      "kind": "definition",
+      "quote": "Critical security studies emerged in the 1980's and 90's as an alternative approach to traditional national security studies. This school of thought examines existing relationships and institutions with a critical lens, seeking to highlight issues of power, inequality and marginalization."
+    },
+    {
+      "id": "state_as_insecurity_source",
+      "term": "The State as a Source of Insecurity",
+      "definition": "The critical insight that authoritarian state apparatuses can inflict severe violence and insecurity upon their own citizen populations.",
+      "kind": "mechanism",
+      "quote": "States themselves can be sources of insecurity for their own populations through authoritarianism, human rights abuses, and other forms of political oppression."
+    },
+    {
+      "id": "feminist_security_theory",
+      "term": "Feminist Security Theory",
+      "definition": "A theoretical lens uncovering the gendered nature of international politics and placing women's everyday insecurities at the center of analysis.",
+      "kind": "definition",
+      "quote": "Feminist security theory provides a radical departure from traditional approaches to security by questioning foundational assumptions and frameworks. It highlights the highly gendered nature of international politics and security practices."
+    },
+    {
+      "id": "everyday_gendered_violence",
+      "term": "Everyday Gendered Violence",
+      "definition": "Pervasive structural and direct threats confronting women that traditional military defense paradigms render invisible.",
+      "kind": "mechanism",
+      "quote": "Intimate partner violence, rape, female infanticide, and honor killings are identified as everyday security threats faced by women around the world."
+    },
+    {
+      "id": "globalization_flow_perspective",
+      "term": "Globalization Flow Perspective",
+      "definition": "The worldview emphasizing that the free flow of goods, capital, and ideas fosters global interdependence and pacification.",
+      "kind": "definition",
+      "quote": "globalization focuses on the free flow of goods, capital, and ideas. However, others argue that there is no opposition between the two concepts."
+    },
+    {
+      "id": "geopolitics_territorial_control",
+      "term": "Geopolitical Territorial Control",
+      "definition": "The strategic paradigm concerned with sovereign and imperial mastery over physical space, geographic chokepoints, and resources.",
+      "kind": "definition",
+      "quote": "Critics argue that geopolitics is concerned with national and imperial control of space and resources, while globalization focuses on the free flow of goods, capital, and ideas."
+    },
+    {
+      "id": "drc_conflict_humanitarian_crisis",
+      "term": "Democratic Republic of Congo Conflict (1996–2013)",
+      "definition": "A devastating regionalized intra-state war illustrating the catastrophe of societal breakdown and massive civilian mortality.",
+      "kind": "example",
+      "quote": "This conflict took place from 1996 to 2013, sparked by the spillover of the Rwandan genocide into the Congo. The high civilian death toll of approximately 6 million people illustrates the human costs of war."
+    },
+    {
+      "id": "limits_of_military_power",
+      "term": "Limits of Traditional Military Paradigms",
+      "definition": "The institutional inability of state-centric military balancing to address ethnic violence, child soldier recruitment, and mass rape.",
+      "kind": "implication",
+      "quote": "This case study highlights the limits of traditional concepts of national security and the balance of power. Instead, it points to the need for a conception of security that puts human rights, development, and freedom from violence at the center."
+    },
+    {
+      "id": "npt_1968",
+      "term": "Nuclear Non-Proliferation Treaty (NPT 1968)",
+      "definition": "The primary multilateral treaty recognizing five nuclear weapon states while prohibiting non-nuclear states from acquiring nuclear arms.",
+      "kind": "definition",
+      "quote": "The primary framework governing nuclear proliferation is the Nuclear Non-Proliferation Treaty (NPT). Established in 1968, the NPT recognizes five states as nuclear weapon states - the U.S., Russia, the U.K., France and China. Non-nuclear weapon states are prohibited from acquiring or developing nuclear weapons under the treaty."
+    },
+    {
+      "id": "dual_use_technology",
+      "term": "Dual-Use Nuclear Technology",
+      "definition": "Civilian enrichment and reprocessing technologies that can be redirected from peaceful energy generation to weapons-grade fissile material production.",
+      "kind": "mechanism",
+      "quote": "Dual-use nuclear technology presents challenges for non-proliferation efforts. Technology, materials and knowledge associated with peaceful nuclear energy programs can potentially be diverted for weapons purposes."
+    },
+    {
+      "id": "dprk_nuclear_proliferation",
+      "term": "North Korea Proliferation Challenge",
+      "definition": "The trajectory of Agreed Framework breakdown, treaty withdrawal (2003), and nuclear testing (2006) frustrating denuclearization diplomacy.",
+      "kind": "example",
+      "quote": "North Korea initially signed the 1994 Agreed Framework, shutting down its plutonium reactor in exchange for aid and concessions. However, North Korea later withdrew from the Nuclear Non-Proliferation Treaty (NPT) in 2003. Since then, it has tested multiple nuclear devices, the first in 2006."
+    },
+    {
+      "id": "iran_nuclear_inspections",
+      "term": "Iran Nuclear Compliance Dispute",
+      "definition": "Disputes over undeclared enrichment capabilities and potential military dimensions under IAEA monitoring alongside sanctions negotiations.",
+      "kind": "example",
+      "quote": "Iran has faced accusations of failing to declare uranium enrichment and other nuclear activities, despite remaining a signatory to the NPT. Iran argues it needs enrichment capability for civilian energy and research reactors, but has faced suspicions it may be pursuing nuclear weapons. The International Atomic Energy Agency (IAEA) has identified potential military dimensions to Iran's program."
+    }
+  ],
+  "contrasts": [
+    {
+      "a": "traditional_national_security",
+      "b": "critical_security_studies",
+      "axis": "referent object of security (state territorial survival vs individual and societal emancipation)",
+      "quote": "This involves moving the referent of security away from the state and towards individuals and social groups."
+    },
+    {
+      "a": "balance_of_power_deterrence",
+      "b": "iterated_reciprocity",
+      "axis": "systemic mechanism for managing anarchy (material balancing/deterrence vs institutional cooperation and positive-sum interaction)",
+      "quote": "In contrast to neo-realists who see the anarchic structure of the international system as the key factor, liberal institutionalists argue that international institutions can play a crucial role in overcoming anarchy and facilitating collaboration between states."
+    },
+    {
+      "a": "globalization_flow_perspective",
+      "b": "geopolitics_territorial_control",
+      "axis": "spatial logic of world order (transnational open flows of capital/ideas vs sovereign control of territorial space and resources)",
+      "quote": "Critics argue that geopolitics is concerned with national and imperial control of space and resources, while globalization focuses on the free flow of goods, capital, and ideas."
+    },
+    {
+      "a": "dprk_nuclear_proliferation",
+      "b": "iran_nuclear_inspections",
+      "axis": "structural relation to NPT legal regime (treaty withdrawal and overt testing vs contested internal signatory compliance under IAEA inspections)",
+      "quote": "However, North Korea later withdrew from the Nuclear Non-Proliferation Treaty (NPT) in 2003. Since then, it has tested multiple nuclear devices, the first in 2006. ... Iran has faced accusations of failing to declare uranium enrichment and other nuclear activities, despite remaining a signatory to the NPT."
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "traditional_national_security",
+      "to": "balance_of_power_deterrence",
+      "relation": "causes",
+      "why": "Anarchic structure and self-help imperative compel states to pursue military power and balancing.",
+      "quote": "According to realists, the international structure compels states to pursue power; especially military power. State sovereignty and the balance of power between states is crucial for stability and preventing hegemony by one state."
+    },
+    {
+      "from": "liberal_institutional_security",
+      "to": "iterated_reciprocity",
+      "relation": "enables",
+      "why": "Institutions reduce transaction costs and provide transparency, fostering reciprocal trust.",
+      "quote": "By providing information and reducing transaction costs, institutions allow states to negotiate mutually beneficial cooperative agreements."
+    },
+    {
+      "from": "constructivist_social_structure",
+      "to": "security_community",
+      "relation": "constitutes",
+      "why": "Shared identities and norms of non-violence construct security communities over time.",
+      "quote": "For example, a competitive self-help system driven by anarchy can evolve into a 'security community' characterized by shared identities, trust, and norms against using force."
+    },
+    {
+      "from": "critical_security_studies",
+      "to": "state_as_insecurity_source",
+      "relation": "illustrates",
+      "why": "Empirical critical analysis reveals state apparatuses often oppress their own citizens.",
+      "quote": "States themselves can be sources of insecurity for their own populations through authoritarianism, human rights abuses, and other forms of political oppression."
+    },
+    {
+      "from": "feminist_security_theory",
+      "to": "everyday_gendered_violence",
+      "relation": "illustrates",
+      "why": "Feminist analysis broadens the scope of threat to include gender-based structural violence.",
+      "quote": "Intimate partner violence, rape, female infanticide, and honor killings are identified as everyday security threats faced by women around the world."
+    },
+    {
+      "from": "geopolitics_territorial_control",
+      "to": "balance_of_power_deterrence",
+      "relation": "applies_to",
+      "why": "Strategic competition over geographical space and Pacific priorities preserves traditional balance of power postures.",
+      "quote": "The recent shift in US strategic priorities towards the Pacific indicates that geopolitical analysis is still an important element in strategic thinking."
+    },
+    {
+      "from": "drc_conflict_humanitarian_crisis",
+      "to": "limits_of_military_power",
+      "relation": "illustrates",
+      "why": "Devastating civilian casualties and regional proxy war expose the inadequacy of military balancing.",
+      "quote": "This case study highlights the limits of traditional concepts of national security and the balance of power. Instead, it points to the need for a conception of security that puts human rights, development, and freedom from violence at the center."
+    },
+    {
+      "from": "npt_1968",
+      "to": "dual_use_technology",
+      "relation": "constrains",
+      "why": "The non-proliferation regime attempts to monitor and safeguard peaceful nuclear technology from military diversion.",
+      "quote": "The spread of such technologies therefore increases proliferation risks, even when civilian nuclear energy programs operate under international monitoring."
+    }
+  ],
+  "scholars": [
+    {
+      "name": "Alexander Wendt",
+      "work": "Social Constructivism in IR",
+      "claim": "Fundamental structures in international politics are social rather than strictly material, depending on shared knowledge.",
+      "quote": "According to constructivists like Alexander Wendt, the fundamental structures in international relations are social and depend on shared knowledge rather than material capabilities alone."
+    }
+  ],
+  "limitations": [
+    {
+      "text": "Traditional Realist national security is state-centric and unable to address intra-state violence, human security, or transboundary threats.",
+      "quote": "This complex of interconnected threats requires rethinking traditional state-centric ideas of security focused solely on protecting territory from military attack."
+    },
+    {
+      "text": "International institutions have limited coercive authority to stop sovereign states from violating agreements or pursuing self-interest under anarchy.",
+      "quote": "International institutions have a limited effect in an anarchic system based on state power."
+    },
+    {
+      "text": "The Nuclear Non-Proliferation Treaty faces structural withdrawal loopholes and verification ambiguities stemming from dual-use technology.",
+      "quote": "Sensitive fuel cycle technologies like uranium enrichment and plutonium reprocessing can provide fissile material for weapons if diverted from safeguarded facilities."
+    }
+  ],
+  "source_claims": [
+    {
+      "claim": "Security encompasses political, economic, societal, and environmental dimensions beyond state defense.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Introduction",
+      "quote": "Security is increasingly recognized as a complex, multidimensional phenomenon encompassing political, economic, societal and environmental aspects."
+    },
+    {
+      "claim": "Realism views the international system as a Hobbesian self-help arena where military balancing is crucial.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § The Traditional Approach to National Security",
+      "quote": "This realist perspective views the international arena as akin to a Hobbesian state of nature in which states must rely on self-help to survive."
+    },
+    {
+      "claim": "Liberal institutionalism demonstrates institutions facilitate repeated interactions and reduce transaction costs.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Liberal Institutionalism",
+      "quote": "institutions help facilitate repeated interactions between states, enhancing trust and enabling reciprocity. By providing information and reducing transaction costs, institutions allow states to negotiate mutually beneficial cooperative agreements."
+    },
+    {
+      "claim": "Constructivism posits international structures depend on shared ideas and can generate security communities.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Constructivism",
+      "quote": "a competitive self-help system driven by anarchy can evolve into a 'security community' characterized by shared identities, trust, and norms against using force."
+    },
+    {
+      "claim": "Critical security studies identifies states themselves as potential sources of oppression and insecurity.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Critical Security Studies",
+      "quote": "States themselves can be sources of insecurity for their own populations through authoritarianism, human rights abuses, and other forms of political oppression."
+    },
+    {
+      "claim": "Feminist theory redefines security around women's experiences and daily gender-based violence.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Feminist Security Theory",
+      "quote": "Intimate partner violence, rape, female infanticide, and honor killings are identified as everyday security threats faced by women around the world."
+    },
+    {
+      "claim": "Debates persist over whether globalization flows pacify world order or whether territorial geopolitics continues to dominate.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Globalization and the Return of Geopolitics?",
+      "quote": "Critics argue that geopolitics is concerned with national and imperial control of space and resources, while globalization focuses on the free flow of goods, capital, and ideas."
+    },
+    {
+      "claim": "The DRC conflict resulted in 6 million civilian deaths, exposing limits of traditional balance of power.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Case Study: The Democratic Republic of Congo",
+      "quote": "The high civilian death toll of approximately 6 million people illustrates the human costs of war."
+    },
+    {
+      "claim": "The 1968 NPT recognized five nuclear states while prohibiting non-nuclear states from acquiring nuclear weapons.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Nuclear Proliferation",
+      "quote": "Established in 1968, the NPT recognizes five states as nuclear weapon states - the U.S., Russia, the U.K., France and China. Non-nuclear weapon states are prohibited from acquiring or developing nuclear weapons under the treaty."
+    },
+    {
+      "claim": "North Korea withdrew from the NPT in 2003 and tested nuclear devices in 2006, while Iran faces IAEA inspection disputes.",
+      "locator": "_chapters/010-Introduction-to-IR/090-global-security.md § Case Studies: North Korea and Iran",
+      "quote": "However, North Korea later withdrew from the Nuclear Non-Proliferation Treaty (NPT) in 2003. Since then, it has tested multiple nuclear devices, the first in 2006. ... Iran has faced accusations of failing to declare uranium enrichment and other nuclear activities, despite remaining a signatory to the NPT."
+    }
+  ]
+}

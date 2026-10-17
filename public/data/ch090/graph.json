@@ -1,0 +1,414 @@
+{
+  "chapter": "CH090",
+  "root": "root_global_security",
+  "acts": [
+    {
+      "id": "act_1",
+      "title": "Act I: The Changing Security Arena",
+      "hub": "hub_act1_changing_security",
+      "scope": "Evolution from narrow military frameworks to multidimensional threats like pandemics and cyber warfare"
+    },
+    {
+      "id": "act_2",
+      "title": "Act II: Traditional Realist Security",
+      "hub": "hub_act2_traditional_security",
+      "scope": "Hobbesian state of nature, self-help system, military power, deterrence, and balance of power"
+    },
+    {
+      "id": "act_3",
+      "title": "Act III: Liberal Institutionalism",
+      "hub": "hub_act3_liberal_security",
+      "scope": "Overcoming systemic anarchy through multilateral institutions, repeated interaction, and positive-sum trust"
+    },
+    {
+      "id": "act_4",
+      "title": "Act IV: Constructivism & Security Communities",
+      "hub": "hub_act4_constructivist_security",
+      "scope": "Social structures, Wendt's shared knowledge thesis, and transformation into peaceful security communities like NATO"
+    },
+    {
+      "id": "act_5",
+      "title": "Act V: Critical Security Studies",
+      "hub": "hub_act5_critical_security",
+      "scope": "Interrogating the state as a source of oppression and shifting the referent object to individuals and social groups"
+    },
+    {
+      "id": "act_6",
+      "title": "Act VI: Feminist Security Theory",
+      "hub": "hub_act6_feminist_security",
+      "scope": "Unmasking gendered power relations and placing everyday structural and bodily violence at the center of security"
+    },
+    {
+      "id": "act_7",
+      "title": "Act VII: Humanitarian Collapse in the DRC",
+      "hub": "hub_act7_drc_humanitarian",
+      "scope": "Limits of military balancing exposed by 6 million civilian deaths, ethnic warfare, child soldiers, and mass rape"
+    },
+    {
+      "id": "act_8",
+      "title": "Act VIII: Nuclear Governance & Proliferation",
+      "hub": "hub_act8_nuclear_proliferation",
+      "scope": "NPT 1968 architecture, dual-use technology dilemmas, North Korea treaty defection, and Iran inspection disputes"
+    }
+  ],
+  "contrasts": [
+    {
+      "a": "traditional_national_security",
+      "b": "critical_security_studies",
+      "axis": "Referent object of security: state territorial survival versus individual and societal emancipation"
+    },
+    {
+      "a": "balance_of_power_deterrence",
+      "b": "iterated_reciprocity",
+      "axis": "Mechanism under anarchy: material balance and deterrence versus institutional rules and reciprocity"
+    },
+    {
+      "a": "globalization_flow_perspective",
+      "b": "geopolitics_territorial_control",
+      "axis": "Spatial logic of world order: transnational open flows versus sovereign control of geographic space"
+    },
+    {
+      "a": "dprk_nuclear_proliferation",
+      "b": "iran_nuclear_inspections",
+      "axis": "Relation to non-proliferation regime: overt withdrawal and testing versus internal signatory inspection disputes"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "root_global_security",
+      "title": "Global Security Dynamics",
+      "subtitle": "From Sovereign Territorial Defense to Multidimensional and Human Security",
+      "kind": "hub",
+      "bullets": [
+        "Post-Cold War threats transcend sovereign borders and expose limits of conventional military power",
+        "Security debates contest whose protection matters: the ruling state or individual human beings"
+      ]
+    },
+    {
+      "id": "hub_act1_changing_security",
+      "title": "Act I: Changing Arena",
+      "subtitle": "Multidimensional Vectors and Borderless Threats",
+      "kind": "hub",
+      "bullets": [
+        "End of superpower confrontation unveiled complex non-military systemic vulnerabilities",
+        "Transnational dangers require analytical frameworks beyond national defense"
+      ]
+    },
+    {
+      "id": "multidimensional_security",
+      "title": "Multidimensional Security",
+      "subtitle": "Broadened conceptualization spanning political, economic, societal, and ecological spheres",
+      "kind": "concept",
+      "bullets": [
+        "Recognizes human vulnerability extends across societal, economic, and environmental domains",
+        "Expands the level of security analysis from the nation-state to regional and global collectives"
+      ]
+    },
+    {
+      "id": "transnational_threats",
+      "title": "Transnational Interdependent Threats",
+      "subtitle": "Borderless dangers evading sovereign territorial containment",
+      "kind": "concept",
+      "bullets": [
+        "Pandemics, climate collapse, cyber warfare, and terrorism operate across national boundaries",
+        "Tanks and ballistic missiles provide zero defense against systemic planetary disruptions"
+      ]
+    },
+    {
+      "id": "hub_act2_traditional_security",
+      "title": "Act II: Realist Security",
+      "subtitle": "Hobbesian Anarchy and the Self-Help State",
+      "kind": "hub",
+      "bullets": [
+        "Sovereign nation-states operate as primary actors in an anarchic international system",
+        "Absence of overarching global authority compels self-help reliance on military power"
+      ]
+    },
+    {
+      "id": "traditional_national_security",
+      "title": "State-Centric Defense",
+      "subtitle": "Realist paradigm prioritizing territorial integrity and state survival",
+      "kind": "concept",
+      "bullets": [
+        "Views world politics as an anarchic Hobbesian state of nature where power dictates survival",
+        "Considers rival powerful nation-states as the foremost existential danger to sovereignty"
+      ]
+    },
+    {
+      "id": "balance_of_power_deterrence",
+      "title": "Balancing and Deterrence",
+      "subtitle": "Equilibrium mechanisms preventing hegemon dominance",
+      "kind": "concept",
+      "bullets": [
+        "States build offensive and defensive arsenals while constructing counter-alliances",
+        "International stability is maintained solely when no single power achieves hegemonic status"
+      ]
+    },
+    {
+      "id": "hub_act3_liberal_security",
+      "title": "Act III: Liberal Institutions",
+      "subtitle": "Overcoming Anarchy Through Multilateral Rules",
+      "kind": "hub",
+      "bullets": [
+        "International institutions actively mitigate anarchy by structuring state cooperation",
+        "Rule-bound multilateralism enables states to resolve security rivalries peacefully"
+      ]
+    },
+    {
+      "id": "liberal_institutional_security",
+      "title": "Institutional Security Regimes",
+      "subtitle": "Multilateral frameworks transforming anarchic competition",
+      "kind": "concept",
+      "bullets": [
+        "Bodies like the United Nations, WTO, and NATO establish binding rules for interaction",
+        "Channel state self-interest into managed, collaborative governance producing positive-sum gains"
+      ]
+    },
+    {
+      "id": "iterated_reciprocity",
+      "title": "Iterated Reciprocity & Trust",
+      "subtitle": "Repeated diplomatic interaction reducing transactional costs",
+      "kind": "concept",
+      "bullets": [
+        "Institutions provide continuous information and transparency to reduce strategic miscalculation",
+        "Repeated interactions foster mutual trust, internalizing cooperative norms over time"
+      ]
+    },
+    {
+      "id": "hub_act4_constructivist_security",
+      "title": "Act IV: Constructivism",
+      "subtitle": "Social Structures and Shared Identities",
+      "kind": "hub",
+      "bullets": [
+        "International structures are socially constituted through knowledge rather than material arms",
+        "Evolution of state identities can replace zero-sum rivalry with non-violent norms"
+      ]
+    },
+    {
+      "id": "constructivist_social_structure",
+      "title": "Social Security Architecture",
+      "subtitle": "Wendtian thesis on the social constitution of world politics",
+      "kind": "concept",
+      "bullets": [
+        "Anarchy does not dictate war; state interactions determine whether anarchy is hostile or cooperative",
+        "Shared meanings, discourse, and institutional socialization define national interests"
+      ]
+    },
+    {
+      "id": "security_community",
+      "title": "Transnational Security Communities",
+      "subtitle": "Pluralistic groupings where war becomes socially unthinkable",
+      "kind": "concept",
+      "bullets": [
+        "Member states share collective democratic identity and dependable expectations of peaceful change",
+        "Exemplified by NATO allies who no longer perceive each other as potential military threats"
+      ]
+    },
+    {
+      "id": "hub_act5_critical_security",
+      "title": "Act V: Critical Studies",
+      "subtitle": "Interrogating Power and State Oppression",
+      "kind": "hub",
+      "bullets": [
+        "Emerged in the 1980s and 90s to challenge state-centric orthodoxy and militarism",
+        "Exposes how existing power hierarchies manufacture structural insecurity for populations"
+      ]
+    },
+    {
+      "id": "critical_security_studies",
+      "title": "Critical Security Paradigm",
+      "subtitle": "Shifting the referent object from the sovereign state to human beings",
+      "kind": "concept",
+      "bullets": [
+        "Broadens security inquiry to individuals, vulnerable communities, and marginalized social groups",
+        "Aims to transform unjust social hierarchies and achieve genuine human emancipation"
+      ]
+    },
+    {
+      "id": "state_as_insecurity_source",
+      "title": "State as Oppressive Source",
+      "subtitle": "Domestic authoritarianism and human rights violations",
+      "kind": "concept",
+      "bullets": [
+        "Authoritarian regimes frequently inflict far greater violence on citizens than foreign invaders",
+        "Focusing exclusively on state survival legitimizes regime oppression under the guise of order"
+      ]
+    },
+    {
+      "id": "hub_act6_feminist_security",
+      "title": "Act VI: Feminist Security",
+      "subtitle": "Gendered Hierarchies and Everyday Violence",
+      "kind": "hub",
+      "bullets": [
+        "Questions foundational patriarchal assumptions underpinning traditional state security",
+        "Demonstrates national and global security fundamentally depends on the safety of women"
+      ]
+    },
+    {
+      "id": "feminist_security_theory",
+      "title": "Feminist Security Lens",
+      "subtitle": "Centering gender subordination and women's agency in security analysis",
+      "kind": "concept",
+      "bullets": [
+        "Exposes traditional security discourse as exclusively focused on elite masculine experiences",
+        "Recognizes women not merely as victims, but as active political agents transforming peace"
+      ]
+    },
+    {
+      "id": "everyday_gendered_violence",
+      "title": "Everyday Gendered Insecurity",
+      "subtitle": "Pervasive structural and domestic threats hidden from military agendas",
+      "kind": "concept",
+      "bullets": [
+        "Highlights intimate partner violence, rape, honor killings, and female infanticide as security crises",
+        "Addresses systematic economic inequality, lack of healthcare access, and human trafficking"
+      ]
+    },
+    {
+      "id": "globalization_flow_perspective",
+      "title": "Globalization Flow Model",
+      "subtitle": "De-territorialized exchange of capital, goods, and transnational ideas",
+      "kind": "concept",
+      "bullets": [
+        "Argues market integration and borderless communication generate mutual interdependence",
+        "Reduces traditional incentives for territorial conquest in an interconnected world"
+      ]
+    },
+    {
+      "id": "geopolitics_territorial_control",
+      "title": "Resurgent Geopolitics",
+      "subtitle": "Strategic competition for physical space, resources, and geographic chokepoints",
+      "kind": "concept",
+      "bullets": [
+        "National and imperial strategies prioritize dominion over vital maritime corridors and minerals",
+        "Reflected in great power strategic realignments toward Pacific and regional theater dominance"
+      ]
+    },
+    {
+      "id": "hub_act7_drc_humanitarian",
+      "title": "Act VII: DRC Case Study",
+      "subtitle": "The Human Catastrophe of Regionalized War",
+      "kind": "hub",
+      "bullets": [
+        "Conflict (1996–2013) following Rwandan genocide spillover became Africa's world war",
+        "Exposes complete collapse of traditional balance of power concepts in intrastate crises"
+      ]
+    },
+    {
+      "id": "drc_conflict_humanitarian_crisis",
+      "title": "DRC Regionalized Warfare",
+      "subtitle": "Mass civilian mortality and multi-state proxy interventions",
+      "kind": "concept",
+      "bullets": [
+        "Spillover of 1994 Rwandan genocide drew Rwanda, Uganda, Burundi, and Angola into conflict",
+        "Resulted in an estimated 6 million deaths, primarily from famine, disease, and societal collapse"
+      ]
+    },
+    {
+      "id": "limits_of_military_power",
+      "title": "Limits of Military Paradigms",
+      "subtitle": "Inability of conventional armies to halt societal atrocity",
+      "kind": "concept",
+      "bullets": [
+        "Systemic deployment of mass rape and child soldier recruitment weaponized human insecurity",
+        "Proves true security requires human rights, economic development, and freedom from fear"
+      ]
+    },
+    {
+      "id": "hub_act8_nuclear_proliferation",
+      "title": "Act VIII: Nuclear Governance",
+      "subtitle": "Treaty Frameworks, Dual-Use Tech, and Defection",
+      "kind": "hub",
+      "bullets": [
+        "Management of catastrophic nuclear arms balances non-proliferation against civilian energy rights",
+        "Regime credibility faces severe strain from clandestine enrichment and unilateral exit"
+      ]
+    },
+    {
+      "id": "npt_1968",
+      "title": "NPT 1968 Architecture",
+      "subtitle": "The cornerstone multilateral bargain restricting nuclear weapons acquisition",
+      "kind": "concept",
+      "bullets": [
+        "Recognizes 5 nuclear weapon states while legally barring all non-nuclear signatories from acquisition",
+        "Provides peaceful civilian nuclear assistance under International Atomic Energy Agency (IAEA) monitoring"
+      ]
+    },
+    {
+      "id": "dual_use_technology",
+      "title": "Dual-Use Fuel Dilemma",
+      "subtitle": "Civilian enrichment technology diversion into weapons-grade fissile material",
+      "kind": "concept",
+      "bullets": [
+        "Uranium enrichment and plutonium reprocessing for electricity share identical technological pathways with bombs",
+        "Creates severe proliferation risks even when civilian nuclear facilities operate under safeguard protocols"
+      ]
+    },
+    {
+      "id": "dprk_nuclear_proliferation",
+      "title": "North Korea Defection",
+      "subtitle": "Agreed Framework collapse, treaty withdrawal, and overt nuclear tests",
+      "kind": "concept",
+      "bullets": [
+        "Shut down plutonium reactor under 1994 Agreed Framework before withdrawing from NPT in 2003",
+        "Conducted multiple nuclear detonations starting in 2006, defying diplomatic denuclearization efforts"
+      ]
+    },
+    {
+      "id": "iran_nuclear_inspections",
+      "title": "Iran Compliance Dispute",
+      "subtitle": "Undeclared enrichment controversies under sustained IAEA monitoring",
+      "kind": "concept",
+      "bullets": [
+        "Maintains NPT signatory status while asserting sovereign rights to civilian energy enrichment",
+        "IAEA identified potential military dimensions, triggering multilateral sanctions and verification talks"
+      ]
+    }
+  ],
+  "edges": [
+    { "from": "root_global_security", "to": "hub_act1_changing_security", "relation": "contains", "label": "context" },
+    { "from": "root_global_security", "to": "hub_act2_traditional_security", "relation": "contains", "label": "realism" },
+    { "from": "root_global_security", "to": "hub_act3_liberal_security", "relation": "contains", "label": "institutions" },
+    { "from": "root_global_security", "to": "hub_act4_constructivist_security", "relation": "contains", "label": "norms" },
+    { "from": "root_global_security", "to": "hub_act5_critical_security", "relation": "contains", "label": "critique" },
+    { "from": "root_global_security", "to": "hub_act6_feminist_security", "relation": "contains", "label": "gender" },
+    { "from": "root_global_security", "to": "hub_act7_drc_humanitarian", "relation": "contains", "label": "case study" },
+    { "from": "root_global_security", "to": "hub_act8_nuclear_proliferation", "relation": "contains", "label": "nuclear" },
+
+    { "from": "hub_act1_changing_security", "to": "multidimensional_security", "relation": "contains", "label": "scope" },
+    { "from": "hub_act1_changing_security", "to": "transnational_threats", "relation": "contains", "label": "threats" },
+    { "from": "multidimensional_security", "to": "transnational_threats", "relation": "enables", "label": "encompasses" },
+
+    { "from": "hub_act2_traditional_security", "to": "traditional_national_security", "relation": "contains", "label": "core thesis" },
+    { "from": "hub_act2_traditional_security", "to": "balance_of_power_deterrence", "relation": "contains", "label": "mechanism" },
+    { "from": "traditional_national_security", "to": "balance_of_power_deterrence", "relation": "causes", "label": "balancing" },
+
+    { "from": "hub_act3_liberal_security", "to": "liberal_institutional_security", "relation": "contains", "label": "regimes" },
+    { "from": "hub_act3_liberal_security", "to": "iterated_reciprocity", "relation": "contains", "label": "mechanism" },
+    { "from": "liberal_institutional_security", "to": "iterated_reciprocity", "relation": "enables", "label": "trust" },
+
+    { "from": "hub_act4_constructivist_security", "to": "constructivist_social_structure", "relation": "contains", "label": "ontology" },
+    { "from": "hub_act4_constructivist_security", "to": "security_community", "relation": "contains", "label": "outcome" },
+    { "from": "constructivist_social_structure", "to": "security_community", "relation": "constitutes", "label": "identity" },
+
+    { "from": "hub_act5_critical_security", "to": "critical_security_studies", "relation": "contains", "label": "paradigm" },
+    { "from": "hub_act5_critical_security", "to": "state_as_insecurity_source", "relation": "contains", "label": "finding" },
+    { "from": "critical_security_studies", "to": "state_as_insecurity_source", "relation": "illustrates", "label": "oppression" },
+
+    { "from": "hub_act6_feminist_security", "to": "feminist_security_theory", "relation": "contains", "label": "critique" },
+    { "from": "hub_act6_feminist_security", "to": "everyday_gendered_violence", "relation": "contains", "label": "focus" },
+    { "from": "hub_act6_feminist_security", "to": "globalization_flow_perspective", "relation": "contains", "label": "flows" },
+    { "from": "hub_act6_feminist_security", "to": "geopolitics_territorial_control", "relation": "contains", "label": "geopolitics" },
+    { "from": "feminist_security_theory", "to": "everyday_gendered_violence", "relation": "illustrates", "label": "violence" },
+
+    { "from": "hub_act7_drc_humanitarian", "to": "drc_conflict_humanitarian_crisis", "relation": "contains", "label": "history" },
+    { "from": "hub_act7_drc_humanitarian", "to": "limits_of_military_power", "relation": "contains", "label": "lesson" },
+    { "from": "drc_conflict_humanitarian_crisis", "to": "limits_of_military_power", "relation": "illustrates", "label": "failure" },
+
+    { "from": "hub_act8_nuclear_proliferation", "to": "npt_1968", "relation": "contains", "label": "treaty" },
+    { "from": "hub_act8_nuclear_proliferation", "to": "dual_use_technology", "relation": "contains", "label": "dilemma" },
+    { "from": "hub_act8_nuclear_proliferation", "to": "dprk_nuclear_proliferation", "relation": "contains", "label": "withdrawal" },
+    { "from": "hub_act8_nuclear_proliferation", "to": "iran_nuclear_inspections", "relation": "contains", "label": "inspections" },
+    { "from": "npt_1968", "to": "dual_use_technology", "relation": "constrains", "label": "safeguards" }
+  ]
+}

@@ -1,8 +1,13 @@
 ---
+youtube_id: "4yt7mlZXeHo"
 title: Global Security Issues
 slug: global-security-issues
 abstract: The concept of security in International Relations context
 simple_summary: "For centuries, security simply meant armies guarding physical borders against foreign invasion. But if a citizen dies from a pandemic, an environmental collapse, or state oppression, tanks and missiles offer zero protection. Understanding global security requires asking two crucial questions: whose security are we actually defending (the ruling regime or individual human beings?), and what counts as an existential threat in an interconnected world."
+explanatory_video: "IR_M01_CH090_Global_Security_Issues_MindMap_1080p.mp4"
+video_duration: "06:56"
+video_status: "Rendered"
+
 ---
 
 ## Introduction

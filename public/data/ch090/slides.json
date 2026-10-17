@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "slideNumber": "01 / 08",
+    "category": "THE CHANGING SECURITY ARENA",
+    "title": "Beyond Sovereign Borders: The Changing Security Arena",
+    "subtitle": "Multidimensional Vectors and Interdependent Transnational Insecurity",
+    "narration": "For centuries, international relations defined national security through a single lens: armies guarding territorial borders against foreign invasion. But the end of the Cold War dismantled that narrow certainty. As direct military confrontation between superpowers receded, complex transnational dangers surged across globalized networks. Pandemics, climate collapse, financial shocks, cyber warfare, and terrorism ignore sovereign border checkpoints entirely. If millions of citizens die from infectious disease or ecological breakdown, heavy battle tanks offer zero protection. Security is now recognized as a complex, multidimensional phenomenon spanning political, economic, societal, and environmental domains. Addressing these borderless vulnerabilities compels us to rethink the very foundation of defense.",
+    "bullets": [
+      {
+        "headline": "Post-Cold War Transformation",
+        "detail": "Superpower retreat unveiled interconnected non-military vulnerabilities transcending territorial sovereignty."
+      },
+      {
+        "headline": "Multidimensional Security",
+        "detail": "Expands protection beyond armed defense into political, economic, societal, and ecological spheres."
+      },
+      {
+        "headline": "Transnational Interdependence",
+        "detail": "Pandemics, climate disasters, and cyberattacks render conventional military fortifications ineffective."
+      }
+    ],
+    "uiCard": {
+      "type": "curriculum-hierarchy",
+      "activeModule": "MODULE 010: INTRO TO IR",
+      "activeTrack": "TRACK 01: FOUNDATIONS & THEORIES",
+      "totalModules": "18 Modules",
+      "totalLessons": "157 Lessons",
+      "modules": [
+        { "code": "010", "name": "Foundations of IR", "status": "completed" },
+        { "code": "020", "name": "Globalization & Politics", "status": "completed" },
+        { "code": "030", "name": "Realism in IR", "status": "completed" },
+        { "code": "040", "name": "Liberalism in IR", "status": "completed" },
+        { "code": "050", "name": "Marxism in IR", "status": "completed" },
+        { "code": "060", "name": "Constructivism in IR", "status": "completed" },
+        { "code": "070", "name": "Global Finance & Trade", "status": "completed" },
+        { "code": "080", "name": "Global Environment", "status": "completed" },
+        { "code": "090", "name": "Global Security Issues", "status": "active" }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slideNumber": "02 / 08",
+    "category": "TRADITIONAL NATIONAL SECURITY",
+    "title": "Realist Orthodoxy: Anarchy, Self-Help, and the Balance of Power",
+    "subtitle": "Hobbesian Survival, Military Deterrence, and Hegemonic Balancing",
+    "narration": "To understand why security was traditionally militarized, we must turn to the Realist paradigm. Realists view the international arena as a Hobbesian state of nature—an anarchic realm lacking an overarching global government. In this self-help system, sovereign states act as primary actors whose survival depends entirely on their own power capabilities. States are structurally compelled to pursue military power to deter rival nations. Stability is not achieved through goodwill, but through a fragile balance of power and counter-alliances ensuring no single empire attains hegemonic dominance. Because international institutions possess limited enforcement authority under anarchy, military force remains the ultimate guarantor of national survival.",
+    "bullets": [
+      {
+        "headline": "Hobbesian Anarchic System",
+        "detail": "Absence of overarching authority compels sovereign states to rely strictly on self-help capabilities."
+      },
+      {
+        "headline": "State-Centric Military Power",
+        "detail": "Rival nation-states are perceived as the primary existential threat to sovereign survival."
+      },
+      {
+        "headline": "Balancing and Deterrence",
+        "detail": "Equilibrium of armed force and defensive alliances prevents any single power from achieving hegemony."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slideNumber": "03 / 08",
+    "category": "LIBERAL INSTITUTIONALISM",
+    "title": "Liberal Institutionalism: Overcoming Anarchy Through Multilateral Rules",
+    "subtitle": "Iterated Interactions, Transaction Cost Reduction, and Reciprocal Trust",
+    "narration": "Liberal institutionalists challenge this grim fatalism. They argue that while international anarchy is real, states can construct multilateral institutions to escape the zero-sum trap. Organizations such as the United Nations, the World Trade Organization, and NATO facilitate repeated, predictable interactions between governments. By standardizing information and lowering transaction costs, institutions mitigate the fear of cheating and establish durable norms of reciprocity. Over time, member states discover that self-interest is best secured through cooperative rule-making rather than unilateral aggression. By locking states into dense webs of interdependence, international institutions produce positive-sum security outcomes that soften the harsher edges of anarchic rivalry.",
+    "bullets": [
+      {
+        "headline": "Mitigating Systemic Anarchy",
+        "detail": "Multilateral institutions enable sustained cooperation without requiring a centralized world government."
+      },
+      {
+        "headline": "Iterated Reciprocity & Trust",
+        "detail": "Repeated interactions lower transaction costs and provide transparency, discouraging defection."
+      },
+      {
+        "headline": "Positive-Sum Security Regimes",
+        "detail": "Shared rules align sovereign interests to resolve diplomatic disputes peacefully through mutual gain."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slideNumber": "04 / 08",
+    "category": "CONSTRUCTIVIST PERSPECTIVE",
+    "title": "Constructivist Social Structures: Ideas, Identities, and Security Communities",
+    "subtitle": "Wendtian Social Ontology and the Social Construction of Non-Violence",
+    "narration": "Constructivists take the argument deeper, asserting that the fundamental structures of world politics are social rather than purely material. As scholar Alexander Wendt demonstrated, anarchy is what states make of it—security environments depend on shared knowledge and expectations rather than missile counts alone. If two states view each other as implacable enemies, a single weapon sparks a security dilemma. But when social interactions foster shared values and mutual trust, competitive self-help transforms into a security community. Within a security community, member states share a collective identity where resolving disputes by military force becomes socially unthinkable. NATO members, for instance, do not deploy military garrisons against one another.",
+    "bullets": [
+      {
+        "headline": "Social Rather Than Material",
+        "detail": "Wendt's thesis shows security structures depend on shared knowledge, ideas, and social interaction."
+      },
+      {
+        "headline": "Transforming State Identities",
+        "detail": "Sustained diplomatic engagement replaces adversarial hostility with shared democratic norms."
+      },
+      {
+        "headline": "Transnational Security Communities",
+        "detail": "Pluralistic alliances where members resolve disputes peacefully without viewing each other as military threats."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slideNumber": "05 / 08",
+    "category": "CRITICAL SECURITY STUDIES",
+    "title": "Critical Security Studies: Interrogating Power and State Oppression",
+    "subtitle": "Emancipation, Structural Injustice, and Shifting the Referent Object",
+    "narration": "During the 1980s and 1990s, Critical Security Studies emerged to question the very morality of orthodox security theory. Critical scholars argue that traditional frameworks suffer from a dangerous blind spot: they assume the state is always a benign protector. In reality, authoritarian regimes and militarized apparatuses are frequently the primary sources of terror and insecurity for their own citizen populations. Through state oppression, political persecution, and systemic inequality, governments destroy human lives under the banner of national defense. Critical security therefore shifts the referent object away from preserving sovereign state elites toward emancipating individual human beings and marginalized social groups from institutional violence.",
+    "bullets": [
+      {
+        "headline": "Interrogating the State",
+        "detail": "Exposes how authoritarian regimes frequently become the primary source of violence against their own citizens."
+      },
+      {
+        "headline": "Shifting the Referent Object",
+        "detail": "Moves the core focus of security analysis from state survival to individual and community emancipation."
+      },
+      {
+        "headline": "Transforming Social Hierarchies",
+        "detail": "Challenges unequal structural relationships that sustain systemic vulnerabilities for marginalized groups."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slideNumber": "06 / 08",
+    "category": "FEMINIST THEORY & GEOPOLITICS",
+    "title": "Feminist Security and Resurgent Geopolitics: Bodies, Spaces, and Power",
+    "subtitle": "Everyday Gendered Insecurities and the Friction of Territorial Dominance",
+    "narration": "Feminist security theory exposes how global security discourse is fundamentally shaped by masculine assumptions that render women invisible. While defense ministries track interstate tank deployments, millions of women face mortal threats in daily life: domestic violence, rape weaponized as an instrument of war, human trafficking, and severe resource inequality. Feminist scholars insist that genuine peace is impossible without securing women's bodily autonomy and recognizing women as active agents of transformation. Simultaneously, the global landscape experiences fierce friction between globalization and resurgent geopolitics. While globalization promises open flows of capital and ideas, great power rivalries over Pacific chokepoints prove that sovereign competition for territorial dominance remains stubbornly alive.",
+    "bullets": [
+      {
+        "headline": "Gendered Security Lens",
+        "detail": "Reveals how traditional security discourse ignores patriarchal power structures and everyday structural violence."
+      },
+      {
+        "headline": "Everyday Bodily Insecurity",
+        "detail": "Identifies intimate violence, conflict rape, honor killings, and resource deprivation as primary security crises."
+      },
+      {
+        "headline": "Globalization Versus Geopolitics",
+        "detail": "Tension between borderless transnational economic flows and resurgent great power competition for territorial space."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slideNumber": "07 / 08",
+    "category": "REGIONAL CASE STUDY",
+    "title": "Humanitarian Catastrophe in the DRC: The Limits of Military Power",
+    "subtitle": "Regional Proxy Conflict, Ethnic Warfare, and Societal Breakdown",
+    "narration": "The devastating conflict in the Democratic Republic of Congo from 1996 to 2013 provides tragic proof of the limits of traditional military security. Triggered by the spillover of the 1994 Rwandan genocide, the war quickly drew in armies and proxy militias from Uganda, Burundi, and Angola. While neighboring states claimed to be protecting national defense interests, the human cost was catastrophic, claiming an estimated six million civilian lives. Conventional military operations failed to stop ethnic violence between Hema and Lendu groups, nor did they halt the widespread recruitment of child soldiers and systemic mass rape. This societal collapse proves that military balance of power doctrines cannot protect vulnerable human beings without comprehensive justice and development.",
+    "bullets": [
+      {
+        "headline": "Regionalized War (1996–2013)",
+        "detail": "Genocide spillover catalyzed a multi-state proxy conflict in the Congo resulting in 6 million civilian deaths."
+      },
+      {
+        "headline": "Systemic Societal Breakdown",
+        "detail": "Ethnic factional violence, child soldier recruitment, and mass rape exposed total humanitarian vulnerability."
+      },
+      {
+        "headline": "Limits of Realist Balancing",
+        "detail": "Demonstrates that state-centric military power cannot resolve complex intra-state human security emergencies."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "slideNumber": "08 / 08",
+    "category": "NUCLEAR PROLIFERATION",
+    "title": "Nuclear Governance and Proliferation: The NPT, Defection, and Dual-Use Tech",
+    "subtitle": "1968 Treaty Safeguards, North Korean Testing, and Iranian Enrichment Disputes",
+    "narration": "Finally, the proliferation of nuclear weapons represents the most catastrophic threat to planetary survival. The primary legal architecture governing atomic arms is the 1968 Nuclear Non-Proliferation Treaty, which recognized five nuclear powers while prohibiting non-nuclear signatories from acquiring atomic arsenals. However, the treaty faces profound structural dilemmas. First, dual-use technology allows civilian enrichment and reprocessing facilities to secretly produce fissile materials for weapons. Second, treaty compliance remains vulnerable to sovereign defection. North Korea withdrew from the treaty in 2003 and detonated multiple nuclear devices starting in 2006. Meanwhile, Iran faces ongoing disputes with the International Atomic Energy Agency over undeclared enrichment capabilities. Controlling atomic perils requires rigorous verification and unwavering multilateral diplomacy.",
+    "bullets": [
+      {
+        "headline": "1968 NPT Legal Architecture",
+        "detail": "Recognizes five nuclear powers while prohibiting non-nuclear signatories from developing atomic warheads."
+      },
+      {
+        "headline": "Dual-Use Technology Dilemma",
+        "detail": "Civilian nuclear energy programs provide enrichment capabilities easily diverted into fissile weapons material."
+      },
+      {
+        "headline": "DPRK Defection and Iran Disputes",
+        "detail": "North Korea's 2003 exit and testing, alongside Iranian enrichment controversies, strain multilateral verification."
+      }
+    ]
+  }
+]

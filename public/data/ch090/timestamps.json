@@ -1,0 +1,96 @@
+{
+  "fps": 30,
+  "totalDurationSec": 416.646,
+  "totalFrames": 12499,
+  "voice": "Kokoro-82M (af_heart)",
+  "slides": [
+    {
+      "id": 1,
+      "slideNumber": "01 / 08",
+      "title": "Beyond Sovereign Borders: The Changing Security Arena",
+      "startSec": 0.0,
+      "endSec": 52.517,
+      "durationSec": 52.517,
+      "startFrame": 0,
+      "endFrame": 1576,
+      "durationFrames": 1576
+    },
+    {
+      "id": 2,
+      "slideNumber": "02 / 08",
+      "title": "Realist Orthodoxy: Anarchy, Self-Help, and the Balance of Power",
+      "startSec": 53.167,
+      "endSec": 100.37,
+      "durationSec": 47.203,
+      "startFrame": 1595,
+      "endFrame": 3011,
+      "durationFrames": 1416
+    },
+    {
+      "id": 3,
+      "slideNumber": "03 / 08",
+      "title": "Liberal Institutionalism: Overcoming Anarchy Through Multilateral Rules",
+      "startSec": 101.02,
+      "endSec": 150.548,
+      "durationSec": 49.528,
+      "startFrame": 3031,
+      "endFrame": 4516,
+      "durationFrames": 1485
+    },
+    {
+      "id": 4,
+      "slideNumber": "04 / 08",
+      "title": "Constructivist Social Structures: Ideas, Identities, and Security Communities",
+      "startSec": 151.198,
+      "endSec": 198.699,
+      "durationSec": 47.501,
+      "startFrame": 4536,
+      "endFrame": 5961,
+      "durationFrames": 1425
+    },
+    {
+      "id": 5,
+      "slideNumber": "05 / 08",
+      "title": "Critical Security Studies: Interrogating Power and State Oppression",
+      "startSec": 199.349,
+      "endSec": 248.875,
+      "durationSec": 49.525,
+      "startFrame": 5980,
+      "endFrame": 7466,
+      "durationFrames": 1486
+    },
+    {
+      "id": 6,
+      "slideNumber": "06 / 08",
+      "title": "Feminist Security and Resurgent Geopolitics: Bodies, Spaces, and Power",
+      "startSec": 249.525,
+      "endSec": 303.402,
+      "durationSec": 53.877,
+      "startFrame": 7486,
+      "endFrame": 9102,
+      "durationFrames": 1616
+    },
+    {
+      "id": 7,
+      "slideNumber": "07 / 08",
+      "title": "Humanitarian Catastrophe in the DRC: The Limits of Military Power",
+      "startSec": 304.052,
+      "endSec": 355.689,
+      "durationSec": 51.637,
+      "startFrame": 9122,
+      "endFrame": 10671,
+      "durationFrames": 1549
+    },
+    {
+      "id": 8,
+      "slideNumber": "08 / 08",
+      "title": "Nuclear Governance and Proliferation: The NPT, Defection, and Dual-Use Tech",
+      "startSec": 356.339,
+      "endSec": 416.646,
+      "durationSec": 60.307,
+      "startFrame": 10690,
+      "endFrame": 12499,
+      "durationFrames": 1809
+    }
+  ]
+}
