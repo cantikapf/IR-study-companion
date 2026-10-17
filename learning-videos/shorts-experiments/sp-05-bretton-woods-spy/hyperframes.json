@@ -1,0 +1,8 @@
+{
+  "$schema": "https://hyperframes.dev/schema/hyperframes.json",
+  "entry": "index.html",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 40.08
+}

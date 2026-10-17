@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SP-05 · The Soviet Spy Who Built the Global Economy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-italic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+        color: #fdfbf7;
+        font-family: "Playfair Display", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+      }
+
+      /* ARCHIVAL TOP HEADER (SAFE ZONE: top >= 140px) */
+      #archival-header {
+        position: absolute;
+        top: 140px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .header-kicker {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #ff9999;
+        text-transform: uppercase;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-sub {
+        margin-top: 6px;
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-rule {
+        width: 60px;
+        height: 1px;
+        background: rgba(229, 62, 62, 0.6);
+        margin: 12px auto 0;
+      }
+
+      /* FULL-BLEED CAMERA STAGE */
+      #photo-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      #photo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1531px;
+        height: 1920px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #white-photo {
+        width: 1531px;
+        height: 1920px;
+        display: block;
+        object-fit: cover;
+        filter: sepia(0.08) contrast(1.10) brightness(0.95);
+      }
+
+      /* ARCHIVAL SCRIMS & VIGNETTE */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 320px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0.96) 0%,
+          rgba(9, 10, 13, 0.80) 45%,
+          rgba(9, 10, 13, 0) 100%
+        );
+        z-index: 10;
+      }
+
+      .botscrim {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1080px;
+        height: 640px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0) 0%,
+          rgba(9, 10, 13, 0.82) 20%,
+          rgba(9, 10, 13, 0.88) 55%,
+          rgba(9, 10, 13, 0.65) 85%,
+          rgba(9, 10, 13, 0.35) 100%
+        );
+        z-index: 10;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 95% 88% at 50% 42%,
+          rgba(9, 10, 13, 0) 60%,
+          rgba(9, 10, 13, 0.20) 85%,
+          rgba(9, 10, 13, 0.55) 100%
+        );
+        z-index: 12;
+      }
+
+      /* CAPTIONS STAGE (MOBILE SAFE ZONE: y: 1140 - 1480) */
+      #caption-stage {
+        position: absolute;
+        top: 1140px;
+        left: 80px;
+        width: 920px;
+        height: 340px;
+        z-index: 20;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .story-line {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 50px;
+        line-height: 1.28;
+        font-weight: 600;
+        color: #fdfbf7;
+        opacity: 0;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+      }
+
+      .story-line em {
+        font-style: italic;
+        color: #ff9999;
+      }
+
+      .story-line strong {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      /* FLASH BULB ACCENT */
+      #flash-overlay {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        background: #ffffff;
+        opacity: 0;
+        z-index: 30;
+        pointer-events: none;
+      }
+
+      /* DECLASSIFIED / ARCHIVE CALLOUT BADGE */
+      #docket-badge {
+        position: absolute;
+        top: 1020px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 22;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .stamp-box {
+        display: inline-block;
+        border: 2px solid #ff8585;
+        padding: 6px 18px;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        color: #ff8585;
+        text-transform: uppercase;
+        background: rgba(9, 10, 13, 0.90);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+        transform: rotate(-1.5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      class="clip"
+      data-composition-id="main"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="51.049"
+    >
+      <div id="flash-overlay"></div>
+
+      <!-- ARCHIVAL DOSSIER HEADER -->
+      <div id="archival-header">
+        <div class="header-kicker">ARCHIVAL DOSSIER · BRETTON WOODS 1944</div>
+        <div class="header-sub">U.S. TREASURY DEPT · OPERATION VENONA</div>
+        <div class="header-rule"></div>
+      </div>
+
+      <!-- PHOTO STAGE (FULL-BLEED) -->
+      <div id="photo-stage" data-layout-allow-overflow>
+        <div id="photo-wrapper" data-layout-allow-overflow>
+          <img
+            id="white-photo"
+            src="images/source_master.jpg"
+            alt="Harry Dexter White U.S. Treasury 1944 LOC Harris & Ewing"
+          />
+        </div>
+      </div>
+
+      <!-- SCRIMS -->
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="vignette"></div>
+
+      <!-- DOCKET BADGE -->
+      <div id="docket-badge">
+        <div class="stamp-box">DECLASSIFIED VENONA · SOVIET AGENT "JURIST"</div>
+      </div>
+
+      <!-- EDITORIAL CAPTIONS (Derived from manifest.json) -->
+      <div id="caption-stage">
+        <!-- 0: B1 line 1 -->
+        <div class="story-line" id="line-0">
+          This quiet bureaucrat created the <strong>modern financial world</strong>.
+        </div>
+        <!-- 1: B1 line 2 -->
+        <div class="story-line" id="line-1">
+          And he was secretly working for <em>Joseph Stalin</em>.
+        </div>
+        <!-- 2: B2 line 1 -->
+        <div class="story-line" id="line-2">
+          His name was <strong>Harry Dexter White</strong>, top economist at the U.S. Treasury.
+        </div>
+        <!-- 3: B2 line 2 -->
+        <div class="story-line" id="line-3">
+          In 1944, world leaders met at <em>Bretton Woods</em> to rebuild global trade.
+        </div>
+        <!-- 4: B3 line 1 -->
+        <div class="story-line" id="line-4">
+          British genius <strong>John Maynard Keynes</strong> brought his own grand vision.
+        </div>
+        <!-- 5: B3 line 2 -->
+        <div class="story-line" id="line-5">
+          Look at White pointing to his charts: he completely <em>outmaneuvered</em> Keynes.
+        </div>
+        <!-- 6: B3 line 3 -->
+        <div class="story-line" id="line-6">
+          White dethroned the British Pound and crowned the <strong>U.S. Dollar world king</strong>.
+        </div>
+        <!-- 7: B4 line 1 -->
+        <div class="story-line" id="line-7">
+          He founded the <strong>International Monetary Fund</strong> and the World Bank.
+        </div>
+        <!-- 8: B4 line 2 -->
+        <div class="story-line" id="line-8">
+          What Washington didn't know was his Soviet codename: <em>"Jurist"</em>.
+        </div>
+        <!-- 9: B4 line 3 -->
+        <div class="story-line" id="line-9">
+          For years, White funneled confidential Treasury intelligence straight to <em>Moscow</em>.
+        </div>
+        <!-- 10: B5 line 1 -->
+        <div class="story-line" id="line-10">
+          Exposed in 1948, he died of a <strong>heart attack</strong> three days after testifying.
+        </div>
+        <!-- 11: B5 line 2 -->
+        <div class="story-line" id="line-11">
+          Leaving behind the capitalist empire he built... <em>and betrayed</em>.
+        </div>
+      </div>
+
+      <!-- AUDIO (Drives HyperFrames) -->
+      <audio
+        id="voiceover"
+        src="audio/voiceover.mp3"
+        preload="auto"
+        data-start="0"
+        data-duration="51.049"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+
+      const photo = document.querySelector("#photo-wrapper");
+      const flash = document.querySelector("#flash-overlay");
+      const badge = document.querySelector("#docket-badge");
+
+      // Set initial camera transform (Frozen open)
+      gsap.set(photo, { x: -22, y: 52, scale: 1.05 });
+      gsap.set(flash, { opacity: 0 });
+      gsap.set(".story-line", { y: 18 });
+      gsap.set(badge, { y: 8, opacity: 0 });
+
+      // 1. FLASH BULB AT 0.01s (clears before 0.10s)
+      tl.to(flash, { opacity: 0.85, duration: 0.03, ease: "power2.in" }, 0.01);
+      tl.to(flash, { opacity: 0, duration: 0.06, ease: "power2.out" }, 0.04);
+
+      // 2. LINE ANIMATIONS (synchronized with manifest.json)
+      // Line 0: 0.700 -> 4.007 ("This quiet bureaucrat...")
+      tl.to("#line-0", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 0.70);
+      tl.to("#line-0", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 3.70);
+
+      // Line 1: 4.387 -> 6.776 (Hook Snap: "And he was secretly working for Joseph Stalin.")
+      // Camera hard-snap to White's face at 4.00s (just before Line 1 lands)
+      tl.to(photo, { x: -16, y: -746, scale: 1.65, duration: 0.38, ease: "power3.out" }, 4.00);
+      tl.to("#line-1", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 4.38);
+      tl.to("#line-1", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 6.50);
+
+      // Line 2: 7.156 -> 11.017 ("His name was Harry Dexter White...")
+      // Gentle punch-in on face and spectacles
+      tl.to(photo, { x: -50, y: -832, scale: 1.75, duration: 1.60, ease: "power2.out" }, 6.80);
+      tl.to("#line-2", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 7.16);
+      tl.to("#line-2", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 10.70);
+
+      // Line 3: 11.397 -> 16.155 ("In nineteen forty-four, world leaders met at Bretton Woods...")
+      tl.to("#line-3", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 11.40);
+      tl.to("#line-3", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 15.80);
+
+      // Line 4: 16.535 -> 20.033 ("British genius John Maynard Keynes brought his own grand vision.")
+      // Pan across to the presentation board: "ENGLAND - ECONOMIC SITUATION"
+      tl.to(photo, { x: -658, y: -620, scale: 1.70, duration: 1.80, ease: "power2.inOut" }, 15.60);
+      tl.to("#line-4", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 16.54);
+      tl.to("#line-4", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 19.70);
+
+      // Line 5: 20.413 -> 24.168 ("Look at White pointing to his charts: he completely outmaneuvered Keynes.")
+      // Reframe slightly to pointer & Empire trade chart
+      tl.to(photo, { x: -783, y: -915, scale: 1.80, duration: 1.40, ease: "power2.inOut" }, 19.80);
+      tl.to("#line-5", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 20.41);
+      tl.to("#line-5", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 23.85);
+
+      // Line 6: 24.548 -> 28.473 ("White dethroned the British Pound and crowned the U.S. Dollar world king.")
+      // Drift across data columns
+      tl.to(photo, { x: -650, y: -800, scale: 1.65, duration: 1.80, ease: "power2.out" }, 24.20);
+      tl.to("#line-6", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 24.55);
+      tl.to("#line-6", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 28.15);
+
+      // Line 7: 28.853 -> 32.288 ("He founded the International Monetary Fund and the World Bank.")
+      // Return camera to White's commanding profile
+      tl.to(photo, { x: -97, y: -856, scale: 1.60, duration: 1.60, ease: "power2.inOut" }, 28.20);
+      tl.to("#line-7", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 28.85);
+      tl.to("#line-7", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 31.95);
+
+      // Line 8: 32.668 -> 36.252 ("What Washington didn't know was his Soviet codename: Jurist.")
+      // Pop the declassified docket stamp
+      tl.to(badge, { opacity: 1, y: 0, duration: 0.42, ease: "back.out(1.4)" }, 33.00);
+      tl.to("#line-8", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 32.67);
+      tl.to("#line-8", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 35.95);
+
+      // Line 9: 36.632 -> 40.749 ("For years, White funneled confidential Treasury intelligence straight to Moscow.")
+      // Deep punch into Treasury books and confidential documents on table
+      tl.to(photo, { x: -241, y: -1402, scale: 1.70, duration: 1.60, ease: "power2.inOut" }, 36.20);
+      tl.to("#line-9", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 36.63);
+      tl.to("#line-9", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 40.40);
+
+      // Line 10: 41.129 -> 46.249 ("Exposed in nineteen forty-eight, he died of a heart attack...")
+      // Pull back to wide dramatic panorama
+      tl.to(photo, { x: -54, y: 79, scale: 1.02, duration: 2.20, ease: "power2.out" }, 40.80);
+      tl.to("#line-10", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 41.13);
+      tl.to("#line-10", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 45.90);
+
+      // Line 11: 46.629 -> 50.149 ("Leaving behind the capitalist empire he built... and betrayed.")
+      tl.to("#line-11", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 46.63);
+      tl.to("#line-11", { opacity: 0, y: -10, duration: 0.40, ease: "power2.in" }, 50.40);
+    </script>
+  </body>
+</html>

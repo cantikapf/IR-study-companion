@@ -1,7 +1,16 @@
 ---
+youtube_id: "9v79Cq3TM7Y"
 slug: domino-cold-war
 title: 'When One Falls, They All Will Follow: The Domino Theory and the Cold War'
 simple_summary: "Because nuclear weapons made direct combat between Washington and Moscow suicidal, the Cold War was fought through covert coups, civil wars, and proxy battlefields across the Global South. Driven by George Kennan's containment doctrine and the 'domino theory,' the US feared that even a small nation falling to communism would topple entire regions. This zero-sum paranoia dragged superpowers into bloody quagmires from Korea to Vietnam."
+explanatory_video:
+  title: "Mind Map Explanatory: When One Falls, They All Will Follow: The Domino Theory and the Cold War"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "9v79Cq3TM7Y"
+
 ---
 
 

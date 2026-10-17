@@ -13,6 +13,22 @@ tags:
 
 ## Last Updated
 
+2026-10-16 - Produksi & Render Penuh YouTube Shorts SP-05 (Single Photo Archival Story):
+1. `Judul & Topik`: "The Soviet Spy Who Built the Global Economy (1944)" (Harry Dexter White, Bretton Woods, & Operasi Venona Soviet Agent "Jurist").
+2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi asli Library of Congress (Harris & Ewing Collection, `LCCN 2016875797`, 7.993 × 10.021 px).
+3. `Audio & Narasi`: Disintesis dengan Kokoro-82M ONNX (`am_adam`, speed 1.05x) + 2 aksen momentary shutter camera (0.00s & snap 4.00s) dengan gain staging terkalibrasi (-1.5 dBFS).
+4. `Visual Staging & Render`: Komposisi vertikal 1080x1920 (51.0s, 30 FPS) dibangun di `learning-videos/shorts-experiments/sp-05-bretton-woods-spy/index.html` via GSAP + HyperFrames, deep-punch 1.70x ke tabel ekonomi Great Depression Inggris & berkas Treasury, declassified stamp badge, safe-zone captions (y: 1140-1480px), dan 22/22 WCAG AA pass.
+5. `Deliverables & Publikasi`: Video selesai di `learning-videos/exports/SP05_Bretton_Woods_Soviet_Spy_Short_1080p.mp4` (58.5 MB). Resmi diunggah ke channel YouTube resmi `@IRinANutshell` (International Relations in a nutshell): https://youtube.com/shorts/QHh6_wTgsRQ dan disinkronisasi ke kurikulum web Bab 110 via `scripts/sync_youtube_video.py`.
+
+
+2026-10-16 - Produksi & Upload YouTube Shorts SP-04 (Single Photo Archival Story):
+1. `Judul & Topik`: "The 1961 Escape Over the Berlin Wall" (Conrad Schumann Leap into Freedom, Bernauer Straße, 15 Agustus 1961).
+2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi Library of Congress (`LC-USZ62-138900` / `cph 3c38900`, 6.064 × 4.912 px) karya fotografer Peter Leibing.
+3. `Audio & Narasi`: Disintesis dengan Kokoro-82M ONNX (`am_adam`, speed 1.05x) + 2 aksen momentary shutter camera (0.00s & snap 6.48s) dengan gain staging terkalibrasi (-1.5 dBFS).
+4. `Visual Staging & Render`: Komposisi vertikal 1080x1920 (49.5s, 30 FPS) dibangun di `learning-videos/shorts-experiments/sp-04-berlin-wall-leap/index.html` via GSAP + HyperFrames, framing kedua tangan & pelepasan PPSh-41 proporsional, safe-zone captions (y: 1140-1480px), dan 22/22 WCAG AA pass.
+5. `Deliverables & Publikasi`: Video selesai di `learning-videos/exports/SP04_Berlin_Wall_Leap_Short_1080p.mp4` (63.9 MB). Resmi diunggah ke channel YouTube resmi `@IRinANutshell` (International Relations in a nutshell): https://youtube.com/shorts/9v79Cq3TM7Y dan disinkronisasi ke kurikulum web Bab 120 via `scripts/sync_youtube_video.py`.
+
+
 2026-10-15 - Produksi & Render Penuh YouTube Shorts SP-03 (Single Photo Archival Story):
 1. `Judul & Topik`: "The 1945 Reichstag Photo That Was Secretly Retouched" (Pengibaran Bendera Soviet di Reichstag & Sensor Jam Tangan Jarahan).
 2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi asli (4.349 × 3.139 px) karya fotografer Red Army Yevgeny Khaldei (Master Restoration Public Domain, Wikimedia Commons).
@@ -1031,3 +1047,8 @@ Merespons arahan langsung pengguna untuk mereplikasi format video orisinal buata
   - Fase 1 (brief + storyboard + script) lolos audit orkestrator 3 ronde; hook "Thirty-nine men held a three-kilometre island against an empire for 1,540 days — for a spice the world could get nowhere else." Dipilih pengguna; restrukturisasi busur menunda "Manhattan" sampai Beat 4.
   - Fase 2 audio: `generate_audio_elevenlabs.py` → ElevenLabs voice **George - Captivating Storyteller** (`with-timestamps`, word-level alignment). Durasi nyata **50.72s / 1522 frame @30fps**. Manifest di `sh-01-pulau-run/audio/manifest.json`.
   - Fase 3: komposisi **HyperFrames** di `sh-01-pulau-run-hf/` (portrait 1080×1920); `build_composition.py` membangkitkan `index.html` deterministik dari manifest (6 beat Ken Burns 1.04–1.22x + karaoke subtitle + data chips). `npx hyperframes check` **0 error**, 142/142 WCAG AA.
+
+- **Decision Labs 3D Batch (Lab 07/08/10) — First Real Execution & Design-Similarity Audit**:
+  - Ketiga lab Three.js (Zone Runner UNCLOS, Equilibrium Keeper 1914, Second-Strike Ledger MAD) baru benar-benar dieksekusi pertama kali; dua defect pemblokir ditemukan & diperbaiki: (1) `python -m http.server` menyajikan `.js` sebagai `text/plain` sehingga seluruh ES module ditolak Chrome, (2) `vendor/three.core.js` (sibling wajib dari build r184) belum pernah di-vendor. Ditambahkan `prototype/decision-labs/tools/serve.py` (MIME pinned + ThreadingHTTPServer).
+  - Verifikasi nyata: canvas WebGL 1056x260 render, 0 error console, 10/10 endpoint non-blank (kontak sheet 10 tile, 1479-3086 warna).
+  - **Temuan desain**: 10 lab dinilai terlalu mirip. Akar masalah: satu shell template (header/CRT overlay/font/palet/modal dossier) dipakai 10x, satu art direction untuk 10 domain berbeda, viewport 3D hanya strip 250-260px, ketiga lab Three.js berbagi kosakata primitif sama (MeshStandardMaterial + cone, 1 directional light, wireframe overlay, background `0x040711`, idle spin `rotation.y += 0.005`), dan 17 aset pixel-art tidak dipakai sama sekali oleh lab 3D. Menunggu ACC pengguna untuk redesign art direction per-lab.

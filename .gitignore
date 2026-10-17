@@ -46,7 +46,10 @@ simulation/
 *.mp4
 *.onnx
 *.bin
-learning-videos/exports/*.mp4
+*.tif
+*.tiff
+learning-videos/exports/*
+!learning-videos/exports/.gitkeep
 
 # Scratch render artifacts (source stays tracked; outputs are reproducible)
 learning-videos/probe/

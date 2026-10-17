@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>SP-04 · The 1961 Escape Over the Berlin Wall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-normal-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("fonts/PlayfairDisplay-italic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-500.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-600.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+        color: #fdfbf7;
+        font-family: "Playfair Display", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #090a0d;
+      }
+
+      /* ARCHIVAL TOP HEADER */
+      #archival-header {
+        position: absolute;
+        top: 140px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 25;
+        pointer-events: none;
+      }
+
+      .header-kicker {
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #ff9999;
+        text-transform: uppercase;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-sub {
+        margin-top: 6px;
+        font-family: "Inter", -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+      }
+
+      .header-rule {
+        width: 60px;
+        height: 1px;
+        background: rgba(229, 62, 62, 0.6);
+        margin: 12px auto 0;
+      }
+
+      /* FULL-BLEED CAMERA STAGE */
+      #photo-stage {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      #photo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2370px;
+        height: 1920px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #schumann-photo {
+        width: 2370px;
+        height: 1920px;
+        display: block;
+        object-fit: cover;
+        filter: sepia(0.08) contrast(1.10) brightness(0.94);
+      }
+
+      /* ARCHIVAL SCRIMS & VIGNETTE */
+      .topscrim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1080px;
+        height: 320px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0.98) 0%,
+          rgba(9, 10, 13, 0.82) 45%,
+          rgba(9, 10, 13, 0) 100%
+        );
+        z-index: 10;
+      }
+
+      .botscrim {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1080px;
+        height: 640px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 10, 13, 0) 0%,
+          rgba(9, 10, 13, 0.82) 20%,
+          rgba(9, 10, 13, 0.88) 55%,
+          rgba(9, 10, 13, 0.65) 85%,
+          rgba(9, 10, 13, 0.35) 100%
+        );
+        z-index: 10;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 95% 88% at 50% 42%,
+          rgba(9, 10, 13, 0) 60%,
+          rgba(9, 10, 13, 0.20) 85%,
+          rgba(9, 10, 13, 0.55) 100%
+        );
+        z-index: 12;
+      }
+
+      /* CAPTIONS STAGE (MOBILE SAFE ZONE: y: 1140 - 1480) */
+      #caption-stage {
+        position: absolute;
+        top: 1140px;
+        left: 80px;
+        width: 920px;
+        height: 340px;
+        z-index: 20;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .story-line {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 50px;
+        line-height: 1.28;
+        font-weight: 600;
+        color: #fdfbf7;
+        opacity: 0;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+      }
+
+      .story-line em {
+        font-style: italic;
+        color: #ffb4b4;
+      }
+
+      .story-line strong {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      /* FLASH BULB ACCENT */
+      #flash-overlay {
+        position: absolute;
+        inset: 0;
+        width: 1080px;
+        height: 1920px;
+        background: #ffffff;
+        opacity: 0;
+        z-index: 30;
+        pointer-events: none;
+      }
+
+      /* DECLASSIFIED / ARCHIVE CALLOUT BADGE */
+      #docket-badge {
+        position: absolute;
+        top: 1020px;
+        left: 80px;
+        width: 920px;
+        text-align: center;
+        z-index: 22;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .stamp-box {
+        display: inline-block;
+        border: 2px solid #ff8585;
+        padding: 6px 18px;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        color: #ff8585;
+        text-transform: uppercase;
+        background: rgba(9, 10, 13, 0.90);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+        transform: rotate(-1.5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      class="clip"
+      data-composition-id="main"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="49.467"
+    >
+      <div id="flash-overlay"></div>
+
+      <!-- ARCHIVAL DOSSIER HEADER -->
+      <div id="archival-header">
+        <div class="header-kicker">ARCHIVAL DOSSIER · AUGUST 15, 1961</div>
+        <div class="header-sub">BERLIN WALL ESCAPE · SECTEUR FRANÇAIS</div>
+        <div class="header-rule"></div>
+      </div>
+
+      <!-- PHOTO STAGE (FULL-BLEED) -->
+      <div id="photo-stage" data-layout-allow-overflow>
+        <div id="photo-wrapper" data-layout-allow-overflow>
+          <img
+            id="schumann-photo"
+            src="schumann_master.jpg"
+            alt="Conrad Schumann Leap into Freedom 1961 Peter Leibing"
+          />
+        </div>
+      </div>
+
+      <!-- SCRIMS -->
+      <div class="topscrim"></div>
+      <div class="botscrim"></div>
+      <div class="vignette"></div>
+
+      <!-- DOCKET BADGE -->
+      <div id="docket-badge">
+        <div class="stamp-box">PUBLIC DOMAIN ARCHIVE · NARA / LOC CPH 3C38900</div>
+      </div>
+
+      <!-- EDITORIAL CAPTIONS (Derived from manifest.json) -->
+      <div id="caption-stage">
+        <!-- 0: B1 line 1 -->
+        <div class="story-line" id="line-0">
+          What would <em>you</em> do before you die if ordered to shoot escapees across the <strong>1961 Berlin Wall</strong>?
+        </div>
+        <!-- 1: B1 line 2 -->
+        <div class="story-line" id="line-1">
+          Two days after the border closed, this <em>nineteen-year-old soldier</em> made his choice.
+        </div>
+        <!-- 2: B2 line 1 -->
+        <div class="story-line" id="line-2">
+          His name was <strong>Conrad Schumann</strong>.
+        </div>
+        <!-- 3: B2 line 2 -->
+        <div class="story-line" id="line-3">
+          Stationed on <em>Bernauer Strasse</em>, his unit was ordered to stop any defector at gunpoint.
+        </div>
+        <!-- 4: B3 line 1 -->
+        <div class="story-line" id="line-4">
+          Look closely at <em>his hands</em>.
+        </div>
+        <!-- 5: B3 line 2 -->
+        <div class="story-line" id="line-5">
+          He is mid-air, but he <strong>isn't aiming</strong>.
+        </div>
+        <!-- 6: B3 line 3 -->
+        <div class="story-line" id="line-6">
+          He is deliberately throwing away his loaded <em>Soviet submachine gun</em>.
+        </div>
+        <!-- 7: B3 line 4 -->
+        <div class="story-line" id="line-7">
+          He did it so West Berlin police wouldn't shoot him as a <strong>hostile threat</strong>.
+        </div>
+        <!-- 8: B4 line 1 -->
+        <div class="story-line" id="line-8">
+          Ten yards away, a West German police van waited with its <em>door open</em>.
+        </div>
+        <!-- 9: B4 line 2 -->
+        <div class="story-line" id="line-9">
+          Photographer <strong>Peter Leibing</strong> pressed the shutter at the exact millisecond.
+        </div>
+        <!-- 10: B5 line 1 -->
+        <div class="story-line" id="line-10">
+          Schumann made it to <strong>freedom</strong>.
+        </div>
+        <!-- 11: B5 line 2 -->
+        <div class="story-line" id="line-11">
+          The image embarrassed Moscow, but the <em>Stasi</em> hunted his family for decades.
+        </div>
+        <!-- 12: B5 line 3 -->
+        <div class="story-line" id="line-12">
+          A leap into history... <em>paid in blood</em>.
+        </div>
+      </div>
+
+      <!-- AUDIO (Drives HyperFrames) -->
+      <audio
+        id="voiceover"
+        src="audio/voiceover.mp3"
+        preload="auto"
+        data-start="0"
+        data-duration="49.467"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+
+      const photo = document.querySelector("#photo-wrapper");
+      const flash = document.querySelector("#flash-overlay");
+      const badge = document.querySelector("#docket-badge");
+
+      // Set initial camera transform (Frozen open)
+      gsap.set(photo, { x: -450, y: -180, scale: 1.05 });
+      gsap.set(flash, { opacity: 0 });
+      gsap.set(".story-line", { y: 18 });
+      gsap.set(badge, { y: 8, opacity: 0 });
+
+      // 1. FLASH BULB AT 0.01s (clears before 0.10s)
+      tl.to(flash, { opacity: 0.85, duration: 0.03, ease: "power2.in" }, 0.01);
+      tl.to(flash, { opacity: 0, duration: 0.06, ease: "power2.out" }, 0.04);
+
+      // 2. LINE ANIMATIONS (derivations from manifest.json)
+      // Line 0: 0.700 -> 6.097
+      tl.to("#line-0", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 0.70);
+      tl.to("#line-0", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 5.80);
+
+      // Line 1: 6.477 -> 10.851 (Hook Snap)
+      // Camera snap at 6.477s
+      tl.to(photo, { x: -350, y: -280, scale: 1.15, duration: 0.40, ease: "power3.out" }, 6.45);
+      tl.to("#line-1", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 6.48);
+      tl.to("#line-1", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 10.55);
+
+      // Line 2: 11.231 -> 12.937 (Conrad Schumann name)
+      // Pan/Zoom towards helmet & face
+      tl.to(photo, { x: -480, y: -180, scale: 1.55, duration: 1.40, ease: "power2.inOut" }, 10.60);
+      tl.to("#line-2", { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 11.23);
+      tl.to("#line-2", { opacity: 0, y: -12, duration: 0.28, ease: "power2.in" }, 12.65);
+
+      // Line 3: 13.317 -> 18.437 (Stationed on Bernauer Strasse)
+      tl.to("#line-3", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 13.32);
+      tl.to("#line-3", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 18.10);
+
+      // Line 4: 18.817 -> 20.247 ("Look closely at his hands")
+      // Reframe to wide action view (both hands & weapon visible)
+      tl.to(photo, { x: -350, y: -280, scale: 1.15, duration: 1.20, ease: "power2.inOut" }, 17.80);
+      tl.to("#line-4", { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 18.82);
+      tl.to("#line-4", { opacity: 0, y: -12, duration: 0.28, ease: "power2.in" }, 19.95);
+
+      // Line 5: 20.627 -> 22.355 ("He is mid-air, but he isn't aiming")
+      tl.to("#line-5", { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 20.63);
+      tl.to("#line-5", { opacity: 0, y: -12, duration: 0.28, ease: "power2.in" }, 22.05);
+
+      // Line 6: 22.735 -> 26.575 ("He is deliberately throwing away his loaded Soviet submachine gun")
+      // Deep punch into weapon / strap
+      tl.to(photo, { x: -280, y: -460, scale: 1.50, duration: 1.30, ease: "power2.inOut" }, 22.30);
+      tl.to("#line-6", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 22.74);
+      tl.to("#line-6", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 26.25);
+
+      // Line 7: 26.955 -> 30.347 ("so West Berlin police wouldn't shoot him...")
+      tl.to("#line-7", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 26.96);
+      tl.to("#line-7", { opacity: 0, y: -12, duration: 0.30, ease: "power2.in" }, 30.05);
+
+      // Line 8: 30.727 -> 34.887 ("Ten yards away, a West German police van waited...")
+      // Pan across to West Berlin side (right side of image)
+      tl.to(photo, { x: -1100, y: -280, scale: 1.25, duration: 1.60, ease: "power2.inOut" }, 30.20);
+      tl.to("#line-8", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 30.73);
+      tl.to("#line-8", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 34.55);
+
+      // Line 9: 35.267 -> 39.064 ("Photographer Peter Leibing pressed the shutter...")
+      // Re-center on Schumann's dramatic leap
+      tl.to(photo, { x: -350, y: -280, scale: 1.15, duration: 1.30, ease: "power2.inOut" }, 34.80);
+      tl.to("#line-9", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 35.27);
+      tl.to("#line-9", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 38.75);
+
+      // Line 10: 39.444 -> 40.937 ("Schumann made it to freedom.")
+      // Pull back to wide panorama
+      tl.to(photo, { x: -540, y: -100, scale: 1.02, duration: 1.80, ease: "power2.out" }, 38.80);
+      tl.to(badge, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.4)" }, 39.60);
+      tl.to("#line-10", { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 39.44);
+      tl.to("#line-10", { opacity: 0, y: -12, duration: 0.28, ease: "power2.in" }, 40.65);
+
+      // Line 11: 41.317 -> 46.096 ("The image embarrassed Moscow, but the Stasi...")
+      tl.to("#line-11", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 41.32);
+      tl.to("#line-11", { opacity: 0, y: -12, duration: 0.32, ease: "power2.in" }, 45.75);
+
+      // Line 12: 46.476 -> 48.567 ("A leap into history... paid in blood.")
+      tl.to("#line-12", { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 46.48);
+      tl.to("#line-12", { opacity: 0, y: -10, duration: 0.40, ease: "power2.in" }, 48.80);
+    </script>
+  </body>
+</html>

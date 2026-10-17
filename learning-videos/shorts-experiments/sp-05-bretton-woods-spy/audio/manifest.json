@@ -1,0 +1,89 @@
+{
+  "lines": [
+    {
+      "beat": "B1",
+      "text": "This quiet bureaucrat created the modern financial world.",
+      "startSec": 0.7,
+      "endSec": 4.007,
+      "duration": 3.307
+    },
+    {
+      "beat": "B1",
+      "text": "And he was secretly working for Joseph Stalin.",
+      "startSec": 4.387,
+      "endSec": 6.776,
+      "duration": 2.389
+    },
+    {
+      "beat": "B2",
+      "text": "His name was Harry Dexter White, top economist at the U.S. Treasury.",
+      "startSec": 7.156,
+      "endSec": 11.017,
+      "duration": 3.861
+    },
+    {
+      "beat": "B2",
+      "text": "In nineteen forty-four, world leaders met at Bretton Woods to rebuild global trade.",
+      "startSec": 11.397,
+      "endSec": 16.155,
+      "duration": 4.757
+    },
+    {
+      "beat": "B3",
+      "text": "British genius John Maynard Keynes brought his own grand vision.",
+      "startSec": 16.535,
+      "endSec": 20.033,
+      "duration": 3.499
+    },
+    {
+      "beat": "B3",
+      "text": "Look at White pointing to his charts: he completely outmaneuvered Keynes.",
+      "startSec": 20.413,
+      "endSec": 24.168,
+      "duration": 3.755
+    },
+    {
+      "beat": "B3",
+      "text": "White dethroned the British Pound and crowned the U.S. Dollar world king.",
+      "startSec": 24.548,
+      "endSec": 28.473,
+      "duration": 3.925
+    },
+    {
+      "beat": "B4",
+      "text": "He founded the International Monetary Fund and the World Bank.",
+      "startSec": 28.853,
+      "endSec": 32.288,
+      "duration": 3.435
+    },
+    {
+      "beat": "B4",
+      "text": "What Washington didn't know was his Soviet codename: Jurist.",
+      "startSec": 32.668,
+      "endSec": 36.252,
+      "duration": 3.584
+    },
+    {
+      "beat": "B4",
+      "text": "For years, White funneled confidential Treasury intelligence straight to Moscow.",
+      "startSec": 36.632,
+      "endSec": 40.749,
+      "duration": 4.117
+    },
+    {
+      "beat": "B5",
+      "text": "Exposed in nineteen forty-eight, he died of a heart attack three days after testifying.",
+      "startSec": 41.129,
+      "endSec": 46.249,
+      "duration": 5.12
+    },
+    {
+      "beat": "B5",
+      "text": "Leaving behind the capitalist empire he built... and betrayed.",
+      "startSec": 46.629,
+      "endSec": 50.149,
+      "duration": 3.52
+    }
+  ],
+  "totalSec": 51.049
+}

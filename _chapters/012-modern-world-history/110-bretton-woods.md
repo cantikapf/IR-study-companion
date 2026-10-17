@@ -1,7 +1,16 @@
 ---
+youtube_id: "QHh6_wTgsRQ"
 slug: bretton-woods
 title: The Rise of the Bretton Woods Institutions
 simple_summary: "In 1944, delegates gathered in a New Hampshire resort to design a financial system that would stop countries from currency wars and trade collapse. They anchored the global economy to the US dollar, which was backed by physical gold, and established the IMF to rescue bankrupt nations and the World Bank to finance reconstruction. Bretton Woods turned American financial supremacy into the operating system of global capitalism."
+explanatory_video:
+  title: "Mind Map Explanatory: The Rise of the Bretton Woods Institutions"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "QHh6_wTgsRQ"
+
 ---
 
 

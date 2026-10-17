@@ -1,0 +1,96 @@
+{
+  "lines": [
+    {
+      "beat": "B1",
+      "text": "What would you do before you die if ordered to shoot escapees across the 1961 Berlin Wall?",
+      "startSec": 0.7,
+      "endSec": 6.097,
+      "duration": 5.397
+    },
+    {
+      "beat": "B1",
+      "text": "Two days after the border closed, this nineteen-year-old soldier made his choice.",
+      "startSec": 6.477,
+      "endSec": 10.851,
+      "duration": 4.373
+    },
+    {
+      "beat": "B2",
+      "text": "His name was Conrad Schumann.",
+      "startSec": 11.231,
+      "endSec": 12.937,
+      "duration": 1.707
+    },
+    {
+      "beat": "B2",
+      "text": "Stationed on Bernauer Strasse, his unit was ordered to stop any defector at gunpoint.",
+      "startSec": 13.317,
+      "endSec": 18.437,
+      "duration": 5.12
+    },
+    {
+      "beat": "B3",
+      "text": "Look closely at his hands.",
+      "startSec": 18.817,
+      "endSec": 20.247,
+      "duration": 1.429
+    },
+    {
+      "beat": "B3",
+      "text": "He is mid-air, but he isn't aiming.",
+      "startSec": 20.627,
+      "endSec": 22.355,
+      "duration": 1.728
+    },
+    {
+      "beat": "B3",
+      "text": "He is deliberately throwing away his loaded Soviet submachine gun.",
+      "startSec": 22.735,
+      "endSec": 26.575,
+      "duration": 3.84
+    },
+    {
+      "beat": "B3",
+      "text": "He did it so West Berlin police wouldn't shoot him as a hostile threat.",
+      "startSec": 26.955,
+      "endSec": 30.347,
+      "duration": 3.392
+    },
+    {
+      "beat": "B4",
+      "text": "Ten yards away, a West German police van waited with its door open.",
+      "startSec": 30.727,
+      "endSec": 34.887,
+      "duration": 4.16
+    },
+    {
+      "beat": "B4",
+      "text": "Photographer Peter Leibing pressed the shutter at the exact millisecond.",
+      "startSec": 35.267,
+      "endSec": 39.064,
+      "duration": 3.797
+    },
+    {
+      "beat": "B5",
+      "text": "Schumann made it to freedom.",
+      "startSec": 39.444,
+      "endSec": 40.937,
+      "duration": 1.493
+    },
+    {
+      "beat": "B5",
+      "text": "The image embarrassed Moscow, but the Stasi hunted his family for decades.",
+      "startSec": 41.317,
+      "endSec": 46.096,
+      "duration": 4.779
+    },
+    {
+      "beat": "B5",
+      "text": "A leap into history... paid in blood.",
+      "startSec": 46.476,
+      "endSec": 48.567,
+      "duration": 2.091
+    }
+  ],
+  "totalSec": 49.467
+}
