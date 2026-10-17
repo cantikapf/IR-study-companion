@@ -879,3 +879,114 @@ body.dark-theme .lab-shell {
   .lab-log, .lab-tip, .lab-debrief { margin-left: 18px; margin-right: 18px; }
   .lab-stage-hint { margin-left: 18px; }
 }
+
+/* ==========================================================================
+   Full Interactive Decision Lab Embed Container (M10 Production Standard)
+   ========================================================================== */
+.lab-embed-wrapper {
+  margin: 2.5rem 0;
+  background: #080d1a;
+  border: 1.5px solid var(--lms-border-strong);
+  border-radius: var(--lms-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--lms-shadow-md);
+  transition: border-color var(--lms-duration) var(--lms-ease);
+}
+
+.lab-embed-wrapper:hover {
+  border-color: #06b6d4;
+}
+
+.lab-embed-header {
+  background: var(--lms-surface);
+  border-bottom: 1px solid var(--lms-hairline);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lab-embed-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lab-icon-tag {
+  width: 30px;
+  height: 30px;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid #06b6d4;
+  color: #06b6d4;
+  border-radius: var(--lms-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.lab-embed-title-text {
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: var(--lms-ink-primary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lab-embed-sub-text {
+  font-size: 0.72rem;
+  color: var(--lms-ink-secondary);
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+}
+
+.lab-embed-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.embed-action-btn {
+  background: var(--lms-subtle);
+  border: 1px solid var(--lms-hairline);
+  color: var(--lms-ink-secondary);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--lms-radius-sm);
+  font-size: 0.75rem;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.embed-action-btn:hover {
+  background: #06b6d4;
+  color: #040711;
+  border-color: #06b6d4;
+}
+
+.lab-embed-frame {
+  width: 100%;
+  height: 680px;
+  border: none;
+  display: block;
+  background: #040711;
+}
+
+.lab-embed-footer {
+  background: var(--lms-surface);
+  border-top: 1px solid var(--lms-hairline);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--lms-ink-secondary);
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+}

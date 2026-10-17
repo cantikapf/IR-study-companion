@@ -1,0 +1,187 @@
+/**
+ * Decision Labs — Scoped Theme Tokens & Shared Component Styles
+ * SSOT: prototype/decision-labs/EDUCATIONAL_DESIGN_BIBLE.md Section 1
+ *
+ * Each lab scope attaches [data-lab-theme="lab-0N"] to <html> or root container.
+ * All component classes strictly consume CSS custom properties. Zero hex colors in component classes.
+ */
+
+/* ==========================================================================
+   10 Scoped Token Sets (SSOT Bible §1)
+   ========================================================================== */
+
+[data-lab-theme="lab-01"] { --bg-void:#0a0f0d; --panel:#111c15; --accent:#22c55e; --accent-2:#f59e0b; --border:#166534; --text:#e7f5ec; --font-display:'Share Tech Mono',monospace; }
+[data-lab-theme="lab-02"] { --bg-void:#180a0a; --panel:#2d1212; --accent:#d97706; --accent-2:#064e3b; --border:#78350f; --text:#fdf3e7; --font-display:'Cinzel',serif; }
+[data-lab-theme="lab-03"] { --bg-void:#0c1524; --panel:#13233a; --accent:#38bdf8; --accent-2:#fbbf24; --border:#1e40af; --text:#e6f0fb; --font-display:'Chakra Petch',sans-serif; }
+[data-lab-theme="lab-04"] { --bg-void:#020617; --panel:#0b1528; --accent:#f59e0b; --accent-2:#0ea5e9; --border:#854d0e; --text:#e8eef8; --font-display:'Share Tech Mono',monospace; }
+[data-lab-theme="lab-05"] { --bg-void:#07131e; --panel:#0f2334; --accent:#0284c7; --accent-2:#fbbf24; --border:#0369a1; --text:#e7f1f8; --font-display:'Chakra Petch',sans-serif; }
+[data-lab-theme="lab-06"] { --bg-void:#0b0f19; --panel:#141c2e; --accent:#06b6d4; --accent-2:#e11d48; --border:#1e293b; --text:#e6ecf5; --font-display:'Chakra Petch',sans-serif; }
+[data-lab-theme="lab-07"] { --bg-void:#020d1a; --panel:#06182c; --accent:#0284c7; --accent-2:#f5e6c8; --border:#075985; --text:#e4f0fa; --font-display:'Share Tech Mono',monospace; }
+[data-lab-theme="lab-08"] { --bg-void:#080604; --panel:#1c140d; --accent:#d97706; --accent-2:#7f1d1d; --border:#78350f; --text:#f7efe3; --font-display:'Cinzel',serif; }
+[data-lab-theme="lab-09"] { --bg-void:#071318; --panel:#0f2127; --accent:#eab308; --accent-2:#4338ca; --border:#854d0e; --text:#eaf4f2; --font-display:'Chakra Petch',sans-serif; }
+[data-lab-theme="lab-10"] { --bg-void:#030712; --panel:#0f172a; --accent:#f59e0b; --accent-2:#10b981; --border:#b45309; --text:#e8edf6; --font-display:'Share Tech Mono',monospace; }
+
+/* ==========================================================================
+   Shared Reusable Component Classes (Panel, Rail, Button, Badge, Meter)
+   ========================================================================== */
+
+/* 1. Panel */
+.lab-panel {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-display);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.lab-panel-header {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lab-panel-body {
+  padding: 16px;
+}
+
+/* 2. Rail */
+.lab-rail {
+  background-color: var(--bg-void);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-display);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-rail-header {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+/* 3. Button */
+.lab-button,
+.lab-btn {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.lab-button:hover:not(:disabled),
+.lab-btn:hover:not(:disabled) {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-void);
+}
+
+.lab-button:focus-visible,
+.lab-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.lab-button:disabled,
+.lab-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.lab-button-accent,
+.lab-btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-void);
+}
+
+.lab-button-accent:hover:not(:disabled),
+.lab-btn-accent:hover:not(:disabled) {
+  background-color: var(--accent-2);
+  border-color: var(--accent-2);
+  color: var(--bg-void);
+}
+
+.lab-button-secondary,
+.lab-btn-secondary {
+  background-color: var(--bg-void);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.lab-button-secondary:hover:not(:disabled),
+.lab-btn-secondary:hover:not(:disabled) {
+  background-color: var(--panel);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* 4. Badge */
+.lab-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-void);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.lab-badge-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lab-badge-accent-2 {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+/* 5. Meter */
+.lab-meter {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-void);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.lab-meter-fill {
+  height: 100%;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.lab-meter-fill-accent-2 {
+  background-color: var(--accent-2);
+}

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-lab-theme="lab-05">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veto Gauntlet: UN Security Council — Decision Lab 05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/theme/lab-themes.css">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+    body {
+      background-color: var(--bg-void);
+      color: var(--text);
+      font-family: var(--font-display);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .crt-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+      background: radial-gradient(circle at center, transparent 65%, rgba(7, 19, 30, 0.65) 100%),
+                  repeating-linear-gradient(0deg, rgba(7, 19, 30, 0.2) 0px, rgba(7, 19, 30, 0.2) 1px, transparent 1px, transparent 3px);
+    }
+
+    header.lab-header {
+      width: 100%;
+      background: var(--panel);
+      border-bottom: 2px solid var(--border);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      box-sizing: border-box;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .seal-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 4px;
+      background: rgba(2, 132, 199, 0.15);
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      box-shadow: 0 0 15px rgba(2, 132, 199, 0.35);
+    }
+
+    .brand-meta h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-meta p {
+      font-size: 0.74rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ctrl-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 7px 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .ctrl-btn:hover {
+      background: rgba(2, 132, 199, 0.2);
+      border-color: var(--accent);
+    }
+
+    main.lab-main {
+      flex: 1;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* 65% Viewport Height at 1280x800 (520px) */
+    .lab-workspace {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 14px;
+      align-items: start;
+      width: 100%;
+    }
+
+    .viewport-box {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 4px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 45px rgba(2, 132, 199, 0.12);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #phaser-container {
+      width: 100%;
+      height: clamp(496px, 65vh, 560px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-void);
+      position: relative;
+    }
+
+    #phaser-container canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .viewport-hud {
+      background: var(--panel);
+      border-top: 1px solid var(--border);
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hud-stat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hud-label {
+      opacity: 0.7;
+    }
+
+    .hud-value {
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .hud-score {
+      color: var(--accent-2);
+    }
+
+    /* Collapsible Side Rail with Independent Scrolling */
+    .lab-rail {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 4px;
+      height: clamp(540px, calc(65vh + 45px), 610px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      transition: all 0.25s ease;
+    }
+
+    .lab-rail.collapsed {
+      display: none;
+    }
+
+    .rail-header {
+      background: var(--bg-void);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+
+    .rail-content {
+      padding: 16px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-sizing: border-box;
+    }
+
+    /* UI Cards for 7 Phases */
+    .card {
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+    }
+
+    .card-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card-heading {
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.25;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .objectives-box {
+      background: rgba(2, 132, 199, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 10px 12px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .box-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .objectives-list {
+      padding-left: 18px;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .tactical-dossier {
+      background: rgba(7, 19, 30, 0.7);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 2px;
+      font-size: 0.78rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .dossier-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dossier-row span {
+      opacity: 0.7;
+    }
+
+    .scenario-text, .scenario-summary, .mastery-prompt, .transfer-prompt {
+      font-size: 0.84rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .prediction-prompt {
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
+
+    .options-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .option-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-display);
+      padding: 10px 12px;
+      border-radius: 3px;
+      text-align: left;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .option-btn:hover {
+      background: rgba(2, 132, 199, 0.18);
+      border-color: var(--accent);
+    }
+
+    .key-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    .verbs-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .verb-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-display);
+      padding: 10px 12px;
+      border-radius: 3px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .verb-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      background: rgba(2, 132, 199, 0.2);
+    }
+
+    .verb-key {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .verb-title {
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .verb-sub {
+      font-size: 0.72rem;
+      opacity: 0.75;
+    }
+
+    .consequence-card {
+      border-left: 4px solid var(--border);
+    }
+
+    .card-success {
+      border-left-color: var(--accent);
+      background: rgba(2, 132, 199, 0.08);
+    }
+
+    .card-failure {
+      border-left-color: var(--border);
+      background: rgba(7, 19, 30, 0.9);
+    }
+
+    .feedback-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 8px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+
+    .badge-success {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .badge-failure {
+      color: var(--accent-2);
+      border-color: var(--accent-2);
+    }
+
+    .hypothesis-match {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .feedback-block {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .block-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      opacity: 0.75;
+      text-transform: uppercase;
+    }
+
+    .block-content {
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .citation-block {
+      padding-top: 6px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .citation-text {
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    .misconception-box {
+      background: rgba(7, 19, 30, 0.85);
+      border: 1px solid var(--accent-2);
+      padding: 10px 12px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .misc-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent-2);
+      letter-spacing: 0.05em;
+    }
+
+    .misc-remediation {
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .action-btn {
+      background: var(--panel);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .action-btn:hover {
+      background: var(--accent);
+      color: var(--bg-void);
+    }
+
+    .debrief-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .lab-workspace {
+        grid-template-columns: 1fr;
+      }
+      .lab-rail {
+        height: auto;
+        max-height: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="crt-overlay"></div>
+
+  <header class="lab-header">
+    <div class="brand-cluster">
+      <div class="seal-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-meta">
+        <h1>VETO GAUNTLET <span>[DECISION LAB 05]</span></h1>
+        <p>UN Security Council Chapter VII & Institutional Veto Points</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <button id="btnHowToPlay" class="ctrl-btn" type="button" aria-label="Open Mission Manual" style="border: 1px solid var(--accent); color: var(--accent);">[?] HOW TO PLAY</button>
+      <button id="btnAudioMute" class="ctrl-btn" type="button">MUTE AUDIO</button>
+      <button id="btnToggleRail" class="ctrl-btn" type="button">COLLAPSE RAIL</button>
+      <button id="btnRestart" class="ctrl-btn" type="button">RESTART</button>
+    </div>
+  </header>
+
+  <main class="lab-main">
+    <div class="lab-workspace">
+      <!-- 2D Play Surface (65% Viewport Height) -->
+      <div class="viewport-box">
+        <div id="phaser-container"></div>
+        <div class="viewport-hud">
+          <div class="hud-stat">
+            <span class="hud-label">PLENARY DRAFT:</span>
+            <span id="hudClauseNum" class="hud-value">OP 1 / 04</span>
+          </div>
+          <div class="hud-stat">
+            <span class="hud-label">P5 CONCURRENCE:</span>
+            <span id="hudConsensus" class="hud-value">0 / 5 CONCURRING</span>
+          </div>
+          <div class="hud-stat">
+            <span class="hud-label">ROLL-CALL:</span>
+            <span id="hudVoteTally" class="hud-value">TALLY PENDING</span>
+          </div>
+          <div class="hud-stat">
+            <span class="hud-label">MASTERY:</span>
+            <span id="hudScore" class="hud-value hud-score">0 PTS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collapsible Side Rail (Independently Scrollable) -->
+      <aside class="lab-rail" id="decisionRail" role="region" aria-label="UNSC Drafting Console">
+        <div class="rail-header">
+          <span>DRAFTING CONSOLE</span>
+          <span style="opacity:0.7;">[KEYS 1, 2, 3]</span>
+        </div>
+        <div class="rail-content" id="railScrollArea">
+          <!-- Populated by VetoScene.js -->
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../vendor/phaser.min.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

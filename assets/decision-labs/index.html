@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diplomatic Decision Labs — Mission Control Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-void: #040711;
+      --bg-panel: #080d1a;
+      --bg-card: #0d1424;
+      --border-steel: #1e293b;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --accent-amber: #f59e0b;
+      --font-display: 'Chakra Petch', sans-serif;
+      --font-mono: 'Share Tech Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+    body {
+      background-color: var(--bg-void); color: #f8fafc; font-family: var(--font-display);
+      min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden;
+    }
+
+    .crt-overlay {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 999;
+      background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.65) 100%),
+                  repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 3px);
+    }
+
+    header {
+      width: 100%; background: #060a14; border-bottom: 2px solid #1e293b; padding: 12px 28px;
+      display: flex; justify-content: space-between; align-items: center; z-index: 100;
+    }
+
+    .brand-cluster { display: flex; align-items: center; gap: 14px; }
+    .seal-badge {
+      width: 40px; height: 40px; border-radius: 6px; background: rgba(6, 182, 212, 0.15);
+      border: 1px solid var(--accent-cyan); display: flex; align-items: center; justify-content: center;
+      color: var(--accent-cyan); box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    }
+    .brand-meta h1 { font-size: 1.25rem; font-weight: 800; text-transform: uppercase; color: #fff; }
+    .brand-meta p { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; }
+
+    main {
+      flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 14px 20px;
+      display: flex; flex-direction: column; gap: 14px; position: relative; z-index: 10;
+    }
+
+    .hub-banner {
+      background: #080d1a; border: 2px solid #1e293b; border-radius: 8px; padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+    .banner-left h2 { font-size: 1.15rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 2px; }
+    .banner-left p { font-size: 0.8rem; color: #94a3b8; }
+    .banner-stats { display: flex; gap: 20px; font-family: var(--font-mono); font-size: 0.8rem; }
+    .stat-pill { display: flex; flex-direction: column; align-items: flex-end; }
+    .stat-val { font-size: 1.25rem; font-weight: 800; color: var(--accent-cyan); }
+
+    /* Protocol & Onboarding Guide Banner */
+    .protocol-guide-card {
+      background: #0b1222;
+      border: 1.5px solid var(--accent-cyan);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
+    }
+
+    .guide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 8px;
+    }
+
+    .guide-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+    }
+
+    .guide-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .guide-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .guide-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .guide-step-box {
+      background: rgba(13, 20, 36, 0.7);
+      border: 1px solid #1e293b;
+      border-radius: 4px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .step-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--accent-amber);
+    }
+
+    .step-heading {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #f8fafc;
+      text-transform: uppercase;
+    }
+
+    .step-desc {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      line-height: 1.35;
+    }
+
+    .recommended-path {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px dashed rgba(16, 185, 129, 0.4);
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .labs-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    }
+    @media (max-width: 768px) { .labs-grid { grid-template-columns: 1fr; } }
+
+    .lab-hub-card {
+      background: #090e1c; border: 1.5px solid #1e293b; border-radius: 6px; padding: 12px 16px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 8px;
+      transition: all 0.2s ease; position: relative; overflow: hidden;
+    }
+    .lab-hub-card.playable { border-color: rgba(6, 182, 212, 0.4); }
+    .lab-hub-card.playable:hover {
+      border-color: var(--accent-cyan); background: #0f172a; transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+    }
+    .lab-hub-card.locked { opacity: 0.55; }
+
+    .card-top { display: flex; justify-content: space-between; align-items: center; }
+    .card-num { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-amber); font-weight: 700; }
+    .card-status {
+      font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+    }
+    .status-live { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .status-locked { background: #162035; color: #64748b; border: 1px solid #334155; }
+
+    .card-title { font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0; }
+    .card-verb { font-size: 0.82rem; color: #94a3b8; line-height: 1.4; }
+    .card-theory { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-cyan); margin-top: 4px; }
+
+    .card-bottom {
+      display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1e293b;
+      padding-top: 12px; margin-top: 6px;
+    }
+    .engine-badge { font-family: var(--font-mono); font-size: 0.68rem; color: #64748b; }
+
+    .btn-launch-lab {
+      background: var(--accent-cyan); color: #042f2e; border: none; padding: 7px 16px; border-radius: 4px;
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 900; text-transform: uppercase;
+      text-decoration: none; cursor: pointer; transition: all 0.15s ease;
+    }
+    .btn-launch-lab:hover { background: #38bdf8; }
+  </style>
+</head>
+<body>
+
+  <div class="crt-overlay"></div>
+
+  <header>
+    <div class="brand-cluster">
+      <div class="seal-badge">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-meta">
+        <h1>Diplomatic Decision Labs <span style="font-size:0.75rem; color:var(--accent-cyan);">[MISSION CONTROL]</span></h1>
+        <p>Interactive Browser Game Suite for International Relations</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hub-banner">
+      <div class="banner-left">
+        <h2>Strategic Crisis & Game Simulation Suite</h2>
+        <p>Empirical laboratory environments translating International Relations theory into playable tactical game mechanics.</p>
+      </div>
+      <div class="banner-stats">
+        <div class="stat-pill">
+          <span style="color:#64748b;">PLAYABLE LABS</span>
+          <span class="stat-val" style="color:var(--accent-emerald);">10 / 10</span>
+        </div>
+        <div class="stat-pill">
+          <span style="color:#64748b;">ENGINES ACTIVE</span>
+          <span class="stat-val" style="color:var(--accent-cyan);">PHASER 3 + THREE.JS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onboarding Guide Section -->
+    <div class="protocol-guide-card">
+      <div class="guide-header">
+        <div class="guide-title">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan);">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4M12 8h.01"/>
+          </svg>
+          <span>QUICK START ONBOARDING · HOW TO PLAY &amp; LEARN</span>
+        </div>
+        <span style="font-family:var(--font-mono); font-size:0.75rem; color:#94a3b8;">4-STAGE PEDAGOGICAL LOOP</span>
+      </div>
+
+      <div class="guide-steps-grid">
+        <div class="guide-step-box">
+          <span class="step-badge">STAGE 01</span>
+          <div class="step-heading">1. Commit Prediction</div>
+          <p class="step-desc">Before taking action, select your theoretical hypothesis. Tests whether you anticipate systemic consequences.</p>
+        </div>
+        <div class="guide-step-box">
+          <span class="step-badge">STAGE 02</span>
+          <div class="step-heading">2. Take Tactical Decision</div>
+          <p class="step-desc">Execute crisis orders, trade logrolling, maritime interdictions, or deterrence budgets via Keys [1, 2, 3].</p>
+        </div>
+        <div class="guide-step-box">
+          <span class="step-badge">STAGE 03</span>
+          <div class="step-heading">3. Analyze Consequence</div>
+          <p class="step-desc">Inspect real IR mechanisms, textbook citations, and remediate theoretical misconceptions instantly.</p>
+        </div>
+        <div class="guide-step-box">
+          <span class="step-badge">STAGE 04</span>
+          <div class="step-heading">4. Mastery &amp; Transfer</div>
+          <p class="step-desc">Solve curriculum concept checks and apply the mechanism to a historical transfer case to earn 3 stars.</p>
+        </div>
+      </div>
+
+      <div class="recommended-path">
+        <strong>RECOMMENDED CADET PATHWAY:</strong>
+        <span>Start with <strong>Lab 01 (Crisis Command)</strong> &rarr; <strong>Lab 02 (Diplomacy Duel)</strong> &rarr; <strong>Lab 04 (Spiral Watch)</strong> &rarr; <strong>Lab 07 (UNCLOS 3D)</strong>.</span>
+      </div>
+    </div>
+
+    <div class="labs-grid">
+
+      <!-- Lab 01 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 01</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Crisis Command: Thirteen Days</h3>
+          <p class="card-verb">Defuse the Cuban Missile Standoff across 3 high-stakes decision acts under a 12s DEFCON countdown clock.</p>
+          <div class="card-theory">THEORY: Graham Allison's Essence of Decision (Model I/II/III)</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-01-crisis-command/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 02 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 02</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Diplomacy Duel: Prisoner's Dilemma</h3>
+          <p class="card-verb">8-round secret simultaneous tactical duel against 5 adaptive foreign AI doctrines with trust capacitor streak boosts.</p>
+          <div class="card-theory">THEORY: Robert Axelrod 1984 The Evolution of Cooperation</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-02-diplomacy-duel/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 03 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 03</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Consensus Market: WTO Rounds</h3>
+          <p class="card-verb">Multilateral omnibus logrolling. Link complementary issue packages across 8 trade blocs to overcome Single Undertaking consensus gridlock.</p>
+          <div class="card-theory">THEORY: Multilateral IPE & Doha Round Consensus Gridlock</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-03-consensus-market/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 04 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 04</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Spiral Watch: Security Dilemma</h3>
+          <p class="card-verb">Circular radar border surveillance management. Balance military deterrence vs confidence-building measures (CBMs).</p>
+          <div class="card-theory">THEORY: Robert Jervis 1976 Perception and Misperception</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-04-spiral-watch/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 05 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 05</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Veto Gauntlet: UN Security Council</h3>
+          <p class="card-verb">Attach 5 amendment tokens to satisfy Permanent Five (P5) secret red lines and secure 9 affirmative votes under Chapter VII.</p>
+          <div class="card-theory">THEORY: UN Charter Article 27(3) & Institutional Veto Points</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-05-veto-gauntlet/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 06 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 06</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Two-Table Pressure: Putnam Win-Sets</h3>
+          <p class="card-verb">Split-screen resource allocation: Geneva international treaty negotiation vs domestic parliamentary ratification chamber.</p>
+          <div class="card-theory">THEORY: Robert Putnam 1988 Two-Level Games</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-06-two-table-pressure/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 07 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 07</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Zone Runner: UNCLOS 1982 Maritime</h3>
+          <p class="card-verb">3D nautical patrol vessel intercepting foreign shipping across Territorial Sea, Contiguous Zone, EEZ, and High Seas.</p>
+          <div class="card-theory">THEORY: UNCLOS 1982 Law of the Sea Maritime Jurisdiction</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: THREE.JS 3D</span>
+          <a class="btn-launch-lab" href="./lab-07-zone-runner/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 08 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 08</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Equilibrium Keeper: Balance of Power</h3>
+          <p class="card-verb">3D physics balance scale absorbing sequential July 1914 crisis shocks to prevent catastrophic alliance cascade.</p>
+          <div class="card-theory">THEORY: Classical Realism & Polarity Dynamics</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: THREE.JS 3D</span>
+          <a class="btn-launch-lab" href="./lab-08-equilibrium-keeper/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 09 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 09</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Chair's Gambit: South China Sea</h3>
+          <p class="card-verb">ASEAN Summit roundtable consensus juggling claimant vs non-claimant tensions against encroaching great-power pressure.</p>
+          <div class="card-theory">THEORY: ASEAN Way, Institutional Norms & 2016 Award</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: PHASER 3.90.0</span>
+          <a class="btn-launch-lab" href="./lab-09-chairs-gambit/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+      <!-- Lab 10 -->
+      <div class="lab-hub-card playable">
+        <div>
+          <div class="card-top">
+            <span class="card-num">LAB 10</span>
+            <span class="card-status status-live">● PLAYABLE MISSION</span>
+          </div>
+          <h3 class="card-title">Second-Strike Ledger: Nuclear Triad</h3>
+          <p class="card-verb">3D rotating globe defense procurement budget stress-testing nuclear triad legs against first-strike vulnerability.</p>
+          <div class="card-theory">THEORY: Thomas Schelling MAD & Deterrence Stability</div>
+        </div>
+        <div class="card-bottom">
+          <span class="engine-badge">ENGINE: THREE.JS 3D</span>
+          <a class="btn-launch-lab" href="./lab-10-second-strike-ledger/index.html">LAUNCH MISSION</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

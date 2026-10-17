@@ -1169,294 +1169,197 @@ permalink: /
   </section>
 
   <!-- Interactive Diplomatic Decision Labs -->
+  <!-- Interactive Diplomatic Decision Labs (Total Replacement with Live Game Arena) -->
   <section class="labs-section" id="simulations">
     <div class="home-section-header">
       <div>
         <h2 class="home-section-title">Interactive Diplomatic Decision Labs</h2>
-        <div class="home-section-subtitle">Test theoretical paradigms against realistic crisis constraints in zero-dependency sandboxes</div>
+        <div class="home-section-subtitle">Playable game sandboxes testing strategic paradigms against realistic crisis constraints</div>
+      </div>
+      <div>
+        <a href="{{ site.baseurl }}/assets/decision-labs/index.html" target="_blank" class="sync-btn sync-btn-primary" style="font-family: ui-monospace, 'JetBrains Mono', monospace; font-size: 0.8rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem;">
+          <i class="fa fa-th-large"></i> Mission Control Hub &rarr;
+        </a>
       </div>
     </div>
 
-    <div class="labs-showcase-split">
-      <!-- Live Playable Sandbox: Prisoner's Dilemma (G1 Retrofit) -->
-      <div class="playable-sandbox" id="game-theory-sim">
-        <div class="sandbox-header">
-          <div class="sandbox-header-top">
-            <span class="sandbox-tag"><i class="fa fa-gamepad"></i> Interactive Lab 02 &bull; Game Theory</span>
-            <div class="sandbox-top-actions">
-              <span class="sandbox-status-chip">&bull; Live Arena</span>
-              <button type="button" class="sandbox-hud-chip" id="gt-mute-toggle" title="Toggle audio" style="cursor: pointer; border: 1px solid var(--lms-hairline);">
-                <i class="fa fa-volume-up" id="gt-mute-icon"></i>
-              </button>
-            </div>
+    <!-- Live Game Arena + Direct Switcher Grid -->
+    <div style="display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 1.75rem; margin-bottom: 2rem;">
+      
+      <!-- Live Game Frame -->
+      <div style="background: var(--lms-surface); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--lms-shadow-md); height: 680px; box-sizing: border-box;">
+        <div style="background: var(--lms-subtle); border-bottom: 1px solid var(--lms-hairline); padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; box-sizing: border-box;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-family: ui-monospace, 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #059669; background: rgba(5, 150, 105, 0.12); border: 1px solid rgba(5, 150, 105, 0.25); padding: 0.2rem 0.5rem; border-radius: 4px;" id="homeLiveBadge">
+              &bull; LIVE ARENA &bull; LAB 02
+            </span>
+            <span style="font-size: 0.95rem; font-weight: 750; color: var(--lms-ink-primary);" id="homeLiveTitle">
+              Diplomacy Duel: The Prisoner's Dilemma
+            </span>
           </div>
-          <div class="sandbox-hud-bar">
-            <span class="sandbox-hud-chip" id="gt-round-chip">Round: <b id="gt-round-val">1</b> / 8</span>
-            <span class="sandbox-hud-chip is-streak" id="gt-streak-chip">Streak: <b id="gt-streak-val">0</b> (<b id="gt-mult-val">×1</b>)</span>
-            <span class="sandbox-hud-chip" id="gt-best-chip">Best: <b id="gt-best-val">0</b> pts</span>
-          </div>
-        </div>
-
-        <h3 class="sandbox-title">Diplomacy Duel: The Prisoner's Dilemma</h3>
-        <p class="sandbox-prompt" id="gt-prompt-text">
-          Survive 8 rounds against a classified rival doctrine. Mutual cooperation (+5) earns streak multipliers (&times;1.5 at 3, &times;2 at 5) &mdash; but unilateral defection tempts with +10. Beware betrayal (&minus;10/+10) and mutual defection (&minus;2/&minus;2).
-        </p>
-
-        <!-- Active Duel Grid -->
-        <div class="sandbox-duel-grid" id="gt-duel-grid">
-          <div class="duel-card">
-            <span class="duel-role">Your Score (State A)</span>
-            <div class="duel-score" id="gt-score-a">0</div>
-            <div class="duel-actions" id="gt-actions-row">
-              <button type="button" class="btn-sim btn-sim-coop" id="btn-gt-coop" onclick="playGameTheory('cooperate')">🤝 Cooperate (C)</button>
-              <button type="button" class="btn-sim btn-sim-defect" id="btn-gt-defect" onclick="playGameTheory('defect')">⚔️ Defect (D)</button>
-            </div>
-          </div>
-
-          <div class="duel-card">
-            <span class="duel-role">Classified Rival (State B)</span>
-            <div class="duel-score" id="gt-score-b" style="color: #1e3a8a;">0</div>
-            <div style="font-size: 0.775rem; color: var(--lms-ink-tertiary); margin-top: 0.85rem;" id="gt-opp-status">
-              Awaiting opening move...
-            </div>
-          </div>
-        </div>
-
-        <!-- Session Debrief Box (Hidden during play) -->
-        <div class="sandbox-debrief-card" id="gt-debrief-box" style="display: none;">
-          <div class="sandbox-debrief-stars" id="gt-debrief-stars">★★★</div>
-          <div class="sandbox-debrief-rank" id="gt-debrief-rank">Master Diplomat</div>
-          <div class="sandbox-debrief-reveal" id="gt-debrief-reveal">
-            <strong>Rival Declassified:</strong> Tit-for-Tat (Axelrod 1984). Cooperates initially, then replicates your previous move.
-          </div>
-          <div class="sandbox-debrief-actions">
-            <button type="button" class="btn-sim btn-sim-coop" style="flex: initial; padding: 0.5rem 1.25rem;" onclick="resetGameTheorySandbox()">
-              <i class="fa fa-refresh"></i> Play Again ↺
-            </button>
-            <a href="{{ site.baseurl }}/game-theory-ir.html#game-theory-sim" class="btn-sim btn-sim-defect" style="flex: initial; padding: 0.5rem 1.25rem; text-decoration: none; text-align: center; background: #1e3a8a;">
-              Full Theory Lesson ➔
+          <div style="display: flex; gap: 0.5rem;">
+            <a href="{{ site.baseurl }}/assets/decision-labs/lab-02-diplomacy-duel/index.html" target="_blank" id="homeLiveTabBtn" class="sync-btn" style="padding: 0.35rem 0.75rem; font-size: 0.75rem; font-family: ui-monospace, monospace; text-decoration: none; border: 1px solid var(--lms-hairline); color: var(--lms-ink-secondary);" title="Open in Dedicated Tab">
+              <i class="fa fa-external-link"></i> Fullscreen
             </a>
           </div>
         </div>
 
-        <div class="sandbox-log" id="gt-log" aria-live="polite">
-          <div class="sandbox-log-line">&gt; Session initialized. Rival doctrine locked under classified protocol. Choose opening stance.</div>
+        <iframe 
+          id="homeLabFrame"
+          src="{{ site.baseurl }}/assets/decision-labs/lab-02-diplomacy-duel/index.html" 
+          style="width: 100%; flex: 1 1 0; min-height: 0; border: none; background: #040711; display: block;"
+          allow="autoplay; fullscreen"
+          title="Interactive Diplomatic Game Arena">
+        </iframe>
+
+        <div style="background: var(--lms-subtle); border-top: 1px solid var(--lms-hairline); padding: 0.6rem 1.25rem; display: flex; justify-content: space-between; font-size: 0.72rem; font-family: ui-monospace, monospace; color: var(--lms-ink-tertiary); flex-shrink: 0; box-sizing: border-box;">
+          <span id="homeLiveEngine">&bull; Engine: Phaser 3 (2D Vector + Procedural WebAudio)</span>
+          <span>&bull; 7-Phase Pedagogical Cycle Active</span>
         </div>
       </div>
 
-      <!-- Complete 10 Diplomatic Decision Labs Catalog with Category Filtering (Option B) -->
-      <div class="labs-catalog-pane">
-        <div class="labs-catalog-header">
-          <div class="labs-catalog-head-row">
-            <div class="labs-catalog-title">
-              <i class="fa fa-cubes" style="color: #1e3a8a;"></i> Diplomatic Simulation Catalog
-            </div>
-            <span class="labs-counter-badge" id="labs-active-count">10 Labs</span>
+      <!-- Live Interactive Selector Pane -->
+      <div style="background: var(--lms-surface); border: 1px solid var(--lms-border-strong); border-radius: var(--lms-radius-lg); padding: 1.25rem 1.25rem 1rem; display: flex; flex-direction: column; box-shadow: var(--lms-shadow-md); height: 680px; box-sizing: border-box; overflow: hidden; position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--lms-hairline); padding-bottom: 0.75rem; margin-bottom: 0.85rem; flex-shrink: 0; box-sizing: border-box;">
+          <div style="font-size: 0.95rem; font-weight: 750; color: var(--lms-ink-primary); display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa fa-gamepad" style="color: #2563eb;"></i> Select Simulation (10 Labs)
           </div>
-          <div class="labs-filter-chips" role="tablist" aria-label="Filter diplomatic labs by category">
-            <button type="button" class="labs-filter-btn is-active" data-filter="all">All (10)</button>
-            <button type="button" class="labs-filter-btn" data-filter="security">Security (4)</button>
-            <button type="button" class="labs-filter-btn" data-filter="strategy">Strategy (3)</button>
-            <button type="button" class="labs-filter-btn" data-filter="governance">Governance (3)</button>
-          </div>
+          <span style="font-family: ui-monospace, monospace; font-size: 0.7rem; color: var(--lms-ink-tertiary);">CLICK TO SWITCH LIVE</span>
         </div>
 
-        <div class="labs-scroll-pane" id="labs-scroll-pane">
-          <!-- Lab 01 -->
-          <article class="lab-card-sm" data-cat="security" data-lab-id="crisis">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #dc2626;">Lab 01 &bull; FPA Model</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3-4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="crisis"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Crisis Command: Thirteen Days</h4>
-              <p class="lab-card-desc">Navigate Graham Allison's bureaucratic models in a naval missile crisis across 3 decision acts with DEFCON timers.</p>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem; flex: 1 1 0; min-height: 0; overflow-y: auto; padding-right: 0.35rem; margin-bottom: 0.5rem; mask-image: linear-gradient(to bottom, black calc(100% - 32px), transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 32px), transparent 100%);" id="homeCatalogList">
+          
+          <div class="home-lab-card" data-id="lab-01" data-url="{{ site.baseurl }}/assets/decision-labs/lab-01-crisis-command/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Crisis Command: Allison FPA Models" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #dc2626; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #dc2626;">LAB 01 &bull; FPA MODEL</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/models-fpdm.html#crisis-sim" class="lab-card-link">Launch Simulator ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Crisis Command: Thirteen Days</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Allison Models I, II, III in 1962 naval missile crisis with DEFCON clocks.</div>
+          </div>
 
-          <!-- Lab 02 -->
-          <article class="lab-card-sm is-featured-lab" data-cat="strategy" data-lab-id="game_theory">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #059669;">Lab 02 &bull; Game Theory &bull; Featured Live</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="game_theory"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Diplomacy Duel: Prisoner's Dilemma</h4>
-              <p class="lab-card-desc">8-round strategic duel against classified rival doctrines. Chain cooperation streaks, decode SIGINT, and beat your best score.</p>
+          <div class="home-lab-card is-active-home-lab" data-id="lab-02" data-url="{{ site.baseurl }}/assets/decision-labs/lab-02-diplomacy-duel/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Diplomacy Duel: Prisoner's Dilemma" style="background: var(--lms-subtle); border: 1.5px solid #059669; border-left: 4px solid #059669; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease; box-shadow: 0 0 10px rgba(5, 150, 105, 0.15);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #059669;">LAB 02 &bull; GAME THEORY &bull; ACTIVE</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: #059669; font-weight: 700;">Phaser 3</span>
             </div>
-            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-              <a href="#game-theory-sim" class="lab-card-link" onclick="document.getElementById('game-theory-sim').scrollIntoView({behavior:'smooth'}); return false;">Play Live Sandbox ↰</a>
-              <a href="{{ site.baseurl }}/game-theory-ir.html#game-theory-sim" class="lab-card-link" style="color: var(--lms-ink-tertiary); font-size: 0.78rem;">Full Lesson ➔</a>
-            </div>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Diplomacy Duel: Iterated PD</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Axelrod Tit-for-Tat and Nowak Pavlov Win-Stay/Lose-Shift duel.</div>
+          </div>
 
-          <!-- Lab 03 -->
-          <article class="lab-card-sm" data-cat="governance" data-lab-id="wto">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 03 &bull; Trade Dispute</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="wto"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Consensus Market: Doha Round Trap</h4>
-              <p class="lab-card-desc">Broker package deals across 8 voting blocs with 10 Diplomatic Capital points under WTO Single Undertaking rules.</p>
+          <div class="home-lab-card" data-id="lab-03" data-url="{{ site.baseurl }}/assets/decision-labs/lab-03-consensus-market/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Consensus Market: WTO Rounds" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #7c3aed; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #7c3aed;">LAB 03 &bull; TRADE DIPLOMACY</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/wto-decision-making.html#wto-sim" class="lab-card-link">Enter Panel ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Consensus Market: WTO Rounds</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Single Undertaking cross-sector issue logrolling across 8 trade blocs.</div>
+          </div>
 
-          <!-- Lab 04 -->
-          <article class="lab-card-sm" data-cat="security" data-lab-id="security_dilemma">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #dc2626;">Lab 04 &bull; Security Studies</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="security_dilemma"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Spiral Watch: Security Dilemma Matrix</h4>
-              <p class="lab-card-desc">Test Jervis's Spiral Model across 5 rounds of arms competition against a secret Cautious or Opportunistic adversary.</p>
+          <div class="home-lab-card" data-id="lab-04" data-url="{{ site.baseurl }}/assets/decision-labs/lab-04-spiral-watch/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Spiral Watch: Security Dilemma" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #dc2626; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #dc2626;">LAB 04 &bull; SECURITY DILEMMA</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/realism-security.html#security-dilemma-sim" class="lab-card-link">Run Simulator ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Spiral Watch: Security Dilemma</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Jervis spiral model on Arctic PPI radar with offensive/defensive postures.</div>
+          </div>
 
-          <!-- Lab 05 -->
-          <article class="lab-card-sm" data-cat="governance" data-lab-id="unsc_veto">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 05 &bull; Global Governance</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="unsc_veto"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Veto Gauntlet: UNSC Resolution Chamber</h4>
-              <p class="lab-card-desc">Draft Chapter VII resolutions and neutralize P5 red lines with 5 Amendment Tokens under UN Charter Article 27(3).</p>
+          <div class="home-lab-card" data-id="lab-05" data-url="{{ site.baseurl }}/assets/decision-labs/lab-05-veto-gauntlet/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Veto Gauntlet: UNSC Chapter VII" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #7c3aed; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #7c3aed;">LAB 05 &bull; GLOBAL GOVERNANCE</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/un-security.html#unsc-veto-sim" class="lab-card-link">Enter Chamber ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Veto Gauntlet: UNSC Chapter VII</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Article 27(3) P5 veto constraints and E10 coalition bargaining.</div>
+          </div>
 
-          <!-- Lab 06 -->
-          <article class="lab-card-sm" data-cat="strategy" data-lab-id="treaty_negotiation">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #2563eb;">Lab 06 &bull; Diplomacy</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="treaty_negotiation"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Two-Table Pressure: Treaty Ratification</h4>
-              <p class="lab-card-desc">Putnam's Two-Level Games in action: balance international concessions against domestic ratification to expand the ZOPA.</p>
+          <div class="home-lab-card" data-id="lab-06" data-url="{{ site.baseurl }}/assets/decision-labs/lab-06-two-table-pressure/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Two-Table Pressure: Putnam Win-Sets" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #2563eb; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #2563eb;">LAB 06 &bull; DIPLOMACY</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/tools-diplomacy.html#treaty-negotiation-sim" class="lab-card-link">Negotiate Treaty ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Two-Table Pressure: Putnam Win-Sets</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Putnam two-level games synchronizing international and domestic tables.</div>
+          </div>
 
-          <!-- Lab 07 -->
-          <article class="lab-card-sm" data-cat="governance" data-lab-id="unclos_zones">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #7c3aed;">Lab 07 &bull; Law of the Sea</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 3 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="unclos_zones"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Zone Runner: UNCLOS Maritime Delimiter</h4>
-              <p class="lab-card-desc">Adjudicate 10 maritime sovereignty incidents with 3 tokens. Map rights from Territorial Sea to High Seas.</p>
+          <div class="home-lab-card" data-id="lab-07" data-url="{{ site.baseurl }}/assets/decision-labs/lab-07-zone-runner/index.html" data-engine="Three.js 3D Engine" data-title="Zone Runner: UNCLOS 1982 (3D)" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #0284c7; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #0284c7;">LAB 07 &bull; LAW OF THE SEA</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: #0284c7; font-weight: 700;">Three.js 3D</span>
             </div>
-            <a href="{{ site.baseurl }}/law-of-the-sea.html#unclos-zones-sim" class="lab-card-link">Map Maritime Zones ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Zone Runner: UNCLOS 1982 (3D)</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Lawful maritime interdictions across 3D bathymetric coastal zones.</div>
+          </div>
 
-          <!-- Lab 08 -->
-          <article class="lab-card-sm" data-cat="security" data-lab-id="balance_of_power">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #dc2626;">Lab 08 &bull; Modern History</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="balance_of_power"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Equilibrium Keeper: 1914 Alliance Scale</h4>
-              <p class="lab-card-desc">Absorb 4 July 1914 crisis shocks by reallocating diplomatic alignment to prevent an uncontrollable war cascade.</p>
+          <div class="home-lab-card" data-id="lab-08" data-url="{{ site.baseurl }}/assets/decision-labs/lab-08-equilibrium-keeper/index.html" data-engine="Three.js 3D Engine" data-title="Equilibrium Keeper: Balance of Power (3D)" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #dc2626; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #dc2626;">LAB 08 &bull; REALISM & BOP</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: #0284c7; font-weight: 700;">Three.js 3D</span>
             </div>
-            <a href="{{ site.baseurl }}/road-to-ww1.html#balance-power-sim" class="lab-card-link">Configure Alliances ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Equilibrium Keeper: 1914 (3D)</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Great Power polarity shocks and chain-ganging on 3D tactical map.</div>
+          </div>
 
-          <!-- Lab 09 -->
-          <article class="lab-card-sm" data-cat="strategy" data-lab-id="scs_dispute">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #2563eb;">Lab 09 &bull; ASEAN Regionalism</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="scs_dispute"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Chair's Gambit: South China Sea Code</h4>
-              <p class="lab-card-desc">Chair the ASEAN summit across 3 drafting rounds. Balance claimant sovereignty against regional consensus.</p>
+          <div class="home-lab-card" data-id="lab-09" data-url="{{ site.baseurl }}/assets/decision-labs/lab-09-chairs-gambit/index.html" data-engine="Phaser 3 (2D Vector)" data-title="Chair's Gambit: ASEAN Consensus" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #2563eb; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #2563eb;">LAB 09 &bull; REGIONALISM</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: var(--lms-ink-tertiary);">Phaser 3</span>
             </div>
-            <a href="{{ site.baseurl }}/asean-community.html#scs-dispute-sim" class="lab-card-link">Chair Meeting ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Chair's Gambit: ASEAN Way</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">South China Sea consensus communiqué drafting without walkouts.</div>
+          </div>
 
-          <!-- Lab 10 -->
-          <article class="lab-card-sm" data-cat="security" data-lab-id="nuclear_deterrence">
-            <div>
-              <div class="lab-card-head-meta">
-                <div class="lab-card-meta-chips">
-                  <span class="sandbox-tag" style="color: #dc2626;">Lab 10 &bull; Nuclear Strategy</span>
-                  <span class="lab-card-chip"><i class="fa fa-clock-o"></i> ≈ 4 min</span>
-                </div>
-                <div class="lab-card-status-row">
-                  <span class="lab-card-badge-done" hidden><i class="fa fa-check"></i> Completed</span>
-                  <span class="lab-card-stars" data-stars-for="nuclear_deterrence"></span>
-                </div>
-              </div>
-              <h4 class="lab-card-title">Second-Strike Ledger: Nuclear Triad Calculator</h4>
-              <p class="lab-card-desc">Allocate defense budgets across 4 fiscal years to sustain a survivable second-strike triad under Brodie & Schelling.</p>
+          <div class="home-lab-card" data-id="lab-10" data-url="{{ site.baseurl }}/assets/decision-labs/lab-10-second-strike-ledger/index.html" data-engine="Three.js 3D Engine" data-title="Second-Strike Ledger: Nuclear Triad (3D)" style="background: var(--lms-subtle); border: 1px solid var(--lms-hairline); border-left: 3px solid #dc2626; border-radius: var(--lms-radius-md); padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <span style="font-family: ui-monospace, monospace; font-size: 0.68rem; font-weight: 700; color: #dc2626;">LAB 10 &bull; NUCLEAR DETERRENCE</span>
+              <span style="font-family: ui-monospace, monospace; font-size: 0.65rem; color: #0284c7; font-weight: 700;">Three.js 3D</span>
             </div>
-            <a href="{{ site.baseurl }}/domino-cold-war.html#nuclear-deterrence-sim" class="lab-card-link">Calculate Deterrence ➔</a>
-          </article>
+            <div style="font-size: 0.88rem; font-weight: 750; color: var(--lms-ink-primary);">Second-Strike Ledger (3D)</div>
+            <div style="font-size: 0.75rem; color: var(--lms-ink-secondary); margin-top: 0.2rem; line-height: 1.4;">Schelling MAD triad budget balance and ABM dome stability on 3D globe.</div>
+          </div>
+
         </div>
       </div>
+
     </div>
+
+    <!-- Live Switcher Script -->
+    <script>
+      (function() {
+        var frame = document.getElementById('homeLabFrame');
+        var badge = document.getElementById('homeLiveBadge');
+        var title = document.getElementById('homeLiveTitle');
+        var engine = document.getElementById('homeLiveEngine');
+        var tabBtn = document.getElementById('homeLiveTabBtn');
+        var cards = document.querySelectorAll('.home-lab-card');
+
+        cards.forEach(function(card) {
+          card.addEventListener('click', function() {
+            cards.forEach(function(c) {
+              c.classList.remove('is-active-home-lab');
+              c.style.border = '1px solid var(--lms-hairline)';
+              c.style.boxShadow = 'none';
+            });
+
+            card.classList.add('is-active-home-lab');
+            card.style.border = '1.5px solid #059669';
+            card.style.boxShadow = '0 0 10px rgba(5, 150, 105, 0.15)';
+
+            var url = card.getAttribute('data-url');
+            var id = card.getAttribute('data-id');
+            var t = card.getAttribute('data-title');
+            var eng = card.getAttribute('data-engine');
+
+            frame.src = url;
+            badge.innerHTML = '&bull; LIVE ARENA &bull; ' + id.toUpperCase();
+            title.textContent = t;
+            engine.innerHTML = '&bull; Engine: ' + eng;
+            tabBtn.href = url;
+          });
+        });
+      })();
+    </script>
   </section>
 
   <!-- Master Video Companion Channel Showcase -->

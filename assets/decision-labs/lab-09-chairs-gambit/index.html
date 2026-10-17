@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" data-lab-theme="lab-09">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chair's Gambit: South China Sea — Interactive Decision Lab 09</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/theme/lab-themes.css">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+
+    body {
+      background-color: var(--bg-void);
+      color: var(--text);
+      font-family: var(--font-display);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .crt-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+      background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.65) 100%),
+                  repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 3px);
+    }
+
+    header {
+      width: 100%;
+      background: var(--panel);
+      border-bottom: 2px solid var(--border);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .seal-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      background: var(--bg-void);
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .brand-meta h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+
+    .brand-meta p {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-audio {
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .btn-audio:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .lab-workspace {
+      display: grid;
+      grid-template-columns: 1fr 410px;
+      gap: 14px;
+      align-items: start;
+    }
+
+    @media (max-width: 1080px) {
+      .lab-workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .play-surface-box {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 520px;
+    }
+
+    #phaser-container {
+      width: 100%;
+      height: 520px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-void);
+    }
+
+    #phaser-container canvas {
+      display: block;
+    }
+
+    .lab-side-rail {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .rail-header {
+      background: var(--bg-void);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rail-content {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .rail-phase-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    .rail-round-title {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .rail-round-brief {
+      font-size: 0.78rem;
+      color: var(--text);
+      opacity: 0.82;
+      line-height: 1.45;
+    }
+
+    .rail-prompt-box {
+      background: var(--bg-void);
+      border-left: 3px solid var(--accent);
+      padding: 8px 10px;
+      font-size: 0.76rem;
+      line-height: 1.4;
+      color: var(--text);
+    }
+
+    .rail-options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .pred-opt-btn {
+      text-align: left;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      font-size: 0.74rem;
+      line-height: 1.35;
+      transition: all 0.15s ease;
+    }
+    .pred-opt-btn:hover {
+      border-color: var(--accent);
+      background: var(--panel);
+    }
+
+    .scs-opt-btn {
+      text-align: left;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      transition: all 0.15s ease;
+    }
+    .scs-opt-btn:hover {
+      border-color: var(--accent);
+      background: var(--panel);
+    }
+
+    .btn-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-idx-tag {
+      font-size: 0.68rem;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .btn-choice-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .btn-choice-desc {
+      font-size: 0.74rem;
+      color: var(--text);
+      opacity: 0.8;
+      line-height: 1.35;
+    }
+
+    .btn-shifts-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .shift-chip {
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 5px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text);
+    }
+
+    .rail-hypothesis-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .rail-instruction-text {
+      font-size: 0.75rem;
+      color: var(--text);
+      opacity: 0.75;
+    }
+
+    .mastery-opt-btn, .transfer-opt-btn {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mastery-opt-btn:hover, .transfer-opt-btn:hover {
+      border-color: var(--accent);
+      background: var(--panel);
+    }
+
+    .mastery-msg-success {
+      background: var(--bg-void);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 8px 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border-radius: 3px;
+      margin-top: 6px;
+    }
+
+    .mastery-msg-error {
+      background: var(--bg-void);
+      border: 1px solid var(--accent-2);
+      color: var(--text);
+      padding: 8px 10px;
+      font-size: 0.75rem;
+      border-radius: 3px;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* Modals & Dossiers */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .dossier-card {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-stamp {
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border-radius: 3px;
+      transform: rotate(5deg);
+    }
+
+    .feedback-badge-success { color: var(--accent); font-weight: 900; font-size: 1rem; }
+    .feedback-badge-partial { color: var(--accent-2); font-weight: 900; font-size: 1rem; }
+    .feedback-badge-failure { color: var(--accent-2); font-weight: 900; font-size: 1rem; }
+
+    .feedback-block {
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    .feedback-block strong {
+      display: block;
+      color: var(--accent);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .feedback-remediation-box {
+      background: var(--bg-void);
+      border: 1px solid var(--accent-2);
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .feedback-remediation-box strong {
+      display: block;
+      color: var(--accent-2);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .btn-command-execute {
+      background: var(--accent);
+      color: var(--bg-void);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+    .btn-command-execute:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    #debriefModalCard {
+      max-width: 900px;
+      width: 100%;
+    }
+  </style>
+
+  <script src="../vendor/phaser.min.js"></script>
+</head>
+<body>
+
+  <div class="crt-overlay"></div>
+
+  <header>
+    <div class="brand-cluster">
+      <div class="seal-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-meta">
+        <h1>Chair's Gambit: South China Sea</h1>
+        <p>Interactive Decision Lab 09 · ASEAN Way, Norms & Regional Consensus</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn-audio" id="btnHowToPlay" aria-label="Open Mission Manual" style="border: 1px solid var(--accent); color: var(--accent);">[?] HOW TO PLAY</button>
+      <button class="btn-audio" id="btnMuteToggle" aria-label="Toggle Audio">AUDIO: ON</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="lab-workspace">
+      
+      <!-- Primary Play Surface (65% of viewport height at 1280x800) -->
+      <div class="play-surface-box" role="region" aria-label="ASEAN Summit Plenary Stage">
+        <div id="phaser-container"></div>
+      </div>
+
+      <!-- Collapsible / Independent Scrolling Side Rail -->
+      <aside class="lab-side-rail" role="complementary" aria-label="Tactical Decision Console">
+        <div class="rail-header">
+          <span>CHAIRMAN'S BENCH</span>
+          <span style="font-size:0.7rem; opacity:0.7;">[KEYS 1-3 · SPACE]</span>
+        </div>
+        <div class="rail-content" id="sideRailContent">
+          <!-- Dynamically populated per phase -->
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Feedback Modal (EXPLAIN phase) -->
+  <div class="modal-backdrop" id="modalFeedback" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+    <div class="dossier-card">
+      <div id="feedbackTitle"></div>
+      <div id="feedbackPredictionStatus" style="font-size:0.78rem; font-weight:800; letter-spacing:0.04em;"></div>
+      <div id="feedbackBody" style="display:flex; flex-direction:column; gap:10px;"></div>
+      <button class="btn-command-execute" id="btnFeedbackNext">
+        <span>PROCEED TO NEXT PHASE</span>
+        <span style="font-size:0.78rem; opacity:0.8;">[SPACE]</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Debrief Modal (DEBRIEF phase) -->
+  <div class="modal-backdrop" id="modalDebrief" role="dialog" aria-modal="true" aria-labelledby="debriefHeading">
+    <div class="dossier-card" id="debriefModalCard">
+      <div id="debriefPanelContainer">
+        <!-- DebriefPanel renders here -->
+      </div>
+      <button class="btn-command-execute" id="btnRestart" style="margin-top:12px;">
+        <span>CONVENE NEW SUMMIT</span>
+        <span style="font-size:0.78rem; opacity:0.8;">[SPACE]</span>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

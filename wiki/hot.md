@@ -13,6 +13,15 @@ tags:
 
 ## Last Updated
 
+2026-10-17 - Produksi Total Deployment 10 Decision Labs ke Source Code & Homepage:
+1. `Penerapan Source Code Penuh`: 10 modul simulasi `_includes/sim_*.html` resmi diganti total menggunakan Sandboxed Iframe Embedding (`.lab-embed-wrapper`) dengan tinggi 680px yang memuat engine Phaser 3 & Three.js 3D dari `assets/decision-labs/`.
+2. `Homepage Live Arena & In-Place Switcher`: Sesi simulasi di `_pages/index.md` dirombak total menjadi 2 kolom harmonis (Live Arena Game Viewport + Live Selector Switcher 10 Labs). Switcher bekerja secara real-time in-place tanpa reload halaman.
+3. `Universal Onboarding & Field Manual`: Seluruh 10 lab dilengkapi sistem onboarding interaktif terstandarisasi (`shared/learn/OnboardingModal.js`) dan tombol `[?] HOW TO PLAY` di header.
+4. `Verifikasi & QA Mutlak`:
+   - `scripts/verify_production_e2e.js`: Uji Playwright browser headless Edge/Chromium pada output `_site/` berhasil 100% (verifikasi render game arena, live switcher lab-04, dan chapter 030 embed).
+   - `Jekyll build`: Berhasil tanpa error (`done in 73.542 seconds`).
+   - `pytest`: 378/378 unit tests passed.
+
 2026-10-16 - Produksi & Render Penuh YouTube Shorts SP-05 (Single Photo Archival Story):
 1. `Judul & Topik`: "The Soviet Spy Who Built the Global Economy (1944)" (Harry Dexter White, Bretton Woods, & Operasi Venona Soviet Agent "Jurist").
 2. `Arsip Autentik`: Menggunakan foto resolusi ultra-tinggi asli Library of Congress (Harris & Ewing Collection, `LCCN 2016875797`, 7.993 × 10.021 px).

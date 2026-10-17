@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" data-lab-theme="lab-04">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spiral Watch: Security Dilemma — Decision Lab 04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/theme/lab-themes.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-void);
+      color: var(--text);
+      font-family: var(--font-display);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .crt-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+      background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.65) 100%),
+                  repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0px, rgba(0, 0, 0, 0.12) 1px, transparent 1px, transparent 3px);
+    }
+
+    header {
+      height: 48px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .brand-meta h1 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text);
+    }
+
+    .brand-meta p {
+      font-size: 0.7rem;
+      color: var(--accent-2);
+      letter-spacing: 0.04em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chapter-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chapter-link-btn {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      color: var(--text);
+      text-decoration: none;
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      background: var(--bg-void);
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .chapter-link-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .header-btn {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      color: var(--text);
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .header-btn:hover {
+      background: var(--accent);
+      color: var(--bg-void);
+      border-color: var(--accent);
+    }
+
+    .lab-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      height: calc(100vh - 48px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .lab-stage-column {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      background-color: var(--bg-void);
+      position: relative;
+    }
+
+    #phaser-container {
+      width: 100%;
+      height: 65vh;
+      min-height: 496px;
+      max-height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-void);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #phaser-container canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain;
+    }
+
+    .stage-status-bar {
+      flex: 1;
+      background: color-mix(in srgb, var(--bg-void) 85%, var(--panel));
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .rail-status-strip {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .rail-stat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-lbl {
+      color: var(--text);
+      opacity: 0.7;
+      font-size: 0.72rem;
+    }
+
+    .stat-val {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .val-danger {
+      color: rgba(239, 68, 68, 1);
+    }
+
+    .lab-side-rail {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: var(--panel);
+      border-left: 1px solid var(--border);
+      overflow: hidden;
+      transition: width 0.2s ease;
+    }
+
+    .lab-side-rail.collapsed {
+      display: none;
+    }
+
+    .rail-header {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--panel);
+    }
+
+    .rail-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rail-scroll-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .phase-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .phase-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .phase-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .phase-desc {
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .callout-box {
+      background: var(--bg-void);
+      border-left: 3px solid var(--accent);
+      padding: 10px 12px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .callout-heading {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .learning-objectives-list {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .learning-objectives-list strong {
+      color: var(--accent-2);
+    }
+
+    .sigint-banner {
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      border-left: 3px solid var(--accent);
+      padding: 8px 10px;
+      font-size: 0.75rem;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .sigint-tag {
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .prompt-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .prompt-question {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .choices-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .choice-btn {
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-display);
+      padding: 10px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .choice-btn:hover {
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 10%, var(--bg-void));
+    }
+
+    .choice-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .choice-num {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .choice-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .choice-tag {
+      font-size: 0.68rem;
+      color: var(--accent-2);
+      font-weight: 700;
+      padding: 1px 4px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+
+    .choice-desc,
+    .choice-text {
+      font-size: 0.75rem;
+      line-height: 1.35;
+      color: var(--text);
+      opacity: 0.85;
+    }
+
+    .feedback-block {
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .outcome-header {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 6px 10px;
+      border-radius: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .outcome-success {
+      background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+      color: var(--accent-2);
+      border: 1px solid var(--accent-2);
+    }
+
+    .outcome-partial {
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .outcome-failure {
+      background: rgba(185, 28, 28, 0.2);
+      color: rgba(252, 165, 165, 1);
+      border: 1px solid rgba(220, 38, 38, 0.6);
+    }
+
+    .match-badge {
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-weight: 800;
+    }
+
+    .match-yes {
+      background: var(--accent-2);
+      color: var(--bg-void);
+    }
+
+    .match-no {
+      background: var(--accent);
+      color: var(--bg-void);
+    }
+
+    .feedback-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fb-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .fb-text {
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .citation-text {
+      font-size: 0.72rem;
+      color: var(--accent-2);
+      font-style: italic;
+    }
+
+    .misconception-card {
+      background: rgba(185, 28, 28, 0.15);
+      border-left: 3px solid rgba(239, 68, 68, 0.8);
+      padding: 8px 10px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .misc-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: rgba(254, 202, 202, 1);
+    }
+
+    .misc-remediation {
+      font-size: 0.74rem;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .rail-log-section {
+      max-height: 160px;
+      min-height: 110px;
+      overflow-y: auto;
+      border-top: 1px solid var(--border);
+      padding: 10px 14px;
+      background: color-mix(in srgb, var(--bg-void) 70%, var(--panel));
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .log-heading {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .log-entry {
+      font-size: 0.7rem;
+      line-height: 1.3;
+      color: var(--text);
+      opacity: 0.85;
+    }
+
+    .log-time {
+      color: var(--accent-2);
+    }
+
+    .log-tag {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .lab-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow-y: auto;
+      }
+      body {
+        overflow-y: auto;
+      }
+      #phaser-container {
+        height: 50vh;
+        min-height: 380px;
+      }
+      .lab-side-rail {
+        height: auto;
+      }
+    }
+  </style>
+
+  <script src="../vendor/phaser.min.js"></script>
+</head>
+<body>
+
+  <div class="crt-overlay"></div>
+
+  <header>
+    <div class="brand-cluster">
+      <div class="brand-badge">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-meta">
+        <h1>Spiral Watch: Security Dilemma</h1>
+        <p>Lab 04 · Security Studies · Robert Jervis (1976/1978)</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="chapter-nav-links">
+        <a class="chapter-link-btn" href="https://ir-guide.netlify.app/realism-security.html" target="_blank" rel="noopener noreferrer">
+          <span>CHAPTER: REALISM</span>
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+        <a class="chapter-link-btn" href="https://ir-guide.netlify.app/institution-security.html" target="_blank" rel="noopener noreferrer">
+          <span>CHAPTER: INSTITUTIONS</span>
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+
+      <button class="header-btn" id="btnHowToPlay" aria-label="Open Mission Manual" style="border: 1px solid var(--accent); color: var(--accent);">[?] HOW TO PLAY</button>
+      <button class="header-btn" id="btnAudioToggle" aria-label="Toggle Audio Synthesizer">AUDIO: ON</button>
+      <button class="header-btn" id="btnToggleRail" aria-label="Toggle Side Rail">[TAB] RAIL</button>
+    </div>
+  </header>
+
+  <main class="lab-layout">
+    <div class="lab-stage-column">
+      <div id="phaser-container"></div>
+      <div class="stage-status-bar">
+        <div class="rail-status-strip" id="railStatusStrip">
+          <div class="rail-stat"><span class="stat-lbl">STABILITY:</span> <span class="stat-val">50%</span></div>
+          <div class="rail-stat"><span class="stat-lbl">SEASON:</span> <span class="stat-val">01 / 05</span></div>
+          <div class="rail-stat"><span class="stat-lbl">BLIPS:</span> <span class="stat-val">2</span></div>
+        </div>
+        <div style="font-size:0.72rem; opacity:0.7;">[KEYS 1-3] SELECT · [SPACE] ADVANCE · [M] MUTE</div>
+      </div>
+    </div>
+
+    <aside class="lab-side-rail" id="sideRail">
+      <div class="rail-header">
+        <span class="rail-title">TACTICAL RADOME RAIL</span>
+      </div>
+
+      <div class="rail-scroll-body" id="phaseContent">
+        <!-- Dynamic learning loop phase cards injected by SpiralScene -->
+      </div>
+
+      <div class="rail-log-section">
+        <div class="log-heading">RADOME TELEMETRY LOG</div>
+        <div id="tacticalLog" style="display:flex; flex-direction:column; gap:4px;">
+          <div class="log-entry"><span class="log-time">[BOOT]</span> Arctic Early-Warning Station online.</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -56,4 +56,6 @@ learning-videos/probe/
 learning-videos/shorts-experiments/**/output/
 learning-videos/shorts-experiments/**/checkpoints/
 learning-videos/shorts-experiments/**/raw_videos/
+prototype/
+
 
