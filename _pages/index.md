@@ -1,6 +1,7 @@
 ---
 layout: default
-title: IR Study Companion — A Free, Structured Course in International Relations
+title: Free International Relations Course
+description: Master international relations from theory to diplomacy. 18 structured modules, 157 lessons, and 10 interactive diplomatic decision sandboxes.
 permalink: /
 ---
 
