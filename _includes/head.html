@@ -8,6 +8,9 @@
 
 <!-- Open Graph image only. jekyll-seo-tag (above) already emits
      title, description, og:title, og:description, og:url, og:type, twitter:*. -->
+{% if page.url == "/" or page.url == "/index.html" %}
+<meta property="og:type" content="website">
+{% endif %}
 {% if page.image %}
 <meta property="og:image" content="{{ site.baseurl_canonical }}{{ page.image }}">
 {% elsif site.og_image %}
