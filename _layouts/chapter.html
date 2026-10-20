@@ -8,6 +8,34 @@ layout: default
   <div class="lms-prose-column">
     <!-- Lesson Header -->
     <header class="lesson-header-card">
+      <!-- Schema.org BreadcrumbList for SERP Rich Snippet -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Curriculum",
+            "item": "{{ site.url }}/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Module {{ page_part_num | default: '01' }}: {{ page_part_label | default: 'Core Curriculum' | escape }}",
+            "item": "{{ site.url }}/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{ page.title | escape }}",
+            "item": "{{ site.url }}{{ page.url }}"
+          }
+        ]
+      }
+      </script>
+
       <nav class="lesson-breadcrumbs" aria-label="Breadcrumbs">
         <a href="{{ site.baseurl }}/">Curriculum</a>
         <span>&rsaquo;</span>

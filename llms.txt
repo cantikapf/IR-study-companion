@@ -1,0 +1,35 @@
+# IR Study Companion
+
+> The Structured Open-Access Curriculum in International Relations: 18 Modules, 157 Lessons, and 10 Interactive Diplomatic Decision Sandboxes.
+
+## Overview
+IR Study Companion is an open-access, zero-dependency educational platform designed for students, researchers, and foreign policy practitioners. It follows the sequence of an academic degree: theory first, then history, political economy, international law, and diplomacy.
+
+- Canonical URL: https://ir-guide.netlify.app/
+- YouTube Channel: https://www.youtube.com/@IRinANutshell
+- Source Repository: https://github.com/cantikapf/IR-study-companion
+- Author: Cantikaputri Febrianti
+- License: Open educational access
+
+## Core Curriculum Modules
+- [Module 01: Introduction to International Relations](https://ir-guide.netlify.app/introduction-to-international-relations.html): Basic paradigms, global actors, and systemic levels of analysis.
+- [Module 02: Modern World History & Geopolitics](https://ir-guide.netlify.app/modern-world-history.html): Westphalia, World Wars, Cold War deterrence, and decolonization.
+- [Module 03: Theories of International Relations](https://ir-guide.netlify.app/theories-of-international-relations.html): Classical Realism, Neorealism, Liberalism, Constructivism, and Critical Theories.
+- [Module 04: International Political Economy](https://ir-guide.netlify.app/international-political-economy.html): Bretton Woods, globalization, trade diplomacy, and monetary orders.
+- [Module 05: International Law & Organization](https://ir-guide.netlify.app/international-law-and-organization.html): UN Charter, UNCLOS maritime zones, and treaties.
+- [Module 06: Diplomacy & Foreign Policy Analysis](https://ir-guide.netlify.app/diplomacy-and-foreign-policy.html): Two-level games, crisis decision-making, and negotiation dynamics.
+
+## Interactive Diplomatic Decision Labs (Sandboxes)
+- [Lab 01: Crisis Command - Thirteen Days](https://ir-guide.netlify.app/models-fpdm.html#crisis-sim): Graham Allison's bureaucratic models in a naval missile crisis with DEFCON timers.
+- [Lab 02: Diplomacy Duel - Prisoner's Dilemma](https://ir-guide.netlify.app/game-theory-ir.html#diplomacy-duel-sim): 8-round game theory arena against classified rival doctrines.
+- [Lab 03: Consensus Market - Doha Round Trap](https://ir-guide.netlify.app/wto-decision-making.html#wto-sim): Broker package deals across 8 voting blocs under WTO Single Undertaking rules.
+- [Lab 04: Spiral Watch - Security Dilemma Matrix](https://ir-guide.netlify.app/realism-security.html#security-dilemma-sim): Jervis's Spiral Model across 5 rounds of arms competition.
+- [Lab 05: Veto Gauntlet - UNSC Resolution Chamber](https://ir-guide.netlify.app/un-security.html#unsc-veto-sim): Draft Chapter VII resolutions under UN Charter Article 27(3).
+- [Lab 06: Two-Table Pressure - Treaty Ratification](https://ir-guide.netlify.app/tools-diplomacy.html#treaty-negotiation-sim): Putnam's Two-Level Games balancing international concessions against domestic ratification.
+- [Lab 07: Zone Runner - UNCLOS Maritime Delimiter](https://ir-guide.netlify.app/law-of-the-sea.html#unclos-zones-sim): Adjudicate 10 maritime sovereignty incidents from Territorial Sea to High Seas.
+- [Lab 08: Equilibrium Keeper - 1914 Alliance Scale](https://ir-guide.netlify.app/road-to-ww1.html#balance-power-sim): Absorb July 1914 crisis shocks to prevent war cascades.
+- [Lab 09: Chair's Gambit - South China Sea Code](https://ir-guide.netlify.app/asean-community.html#scs-dispute-sim): Chair the ASEAN summit balancing claimant sovereignty and consensus.
+- [Lab 10: Second-Strike Ledger - Nuclear Triad Calculator](https://ir-guide.netlify.app/domino-cold-war.html#nuclear-deterrence-sim): Allocate defense budgets to sustain a survivable triad under Brodie & Schelling.
+
+## Canonical Video Course Companion (@IRinANutshell)
+Animated concept breakdowns and mind map explainers with neural audio narration, indexed by chapter.
