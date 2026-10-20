@@ -73,7 +73,10 @@
 
 {%- if site.tracker -%}
     <!-- trackers -->
-
+    {%- if site.tracker.google_analytics -%}
+        <!-- google analytics -->
+        {%- include google-analytics.html -%}
+    {%- endif -%}
     {%- if site.tracker.application_insights -%}
         <!-- application insights -->
         {%- include application-insights.html -%}
