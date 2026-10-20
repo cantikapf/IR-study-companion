@@ -49,6 +49,12 @@ Every final assistant response in main chat or subagent handoff report should in
 
 ## Lessons Learned
 
+- **Visual Concept Mind Map Standard: Theory vs Empirical Case Study Split (2026-10-20)**:
+  1. *Hard Dual-Zone Canvas Architecture*: Diagram mind map untuk seluruh bab materi IR WAJIB memisahkan secara tegas antara **Part 1: Core Theories & Mechanisms** (Zona Kiri, container biru) dan **Part 2: Empirical Case Studies** (Zona Kanan, container kuning/oranye). DILARANG mencampur aduk konsep abstrak dan studi kasus sejarah dalam satu pohon acak tanpa zonasi.
+  2. *Empirical Testing Bridges (`TESTED IN`)*: Alur penalaran harus dihubungkan secara eksplisit menggunakan panah melintasi gutter tengah berlabel `➔ TESTED IN: [CASE NAME]` (misal: *Supranational Integration* diuji di *European Union*, *Functional Cooperation* diuji di *ASEAN*, *Sovereignty Friction* diuji di *Central America SICA*).
+  3. *Zero-Jargon Dedicated Takeaways*: Bagian bawah setiap kartu wajib mendedikasikan 100% lebar footer untuk **KEY TAKEAWAY** yang aplikatif dan mudah diingat penonton. Jargon abstrak seperti "MECHANISM" dihapus total.
+  4. *Strict English-Only Mandate*: Seluruh teks kartu, tag kategori, sitasi tokoh, dan takeaway WAJIB 100% Academic English murni tanpa kebocoran bilingual.
+
 - **Repo Hygiene & Jekyll Build-Output Bloat (2026-10-12)**:
   1. *Jekyll Copies Every Non-Excluded File into `_site/`*: `exclude:` hanya menahan direktori yang didaftarkan. Tanpa entri eksplisit, Jekyll menyalin subtree non-web berat (footage eksperimen Shorts 702 MB, `playwright-report/`, `test-results/`, source `scripts/`, `public/`, `.venv/`) ke `_site/` — membengkakkan output 766 MB → 60 MB setelah exclude diperluas. Periksa `du -sh _site/*` setelah setiap perubahan struktur direktori besar.
   2. *Exclude Granularity vs Media Web Assets*: Jangan pernah mengecualikan parent direktori media secara borongan bila aset web (poster/thumbnail) berada di dalamnya. Kecualikan hanya subfolder non-web berat (`learning-videos/exports`, `learning-videos/shorts-experiments`, `learning-videos/probe`).

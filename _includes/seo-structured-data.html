@@ -1,0 +1,60 @@
+<!-- Enhanced Structured Data (JSON-LD) for Rich Snippets & Video SEO -->
+{% if page.url == "/" or page.url == "/index.html" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "IR Study Companion",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/static/icon.png",
+      "sameAs": [
+        "https://www.youtube.com/@IRinANutshell",
+        "https://github.com/cantikapf/IR-study-companion"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "{{ site.url }}/#course",
+      "name": "International Relations: Open-Access Curriculum",
+      "description": "Comprehensive structured curriculum in International Relations: 18 modules, 157 lessons, and 10 interactive diplomatic decision labs covering theory, history, political economy, law, and diplomacy.",
+      "provider": {
+        "@type": "Person",
+        "name": "{{ site.author | default: 'Cantikaputri Febrianti' }}",
+        "url": "{{ site.url }}/about-me.html"
+      },
+      "educationalLevel": "Beginner to Advanced Undergraduate",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online"
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
+
+{% if page.youtube_id or page.explanatory_video.youtube_id %}
+{% assign vid_id = page.youtube_id | default: page.explanatory_video.youtube_id %}
+{% assign vid_title = page.explanatory_video.title | default: page.title | escape %}
+{% assign vid_desc = page.explanatory_video.desc | default: page.simple_summary | default: page.description | default: site.description | strip_html | strip_newlines | escape %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ vid_title }}",
+  "description": "{{ vid_desc }}",
+  "thumbnailUrl": [
+    "https://img.youtube.com/vi/{{ vid_id }}/maxresdefault.jpg",
+    "https://img.youtube.com/vi/{{ vid_id }}/hqdefault.jpg"
+  ],
+  "uploadDate": "2026-10-19T00:00:00+07:00",
+  "contentUrl": "https://www.youtube.com/watch?v={{ vid_id }}",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/{{ vid_id }}"
+}
+</script>
+{% endif %}

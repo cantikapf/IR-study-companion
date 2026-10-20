@@ -1,7 +1,16 @@
 ---
+youtube_id: "b-ciaKWZmk4"
 slug: decolonization
 title: Decolonization and Development
 simple_summary: "Following World War II, exhausted European empires could no longer afford to hold onto their overseas colonies, sparking a tidal wave of liberation across Asia and Africa. Emerging leaders met at the historic 1955 Bandung Conference to forge the Non-Aligned Movement, demanding dignity and refusing to be pawns in the US-Soviet rivalry. Yet hasty imperial withdrawals left behind arbitrary borders that still spark ethnic and territorial conflicts today."
+explanatory_video:
+  title: "Tactical Geopolitical Explainer: The Day Washington Bankrupted the British Empire (Suez Crisis 1956)"
+  desc: "Examine how Eisenhower forced Britain, France, and Israel to halt Operation Musketeer through financial leverage and sterling collapse, marking the definitive eclipse of European colonial empires."
+  format: "Vox-Style Geopolitical Shorts (@IRinANutshell)"
+  engine: "D3-Geo + GSAP + Kokoro-82M"
+  status: "Published"
+  youtube_id: "b-ciaKWZmk4"
+
 ---
 
 

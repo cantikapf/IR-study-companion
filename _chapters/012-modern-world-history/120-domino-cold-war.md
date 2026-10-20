@@ -94,6 +94,20 @@ The UN, largely driven by the US, condemned the invasion and sent troops to defe
 
 After years of bloody stalemate and failed peace negotiations, the war ended in 1953 with an armistice that restored the border close to the 38th parallel. While no formal peace treaty was ever signed, the war solidified the division of Korea into communist North Korea and capitalist South Korea. It marked one of the first major eruptions of the Cold War outside of Europe, foreshadowing similar proxy wars to come.
 
+<aside class="case-study-callout" style="background: var(--lms-surface); border: 1px solid var(--lms-border); border-left: 4px solid #e11d48; padding: 1.25rem; border-radius: var(--lms-radius-md, 8px); margin: 2rem 0;">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+    <strong style="font-size: 0.95rem; color: var(--lms-ink-primary); display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fa fa-film" style="color: #e11d48;"></i> Tactical Flashpoint: Operation Paul Bunyan (1976)
+    </strong>
+    <a href="https://youtube.com/shorts/j7CO8Jk7elM" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; font-weight: 600; color: #e11d48; text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;">
+      <i class="fa fa-youtube-play"></i> Watch Tactical Breakdown (Shorts) ➔
+    </a>
+  </div>
+  <p style="margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--lms-ink-secondary);">
+    When two US officers were killed attempting to trim a poplar tree obstructing the DMZ view, Washington deployed 813 combat troops, 27 helicopters, B-52 bombers, and carrier battle group USS Midway in an overwhelming deterrence posture.
+  </p>
+</aside>
+
 ## The Space Race
 
 <br>
