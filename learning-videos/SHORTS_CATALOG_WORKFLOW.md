@@ -54,6 +54,7 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 | **08** | `SH-08` | **The Strait of Hormuz: World Economy's Jugular Vein** | Titik Penyempitan Selat Hormuz (21 mil) & Kapal Tanker Minyak Dunia | `_chapters/022-introduction-to-security-studies/020-realism-security.md` | Planned | - |
 | **09** | `SH-09` | **UNCLOS Maritime Borders: The Cod Wars** | Ekspansi Zona Perikanan Islandia 4 mil ke 200 mil vs Royal Navy | `_chapters/042-international-law-issues-and-international-dispute-settlement/080-law-of-the-sea.md` | Planned | - |
 | **10** | `SH-10` | **The Prisoner's Dilemma of Nuclear Arms: Cold War MAD** | Matriks Teori Permainan: Tembak Duluan vs Kooperasi Damai | `_chapters/023-theories-of-international-relations/092-game-theory-ir.md` | Planned | - |
+| **11** | `SH-06` | **The 1 Island Britain Traded for New York** | Pulau Run (Banda) vs Manhattan (1667) | `_chapters/012-modern-world-history/020-age-of-discovery.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/IXh01DRRIbg) |
 
 ---
 
@@ -68,7 +69,9 @@ Format editorial alternatif anti-AI feel: foto arsip autentik resolusi ultra-tin
 | **03** | `SP-03` | **The 1945 Reichstag Photo That Was Secretly Retouched** | Single Photo Archival (Khaldei Master Restoration) | `_chapters/012-modern-world-history/090-end-ww2.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/hV4uMX9N-x8) |
 | **04** | `SP-04` | **The 1961 Escape Over the Berlin Wall** | Single Photo Archival (Leibing Master LOC 3C38900) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/9v79Cq3TM7Y) |
 | **05** | `SP-05` | **The Soviet Spy Who Built the Global Economy (1944)** | Single Photo Archival (LOC Harris & Ewing LCCN 2016875797) | `_chapters/012-modern-world-history/110-bretton-woods.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/QHh6_wTgsRQ) |
-| **06** | `VX-01` | **The Man Who Single-Handedly Stopped World War III** | Vox Paper Collage (Google Veo 3.1 + Kokoro TTS) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/sC9cFz9jacw) |
+| **06** | `SP-06` | **The Deadliest Tree Trimming in History: Operation Paul Bunyan (1976)** | @90secondslab Physical Mixed-Media (DMZ Tree, Checkpoint #3, Axe Prop, Ford, B-52, F-4, USS Midway) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/j7CO8Jk7elM) |
+| **07** | `SP-07` | **The Day Washington Bankrupted the British Empire (1956)** | @90secondslab Physical Mixed-Media (Anthony Eden, Suez Tanker, Eisenhower Oval Office Plate, Bank of England Cracked Note, SVG Crash Line Draw) | `_chapters/012-modern-world-history/150-decolonization.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/b-ciaKWZmk4) |
+| **08** | `VX-01` | **The Man Who Single-Handedly Stopped World War III** | Vox Paper Collage (Google Veo 3.1 + Kokoro TTS) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/sC9cFz9jacw) |
 
 ---
 

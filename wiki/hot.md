@@ -13,6 +13,38 @@ tags:
 
 ## Last Updated
 
+2026-10-20 - Produksi & Render Penuh YouTube Shorts SP-07 (@90secondslab Physical Mixed-Media Explainer):
+1. `Judul & Topik`: "The Day Washington Bankrupted the British Empire (1956)" (Krisis Terusan Suez 1956: Invasi Operasi Musketeer, Blokade Kanal, Ancaman Likuidasi Cadangan Devisa AS, dan Kejatuhan Imperium Britania).
+2. `Arsip Autentik Bebas AI`: 100% menggunakan foto arsip sejarah nyata domain publik Wikimedia/NARA (PM Anthony Eden Downing St portrait, Presiden Dwight D. Eisenhower Oval Office Desk plate lengkap dengan setelan jas three-piece dan dokumen resmi, Presiden Gamal Abdel Nasser, Uang Kertas 5 Pound Sterling 1931 Bank of England bergaris retak merah, Kapal Tanker Terusan Suez, dan Dossier Card Invasi Anglo-Prancis Operation Musketeer Port Said).
+3. `Overhaul Visual & Standar @90secondslab`:
+   - Hook Ladder 0-3s: 3 baris stiker tebal (DEFEATED AN EMPIRE -> ZERO BULLETS -> ONE PHONE CALL) dengan hard offset shadow 12px 0-blur.
+   - Panggung Adaptif Layer B: Peta satelit NASA Terusan Suez, Meja Felt War Room Pentagon, Brankas US Treasury, dan Kotak Dokumen Merah 10 Downing Street.
+   - Master Archival Eisenhower Plate: Menampilkan pose wibawa setengah badan di meja kerja Oval Office selebar 880px (menguasai 82% lebar kanvas), lencana merah TOP SECRET // WHITE HOUSE, bebas dari severed head.
+   - Motion Prompt #004 Crash Line Draw: Grafik SVG garis merah menukik tajam (STERLING LIQUIDATION CURVE // RUN IN PROGRESS) menganimasikan kejatuhan cadangan devisa emas Bank of England (-15% / $279M).
+   - Zero Collision & Vertical Spread: Seluruh elemen ditata vertikal secara proporsional dengan jarak aman 60-120px antar-kartu, dan kotak narasi subtitle terkunci di `bottom: 420px` (aman dari UI Shorts 0-380px).
+   - Audio Soundtrack Master: Narasi suara Kokoro-82M ONNX (`am_adam`, speed 1.06x) termixing rapi bersama trek musik ketegangan sinematik non-copyright 'Dramatic Trailer' (ducking -18 dBFS).
+4. `Deliverables & Publikasi YouTube`: Selesai dirender via Node.js Playwright Chromium CDP session frame-by-frame 30 FPS dipipe ke biner FFmpeg h264/aac -> `learning-videos/exports/SP07_Suez_Crisis_1956_Short_1080p.mp4` (5.73 MB, 40.23s, 1207 frames). Lolos 100% audit QA visual independen @social-media-analyst dan **resmi terbit live di YouTube Shorts**: https://youtube.com/shorts/b-ciaKWZmk4 (Altered/synthetic content: YES, Visibility: Public, Not Made for Kids). Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai **PUBLISHED**.
+
+1. `Judul & Topik`: "The Deadliest Tree Trimming in History: Operation Paul Bunyan (1976)" (Penebangan Pohon Poplar DMZ Korea & Pengerahan Gugus Tempur USS Midway, B-52, F-4).
+2. `Arsip Autentik Bebas AI`: 100% menggunakan foto arsip sejarah nyata domain publik NARA/DoD/Wikimedia (DMZ Poplar Tree, foto arsip bentrokan fisik di Checkpoint #3, stiker prop kapak sitaan, Presiden Gerald Ford Oval Office signing, B-52 Stratofortress, formasi 2-ship F-4E Phantom II, USS Midway CV-41 c1975 maritime card, dan tunggul pohon poplar nyata hasil tebangan).
+3. `Overhaul Tahap 2 s.d. V7 (Koreografi Ford & Zero Overlap)`:
+   - Header clutter telemetri GPS & DEFCON dibersihkan total menjadi badge judul manusiawi ringkas.
+   - Penebusan monotoni detik 10 (Scene 1b pada t=7.54s): pohon di-wipe out lalu masuk foto arsip otentik bentrokan Checkpoint #3 + stiker barang sitaan kapak (drop-in bounce pada t=8.3s).
+   - Koreografi posisi Gerald Ford: Detik 15.12s masuk di posisi tengah gagah (Y = 430px), lalu bertransisi mulus ke atas (Y = 195px) pada detik 19.51s saat kartu counter +813 masuk di bawahnya.
+   - Eliminasi tabrakan sayap B-52 di dek kapal induk (Scene 3): teks statis redundant di panggung dek USS Midway dibersihkan agar sayap bebas clipping.
+   - Zero collision peta War Room: gap 53px antara kartu counter dan MDL, gap 21px antara panah dan garis merah, serta gap 95px di atas kartu subtitle.
+   - Audio termixing rapi bersama trek ketegangan sinematik non-copyright 'Dramatic Trailer' (Rafael Krux, CC BY 4.0) dengan ducking -18 dB di bawah narasi Kokoro TTS.
+   - Teks stiker diperbaiki menjadi 'FELLED IN 42 MINUTES' dan penataan koordinat Y bertingkat dengan jarak 30-50px (zero collision terverifikasi).
+4. `Standar @90secondslab & Motion-Prompt`: 4 panggung fisik adaptif (Bunker beton DMZ, War Room Pentagon meja hijau, Dek baja USS Midway dengan catapult & tie-down cross fittings, Kerikil perbatasan MDL). Hook Ladder 0-3s hard shadow 0-blur (box-shadow 12px 12px 0 #000), #007 Count-up force counter (+813 troops), #045 Wipe, safe-zone captions (y: 1380-1490px, strictly >430px dari dasar).
+5. `Deliverables & Publikasi YouTube`: Video final V7 selesai dirender deterministik 1080x1920 30fps di `learning-videos/exports/SP06_Operation_Paul_Bunyan_Short_1080p.mp4` (6.17 MB, 41.50s). Lolos 100% audit QA visual independen @social-media-analyst dan **resmi terbit live di YouTube Shorts**: https://youtube.com/shorts/j7CO8Jk7elM (Altered/synthetic content: YES, Visibility: Public, Not Made for Kids). Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai **PUBLISHED**.
+
+2026-10-18 - Produksi & Publikasi Penuh YouTube Shorts SH-06 (Vox Pure Archival Explainer):
+1. `Judul & Topik`: "The 1 Island Britain Traded for New York" (Pertukaran Pulau Run Banda vs Manhattan pada Traktat Breda 1667).
+2. `Arsip Autentik Bebas AI`: 100% menggunakan pindaian resolusi tinggi dokumen sejarah nyata domain publik (Castello Plan Manhattan 1660, Peta Maluku Abad-17, Engravir Pala Rijksmuseum 1599, Etsa Traktat Breda 1667). Bebas dari artefak teks acak AI dan bebas border sintetis.
+3. `Audio & Narasi`: Disintesis dengan Kokoro-82M ONNX (`am_adam`), audio dan subtitle layar 100% verbatim sinkron kata-demi-kata (Pilihan B: "Pulau Run, hidden in Indonesia's Banda Sea, the world's only source of nutmeg").
+4. `Visual Staging & Render`: Komposisi vertikal 1080x1920 (36.17s, 30 FPS) dibangun di `learning-videos/shorts-experiments/sh-06-run-island-veo/index_pure_archival.html`, Ken Burns motion, cinematic vignette, safe-zone captions (bottom 380px).
+5. `Deliverables & Publikasi`: File master di `learning-videos/exports/SH06_The_Island_Traded_for_New_York_Short_1080p.mp4` (37.37 MB). Berhasil diunggah ke channel YouTube resmi `@IRinANutshell` (International Relations in a nutshell): https://youtube.com/shorts/IXh01DRRIbg dan terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
+
 2026-10-17 - Produksi Total Deployment 10 Decision Labs ke Source Code & Homepage:
 1. `Penerapan Source Code Penuh`: 10 modul simulasi `_includes/sim_*.html` resmi diganti total menggunakan Sandboxed Iframe Embedding (`.lab-embed-wrapper`) dengan tinggi 680px yang memuat engine Phaser 3 & Three.js 3D dari `assets/decision-labs/`.
 2. `Homepage Live Arena & In-Place Switcher`: Sesi simulasi di `_pages/index.md` dirombak total menjadi 2 kolom harmonis (Live Arena Game Viewport + Live Selector Switcher 10 Labs). Switcher bekerja secara real-time in-place tanpa reload halaman.
@@ -1061,3 +1093,77 @@ Merespons arahan langsung pengguna untuk mereplikasi format video orisinal buata
   - Ketiga lab Three.js (Zone Runner UNCLOS, Equilibrium Keeper 1914, Second-Strike Ledger MAD) baru benar-benar dieksekusi pertama kali; dua defect pemblokir ditemukan & diperbaiki: (1) `python -m http.server` menyajikan `.js` sebagai `text/plain` sehingga seluruh ES module ditolak Chrome, (2) `vendor/three.core.js` (sibling wajib dari build r184) belum pernah di-vendor. Ditambahkan `prototype/decision-labs/tools/serve.py` (MIME pinned + ThreadingHTTPServer).
   - Verifikasi nyata: canvas WebGL 1056x260 render, 0 error console, 10/10 endpoint non-blank (kontak sheet 10 tile, 1479-3086 warna).
   - **Temuan desain**: 10 lab dinilai terlalu mirip. Akar masalah: satu shell template (header/CRT overlay/font/palet/modal dossier) dipakai 10x, satu art direction untuk 10 domain berbeda, viewport 3D hanya strip 250-260px, ketiga lab Three.js berbagi kosakata primitif sama (MeshStandardMaterial + cone, 1 directional light, wireframe overlay, background `0x040711`, idle spin `rotation.y += 0.005`), dan 17 aset pixel-art tidak dipakai sama sekali oleh lab 3D. Menunggu ACC pengguna untuk redesign art direction per-lab.
+
+- **YouTube Shorts Release (SH-09 Malacca Chokepoint & Supertanker Physical Simulation)**:
+  - Diproduksi dan dipublikasikan penuh ke kanal `@IRinANutshell` via YouTube Studio CDP Automation (`upload_youtube.py`).
+  - **Video Live**: `https://www.youtube.com/shorts/dZ_NG2C1Rjs` (Video ID: `dZ_NG2C1Rjs`).
+  - **Visual & Audio Standard**: Master 1080x1920 30FPS, foto asli supertanker *Solomon Sea* dengan die-cut paper border, animasi konvoi taktis berlayar di selat dengan deselerasi/kemacetan di Phillips Channel 1.5 NM, simulasi fisik penurunan lambung kapal 20.5m di irisan kedalaman air 25m (menyisakan margin 4.5m), serta dynamic burned-in karaoke captions sinkron dengan neural TTS Kokoro `af_heart`. Bebas jargon teknis dan bebas meta AI.
+
+
+2026-10-19 - Perbaikan Kritis SP-06 (Operation Paul Bunyan V3 - Standar Viewer-First):
+1. Penggantian Aset Ambigu Armada: Mengganti siluet kapal/pesawat putih blown-out yang membingungkan dengan kartu foto arsip resmi US Navy USS Midway (CV-41) 1975 yang tajam, ber-outline putih 14px, dan berlabel taktis jelas.
+2. Penambahan Background Music Non-Copyright: Menambahkan trek sinematik militer non-copyright "Dramatic Trailer" (Rafael Krux, CC BY 4.0) yang di-ducking pada -18 dB di bawah narasi Kokoro TTS agar video tidak hollow dan ritme ketegangan terjaga.
+3. Eliminasi Overlap Scene Akhir: Memperbaiki clipping teks ("FELLED IN 42 MINUTES") dan menata ulang slot vertikal (Top HUD -> Polaroid Stump -> 42 MINUTES -> 0 BULLETS FIRED -> Subtitle) dengan jarak aman antar-elemen (zero collision).
+4. Render Ulang Master MP4: SP06_Operation_Paul_Bunyan_Short_1080p.mp4 (6.31 MB, 41.50s, 1080x1920 30 FPS).
+
+
+2026-10-19 - Perbaikan Cacat Border & Text-Overflow SP-06 (Standar Baku Review):
+1. Resolusi Text-Overflow Badge:
+   - Badge "ORDER SIGNED: AUG 20": Lebar kontainer merah sebelumnya hanya 274px sementara teks butuh 320px, menyebabkan angka "20" tumpah ke luar border. Diperbaiki dinamis via draw.textbbox + padding simetris 24px (lebar kotak 360px).
+   - Stempel "TOP SECRET // DECLASSIFIED": Lebar kontainer sebelumnya hanya 300px sementara teks butuh 416px, menyebabkan teks terpotong ke area hitam. Diperbaiki dinamis dengan lebar 460px + margin aman.
+2. Standardisasi SOP Audit Visual:
+   - Seluruh elemen stiker teks/badge wajib lolos "Bounding-Box Containment Test": teks tidak boleh menyentuh atau melompat keluar garis tepi (border) kontainer.
+3. Master MP4 V4: SP06_Operation_Paul_Bunyan_Short_1080p.mp4 (6.26 MB, 41.50s, 1080x1920 30 FPS).
+
+
+2026-10-19 - Overhaul Variasi Visual Detik 10 (Scene 1b) SP-06:
+1. Eliminasi Monotoni Slide Awal (Detik 0-14s):
+   - Sebelumnya: Foto pohon DMZ statis ditahan selama hampir 15 detik, menyebabkan slide kedua terasa identik dengan slide pertama.
+   - Sesudah Perbaikan: Pada detik 7.0s, kartu pohon di-wipe out. Pada detik 7.54s (ketika narasi menyebut pembunuhan perwira AS oleh tentara Korut), masuk slide baru:
+     * Kartu arsip historis insiden bentrokan fisik di Checkpoint #3 ("INCIDENT REPORT // AUG 18, 1976 - THE AXE ATTACK AT CHECKPOINT #3").
+     * Stiker prop bukti senjata kapak ("WEAPON RECOVERED - CONFISCATED WORK AXE") yang jatuh dengan drop-in bounce.
+     * Header taktis diperbarui: "PANMUNJOM // AUGUST 18, 1976".
+2. Verifikasi Vision QA:
+   - frame_10_0s_incident.png: Lolos 100% (variasi visual tinggi, zero collision antara kartu insiden dan kartu kapak, teks utuh tanpa clipping).
+3. Master MP4 V5 Final: SP06_Operation_Paul_Bunyan_Short_1080p.mp4 (6.47 MB, 41.50s, 1080x1920 30 FPS).
+
+
+2026-10-19 - Perbaikan Cacat Overlap Scene 2 (War Room Pentagon Map):
+1. Resolusi Tabrakan Teks & Vektor pada Peta Panggung:
+   - Sebelumnya: Teks "MILITARY DEMARCATION LINE" dan "SOUTHERN LIMIT LINE" bertabrakan langsung pada koordinat Y yang hampir sama (selisih hanya 8px), garis panah biru membelah kotak "TASK FORCE", dan kartu counter "+813" menabrak label "KPA OP".
+   - Sesudah Perbaikan:
+     * Garis Demarkasi Militer (MDL 38°40'N) digeser ke Y = 1120px dengan label rapi di Y = 1088px (berjarak aman di bawah kartu counter +813).
+     * Batang panah biru berakar bersih dari tepi atas kotak unit TASK FORCE (Y = 1255px) menuju ke bawah garis MDL (Y = 1135px), tidak lagi membelah kotak teks.
+     * Label redundant yang saling bertabrakan dieliminasi total.
+2. Hasil Verifikasi Vision QA:
+   - preview_stills/frame_24_0s_counter.png: Lolos 100% (zero collision antar-teks, panah bersih, visual hierarchy tajam).
+3. Master MP4 V6: SP06_Operation_Paul_Bunyan_Short_1080p.mp4 (6.16 MB, 41.50s, 1080x1920 30 FPS).
+
+
+2026-10-19 - Perbaikan Dinamika Posisi Gerald Ford & Eliminasi Tabrakan Scene 3:
+1. Posisi Bertingkat Gerald Ford (Detik 15 vs Detik 20):
+   - Detik 15.12s (Perintah Washington): Kartu foto Gerald Ford masuk di posisi TENGAH (Y = 430px), mengisi ruang kanvas vertikal secara megah dan seimbang (zero dead void, bebas tabrakan header atas).
+   - Detik 19.51s (Pengerahan Pasukan): Saat narasi menyebut 813 pasukan, kartu Ford bergeser MULUS KE ATAS (Y = 195px) untuk memberi ruang bagi kartu metrik "+813" yang masuk di bawahnya.
+2. Eliminasi Tabrakan B-52 pada Dek Kapal Induk (Scene 3):
+   - Menghapus teks statis redundant ("FLIGHT DECK // USS MIDWAY" dan "DANGER: JET BLAST") dari latar panggung stage_3_carrier_deck.png yang sebelumnya terbelah oleh sayap B-52. B-52 kini terbang bebas di atas marka catapult dek baja non-skid otentik.
+3. Master MP4 V7: SP06_Operation_Paul_Bunyan_Short_1080p.mp4 (6.17 MB, 41.50s, 1080x1920 30 FPS).
+
+
+2026-10-19 - Sukses Publikasi YouTube Shorts SP-06 (Operation Paul Bunyan 1976):
+- Status: PUBLISHED (Live di kanal @IRinANutshell)
+- URL Shorts: https://youtube.com/shorts/j7CO8Jk7elM
+- Konfigurasi Advance AI Disclosure: VIDEO_HAS_ALTERED_CONTENT_YES (Tercatat resmi "Yes" pada pengungkapan konten sintetis/AI YouTube).
+- Visibilitas: Public
+- Penonton: Not Made for Kids
+- Sinkronisasi SSOT: learning-videos/SHORTS_CATALOG_WORKFLOW.md telah diperbarui.
+
+
+2026-10-20 - Sukses Publikasi YouTube Shorts SP-07 (The Suez Crisis 1956):
+- Status: PUBLISHED (Live di kanal @IRinANutshell)
+- URL Shorts: https://youtube.com/shorts/b-ciaKWZmk4
+- Judul: The Day Washington Bankrupted the British Empire (1956) #Shorts
+- Konfigurasi Advance AI Disclosure: VIDEO_HAS_ALTERED_CONTENT_YES (Tercatat resmi "Yes" pada pengungkapan konten sintetis/AI YouTube).
+- Visibilitas: Public
+- Penonton: Not Made for Kids
+- Standar Emas: Lolos audit vision_analyze bertingkat (Foto Dwight D. Eisenhower Oval Office full-bust plate, kurva SVG crash line draw #004, eliminasi collision, Hook Ladder 3-baris).
+- Sinkronisasi SSOT: learning-videos/SHORTS_CATALOG_WORKFLOW.md telah diperbarui ke PUBLISHED.
