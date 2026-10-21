@@ -25,9 +25,14 @@ To guarantee 100% linear progression without regressions, amnesia, or scope drif
 
 ### Step 1: Turn 1 Bootstrap
 Before writing code or answering user instructions:
-1. Inspect `PROJECT.md` to see the current milestone status and active tasks.
-2. Read `wiki/hot.md` to absorb the recent breakthroughs, active context, and technical discoveries.
-3. Review `.agents/rules/lessons-learned.md` if working on layouts, tooltips, video rendering, or glossary data to avoid repeating solved bugs.
+1. **MANDATORY SKILL ACTIVATION (Call on Turn 1)**:
+   - Call `skill_view(name='ir-study-companion-platform')` to load platform architecture, Jekyll quirks, and UI guidelines.
+   - For educational games/interactive quizzes: call `skill_view(name='educational-game-design')`.
+   - For video/animation pipelines: call `skill_view(name='ir-video-director')` or `skill_view(name='creative/remotion-video')`.
+   - For debugging/testing issues: call `skill_view(name='systematic-debugging')`.
+2. Inspect `PROJECT.md` to see the current milestone status and active tasks.
+3. Read `wiki/hot.md` to absorb the recent breakthroughs, active context, and technical discoveries.
+4. Review `.agents/rules/lessons-learned.md` if working on layouts, tooltips, video rendering, or glossary data to avoid repeating solved bugs.
 
 ### Step 2: Strict Scoping & Zero-Hallucination
 - Ground all facts in canonical files: `_chapters/`, `_data/`, `ir_glossary.json`, `simulation/`.
@@ -87,12 +92,23 @@ Commit with clear conventional messages:
    - Strict standards: 1080x1920 (9:16), single-pass projection with hardware 2D matrix transform, zero initial white flash, zero drop-frame stutter, and zero label-collision via `<g id="tactical-labels-layer">`.
    - Production registry & 10-episode roadmap documented in `learning-videos/SHORTS_CATALOG_WORKFLOW.md`.
 
-5. **Bespoke LMS Architecture**:
+## 5. Bespoke LMS Architecture:
    - The platform uses a custom Native LMS engine (`_layouts/chapter.html`, `_layouts/default.html`, `assets/js/course-player.js`). Legacy GitBook markup has been completely eliminated.
 
 ---
 
-## 4. Key CLI Commands
+## 4. Dedicated Social Media & Growth Teammates (Bot Mode)
+Repositori ini terhubung dengan 2 bot spesialis di Hermes Desktop:
+1. **`@social-media-analyst` (Social Media Analyst & Manager)**:
+   - **Tugas:** Riset performa, audit retensi berkala channel YouTube `@IRinANutshell`, dan riset tren konten geopolitik global.
+   - **Output:** Usulan ide topik dan audit data riil ke chat (berhenti di usulan ide).
+2. **`@content-creator` (Creative Animator & Video Producer)**:
+   - **Tugas:** Merakit komposisi video 9:16, naskah Full English, dan aset grafis standar `@90secondslab` (3-layer: photo sticker, 3D stage, flat vector).
+   - **Hard Rule:** DILARANG merender video baru sebelum ada kata **ACC eksplisit** dari Cantikaputri.
+
+---
+
+## 5. Key CLI Commands
 - `make test` : Runs full pytest test suite (369 tests).
 - `make serve` : Runs local Jekyll development server (`localhost:4000`).
 - `make clean` : Cleans `_site/` build artifacts.

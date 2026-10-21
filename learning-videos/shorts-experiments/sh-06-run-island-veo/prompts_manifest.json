@@ -1,0 +1,26 @@
+[
+  {
+    "index": 1,
+    "name": "clip1_island_approach",
+    "prompt": "Cinematic vertical 9:16 shot, a 17th-century European wooden sailing ship galleon approaching a small tropical volcanic island in a deep blue ocean, dramatic volumetric sunlight, historical maritime exploration atmosphere, slow aerial push-in",
+    "target_duration": 8.5
+  },
+  {
+    "index": 2,
+    "name": "clip2_nutmeg_hands",
+    "prompt": "Cinematic macro vertical 9:16 shot, weathered hands holding cracked ripe nutmeg fruit revealing crimson red mace, golden sunlight illumination, rich botanical details, slow motion",
+    "target_duration": 7.5
+  },
+  {
+    "index": 3,
+    "name": "clip3_naval_siege",
+    "prompt": "Cinematic vertical 9:16 shot, 17th-century coastal stone fort embrasures firing brass cannons with heavy white smoke rolling across tropical shoreline and ocean, naval combat siege atmosphere",
+    "target_duration": 10.5
+  },
+  {
+    "index": 4,
+    "name": "clip4_parchment_treaty",
+    "prompt": "Cinematic vertical 9:16 top-down push-in shot, an antique 1667 diplomatic parchment treaty with cracked red wax seal on a dark rustic wooden captain table, antique quill pen beside it, warm flickering candlelight",
+    "target_duration": 8.5
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "total_duration": 40.77,
+  "lines": [
+    {
+      "id": "line_01",
+      "text": "Why you could lose your next phone if this 1.5-mile Malacca strait closes for 24 hours?",
+      "spoken": "Why you could lose your next phone if this one point five mile Malacca strait closes for twenty-four hours?",
+      "display": "COULD YOU LOSE YOUR PHONE IF THIS STRAIT CLOSES?",
+      "highlight": "LOSE YOUR PHONE",
+      "start": 0.4,
+      "end": 6.39,
+      "duration": 5.99
+    },
+    {
+      "id": "line_02",
+      "text": "This is Phillips Channel in the Strait of Malacca, the world's most congested maritime chokepoint.",
+      "spoken": "This is Phillips Channel in the Strait of Malacca, the world's most congested maritime chokepoint.",
+      "display": "PHILLIPS CHANNEL: WORLD'S DENSEST MARITIME CHOKEPOINT",
+      "highlight": "PHILLIPS CHANNEL",
+      "start": 6.64,
+      "end": 11.85,
+      "duration": 5.21
+    },
+    {
+      "id": "line_03",
+      "text": "Over 94,000 vessels squeeze through this narrow strip every year, hauling 60% of global maritime oil.",
+      "spoken": "Over ninety-four thousand vessels squeeze through this narrow strip every year, hauling sixty percent of global maritime oil.",
+      "display": "94,000+ VESSELS / YEAR \u00b7 60% OF GLOBAL OIL",
+      "highlight": "94,000+ VESSELS",
+      "start": 12.1,
+      "end": 19.01,
+      "duration": 6.91
+    },
+    {
+      "id": "line_04",
+      "text": "Even worse: nearly half of all advanced microchips from Taiwan and Korea must pass right here to reach Western factories.",
+      "spoken": "Even worse: nearly half of all advanced microchips from Taiwan and Korea must pass right here to reach Western factories.",
+      "display": "CRITICAL SEMICONDUCTORS TRANSIT THROUGH THIS EXACT BOTTLENECK",
+      "highlight": "MICROCHIPS TRANSIT",
+      "start": 19.26,
+      "end": 26.26,
+      "duration": 7.0
+    },
+    {
+      "id": "line_05",
+      "text": "If a tanker grounds or conflict erupts, rerouting around Indonesia adds 3 full days and nearly $5 billion in freight shocks.",
+      "spoken": "If a tanker grounds or conflict erupts, rerouting around Indonesia adds three full days and nearly five billion dollars in freight shocks.",
+      "display": "DETOUR ADDS 3 DAYS & $5 BILLION IN FREIGHT SURCHARGES",
+      "highlight": "+3 DAYS & $5 BILLION",
+      "start": 26.51,
+      "end": 34.85,
+      "duration": 8.34
+    },
+    {
+      "id": "line_06",
+      "text": "In modern geopolitics, the entire global economy is anchored to one and a half miles of water.",
+      "spoken": "In modern geopolitics, the entire global economy is anchored to one and a half miles of water.",
+      "display": "THE GLOBAL ECONOMY ANCHORED TO 1.5 MILES OF WATER",
+      "highlight": "1.5 MILES OF WATER",
+      "start": 35.1,
+      "end": 40.52,
+      "duration": 5.42
+    }
+  ]
+}

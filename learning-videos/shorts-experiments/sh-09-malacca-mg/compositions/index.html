@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SH-09 Malacca — paper atlas</title>
+<style>
+@font-face{font-family:'Archivo Black';src:url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');font-weight:400;font-style:normal;}
+@font-face{font-family:'Space Mono';src:url('../fonts/SpaceMono-Regular.ttf') format('truetype');font-weight:400;}
+@font-face{font-family:'Space Mono';src:url('../fonts/SpaceMono-Bold.ttf') format('truetype');font-weight:700;}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#F4F1EA;}
+#stage{position:relative;width:1080px;height:1920px;background:#F4F1EA;overflow:hidden;
+  font-family:'Space Mono',monospace;color:#171A1F;}
+
+/* ---------- paper grain, procedural ---------- */
+#grain{position:absolute;inset:0;width:1080px;height:1920px;z-index:60;pointer-events:none;
+  opacity:.05;mix-blend-mode:multiply;}
+
+/* ---------- map ---------- */
+#map{position:absolute;inset:0;width:1080px;height:1920px;z-index:10;}
+.land-dim{fill:#E7E1D2;stroke:#CFC6B2;stroke-width:1.2px;}
+.land{fill:#171A1F;stroke:#F4F1EA;stroke-width:6px;stroke-linejoin:round;
+  filter:drop-shadow(0 18px 22px rgba(0,0,0,.18));}
+.land.th{fill:#2B3038;}
+
+/* ---------- route tape ---------- */
+.tape{fill:none;stroke:#FFC822;stroke-width:9;stroke-linecap:butt;stroke-linejoin:round;}
+.tape-under{fill:none;stroke:#171A1F;stroke-width:15;stroke-linecap:butt;stroke-linejoin:round;opacity:.14;}
+.detour{fill:none;stroke-width:8;stroke-linecap:round;stroke-dasharray:none;}
+.detour.sunda{stroke:#FFC822;}
+.detour.lombok{stroke:#C81E1E;}
+
+/* ---------- type blocks: the hook ladder ---------- */
+.sticker{position:absolute;left:50%;padding:16px 30px;white-space:nowrap;opacity:0;z-index:45;
+  font-family:'Archivo Black',sans-serif;font-size:60px;line-height:1;letter-spacing:-1px;
+  box-shadow:8px 10px 0 rgba(0,0,0,.85);}
+.s-dark{background:#171A1F;color:#F4F1EA;}
+.s-gold{background:#FFC822;color:#171A1F;}
+.s-light{background:#F4F1EA;color:#171A1F;}
+#hk1{top:396px;transform:translateX(-50%) rotate(-2deg);}
+#hk2{top:496px;transform:translateX(-50%) rotate(-2deg);}
+#hk3{top:596px;transform:translateX(-50%) rotate(-1.2deg);}
+
+/* ---------- measurement card ---------- */
+.card{position:absolute;background:#F4F1EA;border:3px solid #171A1F;border-radius:2px;
+  box-shadow:10px 12px 0 rgba(0,0,0,.82);opacity:0;}
+.card .kicker{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:3px;
+  color:#6B6355;margin-bottom:8px;}
+.card .big{font-family:'Archivo Black',sans-serif;font-size:52px;line-height:.98;letter-spacing:-1px;color:#171A1F;}
+.card .big em{font-style:normal;color:#C81E1E;}
+.card .note{font-size:13px;letter-spacing:2px;color:#6B6355;margin-top:10px;}
+
+#cardWidth{left:60px;top:1320px;width:960px;padding:26px 32px;z-index:40;}
+#cardWidth .row{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;}
+
+/* ---------- tanker sticker ---------- */
+#tankerWrap{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:38;
+  opacity:0;pointer-events:none;will-change:transform;}
+#tankerImg{position:absolute;width:300px;height:auto;left:0;top:0;
+  transform-origin:center bottom;}
+
+/* ---------- water column ---------- */
+#column{position:absolute;left:60px;top:880px;width:960px;height:520px;background:#F4F1EA;
+  border:3px solid #171A1F;box-shadow:10px 12px 0 rgba(0,0,0,.82);z-index:40;opacity:0;}
+#column svg{display:block;}
+
+/* ---------- detour labels ---------- */
+.tag{position:absolute;padding:10px 16px;font-family:'Archivo Black',sans-serif;font-size:20px;
+  letter-spacing:.5px;white-space:nowrap;opacity:0;z-index:46;box-shadow:6px 7px 0 rgba(0,0,0,.8);}
+#tagSunda{background:#FFC822;color:#171A1F;}
+#tagLombok{background:#C81E1E;color:#F4F1EA;}
+
+/* ---------- hypothetical flag ---------- */
+#hypo{position:absolute;left:50%;top:216px;transform:translateX(-50%);z-index:50;opacity:0;
+  background:#C81E1E;color:#F4F1EA;border:3px solid #171A1F;padding:11px 22px;
+  font-family:'Space Mono',monospace;font-weight:700;font-size:17px;letter-spacing:3px;
+  box-shadow:7px 8px 0 rgba(0,0,0,.8);}
+
+/* ---------- labels on map ---------- */
+.geo{position:absolute;z-index:30;font-family:'Archivo Black',sans-serif;font-size:19px;
+  letter-spacing:2px;color:#F4F1EA;background:#171A1F;padding:7px 13px;opacity:0;
+  box-shadow:5px 6px 0 rgba(0,0,0,.55);}
+
+/* ---------- subtitles / karaoke captions ---------- */
+#subtitlesWrap{position:absolute;left:40px;right:40px;bottom:160px;z-index:90;text-align:center;pointer-events:none;opacity:0;}
+.sub-sentence{display:inline-block;padding:12px 24px;background:rgba(23,26,31,0.92);border:2px solid #F4F1EA;border-radius:8px;box-shadow:6px 8px 0 rgba(0,0,0,0.85);font-family:'Space Mono',monospace;font-size:26px;font-weight:700;line-height:1.4;letter-spacing:1px;color:#F4F1EA;}
+.sub-word{display:inline-block;margin:0 4px;transition:color 0.1s ease;}
+.sub-word.active{color:#FFC822;text-shadow:0 0 12px rgba(255,200,34,0.6);}
+
+/* ---------- endcard ---------- */
+#endcard{position:absolute;inset:0;z-index:70;background:rgba(244,241,234,.94);opacity:0;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 90px;}
+#endcard .rule{width:132px;height:9px;background:#C81E1E;margin-bottom:34px;transform:scaleX(0);}
+#endcard h1{font-family:'Archivo Black',sans-serif;font-size:88px;line-height:1.06;
+  text-align:center;letter-spacing:-2px;color:#171A1F;}
+#endcard h1 span{color:#C81E1E;}
+#endcard .sub{margin-top:52px;font-family:'Space Mono',monospace;font-size:22px;
+  letter-spacing:5px;color:#6B6355;}
+
+/* ---------- wipe ---------- */
+#wipe{position:absolute;top:-12%;left:-40%;width:190%;height:124%;z-index:80;
+  background:#F4F1EA;border-right:18px solid #171A1F;transform:translateX(-150%) rotate(-5deg);
+  pointer-events:none;}
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg id="map" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+    <g id="cam">
+      <g id="layer-dim"></g>
+      <g id="layer-land"></g>
+      <path id="tapeUnder" class="tape-under" d=""/>
+      <path id="tape" class="tape" d=""/>
+      <path id="detSunda" class="detour sunda" d=""/>
+      <path id="detLombok" class="detour lombok" d=""/>
+      <circle id="chokeDot" cx="0" cy="0" r="0" fill="#C81E1E"/>
+      <!-- tactical convoy of tankers navigating the strait -->
+      <g id="tankerFleet"></g>
+    </g>
+  </svg>
+
+  <div class="geo" id="lbMalaysia">MALAYSIA</div>
+  <div class="geo" id="lbIndonesia">INDONESIA</div>
+
+  <div class="sticker s-dark"  id="hk1">1.5 NAUTICAL MILES</div>
+  <div class="sticker s-gold"  id="hk2">ONE GATE</div>
+  <div class="sticker s-light" id="hk3">NO SECOND ROUTE</div>
+
+  <div class="card" id="cardWidth">
+    <div class="kicker">THE NARROWEST POINT</div>
+    <div class="row">
+      <div class="big"><em id="wNum">1.5</em> NM &nbsp;·&nbsp; <span id="kmNum">2.8</span> KM</div>
+      <div class="note" style="text-align:right;margin-top:0;max-width:330px">AT SINGAPORE —<br>NO ROOM TO PASS SIDE BY SIDE</div>
+    </div>
+  </div>
+
+  <!-- animated real tanker photo (Wikimedia, CC BY-SA 4.0, ITookSomePhotos) -->
+  <div id="tankerWrap">
+    <img id="tankerImg" src="../assets/tanker_sticker.png" alt="">
+  </div>
+
+  <div id="column">
+    <svg viewBox="0 0 960 520" width="960" height="520">
+      <rect x="0" y="0" width="960" height="120" fill="#EFE9DA"/>
+      <line x1="0" y1="120" x2="960" y2="120" stroke="#171A1F" stroke-width="3"/>
+      <text x="16" y="32" font-family="'Space Mono'" font-size="15" fill="#6B6355" letter-spacing="2">WATER SURFACE</text>
+
+      <path id="seabedLine" d="M0 430 Q240 414 480 424 T960 436 L960 520 L0 520 Z"
+            fill="#DCD3C0" stroke="#171A1F" stroke-width="3"/>
+      <text x="16" y="466" font-family="'Space Mono'" font-size="15" fill="#6B6355" letter-spacing="2">SEABED · 25 M DOWN</text>
+
+      <g id="hullG">
+        <!-- real photo cutout layered right above the waterline with paper border -->
+        <image id="shipPhoto" href="../assets/tanker_sticker.png" x="220" y="32" width="520" height="106" preserveAspectRatio="xMidYMid meet"/>
+        
+        <!-- underwater hull section showing submersion depth -->
+        <path d="M300 120 L640 120 L622 300 L318 300 Z" fill="#171A1F" stroke="#171A1F" stroke-width="3"/>
+        <path d="M300 120 L318 300" fill="none" stroke="#F4F1EA" stroke-width="4"/>
+        <path d="M640 120 L622 300" fill="none" stroke="#F4F1EA" stroke-width="4"/>
+        <text x="326" y="186" font-family="'Archivo Black'" font-size="27" fill="#F4F1EA">FULLY LOADED</text>
+        <text x="326" y="214" font-family="'Archivo Black'" font-size="27" fill="#F4F1EA">SUPERTANKER</text>
+        <text x="326" y="246" font-family="'Space Mono'" font-size="16" fill="#C9C0AC">HULL SITS 20.5 M UNDERWATER</text>
+      </g>
+
+      <g id="clearG" opacity="0">
+        <line id="clrLine" x1="720" y1="300" x2="720" y2="424" stroke="#C81E1E" stroke-width="4"/>
+        <line x1="704" y1="300" x2="736" y2="300" stroke="#C81E1E" stroke-width="4"/>
+        <line x1="704" y1="424" x2="736" y2="424" stroke="#C81E1E" stroke-width="4"/>
+        <text x="752" y="358" font-family="'Archivo Black'" font-size="24" fill="#C81E1E">4.5 M</text>
+        <text x="752" y="384" font-family="'Space Mono'" font-size="13" fill="#C81E1E" letter-spacing="1">WATER LEFT</text>
+        <text x="752" y="403" font-family="'Space Mono'" font-size="13" fill="#C81E1E" letter-spacing="1">UNDER THE HULL</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="tag" id="tagSunda">SUNDA · 20 M DEEP</div>
+  <div class="tag" id="tagLombok">LOMBOK · MAKASSAR</div>
+
+  <div id="hypo">IF THE STRAIT CLOSED</div>
+
+  <!-- dynamic burned-in subtitle captions -->
+  <div id="subtitlesWrap">
+    <div class="sub-sentence" id="subSentence"></div>
+  </div>
+
+  <div id="endcard">
+    <div class="rule" id="endRule"></div>
+    <h1>YOU CANNOT<br>WIDEN<br>A <span>STRAIT</span></h1>
+    <div class="sub">@IRinANutshell</div>
+  </div>
+
+  <div id="wipe"></div>
+  <svg id="grain">
+    <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="1080" height="1920" filter="url(#gr)"/>
+  </svg>
+</div>
+
+<script src="geo.js"></script>
+<script>
+window.CAPTIONS = [
+  {"text": "Two landmasses. One channel between them.", "start": 0.4, "end": 4.0},
+  {"text": "One point five nautical miles of water. And no second option.", "start": 4.1, "end": 7.8},
+  {"text": "At its narrowest it is two point eight kilometres across.", "start": 8.0, "end": 12.2},
+  {"text": "Wide enough for most ships. Only just.", "start": 12.3, "end": 14.5},
+  {"text": "A fully loaded supertanker sits 20.5 metres underwater.", "start": 17.5, "end": 22.0},
+  {"text": "The seabed is twenty five metres down.", "start": 22.1, "end": 25.0},
+  {"text": "That leaves 4.5 metres of water under the hull.", "start": 25.1, "end": 28.3},
+  {"text": "So why not go around? The Sunda route is shallower still.", "start": 28.5, "end": 32.5},
+  {"text": "Big tankers have to run east, past Lombok, through Makassar.", "start": 32.6, "end": 36.5},
+  {"text": "You cannot widen a strait.", "start": 37.5, "end": 40.0},
+  {"text": "Chokepoints do not create risk. They concentrate it.", "start": 40.1, "end": 43.5}
+];
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+/* ============ geometry ============ */
+const G = window.GEO;
+const CX = 540, CY = 960;
+
+document.getElementById('layer-dim').innerHTML =
+  G.dim.map(d => `<path class="land-dim" d="${d}"/>`).join('');
+document.getElementById('layer-land').innerHTML =
+  Object.keys(G.focus).map(n =>
+    `<path class="land${n === 'Thailand' ? ' th' : ''}" d="${G.focus[n].d}"/>`
+  ).join('');
+
+const P = G.points;
+const choke = P.phillips;
+
+/* routes come pre-projected from bake_geo.js so they follow water */
+const lanePts = G.routes.lane;
+function toD(pts) { return 'M' + pts.map(p => p[0] + ' ' + p[1]).join('L'); }
+
+document.getElementById('tape').setAttribute('d', toD(lanePts));
+document.getElementById('tapeUnder').setAttribute('d', toD(lanePts));
+
+/* detours: Sunda (light draft) and Lombok -> Makassar (loaded tankers) */
+document.getElementById('detSunda').setAttribute('d', toD(G.routes.sunda));
+document.getElementById('detLombok').setAttribute('d', toD(G.routes.lombok));
+
+const dot = document.getElementById('chokeDot');
+dot.setAttribute('cx', choke[0]); dot.setAttribute('cy', choke[1]);
+
+/* ============ Tactical Tanker Fleet Simulation ============ */
+const fleetGroup = document.getElementById('tankerFleet');
+const FLEET_COUNT = 6;
+const fleetElements = [];
+
+for (let i = 0; i < FLEET_COUNT; i++) {
+  const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  g.setAttribute('class', 'tanker-unit');
+  g.setAttribute('opacity', '0');
+  
+  // Clean silhouette hull styled with paper border
+  const hull = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  hull.setAttribute('d', 'M-22,-7 L14,-7 L24,0 L14,7 L-22,7 Z');
+  hull.setAttribute('fill', '#171A1F');
+  hull.setAttribute('stroke', '#F4F1EA');
+  hull.setAttribute('stroke-width', '2');
+  
+  // Deck cabin detail
+  const cabin = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  cabin.setAttribute('x', '-18'); cabin.setAttribute('y', '-4');
+  cabin.setAttribute('width', '9'); cabin.setAttribute('height', '8');
+  cabin.setAttribute('fill', '#C81E1E');
+  
+  // Tactical wake / propulsion pulse
+  const wake = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  wake.setAttribute('x1', '-24'); wake.setAttribute('y1', '0');
+  wake.setAttribute('x2', '-40'); wake.setAttribute('y2', '0');
+  wake.setAttribute('stroke', '#FFC822');
+  wake.setAttribute('stroke-width', '2.5');
+  wake.setAttribute('stroke-dasharray', '4 3');
+  
+  g.appendChild(wake);
+  g.appendChild(hull);
+  g.appendChild(cabin);
+  fleetGroup.appendChild(g);
+  fleetElements.push(g);
+}
+
+function getLanePointAndAngle(progress) {
+  const pts = lanePts;
+  const total = pts.length - 1;
+  const p = Math.max(0, Math.min(1, progress)) * total;
+  const idx = Math.min(total - 1, Math.floor(p));
+  const frac = p - idx;
+  const p0 = pts[idx], p1 = pts[idx + 1];
+  const x = p0[0] + (p1[0] - p0[0]) * frac;
+  const y = p0[1] + (p1[1] - p0[1]) * frac;
+  const angle = Math.atan2(p1[1] - p0[1], p1[0] - p0[0]) * (180 / Math.PI);
+  return { x, y, angle };
+}
+
+function updateFleetSimulation(t) {
+  // Fleet is active during Beat 1 & 2 (t=0.5 to t=17.0)
+  if (t < 0.4 || t > 17.5) {
+    fleetGroup.style.display = 'none';
+    return;
+  }
+  fleetGroup.style.display = 'block';
+  
+  for (let i = 0; i < FLEET_COUNT; i++) {
+    const el = fleetElements[i];
+    // Staggered base positions
+    const offset = i * 0.14;
+    // Speed decelerates near Phillips Channel (around progress 0.50)
+    let rawProg = ((t * 0.045) + offset) % 1.0;
+    
+    // Simulate congestion & deceleration: slow down between 0.42 and 0.58
+    let adjustedProg = rawProg;
+    if (rawProg > 0.38 && rawProg < 0.62) {
+      const centerDist = Math.abs(rawProg - 0.50);
+      adjustedProg = 0.50 + Math.sign(rawProg - 0.50) * Math.pow(centerDist / 0.12, 1.35) * 0.12;
+    }
+    
+    const { x, y, angle } = getLanePointAndAngle(adjustedProg);
+    el.setAttribute('transform', `translate(${x.toFixed(1)}, ${y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+    
+    // Fade in/out at entry and exit of visible lane
+    let op = 1;
+    if (t < 1.0) op = (t - 0.5) / 0.5;
+    else if (t > 16.5) op = (17.5 - t);
+    else if (adjustedProg < 0.05) op = adjustedProg / 0.05;
+    else if (adjustedProg > 0.92) op = (1.0 - adjustedProg) / 0.08;
+    
+    el.setAttribute('opacity', Math.max(0, Math.min(1, op)).toFixed(2));
+  }
+}
+
+/* ============ label anchoring ============ */
+const LBL = G.labels;
+function place(el, x, y) {
+  /* clamp inside the safe frame so a zoom cannot push a label off-canvas */
+  const w = el.offsetWidth || 120, h = el.offsetHeight || 40;
+  const cx = Math.min(1080 - w / 2 - 24, Math.max(w / 2 + 24, x));
+  const cy = Math.min(1560 - h / 2, Math.max(230 + h / 2, y));
+  el.style.left = cx + 'px'; el.style.top = cy + 'px';
+  el.style.transform = 'translate(-50%,-50%)';
+}
+place(document.getElementById('lbMalaysia'), LBL.MALAYSIA[0], LBL.MALAYSIA[1]);
+place(document.getElementById('lbIndonesia'), LBL.INDONESIA[0], LBL.INDONESIA[1] - 40);
+place(document.getElementById('tagSunda'), P.sunda[0] + 74, P.sunda[1] + 22);
+place(document.getElementById('tagLombok'), P.lombok[0] - 40, P.lombok[1] + 78);
+
+/* ============ camera: viewBox only ============ */
+window.cam = { t: 1, x: 0, y: 0 };
+const cam = window.cam;
+
+/* tanker rides the lane itself: anchored to a real lane vertex, so it can never
+   drift onto land. Anchor point = lane vertex [581,894] (east of the choke). */
+/* tanker anchored further east along the lane, past the peninsula's tip */
+const TA_ANCHOR = [655, 836];
+const TA_X0 = 0, TA_X1 = 0;
+const TA_Y = 0;
+/* the tanker is a close-up insert, not a map-scale object: at true scale it
+   would be sub-pixel. Keep it small enough to sit inside the strait corridor
+   and let the water column below carry the real numbers. */
+function camTo(s, x, y) {
+  /* s>1 zooms; x,y shift in viewBox units, centred on the choke */
+  const w = 1080 / s, h = 1920 / s;
+  const vx = choke[0] - w / 2 + x;
+  const vy = choke[1] - h / 2 + y;
+  document.getElementById('map').setAttribute('viewBox',
+    `${vx.toFixed(1)} ${vy.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`);
+}
+
+/* keep geo labels glued to the map while the camera moves */
+window.syncLabels = syncLabels;
+function syncLabels(s, x, y) {
+  const w = 1080 / s, h = 1920 / s;
+  const vx = choke[0] - w / 2 + x, vy = choke[1] - h / 2 + y;
+  const toScreen = (px, py) => [(px - vx) * s, (py - vy) * s];
+  const [mx, my] = toScreen(LBL.MALAYSIA[0], LBL.MALAYSIA[1]);
+  const [ix, iy] = toScreen(LBL.INDONESIA[0], LBL.INDONESIA[1] - 40);
+  const [sx, sy] = toScreen(P.sunda[0] + 74, P.sunda[1] + 22);
+  const [lx, ly] = toScreen(P.lombok[0] - 40, P.lombok[1] + 78);
+  place(document.getElementById('lbMalaysia'), mx, my);
+  place(document.getElementById('lbIndonesia'), ix, iy);
+  place(document.getElementById('tagSunda'), sx, sy);
+  place(document.getElementById('tagLombok'), lx, ly);
+
+  /* the tanker's hull sits on the lane vertex, so re-project it every camera move */
+  const [tx, ty] = toScreen(TA_ANCHOR[0], TA_ANCHOR[1]);
+  const tanker = document.getElementById('tankerImg');
+  tanker.style.left = (tx - tanker.offsetWidth / 2) + 'px';
+  tanker.style.top = (ty - tanker.offsetHeight) + 'px';   /* hull bottom on the point */
+
+  const currTime = window.__timeline ? window.__timeline.time() : 0;
+  updateFleetSimulation(currTime);
+  updateCaptions(currTime);
+}
+
+window.updateCaptions = updateCaptions;
+function updateCaptions(t) {
+  const wrap = document.getElementById('subtitlesWrap');
+  const box = document.getElementById('subSentence');
+  if (!wrap || !box) return;
+
+  // Don't show captions during endcard
+  if (t > 38.0) {
+    wrap.style.opacity = '0';
+    return;
+  }
+
+  let activeCap = null;
+  for (const cap of window.CAPTIONS) {
+    if (t >= cap.start && t <= cap.end) {
+      activeCap = cap;
+      break;
+    }
+  }
+
+  if (!activeCap) {
+    wrap.style.opacity = '0';
+    return;
+  }
+
+  wrap.style.opacity = '1';
+  // Highlight words based on progress inside the active sentence
+  const words = activeCap.text.split(' ');
+  const progress = (t - activeCap.start) / (activeCap.end - activeCap.start);
+  const activeWordIdx = Math.floor(progress * words.length);
+
+  box.innerHTML = words.map((w, idx) => {
+    const isAct = idx === activeWordIdx ? ' active' : '';
+    return `<span class="sub-word${isAct}">${w}</span>`;
+  }).join(' ');
+}
+
+/* stroke draw-on setup */
+const tape = document.getElementById('tape');
+const tapeU = document.getElementById('tapeUnder');
+const dS = document.getElementById('detSunda');
+const dL = document.getElementById('detLombok');
+for (const el of [tape, tapeU, dS, dL]) {
+  const L = el.getTotalLength();
+  el.style.strokeDasharray = L;
+  el.style.strokeDashoffset = L;
+}
+
+/* ============ timeline ============ */
+const tl = gsap.timeline({ paused: true });
+window.__timeline = tl;
+window.__timelines = { main: tl };
+
+/* --- BEAT 1 · 0.0–8.0 : landmasses, one gate --- */
+tl.fromTo(cam, { t: 1, x: 0, y: 0 }, {
+    t: 1.02, x: 0, y: 0, duration: 8.0, ease: 'none',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 0)
+  .fromTo(tapeU, { opacity: 0 }, { opacity: .14, duration: .6 }, .4)
+  .fromTo(tape, { strokeDashoffset: tape.getTotalLength(), opacity: 0 },
+                    { strokeDashoffset: 0, opacity: 1, duration: 1.6, ease: 'power2.inOut' }, .5)
+  .fromTo('#chokeDot', { attr: { r: 0 } }, { attr: { r: 13 }, duration: .45, ease: 'power3.out' }, 1.9)
+  .fromTo('#lbMalaysia', { opacity: 0 }, { opacity: 1, duration: .45 }, 2.3)
+  .fromTo('#lbIndonesia', { opacity: 0 }, { opacity: 1, duration: .45 }, 2.6)
+  /* hook ladder: one sticker per second, subject already on screen (ref: @90secondslab) */
+  .fromTo('#hk1', { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: .42, ease: 'power4.out' }, 1.2)
+  .fromTo('#hk2', { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: .42, ease: 'power4.out' }, 2.3)
+  .fromTo('#hk3', { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: .42, ease: 'power4.out' }, 3.4)
+  .to(['#hk1', '#hk2', '#hk3'], { opacity: 0, y: -26, duration: .42, stagger: .05 }, 5.6)
+  .to({}, { duration: 0.1, onUpdate: () => syncLabels(cam.t, cam.x, cam.y) })
+
+  /* --- BEAT 2 · 8.0–17.5 : the gauge --- */
+  .to(cam, {
+    t: 2.15, x: 0, y: 60, duration: 2.4, ease: 'power2.inOut',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 8.0)
+  .fromTo('#cardWidth', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .5, ease: 'power3.out' }, 8.9)
+  .to(cam, {
+    t: 2.15, x: 0, y: 62, duration: 4.4, ease: 'none',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 9.4)
+  /* a slow push through the gauge so the hold never freezes */
+  .to(cam, {
+    t: 2.55, x: 10, y: 40, duration: 3.2, ease: 'power1.inOut',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 13.4)
+  .to('#cardWidth', { opacity: 0, y: 22, duration: .45 }, 16.9)
+
+  /* --- BEAT 3 · 17.5–28.5 : real tanker approaches, then the water column --- */
+  .to(cam, {
+    t: 2.55, x: 10, y: 40, duration: 10.7, ease: 'none',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 17.5)
+  .to('#wipe', { x: '150%', duration: .42, ease: 'power3.inOut' }, 17.2)
+  /* the real photo enters first, riding the lane at a water point in the strait */
+  .fromTo('#tankerWrap', { opacity: 0 }, { opacity: 1, duration: .5 }, 17.4)
+  .fromTo('#tankerImg',
+    { x: 0, rotation: -2, scale: .92 },
+    { x: 0, rotation: 0, scale: 1, duration: 2.4, ease: 'power2.out' }, 17.5)
+  .to('#tankerImg', { x: 0, duration: 3.0, ease: 'none' }, 19.9)
+  .to('#tankerWrap', { opacity: 0, duration: .45 }, 22.6)
+  /* then the section opens and explains the numbers: ship descends physically as draft increases */
+  .fromTo('#column', { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .55, ease: 'power3.out' }, 17.55)
+  .fromTo('#seabedLine', { opacity: 0 }, { opacity: 1, duration: .5 }, 18.0)
+  .fromTo('#hullG', { y: -160, opacity: 0 }, { y: 0, opacity: 1, duration: 2.2, ease: 'power2.out' }, 18.2)
+  .fromTo('#clearG', { opacity: 0 }, { opacity: 1, duration: .6, ease: 'power2.out' }, 21.0)
+  .to('#wipe', { x: '150%', duration: .42, ease: 'power3.inOut' }, 28.2)
+
+  /* --- BEAT 4 · 28.5–37.5 : why not go around --- */
+  .to(cam, {
+    t: 1.06, x: 0, y: 96, duration: 1.8, ease: 'power2.inOut',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 28.4)
+  .fromTo(dS, { strokeDashoffset: dS.getTotalLength(), opacity: 0 },
+              { strokeDashoffset: 0, opacity: 1, duration: 1.5, ease: 'power1.inOut' }, 29.0)
+  .fromTo(dL, { strokeDashoffset: dL.getTotalLength(), opacity: 0 },
+              { strokeDashoffset: 0, opacity: 1, duration: 1.9, ease: 'power1.inOut' }, 30.0)
+  .fromTo('#hypo', { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: .45 }, 28.9)
+  .fromTo('#tagSunda', { opacity: 0, scale: .78 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(1.7)' }, 30.6)
+  .fromTo('#tagLombok', { opacity: 0, scale: .78 }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(1.7)' }, 31.9)
+  .to('#column', { opacity: 0, y: 24, duration: .45 }, 28.3)
+  .to(['#tagSunda', '#tagLombok'], { opacity: 0, duration: .4 }, 36.8)
+  .to('#hypo', { opacity: 0, duration: .4 }, 37.0)
+
+  /* --- BEAT 5 · 37.5–45.0 : payoff --- */
+  .to(cam, {
+    t: 1, x: 0, y: 0, duration: 1.6, ease: 'power2.inOut',
+    onUpdate: () => { camTo(cam.t, cam.x, cam.y); syncLabels(cam.t, cam.x, cam.y); }
+  }, 37.4)
+  .fromTo('#endcard', { opacity: 0 }, { opacity: 1, duration: .7 }, 38.2)
+  .fromTo('#endRule', { scaleX: 0 }, { scaleX: 1, duration: .55, ease: 'power2.out' }, 38.7)
+  .fromTo('#endcard h1', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 39.0)
+  .fromTo('#endcard .sub', { opacity: 0 }, { opacity: 1, duration: .5 }, 39.7)
+  .to({}, { duration: .01 }, 45.0);
+
+/* expose for the still harness */
+window.__duration = 45;
+window.__ready = true;
+camTo(1, 0, 0);
+syncLabels(1, 0, 0);
+</script>
+</body>
+</html>

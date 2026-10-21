@@ -1,0 +1,38 @@
+{
+  "category": "maps",
+  "duration_s": 18,
+  "fps": 30,
+  "canvas": { "w": 1080, "h": 1920, "aspect": "9:16" },
+  "style": "Paper-cut atlas on a cream desk. Landmasses are charcoal cut-outs with a cream die-cut edge and a soft contact shadow. Routes are gold tape strips. Hand-placed, tilted stickers for type. Warm, physical, editorial — a printed atlas page that moves, not a HUD.",
+  "palette": ["#F4F1EA", "#171A1F", "#FFC822", "#C81E1E", "#C8A882"],
+  "font": "Archivo Black + Space Mono",
+  "beats": [1.0, 2.0, 3.0, 9.0, 14.0],
+  "export": "mp4",
+  "asset_needs": [],
+  "block": null,
+  "customize": {},
+  "content": {
+    "lane": "vector",
+    "shot": "highlight",
+    "regions": ["Malaysia", "Indonesia", "Singapore", "Thailand"],
+    "points": [
+      { "id": "phillips", "name": "PHILLIPS CHANNEL", "coord": [103.85, 1.24] }
+    ],
+    "palette": ["#F4F1EA", "#171A1F", "#FFC822", "#C81E1E"],
+    "headline": "YOU CANNOT WIDEN A STRAIT",
+    "overlays": ["label", "pin", "callout-card"],
+    "scenes": [
+      { "id": "s1", "start": 0.0, "end": 1.0, "text": "", "motion": "hold_breath" },
+      { "id": "s2", "start": 1.0, "end": 2.0, "text": "1.5 NAUTICAL MILES", "motion": "slam", "beats": [1.0] },
+      { "id": "s3", "start": 2.0, "end": 3.0, "text": "ONE GATE", "motion": "slam", "beats": [2.0] },
+      { "id": "s4", "start": 3.0, "end": 4.0, "text": "NO SECOND ROUTE", "motion": "slam", "beats": [3.0] },
+      { "id": "s5", "start": 4.0, "end": 9.0, "text": "1.5 NM · 2.8 KM", "motion": "viewbox_push + bar_wipe" },
+      { "id": "s6", "start": 9.0, "end": 14.0, "text": "DRAFT 20.5 M / SEABED ~25 M / CLEARANCE 4.5 M", "motion": "slide_bottom + count_up" },
+      { "id": "s7", "start": 14.0, "end": 18.0, "text": "YOU CANNOT WIDEN A STRAIT", "motion": "dashoffset_draw + fade_out" }
+    ],
+    "fact_gate": {
+      "verified": ["1.5 NM / 2.8 km Phillips Channel", "20.5 m Malaccamax draft", "~25 m seabed", "~20 m Sunda controlling depth", "Lombok -> Dewakang Sill -> Makassar route"],
+      "banned": ["vessel counts", "oil share %", "detour days/$", "microchip share %"]
+    }
+  }
+}

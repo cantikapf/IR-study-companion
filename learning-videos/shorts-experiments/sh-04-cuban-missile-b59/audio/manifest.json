@@ -1,0 +1,23 @@
+[
+  {
+    "beat": "b1",
+    "text": "October 1962. Trapped under heavy American depth charges, Soviet submarine B-fifty-nine lost all contact with Moscow.",
+    "start_sec": 0.3,
+    "end_sec": 8.406666666666668,
+    "duration": 8.106666666666667
+  },
+  {
+    "beat": "b2",
+    "text": "Convinced World War Three had begun, two senior officers voted to launch a ten-kiloton nuclear torpedo. But one man said NO.",
+    "start_sec": 10.3,
+    "end_sec": 17.553333333333335,
+    "duration": 7.253333333333333
+  },
+  {
+    "beat": "b3",
+    "text": "Vasili Arkhipov refused authorization. The sub surfaced peacefully, saving humanity in the closest call to nuclear extinction in human history.",
+    "start_sec": 20.3,
+    "end_sec": 28.769333333333336,
+    "duration": 8.469333333333333
+  }
+]

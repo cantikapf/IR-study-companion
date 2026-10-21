@@ -55,6 +55,7 @@ Daftar 10 episode video Shorts taktis terencana yang dipetakan ke 10 Diplomatic 
 | **09** | `SH-09` | **UNCLOS Maritime Borders: The Cod Wars** | Ekspansi Zona Perikanan Islandia 4 mil ke 200 mil vs Royal Navy | `_chapters/042-international-law-issues-and-international-dispute-settlement/080-law-of-the-sea.md` | Planned | - |
 | **10** | `SH-10` | **The Prisoner's Dilemma of Nuclear Arms: Cold War MAD** | Matriks Teori Permainan: Tembak Duluan vs Kooperasi Damai | `_chapters/023-theories-of-international-relations/092-game-theory-ir.md` | Planned | - |
 | **11** | `SH-06` | **The 1 Island Britain Traded for New York** | Pulau Run (Banda) vs Manhattan (1667) | `_chapters/012-modern-world-history/020-age-of-discovery.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/IXh01DRRIbg) |
+| **12** | `SH-11` | **How Inflatable Tanks Fooled Hitler on D-Day (1944)** | Dover, Selat Inggris, & Pas-de-Calais (1944) | `_chapters/012-modern-world-history/090-end-ww2.md` | **RENDERED** | - |
 
 ---
 
@@ -72,6 +73,7 @@ Format editorial alternatif anti-AI feel: foto arsip autentik resolusi ultra-tin
 | **06** | `SP-06` | **The Deadliest Tree Trimming in History: Operation Paul Bunyan (1976)** | @90secondslab Physical Mixed-Media (DMZ Tree, Checkpoint #3, Axe Prop, Ford, B-52, F-4, USS Midway) | `_chapters/012-modern-world-history/120-domino-cold-war.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/j7CO8Jk7elM) |
 | **07** | `SP-07` | **The Day Washington Bankrupted the British Empire (1956)** | @90secondslab Physical Mixed-Media (Anthony Eden, Suez Tanker, Eisenhower Oval Office Plate, Bank of England Cracked Note, SVG Crash Line Draw) | `_chapters/012-modern-world-history/150-decolonization.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/b-ciaKWZmk4) |
 | **08** | `VX-01` | **The Man Who Single-Handedly Stopped World War III** | Vox Paper Collage (Google Veo 3.1 + Kokoro TTS) | `_chapters/012-modern-world-history/130-cuban-missile-crisis.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/sC9cFz9jacw) |
+| **09** | `TH-01` | **How 30 Men Actually Survived Inside the Trojan Horse** | Satisfying 3D Stylized Cutaway Explainer (Google Veo 3D Plates + Kokoro TTS + Native FFmpeg 30fps) | `_chapters/012-modern-world-history/020-age-of-discovery.md` | **PUBLISHED** | [Tonton Shorts](https://youtube.com/shorts/vT_1C3HIy3U) |
 
 ---
 

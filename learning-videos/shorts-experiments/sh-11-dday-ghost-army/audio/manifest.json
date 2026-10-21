@@ -1,0 +1,53 @@
+{
+  "total_duration": 42.62,
+  "lines": [
+    {
+      "id": "line_1",
+      "scene": 1,
+      "text": "Could you guess what stopped 15 Nazi Panzer divisions 200 miles before D-Day failed?",
+      "start": 0.5,
+      "end": 5.88,
+      "duration": 5.38
+    },
+    {
+      "id": "line_2",
+      "scene": 2,
+      "text": "In 1944, the Allies created a completely fake military force: the First US Army Group, commanded by General George Patton.",
+      "start": 6.2,
+      "end": 14.81,
+      "duration": 8.62
+    },
+    {
+      "id": "line_3",
+      "scene": 3,
+      "text": "Across the coast of Dover, soldiers inflated dummy rubber tanks, parked wooden aircraft, and broadcasted ghost radio chatter.",
+      "start": 15.13,
+      "end": 22.35,
+      "duration": 7.21
+    },
+    {
+      "id": "line_4",
+      "scene": 4,
+      "text": "German reconnaissance fell for the trap. Hitler became convinced the real invasion would land at Pas-de-Calais, holding his best tanks 200 miles away.",
+      "start": 22.67,
+      "end": 31.5,
+      "duration": 8.83
+    },
+    {
+      "id": "line_5",
+      "scene": 5,
+      "text": "By the time Berlin realized Normandy was the real assault, it was too late. An army of rubber balloons saved the Western world.",
+      "start": 31.82,
+      "end": 39.28,
+      "duration": 7.47
+    },
+    {
+      "id": "line_6",
+      "scene": 5,
+      "text": "Discover more untold geopolitics on IR in a Nutshell.",
+      "start": 39.6,
+      "end": 42.8,
+      "duration": 3.2
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "total_duration": 45.79,
+  "lines": [
+    {
+      "id": "beat_1",
+      "beat": 1,
+      "text": "Could you guess how thirty Greek soldiers survived inside the Trojan Horse before Troy burned?",
+      "start": 0.5,
+      "end": 5.56,
+      "duration": 5.06
+    },
+    {
+      "id": "beat_2",
+      "beat": 2,
+      "text": "Built from dismantled ship timber, the belly wasn't just a hollow box. It held two narrow scaffolding tiers where soldiers sat shoulder-to-shoulder in complete silence.",
+      "start": 5.91,
+      "end": 15.16,
+      "duration": 9.26
+    },
+    {
+      "id": "beat_3",
+      "beat": 3,
+      "text": "At thirty-five degrees Celsius, body heat alone would cause suffocation in hours. The builders hid microscopic air vents disguised inside the nostrils, ears, and horse mane.",
+      "start": 15.51,
+      "end": 25.84,
+      "duration": 10.33
+    },
+    {
+      "id": "beat_4",
+      "beat": 4,
+      "text": "When night fell and Troy slept, Odysseus unlocked a spring-loaded trapdoor beneath the horse's belly, dropping hemp ropes to the cobblestones below.",
+      "start": 26.19,
+      "end": 34.32,
+      "duration": 8.13
+    },
+    {
+      "id": "beat_5",
+      "beat": 5,
+      "text": "Within minutes, the gates were thrown wide open. The city that resisted a ten-year siege fell in a single night... from the inside out.",
+      "start": 34.67,
+      "end": 41.99,
+      "duration": 7.32
+    },
+    {
+      "id": "beat_6",
+      "beat": 5,
+      "text": "Discover more untold ancient geopolitics on IR in a Nutshell.",
+      "start": 42.34,
+      "end": 45.94,
+      "duration": 3.61
+    }
+  ]
+}

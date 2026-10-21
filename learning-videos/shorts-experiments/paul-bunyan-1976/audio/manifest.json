@@ -1,0 +1,61 @@
+{
+  "total_duration": 41.38,
+  "lines": [
+    {
+      "id": "line_1",
+      "scene": 1,
+      "text": "In 1976, the United States deployed an entire war armada... just to cut down a single tree.",
+      "start": 0.6,
+      "end": 7.19,
+      "duration": 6.59
+    },
+    {
+      "id": "line_2",
+      "scene": 1,
+      "text": "It started when North Korean soldiers killed two American officers attempting to trim a poplar tree blocking the DMZ view.",
+      "start": 7.54,
+      "end": 14.77,
+      "duration": 7.23
+    },
+    {
+      "id": "line_3",
+      "scene": 2,
+      "text": "Washington refused to back down. They launched Operation Paul Bunyan.",
+      "start": 15.12,
+      "end": 19.16,
+      "duration": 4.03
+    },
+    {
+      "id": "line_4",
+      "scene": 2,
+      "text": "813 combat engineers and troops marched in. 27 helicopters circled above.",
+      "start": 19.51,
+      "end": 25.29,
+      "duration": 5.78
+    },
+    {
+      "id": "line_5",
+      "scene": 3,
+      "text": "Behind them? Nuclear-capable B-52 bombers, fighter jets, and an aircraft carrier battle group stood ready.",
+      "start": 25.64,
+      "end": 32.04,
+      "duration": 6.4
+    },
+    {
+      "id": "line_6",
+      "scene": 4,
+      "text": "North Korea watched in dead silence. In 42 minutes, the tree was gone. Zero bullets fired.",
+      "start": 32.39,
+      "end": 38.08,
+      "duration": 5.7
+    },
+    {
+      "id": "line_7",
+      "scene": 4,
+      "text": "Discover more untold geopolitics on IR in a Nutshell.",
+      "start": 38.43,
+      "end": 41.63,
+      "duration": 3.2
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Island Traded for New York</title>
+  <style>
+    @font-face {
+      font-family: 'Archivo Black';
+      src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: #0d1117;
+      color: #ffffff;
+      font-family: 'Archivo Black', sans-serif;
+      position: relative;
+    }
+
+    /* Container for scenes */
+    .scene-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scene.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Archival photo framing */
+    .photo-plate {
+      position: absolute;
+      top: 180px;
+      left: 60px;
+      width: 960px;
+      height: 1200px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.85);
+      border: 3px solid #222936;
+      background-color: #060912;
+    }
+
+    .photo-plate img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform-origin: center center;
+    }
+
+    /* Vignette & Paper texture overlay */
+    .texture-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 0 120px rgba(0,0,0,0.7);
+      pointer-events: none;
+    }
+
+    /* Top HUD / Badge */
+    .top-badge {
+      position: absolute;
+      top: 90px;
+      left: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(13, 17, 23, 0.9);
+      border: 2px solid #FFE619;
+      border-radius: 8px;
+      padding: 10px 24px;
+      z-index: 100;
+    }
+
+    .top-badge .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFE619;
+    }
+
+    .top-badge .text {
+      font-family: 'Space Mono', monospace;
+      font-size: 24px;
+      color: #FFE619;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Highlight box / Callout */
+    .callout-card {
+      position: absolute;
+      bottom: 500px;
+      left: 60px;
+      width: 960px;
+      background: rgba(10, 14, 22, 0.95);
+      border-left: 8px solid #FFE619;
+      padding: 24px 32px;
+      border-radius: 4px;
+      z-index: 50;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .callout-title {
+      font-size: 38px;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+
+    .callout-highlight {
+      color: #FFE619;
+    }
+
+    .callout-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      color: #66CFFF;
+      margin-top: 8px;
+    }
+
+    /* Subtitle area */
+    .subtitle-capsule {
+      position: absolute;
+      bottom: 240px;
+      left: 60px;
+      width: 960px;
+      text-align: center;
+      z-index: 200;
+    }
+
+    .subtitle-text {
+      font-size: 42px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      text-shadow: 0 4px 16px #000000, 0 2px 4px #000000;
+      letter-spacing: 1px;
+    }
+
+    .sub-yellow {
+      color: #FFE619;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="top-badge">
+    <div class="dot"></div>
+    <div class="text">DEEP ARCHIVE // 1667</div>
+  </div>
+
+  <div class="scene-container">
+    <!-- Beat 1: Manhattan 1660 -->
+    <div id="scene-1" class="scene">
+      <div class="photo-plate">
+        <img id="img-1" src="assets/castello_plan_manhattan_1660.jpg" alt="Castello Plan Manhattan 1660">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">NEW AMSTERDAM <span class="callout-highlight">(MANHATTAN)</span></div>
+        <div class="callout-sub">CASTELLO PLAN · 1660</div>
+      </div>
+    </div>
+
+    <!-- Beat 2: Moluccas Map 17th Century -->
+    <div id="scene-2" class="scene">
+      <div class="photo-plate">
+        <img id="img-2" src="assets/moluccas_map_17th.jpg" alt="Moluccas Spice Islands Map">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">BANDA SEA: <span class="callout-highlight">RUN ISLAND</span></div>
+        <div class="callout-sub">COORDINATES: 4°33′S 129°41′E · 3KM LENGTH</div>
+      </div>
+    </div>
+
+    <!-- Beat 3: Vintage Nutmeg 1599 -->
+    <div id="scene-3" class="scene">
+      <div class="photo-plate">
+        <img id="img-3" src="assets/nutmeg_vintage_1599.jpg" alt="Nutmeg engraving 1599">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">MYRISTICA FRAGRANS <span class="callout-highlight">(NUTMEG)</span></div>
+        <div class="callout-sub">VALUED HIGHER THAN PURE GOLD IN LONDON</div>
+      </div>
+    </div>
+
+    <!-- Beat 4: Fresh Nutmeg Mace -->
+    <div id="scene-4" class="scene">
+      <div class="photo-plate">
+        <img id="img-4" src="assets/nutmeg_fruit_fresh.jpg" alt="Nutmeg Fruit">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">THE CRIMSON <span class="callout-highlight">MACE MONOPOLY</span></div>
+        <div class="callout-sub">1 SACK = 1 LONDON LUXURY ESTATE</div>
+      </div>
+    </div>
+
+    <!-- Beat 5: Treaty of Breda 1667 -->
+    <div id="scene-5" class="scene">
+      <div class="photo-plate">
+        <img id="img-5" src="assets/treaty_of_breda_1667.jpg" alt="Treaty of Breda 1667">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">TREATY OF BREDA: <span class="callout-highlight">JULY 31, 1667</span></div>
+        <div class="callout-sub">UTI POSSIDETIS CLAUSE // RUN TRADED FOR NYC</div>
+      </div>
+    </div>
+
+    <!-- Beat 6: Final Comparison (Castello Plan Redux) -->
+    <div id="scene-6" class="scene">
+      <div class="photo-plate">
+        <img id="img-6" src="assets/castello_plan_manhattan_1660.jpg" alt="Manhattan Finale">
+        <div class="texture-overlay"></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">THE <span class="callout-highlight">WORST TRADE</span> IN HISTORY</div>
+        <div class="callout-sub">NYC GDP: $2.1 TRILLION // RUN: QUIET VILLAGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Captions container -->
+  <div class="subtitle-capsule">
+    <div id="subtitle" class="subtitle-text"></div>
+  </div>
+
+  <script>
+    window.masterTl = gsap.timeline({ paused: true });
+
+    // Set initial active
+    gsap.set("#scene-1", { opacity: 1 });
+
+    // Choreograph Ken Burns & Transitions
+    // Total Duration: 34.75s
+    // Beat 1: 0.0 - 2.75s (Castello Plan)
+    masterTl.fromTo("#img-1", { scale: 1.0, x: 0, y: 0 }, { scale: 1.15, x: -30, y: -20, duration: 2.75, ease: "none" }, 0);
+
+    // Transition 1 -> 2: 2.75s (Moluccas Map)
+    masterTl.set("#scene-1", { opacity: 0 }, 2.75);
+    masterTl.set("#scene-2", { opacity: 1 }, 2.75);
+    masterTl.fromTo("#img-2", { scale: 1.05, x: 20, y: 0 }, { scale: 1.25, x: -40, y: -30, duration: 8.86, ease: "none" }, 2.75);
+
+    // Transition 2 -> 3: 11.61s (Vintage Nutmeg 1599)
+    masterTl.set("#scene-2", { opacity: 0 }, 11.61);
+    masterTl.set("#scene-3", { opacity: 1 }, 11.61);
+    masterTl.fromTo("#img-3", { scale: 1.0, y: 0 }, { scale: 1.18, y: -40, duration: 4.26, ease: "none" }, 11.61);
+
+    // Transition 3 -> 4: 15.87s (Fresh Nutmeg)
+    masterTl.set("#scene-3", { opacity: 0 }, 15.87);
+    masterTl.set("#scene-4", { opacity: 1 }, 15.87);
+    masterTl.fromTo("#img-4", { scale: 1.0, x: 0 }, { scale: 1.20, x: 30, y: -20, duration: 5.52, ease: "none" }, 15.87);
+
+    // Transition 4 -> 5: 21.39s (Treaty of Breda)
+    masterTl.set("#scene-4", { opacity: 0 }, 21.39);
+    masterTl.set("#scene-5", { opacity: 1 }, 21.39);
+    masterTl.fromTo("#img-5", { scale: 1.0, y: 0 }, { scale: 1.22, y: -50, duration: 5.25, ease: "none" }, 21.39);
+
+    // Transition 5 -> 6: 26.64s (Final Manhattan Contrast)
+    masterTl.set("#scene-5", { opacity: 0 }, 26.64);
+    masterTl.set("#scene-6", { opacity: 1 }, 26.64);
+    masterTl.fromTo("#img-6", { scale: 1.2, x: -40, y: -30 }, { scale: 1.35, x: 20, y: 10, duration: 8.11, ease: "none" }, 26.64);
+
+    // Subtitles synced to manifest
+    const subtitles = [
+      { start: 0.50, end: 2.40, html: "YOU THINK MANHATTAN WAS BOUGHT WITH <span class='sub-yellow'>CASH</span>" },
+      { start: 2.75, end: 8.15, html: "BRITAIN <span class='sub-yellow'>TRADED NEW YORK</span> FOR A 3KM ISLAND" },
+      { start: 8.50, end: 11.61, html: "<span class='sub-yellow'>RUN ISLAND:</span> THE ONLY NUTMEG ON EARTH" },
+      { start: 11.96, end: 15.52, html: "NUTMEG WAS WORTH <span class='sub-yellow'>MORE THAN GOLD</span>" },
+      { start: 15.87, end: 21.04, html: "39 DEFENDERS UNDER <span class='sub-yellow'>NAVAL SIEGE</span>" },
+      { start: 21.39, end: 26.29, html: "1667 <span class='sub-yellow'>TREATY OF BREDA</span> SEALED THE DEAL" },
+      { start: 26.64, end: 31.61, html: "MANHATTAN BECAME <span class='sub-yellow'>WALL STREET</span>" },
+      { start: 31.96, end: 34.40, html: "THE <span class='sub-yellow'>WORST TRADE</span> IN HUMAN HISTORY" }
+    ];
+
+    subtitles.forEach((s) => {
+      masterTl.call(() => {
+        document.getElementById("subtitle").innerHTML = s.html;
+      }, null, s.start);
+      masterTl.call(() => {
+        if (document.getElementById("subtitle").innerHTML === s.html) {
+          document.getElementById("subtitle").innerHTML = "";
+        }
+      }, null, s.end);
+    });
+  </script>
+</body>
+</html>

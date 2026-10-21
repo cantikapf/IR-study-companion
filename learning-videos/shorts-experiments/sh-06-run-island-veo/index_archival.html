@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vox Authentic Archival Shorts</title>
+  <style>
+    @font-face {
+      font-family: 'Archivo Black';
+      src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: #fbfaf8; /* Vox Ground */
+      color: #1a1a1a;
+      font-family: 'Archivo Black', sans-serif;
+      position: relative;
+    }
+
+    /* Subtle Paper Texture */
+    .paper-grain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8), rgba(240,238,233,0.95));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Top HUD / Archival Tag */
+    .top-badge {
+      position: absolute;
+      top: 90px;
+      left: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #1a1a1a;
+      border-radius: 6px;
+      padding: 12px 28px;
+      z-index: 100;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .top-badge .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFE619;
+    }
+
+    .top-badge .text {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      color: #FFE619;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Scene Container */
+    .scene-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      z-index: 10;
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scene.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* The Vox Yellow Carrier Circle */
+    .yellow-carrier {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background-color: #FFE619;
+      top: 500px;
+      left: 280px;
+      z-index: 12;
+      box-shadow: 0 20px 50px rgba(255, 230, 25, 0.4);
+    }
+
+    /* Paper Cut-out Plate */
+    .archival-plate {
+      position: absolute;
+      top: 260px;
+      left: 70px;
+      width: 940px;
+      height: 1100px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18), 0 5px 15px rgba(0,0,0,0.1);
+      transform-origin: center center;
+      z-index: 15;
+    }
+
+    .archival-img-box {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #ece8df;
+      position: relative;
+    }
+
+    .archival-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Editorial Tag Chip */
+    .editorial-chip {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      font-size: 20px;
+      letter-spacing: 1px;
+      z-index: 20;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .editorial-chip span {
+      color: #FFE619;
+    }
+
+    /* Subtitle Container - strictly at MarginV: 400 (safe zone) */
+    .subtitle-capsule {
+      position: absolute;
+      bottom: 400px;
+      left: 60px;
+      width: 960px;
+      text-align: center;
+      z-index: 200;
+    }
+
+    .subtitle-text {
+      font-size: 42px;
+      line-height: 1.25;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 
+        -3px -3px 0 #1a1a1a,  
+         3px -3px 0 #1a1a1a,
+        -3px  3px 0 #1a1a1a,
+         3px  3px 0 #1a1a1a,
+         0 6px 20px rgba(0,0,0,0.8);
+    }
+
+    .sub-yellow {
+      color: #FFE619;
+      text-shadow: 
+        -3px -3px 0 #1a1a1a,  
+         3px -3px 0 #1a1a1a,
+        -3px  3px 0 #1a1a1a,
+         3px  3px 0 #1a1a1a,
+         0 6px 20px rgba(0,0,0,0.8);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="paper-grain"></div>
+
+  <div class="top-badge">
+    <div class="dot"></div>
+    <div class="text">HISTORICAL EVIDENCE // 1667</div>
+  </div>
+
+  <div class="scene-container">
+    <!-- Scene 1: Castello Plan Manhattan 1660 -->
+    <div id="scene-1" class="scene">
+      <div class="yellow-carrier" id="circle-1"></div>
+      <div class="archival-plate" id="plate-1" style="transform: rotate(-1.5deg);">
+        <div class="archival-img-box">
+          <img id="img-1" src="assets/castello_plan_manhattan_1660.jpg" alt="Castello Plan Manhattan 1660">
+        </div>
+        <div class="editorial-chip">FIG. 01 // <span>NEW AMSTERDAM (MANHATTAN) · 1660</span></div>
+      </div>
+    </div>
+
+    <!-- Scene 2: Moluccas Map 17th Century (Run Island) -->
+    <div id="scene-2" class="scene">
+      <div class="yellow-carrier" id="circle-2" style="left: 200px; top: 460px;"></div>
+      <div class="archival-plate" id="plate-2" style="transform: rotate(2deg);">
+        <div class="archival-img-box">
+          <img id="img-2" src="assets/moluccas_map_17th.jpg" alt="Moluccas Spice Islands Map">
+        </div>
+        <div class="editorial-chip">FIG. 02 // <span>BANDA SEA: RUN ISLAND · 3KM</span></div>
+      </div>
+    </div>
+
+    <!-- Scene 3: Vintage Nutmeg 1599 (Rijksmuseum) -->
+    <div id="scene-3" class="scene">
+      <div class="yellow-carrier" id="circle-3" style="left: 320px; top: 520px;"></div>
+      <div class="archival-plate" id="plate-3" style="transform: rotate(-1deg);">
+        <div class="archival-img-box">
+          <img id="img-3" src="assets/nutmeg_vintage_1599.jpg" alt="Nutmeg engraving 1599">
+        </div>
+        <div class="editorial-chip">FIG. 03 // <span>RIJKSMUSEUM · BANDA NUTMEG 1599</span></div>
+      </div>
+    </div>
+
+    <!-- Scene 4: Fresh Botanical Nutmeg Fruit & Mace -->
+    <div id="scene-4" class="scene">
+      <div class="yellow-carrier" id="circle-4" style="left: 240px; top: 480px;"></div>
+      <div class="archival-plate" id="plate-4" style="transform: rotate(1.5deg);">
+        <div class="archival-img-box">
+          <img id="img-4" src="assets/nutmeg_fruit_fresh.jpg" alt="Nutmeg Fruit and Mace">
+        </div>
+        <div class="editorial-chip">FIG. 04 // <span>CRIMSON MACE: VALUED ABOVE GOLD</span></div>
+      </div>
+    </div>
+
+    <!-- Scene 5: Treaty of Breda 1667 (The Original Document) -->
+    <div id="scene-5" class="scene">
+      <div class="yellow-carrier" id="circle-5" style="left: 280px; top: 500px;"></div>
+      <div class="archival-plate" id="plate-5" style="transform: rotate(-2deg);">
+        <div class="archival-img-box">
+          <img id="img-5" src="assets/treaty_of_breda_1667.jpg" alt="Treaty of Breda 1667 Document">
+        </div>
+        <div class="editorial-chip">FIG. 05 // <span>TREATY OF BREDA · JULY 31, 1667</span></div>
+      </div>
+    </div>
+
+    <!-- Scene 6: Manhattan Redux (Finale) -->
+    <div id="scene-6" class="scene">
+      <div class="yellow-carrier" id="circle-6" style="left: 260px; top: 510px;"></div>
+      <div class="archival-plate" id="plate-6" style="transform: rotate(1deg);">
+        <div class="archival-img-box">
+          <img id="img-6" src="assets/castello_plan_manhattan_1660.jpg" alt="Manhattan 1660 Redux">
+        </div>
+        <div class="editorial-chip">VERDICT // <span>THE WORST TRADE IN HISTORY</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subtitle-capsule">
+    <div id="subtitle" class="subtitle-text"></div>
+  </div>
+
+  <script>
+    window.masterTl = gsap.timeline({ paused: true });
+
+    // Initial setup
+    gsap.set("#scene-1", { opacity: 1 });
+
+    // Scene 1: 0.0 - 2.75s (Castello Plan Manhattan)
+    masterTl.fromTo("#img-1", { scale: 1.0, x: 0, y: 0 }, { scale: 1.15, x: -20, y: -15, duration: 2.75, ease: "none" }, 0);
+    masterTl.fromTo("#circle-1", { scale: 0.8, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }, 0.2);
+
+    // Transition 1 -> 2: 2.75s (Moluccas Map)
+    masterTl.set("#scene-1", { opacity: 0 }, 2.75);
+    masterTl.set("#scene-2", { opacity: 1 }, 2.75);
+    masterTl.fromTo("#circle-2", { scale: 0.5 }, { scale: 1.0, duration: 0.6, ease: "power2.out" }, 2.75);
+    masterTl.fromTo("#img-2", { scale: 1.05, x: 20, y: 0 }, { scale: 1.25, x: -35, y: -25, duration: 8.86, ease: "none" }, 2.75);
+
+    // Transition 2 -> 3: 11.61s (Vintage Nutmeg 1599)
+    masterTl.set("#scene-2", { opacity: 0 }, 11.61);
+    masterTl.set("#scene-3", { opacity: 1 }, 11.61);
+    masterTl.fromTo("#circle-3", { scale: 0.6 }, { scale: 1.0, duration: 0.5, ease: "back.out(1.5)" }, 11.61);
+    masterTl.fromTo("#img-3", { scale: 1.0, y: 0 }, { scale: 1.18, y: -30, duration: 4.26, ease: "none" }, 11.61);
+
+    // Transition 3 -> 4: 15.87s (Fresh Nutmeg Fruit)
+    masterTl.set("#scene-3", { opacity: 0 }, 15.87);
+    masterTl.set("#scene-4", { opacity: 1 }, 15.87);
+    masterTl.fromTo("#circle-4", { scale: 0.6 }, { scale: 1.0, duration: 0.5, ease: "power2.out" }, 15.87);
+    masterTl.fromTo("#img-4", { scale: 1.0, x: 0 }, { scale: 1.20, x: 25, y: -20, duration: 5.52, ease: "none" }, 15.87);
+
+    // Transition 4 -> 5: 21.39s (Treaty of Breda 1667)
+    masterTl.set("#scene-4", { opacity: 0 }, 21.39);
+    masterTl.set("#scene-5", { opacity: 1 }, 21.39);
+    masterTl.fromTo("#circle-5", { scale: 0.7 }, { scale: 1.0, duration: 0.5, ease: "back.out(1.5)" }, 21.39);
+    masterTl.fromTo("#img-5", { scale: 1.0, y: 0 }, { scale: 1.20, y: -40, duration: 5.25, ease: "none" }, 21.39);
+
+    // Transition 5 -> 6: 26.64s (Finale Contrast)
+    masterTl.set("#scene-5", { opacity: 0 }, 26.64);
+    masterTl.set("#scene-6", { opacity: 1 }, 26.64);
+    masterTl.fromTo("#circle-6", { scale: 0.5 }, { scale: 1.1, duration: 0.5, ease: "back.out(2)" }, 26.64);
+    masterTl.fromTo("#img-6", { scale: 1.2, x: -30, y: -20 }, { scale: 1.35, x: 20, y: 10, duration: 8.11, ease: "none" }, 26.64);
+
+    // Synchronized Subtitles
+    const subtitles = [
+      { start: 0.50, end: 2.40, html: "YOU THINK MANHATTAN WAS BOUGHT WITH <span class='sub-yellow'>CASH</span>" },
+      { start: 2.75, end: 8.15, html: "BRITAIN <span class='sub-yellow'>TRADED NEW YORK</span> FOR A 3KM ISLAND" },
+      { start: 8.50, end: 11.61, html: "<span class='sub-yellow'>RUN ISLAND:</span> THE ONLY NUTMEG ON EARTH" },
+      { start: 11.96, end: 15.52, html: "NUTMEG WAS WORTH <span class='sub-yellow'>MORE THAN GOLD</span>" },
+      { start: 15.87, end: 21.04, html: "39 DEFENDERS UNDER <span class='sub-yellow'>NAVAL SIEGE</span>" },
+      { start: 21.39, end: 26.29, html: "1667 <span class='sub-yellow'>TREATY OF BREDA</span> SEALED THE DEAL" },
+      { start: 26.64, end: 31.61, html: "MANHATTAN BECAME <span class='sub-yellow'>WALL STREET</span>" },
+      { start: 31.96, end: 34.40, html: "THE <span class='sub-yellow'>WORST TRADE</span> IN HUMAN HISTORY" }
+    ];
+
+    subtitles.forEach((s) => {
+      masterTl.call(() => {
+        document.getElementById("subtitle").innerHTML = s.html;
+      }, null, s.start);
+      masterTl.call(() => {
+        if (document.getElementById("subtitle").innerHTML === s.html) {
+          document.getElementById("subtitle").innerHTML = "";
+        }
+      }, null, s.end);
+    });
+  </script>
+</body>
+</html>

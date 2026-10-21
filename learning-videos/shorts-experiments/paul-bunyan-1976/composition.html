@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+<title>Operation Paul Bunyan (1976) - @IRinANutshell</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background-color: #060911;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  #viewport {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+  }
+
+  /* Layer B: Adaptive 3D Staging Backgrounds */
+  .stage-layer {
+    position: absolute;
+    inset: 0;
+    width: 1080px;
+    height: 1920px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+  }
+  #stage-1 { background-image: url('assets/stage_1_dmz_bunker.png'); display: block; opacity: 1; }
+  #stage-2 { background-image: url('assets/stage_2_pentagon.png'); }
+  #stage-3 { background-image: url('assets/stage_3_carrier_deck.png'); }
+  #stage-4 { background-image: url('assets/stage_4_dmz_gravel.png'); }
+
+  /* Top Clean Human Context Header (Zero-Clutter) */
+  #top-hud {
+    position: absolute;
+    top: 125px;
+    left: 60px;
+    right: 60px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+  }
+  .hud-pill {
+    background: rgba(10, 14, 22, 0.94);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 28px;
+    padding: 10px 36px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  }
+
+  /* Layer C: Flat Vector HUD & Telemetry */
+  #layer-c {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 15;
+  }
+
+  /* Troop Counter Card (Motion Prompt #007 Count-up) */
+  #counter-box {
+    position: absolute;
+    top: 810px;
+    left: 120px;
+    width: 840px;
+    background: rgba(12, 18, 28, 0.96);
+    border: 4px solid #f4d06f;
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 12px 12px 0px #000000;
+    opacity: 0;
+    display: none;
+    transform-origin: center center;
+  }
+  .counter-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  .counter-value {
+    font-size: 92px;
+    font-weight: 900;
+    color: #f4d06f;
+    margin: 4px 0;
+    font-family: "Arial Black", Impact, sans-serif;
+    letter-spacing: 2px;
+  }
+  .counter-sub {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+
+  /* Naval Radar Sweep */
+  .radar-container {
+    position: absolute;
+    top: 480px;
+    left: 290px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px dashed rgba(0, 210, 255, 0.55);
+    background: rgba(0, 20, 40, 0.18);
+    opacity: 0;
+    display: none;
+    transform-origin: center center;
+  }
+  .radar-sweep-arm {
+    position: absolute;
+    top: 0;
+    left: 248px;
+    width: 4px;
+    height: 250px;
+    background: linear-gradient(180deg, #00d2ff 0%, transparent 100%);
+    transform-origin: bottom center;
+  }
+
+  /* Payoff Outro Stat Badges (Scene 4) */
+  .outro-stat {
+    position: absolute;
+    left: 80px;
+    width: 920px;
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 12px 12px 0px #000000;
+    opacity: 0;
+    display: none;
+    transform-origin: center center;
+  }
+  #stamp-minutes {
+    top: 760px;
+    height: 110px;
+    background: #1b6a38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 900;
+    font-family: "Arial Black", Impact, sans-serif;
+    color: #ffe600;
+    letter-spacing: 2px;
+  }
+  #stamp-bullets {
+    top: 895px;
+    height: 110px;
+    background: #c1121f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    font-weight: 900;
+    font-family: "Arial Black", Impact, sans-serif;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+  /* Layer A: Photo Stickers & Cutouts */
+  #layer-a {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 25;
+  }
+
+  /* Hook Ladder Blocks (@90secondslab 0-blur hard shadow mandatory!) */
+  .hook-block {
+    position: absolute;
+    left: 80px;
+    width: 920px;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 8px solid #ffffff;
+    box-shadow: 12px 12px 0px #000000;
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    opacity: 0;
+    display: none;
+    transform-origin: center center;
+  }
+  #hook-1 {
+    top: 780px;
+    background-color: #0c1018;
+    color: #ffe600;
+  }
+  #hook-2 {
+    top: 940px;
+    background-color: #c1121f;
+    color: #ffffff;
+  }
+  #hook-3 {
+    top: 1100px;
+    background-color: #f8fafc;
+    color: #0b0f19;
+  }
+
+  /* Cutout Stickers */
+  .sticker-prop {
+    position: absolute;
+    transform-origin: center center;
+    opacity: 0;
+    display: none;
+  }
+
+  #sticker-tree {
+    top: 190px;
+    left: 60px;
+    width: 960px;
+  }
+
+  #sticker-confrontation {
+    top: 200px;
+    left: 80px;
+    width: 920px;
+  }
+
+  #sticker-axe {
+    top: 860px;
+    left: 280px;
+    width: 520px;
+  }
+
+  #sticker-ford {
+    top: 430px;
+    left: 70px;
+    width: 940px;
+  }
+
+  #sticker-stump {
+    top: 215px;
+    left: 100px;
+    width: 880px;
+  }
+
+  #sticker-b52 {
+    top: 210px;
+    left: 60px;
+    width: 960px;
+  }
+
+  #sticker-f4 {
+    top: 480px;
+    left: 80px;
+    width: 540px;
+  }
+
+  #sticker-f4-wingman {
+    top: 530px;
+    left: 460px;
+    width: 540px;
+  }
+
+  #sticker-midway {
+    top: 790px;
+    left: 80px;
+    width: 920px;
+  }
+
+  /* Bottom Subtitles Container (Safe Area: strictly above bottom 380px -> set to bottom: 430px) */
+  #subtitle-box {
+    position: absolute;
+    bottom: 430px;
+    left: 60px;
+    right: 60px;
+    height: 110px;
+    background: rgba(10, 14, 24, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1.35;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+    z-index: 50;
+  }
+
+  /* Channel Watermark Pill (Outro) */
+  .channel-pill {
+    position: absolute;
+    top: 1040px;
+    left: 540px;
+    transform: translateX(-50%);
+    background: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    padding: 12px 36px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    box-shadow: 8px 8px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 55;
+  }
+</style>
+</head>
+<body>
+<div id="viewport">
+  <audio id="master-audio" src="audio/voiceover_master.wav" preload="auto"></audio>
+
+  <!-- Layer B: Adaptive 3D Staging -->
+  <div id="stage-1" class="stage-layer"></div>
+  <div id="stage-2" class="stage-layer"></div>
+  <div id="stage-3" class="stage-layer"></div>
+  <div id="stage-4" class="stage-layer"></div>
+
+  <!-- Top Tactical Clean HUD -->
+  <div id="top-hud">
+    <div class="hud-pill" id="hud-title">OPERATION PAUL BUNYAN (1976)</div>
+  </div>
+
+  <!-- Layer C: Flat Vectors -->
+  <div id="layer-c">
+    <div id="counter-box">
+      <div class="counter-title">MAXIMUM RETALIATION FORCE</div>
+      <div class="counter-value" id="troop-counter">+0</div>
+      <div class="counter-sub">COMBAT TROOPS & 27 GUNSHIPS</div>
+    </div>
+
+    <div class="radar-container" id="radar">
+      <div class="radar-sweep-arm" id="radar-arm"></div>
+    </div>
+
+    <!-- Outro Stat Stamps -->
+    <div id="stamp-minutes" class="outro-stat">42 MINUTES</div>
+    <div id="stamp-bullets" class="outro-stat">0 BULLETS FIRED</div>
+  </div>
+
+  <!-- Layer A: Photo Stickers & Cutouts -->
+  <div id="layer-a">
+    <!-- Hook Ladder (0-3.5s) -->
+    <div id="hook-1" class="hook-block">THE DEADLIEST</div>
+    <div id="hook-2" class="hook-block">TREE TRIMMING</div>
+    <div id="hook-3" class="hook-block">IN HISTORY</div>
+
+    <!-- Hero Archival Cutout Plates & Aircraft -->
+    <img id="sticker-tree" class="sticker-prop" src="assets/sticker_dmz_tree_large.png" alt="DMZ Tree Large">
+    <img id="sticker-confrontation" class="sticker-prop" src="assets/sticker_confrontation.png" alt="DMZ Axe Murder Confrontation">
+    <img id="sticker-axe" class="sticker-prop" src="assets/sticker_axe_card.png" alt="Confiscated Axe Prop">
+    <img id="sticker-ford" class="sticker-prop" src="assets/sticker_ford_signing_large.png" alt="Gerald Ford Oval Office Signing">
+    <img id="sticker-stump" class="sticker-prop" src="assets/sticker_dmz_stump_fixed.png" alt="Severed Poplar Stump Outro">
+    
+    <img id="sticker-b52" class="sticker-prop" src="assets/sticker_b52_silhouette.png" alt="B-52 Silhouette">
+    <img id="sticker-f4" class="sticker-prop" src="assets/sticker_f4_silhouette.png" alt="F-4 Silhouette">
+    <img id="sticker-f4-wingman" class="sticker-prop" src="assets/sticker_f4_silhouette.png" alt="F-4 Wingman Silhouette">
+    <img id="sticker-midway" class="sticker-prop" src="assets/sticker_uss_midway_clean.png" alt="USS Midway Clean Card">
+  </div>
+
+  <!-- Channel Watermark -->
+  <div class="channel-pill" id="channel-badge">@IRinANutshell</div>
+
+  <!-- Bottom Captions -->
+  <div id="subtitle-box">
+    <span id="subtitle-text">In 1976, the United States deployed an entire war armada... just to cut down a single tree.</span>
+  </div>
+</div>
+
+<script>
+  // Master GSAP Timeline (Total 41.5s)
+  const tl = gsap.timeline({ paused: true });
+  window.masterTl = tl;
+
+  const sub = document.getElementById('subtitle-text');
+  const hudTitle = document.getElementById('hud-title');
+  const troopElem = document.getElementById('troop-counter');
+
+  // Radar continuous rotation
+  gsap.to('#radar-arm', { rotation: 360, repeat: -1, duration: 2, ease: 'none' });
+
+  // =========================================================================
+  // SCENE 1: THE HOOK LADDER & THE INCIDENT (00.00s - 14.80s)
+  // =========================================================================
+  tl.set('#stage-1', { display: 'block', opacity: 1 }, 0);
+  tl.set('#sticker-tree', { display: 'block', opacity: 1, scale: 0.95, x: 0, y: 0, rotation: -2 }, 0);
+
+  // Hook Ladder Blocks display block & animation
+  tl.set(['#hook-1', '#hook-2', '#hook-3'], { display: 'flex' }, 0);
+  tl.fromTo('#hook-1', { scale: 1.35, opacity: 0, y: -40, rotation: 2 }, { scale: 1, opacity: 1, y: 0, rotation: 2, duration: 0.26, ease: 'back.out(2)' }, 0.0);
+  tl.fromTo('#hook-2', { scale: 1.35, opacity: 0, y: -40, rotation: -2.5 }, { scale: 1, opacity: 1, y: 0, rotation: -2.5, duration: 0.26, ease: 'back.out(2)' }, 1.0);
+  tl.fromTo('#hook-3', { scale: 1.35, opacity: 0, y: -40, rotation: 3 }, { scale: 1, opacity: 1, y: 0, rotation: 3, duration: 0.26, ease: 'back.out(2)' }, 2.0);
+
+  // Paper slide-wipe transition for Hook Ladder (Motion Prompt #045 Wipe)
+  tl.to(['#hook-1', '#hook-2', '#hook-3'], { x: 1200, opacity: 0, duration: 0.32, ease: 'power3.in' }, 3.5);
+  tl.set(['#hook-1', '#hook-2', '#hook-3'], { display: 'none' }, 3.85);
+
+  // Wipe out Scene 1 Hook at 7.00s via paper slide-wipe
+  tl.to('#sticker-tree', { x: -1200, opacity: 0, duration: 0.35, ease: 'power3.in' }, 7.0);
+  tl.set('#sticker-tree', { display: 'none' }, 7.35);
+
+  // Line 2 audio starts at 7.54s (Scene 1b: Fatal Clash at Checkpoint #3)
+  tl.call(() => {
+    sub.innerText = "It started when North Korean soldiers killed two American officers attempting to trim a poplar tree blocking the DMZ view.";
+    hudTitle.innerText = "PANMUNJOM // AUGUST 18, 1976";
+  }, null, 7.54);
+
+  tl.set(['#sticker-confrontation', '#sticker-axe'], { display: 'block' }, 7.54);
+  tl.fromTo('#sticker-confrontation', { x: 1200, opacity: 1, rotation: 5 }, { x: 0, rotation: -2, duration: 0.55, ease: 'power2.out' }, 7.54);
+  tl.fromTo('#sticker-axe', { scale: 0.3, opacity: 0, y: -400, rotation: -14 }, { scale: 1, opacity: 1, y: 0, rotation: 4, duration: 0.45, ease: 'back.out(2)' }, 8.3);
+
+  // Wipe out Scene 1b at 14.80s
+  tl.to(['#sticker-confrontation', '#sticker-axe'], { x: -1400, opacity: 0, duration: 0.35, ease: 'power3.in' }, 14.8);
+  tl.to('#stage-1', { opacity: 0, duration: 0.35 }, 14.8);
+  tl.set(['#sticker-confrontation', '#sticker-axe', '#stage-1'], { display: 'none' }, 15.15);
+
+  // =========================================================================
+  // SCENE 2: THE RETALIATION ORDER & PENTAGON WAR ROOM (15.12s - 25.30s)
+  // =========================================================================
+  tl.call(() => {
+    sub.innerText = "Washington refused to back down. They launched Operation Paul Bunyan.";
+    hudTitle.innerText = "THE WHITE HOUSE // AUG 20, 1976";
+  }, null, 15.12);
+
+  tl.set(['#stage-2', '#sticker-ford'], { display: 'block' }, 15.12);
+  tl.to('#stage-2', { opacity: 1, duration: 0.4 }, 15.12);
+  tl.fromTo('#sticker-ford', { x: 1200, opacity: 1, rotation: 6, y: 0, scale: 1 }, { x: 0, y: 0, scale: 1, rotation: -2, duration: 0.55, ease: 'back.out(1.4)' }, 15.2);
+
+  // Line 4 audio starts at 19.51s
+  tl.call(() => {
+    sub.innerText = "813 combat engineers and troops marched in. 27 helicopters circled above.";
+    hudTitle.innerText = "PENTAGON // RETALIATION ORDER";
+  }, null, 19.51);
+
+  // Smoothly shift Ford card UP to make room for the +813 Counter box below
+  tl.to('#sticker-ford', { y: -235, scale: 0.90, rotation: -1.5, duration: 0.65, ease: 'power2.inOut' }, 19.51);
+  tl.set('#counter-box', { display: 'block' }, 19.85);
+  tl.fromTo('#counter-box', { scale: 0.7, opacity: 0, y: 80 }, { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.5)' }, 19.9);
+
+  // Motion Prompt #007 Count-up (+0 -> +813)
+  const countObj = { val: 0 };
+  tl.to(countObj, {
+    val: 813,
+    duration: 2.2,
+    ease: 'power2.out',
+    onUpdate: () => {
+      troopElem.innerText = "+" + Math.floor(countObj.val);
+    }
+  }, 19.8);
+
+  // Wipe out Scene 2 at 25.30s
+  tl.to(['#sticker-ford', '#counter-box'], { y: -1600, opacity: 0, duration: 0.35, ease: 'power3.in' }, 25.3);
+  tl.to('#stage-2', { opacity: 0, duration: 0.35 }, 25.3);
+  tl.set(['#sticker-ford', '#counter-box', '#stage-2'], { display: 'none' }, 25.65);
+
+  // =========================================================================
+  // SCENE 3: OVERKILL AIR & NAVAL ARMADA (25.64s - 32.20s)
+  // =========================================================================
+  tl.call(() => {
+    sub.innerText = "Behind them? Nuclear-capable B-52 bombers, fighter jets, and an aircraft carrier battle group stood ready.";
+    hudTitle.innerText = "TASK FORCE 77 // SEA OF JAPAN";
+  }, null, 25.64);
+
+  tl.set(['#stage-3', '#radar', '#sticker-b52', '#sticker-f4', '#sticker-f4-wingman', '#sticker-midway'], { display: 'block' }, 25.64);
+  tl.to('#stage-3', { opacity: 1, duration: 0.35 }, 25.64);
+  tl.fromTo('#radar', { scale: 0, opacity: 0 }, { scale: 1, opacity: 0.85, duration: 0.5, ease: 'power2.out' }, 25.7);
+
+  // Aircraft cutouts swoop in with formation tilt
+  tl.fromTo('#sticker-b52', { x: -1000, y: -40, opacity: 1, rotation: -4 }, { x: 0, y: 0, rotation: -4, duration: 0.7, ease: 'power2.out' }, 25.8);
+  tl.fromTo('#sticker-f4', { x: -800, y: -20, opacity: 1, rotation: 6 }, { x: 0, y: 0, rotation: 6, duration: 0.65, ease: 'power2.out' }, 26.6);
+  tl.fromTo('#sticker-f4-wingman', { x: 800, y: -20, opacity: 1, rotation: -4 }, { x: 0, y: 0, rotation: -4, duration: 0.65, ease: 'power2.out' }, 26.8);
+  tl.fromTo('#sticker-midway', { y: 600, opacity: 1, rotation: -2.5 }, { y: 0, rotation: -2.5, duration: 0.65, ease: 'back.out(1.2)' }, 27.8);
+
+  // Push transition out Scene 3 at 32.20s
+  tl.to(['#sticker-b52', '#sticker-f4', '#sticker-f4-wingman', '#sticker-midway', '#radar'], { y: -1800, opacity: 0, duration: 0.38, ease: 'power3.in' }, 32.2);
+  tl.to('#stage-3', { opacity: 0, duration: 0.38 }, 32.2);
+  tl.set(['#sticker-b52', '#sticker-f4', '#sticker-f4-wingman', '#sticker-midway', '#radar', '#stage-3'], { display: 'none' }, 32.58);
+
+  // =========================================================================
+  // SCENE 4: THE SILENT TAKEDOWN & OUTRO PAYOFF (32.39s - 41.50s)
+  // =========================================================================
+  tl.call(() => {
+    sub.innerText = "North Korea watched in dead silence. In 42 minutes, the tree was gone. Zero bullets fired.";
+    hudTitle.innerText = "THE DMZ // ZERO CASUALTIES";
+  }, null, 32.39);
+
+  tl.set(['#stage-4', '#sticker-stump', '#stamp-minutes', '#stamp-bullets'], { display: 'block' }, 32.39);
+  tl.to('#stage-4', { opacity: 1, duration: 0.4 }, 32.39);
+  tl.fromTo('#sticker-stump', { scale: 0.8, opacity: 0, rotation: -5 }, { scale: 1, opacity: 1, rotation: -1.5, duration: 0.5, ease: 'back.out(1.5)' }, 32.45);
+
+  // Payoff Stat Stamps slam down
+  tl.fromTo('#stamp-minutes', { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(2)' }, 33.2);
+  tl.fromTo('#stamp-bullets', { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(2)' }, 34.0);
+
+  // Line 7 outro CTA at 38.43s
+  tl.call(() => {
+    sub.innerText = "Discover more untold geopolitics on IR in a Nutshell.";
+    hudTitle.innerText = "IR IN A NUTSHELL // SUBSCRIBE";
+  }, null, 38.43);
+
+  // Motion Prompt #096 Floating animation on Channel Watermark
+  tl.set('#channel-badge', { display: 'block' }, 38.43);
+  tl.fromTo('#channel-badge', { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.5)' }, 38.43);
+  tl.to('#channel-badge', { y: -10, repeat: -1, yoyo: true, duration: 0.8, ease: 'sine.inOut' }, 38.83);
+
+  // =========================================================================
+  // Deterministic Stepper Support: ?t=TIMESTAMP
+  // =========================================================================
+  const urlParams = new URLSearchParams(window.location.search);
+  const seekT = parseFloat(urlParams.get('t'));
+  if (!isNaN(seekT)) {
+    tl.time(seekT);
+  }
+</script>
+</body>
+</html>

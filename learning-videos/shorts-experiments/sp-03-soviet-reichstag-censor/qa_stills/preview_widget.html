@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 0;
+      color: var(--foreground);
+    }
+    .thumb-hero {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .thumb-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+      margin: 8px 0 4px 0;
+    }
+    .shots-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .shot-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--card);
+      display: flex;
+      flex-direction: column;
+    }
+    .shot-card img {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      display: block;
+    }
+    .shot-info {
+      padding: 6px 8px;
+      font-size: 11px;
+      line-height: 1.3;
+    }
+    .shot-timestamp {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .shot-label {
+      color: var(--muted-foreground);
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="section-title">Official YouTube Thumbnail (1080p Split-Screen Brush Mask)</div>
+    <div class="thumb-hero">
+      <img src="learning-videos/posters/SP03_Reichstag_Censor_Thumbnail.png" alt="YouTube Thumbnail">
+    </div>
+
+    <div class="section-title">Story Timeline & Camera Cuts (5 Key Frames)</div>
+    <div class="shots-grid">
+      <div class="shot-card">
+        <img src="learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/qa_stills/01_poster_frozen.jpg" alt="Frame 0.0s">
+        <div class="shot-info">
+          <div class="shot-timestamp">0.0s · Cold Open</div>
+          <div class="shot-label">Frozen Print (Shutter SFX)</div>
+        </div>
+      </div>
+      <div class="shot-card">
+        <img src="learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/qa_stills/02_hook_wrist_pan.jpg" alt="Frame 5.0s">
+        <div class="shot-info">
+          <div class="shot-timestamp">5.0s · Hook Snap</div>
+          <div class="shot-label">Pan to Ismailov's Wrist</div>
+        </div>
+      </div>
+      <div class="shot-card">
+        <img src="learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/qa_stills/03_berlin_skyline.jpg" alt="Frame 12.0s">
+        <div class="shot-info">
+          <div class="shot-timestamp">12.0s · Context</div>
+          <div class="shot-label">Berlin Ruins Panorama</div>
+        </div>
+      </div>
+      <div class="shot-card">
+        <img src="learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/qa_stills/04_deep_punch_wrists.jpg" alt="Frame 21.0s">
+        <div class="shot-info">
+          <div class="shot-timestamp">21.0s · Deep Punch</div>
+          <div class="shot-label">Second Watch Reveal (2.30x)</div>
+        </div>
+      </div>
+      <div class="shot-card">
+        <img src="learning-videos/shorts-experiments/sp-03-soviet-reichstag-censor/qa_stills/05_climax_reveal.jpg" alt="Frame 37.5s">
+        <div class="shot-info">
+          <div class="shot-timestamp">37.5s · Climax</div>
+          <div class="shot-label">50-Year Secret Pull-Back</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

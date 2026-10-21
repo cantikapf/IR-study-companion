@@ -1,0 +1,26 @@
+[
+  {
+    "id": "scene_1_cutaway",
+    "clip": "scene_1_cutaway.mp4",
+    "text": "Inside this giant wooden horse outside Troy, thirty Greek soldiers were sealed alive in thirty-five-degree heat. The hollow pine belly held two cramped tiers where warriors sat in absolute silence.",
+    "start": 0.3,
+    "end": 11.67,
+    "duration": 11.37
+  },
+  {
+    "id": "scene_2_trapdoor",
+    "clip": "scene_4_trapdoor.mp4",
+    "text": "At midnight, Odysseus unlocked a spring-loaded trapdoor beneath the horse, dropping hemp ropes to the cobblestones below.",
+    "start": 12.07,
+    "end": 18.62,
+    "duration": 6.55
+  },
+  {
+    "id": "scene_3_outro",
+    "clip": "scene_5_gates_outro.mp4",
+    "text": "They slipped into the city, opened the gates, and ended a ten-year siege in a single night. Subscribe to IR in a Nutshell.",
+    "start": 19.02,
+    "end": 25.63,
+    "duration": 6.61
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "total_duration": 40.21,
+  "lines": [
+    {
+      "id": "line_1",
+      "scene": 1,
+      "text": "In 1956, America defeated the British Empire... without firing a single bullet.",
+      "start": 0.5,
+      "end": 5.98,
+      "duration": 5.48
+    },
+    {
+      "id": "line_2",
+      "scene": 2,
+      "text": "When Egypt nationalized the Suez Canal, Britain, France, and Israel launched a secret invasion: Operation Musketeer.",
+      "start": 6.3,
+      "end": 13.39,
+      "duration": 7.08
+    },
+    {
+      "id": "line_3",
+      "scene": 3,
+      "text": "They expected American backing. Instead, President Eisenhower was furious. He demanded an immediate unconditional ceasefire.",
+      "start": 13.71,
+      "end": 21.21,
+      "duration": 7.51
+    },
+    {
+      "id": "line_4",
+      "scene": 4,
+      "text": "When London refused, Washington hit their financial jugular: dumping British pounds and blocking emergency IMF loans.",
+      "start": 21.53,
+      "end": 28.98,
+      "duration": 7.45
+    },
+    {
+      "id": "line_5",
+      "scene": 5,
+      "text": "Facing total currency collapse within days, London surrendered. The empire died not by gunfire, but by financial checkmate.",
+      "start": 29.3,
+      "end": 36.87,
+      "duration": 7.57
+    },
+    {
+      "id": "line_6",
+      "scene": 5,
+      "text": "Discover more untold geopolitics on IR in a Nutshell.",
+      "start": 37.19,
+      "end": 40.39,
+      "duration": 3.2
+    }
+  ]
+}

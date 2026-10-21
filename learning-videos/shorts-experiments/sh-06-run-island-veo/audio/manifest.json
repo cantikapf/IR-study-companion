@@ -1,0 +1,77 @@
+{
+  "total_duration": 36.17,
+  "lines": [
+    {
+      "id": "line_01",
+      "text": "You think Manhattan was bought with cash.",
+      "display": "YOU THINK MANHATTAN WAS BOUGHT WITH CASH",
+      "highlight": "CASH",
+      "start": 0.5,
+      "end": 2.4,
+      "duration": 1.9
+    },
+    {
+      "id": "line_02",
+      "text": "In sixteen sixty-seven, Britain traded New York for a three-kilometer island in Indonesia.",
+      "display": "BRITAIN TRADED NEW YORK FOR A 3KM ISLAND",
+      "highlight": "TRADED NEW YORK",
+      "start": 2.75,
+      "end": 8.15,
+      "duration": 5.4
+    },
+    {
+      "id": "line_03",
+      "text": "Pulau Run, hidden in Indonesia's Banda Sea, the world's only source of nutmeg.",
+      "display": "INDONESIA'S BANDA ISLANDS: THE WORLD'S ONLY NUTMEG",
+      "highlight": "BANDA ISLANDS",
+      "start": 8.5,
+      "end": 13.04,
+      "duration": 4.54
+    },
+    {
+      "id": "line_04",
+      "text": "Back then, one sack of nutmeg bought an entire estate in London.",
+      "display": "NUTMEG WAS WORTH MORE THAN GOLD",
+      "highlight": "MORE THAN GOLD",
+      "start": 13.39,
+      "end": 16.95,
+      "duration": 3.56
+    },
+    {
+      "id": "line_05",
+      "text": "Thirty-nine British sailors held the island under Dutch naval siege for fifteen hundred days.",
+      "display": "39 DEFENDERS UNDER NAVAL SIEGE",
+      "highlight": "NAVAL SIEGE",
+      "start": 17.3,
+      "end": 22.47,
+      "duration": 5.16
+    },
+    {
+      "id": "line_06",
+      "text": "To end the war, Britain kept Manhattan, while the Dutch seized full control of the spice trade.",
+      "display": "1667 TREATY OF BREDA SEALED THE DEAL",
+      "highlight": "TREATY OF BREDA",
+      "start": 22.82,
+      "end": 27.72,
+      "duration": 4.91
+    },
+    {
+      "id": "line_07",
+      "text": "Today, Manhattan is worth trillions. And Run is a quiet village of fifteen hundred people.",
+      "display": "MANHATTAN BECAME WALL STREET",
+      "highlight": "WALL STREET",
+      "start": 28.07,
+      "end": 33.04,
+      "duration": 4.97
+    },
+    {
+      "id": "line_08",
+      "text": "The worst real estate trade in human history.",
+      "display": "THE WORST TRADE IN HUMAN HISTORY",
+      "highlight": "WORST TRADE",
+      "start": 33.39,
+      "end": 35.82,
+      "duration": 2.43
+    }
+  ]
+}

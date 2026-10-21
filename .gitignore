@@ -52,10 +52,18 @@ learning-videos/exports/*
 !learning-videos/exports/.gitkeep
 
 # Scratch render artifacts (source stays tracked; outputs are reproducible)
+*.zip
+preview_stills_qa/
 learning-videos/probe/
 learning-videos/shorts-experiments/**/output/
 learning-videos/shorts-experiments/**/checkpoints/
 learning-videos/shorts-experiments/**/raw_videos/
+learning-videos/shorts-experiments/**/snapshots/
+learning-videos/shorts-experiments/**/renders/
+learning-videos/shorts-experiments/**/inspect_frames/
+learning-videos/shorts-experiments/**/mp4_scrub_frames/
+learning-videos/shorts-experiments/**/preview_stills/
+learning-videos/shorts-experiments/**/frames_*/
 prototype/
 
 

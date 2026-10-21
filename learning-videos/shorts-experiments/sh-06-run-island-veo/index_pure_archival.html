@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vox Pure Archival Document Shorts</title>
+  <style>
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('fonts/PlayfairDisplay-normal-700.ttf') format('truetype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('fonts/Inter-600.ttf') format('truetype');
+      font-weight: 600;
+    }
+    @font-face {
+      font-family: 'Archivo Black';
+      src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+      font-weight: 900;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: #08090c;
+      color: #ffffff;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* FULL-BLEED 100% PHOTO STAGE */
+    .viewport {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .stage {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .stage.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .img-box {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform-origin: center center;
+      filter: sepia(0.06) contrast(1.10) brightness(0.92);
+    }
+
+    /* CINEMATIC FILM SCRIMS (CLEAN GRADIENT, ZERO BORDERS) */
+    .topscrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 380px;
+      background: linear-gradient(180deg, rgba(8, 9, 12, 0.96) 0%, rgba(8, 9, 12, 0.70) 50%, rgba(8, 9, 12, 0) 100%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .botscrim {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1080px;
+      height: 600px;
+      background: linear-gradient(0deg, rgba(8, 9, 12, 0.98) 0%, rgba(8, 9, 12, 0.75) 55%, rgba(8, 9, 12, 0) 100%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 90% 85% at 50% 50%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.6) 100%);
+      z-index: 11;
+      pointer-events: none;
+    }
+
+    /* CLEAN EDITORIAL TOP HEADER (TYPOGRAPHIC ONLY, NO BOXES) */
+    #editorial-header {
+      position: absolute;
+      top: 140px;
+      left: 80px;
+      width: 920px;
+      text-align: center;
+      z-index: 25;
+      pointer-events: none;
+    }
+
+    .header-kicker {
+      font-family: 'Inter', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      color: #FFE619;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .header-sub {
+      margin-top: 6px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .header-rule {
+      width: 50px;
+      height: 2px;
+      background: #FFE619;
+      margin: 12px auto 0;
+    }
+
+    /* SUBTITLES - CLEAN VOX EDITORIAL TYPE (MarginV: 380px Safe Zone) */
+    .caption-wrapper {
+      position: absolute;
+      bottom: 380px;
+      left: 80px;
+      width: 920px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    .caption-text {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 42px;
+      line-height: 1.25;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 
+        -3px -3px 0 #000000,  
+         3px -3px 0 #000000,
+        -3px  3px 0 #000000,
+         3px  3px 0 #000000,
+         0 8px 24px rgba(0,0,0,0.95);
+    }
+
+    .sub-yellow {
+      color: #FFE619;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="topscrim"></div>
+  <div class="botscrim"></div>
+  <div class="vignette"></div>
+
+  <!-- Editorial Typographic Header -->
+  <div id="editorial-header">
+    <div class="header-kicker" id="kicker-text">HISTORICAL EVIDENCE · 1667</div>
+    <div class="header-sub" id="sub-text">The Island Traded for New York</div>
+    <div class="header-rule"></div>
+  </div>
+
+  <div class="viewport">
+    <!-- Stage 1: Castello Plan Manhattan 1660 -->
+    <div id="stage-1" class="stage">
+      <div class="img-box">
+        <img id="img-1" src="assets/castello_plan_manhattan_1660.jpg" alt="Castello Plan Manhattan">
+      </div>
+    </div>
+
+    <!-- Stage 2: Moluccas Map 17th Century (Run Island) -->
+    <div id="stage-2" class="stage">
+      <div class="img-box">
+        <img id="img-2" src="assets/moluccas_map_17th.jpg" alt="Moluccas Spice Islands Map">
+      </div>
+    </div>
+
+    <!-- Stage 3: Vintage Nutmeg 1599 Rijksmuseum -->
+    <div id="stage-3" class="stage">
+      <div class="img-box">
+        <img id="img-3" src="assets/nutmeg_vintage_1599.jpg" alt="Nutmeg Engraving Rijksmuseum 1599">
+      </div>
+    </div>
+
+    <!-- Stage 4: Botanical Fresh Nutmeg Fruit & Mace -->
+    <div id="stage-4" class="stage">
+      <div class="img-box">
+        <img id="img-4" src="assets/nutmeg_fruit_fresh.jpg" alt="Nutmeg Fruit and Mace">
+      </div>
+    </div>
+
+    <!-- Stage 5: Treaty of Breda 1667 Contemporary Print -->
+    <div id="stage-5" class="stage">
+      <div class="img-box">
+        <img id="img-5" src="assets/treaty_of_breda_1667.jpg" alt="Treaty of Breda 1667">
+      </div>
+    </div>
+
+    <!-- Stage 6: Manhattan Castello Plan Redux -->
+    <div id="stage-6" class="stage">
+      <div class="img-box">
+        <img id="img-6" src="assets/castello_plan_manhattan_1660.jpg" alt="Manhattan Finale">
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtitles Container -->
+  <div class="caption-wrapper">
+    <div id="caption" class="caption-text"></div>
+  </div>
+
+  <script>
+    window.masterTl = gsap.timeline({ paused: true });
+
+    gsap.set("#stage-1", { opacity: 1 });
+
+    // PURE KEN BURNS CINEMATIC CAMERA MOVEMENTS
+    // Beat 1: 0.0 - 2.75s (Push into Fort Amsterdam)
+    masterTl.fromTo("#img-1", { scale: 1.15, x: 0, y: 0 }, { scale: 1.35, x: -50, y: -30, duration: 2.75, ease: "none" }, 0);
+
+    // Transition 1 -> 2: 2.75s (Cut to Banda Archipelago)
+    masterTl.set("#stage-1", { opacity: 0 }, 2.75);
+    masterTl.set("#stage-2", { opacity: 1 }, 2.75);
+    masterTl.call(() => {
+      document.getElementById("kicker-text").innerText = "BANDA ARCHIPELAGO · MALUKU";
+      document.getElementById("sub-text").innerText = "Pulau Run · Banda Sea";
+    }, null, 2.75);
+    masterTl.fromTo("#img-2", { scale: 1.20, x: 30, y: 10 }, { scale: 1.48, x: -60, y: -50, duration: 10.29, ease: "none" }, 2.75);
+
+    // Transition 2 -> 3: 13.04s (Cut to Rijksmuseum 1599)
+    masterTl.set("#stage-2", { opacity: 0 }, 13.04);
+    masterTl.set("#stage-3", { opacity: 1 }, 13.04);
+    masterTl.call(() => {
+      document.getElementById("kicker-text").innerText = "RIJKSMUSEUM AMSTERDAM · 1599";
+      document.getElementById("sub-text").innerText = "Myristica Fragrans (Nutmeg)";
+    }, null, 13.04);
+    masterTl.fromTo("#img-3", { scale: 1.10, y: 0 }, { scale: 1.30, y: -70, duration: 3.91, ease: "none" }, 13.04);
+
+    // Transition 3 -> 4: 16.95s (Cut to Botanical Mace)
+    masterTl.set("#stage-3", { opacity: 0 }, 16.95);
+    masterTl.set("#stage-4", { opacity: 1 }, 16.95);
+    masterTl.call(() => {
+      document.getElementById("kicker-text").innerText = "THE CRIMSON MONOPOLY";
+      document.getElementById("sub-text").innerText = "1,540 Days Under Dutch Naval Siege";
+    }, null, 16.95);
+    masterTl.fromTo("#img-4", { scale: 1.15, x: -20, y: 0 }, { scale: 1.38, x: 40, y: -40, duration: 5.52, ease: "none" }, 16.95);
+
+    // Transition 4 -> 5: 22.47s (Cut to Treaty of Breda 1667)
+    masterTl.set("#stage-4", { opacity: 0 }, 22.47);
+    masterTl.set("#stage-5", { opacity: 1 }, 22.47);
+    masterTl.call(() => {
+      document.getElementById("kicker-text").innerText = "TREATY OF BREDA · JULY 31, 1667";
+      document.getElementById("sub-text").innerText = "Uti Possidetis Legal Exchange";
+    }, null, 22.47);
+    masterTl.fromTo("#img-5", { scale: 1.12, y: 0 }, { scale: 1.35, y: -90, duration: 5.25, ease: "none" }, 22.47);
+
+    // Transition 5 -> 6: 27.72s (Finale Manhattan)
+    masterTl.set("#stage-5", { opacity: 0 }, 27.72);
+    masterTl.set("#stage-6", { opacity: 1 }, 27.72);
+    masterTl.call(() => {
+      document.getElementById("kicker-text").innerText = "THE HISTORICAL VERDICT";
+      document.getElementById("sub-text").innerText = "Manhattan Became Wall Street";
+    }, null, 27.72);
+    masterTl.fromTo("#img-6", { scale: 1.35, x: -60, y: -40 }, { scale: 1.55, x: 30, y: 15, duration: 8.45, ease: "none" }, 27.72);
+
+    // Synchronized Editorial Captions (100% Verbatim with Voiceover Audio)
+    const subtitles = [
+      { start: 0.50, end: 2.40, html: "YOU THINK MANHATTAN WAS BOUGHT WITH <span class='sub-yellow'>CASH</span>." },
+      { start: 2.75, end: 8.15, html: "IN 1667, BRITAIN <span class='sub-yellow'>TRADED NEW YORK</span> FOR A 3KM ISLAND IN INDONESIA." },
+      { start: 8.50, end: 13.04, html: "<span class='sub-yellow'>PULAU RUN</span>, HIDDEN IN INDONESIA'S BANDA SEA, THE WORLD'S ONLY SOURCE OF NUTMEG." },
+      { start: 13.39, end: 16.95, html: "BACK THEN, ONE SACK OF NUTMEG BOUGHT AN <span class='sub-yellow'>ENTIRE ESTATE</span> IN LONDON." },
+      { start: 17.30, end: 22.47, html: "39 BRITISH SAILORS HELD THE ISLAND UNDER DUTCH <span class='sub-yellow'>NAVAL SIEGE</span> FOR 1,500 DAYS." },
+      { start: 22.82, end: 27.72, html: "TO END THE WAR, BRITAIN KEPT MANHATTAN, WHILE THE DUTCH SEIZED THE <span class='sub-yellow'>SPICE TRADE</span>." },
+      { start: 28.07, end: 33.04, html: "TODAY, MANHATTAN IS <span class='sub-yellow'>WORTH TRILLIONS</span>. AND RUN IS A QUIET VILLAGE OF 1,500 PEOPLE." },
+      { start: 33.39, end: 35.82, html: "THE <span class='sub-yellow'>WORST REAL ESTATE TRADE</span> IN HUMAN HISTORY." }
+    ];
+
+    subtitles.forEach((s) => {
+      masterTl.call(() => {
+        document.getElementById("caption").innerHTML = s.html;
+      }, null, s.start);
+      masterTl.call(() => {
+        if (document.getElementById("caption").innerHTML === s.html) {
+          document.getElementById("caption").innerHTML = "";
+        }
+      }, null, s.end);
+    });
+  </script>
+</body>
+</html>

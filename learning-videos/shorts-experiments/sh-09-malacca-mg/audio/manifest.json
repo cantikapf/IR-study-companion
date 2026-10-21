@@ -1,0 +1,71 @@
+{
+  "voice": "af_heart",
+  "sr": 24000,
+  "speed": 0.93,
+  "lines": [
+    {
+      "beat": 1,
+      "text": "Two landmasses. One channel between them. One point five nautical miles of water. And no second option.",
+      "file": "beat_1.wav",
+      "start": 0.0,
+      "duration": 7.381,
+      "end": 7.381,
+      "slot": 8.0,
+      "fits": true,
+      "overflow": 0.0,
+      "place_at": 0
+    },
+    {
+      "beat": 2,
+      "text": "At its narrowest it is two point eight kilometres across. Wide enough for most ships. Only just.",
+      "file": "beat_2.wav",
+      "start": 8.0,
+      "duration": 6.208,
+      "end": 14.208,
+      "slot": 9.5,
+      "fits": true,
+      "overflow": 0.0,
+      "place_at": 8.0
+    },
+    {
+      "beat": 3,
+      "text": "A fully loaded supertanker sits twenty point five metres underwater. The seabed is twenty five metres down. That leaves four point five metres of water under the hull.",
+      "file": "beat_3.wav",
+      "start": 17.5,
+      "duration": 10.795,
+      "end": 28.295,
+      "slot": 11.0,
+      "fits": true,
+      "overflow": 0.0,
+      "place_at": 17.5
+    },
+    {
+      "beat": 4,
+      "text": "So why not go around? The Sunda route is shallower still. Big tankers have to run east, past Lombok, through Makassar.",
+      "file": "beat_4.wav",
+      "start": 28.5,
+      "duration": 7.531,
+      "end": 36.031,
+      "slot": 9.0,
+      "fits": true,
+      "overflow": 0.0,
+      "place_at": 28.5
+    },
+    {
+      "beat": 5,
+      "text": "You cannot widen a strait. Chokepoints do not create risk. They concentrate it.",
+      "file": "beat_5.wav",
+      "start": 37.5,
+      "duration": 4.907,
+      "end": 42.407,
+      "slot": 7.5,
+      "fits": true,
+      "overflow": 0.0,
+      "place_at": 37.5
+    }
+  ],
+  "total_duration": 45.0,
+  "speech_duration": 36.822,
+  "words": 96,
+  "wpm": 156.4
+}

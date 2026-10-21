@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SH-08 Malacca Chokepoint — Animated Explainer</title>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="data/countries.js"></script>
+<style>
+@font-face{font-family:'Archivo Black';src:url('fonts/ArchivoBlack-Regular.ttf') format('truetype');}
+@font-face{font-family:'Space Mono';src:url('fonts/SpaceMono-Regular.ttf') format('truetype');font-weight:normal;}
+@font-face{font-family:'Space Mono';src:url('fonts/SpaceMono-Bold.ttf') format('truetype');font-weight:bold;}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body,html{width:1080px;height:1920px;overflow:hidden;background:#04070e;color:#fff;font-family:'Space Mono',monospace;}
+#stage{position:relative;width:1080px;height:1920px;background:radial-gradient(ellipse 120% 70% at 50% 42%, #0b1626 0%, #04070e 72%);overflow:hidden;}
+
+/* ---------- HUD ---------- */
+.intel-header{position:absolute;top:56px;left:56px;right:56px;height:72px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,14,24,.86);border:1px solid rgba(56,189,248,.28);border-radius:10px;padding:0 22px;z-index:120;}
+.intel-title{font-size:19px;letter-spacing:2.4px;color:#38bdf8;display:flex;align-items:center;gap:12px;font-weight:bold;}
+.intel-dot{width:11px;height:11px;border-radius:50%;background:#38bdf8;box-shadow:0 0 14px #38bdf8;}
+.intel-badge{background:#ef4444;color:#fff;padding:6px 15px;font-size:14px;letter-spacing:2px;border-radius:5px;font-weight:bold;}
+.hud-footer{position:absolute;bottom:212px;left:56px;right:56px;display:flex;justify-content:space-between;color:rgba(148,163,184,.62);font-size:13px;letter-spacing:2.2px;z-index:60;}
+
+/* ---------- MAP ---------- */
+#map-svg{position:absolute;top:0;left:0;width:1080px;height:1920px;z-index:20;}
+.ocean{fill:#060b16;}
+.land{fill:#16273c;stroke:#3d6b96;stroke-width:1.8px;}
+.land-dim{fill:#101c2e;stroke:#24384f;stroke-width:1.2px;}
+.focus-my{fill:#16304f;stroke:#38bdf8;stroke-width:3px;}
+.focus-id{fill:#14263c;stroke:#4a6b8a;stroke-width:2.6px;}
+.focus-sg{fill:#ef4444;stroke:#ff6b6b;stroke-width:3px;}
+.grat{fill:none;stroke:rgba(56,189,248,.09);stroke-width:1px;}
+
+.corridor-glow{fill:#38bdf8;opacity:.06;}
+.corridor-edge{fill:none;stroke:rgba(56,189,248,.55);stroke-width:2px;stroke-dasharray:10 12;}
+.lane-glow{fill:none;stroke:rgba(56,189,248,.30);stroke-width:16px;stroke-linecap:round;}
+.lane-core{fill:none;stroke:#38bdf8;stroke-width:3.2px;stroke-dasharray:14 12;}
+.detour{fill:none;stroke:#f59e0b;stroke-width:5px;stroke-linecap:round;opacity:0;filter:drop-shadow(0 0 9px rgba(245,158,11,.75));}
+.detour-deep{stroke:#ef4444;filter:drop-shadow(0 0 9px rgba(239,68,68,.8));}
+
+.pin-bg{fill:#050a12;stroke:#38bdf8;stroke-width:1.6px;rx:5;}
+.pin-bg-red{stroke:#ef4444;}
+.pin-tx{font-family:'Archivo Black',sans-serif;font-size:15px;fill:#fff;letter-spacing:1.4px;}
+.pin-tx-red{fill:#ff6b6b;}
+
+#pins-svg{position:absolute;top:0;left:0;width:1080px;height:1920px;z-index:45;pointer-events:none;}
+
+#particles-canvas{position:absolute;top:0;left:0;width:1080px;height:1920px;z-index:30;pointer-events:none;}
+
+/* ---------- CALIPER ---------- */
+#caliper{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:70;pointer-events:none;opacity:0;}
+#caliper .cap-line{stroke:#facc15;stroke-width:3px;}
+#caliper .cap-tick{stroke:#facc15;stroke-width:3px;}
+#cap-label-bg{fill:rgba(250,204,21,.14);stroke:#facc15;stroke-width:2px;}
+#cap-label{font-family:'Archivo Black',sans-serif;font-size:21px;fill:#facc15;letter-spacing:1.6px;}
+
+/* ---------- CROSS SECTION CARD ---------- */
+#section-card{position:absolute;left:56px;right:56px;bottom:520px;height:430px;background:linear-gradient(180deg,rgba(8,18,32,.97),rgba(5,11,20,.97));border:1.6px solid rgba(56,189,248,.42);border-radius:14px;z-index:90;opacity:0;box-shadow:0 24px 60px rgba(0,0,0,.85);overflow:hidden;}
+.card-head{display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(56,189,248,.22);font-size:13px;letter-spacing:2px;color:#38bdf8;font-weight:bold;}
+.card-head .tag-red{color:#ff6b6b;}
+
+/* ---------- COUNTER CARD ---------- */
+#count-card{position:absolute;left:56px;top:172px;width:560px;padding:22px 26px;background:rgba(6,13,24,.95);border:1.5px solid rgba(56,189,248,.36);border-left:7px solid #38bdf8;border-radius:10px;z-index:95;opacity:0;transform:translateX(-30px);}
+#count-card .lbl{font-size:13px;color:#a9bed4;letter-spacing:2.4px;margin-bottom:4px;}
+#count-card .num{font-family:'Archivo Black',sans-serif;font-size:54px;line-height:1.05;color:#fff;font-variant-numeric:tabular-nums;}
+#count-card .num em{color:#38bdf8;font-style:normal;}
+#count-card .sub{font-size:13px;color:#a9bed4;letter-spacing:1.4px;margin-top:6px;}
+.oilbar{margin-top:14px;height:12px;background:#0e1a2b;border-radius:6px;overflow:hidden;border:1px solid rgba(56,189,248,.25);}
+.oilbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#38bdf8,#facc15);}
+
+/* ---------- CHIP FLOW CARD ---------- */
+#chip-card{position:absolute;left:56px;right:56px;top:172px;height:400px;background:rgba(6,13,24,.95);border:1.5px solid rgba(56,189,248,.36);border-radius:12px;z-index:95;opacity:0;padding:18px 22px;}
+#chip-card .row{display:flex;align-items:center;justify-content:space-between;margin-top:22px;}
+.chip-node{display:flex;flex-direction:column;align-items:center;gap:8px;width:180px;}
+.chip-node .cap{font-size:12px;letter-spacing:1.4px;color:#c7d5e5;text-align:center;line-height:1.4;}
+.chip-arrow{flex:1;height:4px;background:repeating-linear-gradient(90deg,#38bdf8 0 10px,transparent 10px 20px);position:relative;opacity:0;}
+.chip-arrow::after{content:'';position:absolute;right:-2px;top:-6px;border-left:12px solid #38bdf8;border-top:8px solid transparent;border-bottom:8px solid transparent;}
+.chip-arrow.red{background:repeating-linear-gradient(90deg,#ef4444 0 10px,transparent 10px 20px);}
+.chip-arrow.red::after{border-left-color:#ef4444;}
+
+/* ---------- HYPOTHETICAL SCENARIO FLAG ---------- */
+#hypo-badge{position:absolute;left:50%;transform:translateX(-50%);top:150px;z-index:96;opacity:0;
+  background:#7f1d1d;border:1.6px solid #fca5a5;border-radius:6px;padding:9px 18px;
+  font-family:'Space Mono',monospace;font-size:15px;font-weight:700;letter-spacing:3px;color:#fff;
+  box-shadow:0 12px 30px rgba(0,0,0,.8);}
+
+/* ---------- DETOUR BADGE ---------- */
+/* ---------- DETOUR BADGE ---------- */
+#detour-badge{position:absolute;left:56px;right:56px;top:172px;background:rgba(12,16,26,.95);border:1.6px solid #f59e0b;border-radius:12px;padding:18px 24px;z-index:95;opacity:0;display:flex;justify-content:space-between;align-items:center;box-shadow:0 18px 44px rgba(0,0,0,.85);}
+#detour-badge .k{font-family:'Archivo Black',sans-serif;font-size:32px;color:#f59e0b;line-height:1;}
+#detour-badge .t{font-size:12px;color:#c9d3e0;letter-spacing:1.4px;line-height:1.45;}
+
+/* ---------- END CARD ---------- */
+#endcard{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:130;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;pointer-events:none;background:radial-gradient(ellipse 90% 55% at 50% 45%,rgba(6,16,30,.94),rgba(3,6,12,.99));}
+#endcard .rule{width:120px;height:4px;background:#38bdf8;margin-bottom:28px;transform:scaleX(0);}
+#endcard h1{font-family:'Archivo Black',sans-serif;font-size:62px;line-height:1.14;text-align:center;padding:0 70px;letter-spacing:-.5px;}
+#endcard h1 span{color:#38bdf8;}
+#endcard .sub{margin-top:26px;font-size:17px;letter-spacing:3.4px;color:#8aa0b8;}
+
+/* ---------- HOOK LADDER (ref @90secondslab: one line/s, tilted, alternating fill) ---------- */
+#hook-ladder{position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:112;pointer-events:none;}
+.hk{position:absolute;left:50%;padding:16px 30px;font-family:'Archivo Black',sans-serif;
+  font-size:62px;line-height:1;letter-spacing:-1px;opacity:0;white-space:nowrap;
+  box-shadow:8px 10px 0 rgba(0,0,0,.85);}
+#hk1{top:392px;transform:translateX(-50%) rotate(-2deg);background:#111318;color:#fff;}
+#hk2{top:492px;transform:translateX(-50%) rotate(-2deg);background:#facc15;color:#0b0d11;}
+#hk3{top:592px;transform:translateX(-50%) rotate(-1.2deg);background:#f3f4f6;color:#0b0d11;}
+
+/* ---------- CAPTION ---------- */
+#cap-bar{position:absolute;bottom:330px;left:56px;right:56px;background:rgba(4,8,15,.95);border:2px solid rgba(56,189,248,.40);border-radius:14px;padding:22px 30px;z-index:115;text-align:center;box-shadow:0 22px 54px rgba(0,0,0,.9);}
+#cap-tag{font-size:15px;color:#38bdf8;letter-spacing:3.2px;font-weight:bold;margin-bottom:7px;}
+#cap-txt{font-family:'Archivo Black',sans-serif;font-size:34px;line-height:1.26;color:#fff;letter-spacing:.6px;}
+#cap-txt b{color:#facc15;font-weight:normal;}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <div class="intel-header">
+    <div class="intel-title"><div class="intel-dot"></div><span>GEOPOLITICAL MAPPING // MALACCA STRAIT</span></div>
+    <div class="intel-badge">CHOKEPOINT: CRITICAL</div>
+  </div>
+
+  <svg id="map-svg" viewBox="0 0 1080 1920">
+    <defs>
+      <linearGradient id="corridorGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+        <stop offset="45%" stop-color="#38bdf8" stop-opacity=".55"/>
+        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="softGlow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+
+    <g id="map-cam">
+      <path class="ocean" id="ocean-bg" d=""/>
+      <path class="grat" id="grat" d=""/>
+      <g id="land-layer"></g>
+
+      <!-- natural funnel corridor -->
+      <path id="corridor" class="corridor-glow" d=""/>
+      <path id="corridor-edge" class="corridor-edge" d=""/>
+
+      <!-- main sea lane -->
+      <path id="lane-glow" class="lane-glow" d=""/>
+      <path id="lane-core" class="lane-core" d=""/>
+
+      <!-- detours (drawn on) -->
+      <path id="detour-sunda" class="detour" d=""/>
+      <path id="detour-lombok" class="detour detour-deep" d=""/>
+    </g>
+  </svg>
+
+  <!-- geo pins: SCREEN SPACE, follow the camera projection -->
+  <svg id="pins-svg" viewBox="0 0 1080 1920">
+    <g id="pin-my" opacity="0">
+      <rect class="pin-bg" x="-58" y="-15" width="116" height="30" rx="5"/>
+      <text class="pin-tx" text-anchor="middle" y="6">MALAYSIA</text>
+    </g>
+    <g id="pin-id" opacity="0">
+      <rect class="pin-bg" x="-118" y="-15" width="236" height="30" rx="5"/>
+      <text class="pin-tx" text-anchor="middle" y="6">SUMATRA · INDONESIA</text>
+    </g>
+    <g id="pin-sg-lead" opacity="0">
+      <line id="sg-lead-line" x1="0" y1="0" x2="0" y2="0" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 4"/>
+      <circle id="sg-lead-dot" cx="0" cy="0" r="5" fill="#ef4444"/>
+    </g>
+    <g id="pin-sg" opacity="0">
+      <rect class="pin-bg pin-bg-red" x="-62" y="-15" width="124" height="30" rx="5"/>
+      <text class="pin-tx pin-tx-red" text-anchor="middle" y="6">SINGAPORE</text>
+    </g>
+    <!-- detour route labels: screen space, beat 5 camera is near-static -->
+    <g id="lbl-sunda" opacity="0">
+      <rect class="pin-bg" x="-74" y="-15" width="148" height="30" rx="5" style="stroke:#f59e0b"/>
+      <text class="pin-tx" text-anchor="middle" y="6" style="fill:#f59e0b">SUNDA</text>
+    </g>
+    <g id="lbl-lombok" opacity="0">
+      <rect class="pin-bg" x="-168" y="-15" width="336" height="30" rx="5" style="stroke:#ef4444"/>
+      <text class="pin-tx" text-anchor="middle" y="6" style="fill:#ff6b6b;font-size:14px">LOMBOK · MAKASSAR</text>
+    </g>
+  </svg>
+
+  <!-- hypothetical scenario flag: mandatory while the closure is simulated -->
+  <div id="hypo-badge">HYPOTHETICAL SCENARIO</div>
+
+  <canvas id="particles-canvas" width="1080" height="1920"></canvas>
+
+  <!-- CALIPER OVERLAY (screen space, follows choke point) -->
+  <svg id="caliper" viewBox="0 0 1080 1920">
+    <line class="cap-line" id="cap-a" x1="0" y1="0" x2="0" y2="0"/>
+    <line class="cap-tick" id="cap-t1" x1="0" y1="0" x2="0" y2="0"/>
+    <line class="cap-tick" id="cap-t2" x1="0" y1="0" x2="0" y2="0"/>
+    <g id="cap-tag-g" opacity="0">
+      <rect id="cap-label-bg" x="-118" y="-19" width="236" height="38" rx="6"/>
+      <text id="cap-label" text-anchor="middle" y="8">1.5 NM · 2.8 KM</text>
+    </g>
+  </svg>
+
+  <!-- COUNT CARD -->
+  <div id="count-card">
+    <div class="lbl">ANNUAL TRANSIT VOLUME</div>
+    <div class="num"><em id="cnt">0</em> VESSELS</div>
+    <div class="sub">SQUEEZING THROUGH A 1.5-MILE STRIP</div>
+    <div class="oilbar"><i id="oilfill"></i></div>
+  </div>
+
+  <!-- CROSS SECTION -->
+  <div id="section-card">
+    <div class="card-head"><span>BATHYMETRIC SECTION // PHILLIPS CHANNEL</span><span class="tag-red">DRAFT LIMIT</span></div>
+    <svg viewBox="0 0 968 372" style="width:100%;height:372px">
+      <defs>
+        <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0e4a6b" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#061421" stop-opacity=".95"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="46" width="968" height="250" fill="url(#waterGrad)"/>
+      <line id="sea-level" x1="0" y1="46" x2="968" y2="46" stroke="#38bdf8" stroke-width="2.6" stroke-dasharray="9 6"/>
+      <text x="10" y="36" fill="#38bdf8" font-size="14" font-family="'Space Mono'">SEA LEVEL · 0 M</text>
+
+      <path id="seabed" d="M0 268 Q160 252 300 236 T560 224 T800 244 T968 268 L968 296 L0 296 Z" fill="#172334" stroke="#ef4444" stroke-width="2.4"/>
+      <text x="10" y="292" fill="#ef4444" font-size="13" font-family="'Space Mono'">SEABED · ~25 M</text>
+
+      <g id="ship-hull" transform="translate(360,0)">
+        <g id="ship-inner">
+        <path d="M0 46 L240 46 L232 148 L10 148 Z" fill="#1b2a3d" stroke="#8fa8c0" stroke-width="2"/>
+        <path d="M240 46 L258 30 L250 132 L232 148 Z" fill="#152232" stroke="#7d93a8" stroke-width="1.6"/>
+        <path d="M0 46 L18 30 L258 30 L240 46 Z" fill="#2b3f55" stroke="#8fa8c0" stroke-width="1.6"/>
+        <rect x="10" y="148" width="222" height="6" fill="#ef4444"/>
+        <text x="16" y="90" fill="#fff" font-size="17" font-family="'Archivo Black'">VLCC</text>
+        <text x="16" y="112" fill="#9db2c7" font-size="12" font-family="'Space Mono'">DRAFT 20.5 M</text>
+        </g>
+      </g>
+
+      <g id="draft-cal" opacity="0">
+        <line x1="612" y1="154" x2="612" y2="224" stroke="#facc15" stroke-width="3"/>
+        <line x1="602" y1="154" x2="622" y2="154" stroke="#facc15" stroke-width="3"/>
+        <line x1="602" y1="224" x2="622" y2="224" stroke="#facc15" stroke-width="3"/>
+        <text x="632" y="196" fill="#facc15" font-size="15" font-family="'Space Mono'" font-weight="bold">CLEARANCE</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- CHIP FLOW -->
+  <div id="chip-card">
+    <div class="card-head" style="padding:0;border:none;margin-bottom:6px"><span>SILICON ROUTE // EAST ASIA → WEST</span><span class="tag-red" style="color:#facc15">CASCADE RISK</span></div>
+    <div class="row">
+      <div class="chip-node">
+        <svg width="64" height="64" viewBox="0 0 64 64">
+          <rect x="14" y="14" width="36" height="36" rx="4" fill="#0f2b3d" stroke="#38bdf8" stroke-width="2.4"/>
+          <rect x="24" y="24" width="16" height="16" fill="#38bdf8" opacity=".55"/>
+          <g stroke="#38bdf8" stroke-width="2.2">
+            <line x1="4" y1="22" x2="14" y2="22"/><line x1="4" y1="32" x2="14" y2="32"/><line x1="4" y1="42" x2="14" y2="42"/>
+            <line x1="50" y1="22" x2="60" y2="22"/><line x1="50" y1="32" x2="60" y2="32"/><line x1="50" y1="42" x2="60" y2="42"/>
+            <line x1="22" y1="4" x2="22" y2="14"/><line x1="32" y1="4" x2="32" y2="14"/><line x1="42" y1="4" x2="42" y2="14"/>
+            <line x1="22" y1="50" x2="22" y2="60"/><line x1="32" y1="50" x2="32" y2="60"/><line x1="42" y1="50" x2="42" y2="60"/>
+          </g>
+        </svg>
+        <div class="cap">TAIWAN<br>KOREA</div>
+      </div>
+      <div class="chip-arrow" id="arw1"></div>
+      <div class="chip-node">
+        <svg width="64" height="64" viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="24" fill="rgba(239,68,68,.16)" stroke="#ef4444" stroke-width="2.6"/>
+          <circle cx="32" cy="32" r="7" fill="#ef4444"/>
+        </svg>
+        <div class="cap">MALACCA<br>CHOKE</div>
+      </div>
+      <div class="chip-arrow red" id="arw2"></div>
+      <div class="chip-node">
+        <svg width="64" height="64" viewBox="0 0 64 64">
+          <path d="M8 48 L20 30 L32 40 L44 18 L56 26" fill="none" stroke="#f59e0b" stroke-width="3.4" stroke-linecap="round"/>
+          <circle cx="56" cy="26" r="5" fill="#f59e0b"/>
+        </svg>
+        <div class="cap">WESTERN<br>FACTORIES</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETOUR BADGE -->
+  <div id="detour-badge">
+    <div><div class="k">+3 DAYS</div><div class="t" style="margin-top:6px">REROUTE AROUND INDONESIA</div></div>
+    <div style="text-align:right"><div class="k" style="color:#ef4444">$5 BILLION</div><div class="t" style="margin-top:6px">FREIGHT SURCHARGE</div></div>
+  </div>
+
+  <!-- CAPTION -->
+  <div id="cap-bar">
+    <div id="cap-tag">GEO-STRATEGIC RISK</div>
+    <div id="cap-txt">COULD YOU LOSE YOUR PHONE IF THIS STRAIT CLOSES?</div>
+  </div>
+
+  <!-- HOOK LADDER: one block per second, tilted, alternating fill (ref: @90secondslab) -->
+  <div id="hook-ladder">
+    <div class="hk hk-dark" id="hk1">TWO LANDMASSES</div>
+    <div class="hk hk-gold" id="hk2">ONE SEA GATE</div>
+    <div class="hk hk-light" id="hk3">NO SECOND OPTION</div>
+  </div>
+
+  <div class="hud-footer">
+    <div>COORD 01°15'N 103°50'E</div>
+    <div>MARITIME CHOKEPOINT DOSSIER // CH-08</div>
+  </div>
+
+  <div id="endcard">
+    <div class="rule" id="end-rule"></div>
+    <h1>YOU CANNOT<br>WIDEN<br>A <span>STRAIT</span></h1>
+    <div class="sub">@IRinANutshell</div>
+  </div>
+</div>
+
+<script>
+/* ================= deterministic RNG ================= */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+
+window.__timeline = gsap.timeline({paused:true});
+
+const CX = 540, CY = 960;
+const cam = {s:1, x:0, y:0};
+
+let proj, screenRoute=[], chordPt=[0,0], particles=[];
+const canvas = document.getElementById('particles-canvas');
+const ctx = canvas.getContext('2d');
+
+/* ================= camera ================= */
+function cameraAt(t){
+  // keyframes: [time, scale, x, y]
+  const K=[
+    [0.0, 1.00,   0,   0],
+    [3.2, 1.08,  -6,  -4],
+    [5.6, 2.45, -118, -86],
+    [11.9,2.62, -132, -96],
+    [12.6,2.30, -104, -70],
+    [19.1,2.18,  -96, -62],
+    [20.0,2.05,  60,  -30],
+    [26.3,2.05,  70,  -26],
+    [27.2,1.32,  10,   66],
+    [34.9,1.28,   6,   72],
+    [36.2,1.00,   0,    0],
+    [40.8,1.00,   0,    0]
+  ];
+  if(t<=K[0][0]) return {s:K[0][1],x:K[0][2],y:K[0][3]};
+  for(let i=0;i<K.length-1;i++){
+    const a=K[i],b=K[i+1];
+    if(t>=a[0]&&t<=b[0]){
+      let p=(t-a[0])/(b[0]-a[0]||1);
+      p=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2; // easeInOutQuad
+      return {s:a[1]+(b[1]-a[1])*p, x:a[2]+(b[2]-a[2])*p, y:a[3]+(b[3]-a[3])*p};
+    }
+  }
+  const l=K[K.length-1]; return {s:l[1],x:l[2],y:l[3]};
+}
+
+function applyCamera(){
+  const t = window.__timeline.time();
+  const c = cameraAt(t);
+  cam.s=c.s; cam.x=c.x; cam.y=c.y;
+  const g=document.getElementById('map-cam');
+  g.setAttribute('transform', `translate(${CX+c.x} ${CY+c.y}) scale(${c.s}) translate(${-CX} ${-CY})`);
+  syncOverlays(c);
+  drawShips(t);
+}
+
+/* geo anchors -> screen position, pins are drawn OUTSIDE the scaled group */
+const PIN_ANCHORS = {
+  my: [102.0, 5.2],
+  id: [98.9, -2.1],
+  sg: [107.6, -0.9]
+};
+/* Singapore label is parked off-target, connected by a leader line to the real point */
+const SG_TRUE = [103.85, 1.29];
+const SG_OFFSET = [-96, 74];
+function toScreen(coord, c){
+  const p = proj(coord);
+  return [(p[0]-CX)*c.s+CX+c.x, (p[1]-CY)*c.s+CY+c.y];
+}
+/* route labels ride on the routes themselves */
+const LABEL_ANCHORS = {
+  "lbl-sunda": [106.5, -4.0],
+  "lbl-lombok": [112.8, -6.6]
+};
+function syncOverlays(c){
+  for(const key of Object.keys(PIN_ANCHORS)){
+    const el = document.getElementById('pin-'+key);
+    if(!el) continue;
+    const [x,y] = toScreen(PIN_ANCHORS[key], c);
+    el.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+  }
+  for(const id of Object.keys(LABEL_ANCHORS)){
+    const el = document.getElementById(id);
+    if(!el) continue;
+    const [x,y] = toScreen(LABEL_ANCHORS[id], c);
+    el.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+  }
+  // leader line from the real Singapore point to the parked label
+  const [tx,ty] = toScreen(SG_TRUE, c);
+  const [lx,ly] = toScreen(PIN_ANCHORS.sg, c);
+  const lead = document.getElementById('pin-sg-lead');
+  lead.setAttribute('transform', `translate(${tx.toFixed(2)} ${ty.toFixed(2)})`);
+  document.getElementById('sg-lead-line').setAttribute('x2', (lx-tx).toFixed(2));
+  document.getElementById('sg-lead-line').setAttribute('y2', (ly-ty).toFixed(2));
+
+  const px=(chordPt[0]-CX)*c.s+CX+c.x;
+  const py=(chordPt[1]-CY)*c.s+CY+c.y;
+  positionCaliper(px, py, Math.min(c.s, 2.6));
+}
+
+/* ================= ships ================= */
+function routePoint(t){
+  if(t<=0) return screenRoute[0];
+  if(t>=1) return screenRoute[screenRoute.length-1];
+  const seg=t*(screenRoute.length-1);
+  const i=Math.min(screenRoute.length-2, Math.floor(seg));
+  const f=seg-i, a=screenRoute[i], b=screenRoute[i+1];
+  return [a[0]+(b[0]-a[0])*f, a[1]+(b[1]-a[1])*f];
+}
+function routeAngle(t){
+  const a=routePoint(Math.max(0,t-.004)), b=routePoint(Math.min(1,t+.004));
+  return Math.atan2(b[1]-a[1], b[0]-a[0]);
+}
+
+function drawShips(t){
+  const w=1080,h=1920;
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,w,h);
+
+  // camera transform so ships stick to geography
+  ctx.translate(CX+cam.x, CY+cam.y);
+  ctx.scale(cam.s, cam.s);
+  ctx.translate(-CX,-CY);
+
+  const choked = (t>=5.6 && t<=19.2);
+  const diverting = (t>=27.0 && t<=34.9);
+
+  // radar pulses at choke
+  if(t>=4.6 && t<=34.9){
+    for(let k=0;k<3;k++){
+      const ph=((t*0.75)+k/3)%1;
+      const r=18+ph*140;
+      ctx.beginPath();
+      ctx.arc(chordPt[0], chordPt[1], r, 0, Math.PI*2);
+      ctx.strokeStyle=`rgba(239,68,68,${(1-ph)*0.55})`;
+      ctx.lineWidth=2.4;
+      ctx.stroke();
+    }
+  }
+
+  const n = particles.length;
+  for(let i=0;i<n;i++){
+    const p=particles[i];
+    let prog=(p.p0 + t*p.spd*0.42)%1;
+
+    // bunching at the choke
+    if(choked && prog>0.40 && prog<0.62){
+      const squeeze=0.44+0.16*((prog-0.40)/0.22);
+      prog = prog<0.51 ? 0.40+(prog-0.40)*0.30 : 0.56+(prog-0.51)*0.30;
+      if(prog>0.40&&prog<0.62) prog = 0.40 + ((prog-0.40)%0.22)*0.28;
+    }
+
+    const pt=routePoint(prog);
+    const ang=routeAngle(prog);
+    const L = p.big?17:11, W = p.big?5.4:4;
+    const atChoke = Math.abs(prog-0.5)<0.055;
+
+    ctx.save();
+    ctx.translate(pt[0], pt[1]);
+    ctx.rotate(ang);
+
+    // wake
+    ctx.beginPath();
+    ctx.moveTo(-L*1.1,0);
+    ctx.lineTo(-L*3.2,0);
+    ctx.strokeStyle= atChoke&&choked ? 'rgba(239,68,68,.55)' : 'rgba(56,189,248,.42)';
+    ctx.lineWidth=1.6;
+    ctx.stroke();
+
+    // hull
+    ctx.beginPath();
+    ctx.moveTo(L,0);
+    ctx.lineTo(L*0.35,-W);
+    ctx.lineTo(-L*0.75,-W);
+    ctx.lineTo(-L*0.75,W);
+    ctx.lineTo(L*0.35,W);
+    ctx.closePath();
+    ctx.fillStyle = (atChoke&&choked) ? '#ef4444' : (p.big? '#facc15':'#5ec8f5');
+    ctx.shadowColor=ctx.fillStyle; ctx.shadowBlur=atChoke?16:8;
+    ctx.fill();
+    ctx.restore();
+  }
+  ctx.setTransform(1,0,0,1,0,0);
+}
+
+/* ================= captions ================= */
+const CAPS=[
+  {s:0.0,  e:6.40,  tag:"GEO-STRATEGIC RISK",  txt:"COULD YOU <b>LOSE YOUR PHONE</b> IF THIS STRAIT CLOSES?"},
+  {s:6.40, e:12.00, tag:"CHOKEPOINT TELEMETRY",txt:"PHILLIPS CHANNEL — THE WORLD'S <b>DENSEST</b> MARITIME BOTTLENECK"},
+  {s:12.00,e:19.20, tag:"TRANSIT VOLUME",       txt:"<b>94,000+ VESSELS</b> A YEAR HAULING <b>60%</b> OF GLOBAL MARITIME OIL"},
+  {s:19.20,e:26.40, tag:"SILICON DEPENDENCY",   txt:"<b>HALF</b> OF ADVANCED MICROCHIPS PASS THIS EXACT POINT"},
+  {s:26.40,e:35.00, tag:"LOGISTIC SHOCK",       txt:"REROUTING ADDS <b>3 FULL DAYS</b> AND <b>$5 BILLION</b>"},
+  {s:35.00,e:40.80, tag:"STRUCTURAL REALITY",   txt:"THE ECONOMY IS ANCHORED TO <b>1.5 MILES</b> OF WATER"}
+];
+
+window.updateCaptionsAtTime=function(t){
+  for(const c of CAPS){
+    if(t>=c.s && t<c.e){
+      document.getElementById('cap-tag').textContent=c.tag;
+      document.getElementById('cap-txt').innerHTML=c.txt;
+      break;
+    }
+  }
+  const c=cameraAt(t); cam.s=c.s; cam.x=c.x; cam.y=c.y;
+  const g=document.getElementById('map-cam');
+  g.setAttribute('transform', `translate(${CX+c.x} ${CY+c.y}) scale(${c.s}) translate(${-CX} ${-CY})`);
+
+  syncOverlays(c);
+  drawShips(t);
+};
+
+function positionCaliper(px,py,s){
+  const half = 62*s;
+  const ga=document.getElementById('cap-a');
+  const gt1=document.getElementById('cap-t1');
+  const gt2=document.getElementById('cap-t2');
+  const gg=document.getElementById('cap-tag-g');
+  const bg=document.getElementById('cap-label-bg');
+  const tx=document.getElementById('cap-label');
+  ga.setAttribute('x1',px-half); ga.setAttribute('x2',px+half);
+  ga.setAttribute('y1',py); ga.setAttribute('y2',py);
+  gt1.setAttribute('x1',px-half); gt1.setAttribute('x2',px-half);
+  gt1.setAttribute('y1',py-16); gt1.setAttribute('y2',py+16);
+  gt2.setAttribute('x1',px+half); gt2.setAttribute('x2',px+half);
+  gt2.setAttribute('y1',py-16); gt2.setAttribute('y2',py+16);
+  gg.setAttribute('transform',`translate(${px} ${py-46})`);
+  bg.setAttribute('x',-118); bg.setAttribute('y',-19);
+  tx.setAttribute('x',0); tx.setAttribute('y',8);
+}
+
+/* ================= build ================= */
+function init(){
+  const geo=window.WORLD_GEOJSON;
+  proj=d3.geoMercator().center([102.4,2.6]).scale(1560).translate([CX,CY]);
+  const path=d3.geoPath().projection(proj);
+
+  document.getElementById('ocean-bg').setAttribute('d', path({type:'Sphere'})||'');
+  document.getElementById('grat').setAttribute('d', path(d3.geoGraticule10()));
+
+  const land=d3.select('#land-layer');
+  const feats=(geo&&geo.features)?geo.features:[];
+  land.selectAll('path').data(feats).enter().append('path')
+    .attr('class', d=>{
+      const nm=(d.properties&&d.properties.name)||'';
+      if(nm==='Malaysia') return 'land focus-my';
+      if(nm==='Indonesia') return 'land focus-id';
+      if(nm==='Singapore') return 'land focus-sg';
+      if(nm==='Thailand'||nm==='Brunei') return 'land';
+      return 'land land-dim';
+    })
+    .attr('d', path);
+
+  // corridor polygon (funnel between Sumatra & Malay Peninsula)
+  const corr=[
+    [96.6,5.4],[99.2,4.3],[101.6,3.0],[103.2,1.9],[104.6,1.2],[106.2,1.6],[108.0,2.8],
+    [110.2,4.6],[112.2,6.6],[109.0,7.4],[106.4,6.2],[104.2,4.6],[102.2,3.2],[100.0,3.6],[97.6,4.6],[96.6,5.4]
+  ];
+  document.getElementById('corridor').setAttribute('d', path({type:'Polygon',coordinates:[corr]})||'');
+
+  // lane
+  const lane=[[92.0,5.2],[95.5,5.6],[98.6,4.2],[100.8,3.1],[102.6,2.1],[103.9,1.24],[104.9,1.55],[106.6,2.9],[109.4,5.2],[112.6,7.4]];
+  document.getElementById('lane-glow').setAttribute('d', path({type:'LineString',coordinates:lane}));
+  document.getElementById('lane-core').setAttribute('d', path({type:'LineString',coordinates:lane}));
+  document.getElementById('corridor-edge').setAttribute('d', path({type:'Polygon',coordinates:[corr]})||'');
+
+  screenRoute=lane.map(c=>proj(c));
+  chordPt=proj([103.9,1.24]);
+
+  // detours
+  const sunda=[[103.9,1.24],[101.5,-1.8],[99.5,-4.8],[101.5,-6.2],[104.5,-6.0],[105.9,-5.9],[106.5,-4.0],[107.5,-2.0],[108.5,-0.5],[109.5,1.5],[110.5,3.6]];
+  const lombok=[[103.9,1.24],[101.0,-2.0],[99.0,-5.5],[102.0,-8.6],[108.0,-9.2],[114.0,-8.9],[115.6,-8.6],[116.8,-6.0],[117.6,-3.0],[118.4,0.5],[121.0,3.5],[124.0,6.2]];
+  const ps=document.getElementById('detour-sunda');
+  const pl=document.getElementById('detour-lombok');
+  ps.setAttribute('d', path({type:'LineString',coordinates:sunda}));
+  pl.setAttribute('d', path({type:'LineString',coordinates:lombok}));
+
+  // pins are positioned by syncOverlays
+
+  // particles
+  const rnd=mulberry32(20261019);
+  for(let i=0;i<96;i++){
+    particles.push({p0:rnd(), spd:0.75+rnd()*0.85, big:rnd()>0.62});
+  }
+
+  buildTimeline();
+  applyCamera();
+  window.updateCaptionsAtTime(0);
+  window.__ready=true;
+}
+
+function buildTimeline(){
+  const tl=window.__timeline;
+
+  /* ---------- BEAT 1 · 0.0 – 6.4s : geography funnel ---------- */
+  tl.to(cam,{s:1.02,x:-4,y:-3,duration:3.2,ease:"none",onUpdate:applyCamera},0)
+    .to(cam,{s:2.45,x:-118,y:-86,duration:2.4,ease:"power2.inOut",onUpdate:applyCamera},3.2)
+    .fromTo("#corridor",{opacity:0},{opacity:.07,duration:1.2},1.0)
+    .fromTo("#corridor-edge",{opacity:0},{opacity:1,duration:1.2},1.1)
+    .fromTo("#pin-my",{opacity:0},{opacity:1,duration:.5},1.6)
+    .fromTo("#pin-id",{opacity:0},{opacity:1,duration:.5},1.9)
+    .fromTo("#lane-core",{opacity:0},{opacity:1,duration:1.0},2.2)
+    .fromTo("#lane-glow",{opacity:0},{opacity:.85,duration:1.0},2.2)
+    .fromTo("#caliper",{opacity:0},{opacity:1,duration:.5},4.9)
+    .fromTo("#pin-sg",{opacity:0},{opacity:1,duration:.4},5.2)
+    .fromTo("#pin-sg-lead",{opacity:0},{opacity:1,duration:.4},5.2)
+    .to("#pin-sg",{opacity:0,duration:.35},8.4)
+    .to("#pin-sg-lead",{opacity:0,duration:.35},8.4)
+    .to("#pin-sg",{opacity:1,duration:.4},11.2)
+    .to("#pin-sg-lead",{opacity:1,duration:.4},11.2)
+    .fromTo("#cap-tag-g",{opacity:0,scale:.7,transformOrigin:"center"},{opacity:1,scale:1,duration:.55,ease:"back.out(2)"},5.1)
+  /* hook ladder: one block per second, subject visible first (ref @90secondslab) */
+    .fromTo("#hk1",{opacity:0,y:30},{opacity:1,y:0,duration:.42,ease:"power3.out"},0.85)
+    .fromTo("#hk2",{opacity:0,y:30},{opacity:1,y:0,duration:.42,ease:"power3.out"},1.85)
+    .fromTo("#hk3",{opacity:0,y:30},{opacity:1,y:0,duration:.42,ease:"power3.out"},2.85)
+    .to("#hk1,#hk2,#hk3",{opacity:0,duration:.45,stagger:.06},4.35);
+
+  /* ---------- BEAT 2 · 6.4 – 12.0s : Phillips Channel + draft section ---------- */
+  tl.to(cam,{s:2.62,x:-132,y:-330,duration:2.0,ease:"power1.inOut",onUpdate:applyCamera},9.6)
+    .fromTo("#section-card",{opacity:0,y:40,scale:.96},{opacity:1,y:0,scale:1,duration:.65,ease:"power2.out"},6.9)
+  /* the card covers the map, so geo pins would bleed through it */
+    .to("#pin-my,#pin-id",{opacity:0,duration:.35},6.7)
+    .to("#pin-my,#pin-id",{opacity:1,duration:.4},11.5)
+    .fromTo("#seabed",{opacity:0},{opacity:1,duration:.6},7.4)
+    .fromTo("#sea-level",{opacity:0},{opacity:1,duration:.5},7.3)
+    .fromTo("#ship-inner",{y:-190,opacity:0},{y:0,opacity:1,duration:1.15,ease:"power2.inOut"},7.6)
+    .fromTo("#draft-cal",{opacity:0},{opacity:1,duration:.5},8.9)
+    .to(cam,{s:2.45,x:-118,y:-86,duration:1.2,ease:"power1.inOut",onUpdate:applyCamera},10.9)
+    .to("#section-card",{opacity:0,y:26,duration:.5},11.3)
+    .to("#caliper",{opacity:0,duration:.4},11.6);
+
+  /* ---------- BEAT 3 · 12.0 – 19.2s : volume counter ---------- */
+  tl.to(cam,{s:2.30,x:-104,y:-70,duration:1.5,ease:"power1.inOut",onUpdate:applyCamera},12.0)
+    .to(cam,{s:2.18,x:-96,y:-62,duration:1.4,ease:"power1.out",onUpdate:applyCamera},13.5)
+    .fromTo("#count-card",{opacity:0,x:-30},{opacity:1,x:0,duration:.55,ease:"back.out(1.4)"},12.3)
+    .to({v:0},{v:94200,duration:3.6,ease:"power2.out",onUpdate:function(){
+        document.getElementById('cnt').textContent=Math.round(this.targets()[0].v).toLocaleString();
+      }},12.4)
+    .to("#oilfill",{width:"60%",duration:2.4,ease:"power2.out"},13.2)
+    .to("#count-card",{opacity:0,x:-30,duration:.45},18.6);
+
+  /* ---------- BEAT 4 · 19.2 – 26.4s : silicon route ---------- */
+  tl.to(cam,{s:2.05,x:60,y:-30,duration:2.0,ease:"power2.inOut",onUpdate:applyCamera},19.2)
+    .to(cam,{s:2.05,x:70,y:-26,duration:1.6,ease:"none",onUpdate:applyCamera},21.2)
+    .fromTo("#chip-card",{opacity:0,y:-26},{opacity:1,y:0,duration:.55,ease:"power2.out"},19.5)
+    .fromTo("#arw1",{opacity:0,scaleX:0,transformOrigin:"left center"},{opacity:1,scaleX:1,duration:.7,ease:"power2.out"},20.4)
+    .fromTo("#arw2",{opacity:0,scaleX:0,transformOrigin:"left center"},{opacity:1,scaleX:1,duration:.7,ease:"power2.out"},21.3)
+    .to("#chip-card",{opacity:0,y:-20,duration:.45},25.8);
+
+  /* ---------- BEAT 5 · 26.4 – 35.0s : detour ---------- */
+  tl.to(cam,{s:1.12,x:-14,y:150,duration:2.0,ease:"power2.inOut",onUpdate:applyCamera},26.4)
+    .to(cam,{s:1.08,x:-18,y:158,duration:2.0,ease:"none",onUpdate:applyCamera},28.4)
+    .fromTo("#detour-sunda",{strokeDashoffset:1,opacity:0},{strokeDashoffset:0,opacity:1,duration:1.6,ease:"power1.inOut"},27.0)
+    .fromTo("#detour-lombok",{strokeDashoffset:1,opacity:0},{strokeDashoffset:0,opacity:1,duration:1.9,ease:"power1.inOut"},28.0)
+    .fromTo("#lbl-sunda",{opacity:0,scale:.7,transformOrigin:"center"},{opacity:1,scale:1,duration:.45,ease:"back.out(1.8)"},28.4)
+    .fromTo("#lbl-lombok",{opacity:0,scale:.7,transformOrigin:"center"},{opacity:1,scale:1,duration:.45,ease:"back.out(1.8)"},29.6)
+    .fromTo("#detour-badge",{opacity:0,y:-24},{opacity:1,y:0,duration:.55,ease:"back.out(1.5)"},29.2)
+    .to("#detour-badge",{opacity:0,duration:.45},34.2)
+  /* hypothetical flag: on for the whole simulated closure, off before the payoff */
+    .fromTo("#hypo-badge",{opacity:0,y:-14},{opacity:1,y:0,duration:.45,ease:"power2.out"},26.2)
+    .to("#hypo-badge",{opacity:0,duration:.4},34.6)
+    .to("#lbl-sunda,#lbl-lombok",{opacity:0,duration:.4},34.2);
+
+  /* ---------- BEAT 6 · 35.0 – 40.8s : pull back + endcard ---------- */
+  tl.to(cam,{s:1.00,x:0,y:0,duration:3.0,ease:"power2.inOut",onUpdate:applyCamera},35.0)
+    .fromTo("#endcard",{opacity:0},{opacity:1,duration:1.0},36.4)
+    .fromTo("#end-rule",{scaleX:0},{scaleX:1,duration:.6,ease:"power2.out"},36.9)
+    .fromTo("#endcard h1",{opacity:0,y:24},{opacity:1,y:0,duration:.8,ease:"power2.out"},37.1)
+    .fromTo("#endcard .sub",{opacity:0},{opacity:1,duration:.6},37.9);
+
+  // detour dash-on setup
+  ["detour-sunda","detour-lombok"].forEach(id=>{
+    const el=document.getElementById(id);
+    const L=el.getTotalLength();
+    el.style.strokeDasharray=L;
+    el.style.strokeDashoffset=L;
+  });
+
+  console.log("duration:", tl.duration());
+}
+window.onload=init;
+</script>
+</body>
+</html>

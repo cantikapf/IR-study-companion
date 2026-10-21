@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vox Full-Bleed Archival Shorts</title>
+  <style>
+    @font-face {
+      font-family: 'Archivo Black';
+      src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: #0b0e14;
+      color: #ffffff;
+      font-family: 'Archivo Black', sans-serif;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* FULL-BLEED CAMERA STAGE */
+    .viewport {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    .stage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .stage.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .full-img-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    .full-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform-origin: center center;
+      filter: contrast(1.08) brightness(0.92);
+    }
+
+    /* VIGNETTES & CINEMATIC SCRIMS (TOP & BOTTOM) */
+    .top-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 420px;
+      background: linear-gradient(180deg, rgba(11, 14, 20, 0.95) 0%, rgba(11, 14, 20, 0.6) 50%, rgba(11, 14, 20, 0) 100%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .bottom-scrim {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1080px;
+      height: 650px;
+      background: linear-gradient(0deg, rgba(11, 14, 20, 0.98) 0%, rgba(11, 14, 20, 0.75) 50%, rgba(11, 14, 20, 0) 100%);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .vignette-radial {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.85);
+      z-index: 11;
+      pointer-events: none;
+    }
+
+    /* TOP ARCHIVAL HUD */
+    .top-hud {
+      position: absolute;
+      top: 100px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(17, 20, 28, 0.9);
+      border: 2px solid #FFE619;
+      border-radius: 6px;
+      padding: 10px 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge-pill .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFE619;
+    }
+
+    .badge-pill .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 20px;
+      color: #FFE619;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .coord-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      color: #66CFFF;
+      letter-spacing: 1px;
+      background: rgba(17, 20, 28, 0.85);
+      padding: 8px 16px;
+      border-radius: 4px;
+      border-left: 3px solid #66CFFF;
+    }
+
+    /* EDITORIAL CALLOUT CARD (MID-LOWER SCREEN) */
+    .callout-box {
+      position: absolute;
+      bottom: 540px;
+      left: 70px;
+      width: 940px;
+      background: rgba(15, 18, 25, 0.92);
+      border-left: 8px solid #FFE619;
+      border-radius: 4px;
+      padding: 24px 30px;
+      z-index: 40;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .callout-title {
+      font-size: 36px;
+      line-height: 1.25;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .callout-title .highlight {
+      color: #FFE619;
+    }
+
+    .callout-desc {
+      margin-top: 10px;
+      font-family: 'Space Mono', monospace;
+      font-size: 20px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* SUBTITLES - MarginV: 380px (Strict Mobile Safe Zone) */
+    .caption-zone {
+      position: absolute;
+      bottom: 380px;
+      left: 70px;
+      width: 940px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    .caption-text {
+      font-size: 42px;
+      line-height: 1.25;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 
+        -3px -3px 0 #000000,  
+         3px -3px 0 #000000,
+        -3px  3px 0 #000000,
+         3px  3px 0 #000000,
+         0 6px 20px rgba(0,0,0,0.95);
+    }
+
+    .highlight-word {
+      color: #FFE619;
+      text-shadow: 
+        -3px -3px 0 #000000,  
+         3px -3px 0 #000000,
+        -3px  3px 0 #000000,
+         3px  3px 0 #000000,
+         0 6px 20px rgba(0,0,0,0.95);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="top-scrim"></div>
+  <div class="bottom-scrim"></div>
+  <div class="vignette-radial"></div>
+
+  <div class="top-hud">
+    <div class="badge-pill">
+      <div class="dot"></div>
+      <div class="label">DEEP ARCHIVE // 1667</div>
+    </div>
+    <div class="coord-tag" id="coord-display">40°42′N 74°00′W</div>
+  </div>
+
+  <div class="viewport">
+    <!-- Beat 1: Manhattan Castello Plan 1660 -->
+    <div id="stage-1" class="stage">
+      <div class="full-img-box">
+        <img id="img-1" src="assets/castello_plan_manhattan_1660.jpg" alt="Castello Plan Manhattan">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">NEW AMSTERDAM <span class="highlight">(MANHATTAN)</span></div>
+        <div class="callout-desc">CASTELLO CARTOGRAPHY · DUTCH WEST INDIA CO.</div>
+      </div>
+    </div>
+
+    <!-- Beat 2: Moluccas Map (Run Island) -->
+    <div id="stage-2" class="stage">
+      <div class="full-img-box">
+        <img id="img-2" src="assets/moluccas_map_17th.jpg" alt="Moluccas Spice Islands Map">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">BANDA ARCHIPELAGO: <span class="highlight">RUN ISLAND</span></div>
+        <div class="callout-desc">THE ONLY SOURCE OF NUTMEG & MACE ON EARTH</div>
+      </div>
+    </div>
+
+    <!-- Beat 3: Vintage Nutmeg Rijksmuseum 1599 -->
+    <div id="stage-3" class="stage">
+      <div class="full-img-box">
+        <img id="img-3" src="assets/nutmeg_vintage_1599.jpg" alt="Vintage Nutmeg Rijksmuseum 1599">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">MYRISTICA FRAGRANS <span class="highlight">(1599)</span></div>
+        <div class="callout-desc">1 SACK TRADED FOR A LUXURY ESTATE IN LONDON</div>
+      </div>
+    </div>
+
+    <!-- Beat 4: Fresh Nutmeg & Mace Botanical -->
+    <div id="stage-4" class="stage">
+      <div class="full-img-box">
+        <img id="img-4" src="assets/nutmeg_fruit_fresh.jpg" alt="Nutmeg Fruit and Mace">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">THE CRIMSON <span class="highlight">MACE MONOPOLY</span></div>
+        <div class="callout-desc">39 BRITISH DEFENDERS HELD UNDER NAVAL SIEGE</div>
+      </div>
+    </div>
+
+    <!-- Beat 5: Treaty of Breda 1667 (Original Contemporary Print) -->
+    <div id="stage-5" class="stage">
+      <div class="full-img-box">
+        <img id="img-5" src="assets/treaty_of_breda_1667.jpg" alt="Treaty of Breda 1667">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">TREATY OF BREDA: <span class="highlight">JULY 31, 1667</span></div>
+        <div class="callout-desc">UTI POSSIDETIS: RUN TRADED TO NETHERLANDS</div>
+      </div>
+    </div>
+
+    <!-- Beat 6: Manhattan Redux Finale -->
+    <div id="stage-6" class="stage">
+      <div class="full-img-box">
+        <img id="img-6" src="assets/castello_plan_manhattan_1660.jpg" alt="Manhattan 1660 Redux">
+      </div>
+      <div class="callout-box">
+        <div class="callout-title">THE <span class="highlight">WORST TRADE</span> IN HISTORY</div>
+        <div class="callout-desc">MANHATTAN BECAME WALL STREET ($2.1T GDP)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtitles Container -->
+  <div class="caption-zone">
+    <div id="caption" class="caption-text"></div>
+  </div>
+
+  <script>
+    window.masterTl = gsap.timeline({ paused: true });
+
+    gsap.set("#stage-1", { opacity: 1 });
+
+    // Smooth Dramatic Camera Pushes (True Ken Burns & Dynamic Zoom)
+    // Beat 1: 0.0 - 2.75s
+    masterTl.fromTo("#img-1", { scale: 1.15, x: 0, y: 0 }, { scale: 1.35, x: -60, y: -40, duration: 2.75, ease: "none" }, 0);
+
+    // Transition 1 -> 2: 2.75s
+    masterTl.set("#stage-1", { opacity: 0 }, 2.75);
+    masterTl.set("#stage-2", { opacity: 1 }, 2.75);
+    masterTl.call(() => { document.getElementById("coord-display").innerText = "4°33′S 129°41′E"; }, null, 2.75);
+    masterTl.fromTo("#img-2", { scale: 1.20, x: 40, y: 20 }, { scale: 1.48, x: -80, y: -60, duration: 8.86, ease: "none" }, 2.75);
+
+    // Transition 2 -> 3: 11.61s
+    masterTl.set("#stage-2", { opacity: 0 }, 11.61);
+    masterTl.set("#stage-3", { opacity: 1 }, 11.61);
+    masterTl.call(() => { document.getElementById("coord-display").innerText = "AMSTERDAM // 1599"; }, null, 11.61);
+    masterTl.fromTo("#img-3", { scale: 1.10, y: 0 }, { scale: 1.30, y: -80, duration: 4.26, ease: "none" }, 11.61);
+
+    // Transition 3 -> 4: 15.87s
+    masterTl.set("#stage-3", { opacity: 0 }, 15.87);
+    masterTl.set("#stage-4", { opacity: 1 }, 15.87);
+    masterTl.call(() => { document.getElementById("coord-display").innerText = "MYRISTICA // SPICE"; }, null, 15.87);
+    masterTl.fromTo("#img-4", { scale: 1.15, x: -30, y: 0 }, { scale: 1.38, x: 50, y: -50, duration: 5.52, ease: "none" }, 15.87);
+
+    // Transition 4 -> 5: 21.39s
+    masterTl.set("#stage-4", { opacity: 0 }, 21.39);
+    masterTl.set("#stage-5", { opacity: 1 }, 21.39);
+    masterTl.call(() => { document.getElementById("coord-display").innerText = "BREDA // JULY 1667"; }, null, 21.39);
+    masterTl.fromTo("#img-5", { scale: 1.12, y: 0 }, { scale: 1.34, y: -100, duration: 5.25, ease: "none" }, 21.39);
+
+    // Transition 5 -> 6: 26.64s
+    masterTl.set("#stage-5", { opacity: 0 }, 26.64);
+    masterTl.set("#stage-6", { opacity: 1 }, 26.64);
+    masterTl.call(() => { document.getElementById("coord-display").innerText = "NYC // WALL STREET"; }, null, 26.64);
+    masterTl.fromTo("#img-6", { scale: 1.35, x: -80, y: -60 }, { scale: 1.55, x: 40, y: 20, duration: 8.11, ease: "none" }, 26.64);
+
+    // Synchronized Captions
+    const subtitles = [
+      { start: 0.50, end: 2.40, html: "YOU THINK MANHATTAN WAS BOUGHT WITH <span class='highlight-word'>CASH</span>" },
+      { start: 2.75, end: 8.15, html: "BRITAIN <span class='highlight-word'>TRADED NEW YORK</span> FOR A 3KM ISLAND" },
+      { start: 8.50, end: 11.61, html: "<span class='highlight-word'>RUN ISLAND:</span> THE ONLY NUTMEG ON EARTH" },
+      { start: 11.96, end: 15.52, html: "NUTMEG WAS WORTH <span class='highlight-word'>MORE THAN GOLD</span>" },
+      { start: 15.87, end: 21.04, html: "39 DEFENDERS UNDER <span class='highlight-word'>NAVAL SIEGE</span>" },
+      { start: 21.39, end: 26.29, html: "1667 <span class='highlight-word'>TREATY OF BREDA</span> SEALED THE DEAL" },
+      { start: 26.64, end: 31.61, html: "MANHATTAN BECAME <span class='highlight-word'>WALL STREET</span>" },
+      { start: 31.96, end: 34.40, html: "THE <span class='highlight-word'>WORST TRADE</span> IN HUMAN HISTORY" }
+    ];
+
+    subtitles.forEach((s) => {
+      masterTl.call(() => {
+        document.getElementById("caption").innerHTML = s.html;
+      }, null, s.start);
+      masterTl.call(() => {
+        if (document.getElementById("caption").innerHTML === s.html) {
+          document.getElementById("caption").innerHTML = "";
+        }
+      }, null, s.end);
+    });
+  </script>
+</body>
+</html>

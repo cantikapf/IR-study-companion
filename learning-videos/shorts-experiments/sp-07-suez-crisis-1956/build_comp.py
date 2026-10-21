@@ -1,0 +1,620 @@
+import os
+
+OUT_HTML = "D:/PERSONAL PROJECT/IR-study-companion/learning-videos/shorts-experiments/sp-07-suez-crisis-1956/composition.html"
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+<title>The Suez Crisis 1956 - @IRinANutshell</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+  body {
+    width: 1080px;
+    height: 1920px;
+    background-color: #060911;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  #viewport {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+  }
+
+  /* Layer B: Adaptive 3D Staging Backgrounds */
+  .stage-layer {
+    position: absolute;
+    inset: 0;
+    width: 1080px;
+    height: 1920px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+  }
+  #stage-1 { background-image: url('assets/stage_suez_map.png'); display: block; opacity: 1; }
+  #stage-2 { background-image: url('assets/stage_suez_map.png'); }
+  #stage-3 { background-image: url('assets/stage_pentagon.png'); }
+  #stage-4 { background-image: url('assets/stage_treasury.png'); }
+  #stage-5 { background-image: url('assets/stage_dispatch.png'); }
+
+  /* Top Clean Human Context Header (Zero-Clutter) */
+  #top-hud {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    right: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+  }
+  .hud-pill {
+    background: rgba(10, 14, 22, 0.94);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 12px 38px;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  }
+
+  /* Layer C: Flat Vector HUD & Tactical Cards */
+  #layer-c {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 15;
+  }
+
+  /* Operation Musketeer Stamp */
+  #stamp-musketeer {
+    position: absolute;
+    top: 360px;
+    left: 120px;
+    width: 840px;
+    padding: 18px 24px;
+    background: #991b1b;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    box-shadow: 10px 10px 0px #000000;
+    opacity: 0;
+    transform: scale(1.4) rotate(-3deg);
+    display: none;
+    z-index: 25;
+  }
+
+  /* Canal Blocked Warning Card */
+  #card-canal-blocked {
+    position: absolute;
+    top: 980px;
+    left: 140px;
+    width: 800px;
+    background: #0f172a;
+    border: 3px solid #ef4444;
+    border-radius: 16px;
+    padding: 20px 30px;
+    color: #ffffff;
+    box-shadow: 10px 10px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 25;
+  }
+  .card-header-red {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ef4444;
+    margin-bottom: 6px;
+  }
+  .card-body-white {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+
+  /* Ultimatum Ceasefire Banner */
+  #card-ultimatum {
+    position: absolute;
+    top: 860px;
+    left: 120px;
+    width: 840px;
+    background: #111827;
+    border: 4px solid #f59e0b;
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-shadow: 10px 10px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 25;
+  }
+  .ultimatum-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f59e0b;
+  }
+  .ultimatum-text {
+    font-size: 34px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-top: 6px;
+  }
+
+  /* Financial Ticker Card (Scene 4) */
+  #ticker-card {
+    position: absolute;
+    top: 840px;
+    left: 100px;
+    width: 880px;
+    background: #090d16;
+    border: 3px solid #dc2626;
+    border-radius: 18px;
+    padding: 24px 30px;
+    box-shadow: 12px 12px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 25;
+  }
+  .ticker-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .ticker-label {
+    font-size: 26px;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+  .ticker-val-red {
+    font-size: 44px;
+    font-weight: 900;
+    color: #ef4444;
+    letter-spacing: 1px;
+  }
+
+  /* Red Stamp: IMF Loan Blocked */
+  #stamp-imf {
+    position: absolute;
+    top: 1030px;
+    left: 140px;
+    width: 800px;
+    padding: 16px 24px;
+    background: #b91c1c;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    box-shadow: 10px 10px 0px #000000;
+    opacity: 0;
+    transform: scale(1.3) rotate(4deg);
+    display: none;
+    z-index: 28;
+  }
+
+  /* Outro Checkmate Stat Badge (Scene 5) */
+  #outro-checkmate-card {
+    position: absolute;
+    top: 860px;
+    left: 120px;
+    width: 840px;
+    background: #0f172a;
+    border: 4px solid #fbbf24;
+    border-radius: 18px;
+    padding: 26px 32px;
+    text-align: center;
+    box-shadow: 12px 12px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 30;
+  }
+  .outro-badge-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fbbf24;
+    margin-bottom: 8px;
+  }
+  .outro-badge-sub {
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+
+  /* Layer A: Photo Stickers & Cutouts */
+  #layer-a {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+  }
+
+  /* Hook Ladder Blocks (0-3.5s) */
+  .hook-block {
+    position: absolute;
+    left: 540px;
+    transform: translateX(-50%);
+    width: 860px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 4px solid #000000;
+    border-radius: 12px;
+    box-shadow: 12px 12px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 35;
+  }
+  #hook-1 { top: 220px; background: #ffe600; color: #000000; }
+  #hook-2 { top: 335px; background: #b91c1c; color: #ffffff; border-color: #ffffff; }
+  #hook-3 { top: 450px; background: #ffffff; color: #000000; }
+
+  /* Hero Stickers */
+  .sticker-prop {
+    position: absolute;
+    opacity: 0;
+    display: none;
+    z-index: 22;
+  }
+
+  /* Eden Sticker (Scene 1 & Scene 5) */
+  #sticker-eden {
+    top: 450px;
+    left: 540px;
+    transform: translateX(-50%) rotate(-4deg);
+    width: 660px;
+    height: auto;
+  }
+
+  /* Tanker Ship (Scene 1 & Scene 2) */
+  #sticker-tanker {
+    top: 1040px;
+    left: 540px;
+    transform: translateX(-50%) rotate(3deg);
+    width: 760px;
+    height: auto;
+  }
+
+  /* Nasser Bust (Scene 2) */
+  #sticker-nasser {
+    top: 240px;
+    left: 100px;
+    transform: rotate(-3deg);
+    width: 440px;
+    height: auto;
+  }
+
+  /* Musketeer Dossier Card (Scene 2) */
+  #sticker-musketeer-card {
+    top: 480px;
+    left: 540px;
+    transform: translateX(-50%) rotate(2deg);
+    width: 740px;
+    height: auto;
+  }
+
+  /* Eisenhower Bust (Scene 3) */
+  #sticker-ike {
+    top: 420px;
+    left: 540px;
+    transform: translateX(-50%) rotate(3deg);
+    width: 650px;
+    height: auto;
+  }
+
+  /* Pound Cracked Banknote (Scene 4) */
+  #sticker-pound {
+    top: 360px;
+    left: 540px;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 820px;
+    height: auto;
+  }
+
+  /* Safe Area Subtitle Box (>430px from bottom) */
+  #subtitle-box {
+    position: absolute;
+    bottom: 460px;
+    left: 80px;
+    right: 80px;
+    min-height: 110px;
+    padding: 20px 32px;
+    background: rgba(8, 12, 20, 0.94);
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 1.35;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+    z-index: 50;
+  }
+
+  /* Channel Watermark Pill (Outro) */
+  .channel-pill {
+    position: absolute;
+    top: 1060px;
+    left: 540px;
+    transform: translateX(-50%);
+    background: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    padding: 14px 40px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    box-shadow: 8px 8px 0px #000000;
+    opacity: 0;
+    display: none;
+    z-index: 55;
+  }
+</style>
+</head>
+<body>
+<div id="viewport">
+  <audio id="master-audio" src="audio/voiceover_master.wav" preload="auto"></audio>
+
+  <!-- Layer B: Adaptive 3D Staging -->
+  <div id="stage-1" class="stage-layer"></div>
+  <div id="stage-2" class="stage-layer"></div>
+  <div id="stage-3" class="stage-layer"></div>
+  <div id="stage-4" class="stage-layer"></div>
+  <div id="stage-5" class="stage-layer"></div>
+
+  <!-- Top Tactical Clean HUD -->
+  <div id="top-hud">
+    <div class="hud-pill" id="hud-title">THE SUEZ CRISIS (1956)</div>
+  </div>
+
+  <!-- Layer C: Flat Vectors & Data Stamps -->
+  <div id="layer-c">
+    <div id="stamp-musketeer">OPERATION MUSKETEER // SECRET PROTOCOL</div>
+    
+    <div id="card-canal-blocked">
+      <div class="card-header-red">STRATEGIC CHOKEPOINT SEIZED</div>
+      <div class="card-body-white">CANAL CLOSED // 40+ SHIPS TRAPPED</div>
+    </div>
+
+    <div id="card-ultimatum">
+      <div class="ultimatum-title">WASHINGTON ULTIMATUM // POTUS 34</div>
+      <div class="ultimatum-text">IMMEDIATE & UNCONDITIONAL WITHDRAWAL</div>
+    </div>
+
+    <div id="ticker-card">
+      <div class="ticker-row">
+        <span class="ticker-label">BANK OF ENGLAND GOLD RESERVES</span>
+        <span class="ticker-val-red" id="ticker-loss">-15%</span>
+      </div>
+      <div class="ticker-row" style="margin-bottom:0;">
+        <span class="ticker-label">STERLING RUN DRAINAGE</span>
+        <span class="ticker-val-red" id="ticker-drain" style="color:#f59e0b;">$279M</span>
+      </div>
+    </div>
+
+    <div id="stamp-imf">IMF EMERGENCY LOAN BLOCKED</div>
+
+    <div id="outro-checkmate-card">
+      <div class="outro-badge-title">SUPERPOWER SUCCESSION CONFIRMED</div>
+      <div class="outro-badge-sub">THE END OF THE BRITISH EMPIRE</div>
+    </div>
+  </div>
+
+  <!-- Layer A: Photo Stickers & Cutouts -->
+  <div id="layer-a">
+    <!-- Hook Ladder (0-3s) -->
+    <div id="hook-1" class="hook-block">DEFEATED AN EMPIRE</div>
+    <div id="hook-2" class="hook-block">ZERO BULLETS</div>
+    <div id="hook-3" class="hook-block">ONE PHONE CALL</div>
+
+    <!-- Hero Archival Cutout Stickers -->
+    <img id="sticker-eden" class="sticker-prop" src="assets/sticker_anthony_eden.png" alt="Anthony Eden">
+    <img id="sticker-tanker" class="sticker-prop" src="assets/sticker_tanker.png" alt="Tanker Ship">
+    <img id="sticker-nasser" class="sticker-prop" src="assets/sticker_nasser.png" alt="Gamal Abdel Nasser">
+    <img id="sticker-musketeer-card" class="sticker-prop" src="assets/sticker_musketeer_card.png" alt="Operation Musketeer">
+    <img id="sticker-ike" class="sticker-prop" src="assets/sticker_eisenhower.png" alt="Dwight Eisenhower">
+    <img id="sticker-pound" class="sticker-prop" src="assets/sticker_pound_cracked.png" alt="Cracked Pound Banknote">
+  </div>
+
+  <!-- Channel Watermark -->
+  <div class="channel-pill" id="channel-badge">@IRinANutshell</div>
+
+  <!-- Bottom Captions -->
+  <div id="subtitle-box">
+    <span id="subtitle-text">In 1956, America defeated the British Empire... without firing a single bullet.</span>
+  </div>
+</div>
+
+<script>
+  // Master GSAP Timeline (Total 40.21s)
+  const tl = gsap.timeline({ paused: true });
+  window.masterTl = tl;
+
+  const sub = document.getElementById('subtitle-text');
+  const hudTitle = document.getElementById('hud-title');
+
+  // =================================================================
+  // SCENE 1: THE IMPOSSIBLE STANDOFF (0.0s - 6.30s)
+  // Audio Line 1: In 1956, America defeated the British Empire... without firing a single bullet.
+  // =================================================================
+  tl.set('#stage-1', { display: 'block', opacity: 1 }, 0);
+  tl.set('#sticker-eden', { display: 'block', opacity: 1, y: 0, scale: 0.95 }, 0);
+  tl.set('#sticker-tanker', { display: 'block', opacity: 1, y: 0, scale: 0.95 }, 0);
+
+  // Hook Ladder Slam-in (0.0s - 3.0s)
+  tl.set('#hook-1', { display: 'flex' }, 1.0);
+  tl.fromTo('#hook-1', { opacity: 0, scale: 1.4, y: -40 }, { opacity: 1, scale: 1, y: 0, duration: 0.28, ease: 'back.out(2)' }, 1.0);
+
+  tl.set('#hook-2', { display: 'flex' }, 2.0);
+  tl.fromTo('#hook-2', { opacity: 0, scale: 1.4, y: -40 }, { opacity: 1, scale: 1, y: 0, duration: 0.28, ease: 'back.out(2)' }, 2.0);
+
+  tl.set('#hook-3', { display: 'flex' }, 3.0);
+  tl.fromTo('#hook-3', { opacity: 0, scale: 1.4, y: -40 }, { opacity: 1, scale: 1, y: 0, duration: 0.28, ease: 'back.out(2)' }, 3.0);
+
+  // Clear Hook Ladder before scene transition
+  tl.to(['#hook-1', '#hook-2', '#hook-3'], { opacity: 0, scale: 0.9, y: 20, duration: 0.25 }, 5.8);
+  tl.set(['#hook-1', '#hook-2', '#hook-3'], { display: 'none' }, 6.1);
+
+  // Wipe out Eden for Scene 2
+  tl.to('#sticker-eden', { opacity: 0, x: -150, duration: 0.35, ease: 'power2.in' }, 5.9);
+  tl.set('#sticker-eden', { display: 'none' }, 6.3);
+
+  // =================================================================
+  // SCENE 2: OPERATION MUSKETEER (6.30s - 13.71s)
+  // Audio Line 2: When Egypt nationalized the Suez Canal, Britain, France, and Israel launched a secret invasion: Operation Musketeer.
+  // =================================================================
+  tl.call(() => {
+    sub.innerText = "When Egypt nationalized the Suez Canal, Britain, France, and Israel launched a secret invasion: Operation Musketeer.";
+    hudTitle.innerText = "PORT SAID // NOVEMBER 1956";
+  }, null, 6.30);
+
+  // Enter Nasser Bust & Canal Blocked Card
+  tl.set('#sticker-nasser', { display: 'block' }, 6.35);
+  tl.fromTo('#sticker-nasser', { opacity: 0, x: -100, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: 'back.out(1.5)' }, 6.35);
+
+  tl.set('#card-canal-blocked', { display: 'block' }, 6.8);
+  tl.fromTo('#card-canal-blocked', { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }, 6.8);
+
+  // Operation Musketeer Dossier Card & Stamp Slam
+  tl.set('#sticker-musketeer-card', { display: 'block' }, 8.5);
+  tl.fromTo('#sticker-musketeer-card', { opacity: 0, scale: 1.25, y: -50 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, 8.5);
+
+  tl.set('#stamp-musketeer', { display: 'block' }, 9.6);
+  tl.fromTo('#stamp-musketeer', { opacity: 0, scale: 1.6, rotation: -8 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.3, ease: 'back.out(2.2)' }, 9.6);
+
+  // Clean Scene 2 assets
+  tl.to(['#sticker-nasser', '#sticker-tanker', '#sticker-musketeer-card', '#card-canal-blocked', '#stamp-musketeer'], {
+    opacity: 0,
+    y: 40,
+    duration: 0.35,
+    ease: 'power2.in'
+  }, 13.3);
+  tl.set(['#sticker-nasser', '#sticker-tanker', '#sticker-musketeer-card', '#card-canal-blocked', '#stamp-musketeer'], { display: 'none' }, 13.68);
+
+  // =================================================================
+  // SCENE 3: THE EISENHOWER ULTIMATUM (13.71s - 21.53s)
+  // Audio Line 3: They expected American backing. Instead, President Eisenhower was furious. He demanded an immediate unconditional ceasefire.
+  // =================================================================
+  tl.call(() => {
+    sub.innerText = "They expected American backing. Instead, President Eisenhower was furious. He demanded an immediate unconditional ceasefire.";
+    hudTitle.innerText = "THE WHITE HOUSE // NOV 6, 1956";
+  }, null, 13.71);
+
+  // Switch to Stage 3 (Pentagon / Oval Office Felt Table)
+  tl.set('#stage-3', { display: 'block', opacity: 0 }, 13.71);
+  tl.to('#stage-3', { opacity: 1, duration: 0.3 }, 13.71);
+
+  // Eisenhower enters at CENTER (Y = 420px)
+  tl.set('#sticker-ike', { display: 'block', top: '420px' }, 13.75);
+  tl.fromTo('#sticker-ike', { opacity: 0, scale: 1.2, y: 60 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 13.75);
+
+  // Eisenhower shifts up to top: 220px to make room for Ultimatum Banner
+  tl.to('#sticker-ike', { top: '220px', scale: 0.9, duration: 0.5, ease: 'power2.inOut' }, 17.2);
+
+  // Ultimatum Card enters below Eisenhower at Y = 860px
+  tl.set('#card-ultimatum', { display: 'block' }, 17.6);
+  tl.fromTo('#card-ultimatum', { opacity: 0, scale: 0.85, y: 50 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, 17.6);
+
+  // Clean Scene 3 assets
+  tl.to(['#sticker-ike', '#card-ultimatum'], { opacity: 0, x: -100, duration: 0.35, ease: 'power2.in' }, 21.1);
+  tl.set(['#sticker-ike', '#card-ultimatum'], { display: 'none' }, 21.5);
+
+  // =================================================================
+  // SCENE 4: THE FINANCIAL JUGULAR (21.53s - 29.30s)
+  // Audio Line 4: When London refused, Washington hit their financial jugular: dumping British pounds and blocking emergency IMF loans.
+  // =================================================================
+  tl.call(() => {
+    sub.innerText = "When London refused, Washington hit their financial jugular: dumping British pounds and blocking emergency IMF loans.";
+    hudTitle.innerText = "US TREASURY // RUN ON STERLING";
+  }, null, 21.53);
+
+  // Switch to Stage 4 (Treasury Ledger)
+  tl.set('#stage-4', { display: 'block', opacity: 0 }, 21.53);
+  tl.to('#stage-4', { opacity: 1, duration: 0.3 }, 21.53);
+
+  // Cracked Pound Banknote enters
+  tl.set('#sticker-pound', { display: 'block' }, 21.6);
+  tl.fromTo('#sticker-pound', { opacity: 0, scale: 1.25, rotation: -6 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.5, ease: 'back.out(1.5)' }, 21.6);
+
+  // Ticker Card enters below banknote
+  tl.set('#ticker-card', { display: 'block' }, 22.8);
+  tl.fromTo('#ticker-card', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }, 22.8);
+
+  // IMF Stamp Slams Down
+  tl.set('#stamp-imf', { display: 'block' }, 25.2);
+  tl.fromTo('#stamp-imf', { opacity: 0, scale: 1.6, rotation: 10 }, { opacity: 1, scale: 1, rotation: 3, duration: 0.35, ease: 'back.out(2.4)' }, 25.2);
+
+  // Clean Scene 4 assets
+  tl.to(['#sticker-pound', '#ticker-card', '#stamp-imf'], { opacity: 0, y: -40, duration: 0.35, ease: 'power2.in' }, 28.9);
+  tl.set(['#sticker-pound', '#ticker-card', '#stamp-imf'], { display: 'none' }, 29.28);
+
+  // =================================================================
+  // SCENE 5: FINANCIAL CHECKMATE & OUTRO (29.30s - 40.21s)
+  // Audio Line 5 & 6: Facing total currency collapse within days, London surrendered...
+  // =================================================================
+  tl.call(() => {
+    sub.innerText = "Facing total currency collapse within days, London surrendered. The empire died not by gunfire, but by financial checkmate.";
+    hudTitle.innerText = "10 DOWNING ST // RESIGNATION";
+  }, null, 29.30);
+
+  // Switch to Stage 5 (Downing Street Dispatch Box)
+  tl.set('#stage-5', { display: 'block', opacity: 0 }, 29.30);
+  tl.to('#stage-5', { opacity: 1, duration: 0.3 }, 29.30);
+
+  // Anthony Eden returns at top Y = 240px (downcast historical reality)
+  tl.set('#sticker-eden', { display: 'block', top: '240px', scale: 0.88 }, 29.35);
+  tl.fromTo('#sticker-eden', { opacity: 0, scale: 1.1, y: 40 }, { opacity: 1, scale: 0.88, y: 0, duration: 0.5, ease: 'power3.out' }, 29.35);
+
+  // Outro Checkmate Stat Badge enters
+  tl.set('#outro-checkmate-card', { display: 'block' }, 31.0);
+  tl.fromTo('#outro-checkmate-card', { opacity: 0, scale: 0.85, y: 50 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, 31.0);
+
+  // Line 6 Call-To-Action (37.19s)
+  tl.call(() => {
+    sub.innerText = "Discover more untold geopolitics on IR in a Nutshell.";
+    hudTitle.innerText = "SUBSCRIBE // @IRinANutshell";
+  }, null, 37.19);
+
+  // Channel badge pop-in
+  tl.set('#channel-badge', { display: 'block' }, 37.3);
+  tl.fromTo('#channel-badge', { opacity: 0, scale: 0.7, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: 'back.out(2)' }, 37.3);
+
+  // Continuous subtle pulse on channel badge
+  tl.to('#channel-badge', { scale: 1.05, repeat: -1, yoyo: true, duration: 0.6, ease: 'power1.inOut' }, 37.8);
+</script>
+</body>
+</html>
+"""
+
+with open(OUT_HTML, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Composition HTML written to {OUT_HTML}")

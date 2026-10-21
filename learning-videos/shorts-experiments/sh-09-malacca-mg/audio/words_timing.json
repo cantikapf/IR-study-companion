@@ -1,0 +1,482 @@
+[
+  {
+    "word": "Two",
+    "start": 0.0,
+    "end": 0.25
+  },
+  {
+    "word": "landmasses.",
+    "start": 0.25,
+    "end": 1.19
+  },
+  {
+    "word": "One",
+    "start": 1.19,
+    "end": 1.44
+  },
+  {
+    "word": "channel",
+    "start": 1.44,
+    "end": 2.04
+  },
+  {
+    "word": "between",
+    "start": 2.04,
+    "end": 2.63
+  },
+  {
+    "word": "them.",
+    "start": 2.63,
+    "end": 3.05
+  },
+  {
+    "word": "One",
+    "start": 3.05,
+    "end": 3.31
+  },
+  {
+    "word": "point",
+    "start": 3.31,
+    "end": 3.73
+  },
+  {
+    "word": "five",
+    "start": 3.73,
+    "end": 4.07
+  },
+  {
+    "word": "nautical",
+    "start": 4.07,
+    "end": 4.75
+  },
+  {
+    "word": "miles",
+    "start": 4.75,
+    "end": 5.18
+  },
+  {
+    "word": "of",
+    "start": 5.18,
+    "end": 5.34
+  },
+  {
+    "word": "water.",
+    "start": 5.34,
+    "end": 5.85
+  },
+  {
+    "word": "And",
+    "start": 5.85,
+    "end": 6.11
+  },
+  {
+    "word": "no",
+    "start": 6.11,
+    "end": 6.28
+  },
+  {
+    "word": "second",
+    "start": 6.28,
+    "end": 6.79
+  },
+  {
+    "word": "option.",
+    "start": 6.79,
+    "end": 7.38
+  },
+  {
+    "word": "At",
+    "start": 8.0,
+    "end": 8.16
+  },
+  {
+    "word": "its",
+    "start": 8.16,
+    "end": 8.39
+  },
+  {
+    "word": "narrowest",
+    "start": 8.39,
+    "end": 9.09
+  },
+  {
+    "word": "it",
+    "start": 9.09,
+    "end": 9.24
+  },
+  {
+    "word": "is",
+    "start": 9.24,
+    "end": 9.4
+  },
+  {
+    "word": "two",
+    "start": 9.4,
+    "end": 9.63
+  },
+  {
+    "word": "point",
+    "start": 9.63,
+    "end": 10.02
+  },
+  {
+    "word": "eight",
+    "start": 10.02,
+    "end": 10.41
+  },
+  {
+    "word": "kilometres",
+    "start": 10.41,
+    "end": 11.18
+  },
+  {
+    "word": "across.",
+    "start": 11.18,
+    "end": 11.72
+  },
+  {
+    "word": "Wide",
+    "start": 11.72,
+    "end": 12.04
+  },
+  {
+    "word": "enough",
+    "start": 12.04,
+    "end": 12.5
+  },
+  {
+    "word": "for",
+    "start": 12.5,
+    "end": 12.73
+  },
+  {
+    "word": "most",
+    "start": 12.73,
+    "end": 13.04
+  },
+  {
+    "word": "ships.",
+    "start": 13.04,
+    "end": 13.51
+  },
+  {
+    "word": "Only",
+    "start": 13.51,
+    "end": 13.82
+  },
+  {
+    "word": "just.",
+    "start": 13.82,
+    "end": 14.21
+  },
+  {
+    "word": "A",
+    "start": 17.5,
+    "end": 17.58
+  },
+  {
+    "word": "fully",
+    "start": 17.58,
+    "end": 17.96
+  },
+  {
+    "word": "loaded",
+    "start": 17.96,
+    "end": 18.43
+  },
+  {
+    "word": "supertanker",
+    "start": 18.43,
+    "end": 19.27
+  },
+  {
+    "word": "sits",
+    "start": 19.27,
+    "end": 19.58
+  },
+  {
+    "word": "twenty",
+    "start": 19.58,
+    "end": 20.04
+  },
+  {
+    "word": "point",
+    "start": 20.04,
+    "end": 20.43
+  },
+  {
+    "word": "five",
+    "start": 20.43,
+    "end": 20.74
+  },
+  {
+    "word": "metres",
+    "start": 20.74,
+    "end": 21.2
+  },
+  {
+    "word": "underwater.",
+    "start": 21.2,
+    "end": 22.05
+  },
+  {
+    "word": "The",
+    "start": 22.05,
+    "end": 22.28
+  },
+  {
+    "word": "seabed",
+    "start": 22.28,
+    "end": 22.74
+  },
+  {
+    "word": "is",
+    "start": 22.74,
+    "end": 22.9
+  },
+  {
+    "word": "twenty",
+    "start": 22.9,
+    "end": 23.36
+  },
+  {
+    "word": "five",
+    "start": 23.36,
+    "end": 23.67
+  },
+  {
+    "word": "metres",
+    "start": 23.67,
+    "end": 24.13
+  },
+  {
+    "word": "down.",
+    "start": 24.13,
+    "end": 24.52
+  },
+  {
+    "word": "That",
+    "start": 24.52,
+    "end": 24.83
+  },
+  {
+    "word": "leaves",
+    "start": 24.83,
+    "end": 25.29
+  },
+  {
+    "word": "four",
+    "start": 25.29,
+    "end": 25.6
+  },
+  {
+    "word": "point",
+    "start": 25.6,
+    "end": 25.98
+  },
+  {
+    "word": "five",
+    "start": 25.98,
+    "end": 26.29
+  },
+  {
+    "word": "metres",
+    "start": 26.29,
+    "end": 26.75
+  },
+  {
+    "word": "of",
+    "start": 26.75,
+    "end": 26.91
+  },
+  {
+    "word": "water",
+    "start": 26.91,
+    "end": 27.29
+  },
+  {
+    "word": "under",
+    "start": 27.29,
+    "end": 27.68
+  },
+  {
+    "word": "the",
+    "start": 27.68,
+    "end": 27.91
+  },
+  {
+    "word": "hull.",
+    "start": 27.91,
+    "end": 28.3
+  },
+  {
+    "word": "So",
+    "start": 28.5,
+    "end": 28.65
+  },
+  {
+    "word": "why",
+    "start": 28.65,
+    "end": 28.88
+  },
+  {
+    "word": "not",
+    "start": 28.88,
+    "end": 29.11
+  },
+  {
+    "word": "go",
+    "start": 29.11,
+    "end": 29.27
+  },
+  {
+    "word": "around?",
+    "start": 29.27,
+    "end": 29.81
+  },
+  {
+    "word": "The",
+    "start": 29.81,
+    "end": 30.04
+  },
+  {
+    "word": "Sunda",
+    "start": 30.04,
+    "end": 30.42
+  },
+  {
+    "word": "route",
+    "start": 30.42,
+    "end": 30.81
+  },
+  {
+    "word": "is",
+    "start": 30.81,
+    "end": 30.96
+  },
+  {
+    "word": "shallower",
+    "start": 30.96,
+    "end": 31.65
+  },
+  {
+    "word": "still.",
+    "start": 31.65,
+    "end": 32.11
+  },
+  {
+    "word": "Big",
+    "start": 32.11,
+    "end": 32.34
+  },
+  {
+    "word": "tankers",
+    "start": 32.34,
+    "end": 32.88
+  },
+  {
+    "word": "have",
+    "start": 32.88,
+    "end": 33.19
+  },
+  {
+    "word": "to",
+    "start": 33.19,
+    "end": 33.34
+  },
+  {
+    "word": "run",
+    "start": 33.34,
+    "end": 33.57
+  },
+  {
+    "word": "east,",
+    "start": 33.57,
+    "end": 33.96
+  },
+  {
+    "word": "past",
+    "start": 33.96,
+    "end": 34.26
+  },
+  {
+    "word": "Lombok,",
+    "start": 34.26,
+    "end": 34.8
+  },
+  {
+    "word": "through",
+    "start": 34.8,
+    "end": 35.34
+  },
+  {
+    "word": "Makassar.",
+    "start": 35.34,
+    "end": 36.03
+  },
+  {
+    "word": "You",
+    "start": 37.5,
+    "end": 37.72
+  },
+  {
+    "word": "cannot",
+    "start": 37.72,
+    "end": 38.16
+  },
+  {
+    "word": "widen",
+    "start": 38.16,
+    "end": 38.53
+  },
+  {
+    "word": "a",
+    "start": 38.53,
+    "end": 38.6
+  },
+  {
+    "word": "strait.",
+    "start": 38.6,
+    "end": 39.11
+  },
+  {
+    "word": "Chokepoints",
+    "start": 39.11,
+    "end": 39.92
+  },
+  {
+    "word": "do",
+    "start": 39.92,
+    "end": 40.06
+  },
+  {
+    "word": "not",
+    "start": 40.06,
+    "end": 40.28
+  },
+  {
+    "word": "create",
+    "start": 40.28,
+    "end": 40.72
+  },
+  {
+    "word": "risk.",
+    "start": 40.72,
+    "end": 41.09
+  },
+  {
+    "word": "They",
+    "start": 41.09,
+    "end": 41.38
+  },
+  {
+    "word": "concentrate",
+    "start": 41.38,
+    "end": 42.19
+  },
+  {
+    "word": "it.",
+    "start": 42.19,
+    "end": 42.41
+  }
+]

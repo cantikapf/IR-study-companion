@@ -1,0 +1,216 @@
+const { chromium } = require("playwright");
+const fs = require("fs");
+
+async function testCleanHorse() {
+  const browser = await chromium.launch({
+    executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    headless: true,
+    args: ["--allow-file-access-from-files", "--disable-web-security", "--use-gl=angle"]
+  });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<script src="assets/three.min.js"></script>
+<style>
+  body { margin: 0; background: #0a0f1d; overflow: hidden; }
+  canvas { width: 1080px; height: 1920px; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+  const canvas = document.getElementById('c');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setSize(1080, 1920);
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0a1020);
+
+  const camera = new THREE.PerspectiveCamera(45, 1080 / 1920, 1, 3000);
+  camera.position.set(0, 40, 720);
+
+  // Lighting
+  scene.add(new THREE.AmbientLight(0xffffff, 1.2));
+  const sun = new THREE.DirectionalLight(0xffedd5, 2.5);
+  sun.position.set(300, 400, 500);
+  scene.add(sun);
+
+  // Courtyard grid
+  const grid = new THREE.GridHelper(800, 16, 0x38bdf8, 0x1e293b);
+  grid.position.y = -180;
+  scene.add(grid);
+
+  const woodMat = new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roughness: 0.6 });
+  const darkWood = new THREE.MeshStandardMaterial({ color: 0x5c3a21, roughness: 0.7 });
+  const cutEdgeMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b });
+  const bronzeMat = new THREE.MeshStandardMaterial({ color: 0xd97706, roughness: 0.3, metalness: 0.8 });
+
+  const horse = new THREE.Group();
+  horse.scale.set(0.78, 0.78, 0.78);
+  horse.position.set(0, -20, 0);
+  scene.add(horse);
+
+  // 1. Platform on wheels
+  const plat = new THREE.Mesh(new THREE.BoxGeometry(260, 20, 380), darkWood);
+  plat.position.y = -140;
+  horse.add(plat);
+
+  const wheelGeo = new THREE.CylinderGeometry(40, 40, 18, 24);
+  wheelGeo.rotateZ(Math.PI / 2);
+  [[-130, -145, 120], [130, -145, 120], [-130, -145, -120], [130, -145, -120]].forEach(p => {
+    const w = new THREE.Mesh(wheelGeo, darkWood);
+    w.position.set(...p);
+    horse.add(w);
+    const hub = new THREE.Mesh(new THREE.CylinderGeometry(10, 10, 24, 16), bronzeMat);
+    hub.rotateZ(Math.PI / 2);
+    hub.position.set(...p);
+    horse.add(hub);
+  });
+
+  // 2. Legs (4 posts)
+  const legGeo = new THREE.BoxGeometry(26, 140, 30);
+  [[-80, -60, 100], [80, -60, 100], [-80, -60, -100], [80, -60, -100]].forEach(p => {
+    const l = new THREE.Mesh(legGeo, darkWood);
+    l.position.set(...p);
+    horse.add(l);
+  });
+
+  // 3. HOLLOW CUTAWAY BELLY (Right side wide open!)
+  // Back wall (far side, x = -50)
+  const backWall = new THREE.Mesh(new THREE.BoxGeometry(8, 170, 270), woodMat);
+  backWall.position.set(-50, 60, 0);
+  horse.add(backWall);
+
+  // Floor (bottom of belly)
+  const bellyFloor = new THREE.Mesh(new THREE.BoxGeometry(100, 8, 270), woodMat);
+  bellyFloor.position.set(0, -25, 0);
+  horse.add(bellyFloor);
+
+  // Roof (top of spine)
+  const bellyRoof = new THREE.Mesh(new THREE.BoxGeometry(100, 8, 270), woodMat);
+  bellyRoof.position.set(0, 145, 0);
+  horse.add(bellyRoof);
+
+  // Chest (front wall)
+  const chest = new THREE.Mesh(new THREE.BoxGeometry(100, 170, 8), woodMat);
+  chest.position.set(0, 60, 135);
+  horse.add(chest);
+
+  // Rump (rear wall)
+  const rump = new THREE.Mesh(new THREE.BoxGeometry(100, 170, 8), woodMat);
+  rump.position.set(0, 60, -135);
+  horse.add(rump);
+
+  // Cutaway golden glowing edge frame on the open right side (x = 50)
+  const edgeTop = new THREE.Mesh(new THREE.BoxGeometry(8, 12, 274), cutEdgeMat);
+  edgeTop.position.set(50, 145, 0);
+  horse.add(edgeTop);
+
+  const edgeBottom = new THREE.Mesh(new THREE.BoxGeometry(8, 12, 274), cutEdgeMat);
+  edgeBottom.position.set(50, -25, 0);
+  horse.add(edgeBottom);
+
+  const edgeFront = new THREE.Mesh(new THREE.BoxGeometry(8, 170, 12), cutEdgeMat);
+  edgeFront.position.set(50, 60, 135);
+  horse.add(edgeFront);
+
+  const edgeBack = new THREE.Mesh(new THREE.BoxGeometry(8, 170, 12), cutEdgeMat);
+  edgeBack.position.set(50, 60, -135);
+  horse.add(edgeBack);
+
+  // 4. Scaffolding Tiers inside
+  const tierLower = new THREE.Mesh(new THREE.BoxGeometry(88, 8, 260), darkWood);
+  tierLower.position.set(-2, 20, 0);
+  horse.add(tierLower);
+
+  const tierUpper = new THREE.Mesh(new THREE.BoxGeometry(88, 8, 260), darkWood);
+  tierUpper.position.set(-2, 85, 0);
+  horse.add(tierUpper);
+
+  // Internal Warm Spotlight
+  const inLight = new THREE.PointLight(0xffb703, 3.2, 450);
+  inLight.position.set(20, 60, 0);
+  horse.add(inLight);
+
+  // 5. Greek Hoplite Soldiers seated in rows
+  const helmGeo = new THREE.SphereGeometry(8, 16, 16);
+  const crestGeo = new THREE.BoxGeometry(3, 8, 14);
+  const crestMat = new THREE.MeshBasicMaterial({ color: 0xef4444 });
+  const shieldGeo = new THREE.CylinderGeometry(11, 11, 4, 16);
+  shieldGeo.rotateX(Math.PI / 2);
+  const bodyGeo = new THREE.CylinderGeometry(8, 8, 22, 12);
+
+  function makeHoplite(x, y, z) {
+    const g = new THREE.Group();
+    g.position.set(x, y, z);
+    
+    const b = new THREE.Mesh(bodyGeo, bronzeMat);
+    b.position.y = 11;
+    g.add(b);
+
+    const h = new THREE.Mesh(helmGeo, bronzeMat);
+    h.position.y = 26;
+    g.add(h);
+
+    const c = new THREE.Mesh(crestGeo, crestMat);
+    c.position.set(0, 32, 0);
+    g.add(c);
+
+    const sh = new THREE.Mesh(shieldGeo, bronzeMat);
+    sh.position.set(12, 14, 0);
+    g.add(sh);
+
+    return g;
+  }
+
+  // Lower tier: 16 soldiers (2 rows x 8)
+  for (let r = 0; r < 2; r++) {
+    for (let c = 0; c < 8; c++) {
+      horse.add(makeHoplite(-30 + r * 35, 20, -100 + c * 28));
+    }
+  }
+
+  // Upper tier: 14 soldiers (2 rows x 7)
+  for (let r = 0; r < 2; r++) {
+    for (let c = 0; c < 7; c++) {
+      horse.add(makeHoplite(-30 + r * 35, 85, -90 + c * 28));
+    }
+  }
+
+  // 6. Neck and Head
+  const neck = new THREE.Mesh(new THREE.BoxGeometry(60, 160, 70), woodMat);
+  neck.rotateX(-Math.PI / 5);
+  neck.position.set(0, 175, 115);
+  horse.add(neck);
+
+  const head = new THREE.Mesh(new THREE.BoxGeometry(50, 65, 95), woodMat);
+  head.position.set(0, 240, 155);
+  horse.add(head);
+
+  const mane = new THREE.Mesh(new THREE.BoxGeometry(16, 180, 30), darkWood);
+  mane.position.set(0, 190, 85);
+  horse.add(mane);
+
+  // Angle camera directly into cutaway
+  horse.rotation.y = Math.PI / 2 + 0.35; // Looking directly into open flank
+  horse.rotation.x = 0.12;
+
+  camera.lookAt(0, 35, 0);
+  renderer.render(scene, camera);
+</script>
+</body>
+</html>`;
+
+  await page.setContent(html);
+  await page.waitForTimeout(500);
+
+  const { data } = await (await page.context().newCDPSession(page)).send("Page.captureScreenshot", { format: "jpeg", quality: 85 });
+  fs.writeFileSync("learning-videos/shorts-experiments/th-01-trojan-horse-3d-cutaway/preview_stills/test_hoplite_cutaway.jpg", Buffer.from(data, "base64"));
+  console.log("Saved test_hoplite_cutaway.jpg");
+
+  await browser.close();
+}
+
+testCleanHorse().catch(console.error);
