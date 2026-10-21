@@ -1,0 +1,135 @@
+{
+  "diplomat_envoy.png": {
+    "path": "assets/sprites/diplomat_envoy.png",
+    "w": 128,
+    "h": 96,
+    "frames": 8,
+    "cols": 4,
+    "fw": 32,
+    "fh": 48,
+    "kind": "spritesheet",
+    "layout": "row0=idle(4) row1=thinking,satisfied,hostile,alarmed"
+  },
+  "diplomat_rival.png": {
+    "path": "assets/sprites/diplomat_rival.png",
+    "w": 128,
+    "h": 96,
+    "frames": 8,
+    "cols": 4,
+    "fw": 32,
+    "fh": 48,
+    "kind": "spritesheet",
+    "layout": "row0=idle(4) row1=thinking,satisfied,hostile,alarmed"
+  },
+  "table_wide.png": {
+    "path": "assets/sprites/table_wide.png",
+    "w": 320,
+    "h": 84,
+    "kind": "sprite",
+    "anchor": "center"
+  },
+  "envelope.png": {
+    "path": "assets/fx/envelope.png",
+    "w": 128,
+    "h": 32,
+    "frames": 4,
+    "cols": 4,
+    "fw": 32,
+    "fh": 32,
+    "kind": "spritesheet",
+    "layout": "closed,seal-cracking,flap-open,letter-out"
+  },
+  "tube.png": {
+    "path": "assets/ui/tube.png",
+    "w": 80,
+    "h": 16,
+    "frames": 5,
+    "cols": 5,
+    "fw": 16,
+    "fh": 16,
+    "kind": "spritesheet",
+    "layout": "frame,empty,low,mid,full"
+  },
+  "panel_cyan.png": {
+    "path": "assets/ui/panel_cyan.png",
+    "w": 96,
+    "h": 96,
+    "kind": "nineslice",
+    "corner": 12,
+    "tile": 32
+  },
+  "panel_gold.png": {
+    "path": "assets/ui/panel_gold.png",
+    "w": 96,
+    "h": 96,
+    "kind": "nineslice",
+    "corner": 12,
+    "tile": 32
+  },
+  "panel_slate.png": {
+    "path": "assets/ui/panel_slate.png",
+    "w": 96,
+    "h": 96,
+    "kind": "nineslice",
+    "corner": 12,
+    "tile": 32
+  },
+  "spark.png": {
+    "path": "assets/fx/spark.png",
+    "w": 128,
+    "h": 32,
+    "frames": 4,
+    "cols": 4,
+    "fw": 32,
+    "fh": 32,
+    "kind": "spritesheet",
+    "layout": "4-frame radial burst"
+  },
+  "stamp_veto.png": {
+    "path": "assets/fx/stamp_veto.png",
+    "w": 256,
+    "h": 64,
+    "frames": 4,
+    "cols": 4,
+    "fw": 64,
+    "fh": 64,
+    "kind": "spritesheet",
+    "layout": "raised,descending,impact,splat"
+  },
+  "icon_coop.png": {
+    "path": "assets/ui/icon_coop.png",
+    "w": 32,
+    "h": 32,
+    "kind": "icon"
+  },
+  "icon_defect.png": {
+    "path": "assets/ui/icon_defect.png",
+    "w": 32,
+    "h": 32,
+    "kind": "icon"
+  },
+  "pips.png": {
+    "path": "assets/ui/pips.png",
+    "w": 112,
+    "h": 16,
+    "frames": 7,
+    "cols": 7,
+    "fw": 16,
+    "fh": 16,
+    "kind": "spritesheet",
+    "layout": "empty,mid,playerC,playerD,rivalC,rivalD,active"
+  },
+  "chamber.png": {
+    "path": "assets/bg/chamber.png",
+    "w": 320,
+    "h": 180,
+    "kind": "background",
+    "scale": 4
+  },
+  "logo_labs.png": {
+    "path": "assets/ui/logo_labs.png",
+    "w": 160,
+    "h": 48,
+    "kind": "logo"
+  }
+}

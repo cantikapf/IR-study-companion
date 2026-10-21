@@ -13,6 +13,18 @@ tags:
 
 ## Last Updated
 
+2026-10-21 - Fix Diplomatic Decision Lab 02 Missing Assets & Iframe Crash:
+1. `Root Cause`: Lab 02 (`lab-02-diplomacy-duel`) dan lab Phaser lainnya membutuhkan aset grafis statis (`chamber.png`, `table_wide.png`, `diplomat_envoy.png`, `spark.png`, dll.) yang disimpan di folder `prototype/decision-labs/assets/` namun belum disalin ke path produksi Jekyll `assets/decision-labs/assets/`.
+2. `Effect`: Ketika iframe memuat `/assets/decision-labs/lab-02-diplomacy-duel/index.html`, browser mengalami error 404 pada aset grafis sehingga Phaser 3 gagal menginisialisasi animasi (`TypeError: Cannot read properties of undefined (reading 'duration')`) dan memicu ikon crash tab.
+3. `Remediation & Empiris`: Disalin seluruh pohon aset ke `assets/decision-labs/assets/` dan `_site/assets/decision-labs/assets/`. Diuji menggunakan Playwright Chromium browser headless terhadap live server: Phaser 3 WebGL & Web Audio sukses boot tanpa error, onboarding dialog manual muncul normal, dan game canvas rendered 100% sempurna. Baseline unit test: 378/378 passed.
+
+1. `Mandat Format Visual Baru`: Pengguna menyetujui arsitektur mind map kanonikal baru yang memisahkan kanvas secara tegas menjadi dua zona makro:
+   - **Part 1 (Zona Kiri / Biru)**: Core Theories & Mechanisms (puzzle teoritis, konsep dasar, tipologi Vinerian, debat Rasionalis vs Konstruktivis).
+   - **Part 2 (Zona Kanan / Kuning)**: Empirical Case Studies (5 blok studi kasus riil bab: Uni Eropa, ASEAN, Kasus Khusus SICA Amerika Tengah, AU/Mercosur, Eurasia).
+2. `Jalur Pengujian Empiris ('TESTED IN')`: Panah melintasi gutter tengah menghubungkan konsep teori langsung ke blok studi kasus pengujinya.
+3. `Standar Kartu Bento-Box`: Tag kategori ontologis presisi di kiri atas, sitasi bab/tokoh di kanan atas, foto arsip autentik/vektor di kiri, judul konsep ringkas (2-3 kata) + kutipan tesis di kanan, dan baris penuh **KEY TAKEAWAY** bebas tabrakan di footer. Seluruh teks wajib 100% Academic English murni.
+4. `Prototipe Terverifikasi`: Diagram master 2560x1440 untuk Bab 100 (*Regionalism in International Affairs*) sukses dirender dan tersimpan di `learning-videos/posters/CH100_Regionalism_Mindmap_Structured_1440p.png`.
+
 2026-10-20 - Produksi & Render Penuh YouTube Shorts SP-07 (@90secondslab Physical Mixed-Media Explainer):
 1. `Judul & Topik`: "The Day Washington Bankrupted the British Empire (1956)" (Krisis Terusan Suez 1956: Invasi Operasi Musketeer, Blokade Kanal, Ancaman Likuidasi Cadangan Devisa AS, dan Kejatuhan Imperium Britania).
 2. `Arsip Autentik Bebas AI`: 100% menggunakan foto arsip sejarah nyata domain publik Wikimedia/NARA (PM Anthony Eden Downing St portrait, Presiden Dwight D. Eisenhower Oval Office Desk plate lengkap dengan setelan jas three-piece dan dokumen resmi, Presiden Gamal Abdel Nasser, Uang Kertas 5 Pound Sterling 1931 Bank of England bergaris retak merah, Kapal Tanker Terusan Suez, dan Dossier Card Invasi Anglo-Prancis Operation Musketeer Port Said).
