@@ -1,8 +1,16 @@
 ---
+youtube_id: "GPGo0XqcWKY"
 title: Regionalism In International Affairs
 slug: regionalism-in-international-affairs
 abstract: Introduction to regionalism in International Relations
 simple_summary: "Global governance at the UN level is often too slow and fractured, while individual medium-sized countries lack the muscle to negotiate alone against superpowers. By forming regional blocs—from the deep legal integration of the European Union to the consensus-driven diplomacy of ASEAN—neighboring states pool their sovereignty. Regionalism creates a collective diplomatic shield, allowing countries to solve neighborhood crises locally and punch above their weight on the global stage."
+explanatory_video:
+  title: "Mind Map Explanatory: Regionalism In International Affairs"
+  desc: "Watch this animated concept map first to explore key actors, systemic dynamics, and theoretical paradigms before exploring the academic chapter text."
+  format: "Mind Map Explanatory (@IRinANutshell)"
+  engine: "Remotion + RoughJS + Kokoro-82M"
+  status: "Published"
+  youtube_id: "GPGo0XqcWKY"
 ---
 
 ## Introduction to Regional Cooperation and Integration

@@ -13,6 +13,46 @@ tags:
 
 ## Last Updated
 
+2026-10-21 - Produksi Penuh & Publikasi YouTube Video Mind Map Explanatory Bab 100 (CH-100 Regionalism in International Affairs):
+1. `Video & Publikasi Resmi`: Berhasil dipublikasikan ke YouTube Studio channel `@IRinANutshell`:
+   - Judul YouTube: **Why 27 Nations Gave Up Their Borders | Regionalism Explained**
+   - Video URL: [https://youtu.be/GPGo0XqcWKY](https://youtu.be/GPGo0XqcWKY) (ID: `GPGo0XqcWKY`)
+   - Durasi: 6 menit 55 detik (12.473 frames @ 30 FPS, 65.7 MB MP4 1440p)
+   - Narasi & Audio: Kokoro-82M neural TTS (`am_michael`), 8 babak narasi, 41 subtitle sinkron.
+2. `Arsitektur Mind Map Dual-Zone Kanonikal`:
+   - Zona Kiri (Part 1: Core Theories & Mechanisms): Functionalism Mitrany, Supranational Haas, Trade Creation/Diversion Viner, Sovereignty Backlash, Security Community Deutsch.
+   - Zona Kanan (Part 2: Empirical Case Studies): EU, ASEAN Way, AU/Mercosur, SICA Central America, Eurasia.
+   - Panah Penyeberang: `TESTED IN` melintasi kanvas menghubungkan teori ke studi kasus empiris.
+3. `Packaging & Thumbnail YouTube`:
+   - Thumbnail split-brush mask torehan kuas resmi dengan foto arsip asli penandatanganan Traktat Paris 1951 (ECSC) di `learning-videos/posters/CH100_Regionalism_Thumbnail.png` (Skor paket: 98/100).
+4. `Sinkronisasi Platform Otomatis`:
+   - Frontmatter `_chapters/010-Introduction-to-IR/100-regionalism-affairs.md` diperbarui dengan `youtube_id: "GPGo0XqcWKY"`.
+   - `learning-videos/catalog.json` & `learning-videos/README.md` diperbarui dengan metadata lengkap bab CH-100 berstatus `Published`.
+   - Badge video interaktif aktif di Curriculum Explorer, Table of Contents, dan Drawer platform.
+
+2026-10-21 - Produksi & Pra-Render YouTube Shorts TH-01 (Satisfying 3D Stylized Cutaway Explainer - Trojan Horse):
+1. `Judul & Topik`: "How 30 Men Actually Survived Inside the Trojan Horse" (Strategi Odysseus, anatomi interior kuda kayu Troya, scaffolding 2 tingkat, bahaya sesak nafas 35°C, saluran ventilasi tersembunyi, palka bawah malam hari, dan jatuhnya kota Troya).
+2. `Arsitektur Visual Hybrid (Google Veo 3D Simulation Plates + @90secondslab Overlays)`:
+   - Base Layer: Video simulation plates 3D murni dari Google Gemini Veo (Argon) resolusi 720x1280 (dieksplorasi via image sequence deterministik): `scene_1_cutaway.mp4` (kuda kayu Troya di gerbang kota), `scene_4_trapdoor.mp4` (palka bawah terbuka di malam hari & tali meluncur jatuh ke lantai batu), dan `scene_5_gates_outro.mp4` (penurunan prajurit Yunani & tali rami di batu Troya).
+   - Hook Ladder 0-3s: 3 baris stiker tebal (`30 GREEK SOLDIERS` -> `TRAPPED IN 35°C HEAT` -> `HOW DID THEY SURVIVE?`) dengan hard offset shadow 12px 0-blur.
+   - Master Archival Plates: Tiepolo 1760 (*Procession of Trojan Horse into Troy*), Henri-Paul Motte 1874 (*Midnight Descent on Ropes*), dan Mykonos Pithos 670 BC (*Relief tertua penampakan kepala prajurit dalam perut kuda*).
+   - Telemetri & Data Taktis: Kartu dimensi kayu 18 cm & kapasitas 30 prajurit (top: 210px), kartu bahaya suhu 35°C (top: 210px), dan lencana ventilasi tersembunyi (top: 410px), membebaskan subjek visual di tengah tanpa oklusi dan zero dead void.
+   - Safe Zone Subtitle: Kotak subtitle terkunci rapi di `bottom: 420px` dengan lebar 860px (margin samping 110px aman dari tombol like/share Shorts).
+3. `Audio & Narasi`: Kokoro-82M ONNX TTS (`am_adam`, speed 1.06x) termixing rapi bersama musik ketegangan epik kuno ducked -18 dBFS (`audio/final_soundtrack_master.wav`, durasi 45.79 detik).
+4. `Status & Gate Review`: 6 preview stills di `preview_stills/` lolos 100% audit visual `vision_analyze`. Pipeline render deterministik `render_th01.js` siap dijalankan segera setelah ACC pengguna diberikan. Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai **READY FOR ACC / RENDERING**.
+
+2026-10-21 - Produksi & Pra-Render YouTube Shorts SH-11 (3D WebGL Globe Animation + @90secondslab Tactical Overlay):
+1. `Judul & Topik`: "How Inflatable Tanks Fooled Hitler on D-Day (1944)" (Operasi Fortitude South: General George Patton, First US Army Group phantom force, tank tiup M4 Sherman, siaran radio hantu Dover-Calais, dan penahanan 15 Divisi Panzer Jerman sejauh 200 mil dari Normandia).
+2. `Arsitektur Visual Hybrid (Pilar 1 Three.js 3D Globe + Pilar 2 Tactical Overlay)`:
+   - Base Layer: 3D Earth Globe (`three.min.js` + `assets/earth_map_2048.jpg`) berputar orbital di orbit luar angkasa dengan pencahayaan sinematik matahari, graticule garis lintang/bujur glowing, atmospheric blue rim, dan kamera menukik dramatis dari luar angkasa menuju Selat Inggris (-1.57 rotY, 0.88 rotX).
+   - Hook Ladder 0-3s: 3 blok stiker tebal (15 PANZER DIVISIONS -> HELD 200 MILES AWAY -> BY INFLATABLE TANKS) dengan hard offset shadow 12px 0-blur.
+   - Master Archival Plates (Bebas Severed Head): Kartu dossier arsip berstempel merah TOP SECRET General George S. Patton (FUSAG), NARA Inflatable Decoy M4 Sherman tank plate di Dover, dan Field Marshal Erwin Rommel Atlantikwall inspection plate di Pas-de-Calais.
+   - Motion Prompt #004 Deception Arc SVG: Kartu taktis Dover HQ menuju Pas-de-Calais dengan animasi line draw garis kurva kuning radio hantu dan glowing pulse nodes.
+   - Motion Prompt #007 Counter Stat: Kartu counter taktis "PANZER UNITS DIVERTED TO CALAIS: 15 DIVISIONS" dan "DISTANCE FROM REAL BEACHES: 200 MILES".
+   - Safe Zone & Zero Collision: Subtitle box terkunci di `bottom: 420px` (aman dari UI Shorts 0-380px), dan seluruh pin 3D globe disekuensikan per scene sehingga 100% bebas tumpang tindih dengan UI 2D.
+3. `Audio & Narasi`: Kokoro-82M ONNX TTS (`am_adam`, speed 1.06x) termixing rapi bersama musik ketegangan militer ducked -18 dBFS (`audio/final_soundtrack_master.wav`, durasi 42.62 detik).
+4. `Status & Render Deterministik Final`: MP4 master sukses dirender via Playwright Chromium CDP frame-by-frame 30 FPS dipipe ke FFmpeg libx264/aac -> `learning-videos/exports/SH11_DDay_Ghost_Army_Short_1080p.mp4` (24.3 MB, 42.63 detik, 1.279 frames). Telah discrub dan lolos 100% audit QA visual independen `vision_analyze`. Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai **RENDERED** (Siap Upload YouTube Studio).
+
 2026-10-21 - Fix Diplomatic Decision Lab 02 Missing Assets & Iframe Crash:
 1. `Root Cause`: Lab 02 (`lab-02-diplomacy-duel`) dan lab Phaser lainnya membutuhkan aset grafis statis (`chamber.png`, `table_wide.png`, `diplomat_envoy.png`, `spark.png`, dll.) yang disimpan di folder `prototype/decision-labs/assets/` namun belum disalin ke path produksi Jekyll `assets/decision-labs/assets/`.
 2. `Effect`: Ketika iframe memuat `/assets/decision-labs/lab-02-diplomacy-duel/index.html`, browser mengalami error 404 pada aset grafis sehingga Phaser 3 gagal menginisialisasi animasi (`TypeError: Cannot read properties of undefined (reading 'duration')`) dan memicu ikon crash tab.

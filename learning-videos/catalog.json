@@ -257,6 +257,36 @@
       },
       "last_updated": "2026-10-15",
       "file_size_bytes": 106502802
+    },
+    {
+      "id": "IR-M01-CH100",
+      "module_num": 1,
+      "module_title": "Introduction to International Relations",
+      "chapter_num": "100",
+      "chapter_slug": "100-regionalism-affairs",
+      "title": "Regionalism in International Affairs",
+      "format": "Mind Map Explanatory",
+      "engine": "Remotion (RoughJS + Patrick Hand)",
+      "tts_voice": "Kokoro-82M (am_michael)",
+      "composition_id": "FlowchartVideo",
+      "duration_sec": 415.75,
+      "frames": 12473,
+      "fps": 30,
+      "resolution": "2560x1440",
+      "status": "Published",
+      "files": {
+        "video": "learning-videos/exports/CH100_Regionalism_in_International_Affairs.mp4",
+        "poster": "learning-videos/posters/CH100_Regionalism_Mindmap_Structured_1440p.png",
+        "thumbnail": "learning-videos/posters/CH100_Regionalism_Thumbnail.png"
+      },
+      "youtube": {
+        "channel": "@IRinANutshell",
+        "title": "Why 27 Nations Gave Up Their Borders | Regionalism Explained",
+        "status": "Published",
+        "youtube_id": "GPGo0XqcWKY"
+      },
+      "last_updated": "2026-10-21",
+      "file_size_bytes": 66072124
     }
   ]
 }
