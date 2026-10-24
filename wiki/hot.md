@@ -13,6 +13,141 @@ tags:
 
 ## Last Updated
 
+2026-10-24 - Perbaikan Sinkronisasi Dark Mode Homepage (`_pages/index.md` & `prototype/home.html`):
+1. `Root Cause Teridentifikasi`:
+   - Kontinen SVG Hero Globe (`#ir-globe-land` / `.globe-land-path`) tidak memiliki deklarasi `fill: var(--land-fill)` dan `stroke: var(--land-stroke)`. Akibatnya browser memakai default SVG `fill: black` (#000000) dan tidak merespons class `body.dark-theme` / `[data-theme="dark"]`.
+   - Garis graticule SVG (`#ir-globe-grat` / `.globe-grat-path`) tidak memiliki aturan CSS sama sekali.
+   - Pill badge instruksi `.globe-drag-hint` menggunakan token non-standar `var(--lms-surface-subtle)` dan `var(--lms-border-hairline)`, sehingga selalu jatuh ke fallback warna terang (`#f1f5f9` / `#e2e8f0`) saat mode gelap aktif.
+   - Komponen kartu selector simulasi (`.home-lab-card`) di `_pages/index.md` belum memiliki kelas styling hover dan active untuk tema gelap.
+2. `Perbaikan & Refaktor`:
+   - `.globe-land-path` kini mengikat `fill: var(--land-fill)` dan `stroke: var(--land-stroke); stroke-width: 0.5px;` dengan transisi warna halus.
+   - `.globe-grat-path` diikat ke `stroke: var(--globe-line); opacity: var(--globe-line-opacity); fill: none;`.
+   - `.globe-drag-hint` diselaraskan menggunakan variabel resmi LMS `var(--lms-subtle)` dan `var(--lms-hairline)`, serta ditambahkan override spesifik `body.dark-theme .globe-drag-hint`.
+   - Ditambahkan rules `.home-lab-card` untuk hover dan state aktif di mode gelap.
+   - Sinkronisasi identik diterapkan ke `prototype/home.html`.
+3. `Verifikasi`:
+   - Full test suite lolos 378/378 (`pytest -o pythonpath=scripts --ignore=_site tests/`).
+
+2026-10-24 - Publikasi YouTube & Sinkronisasi Bab CH-011 (`social-science-concept`):
+1. `Chrome Remote Debugging Launch`:
+   - Browser Google Chrome diluncurkan secara otomatis via PowerShell CIM pada port 9222 dengan user data dir `JobHuntProfile`.
+   - YouTube Studio (`@IRinANutshell`) terdeteksi dan terhubung via Playwright CDP.
+2. `Thumbnail & Metadata`:
+   - Thumbnail 1080p diproduksi via `scripts/generate_thumbnail.py` menggunakan potret arsip autentik Max Weber (`social_science_visual_weber.jpg`) dengan split-screen brush slash (`CH011_Social_Science_Thumbnail.png`).
+   - Naskah judul: `Why Society Defies Physics: Social Science Epistemology Explained` lengkap dengan 14 timestamps chapter baris demi baris, tagar, dan link kurikulum.
+   - Opsi Altered/Synthetic Content (AI voice & animation) disetel ke YES, audiens Not made for kids, visibilitas PUBLIC.
+3. `Publikasi & Platform Sync`:
+   - Video terunggah dan dipublikasikan: `https://youtu.be/v7zaHrspdU8` (Video ID: `v7zaHrspdU8`).
+   - `scripts/sync_youtube_video.py` otomatis menautkan ID video ke frontmatter `_chapters/011-introduction-to-social-science/010-basic-social-science.md`, memperbarui `catalog.json`, `README.md`, dan badge VIDEO dinamis di `_pages/index.md` serta `prototype/home.html`.
+   - Seluruh test suite lolos 378/378 (`npm run test`).
+
+1. `Root Cause Teridentifikasi & Selesai Diperbaiki`:
+   - `generate_elevenlabs_vo.py` sebelumnya memakai cache file berbasis indeks `line_XX` (`line_00..09`). Saat skrip diekspansi dari pilot 10 baris ke 28 baris full chapter, baris 0–9 tidak disintesis ulang sehingga audio memutar narasi pilot lama sementara subtitle HTML menampilkan naskah bab 14 scene.
+   - Cache diperbarui ke content-hash SHA-256 (`{VOICE_ID}:{MODEL_ID}:{text}`) sehingga perubahan teks otomatis memaksa re-sintesis.
+2. `Sintesis Ulang & Sinkronisasi`:
+   - Seluruh 28 baris naskah disintesis ulang dengan ElevenLabs suara Daniel (`onwK4e9ZLuTAKqWW03F9`).
+   - Durasi master audio: 249.13s (7.474 frame @ 30 FPS).
+   - Timestamp 14 `<section id="scene-...">`, 28 caption clips, dan fungsi animasi GSAP disinkronkan presisi ke `manifest.json`.
+3. `Verifikasi & QA`:
+   - `npx hyperframes check`: 0 error, 0 runtime warnings, 0 craft warnings.
+   - `qa_notes.py`: 9/9 kombinasi viewport lolos (desktop, mobile-landscape, mobile-portrait; 0 collision, 0 overflow, font >= 28px).
+   - Render tuntas via `npx hyperframes render`: `HF03_Social_Science_Stickman_1080p.mp4` (38.5 MB, 249.13s, H.264 1080p + AAC stereo).
+   - Stills tervalidasi via `vision_analyze`: narasi audio, subtitle bawah, dan teks catatan kanan terbukti sinkron 100% kata demi kata.
+
+
+2026-10-24 - Re-Audit Revisi `hyperframes-stickman-social-science/index.html` (`c0c22e6a-a750-45e9-a416-f89643072a01` & `ec1f7321-50e2-4e54-8f7d-09137fb6e42f.json`):
+1. `Perbaikan yang Berhasil Diverifikasi (7/7 Poin Utama)`:
+   - Kepala stick-man (`data-s > 1.0`) di Scene 1, 7, 8, 12, 13 kini 100% bulat utuh (`const sw = (6.5 / s).toFixed(2)`).
+   - Seluruh peringatan `text_below_floor` turun dari 7 menjadi **0** (`runtime: ok`, `layout: ok`, `contrast: 65/65 passed`).
+   - Scene 3 memiliki garis tanah (`M80 520 L960 520`), 4 batang grafik nyata di `#s3-stats`, dan `.notes` `Comte & Durkheim`.
+   - Scene 5 pabrik dipindah ke kanan (`translate(540, 0)`) dan 3 pekerja (`s5-w1..w3`) berjalan mendekati pabrik (`x: 180`).
+   - Scene 9 & 11 kini memiliki karakter `[data-fig]` stick-man (`s9-worker`, `s9-boss`, `s11-f1`, `s11-f2`), dan tabrakan judul di Scene 14 sudah teratasi (`data-y="330"`).
+2. `5 Defek Visual/Kode Residual yang Ditemukan pada Snapshot Baru`:
+   - **Scene 10 (Duplikasi ID `#s10-n1..n6`)**: Elemen SVG `<g id="s10-n1..n6">` dan `.notes` `<div id="s10-n1..n6">` memakai ID yang sama persis sehingga `document.querySelector` di `W()` menimpa SVG dan membuat `.notes` tidak teranimasi, ditambah arah panah `#s10-arrows` baris bawah yang bolak-balik (`1 ↔ 2 ↔ 3`).
+   - **Scene 6 (`frame-05-at-103.5s.png`)**: Saat `s6-climber` mendarat di puncak Step 3 (`x=770, y=220`), badannya menabrak teks `"3. Positive"` (`y=180`) yang ditaruh di atas pijakan tangga (seharusnya teks ditaruh di dalam kotak anak tangga).
+   - **Scene 7 (`frame-06-at-122s.png`)**: Pangkal panah merah atas (`M340 290`, `M660 290`) menembus tulisan `"legal codes"` dan `"currency"` (`y=300`).
+   - **Scene 8 (`frame-07-at-139.5s.png`)**: Teks `"Protestant Ethic"` (`x=820`) menabrak garis batas kanan kotak `#s8-desk` (`x=730..890`).
+   - **Scene 9 & 11**: Pemanggilan ganda `FIG("s9-worker")` dan `FIG("s11-f1")` di script timeline.
+3. `Evaluasi Desain Pedagogis Catatan Kanan (.notes) — Masalah Fragmentasi & Ruang Kosong`:
+   - Batasan lama di `SKILL.md` (`maks 22–25 karakter / 2–5 kata per baris`) membuat teks `.notes` hanya memakai ~`240px` dari `612px` ruang tulis kertas (`width: 740px`), sehingga teks menumpuk mepet garis margin kiri dan menyisakan >55% kertas kanan kosong melompong.
+   - Secara substansi, batasan 2–4 kata membuat AI menulis potongan kata kriptik tanpa konteks penjelasan (misal `"Historical material / economic base owns"`, `"1. Realism = Conflict / 2. Liberal = Function"`, atau daftar 6 langkah riset tanpa definisi).
+   - Standar baru `.notes`: `font-size: 34px; line-height: 48px` dengan panjang **32–42 karakter per baris (6–8 kata)** dan **7–9 baris per scene** menggunakan pola **`• Konsep Utama` + `→ Penjelasan kausal/mekanisme singkat` + `★ Takeaway merah`**, sehingga buku catatan kanan berfungsi sebagai ringkasan belajar yang utuh dan proporsional.
+
+2026-10-23 - Audit Kualitas Contact Sheet & Materi Bab 011 (`hyperframes-stickman-social-science/index.html` vs. `_chapters/011-introduction-to-social-science/010-basic-social-science.md`):
+1. `Kesesuaian Materi Bab (14 Scene, 251.13s)`:
+   - Urutan makro 14 scene sudah mengikuti alur `010-basic-social-science.md`, namun ditemukan 4 deviasi substansi: (a) Positivisme di Scene 3 melewatkan Émile Durkheim yang disebut berdampingan dengan Comte di bab; (b) Scene 8 (Weber) mengganti konsep eksplisit bab (*Ideal Types* & *The Protestant Ethic and the Spirit of Capitalism*) dengan istilah Jerman `stahlhartes Gehäuse`; (c) Scene 10 (*6-Step Research Cycle*) melompati Langkah 4 bab (*Operationalization of variables & research design*); dan (d) Scene 12 (*Conflict Theory*) melewatkan tokoh C. Wright Mills & *ideological hegemony*.
+2. `5 Temuan Defek Visual & Animasi Model Fast`:
+   - **Kepala Stick-Man Terpotong/Bolong (Scene 1, 7, 8)**: Penggunaan `vector-effect="non-scaling-stroke"` bersama `pathLength="1"` pada `data-s > 1.0` (`1.05`–`1.15`) membuat kepala tidak tertutup penuh.
+   - **Tabrakan Visual (Scene 14)**: Stick-man `s14-r` (`data-y="220"`, `data-s="0.75"`, tinggi `145.5px`) menabrak teks judul `"International Relations as Social Theory"` di `y=70`.
+   - **Zero Motion / Patung Statis di Seluruh 14 Scene**: Tidak ada satu pun `tl.to(...)` untuk menggerakkan objek/stick-man (batu Scene 1 tidak jatuh, pekerja Scene 5 diam di tempat dan menghadap menjauhi pabrik, pendaki Scene 6 langsung muncul di puncak tangga ke-3).
+   - **Absennya Stick-Man di Scene 9 & 11**: Scene 9 (Marx) dan Scene 11 (Functionalism) hanya berisi kotak/lingkaran geometris tanpa satu pun karakter stick-man.
+   - **37 Peringatan Craft (`text_below_floor` 25–27px & `line_unread`) + Salah Indentasi `.nl.in`**: Teks `< 28px` di Scene 6, 10, 14 serta penomoran sejajar (`2.`, `3.`, `5.`, `6.`) yang salah diberi class `nl in` di Scene 10 dan 14.
+
+2026-10-23 - Pembuatan Skill `sketchbook-stickman-explainer` & Render Penuh MP4 dengan Voiceover ElevenLabs (`HF02_Regionalism_Sketchbook_Stickman_1080p.mp4`):
+1. `Skill Lengkap Lintas-Model (sketchbook-stickman-explainer)`:
+   - Dibuat di `.agents/skills/sketchbook-stickman-explainer/SKILL.md` dan disinkronkan ke direktori global `C:\Users\xiyeo\.gemini\config\skills\sketchbook-stickman-explainer\`.
+   - Mencakup aturan desain anti-AI (kertas krem `#f2ebdd`, tinta `#2a2420`, aksen pensil merah `#b5381f`, font `Patrick Hand` + `Caveat`), builder stick-figure artikulasi sinkron (`data-fig`/`data-pose` dengan `vector-effect="non-scaling-stroke"`), efek gambar garis `pathLength="1"` + filter `feTurbulence` wobble, halaman buku catatan bergaris yang ditempel selotip (`rotate(-1.2deg)`), template starter penuh (`template/`), serta skrip voiceover ElevenLabs & Kokoro (`scripts/`).
+2. `Voiceover ElevenLabs Daniel & Render MP4 1080p`:
+   - Disintesis menggunakan voice **Daniel** (`onwK4e9ZLuTAKqWW03F9`, model `eleven_multilingual_v2`) via `scripts/generate_elevenlabs_vo.py` (total durasi `73.3s`, 8 segmen narasi, normalisasi `-1.5 dBFS`).
+   - Seluruh timestamp scene (`S1: 0–13.9s`, `S2: 13.9–39.25s`, `S3: 39.25–61.09s`, `S4: 61.09–73.3s`), caption, dan cue animasi GSAP di `learning-videos/hyperframes-stickman-explainer/index.html` disinkronkan presisi terhadap `audio/manifest.json`.
+   - Lolos `npx hyperframes check` dengan **0 error** (**65/65 WCAG AA contrast pass**) dan dirender ke `learning-videos/exports/HF02_Regionalism_Sketchbook_Stickman_1080p.mp4`.
+3. `Integrasi Penuh ke Hermes Desktop`:
+   - Menginstal `sketchbook-stickman-explainer` beserta 13 skill resmi ElevenLabs ke seluruh direktori skill Hermes Desktop (`D:\Hermes\skills\`, `D:\Hermes\skills\creative\`, `D:\Hermes\profiles\content-creator\skills\`, dan `C:\Users\xiyeo\.hermes\skills\`) serta mendaftarkan `skill_view(name='sketchbook-stickman-explainer')` di `HERMES.md`.
+   - Memperkaya `SKILL.md` dengan diagram anatomi koordinat stick-man (`feet=(0,0)`, `hip=(0,-75)`, `shoulder=(0,-135)`, `head=(0,-172)`), kode JS builder verbatim (`POSES`, `limb`, `[data-fig]`, `[data-blob]`), 5 helper GSAP (`D`, `F`, `W`, `FIG`, `CAM`), **Prosedur Ekstraksi Scene Berbasis Isi Bab (`##`/`###` headings)** (`18–28 detik / 2–3 kalimat per scene`, bebas dari template kaku sehingga cocok untuk bab Sejarah, Hukum Internasional, Metodologi, maupun IPE), serta **8 Visual LEGO Archetypes** (`PUZZLE_HOOK`, `MYTH_VS_REALITY`, `SPLIT_DUEL`, `STEP_STAIRCASE`, `TIMELINE_CHAIN`, `BARRIER_FILTER`, `TABLE_OR_COURT`, `MULTI_GROUP_MAP`) lengkap dengan generator `generate_elevenlabs_vo.py` yang mencetak tag HTML `<section>` + `<div id="cap-...">` otomatis dari `script.json`.
+4. `Produksi, Render Penuh, & Publikasi YouTube Shorts 9:16 Full-Animation (SH05_Regionalism_Sketchbook_Stickman_Short_1080p.mp4)`:
+   - Merancang format khusus Shorts (`1080×1920`, durasi `39.58s`, `1.188 frames @ 30 FPS`, 4 babak cepat) yang **menghapus kertas buku catatan (`.page`/`.notes`)** sehingga 100% layar atas-tengah (`1040×1370`, `.stage-full`) diisi animasi stick-man berukuran besar (`data-s="1.25"` s/d `1.75`) dengan teks sangat minim (`1–3 kata` pada objek) dan kotak subtitle aman di bagian bawah (`top: 1465px; left: 68px; width: 836px`, bebas dari tombol kanan YouTube Shorts `x > 910px`).
+   - Disintesis menggunakan voiceover **ElevenLabs Daniel** (`onwK4e9ZLuTAKqWW03F9`, `audio/voiceover.mp3`, `39.58s`) dan dirender deterministik via HyperFrames ke `learning-videos/exports/SH05_Regionalism_Sketchbook_Stickman_Short_1080p.mp4` (`10.0 MB`, **0 error, 0 layout issue, 28/28 WCAG AA contrast pass**).
+   - **Resmi Dipublikasikan di YouTube Shorts (`@IRinANutshell`)**: **https://youtube.com/shorts/9GXOg1hXdf4** (Judul: *"Why 27 European Nations Gave Up Their Veto"*, ID: `9GXOg1hXdf4`, *Not Made for Kids*, *Altered Content = YES*, *Visibility = Public*). Menyimpan template di `template/index-short-9x16.html` dan menyinkronkan ke seluruh 6 direktori skill Antigravity & Hermes Desktop.
+
+2026-10-23 - Setup Penuh ElevenLabs CLI & 13 Companion Skills (`@elevenlabs/cli` + `elevenlabs/skills`):
+1. `Instalasi Global ElevenLabs CLI`: Menginstal `@elevenlabs/cli` (`v1.7.1`) secara global via `npm i -g @elevenlabs/cli`.
+2. `Autentikasi OAuth PKCE`: Menjalankan `elevenlabs auth login` dan menyimpan kredensial OAuth aktif di Windows Credential Manager (`keyring entry elevenlabs:OAuth`, terverifikasi `active` via `elevenlabs auth status --human`).
+3. `Instalasi & Sinkronisasi 13 Skills Resmi`: Menginstal seluruh 13 skill dari `elevenlabs/skills` (`agents`, `dubbing`, `music`, `onboarding`, `realtime`, `setup-api-key`, `sound-effects`, `speech-engine`, `speech-to-text`, `text-to-speech`, `voice-changer`, `voice-isolator`, `update-skills-from-changelog`) ke `.agents/skills/` serta menyalinnya ke direktori global Antigravity `C:\Users\xiyeo\.gemini\config\skills\`.
+
+2026-10-23 - Redesign v2 Stick-Man Explainer → gaya **Sketchbook natural** (feedback pengguna: "the design is too AI"):
+- Kertas krem + tinta cokelat tua + satu aksen merah pensil, font tulisan tangan (Patrick Hand + Caveat), halaman buku bergaris yang ditempel selotip di kanan (bukan kartu), goresan digambar langsung (draw-on) + filter wobble, figur berjalan/mendorong/memanjat/mengetuk palu.
+- Lolos `hyperframes check` (0 error, 53/53 WCAG AA). **Belum dirender — menunggu "yes" dari pengguna.**
+
+2026-10-23 - Preview Stick-Man Geopolitical Simulation + Right Explanation Slide di HyperFrames (`learning-videos/hyperframes-stickman-explainer/`):
+1. `Konsep Split-Stage Baru (Menunggu ACC Pengguna Sebelum Render MP4)`:
+   - **Panggung Kiri (`1010px`)**: *Live Stick-Man Geopolitical Simulation Stage* — karakter stick-man diplomat ekspresif memperagakan mekanisme HI secara visual (Act I: Prancis & Jerman Barat mengunci Coal & Steel ke dalam *High Authority Vault*; Act II: 1 Stick-Man memveto konsensus ASEAN vs. Hakim *ECJ High Court* mengetuk palu *Binding Law*; Act III: Stick-Man menaiki tangga *Neofunctional Spillover* 3 tahap & simulasi *0% Duty Goods* vs. *Tariff Wall* Viner; Act IV: 3 benteng regional abad ke-21).
+   - **Panel Kanan (`770px`)**: *Structured Explanation Slide* — kartu penjelasan materi terstruktur (`SLIDE 01–04`), sitasi tokoh/bab, dan kotak `KEY TAKEAWAY` penuh di bagian bawah.
+2. `Status Validasi Gate`: Lolos `npx hyperframes check` dengan **0 error** (`0` layout issues across 9 samples, **56/56 (100%) WCAG AA contrast pass**). 4 frame preview disimpan di artefak untuk direview pengguna sebelum render.
+
+2026-10-23 - Instalasi HyperFrames di Antigravity & Produksi Pilot "New-Kind" Documentary Explainer (`HF01_Regionalism_Explainer_Demo_1080p.mp4`):
+1. `Instalasi CLI & 21 Skills Resmi HyperFrames`:
+   - Menginstal `hyperframes@0.8.188` secara global (`npm install -g hyperframes@latest`) dan menyalin seluruh 21 skill resmi (`hyperframes`, `hyperframes-cli`, `hyperframes-core`, `hyperframes-creative`, `hyperframes-animation`, `faceless-explainer`, `general-video`, dll.) ke direktori discovery utama Antigravity di `C:\Users\xiyeo\.gemini\config\skills\`.
+2. `Arsitektur Video Explainer Baru (Mengatasi 6 Kelemahan Mind Map Lama)`:
+   - Proyek: `learning-videos/hyperframes-explainer-demo/` (`1920x1080` landscape, `58.69s`, 30 FPS).
+   - Narasi & Audio: Kokoro-82M ONNX (`am_adam`, speed `1.06`) + aksen transisi mekanis (`audio/voiceover.mp3` & `audio/manifest.json`).
+   - **Scene 1 (0.00s – 11.15s)**: *The 1951 Archival Hook* — Dossier foto arsip asli Traktat Paris 1951 (ECSC) dengan efek Ken Burns halus, tipografi kinetik `"WHY SURRENDER YOUR NATIONAL VETO?"`, dan 2 kartu progresif.
+   - **Scene 2 (11.15s – 32.76s)**: *Cooperation vs. Integration* — Duel arsitektur berdampingan antara *Intergovernmental Cooperation* (Mitrany 1943 / ASEAN — 1 veto menghentikan aksi blok) vs. *Supranational Integration* (Haas 1958 / EU — ECJ & QMV mengesampingkan veto nasional) lengkap dengan diagram SVG dan footer `KEY TAKEAWAY`.
+   - **Scene 3 (32.76s – 50.34s)**: *Spillover & Viner Trade Dynamics* — Tangga 3 tahap *Neofunctional Spillover* (`1951 ECSC -> 1993 Single Market -> 1999 Euro & Schengen`) bersanding dengan meteran telemetri *Trade Creation* vs. *Trade Diversion* (Jacob Viner 1950).
+   - **Scene 4 (50.34s – 58.69s)**: *Dual-Zone Concept Blueprint Synthesis* — Kanvas zona ganda (`PART 1: Core Theories` di kiri biru, `PART 2: Empirical Regional Blocs` di kanan emas) yang dihubungkan oleh jembatan `TESTED IN: ASEAN / EU / AU & SICA` bebas tabrakan di gutter tengah.
+3. `Validasi & Render Deterministik`:
+   - Lolos `npx hyperframes check` dengan **0 error** (Lint 0 error, Runtime 0 error, Layout 0 error, Motion 0 error, **152/152 (100%) WCAG AA contrast pass**).
+   - Hasil render MP4: `learning-videos/exports/HF01_Regionalism_Explainer_Demo_1080p.mp4`.
+
+2026-10-23 - Audit Visual & Retensi YouTube Video Mind Map Explanatory (`FlowchartVideo` CH010–CH100):
+1. `Temuan Empiris Ekstraksi Frame MP4`: Inspeksi frame aktual dari `CH100_Regionalism_in_International_Affairs.mp4` (`t=3s, 60s, 170s, 405s`) dan `IR_M01_CH090_Global_Security_Issues_MindMap_1080p.mp4` mengungkap 6 bottleneck utama penyebab rendahnya retensi/views di YouTube dibandingkan desain poster prototipe `CH100_Regionalism_Mindmap_Structured_1440p.png`:
+   - **Empty White Void (~80% Layar Putih Kosong)**: `FlowchartCanvas.tsx` menggunakan `backgroundColor: '#FFFFFF'` polos tanpa dot/blueprint grid, tanpa container zona makro (`PART 1` vs `PART 2`), dan tanpa HUD progress header.
+   - **Absennya Visual/Foto di Dalam Kartu (`node.image` Kosong)**: Meskipun `RoughNode.tsx` mendukung render `node.image` (62x62px), seluruh 13 node di `ch100_flowchartData.ts` tidak menyertakan properti `image`, membuat kartu tampak seperti blok teks semata.
+   - **Static Hold Terlalu Lama (50–54 Detik per Kamera)**: `CAMERA_SEGMENTS` di CH100 hanya memiliki 9 segmen untuk 12.473 frame (6m55s). Segmen pertama (`cam_act1_root`) menahan kamera statis selama 52,8 detik penuh pada satu kartu tanpa perubahan visual selain highlight kata subtitle.
+   - **Off-Center Framing & Edge Clipping Saat Multi-Node Hold**: Segmen `zoom: 1.15` (`cam_act2_coop_integ`, `cam_act4_europe`) memposisikan kamera di titik tengah 2 kartu padahal kartu kedua baru muncul (`revealFrame`) 19–24 detik kemudian, menyisakan separuh layar kosong dan memotong kartu atas di tepi viewport.
+   - **Garis Panah Lurus Menabrak Kartu (`rc.line`)**: `getRoughArrowPaths` di `roughUtils.ts` menggambar garis lurus dari `fromNode` ke `toNode` sehingga panah jembatan (`bridge_coop_asean`, dll.) memotong tubuh kartu di kolom sebelahnya dan membentuk jaring laba-laba kusut saat panorama (`t=405s`).
+   - **Tipografi Mikro & Ketiadaan Progressive Sub-Element Reveal**: Ukuran font `tag` (8px), `cite` (7px), dan `takeaway` (9px) terlalu kecil untuk penonton mobile, serta seluruh isi kartu muncul serentak pada satu frame tanpa animasi bertahap mengikuti kalimat narator.
+
+2026-10-23 - Produksi Penuh YouTube Shorts SH-04 (The Berlin Air Corridor: Operation Vittles 1948–1949):
+1. `Judul & Topik`: **"Berlin 1948: 1 Plane Every 45 Seconds"** (Skor Judul: 100/100 via `scripts/yt/title.py`, 37 karakter; Skor Hook Lisan: 87/100 STRONG via `scripts/yt/hookscore.py` — *"You have 36 days before 2 million people in Berlin die of starvation. Why didn't Stalin stop your planes?"*). Terkait dengan `_chapters/012-modern-world-history/100-post-ww.md` dan `120-domino-cold-war.md`.
+2. `Narasi & Audio (ElevenLabs Daniel via Hermes)`:
+   - Disintesis menggunakan `ELEVENLABS_API_KEY` dari profil Hermes (`social-media-analyst/.env`) dengan voice **Daniel** (`onwK4e9ZLuTAKqWW03F9`, model `eleven_multilingual_v2`, speed `1.10`, endpoint `/with-timestamps`).
+   - Total durasi 5 babak narasi: **51.409 detik** (1.542 frames @ 30 FPS), dimux dengan BGM ketegangan sejarah ducked `-18 dBFS` dan dinormalisasi ke `-14 LUFS` EBU R128 (`learning-videos/exports/SH04_Berlin_Airlift_1948_Short_1080p.mp4`).
+3. `Arsitektur Visual & Archival Public Domain (1080x1920 @ 30 FPS)`:
+   - Menggunakan 4 pita vertikal bebas tabrakan (`BAND_A 56..346`, `BAND_B 352..1112`, `BAND_C 1120..1416`, `SUBTOP 1430`) yang ditegakkan lewat `assert_band` dan `safe_composite`.
+   - 6 foto arsip asli domain publik Wikimedia Commons/USACE (`Germans-airlift-1948.jpg`, `Berlin Blockade and Airlift, June 1948.jpg`, `Stalin Potsdam 1945 (cropped).jpg` half-body bust, `Lt. General Lucius D. Clay` Berlin desk portrait, `C-47s at Tempelhof Airport Berlin 1948.jpg`, `Building a runway for Vittles planes - USACE.jpeg`).
+   - Peta taktis 3 Koridor Udara 20-mil (Hamburg, Hanover, Frankfurt menuju Berlin Barat) dan simulator *Tempelhof Aerial Conveyor Belt* (siklus pendaratan 45 detik & aturan *Miss 1st Try -> Fly Back to West Germany*).
+4. `Status & Publikasi YouTube`: Resmi terbit live di YouTube Shorts channel `@IRinANutshell`: **https://youtube.com/shorts/8-ZddW5gY9w** (ID: `8-ZddW5gY9w`, *Not Made for Kids*, *Altered/Synthetic Content = YES*, *Visibility = Public*). Terdaftar di `learning-videos/SHORTS_CATALOG_WORKFLOW.md` sebagai **PUBLISHED**.
+
 2026-10-21 - Produksi Penuh & Publikasi YouTube Video Mind Map Explanatory Bab 100 (CH-100 Regionalism in International Affairs):
 1. `Video & Publikasi Resmi`: Berhasil dipublikasikan ke YouTube Studio channel `@IRinANutshell`:
    - Judul YouTube: **Why 27 Nations Gave Up Their Borders | Regionalism Explained**
@@ -1219,3 +1354,26 @@ Merespons arahan langsung pengguna untuk mereplikasi format video orisinal buata
 - Penonton: Not Made for Kids
 - Standar Emas: Lolos audit vision_analyze bertingkat (Foto Dwight D. Eisenhower Oval Office full-bust plate, kurva SVG crash line draw #004, eliminasi collision, Hook Ladder 3-baris).
 - Sinkronisasi SSOT: learning-videos/SHORTS_CATALOG_WORKFLOW.md telah diperbarui ke PUBLISHED.
+
+
+2026-10-22 - Sukses Publikasi YouTube Shorts GT-01 (Zimmermann Telegram 1917):
+- Status: PUBLISHED (Live di kanal @IRinANutshell)
+- URL Shorts: https://youtube.com/shorts/-KftJlG1RVk
+- Judul: Germany's 1917 Gamble: Give Mexico Texas
+- Video ID: -KftJlG1RVk (published 2026-10-22T12:26:58Z). Catatan: GPGo0XqcWKY BUKAN GT-01, itu video mindmap "Why 27 Nations Gave Up Their Borders | Regionalism Explained" (2026-10-21).
+- Pilar Format: Game Theory / Tactical Decision Lab (rotasi pilar 4, bukan SP/VX/TH)
+- Engine: PIL deterministic renderer (band guard A/B/C + assert_band) + ElevenLabs Daniel onwK4e9ZLuTAKqWW03F9 speed 1.12 + BGM battlefield_heroes ducked 0.12 + loudnorm I=-14 LUFS setelah amix
+- Master MP4: learning-videos/exports/GT01_Zimmermann_Decision_Lab_1080p.mp4 (4.38 MB, 39.73s, 1080x1920 30 FPS, AAC 192k, TP -0.9 dB)
+- Konfigurasi Advance AI Disclosure: VIDEO_HAS_ALTERED_CONTENT_YES (Tercatat resmi "Yes" pada pengungkapan konten sintetis/AI YouTube).
+- Visibilitas: Public
+- Penonton: Not Made for Kids
+- Angle pembeda: Carranza menolak tawaran Berlin 14 Apr 1917, 8 hari SETELAH AS menyatakan perang 6 Apr 1917 - penolakan itu tidak menyelamatkan Jerman.
+- Sinkronisasi SSOT: learning-videos/SHORTS_CATALOG_WORKFLOW.md telah diperbarui ke PUBLISHED.
+
+
+2026-10-24 - Sukses Render Master Explainer Video (HyperFrames Sketchbook Stickman):
+- Topik: Introduction to Social Science (Chapter 011 / 010-basic-social-science)
+- Format: 16:9 Landscape 1080p Full Chapter Explainer (14 Scene, 28 Subtitle Cues)
+- Engine: HyperFrames v0.8.188 (HTML+SVG+GSAP) + ElevenLabs TTS voiceover
+- Output: `learning-videos/exports/HF03_Social_Science_Stickman_1080p.mp4` (37.1 MB, 251.13 detik, 1080p H.264 30fps + AAC 48kHz stereo)
+- Validasi: `npx hyperframes check` lolos 0 error, text_below_floor=0, min font 28px, 14 Explanatory Study Notes lengkap dengan ★ Takeaways, `npm run test` 378 passed.
