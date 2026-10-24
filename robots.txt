@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers & Scrapers Allowed for Grounded Answers & Citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://ir-guide.netlify.app/sitemap.xml

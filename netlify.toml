@@ -8,3 +8,9 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     # Note: Content-Security-Policy is relaxed here to allow inline scripts (Jekyll, GA, etc)
     Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 301
+  force = false
